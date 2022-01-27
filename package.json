@@ -5,7 +5,9 @@
   "description": "git-buckets.js",
   "main": "dist/index.js",
   "prettier": "@tobysmith568/prettier-config",
-  "scripts": {},
+  "scripts": {
+    "start": "del-cli ./dist && tsc"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tobysmith568/git-buckets.js.git"
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/tobysmith568/git-buckets.js#readme",
   "devDependencies": {
-    "@tobysmith568/prettier-config": "^1.2.0"
+    "@tobysmith568/prettier-config": "^1.2.0",
+    "del-cli": "^4.0.1"
   }
 }
