@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "description": "git-buckets.js",
   "main": "dist/index.js",
-  "scripts": {
-  },
+  "prettier": "@tobysmith568/prettier-config",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tobysmith568/git-buckets.js.git"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tobysmith568/git-buckets.js/issues"
   },
-  "homepage": "https://github.com/tobysmith568/git-buckets.js#readme"
+  "homepage": "https://github.com/tobysmith568/git-buckets.js#readme",
+  "devDependencies": {
+    "@tobysmith568/prettier-config": "^1.2.0"
+  }
 }
