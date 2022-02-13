@@ -1,4 +1,5 @@
 import axios from "axios";
+import { createHash } from "crypto";
 import { Octokit } from "octokit";
 import { Repository } from "../repository";
 import { Snapshot } from "../snapshot";
@@ -28,8 +29,23 @@ export class GitHubRepository extends Repository {
     return result.data.content!.sha!; // TODO: fix exclamation points
   }
 
-  updateFile(path: string, content: string): Promise<string> {
-    throw new Error("Method not implemented.");
+  async updateFile(path: string, content: string): Promise<string> {
+    const contentResult = await this.octokit.rest.repos.getContent({
+      owner: this.owner,
+      repo: this.repositoryName,
+      path
+    });
+
+    const updateResult = await this.octokit.rest.repos.createOrUpdateFileContents({
+      owner: this.owner,
+      repo: this.repositoryName,
+      path,
+      sha: (contentResult.data as any).sha,
+      message: `Update ${path}`,
+      content: Buffer.from(content).toString("base64")
+    });
+
+    return updateResult.data.content!.sha!; // TODO: fix exclamation points
   }
 
   readFile(path: string): Promise<string>;

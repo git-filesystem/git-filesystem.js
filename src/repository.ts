@@ -23,4 +23,9 @@ export abstract class Repository {
     const stringContent = await this.readFile(path);
     return JSON.parse(stringContent);
   }
+
+  public async updateJsonFile<T>(path: string, content: T): Promise<string> {
+    const stringContent = JSON.stringify(content, null, 2);
+    return await this.updateFile(path, stringContent);
+  }
 }
