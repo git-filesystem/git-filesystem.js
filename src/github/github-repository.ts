@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Octokit } from "octokit";
 import { Repository } from "../repository";
 import { Snapshot } from "../snapshot";
@@ -8,8 +9,8 @@ export class GitHubRepository extends Repository {
   public constructor(
     private readonly owner: string,
     private readonly repositoryName: string,
-    accessToken: string,
-    applicationName: string
+    private readonly accessToken: string,
+    private readonly applicationName: string
   ) {
     super();
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
@@ -34,17 +35,20 @@ export class GitHubRepository extends Repository {
   readFile(path: string): Promise<string>;
   readFile(path: string, snapshotName: string): Promise<string>;
   async readFile(path: any, snapshotName?: any): Promise<string> {
-    const ref = snapshotName ? snapshotName : undefined;
+    const ref = snapshotName ? snapshotName : "main";
 
-    const result = await this.octokit.rest.repos.getContent({
-      owner: this.owner,
-      repo: this.repositoryName,
-      path,
-      ref
+    const url = `https://raw.githubusercontent.com/${this.owner}/${this.repositoryName}/${ref}/${path}`;
+
+    const response = await axios.get(url, {
+      transformResponse: res => res,
+      headers: {
+        Authorization: `token ${this.accessToken}`,
+        Accept: "application/vnd.github.v3.raw",
+        "User-Agent": this.applicationName
+      }
     });
 
-    const base64Content = (result.data as any).content!;
-    return Buffer.from(base64Content, "base64").toString();
+    return response.data;
   }
 
   deleteFile(path: string): Promise<void> {

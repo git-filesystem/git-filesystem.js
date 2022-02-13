@@ -8,7 +8,7 @@
   "prettier": "@tobysmith568/prettier-config",
   "keywords": [],
   "scripts": {
-    "start": "del-cli ./dist && tsc"
+    "build": "del-cli ./dist && tsc"
   },
   "author": {
     "name": "Toby Smith",
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/tobysmith568/git-buckets.js#readme",
   "dependencies": {
+    "axios": "^0.25.0",
     "octokit": "^1.7.1"
   },
   "devDependencies": {

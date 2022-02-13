@@ -28,20 +28,7 @@ export class GitHubClient implements Client {
     throw new Error("Method not implemented.");
   }
 
-  async getRepository(name: string): Promise<Repository> {
-    const exists = await this.doesRepositoryExist(name);
-
-    if (exists === "DoesNotExist") {
-      throw new Error(`The repository ${name} does not exist.`);
-    }
-
-    if (exists === "IsArchived") {
-      // TODO: make IReadonlyRepository
-      throw new Error(
-        `The repository ${name} is read only. To access it, use the method getReadonlyRepository.`
-      );
-    }
-
+  getRepository(name: string): Repository {
     return new GitHubRepository(this.owner, name, this.accessToken, this.applicationName);
   }
 
