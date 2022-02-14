@@ -5,7 +5,8 @@ export abstract class Repository {
   protected abstract octokit: Octokit;
 
   abstract createFile(path: string, content: string): Promise<string>;
-  abstract updateFile(path: string, content: string): Promise<string>;
+  abstract updateFile(path: string, newContent: string): Promise<string>;
+  abstract updateFile(path: string, newContent: string, oldContent: string): Promise<string>;
   abstract readFile(path: string): Promise<string>;
   abstract readFile(path: string, snapshotName: string): Promise<string>;
   abstract deleteFile(path: string): Promise<void>;
@@ -24,8 +25,16 @@ export abstract class Repository {
     return JSON.parse(stringContent);
   }
 
-  public async updateJsonFile<T>(path: string, content: T): Promise<string> {
-    const stringContent = JSON.stringify(content, null, 2);
-    return await this.updateFile(path, stringContent);
+  public async updateJsonFile<T>(path: string, newContent: T): Promise<string>;
+  public async updateJsonFile<T>(path: string, newContent: T, oldContent: T): Promise<string>;
+  public async updateJsonFile<T>(path: string, newContent: T, oldContent?: T): Promise<string> {
+    const newStringContent = JSON.stringify(newContent, null, 2);
+
+    if (!!oldContent) {
+      const oldStringContent = JSON.stringify(oldContent, null, 2);
+      return await this.updateFile(path, newStringContent, oldStringContent);
+    }
+
+    return await this.updateFile(path, newStringContent);
   }
 }

@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createHash } from "crypto";
 import { Octokit } from "octokit";
 import { Repository } from "../repository";
@@ -10,8 +9,8 @@ export class GitHubRepository extends Repository {
   public constructor(
     private readonly owner: string,
     private readonly repositoryName: string,
-    private readonly accessToken: string,
-    private readonly applicationName: string
+    accessToken: string,
+    applicationName: string
   ) {
     super();
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
@@ -29,20 +28,18 @@ export class GitHubRepository extends Repository {
     return result.data.content!.sha!; // TODO: fix exclamation points
   }
 
-  async updateFile(path: string, content: string): Promise<string> {
-    const contentResult = await this.octokit.rest.repos.getContent({
-      owner: this.owner,
-      repo: this.repositoryName,
-      path
-    });
+  async updateFile(path: string, newContent: string): Promise<string>;
+  async updateFile(path: string, newContent: string, oldContent: string): Promise<string>;
+  async updateFile(path: string, newContent: string, oldContent?: string): Promise<string> {
+    const sha = await this.getShaForFile(path, oldContent);
 
     const updateResult = await this.octokit.rest.repos.createOrUpdateFileContents({
       owner: this.owner,
       repo: this.repositoryName,
       path,
-      sha: (contentResult.data as any).sha,
+      sha,
       message: `Update ${path}`,
-      content: Buffer.from(content).toString("base64")
+      content: Buffer.from(newContent).toString("base64")
     });
 
     return updateResult.data.content!.sha!; // TODO: fix exclamation points
@@ -53,18 +50,17 @@ export class GitHubRepository extends Repository {
   async readFile(path: any, snapshotName?: any): Promise<string> {
     const ref = snapshotName ? snapshotName : "main";
 
-    const url = `https://raw.githubusercontent.com/${this.owner}/${this.repositoryName}/${ref}/${path}`;
-
-    const response = await axios.get(url, {
-      transformResponse: res => res,
-      headers: {
-        Authorization: `token ${this.accessToken}`,
-        Accept: "application/vnd.github.v3.raw",
-        "User-Agent": this.applicationName
+    const contentResult = await this.octokit.rest.repos.getContent({
+      owner: this.owner,
+      repo: this.repositoryName,
+      path,
+      ref,
+      mediaType: {
+        format: "raw"
       }
     });
 
-    return response.data;
+    return contentResult.data as any; // TODO: fix type?
   }
 
   deleteFile(path: string): Promise<void> {
@@ -81,5 +77,46 @@ export class GitHubRepository extends Repository {
 
   deleteSnapshot(snapshot: Snapshot): Promise<void> {
     throw new Error("Method not implemented.");
+  }
+
+  private async getShaForFile(path: string, oldContent?: string): Promise<string> {
+    if (!!oldContent) {
+      // TODO: implement
+      console.log("Getting sha via file content is currently not supported");
+      throw new Error("Getting sha via file content is currently not supported");
+      return this.getShaForFileContent(oldContent!);
+    }
+
+    const contentResult = await this.octokit.rest.repos.getContent({
+      owner: this.owner,
+      repo: this.repositoryName,
+      path
+    });
+
+    return (contentResult.data as any).sha!; // TODO: fix exclamation points
+  }
+
+  private getShaForFileContent(content: string): string {
+    const contentWithOnlyLfLineEndings = content.replace(/\r\n/g, "\n");
+    const contentWithCorrectLineEndings = this.ensureStringEndsWithNewline(
+      contentWithOnlyLfLineEndings
+    );
+
+    const contentByteSize = new TextEncoder().encode(contentWithCorrectLineEndings).length;
+
+    const header = `blob ${contentByteSize}\0`;
+
+    const combined = header + contentWithCorrectLineEndings;
+
+    const sha1 = createHash("sha1").update(combined).digest("hex");
+    return sha1;
+  }
+
+  private ensureStringEndsWithNewline(content: string): string {
+    if (content.endsWith("\n")) {
+      return content;
+    }
+
+    return content + "\n";
   }
 }
