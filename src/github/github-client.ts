@@ -57,4 +57,12 @@ export class GitHubClient implements Client {
 
     return new GitHubRepository(this.owner, name, this.accessToken, this.applicationName);
   }
+
+  async searchRepositoriesByFile(filePath: string, contentSearchString: string): Promise<string[]> {
+    const searchResults = await this.octokit.rest.search.code({
+      q: `filename:${filePath} user:${this.owner} ${contentSearchString}`
+    });
+
+    return searchResults.data.items.map(item => item.repository.name);
+  }
 }
