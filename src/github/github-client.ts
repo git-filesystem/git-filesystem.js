@@ -65,4 +65,15 @@ export class GitHubClient implements Client {
 
     return searchResults.data.items.map(item => item.repository.name);
   }
+
+  async deleteRepository(name: string): Promise<void> {
+    const response = await this.octokit.rest.repos.delete({
+      owner: this.owner,
+      repo: name
+    });
+
+    if (response.status !== 204) {
+      throw new Error(`Failed to delete repository with status code: ${response.status}`);
+    }
+  }
 }

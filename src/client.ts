@@ -8,4 +8,5 @@ export interface Client {
   doesRepositoryExist(name: string): Promise<RepositoryExistence>;
   createRepository(name: string, isPrivate: boolean, description: string): Promise<Repository>;
   searchRepositoriesByFile(filePath: string, contentSearchString: string): Promise<string[]>;
+  deleteRepository(name: string): Promise<void>;
 }
