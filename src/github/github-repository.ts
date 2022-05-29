@@ -85,9 +85,18 @@ export class GitHubRepository extends Repository {
     throw new Error(`Could not read file, expected string but got ${typeof contentResult.data}`);
   }
 
-  deleteFile(path: string): Promise<void> {
-    path;
-    throw new Error("Method not implemented.");
+  async deleteFile(path: string): Promise<void> {
+    const sha = await this.getShaForFile(path);
+
+    await this.octokit.rest.repos.deleteFile({
+      owner: this.owner,
+      repo: this.repositoryName,
+      path,
+      sha,
+      message: `Delete ${path}`,
+      author: this.authorDetails ?? undefined,
+      committer: this.committerDetails ?? undefined
+    });
   }
 
   createSnapshot(name: string): Promise<Snapshot> {
