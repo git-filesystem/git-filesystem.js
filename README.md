@@ -3,6 +3,7 @@
 A shared abstraction for cloud Git providers exposing a file-system-like API.
 
 Supports:
+
 - GitHub ✅
 - GitLab 🚧
 - BitBucket 🚧
@@ -19,7 +20,6 @@ Exposes methods for:
 
 - Creating read-only snapshots (tags)
 - Reading files from snapshots (tags)
-
 
 ## Installation
 
