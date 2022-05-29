@@ -32,6 +32,11 @@
   },
   "devDependencies": {
     "@tobysmith568/prettier-config": "^2.0.0",
-    "del-cli": "^4.0.1"
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "cspell": "^6.0.0",
+    "del-cli": "^4.0.1",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0"
   }
 }
