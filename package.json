@@ -8,7 +8,7 @@
   "prettier": "@tobysmith568/prettier-config",
   "keywords": [],
   "scripts": {
-    "build": "del-cli ./dist && tsc"
+    "build": "del-cli ./dist && tsc -p tsconfig.build.json"
   },
   "author": {
     "name": "Toby Smith",
