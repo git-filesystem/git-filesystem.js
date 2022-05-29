@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-import { Client, GitUser, RepositoryExistence } from "../client";
+import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig, Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
 import {
@@ -13,7 +13,9 @@ import {
   doesRepositoryExistVariables
 } from "./gql/does-repository-exist";
 
-export class GitHubClient implements Client {
+export class GitHubClient extends Client {
+  readonly provider: Provider = "github";
+
   private octokit: Octokit;
 
   constructor(
@@ -24,6 +26,7 @@ export class GitHubClient implements Client {
     private readonly committerDetails: GitUser | null = null,
     private readonly jsonConfig: JsonConfig | null = null
   ) {
+    super();
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
   }
 

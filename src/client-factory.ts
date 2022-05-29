@@ -1,10 +1,10 @@
-import { Client, GitUser } from "./client";
+import { Client, GitUser, Provider } from "./client";
 import { GitHubClient } from "./github/github-client";
 import { JsonConfig } from "./repository";
 
 export class ClientFactory {
   public getClientForProvider(
-    provider: string,
+    provider: Provider,
     owner: string,
     accessToken: string,
     applicationName: string,
