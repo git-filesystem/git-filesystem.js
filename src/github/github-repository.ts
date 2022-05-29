@@ -138,9 +138,7 @@ export class GitHubRepository extends Repository {
 
   private getShaForFileContent(content: string): string {
     const contentWithOnlyLfLineEndings = content.replace(/\r\n/g, "\n");
-    const contentWithCorrectLineEndings = this.ensureStringEndsWithNewline(
-      contentWithOnlyLfLineEndings
-    );
+    const contentWithCorrectLineEndings = ensureStringEndsWithNewline(contentWithOnlyLfLineEndings);
 
     const contentByteSize = new TextEncoder().encode(contentWithCorrectLineEndings).length;
 
@@ -151,15 +149,15 @@ export class GitHubRepository extends Repository {
     const sha1 = createHash("sha1").update(combined).digest("hex");
     return sha1;
   }
-
-  private ensureStringEndsWithNewline(content: string): string {
-    if (content.endsWith("\n")) {
-      return content;
-    }
-
-    return content + "\n";
-  }
 }
+
+const ensureStringEndsWithNewline = (content: string): string => {
+  if (content.endsWith("\n")) {
+    return content;
+  }
+
+  return content + "\n";
+};
 
 const hasSha = (value: unknown): value is HasSha => {
   return typeof value === "object" && !!value && typeof (value as HasSha).sha === "string";
