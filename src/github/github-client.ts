@@ -1,6 +1,6 @@
 import { Octokit } from "octokit";
 import { Client, GitUser, RepositoryExistence } from "../client";
-import { Repository } from "../repository";
+import { JsonConfig, Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
 import {
   CreateRepository,
@@ -21,7 +21,8 @@ export class GitHubClient implements Client {
     private readonly accessToken: string,
     private readonly applicationName: string,
     private readonly authorDetails: GitUser | null = null,
-    private readonly committerDetails: GitUser | null = null
+    private readonly committerDetails: GitUser | null = null,
+    private readonly jsonConfig: JsonConfig | null = null
   ) {
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
   }
@@ -37,7 +38,8 @@ export class GitHubClient implements Client {
       this.accessToken,
       this.applicationName,
       this.authorDetails,
-      this.committerDetails
+      this.committerDetails,
+      this.jsonConfig
     );
   }
 
@@ -64,7 +66,15 @@ export class GitHubClient implements Client {
       createRepositoryVariables(name, isPrivate, description)
     );
 
-    return new GitHubRepository(this.owner, name, this.accessToken, this.applicationName);
+    return new GitHubRepository(
+      this.owner,
+      name,
+      this.accessToken,
+      this.applicationName,
+      this.authorDetails,
+      this.committerDetails,
+      this.jsonConfig
+    );
   }
 
   async searchRepositoriesByFile(filePath: string, contentSearchString: string): Promise<string[]> {

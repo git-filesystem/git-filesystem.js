@@ -1,6 +1,8 @@
 import { Snapshot } from "./snapshot";
 
 export abstract class Repository {
+  protected constructor(private readonly jsonConfig: JsonConfig = defaultJsonConfig) {}
+
   abstract createFile(path: string, content: string): Promise<string>;
   abstract updateFile(path: string, newContent: string): Promise<string>;
   abstract updateFile(path: string, newContent: string, oldContent: string): Promise<string>;
@@ -13,7 +15,7 @@ export abstract class Repository {
   abstract deleteSnapshot(snapshot: Snapshot): Promise<void>;
 
   public async createJsonFile<T>(path: string, content: T): Promise<string> {
-    const stringContent = JSON.stringify(content, null, 2);
+    const stringContent = this.stringify(content);
     return await this.createFile(path, stringContent);
   }
 
@@ -25,13 +27,39 @@ export abstract class Repository {
   public async updateJsonFile<T>(path: string, newContent: T): Promise<string>;
   public async updateJsonFile<T>(path: string, newContent: T, oldContent: T): Promise<string>;
   public async updateJsonFile<T>(path: string, newContent: T, oldContent?: T): Promise<string> {
-    const newStringContent = JSON.stringify(newContent, null, 2);
+    const newStringContent = this.stringify(newContent);
 
     if (oldContent) {
-      const oldStringContent = JSON.stringify(oldContent, null, 2);
+      const oldStringContent = this.stringify(oldContent);
       return await this.updateFile(path, newStringContent, oldStringContent);
     }
 
     return await this.updateFile(path, newStringContent);
   }
+
+  private stringify = (value: unknown): string => {
+    const indentChar = this.jsonConfig.prettyFormat
+      ? this.jsonConfig.indentChar.repeat(this.jsonConfig.indentSize)
+      : undefined;
+
+    return JSON.stringify(value, null, indentChar);
+  };
 }
+
+type FormatJsonConfig = {
+  prettyFormat: true;
+  indentChar: " " | "\t";
+  indentSize: number;
+};
+
+type NoFormatJsonConfig = {
+  prettyFormat: false;
+};
+
+export type JsonConfig = FormatJsonConfig | NoFormatJsonConfig;
+
+export const defaultJsonConfig: JsonConfig = {
+  prettyFormat: true,
+  indentChar: " ",
+  indentSize: 2
+};

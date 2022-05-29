@@ -1,5 +1,6 @@
 import { Client, GitUser } from "./client";
 import { GitHubClient } from "./github/github-client";
+import { JsonConfig } from "./repository";
 
 export class ClientFactory {
   public getClientForProvider(
@@ -8,7 +9,8 @@ export class ClientFactory {
     accessToken: string,
     applicationName: string,
     authorDetails: GitUser | null = null,
-    committerDetails: GitUser | null = null
+    committerDetails: GitUser | null = null,
+    jsonConfig: JsonConfig | null = null
   ): Client {
     switch (provider) {
       case "github":
@@ -17,7 +19,8 @@ export class ClientFactory {
           accessToken,
           applicationName,
           authorDetails,
-          committerDetails
+          committerDetails,
+          jsonConfig
         );
       default:
         throw new Error(`No provider found for the value '${provider}'`);
