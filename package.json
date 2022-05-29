@@ -31,7 +31,7 @@
     "octokit": "^1.7.1"
   },
   "devDependencies": {
-    "@tobysmith568/prettier-config": "^1.2.0",
+    "@tobysmith568/prettier-config": "^2.0.0",
     "del-cli": "^4.0.1"
   }
 }
