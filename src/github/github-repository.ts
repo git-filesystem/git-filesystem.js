@@ -1,5 +1,6 @@
 import { createHash } from "crypto";
 import { Octokit } from "octokit";
+import { GitUser } from "../client";
 import { Repository } from "../repository";
 import { Snapshot } from "../snapshot";
 
@@ -10,7 +11,9 @@ export class GitHubRepository extends Repository {
     private readonly owner: string,
     private readonly repositoryName: string,
     accessToken: string,
-    applicationName: string
+    applicationName: string,
+    private readonly authorDetails: GitUser | null = null,
+    private readonly committerDetails: GitUser | null = null
   ) {
     super();
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
@@ -22,7 +25,9 @@ export class GitHubRepository extends Repository {
       repo: this.repositoryName,
       path,
       message: `Create ${path}`,
-      content: Buffer.from(content).toString("base64")
+      content: Buffer.from(content).toString("base64"),
+      author: this.authorDetails ?? undefined,
+      committer: this.committerDetails ?? undefined
     });
 
     return result.data.content!.sha!; // TODO: fix exclamation points
@@ -39,7 +44,9 @@ export class GitHubRepository extends Repository {
       path,
       sha,
       message: `Update ${path}`,
-      content: Buffer.from(newContent).toString("base64")
+      content: Buffer.from(newContent).toString("base64"),
+      author: this.authorDetails ?? undefined,
+      committer: this.committerDetails ?? undefined
     });
 
     return updateResult.data.content!.sha!; // TODO: fix exclamation points

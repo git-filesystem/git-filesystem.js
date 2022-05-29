@@ -10,3 +10,8 @@ export interface Client {
   searchRepositoriesByFile(filePath: string, contentSearchString: string): Promise<string[]>;
   deleteRepository(name: string): Promise<void>;
 }
+
+export interface GitUser {
+  name: string;
+  email: string;
+}

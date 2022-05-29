@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-import { Client, RepositoryExistence } from "../client";
+import { Client, GitUser, RepositoryExistence } from "../client";
 import { Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
 import {
@@ -19,7 +19,9 @@ export class GitHubClient implements Client {
   constructor(
     private readonly owner: string,
     private readonly accessToken: string,
-    private readonly applicationName: string
+    private readonly applicationName: string,
+    private readonly authorDetails: GitUser | null = null,
+    private readonly committerDetails: GitUser | null = null
   ) {
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
   }
@@ -29,7 +31,14 @@ export class GitHubClient implements Client {
   }
 
   getRepository(name: string): Repository {
-    return new GitHubRepository(this.owner, name, this.accessToken, this.applicationName);
+    return new GitHubRepository(
+      this.owner,
+      name,
+      this.accessToken,
+      this.applicationName,
+      this.authorDetails,
+      this.committerDetails
+    );
   }
 
   async doesRepositoryExist(name: string): Promise<RepositoryExistence> {

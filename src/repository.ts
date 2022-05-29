@@ -1,9 +1,6 @@
-import { Octokit } from "octokit";
 import { Snapshot } from "./snapshot";
 
 export abstract class Repository {
-  protected abstract octokit: Octokit;
-
   abstract createFile(path: string, content: string): Promise<string>;
   abstract updateFile(path: string, newContent: string): Promise<string>;
   abstract updateFile(path: string, newContent: string, oldContent: string): Promise<string>;
