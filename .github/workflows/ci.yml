@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - renovate/*
+  pull_request:
+    branches:
+      - main
+      - renovate/*
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: [14, 16, 18]
+
+    name: Node ${{ matrix.node }} on ${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npx eslint --max-warnings 0 .
+
+      - name: Run Prettier
+        run: npx prettier --check .
+
+      - name: Run CSpell
+        run: npx cspell **
+
+      - name: Build
+        run: npm run build
