@@ -5,11 +5,7 @@ mutation ($input: CreateRepositoryInput!) {
   }
 }`;
 
-export const createRepositoryVariables = (
-  name: string,
-  isPrivate: boolean = true,
-  description: string
-) => ({
+export const createRepositoryVariables = (name: string, isPrivate = true, description: string) => ({
   input: {
     name,
     visibility: isPrivate ? "PRIVATE" : "PUBLIC",

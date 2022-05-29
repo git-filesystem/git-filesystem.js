@@ -27,7 +27,7 @@ export abstract class Repository {
   public async updateJsonFile<T>(path: string, newContent: T, oldContent?: T): Promise<string> {
     const newStringContent = JSON.stringify(newContent, null, 2);
 
-    if (!!oldContent) {
+    if (oldContent) {
       const oldStringContent = JSON.stringify(oldContent, null, 2);
       return await this.updateFile(path, newStringContent, oldStringContent);
     }

@@ -30,7 +30,11 @@ export class GitHubRepository extends Repository {
       committer: this.committerDetails ?? undefined
     });
 
-    return result.data.content!.sha!; // TODO: fix exclamation points
+    if (hasSha(result.data.content)) {
+      return result.data.content.sha;
+    }
+
+    throw new Error(`Could not create file, expected string but got ${typeof result.data.content}`);
   }
 
   async updateFile(path: string, newContent: string): Promise<string>;
@@ -49,12 +53,18 @@ export class GitHubRepository extends Repository {
       committer: this.committerDetails ?? undefined
     });
 
-    return updateResult.data.content!.sha!; // TODO: fix exclamation points
+    if (hasSha(updateResult.data.content)) {
+      return updateResult.data.content.sha;
+    }
+
+    throw new Error(
+      `Could not update file, expected string but got ${typeof updateResult.data.content}`
+    );
   }
 
   readFile(path: string): Promise<string>;
   readFile(path: string, snapshotName: string): Promise<string>;
-  async readFile(path: any, snapshotName?: any): Promise<string> {
+  async readFile(path: string, snapshotName?: string): Promise<string> {
     const ref = snapshotName ? snapshotName : "main";
 
     const contentResult = await this.octokit.rest.repos.getContent({
@@ -67,14 +77,20 @@ export class GitHubRepository extends Repository {
       }
     });
 
-    return contentResult.data as any; // TODO: fix type?
+    if (typeof contentResult.data === "string") {
+      return contentResult.data;
+    }
+
+    throw new Error(`Could not read file, expected string but got ${typeof contentResult.data}`);
   }
 
   deleteFile(path: string): Promise<void> {
+    path;
     throw new Error("Method not implemented.");
   }
 
   createSnapshot(name: string): Promise<Snapshot> {
+    name;
     throw new Error("Method not implemented.");
   }
 
@@ -83,15 +99,16 @@ export class GitHubRepository extends Repository {
   }
 
   deleteSnapshot(snapshot: Snapshot): Promise<void> {
+    snapshot;
     throw new Error("Method not implemented.");
   }
 
   private async getShaForFile(path: string, oldContent?: string): Promise<string> {
-    if (!!oldContent) {
+    if (oldContent) {
       // TODO: implement
       console.log("Getting sha via file content is currently not supported");
       throw new Error("Getting sha via file content is currently not supported");
-      return this.getShaForFileContent(oldContent!);
+      return this.getShaForFileContent(oldContent ?? "");
     }
 
     const contentResult = await this.octokit.rest.repos.getContent({
@@ -100,7 +117,13 @@ export class GitHubRepository extends Repository {
       path
     });
 
-    return (contentResult.data as any).sha!; // TODO: fix exclamation points
+    if (hasSha(contentResult.data)) {
+      return contentResult.data.sha;
+    }
+
+    throw new Error(
+      `Could not get sha for file, expected string but got ${typeof contentResult.data}`
+    );
   }
 
   private getShaForFileContent(content: string): string {
@@ -126,4 +149,12 @@ export class GitHubRepository extends Repository {
 
     return content + "\n";
   }
+}
+
+const hasSha = (value: unknown): value is HasSha => {
+  return typeof value === "object" && !!value && typeof (value as HasSha).sha === "string";
+};
+
+interface HasSha {
+  sha: string;
 }
