@@ -4,7 +4,7 @@ import { JsonConfig, Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
 import {
   CreateRepository,
-  createRepositoryQuery,
+  createRepositoryMutation,
   createRepositoryVariables
 } from "./gql/create-repository";
 import {
@@ -54,7 +54,7 @@ export class GitHubClient extends Client {
       );
 
       return result.repository.isArchived ? "IsArchived" : "Exists";
-    } catch {
+    } catch (e) {
       return "DoesNotExist";
     }
   }
@@ -65,7 +65,7 @@ export class GitHubClient extends Client {
     description: string
   ): Promise<Repository> {
     await this.octokit.graphql<CreateRepository>(
-      createRepositoryQuery,
+      createRepositoryMutation,
       createRepositoryVariables(name, isPrivate, description)
     );
 
@@ -95,7 +95,7 @@ export class GitHubClient extends Client {
     });
 
     if (response.status !== 204) {
-      throw new Error(`Failed to delete repository with status code: ${response.status}`);
+      throw new Error(`Failed to delete repository, received status code: ${response.status}`);
     }
   }
 }

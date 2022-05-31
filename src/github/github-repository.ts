@@ -1,22 +1,24 @@
 import { createHash } from "crypto";
 import { Octokit } from "octokit";
-import { GitUser } from "../client";
+import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { Snapshot } from "../snapshot";
 
 export class GitHubRepository extends Repository {
+  provider: Provider = "github";
+
   protected octokit: Octokit;
 
   public constructor(
-    private readonly owner: string,
-    private readonly repositoryName: string,
-    accessToken: string,
-    applicationName: string,
-    private readonly authorDetails: GitUser | null = null,
-    private readonly committerDetails: GitUser | null = null,
+    owner: string,
+    repositoryName: string,
+    public readonly accessToken: string,
+    public readonly applicationName: string,
+    public readonly authorDetails: GitUser | null = null,
+    public readonly committerDetails: GitUser | null = null,
     jsonConfig: JsonConfig | null = null
   ) {
-    super(jsonConfig ?? defaultJsonConfig);
+    super(owner, repositoryName, jsonConfig ?? defaultJsonConfig);
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
   }
 

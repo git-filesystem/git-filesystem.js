@@ -9,8 +9,8 @@ export const doesRepositoryExistQuery = gql`
 `;
 
 export const doesRepositoryExistVariables = (name: string, owner: string) => ({
-  name: name,
-  owner: owner
+  name,
+  owner
 });
 
 export interface DoesRepositoryExist {

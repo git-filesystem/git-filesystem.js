@@ -1,7 +1,14 @@
+import { Provider } from "./client";
 import { Snapshot } from "./snapshot";
 
 export abstract class Repository {
-  protected constructor(private readonly jsonConfig: JsonConfig = defaultJsonConfig) {}
+  abstract provider: Provider;
+
+  protected constructor(
+    public readonly owner: string,
+    public readonly repositoryName: string,
+    public readonly jsonConfig: JsonConfig = defaultJsonConfig
+  ) {}
 
   abstract createFile(path: string, content: string): Promise<string>;
   abstract updateFile(path: string, newContent: string): Promise<string>;

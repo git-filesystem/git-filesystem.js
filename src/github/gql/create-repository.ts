@@ -1,6 +1,6 @@
 import { gql } from "graphql-request";
 
-export const createRepositoryQuery = gql`
+export const createRepositoryMutation = gql`
   mutation ($input: CreateRepositoryInput!) {
     createRepository(input: $input) {
       clientMutationId
