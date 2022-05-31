@@ -17,7 +17,7 @@ export const createRepositoryVariables = (name: string, isPrivate = true, descri
   }
 });
 
-export interface CreateRepository {
+export interface CreateRepositoryResponse {
   createRepository: {
     clientMutationId: null;
   };

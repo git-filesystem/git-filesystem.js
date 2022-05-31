@@ -2,7 +2,7 @@ import { Repository } from "./repository";
 
 export type RepositoryExistence = "DoesNotExist" | "Exists" | "IsArchived";
 
-export type Provider = "github";
+export type Provider = "github" | "gitlab";
 
 export abstract class Client {
   abstract provider: Provider;

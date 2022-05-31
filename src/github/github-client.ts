@@ -3,8 +3,8 @@ import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig, Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
 import {
-  CreateRepository,
   createRepositoryMutation,
+  CreateRepositoryResponse,
   createRepositoryVariables
 } from "./gql/create-repository";
 import {
@@ -64,7 +64,7 @@ export class GitHubClient extends Client {
     isPrivate: boolean,
     description: string
   ): Promise<Repository> {
-    await this.octokit.graphql<CreateRepository>(
+    await this.octokit.graphql<CreateRepositoryResponse>(
       createRepositoryMutation,
       createRepositoryVariables(name, isPrivate, description)
     );

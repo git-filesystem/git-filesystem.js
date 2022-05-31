@@ -1,6 +1,8 @@
 import { Provider } from "./client";
 import { Snapshot } from "./snapshot";
 
+// TODO: Add moving files
+
 export abstract class Repository {
   abstract provider: Provider;
 
