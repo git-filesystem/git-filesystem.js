@@ -1,11 +1,11 @@
 import { Repository } from "..";
 import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig } from "../repository";
-import { createProject } from "./api-v4/create-project";
-import { deleteProject } from "./api-v4/delete-project";
 import { GitLabRepository } from "./gitlab-repository";
 import { getAllRepositories } from "./gql/get-all-repositories";
 import { isRepositoryArchived } from "./gql/is-repository-archived";
+import { createProject } from "./rest/create-project";
+import { deleteProject } from "./rest/delete-project";
 
 export class GitLabClient extends Client {
   readonly provider: Provider = "gitlab";

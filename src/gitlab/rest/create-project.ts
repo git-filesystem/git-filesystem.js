@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { getApi4Client } from "./api-client";
+import { getRestClient } from "./rest-client";
 
 interface RequestBody {
   path: string;
@@ -17,7 +17,7 @@ export const createProject = async (
   isPrivate = true,
   description: string
 ) => {
-  const { data } = await getApi4Client(accessToken).post<
+  const { data } = await getRestClient(accessToken).post<
     RequestResponse,
     AxiosResponse<RequestResponse>,
     RequestBody

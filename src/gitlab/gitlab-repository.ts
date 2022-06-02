@@ -1,10 +1,10 @@
 import { Tag } from "..";
 import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
-import { allTags } from "./api-v4/all-tags";
-import { createTag } from "./api-v4/create-tag";
-import { deleteTag } from "./api-v4/delete-tag";
 import { CommitAction, createCommit } from "./gql/create-commit";
+import { allTags } from "./rest/all-tags";
+import { createTag } from "./rest/create-tag";
+import { deleteTag } from "./rest/delete-tag";
 
 export class GitLabRepository extends Repository {
   public readonly fullPath: string;

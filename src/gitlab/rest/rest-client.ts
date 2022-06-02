@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getApi4Client = (accessToken: string) =>
+export const getRestClient = (accessToken: string) =>
   axios.create({
     baseURL: "https://gitlab.com/api/v4/",
     headers: {

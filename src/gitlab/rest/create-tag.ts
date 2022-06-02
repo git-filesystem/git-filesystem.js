@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { getApi4Client } from "./api-client";
+import { getRestClient } from "./rest-client";
 
 interface TagResponse {
   name: string;
@@ -21,7 +21,7 @@ export const createTag = async (
     ref: branchName
   };
 
-  const { data } = await getApi4Client(accessToken).get<TagResponse[], AxiosResponse<TagResponse>>(
+  const { data } = await getRestClient(accessToken).get<TagResponse[], AxiosResponse<TagResponse>>(
     path,
     { params }
   );

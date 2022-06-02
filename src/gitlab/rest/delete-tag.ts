@@ -1,4 +1,4 @@
-import { getApi4Client } from "./api-client";
+import { getRestClient } from "./rest-client";
 
 export const deleteTag = async (
   accessToken: string,
@@ -9,5 +9,5 @@ export const deleteTag = async (
   const urlEncodedRepoPath = encodeURIComponent(owner + "/" + repositoryName);
   const path = `projects/${urlEncodedRepoPath}/repository/tags/${tagName}`;
 
-  await getApi4Client(accessToken).delete(path);
+  await getRestClient(accessToken).delete(path);
 };

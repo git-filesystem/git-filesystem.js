@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { getApi4Client } from "./api-client";
+import { getRestClient } from "./rest-client";
 
 interface TagResponse {
   name: string;
@@ -14,7 +14,7 @@ export const allTags = async (
   const urlEncodedRepoPath = encodeURIComponent(owner + "/" + name);
   const path = `projects/${urlEncodedRepoPath}/repository/tags`;
 
-  const { data } = await getApi4Client(accessToken).get<
+  const { data } = await getRestClient(accessToken).get<
     TagResponse[],
     AxiosResponse<TagResponse[]>
   >(path);
