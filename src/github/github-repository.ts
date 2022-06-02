@@ -1,4 +1,3 @@
-import { createHash } from "crypto";
 import { Octokit } from "octokit";
 import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
@@ -40,10 +39,8 @@ export class GitHubRepository extends Repository {
     throw new Error(`Could not create file, expected string but got ${typeof result.data.content}`);
   }
 
-  async updateFile(path: string, newContent: string): Promise<string>;
-  async updateFile(path: string, newContent: string, oldContent: string): Promise<string>;
-  async updateFile(path: string, newContent: string, oldContent?: string): Promise<string> {
-    const sha = await this.getShaForFile(path, oldContent);
+  async updateFile(path: string, content: string): Promise<string> {
+    const sha = await this.getShaForFile(path);
 
     const updateResult = await this.octokit.rest.repos.createOrUpdateFileContents({
       owner: this.owner,
@@ -51,7 +48,7 @@ export class GitHubRepository extends Repository {
       path,
       sha,
       message: `Update ${path}`,
-      content: Buffer.from(newContent).toString("base64"),
+      content: Buffer.from(content).toString("base64"),
       author: this.authorDetails ?? undefined,
       committer: this.committerDetails ?? undefined
     });
@@ -115,14 +112,7 @@ export class GitHubRepository extends Repository {
     throw new Error("Method not implemented.");
   }
 
-  private async getShaForFile(path: string, oldContent?: string): Promise<string> {
-    if (oldContent) {
-      // TODO: implement
-      console.log("Getting sha via file content is currently not supported");
-      throw new Error("Getting sha via file content is currently not supported");
-      return this.getShaForFileContent(oldContent ?? "");
-    }
-
+  private async getShaForFile(path: string): Promise<string> {
     const contentResult = await this.octokit.rest.repos.getContent({
       owner: this.owner,
       repo: this.repositoryName,
@@ -137,29 +127,7 @@ export class GitHubRepository extends Repository {
       `Could not get sha for file, expected string but got ${typeof contentResult.data}`
     );
   }
-
-  private getShaForFileContent(content: string): string {
-    const contentWithOnlyLfLineEndings = content.replace(/\r\n/g, "\n");
-    const contentWithCorrectLineEndings = ensureStringEndsWithNewline(contentWithOnlyLfLineEndings);
-
-    const contentByteSize = new TextEncoder().encode(contentWithCorrectLineEndings).length;
-
-    const header = `blob ${contentByteSize}\0`;
-
-    const combined = header + contentWithCorrectLineEndings;
-
-    const sha1 = createHash("sha1").update(combined).digest("hex");
-    return sha1;
-  }
 }
-
-const ensureStringEndsWithNewline = (content: string): string => {
-  if (content.endsWith("\n")) {
-    return content;
-  }
-
-  return content + "\n";
-};
 
 const hasSha = (value: unknown): value is HasSha => {
   return typeof value === "object" && !!value && typeof (value as HasSha).sha === "string";

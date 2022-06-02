@@ -48,20 +48,12 @@ export class GitLabRepository extends Repository {
     return result.sha;
   }
 
-  async updateFile(path: string, newContent: string): Promise<string>;
-  async updateFile(path: string, newContent: string, oldContent: string): Promise<string>;
-  async updateFile(path: string, newContent: string, oldContent?: unknown): Promise<string> {
-    if (oldContent) {
-      // TODO: remove oldContent from the interface
-      console.log("Getting sha via file content is currently not supported");
-      throw new Error("Getting sha via file content is currently not supported");
-    }
-
+  async updateFile(path: string, content: string): Promise<string> {
     const commitMessage = `Update ${path}`;
 
     const createAction: CommitAction = {
       action: "UPDATE",
-      content: newContent,
+      content,
       filePath: path,
       encoding: "TEXT"
     };

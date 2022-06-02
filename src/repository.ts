@@ -13,8 +13,7 @@ export abstract class Repository {
   ) {}
 
   abstract createFile(path: string, content: string): Promise<string>;
-  abstract updateFile(path: string, newContent: string): Promise<string>;
-  abstract updateFile(path: string, newContent: string, oldContent: string): Promise<string>;
+  abstract updateFile(path: string, content: string): Promise<string>;
   abstract readFile(path: string): Promise<string>;
   abstract readFile(path: string, snapshotName: string): Promise<string>;
   abstract deleteFile(path: string): Promise<void>;
@@ -33,17 +32,9 @@ export abstract class Repository {
     return JSON.parse(stringContent);
   }
 
-  public async updateJsonFile<T>(path: string, newContent: T): Promise<string>;
-  public async updateJsonFile<T>(path: string, newContent: T, oldContent: T): Promise<string>;
-  public async updateJsonFile<T>(path: string, newContent: T, oldContent?: T): Promise<string> {
-    const newStringContent = this.stringify(newContent);
-
-    if (oldContent) {
-      const oldStringContent = this.stringify(oldContent);
-      return await this.updateFile(path, newStringContent, oldStringContent);
-    }
-
-    return await this.updateFile(path, newStringContent);
+  public async updateJsonFile<T>(path: string, content: T): Promise<string> {
+    const contentString = this.stringify(content);
+    return await this.updateFile(path, contentString);
   }
 
   private stringify = (value: unknown): string => {
