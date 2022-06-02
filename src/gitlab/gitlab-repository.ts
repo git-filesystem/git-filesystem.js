@@ -1,6 +1,9 @@
 import { Tag } from "..";
 import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
+import { allTags } from "./api-v4/all-tags";
+import { createTag } from "./api-v4/create-tag";
+import { deleteTag } from "./api-v4/delete-tag";
 import { CommitAction, createCommit } from "./gql/create-commit";
 
 export class GitLabRepository extends Repository {
@@ -109,17 +112,17 @@ export class GitLabRepository extends Repository {
     }
   }
 
-  createTag(name: string): Promise<Tag> {
-    name;
-    throw new Error("Method not implemented.");
+  async createTag(name: string): Promise<Tag> {
+    const newTag = await createTag(this.accessToken, this.owner, this.repositoryName, name, "main");
+    return { name: newTag.name, oid: newTag.target };
   }
 
-  getAllTags(): Promise<Tag[]> {
-    throw new Error("Method not implemented.");
+  async getAllTags(): Promise<Tag[]> {
+    const tags = await allTags(this.accessToken, this.owner, this.repositoryName);
+    return tags.map(t => ({ name: t.name, oid: t.target }));
   }
 
-  deleteTag(tag: Tag): Promise<void> {
-    tag;
-    throw new Error("Method not implemented.");
+  async deleteTag(tag: Tag): Promise<void> {
+    await deleteTag(this.accessToken, this.owner, this.repositoryName, tag.name);
   }
 }
