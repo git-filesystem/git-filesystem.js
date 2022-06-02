@@ -2,6 +2,7 @@ import { Repository } from "..";
 import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig } from "../repository";
 import { createProject } from "./api-v4/create-project";
+import { deleteProject } from "./api-v4/delete-project";
 import { GitLabRepository } from "./gitlab-repository";
 import { getAllRepositories } from "./gql/get-all-repositories";
 import { isRepositoryArchived } from "./gql/is-repository-archived";
@@ -64,8 +65,7 @@ export class GitLabClient extends Client {
     return this.getAllRepositories();
   }
 
-  deleteRepository(name: string): Promise<void> {
-    name;
-    throw new Error("Method not implemented.");
+  async deleteRepository(name: string): Promise<void> {
+    await deleteProject(this.accessToken, this.owner, name);
   }
 }
