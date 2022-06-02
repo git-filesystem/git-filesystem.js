@@ -3,7 +3,18 @@ import { Tag } from "./tag";
 
 // TODO: Add moving files
 
-export abstract class Repository {
+export interface ReadonlyRepository {
+  provider: Provider;
+
+  readFile(path: string): Promise<string>;
+  readFile(path: string, tagName: string): Promise<string>;
+
+  getAllTags(): Promise<Tag[]>;
+
+  readJsonFile<T>(path: string): Promise<T>;
+}
+
+export abstract class Repository implements ReadonlyRepository {
   abstract provider: Provider;
 
   protected constructor(

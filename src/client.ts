@@ -1,4 +1,4 @@
-import { Repository } from "./repository";
+import { ReadonlyRepository, Repository } from "./repository";
 
 export type RepositoryExistence = "DoesNotExist" | "Exists" | "IsArchived";
 
@@ -8,17 +8,26 @@ export abstract class Client {
   abstract provider: Provider;
 
   abstract getAllRepositories(): Promise<string[]>;
+
   abstract getRepository(name: string): Repository;
+
+  getReadonlyRepository(name: string): ReadonlyRepository {
+    return this.getRepository(name);
+  }
+
   abstract doesRepositoryExist(name: string): Promise<RepositoryExistence>;
+
   abstract createRepository(
     name: string,
     isPrivate: boolean,
     description: string
   ): Promise<Repository>;
+
   abstract searchRepositoriesByFile(
     filePath: string,
     contentSearchString: string
   ): Promise<string[]>;
+
   abstract deleteRepository(name: string): Promise<void>;
 }
 
