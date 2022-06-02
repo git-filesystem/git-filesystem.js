@@ -69,15 +69,7 @@ export class GitHubClient extends Client {
       createRepositoryVariables(name, isPrivate, description)
     );
 
-    return new GitHubRepository(
-      this.owner,
-      name,
-      this.accessToken,
-      this.applicationName,
-      this.authorDetails,
-      this.committerDetails,
-      this.jsonConfig
-    );
+    return this.getRepository(name);
   }
 
   async searchRepositoriesByFile(filePath: string, contentSearchString: string): Promise<string[]> {

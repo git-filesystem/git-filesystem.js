@@ -1,6 +1,7 @@
 import { Repository } from "..";
 import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig } from "../repository";
+import { createProject } from "./api-v4/create-project";
 import { GitLabRepository } from "./gitlab-repository";
 import { getAllRepositories } from "./gql/get-all-repositories";
 import { isRepositoryArchived } from "./gql/is-repository-archived";
@@ -44,11 +45,13 @@ export class GitLabClient extends Client {
     }
   }
 
-  createRepository(name: string, isPrivate: boolean, description: string): Promise<Repository> {
-    name;
-    isPrivate;
-    description;
-    throw new Error("Method not implemented.");
+  async createRepository(
+    name: string,
+    isPrivate: boolean,
+    description: string
+  ): Promise<Repository> {
+    await createProject(this.accessToken, name, isPrivate, description);
+    return this.getRepository(name);
   }
 
   searchRepositoriesByFile(filePath: string, contentSearchString: string): Promise<string[]> {
