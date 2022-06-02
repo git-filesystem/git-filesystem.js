@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { client } from "./gql-client";
+import { getClient } from "./gql-client";
 
 const isRepositoryArchivedQuery = gql`
   query ($fullPath: ID!) {
@@ -19,14 +19,18 @@ interface IsRepositoryArchivedResponse {
   };
 }
 
-export const isRepositoryArchived = async (owner: string, name: string): Promise<boolean> => {
+export const isRepositoryArchived = async (
+  accessToken: string,
+  owner: string,
+  name: string
+): Promise<boolean> => {
   const fullPath = `${owner}/${name}`;
 
   const variables: IsRepositoryArchivedVariables = {
     fullPath
   };
 
-  const response = await client.request<
+  const response = await getClient(accessToken).request<
     IsRepositoryArchivedResponse,
     IsRepositoryArchivedVariables
   >(isRepositoryArchivedQuery, variables);

@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { client } from "./gql-client";
+import { getClient } from "./gql-client";
 
 /*
 
@@ -45,12 +45,15 @@ interface ProjectNode {
   };
 }
 
-export const searchByFilePath = async (filePath: string): Promise<string[]> => {
+export const searchByFilePath = async (
+  accessToken: string,
+  filePath: string
+): Promise<string[]> => {
   const variables: SearchRepositoriesByFileVariables = {
     filePath
   };
 
-  const response = await client.request<
+  const response = await getClient(accessToken).request<
     SearchRepositoriesByFileResponse,
     SearchRepositoriesByFileVariables
   >(searchRepositoriesByFileQuery, variables);

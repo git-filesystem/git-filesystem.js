@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { client } from "./gql-client";
+import { getClient } from "./gql-client";
 
 const createCommitMutation = gql`
   mutation (
@@ -72,13 +72,14 @@ interface CreateCommitResult {
 }
 
 export const createCommit = async (
+  accessToken: string,
   fullPath: string,
   appId: string,
   branch: string,
   commitMessage: string,
   actions: CommitAction[]
 ): Promise<CreateCommitResult> => {
-  const response = await client.request<
+  const response = await getClient(accessToken).request<
     CreateCommitMutationResponse,
     CreateCommitMutationVariables
   >(createCommitMutation, {

@@ -34,6 +34,7 @@ export class GitLabRepository extends Repository {
     const createActions = [createAction];
 
     const result = await createCommit(
+      this.accessToken,
       this.fullPath,
       this.applicationName,
       "main",
@@ -61,6 +62,7 @@ export class GitLabRepository extends Repository {
     const createActions = [createAction];
 
     const result = await createCommit(
+      this.accessToken,
       this.fullPath,
       this.applicationName,
       "main",
@@ -94,6 +96,7 @@ export class GitLabRepository extends Repository {
     const createActions = [createAction];
 
     const result = await createCommit(
+      this.accessToken,
       this.fullPath,
       this.applicationName,
       "main",

@@ -20,7 +20,7 @@ export class GitLabClient extends Client {
   }
 
   getAllRepositories(): Promise<string[]> {
-    return getAllRepositories();
+    return getAllRepositories(this.accessToken);
   }
 
   getRepository(name: string): Repository {
@@ -37,7 +37,7 @@ export class GitLabClient extends Client {
 
   async doesRepositoryExist(name: string): Promise<RepositoryExistence> {
     try {
-      const isArchived = await isRepositoryArchived(this.owner, name);
+      const isArchived = await isRepositoryArchived(this.accessToken, this.owner, name);
       return isArchived ? "IsArchived" : "Exists";
     } catch {
       return "DoesNotExist";
