@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
-import { Snapshot } from "../snapshot";
+import { Tag } from "../tag";
 
 export class GitHubRepository extends Repository {
   provider: Provider = "github";
@@ -63,9 +63,9 @@ export class GitHubRepository extends Repository {
   }
 
   readFile(path: string): Promise<string>;
-  readFile(path: string, snapshotName: string): Promise<string>;
-  async readFile(path: string, snapshotName?: string): Promise<string> {
-    const ref = snapshotName ? snapshotName : "main";
+  readFile(path: string, tagName: string): Promise<string>;
+  async readFile(path: string, tagName?: string): Promise<string> {
+    const ref = tagName ? tagName : "main";
 
     const contentResult = await this.octokit.rest.repos.getContent({
       owner: this.owner,
@@ -98,17 +98,17 @@ export class GitHubRepository extends Repository {
     });
   }
 
-  createSnapshot(name: string): Promise<Snapshot> {
+  createTag(name: string): Promise<Tag> {
     name;
     throw new Error("Method not implemented.");
   }
 
-  getAllSnapshots(): Promise<Snapshot[]> {
+  getAllTags(): Promise<Tag[]> {
     throw new Error("Method not implemented.");
   }
 
-  deleteSnapshot(snapshot: Snapshot): Promise<void> {
-    snapshot;
+  deleteTag(tag: Tag): Promise<void> {
+    tag;
     throw new Error("Method not implemented.");
   }
 

@@ -1,4 +1,4 @@
-export interface Snapshot {
+export interface Tag {
   Name: string;
   Oid: string;
 }

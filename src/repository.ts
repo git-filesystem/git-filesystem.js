@@ -1,5 +1,5 @@
 import { Provider } from "./client";
-import { Snapshot } from "./snapshot";
+import { Tag } from "./tag";
 
 // TODO: Add moving files
 
@@ -15,12 +15,12 @@ export abstract class Repository {
   abstract createFile(path: string, content: string): Promise<string>;
   abstract updateFile(path: string, content: string): Promise<string>;
   abstract readFile(path: string): Promise<string>;
-  abstract readFile(path: string, snapshotName: string): Promise<string>;
+  abstract readFile(path: string, tagName: string): Promise<string>;
   abstract deleteFile(path: string): Promise<void>;
 
-  abstract createSnapshot(name: string): Promise<Snapshot>;
-  abstract getAllSnapshots(): Promise<Snapshot[]>;
-  abstract deleteSnapshot(snapshot: Snapshot): Promise<void>;
+  abstract createTag(name: string): Promise<Tag>;
+  abstract getAllTags(): Promise<Tag[]>;
+  abstract deleteTag(tag: Tag): Promise<void>;
 
   public async createJsonFile<T>(path: string, content: T): Promise<string> {
     const stringContent = this.stringify(content);

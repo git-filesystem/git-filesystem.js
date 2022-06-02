@@ -1,4 +1,4 @@
-import { Snapshot } from "..";
+import { Tag } from "..";
 import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { CommitAction, createCommit } from "./gql/create-commit";
@@ -76,10 +76,10 @@ export class GitLabRepository extends Repository {
   }
 
   readFile(path: string): Promise<string>;
-  readFile(path: string, snapshotName: string): Promise<string>;
-  readFile(path: unknown, snapshotName?: unknown): Promise<string> {
+  readFile(path: string, tagName: string): Promise<string>;
+  readFile(path: unknown, tagName?: unknown): Promise<string> {
     path;
-    snapshotName;
+    tagName;
     throw new Error("Method not implemented.");
   }
 
@@ -106,17 +106,17 @@ export class GitLabRepository extends Repository {
     }
   }
 
-  createSnapshot(name: string): Promise<Snapshot> {
+  createTag(name: string): Promise<Tag> {
     name;
     throw new Error("Method not implemented.");
   }
 
-  getAllSnapshots(): Promise<Snapshot[]> {
+  getAllTags(): Promise<Tag[]> {
     throw new Error("Method not implemented.");
   }
 
-  deleteSnapshot(snapshot: Snapshot): Promise<void> {
-    snapshot;
+  deleteTag(tag: Tag): Promise<void> {
+    tag;
     throw new Error("Method not implemented.");
   }
 }
