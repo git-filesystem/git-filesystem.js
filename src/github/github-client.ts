@@ -2,16 +2,9 @@ import { Octokit } from "octokit";
 import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig, Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
-import {
-  createRepositoryMutation,
-  CreateRepositoryResponse,
-  createRepositoryVariables
-} from "./gql/create-repository";
-import {
-  DoesRepositoryExist,
-  doesRepositoryExistQuery,
-  doesRepositoryExistVariables
-} from "./gql/does-repository-exist";
+import { createRepository } from "./gql/create-repository";
+import { isRepositoryArchived } from "./gql/is-repository-archived";
+import { deleteRepo } from "./rest/delete-repo";
 
 export class GitHubClient extends Client {
   readonly provider: Provider = "github";
@@ -48,12 +41,8 @@ export class GitHubClient extends Client {
 
   async doesRepositoryExist(name: string): Promise<RepositoryExistence> {
     try {
-      const result = await this.octokit.graphql<DoesRepositoryExist>(
-        doesRepositoryExistQuery,
-        doesRepositoryExistVariables(name, this.owner)
-      );
-
-      return result.repository.isArchived ? "IsArchived" : "Exists";
+      const doesExist = await isRepositoryArchived(this.accessToken, this.owner, name);
+      return doesExist ? "IsArchived" : "Exists";
     } catch (e) {
       return "DoesNotExist";
     }
@@ -64,11 +53,7 @@ export class GitHubClient extends Client {
     isPrivate: boolean,
     description: string
   ): Promise<Repository> {
-    await this.octokit.graphql<CreateRepositoryResponse>(
-      createRepositoryMutation,
-      createRepositoryVariables(name, isPrivate, description)
-    );
-
+    await createRepository(this.accessToken, name, this.owner, isPrivate, description);
     return this.getRepository(name);
   }
 
@@ -81,13 +66,6 @@ export class GitHubClient extends Client {
   }
 
   async deleteRepository(name: string): Promise<void> {
-    const response = await this.octokit.rest.repos.delete({
-      owner: this.owner,
-      repo: name
-    });
-
-    if (response.status !== 204) {
-      throw new Error(`Failed to delete repository, received status code: ${response.status}`);
-    }
+    await deleteRepo(this.accessToken, this.owner, name);
   }
 }

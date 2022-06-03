@@ -9,7 +9,8 @@
   "keywords": [],
   "scripts": {
     "build": "del-cli ./dist && tsc -p tsconfig.build.json",
-    "test": "jest"
+    "test": "jest",
+    "test:e2e": "jest -c e2e/jest.config.js --runInBand"
   },
   "author": {
     "name": "Toby Smith",
@@ -29,7 +30,7 @@
   "homepage": "https://github.com/tobysmith568/git-buckets.js#readme",
   "dependencies": {
     "axios": "^0.27.0",
-    "graphql-request": "^4.2.0",
+    "graphql-request": "^4.3.0",
     "octokit": "^1.7.1"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "@typescript-eslint/parser": "^5.26.0",
     "cspell": "^6.0.0",
     "del-cli": "^4.0.1",
+    "dotenv": "^16.0.1",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "jest": "^28.1.0",

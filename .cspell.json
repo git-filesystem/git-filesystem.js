@@ -5,7 +5,7 @@
   "dictionaryDefinitions": [],
   "dictionaries": ["en-gb", "node", "npm", "typescript"],
   "words": [],
-  "ignoreWords": ["tobysmith"],
+  "ignoreWords": ["tobysmith", "gitbuckets"],
   "import": [],
   "ignoreRegExpList": []
 }
