@@ -3,6 +3,8 @@ import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig, Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
 import { createRepository } from "./gql/create-repository";
+import { getAllRepositories } from "./gql/get-all-repositories";
+import { getAllRepositoriesForOwner } from "./gql/get-all-repositories-for-owner";
 import { isRepositoryArchived } from "./gql/is-repository-archived";
 import { deleteRepo } from "./rest/delete-repo";
 
@@ -23,8 +25,14 @@ export class GitHubClient extends Client {
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
   }
 
-  getAllRepositories(): Promise<string[]> {
-    throw new Error("Method not implemented.");
+  async getAllRepositories(): Promise<string[]>;
+  async getAllRepositories(owner: string): Promise<string[]>;
+  async getAllRepositories(owner?: string): Promise<string[]> {
+    if (owner) {
+      return await getAllRepositoriesForOwner(this.accessToken, owner);
+    }
+
+    return await getAllRepositories(this.accessToken);
   }
 
   getRepository(name: string): Repository {

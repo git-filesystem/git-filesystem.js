@@ -21,8 +21,8 @@ providers.forEach(provider =>
   describe(`${provider.name}, user ${provider.user}`, () => {
     let accessToken: string;
     let userAccount: string;
-
     let repositoryName: string;
+    let repositoryNameWithOwner: string;
 
     let client: Client;
 
@@ -38,6 +38,7 @@ providers.forEach(provider =>
       const currentMs = new Date().getUTCMilliseconds();
       const randomNumber = Math.floor(Math.random() * 1000) + 1;
       repositoryName = `e2e-test-${currentMs}-${randomNumber}`;
+      repositoryNameWithOwner = `${userAccount}/${repositoryName}`;
     });
 
     it(`should get the ${provider.name} client`, () => {
@@ -75,6 +76,20 @@ providers.forEach(provider =>
 
       const doesExistAfter = await client.doesRepositoryExist(repositoryName);
       expect(doesExistAfter).toBe("Exists");
+    });
+
+    it("should be able to get all repositories for the current user", async () => {
+      const repositories = await client.getAllRepositories();
+
+      expect(repositories).toBeDefined();
+      expect(repositories).toContain(repositoryNameWithOwner);
+    });
+
+    it("should be able to get all repositories for a different user", async () => {
+      const repositories = await client.getAllRepositories("microsoft");
+
+      expect(repositories).toBeDefined();
+      expect(repositories).not.toContain(repositoryNameWithOwner);
     });
 
     it("should be able to delete a repository", async () => {

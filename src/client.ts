@@ -8,6 +8,7 @@ export abstract class Client {
   abstract provider: Provider;
 
   abstract getAllRepositories(): Promise<string[]>;
+  abstract getAllRepositories(owner: string): Promise<string[]>;
 
   abstract getRepository(name: string): Repository;
 
