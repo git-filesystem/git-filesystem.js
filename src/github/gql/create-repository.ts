@@ -30,7 +30,7 @@ export const createRepository = async (
   name: string,
   owner: string,
   isPrivate = true,
-  description: string
+  description: string | undefined
 ) => {
   const ownerId = await getIdForUserOrOrg(accessToken, owner);
 
@@ -38,7 +38,7 @@ export const createRepository = async (
     input: {
       name,
       visibility: isPrivate ? "PRIVATE" : "PUBLIC",
-      description,
+      description: description ?? "",
       ownerId
     }
   };

@@ -51,8 +51,8 @@ export class GitHubClient extends Client {
 
   async doesRepositoryExist(name: string): Promise<RepositoryExistence> {
     try {
-      const doesExist = await isRepositoryArchived(this.accessToken, this.owner, name);
-      return doesExist ? "IsArchived" : "Exists";
+      const isArchived = await isRepositoryArchived(this.accessToken, this.owner, name);
+      return isArchived ? "IsArchived" : "Exists";
     } catch (e) {
       return "DoesNotExist";
     }
@@ -68,6 +68,7 @@ export class GitHubClient extends Client {
   }
 
   async searchRepositoriesByFile(filePath: string, contentSearchString: string): Promise<string[]> {
+    // TODO: Need to remove the dependency on the octokit library
     const searchResults = await this.octokit.rest.search.code({
       q: `filename:${filePath} user:${this.owner} ${contentSearchString}`
     });
