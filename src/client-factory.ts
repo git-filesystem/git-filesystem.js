@@ -1,5 +1,6 @@
 import { Client, GitUser, Provider } from "./client";
 import { GitHubClient } from "./github/github-client";
+import { GitLabClient } from "./gitlab/gitlab-client";
 import { JsonConfig } from "./repository";
 
 export class ClientFactory {
@@ -15,6 +16,15 @@ export class ClientFactory {
     switch (provider) {
       case "github":
         return new GitHubClient(
+          owner,
+          accessToken,
+          applicationName,
+          authorDetails,
+          committerDetails,
+          jsonConfig
+        );
+      case "gitlab":
+        return new GitLabClient(
           owner,
           accessToken,
           applicationName,
