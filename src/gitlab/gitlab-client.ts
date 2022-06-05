@@ -3,6 +3,7 @@ import { Client, GitUser, Provider, RepositoryExistence } from "../client";
 import { JsonConfig } from "../repository";
 import { GitLabRepository } from "./gitlab-repository";
 import { getAllRepositories } from "./gql/get-all-repositories";
+import { getAllRepositoriesForOwner } from "./gql/get-all-repositories-for-owner";
 import { isRepositoryArchived } from "./gql/is-repository-archived";
 import { createProject } from "./rest/create-project";
 import { deleteProject } from "./rest/delete-project";
@@ -21,10 +22,15 @@ export class GitLabClient extends Client {
     super();
   }
 
-  getAllRepositories(): Promise<string[]> {
-    return getAllRepositories(this.accessToken);
-  }
+  async getAllRepositories(): Promise<string[]>;
+  async getAllRepositories(owner: string): Promise<string[]>;
+  async getAllRepositories(owner?: string): Promise<string[]> {
+    if (owner) {
+      return await getAllRepositoriesForOwner(this.accessToken, owner);
+    }
 
+    return await getAllRepositories(this.accessToken);
+  }
   getRepository(name: string): Repository {
     return new GitLabRepository(
       this.owner,

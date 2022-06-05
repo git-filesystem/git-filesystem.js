@@ -23,6 +23,6 @@ export const getAllRepositories = async (accessToken: string): Promise<string[]>
   const response = await getClient(accessToken).request<GetAppRepositoriesResponse>(
     getAllRepositoriesQuery
   );
-  const repositoryNames = response.projects.nodes.map(node => node.name);
-  return repositoryNames;
+
+  return response.projects.nodes.map(node => node.name);
 };
