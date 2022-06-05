@@ -10,7 +10,8 @@
   "scripts": {
     "build": "del-cli ./dist && tsc -p tsconfig.build.json",
     "test": "jest",
-    "test:e2e": "jest -c e2e/jest.config.js --runInBand"
+    "test:e2e": "jest -c e2e/jest.config.js --runInBand",
+    "test:ci": "jest --ci --coverage && jest --ci -c e2e/jest.config.js --runInBand"
   },
   "author": {
     "name": "Toby Smith",

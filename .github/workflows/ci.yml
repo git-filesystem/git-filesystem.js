@@ -40,5 +40,15 @@ jobs:
       - name: Run CSpell
         run: npx cspell **
 
-      - name: Build
+      - name: Run Build
         run: npm run build
+
+      - name: Run Tests
+        run: npm run test:ci
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.0
+        if: matrix.os == 'ubuntu-latest' && matrix.node == '16'
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: coverage

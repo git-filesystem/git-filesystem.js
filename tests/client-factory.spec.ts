@@ -39,7 +39,7 @@ describe("client-factory", () => {
         "any applicationName"
       );
 
-      expect(client.provider).toBe("gitLab");
+      expect(client.provider).toBe("gitlab");
       expect(client).toBeInstanceOf(GitLabClient);
     });
   });

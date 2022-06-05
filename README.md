@@ -18,8 +18,8 @@ Exposes methods for:
 - Overwriting a file
 - Deleting a file
 
-- Creating read-only snapshots (tags)
-- Reading files from snapshots (tags)
+- Creating tags
+- Reading files from tags
 
 ## Installation
 
@@ -49,11 +49,11 @@ If you don't have access to accounts that can be used for testing, then you can'
 To set them up, make a file called `.jest.env` in the root of the project with the following:
 
 ```ini
-GITHUB_USERNAME=<username>
-GITHUB_PAT=<personal access token>
+E2E_GITHUB_USERNAME=<username>
+E2E_GITHUB_PAT=<personal access token>
 
-GITLAB_USERNAME=<username>
-GITLAB_PAT=<personal access token>
+E2E_GITLAB_USERNAME=<username>
+E2E_GITLAB_PAT=<personal access token>
 
 BITBUCKET_USERNAME=<username>
 BITBUCKET_PAT=<personal access token>
@@ -68,7 +68,3 @@ npm run test:e2e
 ## License
 
 Git-buckets is licensed under the [ISC License](./LICENSE.md).
-
-```
-
-```

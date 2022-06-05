@@ -14,8 +14,8 @@ interface Provider {
 }
 
 const providers: Provider[] = [
-  { name: "github", user: process.env.GITHUB_USERNAME, accessToken: process.env.GITHUB_PAT }
-  // { name: "gitlab", user: process.env.GITLAB_USERNAME, accessToken: process.env.GITLAB_PAT }
+  { name: "github", user: process.env.E2E_GITHUB_USERNAME, accessToken: process.env.E2E_GITHUB_PAT }
+  // { name: "gitlab", user: process.env.E2E_GITLAB_USERNAME, accessToken: process.env.E2E_GITLAB_PAT }
 ];
 
 providers.forEach(provider =>
@@ -35,7 +35,7 @@ providers.forEach(provider =>
     const originalJsonFileContent = Object.freeze({ original: "json file content" });
     const updatedJsonFileContent = Object.freeze({ updated: "json file content" });
 
-    const testTagName = "test-tag";
+    // const testTagName = "test-tag";
 
     beforeAll(() => {
       expect(provider.accessToken).toBeDefined();
