@@ -38,7 +38,14 @@ export abstract class Repository implements ReadonlyRepository {
     return await this.createFile(path, stringContent);
   }
 
-  public async readJsonFile<T>(path: string): Promise<T> {
+  public async readJsonFile<T>(path: string): Promise<T>;
+  public async readJsonFile<T>(path: string, tagName: string): Promise<T>;
+  public async readJsonFile<T>(path: string, tagName?: string): Promise<T> {
+    if (tagName) {
+      const stringContent = await this.readFile(path, tagName);
+      return JSON.parse(stringContent);
+    }
+
     const stringContent = await this.readFile(path);
     return JSON.parse(stringContent);
   }

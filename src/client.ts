@@ -11,8 +11,15 @@ export abstract class Client {
   abstract getAllRepositories(owner: string): Promise<string[]>;
 
   abstract getRepository(name: string): Repository;
+  abstract getRepository(name: string, owner: string): Repository;
 
-  getReadonlyRepository(name: string): ReadonlyRepository {
+  getReadonlyRepository(name: string): ReadonlyRepository;
+  getReadonlyRepository(name: string, owner: string): ReadonlyRepository;
+  getReadonlyRepository(name: string, owner?: string): ReadonlyRepository {
+    if (owner) {
+      return this.getRepository(name, owner);
+    }
+
     return this.getRepository(name);
   }
 

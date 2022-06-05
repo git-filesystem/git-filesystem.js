@@ -15,6 +15,7 @@ interface Provider {
 
 const providers: Provider[] = [
   { name: "github", user: process.env.GITHUB_USERNAME, accessToken: process.env.GITHUB_PAT }
+  // { name: "gitlab", user: process.env.GITLAB_USERNAME, accessToken: process.env.GITLAB_PAT }
 ];
 
 providers.forEach(provider =>
@@ -25,6 +26,16 @@ providers.forEach(provider =>
     let repositoryNameWithOwner: string;
 
     let client: Client;
+
+    const testFilePath = "test-file.txt";
+    const originalTextFileContent = "original file content";
+    const updatedTextFileContent = "updated file content";
+
+    const jsonFilePath = "test-file.json";
+    const originalJsonFileContent = Object.freeze({ original: "json file content" });
+    const updatedJsonFileContent = Object.freeze({ updated: "json file content" });
+
+    const testTagName = "test-tag";
 
     beforeAll(() => {
       expect(provider.accessToken).toBeDefined();
@@ -61,45 +72,142 @@ providers.forEach(provider =>
       expect(client.provider).toBe(provider.name);
     });
 
-    it("should be able to make a repository", async () => {
-      const doesExistBefore = await client.doesRepositoryExist(repositoryName);
-      expect(doesExistBefore).toBe("DoesNotExist");
+    describe("create repositories", () => {
+      it("should be able to make a repository", async () => {
+        const doesExistBefore = await client.doesRepositoryExist(repositoryName);
+        expect(doesExistBefore).toBe("DoesNotExist");
 
-      const repository = await client.createRepository(
-        repositoryName,
-        true,
-        `Temporary repository for e2e test run ${repositoryName}`
-      );
+        const repository = await client.createRepository(
+          repositoryName,
+          true,
+          `Temporary repository for e2e test run ${repositoryName}`
+        );
 
-      expect(repository).toBeDefined();
-      expect(repository.repositoryName).toBe(repositoryName);
+        expect(repository).toBeDefined();
+        expect(repository.repositoryName).toBe(repositoryName);
 
-      const doesExistAfter = await client.doesRepositoryExist(repositoryName);
-      expect(doesExistAfter).toBe("Exists");
+        const doesExistAfter = await client.doesRepositoryExist(repositoryName);
+        expect(doesExistAfter).toBe("Exists");
+      });
     });
 
-    it("should be able to get all repositories for the current user", async () => {
-      const repositories = await client.getAllRepositories();
+    describe("getting repositories", () => {
+      it("should be able to get all repositories for the current user", async () => {
+        const repositories = await client.getAllRepositories();
 
-      expect(repositories).toBeDefined();
-      expect(repositories).toContain(repositoryNameWithOwner);
+        expect(repositories).toBeDefined();
+        expect(repositories).toContain(repositoryNameWithOwner);
+      });
+
+      it("should be able to get all repositories for a different user", async () => {
+        const repositories = await client.getAllRepositories("microsoft");
+
+        expect(repositories).toBeDefined();
+        expect(repositories).not.toContain(repositoryNameWithOwner);
+      });
     });
 
-    it("should be able to get all repositories for a different user", async () => {
-      const repositories = await client.getAllRepositories("microsoft");
+    describe("creating files", () => {
+      it("should be able to create a new text file in a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
 
-      expect(repositories).toBeDefined();
-      expect(repositories).not.toContain(repositoryNameWithOwner);
+        await repository.createFile(testFilePath, originalTextFileContent);
+
+        const resultingFileContent = await repository.readFile(testFilePath);
+        expect(resultingFileContent).toBe(originalTextFileContent);
+      });
+
+      it("should be able to create a new json file in a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.createJsonFile(jsonFilePath, originalJsonFileContent);
+
+        const writtenObject = await repository.readJsonFile(jsonFilePath);
+        expect(writtenObject).toEqual(originalJsonFileContent);
+      });
     });
 
-    it("should be able to delete a repository", async () => {
-      const doesExistBefore = await client.doesRepositoryExist(repositoryName);
-      expect(doesExistBefore).toBe("Exists");
+    // describe("creating a tag", () => {
+    //   it("should be able to create a new tag", async () => {
+    //     const repository = client.getRepository(repositoryName, userAccount);
 
-      await client.deleteRepository(repositoryName);
+    //     await repository.createTag(testTagName);
 
-      const doesExistAfter = await client.doesRepositoryExist(repositoryName);
-      expect(doesExistAfter).toBe("DoesNotExist");
+    //     const tags = await repository.getAllTags();
+    //     const tagNames = tags.map(tag => tag.name);
+    //     expect(tagNames).toContain(testTagName);
+    //   });
+    // });
+
+    describe("updating files", () => {
+      it("should be able to update a pre-existing text file in a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.updateFile(testFilePath, updatedTextFileContent);
+
+        const writtenText = await repository.readFile(testFilePath);
+        expect(writtenText).toBe(updatedTextFileContent);
+      });
+
+      it("should be able to update a pre-existing json file in a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.updateJsonFile(jsonFilePath, updatedJsonFileContent);
+
+        const writtenObject = await repository.readJsonFile(jsonFilePath);
+        expect(writtenObject).toEqual(updatedJsonFileContent);
+      });
+    });
+
+    // describe("reading from a tag", () => {
+    //   it("should be able to read a file from a tag", async () => {
+    //     const repository = client.getRepository(repositoryName, userAccount);
+
+    //     const resultingFileContent = await repository.readFile(testFilePath, testTagName);
+    //     expect(resultingFileContent).toBe(originalTextFileContent);
+    //   });
+
+    //   it("should be able to read a json file from a tag", async () => {
+    //     const repository = client.getRepository(repositoryName, userAccount);
+
+    //     const writtenObject = await repository.readJsonFile(jsonFilePath, testTagName);
+    //     expect(writtenObject).toEqual(originalJsonFileContent);
+    //   });
+    // });
+
+    describe("deleting files", () => {
+      it("should be able to delete a file from a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.deleteFile(testFilePath);
+
+        // const doesExist = await repository.doesFileExist(testFilePath);
+        // expect(doesExist).toBe("DoesNotExist");
+      });
+    });
+
+    // describe("deleting tags", () => {
+    //   it("should be able to delete a tag", async () => {
+    //     const repository = client.getRepository(repositoryName, userAccount);
+
+    //     await repository.deleteTag(testTagName);
+
+    //     const tags = await repository.getAllTags();
+    //     const tagNames = tags.map(tag => tag.name);
+    //     expect(tagNames).not.toContain(testTagName);
+    //   });
+    // });
+
+    describe("deleting repositories", () => {
+      it("should be able to delete a repository", async () => {
+        const doesExistBefore = await client.doesRepositoryExist(repositoryName);
+        expect(doesExistBefore).toBe("Exists");
+
+        await client.deleteRepository(repositoryName);
+
+        const doesExistAfter = await client.doesRepositoryExist(repositoryName);
+        expect(doesExistAfter).toBe("DoesNotExist");
+      });
     });
   })
 );

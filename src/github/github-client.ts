@@ -35,9 +35,11 @@ export class GitHubClient extends Client {
     return await getAllRepositories(this.accessToken);
   }
 
-  getRepository(name: string): Repository {
+  getRepository(name: string): Repository;
+  getRepository(name: string, owner: string): Repository;
+  getRepository(name: string, owner?: string): Repository {
     return new GitHubRepository(
-      this.owner,
+      owner ?? this.owner,
       name,
       this.accessToken,
       this.applicationName,
