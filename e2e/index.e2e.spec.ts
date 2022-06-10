@@ -108,7 +108,7 @@ providers.forEach(provider =>
     });
 
     describe("creating files", () => {
-      it("should be able to create a new text file in a repository", async () => {
+      it("should be able to create a new text file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.createFile(testFilePath, originalTextFileContent);
@@ -117,12 +117,32 @@ providers.forEach(provider =>
         expect(resultingFileContent).toBe(originalTextFileContent);
       });
 
-      it("should be able to create a new json file in a repository", async () => {
+      it("should be able to create a new text file in a directory that doesn't exist", async () => {
+        const deepFilePath = "deep/test-file.txt";
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.createFile(deepFilePath, originalTextFileContent);
+
+        const resultingFileContent = await repository.readFile(deepFilePath);
+        expect(resultingFileContent).toBe(originalTextFileContent);
+      });
+
+      it("should be able to create a new json file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.createJsonFile(jsonFilePath, originalJsonFileContent);
 
         const writtenObject = await repository.readJsonFile(jsonFilePath);
+        expect(writtenObject).toEqual(originalJsonFileContent);
+      });
+
+      it("should be able to create a new json file in a directory that doesn't exist", async () => {
+        const deepFilePath = "deep/test-file.json";
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.createJsonFile(deepFilePath, originalJsonFileContent);
+
+        const writtenObject = await repository.readJsonFile(deepFilePath);
         expect(writtenObject).toEqual(originalJsonFileContent);
       });
     });
@@ -140,7 +160,7 @@ providers.forEach(provider =>
     // });
 
     describe("updating files", () => {
-      it("should be able to update a pre-existing text file in a repository", async () => {
+      it("should be able to update a pre-existing text file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.updateFile(testFilePath, updatedTextFileContent);
@@ -149,7 +169,7 @@ providers.forEach(provider =>
         expect(writtenText).toBe(updatedTextFileContent);
       });
 
-      it("should be able to update a pre-existing json file in a repository", async () => {
+      it("should be able to update a pre-existing json file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.updateJsonFile(jsonFilePath, updatedJsonFileContent);
@@ -176,7 +196,7 @@ providers.forEach(provider =>
     // });
 
     describe("deleting files", () => {
-      it("should be able to delete a file from a repository", async () => {
+      it("should be able to delete a file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.deleteFile(testFilePath);
