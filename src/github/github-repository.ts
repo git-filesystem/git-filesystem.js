@@ -2,6 +2,7 @@ import { Octokit } from "octokit";
 import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { Tag } from "../tag";
+import { createFile } from "./rest/create-file";
 
 export class GitHubRepository extends Repository {
   provider: Provider = "github";
@@ -22,21 +23,15 @@ export class GitHubRepository extends Repository {
   }
 
   async createFile(path: string, content: string): Promise<string> {
-    const result = await this.octokit.rest.repos.createOrUpdateFileContents({
-      owner: this.owner,
-      repo: this.repositoryName,
+    return await createFile(
+      this.accessToken,
+      this.owner,
+      this.repositoryName,
       path,
-      message: `Create ${path}`,
-      content: Buffer.from(content).toString("base64"),
-      author: this.authorDetails ?? undefined,
-      committer: this.committerDetails ?? undefined
-    });
-
-    if (hasSha(result.data.content)) {
-      return result.data.content.sha;
-    }
-
-    throw new Error(`Could not create file, expected string but got ${typeof result.data.content}`);
+      content,
+      this.committerDetails,
+      this.authorDetails
+    );
   }
 
   async updateFile(path: string, content: string): Promise<string> {

@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 import { getIdForUserOrOrg } from "./get-id-for-user-or-org";
 import { getClient } from "./gql-client";
 
-export const createRepositoryMutation = gql`
+const createRepositoryMutation = gql`
   mutation ($input: CreateRepositoryInput!) {
     createRepository(input: $input) {
       clientMutationId
