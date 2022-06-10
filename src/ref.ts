@@ -11,7 +11,7 @@ export interface FullyQualifiedBranch {
 }
 
 export const isFullyQualifiedBranchRef = (ref: string): ref is FullyQualifiedTagRef =>
-  ref.startsWith(fqBranchRefPrefix);
+  ref.startsWith(fqBranchRefPrefix) && ref.length > fqBranchRefPrefix.length;
 
 // Tags
 
@@ -26,7 +26,7 @@ export interface FullyQualifiedTag {
 }
 
 export const isFullyQualifiedTagRef = (ref: string): ref is FullyQualifiedTagRef =>
-  ref.startsWith(fqTagRefPrefix);
+  ref.startsWith(fqTagRefPrefix) && ref.length > fqTagRefPrefix.length;
 
 // All
 
