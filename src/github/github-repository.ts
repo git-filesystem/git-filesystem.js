@@ -5,6 +5,7 @@ import { Tag } from "../tag";
 import { getFileContent } from "./gql/get-file-content";
 import { getFileSha } from "./gql/get-file-sha";
 import { createFile } from "./rest/create-file";
+import { deleteFile } from "./rest/delete-file";
 import { updateFile } from "./rest/update-file";
 
 export class GitHubRepository extends Repository {
@@ -77,15 +78,16 @@ export class GitHubRepository extends Repository {
       path
     );
 
-    await this.octokit.rest.repos.deleteFile({
-      owner: this.owner,
-      repo: this.repositoryName,
+    await deleteFile(
+      this.accessToken,
+      this.owner,
+      this.repositoryName,
       path,
+      this.defaultBranch,
       sha,
-      message: `Delete ${path}`,
-      author: this.authorDetails ?? undefined,
-      committer: this.committerDetails ?? undefined
-    });
+      this.committerDetails,
+      this.authorDetails
+    );
   }
 
   createTag(name: string): Promise<Tag> {
