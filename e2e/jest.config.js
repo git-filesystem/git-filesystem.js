@@ -3,5 +3,6 @@ module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
   testMatch: ["<rootDir>/**/*.spec.ts"],
-  setupFiles: ["<rootDir>/setupFile.js"]
+  setupFiles: ["<rootDir>/setupFile.js"],
+  testTimeout: 10000
 };
