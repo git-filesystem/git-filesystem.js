@@ -6,6 +6,7 @@ interface RequestBody {
   message: string;
   content: string;
   branch: string;
+  sha: string;
   committer: GitHubGitUser | null;
   author: GitHubGitUser | null;
 }
@@ -19,13 +20,14 @@ interface RequestResponse {
   sha: string;
 }
 
-export const createFile = async (
+export const updateFile = async (
   accessToken: string,
   owner: string,
   repo: string,
   fileName: string,
   content: string,
   branch: string,
+  fileBlobSha: string,
   committer: GitHubGitUser | null,
   author: GitHubGitUser | null
 ): Promise<string> => {
@@ -34,9 +36,10 @@ export const createFile = async (
   const base64Content = base64encode(content);
 
   const body: RequestBody = {
-    message: `Create ${fileName}`,
+    message: `Update ${fileName}`,
     content: base64Content,
     branch,
+    sha: fileBlobSha,
     committer,
     author
   };

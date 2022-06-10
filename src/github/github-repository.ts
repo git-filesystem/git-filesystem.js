@@ -2,10 +2,13 @@ import { Octokit } from "octokit";
 import { GitUser, Provider } from "../client";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { Tag } from "../tag";
+import { getFileContent } from "./gql/get-file-content";
+import { getFileSha } from "./gql/get-file-sha";
 import { createFile } from "./rest/create-file";
+import { updateFile } from "./rest/update-file";
 
 export class GitHubRepository extends Repository {
-  provider: Provider = "github";
+  readonly provider: Provider = "github";
 
   protected octokit: Octokit;
 
@@ -16,7 +19,8 @@ export class GitHubRepository extends Repository {
     public readonly applicationName: string,
     public readonly authorDetails: GitUser | null = null,
     public readonly committerDetails: GitUser | null = null,
-    jsonConfig: JsonConfig | null = null
+    jsonConfig: JsonConfig | null = null,
+    public readonly defaultBranch: string = "refs/heads/main"
   ) {
     super(owner, repositoryName, jsonConfig ?? defaultJsonConfig);
     this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
@@ -29,58 +33,49 @@ export class GitHubRepository extends Repository {
       this.repositoryName,
       path,
       content,
+      this.defaultBranch,
       this.committerDetails,
       this.authorDetails
     );
   }
 
   async updateFile(path: string, content: string): Promise<string> {
-    const sha = await this.getShaForFile(path);
+    const sha = await getFileSha(
+      this.accessToken,
+      this.owner,
+      this.repositoryName,
+      this.defaultBranch,
+      path
+    );
 
-    const updateResult = await this.octokit.rest.repos.createOrUpdateFileContents({
-      owner: this.owner,
-      repo: this.repositoryName,
+    return await updateFile(
+      this.accessToken,
+      this.owner,
+      this.repositoryName,
       path,
+      content,
+      this.defaultBranch,
       sha,
-      message: `Update ${path}`,
-      content: Buffer.from(content).toString("base64"),
-      author: this.authorDetails ?? undefined,
-      committer: this.committerDetails ?? undefined
-    });
-
-    if (hasSha(updateResult.data.content)) {
-      return updateResult.data.content.sha;
-    }
-
-    throw new Error(
-      `Could not update file, expected string but got ${typeof updateResult.data.content}`
+      this.committerDetails,
+      this.authorDetails
     );
   }
 
   readFile(path: string): Promise<string>;
   readFile(path: string, tagName: string): Promise<string>;
   async readFile(path: string, tagName?: string): Promise<string> {
-    const ref = tagName ? tagName : "main";
-
-    const contentResult = await this.octokit.rest.repos.getContent({
-      owner: this.owner,
-      repo: this.repositoryName,
-      path,
-      ref,
-      mediaType: {
-        format: "raw"
-      }
-    });
-
-    if (typeof contentResult.data === "string") {
-      return contentResult.data;
-    }
-
-    throw new Error(`Could not read file, expected string but got ${typeof contentResult.data}`);
+    const ref = this.getRef(tagName);
+    return await getFileContent(this.accessToken, this.owner, this.repositoryName, ref, path);
   }
 
   async deleteFile(path: string): Promise<void> {
-    const sha = await this.getShaForFile(path);
+    const sha = await getFileSha(
+      this.accessToken,
+      this.owner,
+      this.repositoryName,
+      this.defaultBranch,
+      path
+    );
 
     await this.octokit.rest.repos.deleteFile({
       owner: this.owner,
@@ -107,27 +102,15 @@ export class GitHubRepository extends Repository {
     throw new Error("Method not implemented.");
   }
 
-  private async getShaForFile(path: string): Promise<string> {
-    const contentResult = await this.octokit.rest.repos.getContent({
-      owner: this.owner,
-      repo: this.repositoryName,
-      path
-    });
-
-    if (hasSha(contentResult.data)) {
-      return contentResult.data.sha;
+  private getRef = (tagname?: string): string => {
+    if (!tagname) {
+      return this.defaultBranch;
     }
 
-    throw new Error(
-      `Could not get sha for file, expected string but got ${typeof contentResult.data}`
-    );
-  }
-}
+    if (tagname.startsWith("refs/tags")) {
+      return tagname;
+    }
 
-const hasSha = (value: unknown): value is HasSha => {
-  return typeof value === "object" && !!value && typeof (value as HasSha).sha === "string";
-};
-
-interface HasSha {
-  sha: string;
+    return `refs/tags/${tagname}`;
+  };
 }
