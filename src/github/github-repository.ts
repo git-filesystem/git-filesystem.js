@@ -1,4 +1,3 @@
-import { Octokit } from "octokit";
 import { GitUser, Provider } from "../client";
 import {
   FullyQualifiedBranch,
@@ -18,8 +17,6 @@ export class GitHubRepository extends Repository {
   readonly provider: Provider = "github";
   private readonly fqBranch: FullyQualifiedBranch;
 
-  protected octokit: Octokit;
-
   public constructor(
     owner: string,
     repositoryName: string,
@@ -31,7 +28,6 @@ export class GitHubRepository extends Repository {
     public readonly defaultBranchRef: FullyQualifiedBranchRef = "refs/heads/main"
   ) {
     super(owner, repositoryName, jsonConfig ?? defaultJsonConfig);
-    this.octokit = new Octokit({ auth: accessToken, userAgent: applicationName });
     this.fqBranch = { refType: "branch", owner, repositoryName, ref: defaultBranchRef };
   }
 
