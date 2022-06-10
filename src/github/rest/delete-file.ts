@@ -1,4 +1,5 @@
 import { AxiosResponse } from "axios";
+import { FullyQualifiedBranch } from "../../ref";
 import { getRestClient } from "./rest-client";
 
 interface RequestBody {
@@ -20,19 +21,18 @@ interface RequestResponse {
 
 export const deleteFile = async (
   accessToken: string,
-  owner: string,
-  repo: string,
+  branch: FullyQualifiedBranch,
   fileName: string,
-  branch: string,
   fileBlobSha: string,
   committer: GitHubGitUser | null,
   author: GitHubGitUser | null
 ): Promise<string> => {
-  const path = `repos/${owner}/${repo}/contents/${fileName}`;
+  const { owner, repositoryName, ref } = branch;
+  const path = `repos/${owner}/${repositoryName}/contents/${fileName}`;
 
   const body: RequestBody = {
     message: `Delete ${fileName}`,
-    branch,
+    branch: ref,
     sha: fileBlobSha,
     committer,
     author

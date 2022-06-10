@@ -1,4 +1,5 @@
 import { AxiosResponse } from "axios";
+import { FullyQualifiedBranch } from "../../ref";
 import { base64encode } from "../../utils/base64";
 import { getRestClient } from "./rest-client";
 
@@ -21,22 +22,20 @@ interface RequestResponse {
 
 export const createFile = async (
   accessToken: string,
-  owner: string,
-  repo: string,
+  branch: FullyQualifiedBranch,
   fileName: string,
   content: string,
-  branch: string,
   committer: GitHubGitUser | null,
   author: GitHubGitUser | null
 ): Promise<string> => {
-  const path = `repos/${owner}/${repo}/contents/${fileName}`;
-
+  const { owner, repositoryName, ref } = branch;
+  const path = `repos/${owner}/${repositoryName}/contents/${fileName}`;
   const base64Content = base64encode(content);
 
   const body: RequestBody = {
     message: `Create ${fileName}`,
     content: base64Content,
-    branch,
+    branch: ref,
     committer,
     author
   };

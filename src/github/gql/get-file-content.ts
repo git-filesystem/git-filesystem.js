@@ -1,9 +1,10 @@
 import { gql } from "graphql-request";
+import { FullyQualifiedRef } from "../../ref";
 import { getClient } from "./gql-client";
 
 const getFileContentQuery = gql`
-  query ($owner: String!, $repo: String!, $expression: String) {
-    repository(owner: $owner, name: $repo) {
+  query ($owner: String!, $repositoryName: String!, $expression: String) {
+    repository(owner: $owner, name: $repositoryName) {
       object(expression: $expression) {
         ... on Blob {
           text
@@ -15,7 +16,7 @@ const getFileContentQuery = gql`
 
 interface Variables {
   owner: string;
-  repo: string;
+  repositoryName: string;
   expression: string;
 }
 
@@ -29,14 +30,14 @@ interface Response {
 
 export const getFileContent = async (
   accessToken: string,
-  owner: string,
-  repo: string,
-  ref: string,
+  fqRef: FullyQualifiedRef,
   path: string
 ) => {
+  const { owner, repositoryName, ref } = fqRef;
+
   const variables: Variables = {
     owner,
-    repo,
+    repositoryName,
     expression: `${ref}:${path}`
   };
 
