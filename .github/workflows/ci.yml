@@ -45,6 +45,11 @@ jobs:
 
       - name: Run Tests
         run: npm run test:ci
+        env:
+          E2E_GITHUB_USERNAME: ${{ secrets.E2E_GITHUB_USERNAME }}
+          E2E_GITHUB_PAT: ${{ secrets.E2E_GITHUB_PAT }}
+          E2E_GITLAB_USERNAME: ${{ secrets.E2E_GITLAB_USERNAME }}
+          E2E_GITLAB_PAT: ${{ secrets.E2E_GITLAB_PAT }}
 
       - name: Codecov
         uses: codecov/codecov-action@v3.1.0
