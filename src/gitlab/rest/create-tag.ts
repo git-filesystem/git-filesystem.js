@@ -1,9 +1,9 @@
 import { AxiosResponse } from "axios";
+import { FullyQualifiedTagRef } from "../../ref";
 import { getRestClient } from "./rest-client";
 
-interface TagResponse {
+interface Response {
   name: string;
-  target: string;
 }
 
 export const createTag = async (
@@ -12,7 +12,7 @@ export const createTag = async (
   repositoryName: string,
   tagName: string,
   branchName: string
-): Promise<TagResponse> => {
+): Promise<FullyQualifiedTagRef> => {
   const urlEncodedRepoPath = encodeURIComponent(owner + "/" + repositoryName);
   const path = `projects/${urlEncodedRepoPath}/repository/tags`;
 
@@ -21,10 +21,9 @@ export const createTag = async (
     ref: branchName
   };
 
-  const { data } = await getRestClient(accessToken).get<TagResponse[], AxiosResponse<TagResponse>>(
-    path,
-    { params }
-  );
+  const { data } = await getRestClient(accessToken).get<Response[], AxiosResponse<Response>>(path, {
+    params
+  });
 
-  return data;
+  return `refs/tags/${data.name}`;
 };

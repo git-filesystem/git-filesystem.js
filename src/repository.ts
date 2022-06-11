@@ -1,5 +1,5 @@
 import { Provider } from "./client";
-import { Tag } from "./tag";
+import { FullyQualifiedTag } from "./ref";
 
 // TODO: Add moving files
 
@@ -9,7 +9,7 @@ export interface ReadonlyRepository {
   readFile(path: string): Promise<string>;
   readFile(path: string, tagName: string): Promise<string>;
 
-  getAllTags(): Promise<Tag[]>;
+  getAllTags(): Promise<FullyQualifiedTag[]>;
 
   readJsonFile<T>(path: string): Promise<T>;
 }
@@ -29,9 +29,9 @@ export abstract class Repository implements ReadonlyRepository {
   abstract readFile(path: string, tagName: string): Promise<string>;
   abstract deleteFile(path: string): Promise<void>;
 
-  abstract createTag(name: string): Promise<Tag>;
-  abstract getAllTags(): Promise<Tag[]>;
-  abstract deleteTag(tag: Tag): Promise<void>;
+  abstract createTag(name: string): Promise<FullyQualifiedTag>;
+  abstract getAllTags(): Promise<FullyQualifiedTag[]>;
+  abstract deleteTag(name: string): Promise<void>;
 
   public async createJsonFile<T>(path: string, content: T): Promise<string> {
     const stringContent = this.stringify(content);

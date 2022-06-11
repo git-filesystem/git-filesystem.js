@@ -1,5 +1,5 @@
-import { Tag } from "..";
 import { GitUser, Provider } from "../client";
+import { FullyQualifiedTag } from "../ref";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { CommitAction, createCommit } from "./gql/create-commit";
 import { allTags } from "./rest/all-tags";
@@ -112,17 +112,35 @@ export class GitLabRepository extends Repository {
     }
   }
 
-  async createTag(name: string): Promise<Tag> {
-    const newTag = await createTag(this.accessToken, this.owner, this.repositoryName, name, "main");
-    return { name: newTag.name, oid: newTag.target };
+  async createTag(name: string): Promise<FullyQualifiedTag> {
+    const newTagRef = await createTag(
+      this.accessToken,
+      this.owner,
+      this.repositoryName,
+      name,
+      "main"
+    );
+
+    return {
+      refType: "tag",
+      owner: this.owner,
+      repositoryName: this.repositoryName,
+      ref: newTagRef
+    };
   }
 
-  async getAllTags(): Promise<Tag[]> {
-    const tags = await allTags(this.accessToken, this.owner, this.repositoryName);
-    return tags.map(t => ({ name: t.name, oid: t.target }));
+  async getAllTags(): Promise<FullyQualifiedTag[]> {
+    const newTagRefs = await allTags(this.accessToken, this.owner, this.repositoryName);
+
+    return newTagRefs.map(ref => ({
+      refType: "tag",
+      owner: this.owner,
+      repositoryName: this.repositoryName,
+      ref
+    }));
   }
 
-  async deleteTag(tag: Tag): Promise<void> {
-    await deleteTag(this.accessToken, this.owner, this.repositoryName, tag.name);
+  async deleteTag(name: string): Promise<void> {
+    await deleteTag(this.accessToken, this.owner, this.repositoryName, name);
   }
 }

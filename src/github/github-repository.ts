@@ -3,10 +3,10 @@ import {
   FullyQualifiedBranch,
   FullyQualifiedBranchRef,
   FullyQualifiedRef,
+  FullyQualifiedTag,
   isFullyQualifiedTagRef
 } from "../ref";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
-import { Tag } from "../tag";
 import { getFileContent } from "./gql/get-file-content";
 import { getFileSha } from "./gql/get-file-sha";
 import { createFile } from "./rest/create-file";
@@ -76,17 +76,17 @@ export class GitHubRepository extends Repository {
     );
   }
 
-  createTag(name: string): Promise<Tag> {
+  createTag(name: string): Promise<FullyQualifiedTag> {
     name;
     throw new Error("Method not implemented.");
   }
 
-  getAllTags(): Promise<Tag[]> {
+  getAllTags(): Promise<FullyQualifiedTag[]> {
     throw new Error("Method not implemented.");
   }
 
-  deleteTag(tag: Tag): Promise<void> {
-    tag;
+  deleteTag(name: string): Promise<void> {
+    name;
     throw new Error("Method not implemented.");
   }
 

@@ -11,6 +11,6 @@
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["**/*.ts"],
-  "exclude": ["**/__mocks__/**"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["**/__mocks__/**", "dist"]
 }
