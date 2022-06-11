@@ -1,6 +1,6 @@
 // Branches
 
-const fqBranchRefPrefix = "refs/heads/";
+export const fqBranchRefPrefix = "refs/heads/";
 export type FullyQualifiedBranchRef = `${typeof fqBranchRefPrefix}${string}`;
 
 export interface FullyQualifiedBranch {
@@ -15,7 +15,7 @@ export const isFullyQualifiedBranchRef = (ref: string): ref is FullyQualifiedTag
 
 // Tags
 
-const fqTagRefPrefix = "refs/tags/";
+export const fqTagRefPrefix = "refs/tags/";
 export type FullyQualifiedTagRef = `${typeof fqTagRefPrefix}${string}`;
 
 export interface FullyQualifiedTag {

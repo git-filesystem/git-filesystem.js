@@ -1,12 +1,15 @@
 import { GitUser, Provider } from "../client";
 import {
+  fqTagRefPrefix,
   FullyQualifiedBranch,
   FullyQualifiedBranchRef,
   FullyQualifiedRef,
   FullyQualifiedTag,
+  FullyQualifiedTagRef,
   isFullyQualifiedTagRef
 } from "../ref";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
+import { createTag } from "./gql/create-tag";
 import { getFileContent } from "./gql/get-file-content";
 import { getFileSha } from "./gql/get-file-sha";
 import { createFile } from "./rest/create-file";
@@ -76,9 +79,19 @@ export class GitHubRepository extends Repository {
     );
   }
 
-  createTag(name: string): Promise<FullyQualifiedTag> {
-    name;
-    throw new Error("Method not implemented.");
+  async createTag(name: string): Promise<FullyQualifiedTag> {
+    const fqTagRef: FullyQualifiedTagRef = isFullyQualifiedTagRef(name)
+      ? name
+      : `${fqTagRefPrefix}${name}`;
+
+    await createTag(this.accessToken, this.fqBranch, fqTagRef);
+
+    return {
+      refType: "tag",
+      owner: this.owner,
+      repositoryName: this.repositoryName,
+      ref: fqTagRef
+    };
   }
 
   getAllTags(): Promise<FullyQualifiedTag[]> {

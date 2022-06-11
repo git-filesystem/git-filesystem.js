@@ -35,7 +35,7 @@ providers.forEach(provider =>
     const originalJsonFileContent = Object.freeze({ original: "json file content" });
     const updatedJsonFileContent = Object.freeze({ updated: "json file content" });
 
-    // const testTagName = "test-tag";
+    const testTagName = "test-tag";
 
     beforeAll(() => {
       expect(provider.accessToken).toBeDefined();
@@ -147,17 +147,17 @@ providers.forEach(provider =>
       });
     });
 
-    // describe("creating a tag", () => {
-    //   it("should be able to create a new tag", async () => {
-    //     const repository = client.getRepository(repositoryName, userAccount);
+    describe("creating a tag", () => {
+      it("should be able to create a new tag", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
 
-    //     await repository.createTag(testTagName);
+        await repository.createTag(testTagName);
 
-    //     const tags = await repository.getAllTags();
-    //     const tagNames = tags.map(tag => tag.name);
-    //     expect(tagNames).toContain(testTagName);
-    //   });
-    // });
+        // const tags = await repository.getAllTags();
+        // const tagNames = tags.map(tag => tag.name);
+        // expect(tagNames).toContain(testTagName);
+      });
+    });
 
     describe("updating files", () => {
       it("should be able to update a pre-existing text file", async () => {
@@ -179,21 +179,21 @@ providers.forEach(provider =>
       });
     });
 
-    // describe("reading from a tag", () => {
-    //   it("should be able to read a file from a tag", async () => {
-    //     const repository = client.getRepository(repositoryName, userAccount);
+    describe("reading from a tag", () => {
+      it("should be able to read a file from a tag", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
 
-    //     const resultingFileContent = await repository.readFile(testFilePath, testTagName);
-    //     expect(resultingFileContent).toBe(originalTextFileContent);
-    //   });
+        const resultingFileContent = await repository.readFile(testFilePath, testTagName);
+        expect(resultingFileContent).toBe(originalTextFileContent);
+      });
 
-    //   it("should be able to read a json file from a tag", async () => {
-    //     const repository = client.getRepository(repositoryName, userAccount);
+      it("should be able to read a json file from a tag", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
 
-    //     const writtenObject = await repository.readJsonFile(jsonFilePath, testTagName);
-    //     expect(writtenObject).toEqual(originalJsonFileContent);
-    //   });
-    // });
+        const writtenObject = await repository.readJsonFile(jsonFilePath, testTagName);
+        expect(writtenObject).toEqual(originalJsonFileContent);
+      });
+    });
 
     describe("deleting files", () => {
       it("should be able to delete a file", async () => {
