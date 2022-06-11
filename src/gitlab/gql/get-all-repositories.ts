@@ -6,6 +6,9 @@ const query = gql`
     projects(membership: true) {
       nodes {
         name
+        namespace {
+          path
+        }
       }
     }
   }
@@ -13,15 +16,16 @@ const query = gql`
 
 interface Response {
   projects: {
-    nodes: ProjectNode[];
+    nodes: {
+      name: string;
+      namespace: {
+        path: string;
+      };
+    }[];
   };
-}
-
-interface ProjectNode {
-  name: string;
 }
 
 export const getAllRepositories = async (accessToken: string): Promise<string[]> => {
   const response = await getClient(accessToken).request<Response>(query);
-  return response.projects.nodes.map(node => node.name);
+  return response.projects.nodes.map(node => `${node.namespace.path}/${node.name}`);
 };
