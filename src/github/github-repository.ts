@@ -10,6 +10,7 @@ import {
 } from "../ref";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { createTag } from "./gql/create-tag";
+import { getAllTags } from "./gql/get-all-tags";
 import { getFileContent } from "./gql/get-file-content";
 import { getFileSha } from "./gql/get-file-sha";
 import { createFile } from "./rest/create-file";
@@ -94,8 +95,19 @@ export class GitHubRepository extends Repository {
     };
   }
 
-  getAllTags(): Promise<FullyQualifiedTag[]> {
-    throw new Error("Method not implemented.");
+  async getAllTags(): Promise<FullyQualifiedTag[]> {
+    const fqTagRefs: FullyQualifiedTagRef[] = await getAllTags(
+      this.accessToken,
+      this.owner,
+      this.repositoryName
+    );
+
+    return fqTagRefs.map<FullyQualifiedTag>(fqTagRef => ({
+      refType: "tag",
+      owner: this.owner,
+      repositoryName: this.repositoryName,
+      ref: fqTagRef
+    }));
   }
 
   deleteTag(name: string): Promise<void> {
@@ -121,7 +133,7 @@ export class GitHubRepository extends Repository {
       refType: "tag",
       owner: this.owner,
       repositoryName: this.repositoryName,
-      ref: `refs/tags/${tagname}`
+      ref: `${fqTagRefPrefix}${tagname}`
     };
   };
 }

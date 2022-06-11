@@ -1,5 +1,6 @@
 import { Client, GitUser, Provider as ProviderName } from "../src/client";
 import { ClientFactory } from "../src/client-factory";
+import { fqTagRefPrefix } from "../src/ref";
 
 /*
 
@@ -148,14 +149,26 @@ providers.forEach(provider =>
     });
 
     describe("creating a tag", () => {
-      it("should be able to create a new tag", async () => {
+      it("should be able to create a tag with the short name", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.createTag(testTagName);
 
-        // const tags = await repository.getAllTags();
-        // const tagNames = tags.map(tag => tag.name);
-        // expect(tagNames).toContain(testTagName);
+        const tags = await repository.getAllTags();
+        const tagNames = tags.map(tag => tag.ref);
+        expect(tagNames).toContain("refs/tags/" + testTagName);
+      });
+
+      it("should be able to create a tag with the fully qualified name", async () => {
+        const fullyQualifiedTagName = "refs/tags/" + testTagName + "2";
+
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.createTag(fullyQualifiedTagName);
+
+        const tags = await repository.getAllTags();
+        const tagNames = tags.map(tag => tag.ref);
+        expect(tagNames).toContain(fullyQualifiedTagName);
       });
     });
 
@@ -180,17 +193,37 @@ providers.forEach(provider =>
     });
 
     describe("reading from a tag", () => {
-      it("should be able to read a file from a tag", async () => {
+      it("should be able to read a text file from a tag using the short name", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         const resultingFileContent = await repository.readFile(testFilePath, testTagName);
         expect(resultingFileContent).toBe(originalTextFileContent);
       });
 
-      it("should be able to read a json file from a tag", async () => {
+      it("should be able to read a text file from a tag using the fully qualified name", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        const resultingFileContent = await repository.readFile(
+          testFilePath,
+          `${fqTagRefPrefix}${testTagName}`
+        );
+        expect(resultingFileContent).toBe(originalTextFileContent);
+      });
+
+      it("should be able to read a json file from a tag using the short name", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         const writtenObject = await repository.readJsonFile(jsonFilePath, testTagName);
+        expect(writtenObject).toEqual(originalJsonFileContent);
+      });
+
+      it("should be able to read a json file from a tag using the fully qualified name", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        const writtenObject = await repository.readJsonFile(
+          jsonFilePath,
+          `${fqTagRefPrefix}${testTagName}`
+        );
         expect(writtenObject).toEqual(originalJsonFileContent);
       });
     });
