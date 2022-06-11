@@ -4,12 +4,14 @@ import { JsonConfig } from "../repository";
 import { GitLabRepository } from "./gitlab-repository";
 import { getAllRepositories } from "./gql/get-all-repositories";
 import { getAllRepositoriesForOwner } from "./gql/get-all-repositories-for-owner";
+import { getNamespaceId } from "./gql/get-namespace-id";
 import { isRepositoryArchived } from "./gql/is-repository-archived";
 import { createProject } from "./rest/create-project";
 import { deleteProject } from "./rest/delete-project";
 
 export class GitLabClient extends Client {
   readonly provider: Provider = "gitlab";
+  private namespaceId: number | undefined;
 
   constructor(
     private readonly owner: string,
@@ -31,6 +33,7 @@ export class GitLabClient extends Client {
 
     return await getAllRepositories(this.accessToken);
   }
+
   getRepository(name: string): Repository {
     return new GitLabRepository(
       this.owner,
@@ -57,7 +60,10 @@ export class GitLabClient extends Client {
     isPrivate: boolean,
     description: string
   ): Promise<Repository> {
-    await createProject(this.accessToken, name, isPrivate, description);
+    const namespaceId = await this.getNamespaceId();
+
+    await createProject(this.accessToken, namespaceId, name, description, isPrivate);
+
     return this.getRepository(name);
   }
 
@@ -73,5 +79,13 @@ export class GitLabClient extends Client {
 
   async deleteRepository(name: string): Promise<void> {
     await deleteProject(this.accessToken, this.owner, name);
+  }
+
+  private async getNamespaceId(): Promise<number> {
+    if (!this.namespaceId) {
+      this.namespaceId = await getNamespaceId(this.accessToken, this.owner);
+    }
+
+    return this.namespaceId;
   }
 }
