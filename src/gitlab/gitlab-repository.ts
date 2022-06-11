@@ -1,5 +1,10 @@
 import { GitUser, Provider } from "../client";
-import { FullyQualifiedTag } from "../ref";
+import {
+  fqBranchRefPrefix,
+  FullyQualifiedBranch,
+  FullyQualifiedBranchRef,
+  FullyQualifiedTag
+} from "../ref";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { CommitAction, createCommit } from "./gql/create-commit";
 import { allTags } from "./rest/all-tags";
@@ -7,9 +12,8 @@ import { createTag } from "./rest/create-tag";
 import { deleteTag } from "./rest/delete-tag";
 
 export class GitLabRepository extends Repository {
-  public readonly fullPath: string;
-
   provider: Provider = "gitlab";
+  private readonly fqBranch: FullyQualifiedBranch;
 
   public constructor(
     owner: string,
@@ -18,10 +22,11 @@ export class GitLabRepository extends Repository {
     public readonly applicationName: string,
     public readonly authorDetails: GitUser | null = null,
     public readonly committerDetails: GitUser | null = null,
-    jsonConfig: JsonConfig | null = null
+    jsonConfig: JsonConfig | null = null,
+    public readonly defaultBranchRef: FullyQualifiedBranchRef = `${fqBranchRefPrefix}main`
   ) {
     super(owner, repositoryName, jsonConfig ?? defaultJsonConfig);
-    this.fullPath = `${owner}/${repositoryName}`;
+    this.fqBranch = { refType: "branch", owner, repositoryName, ref: defaultBranchRef };
   }
 
   async createFile(path: string, content: string): Promise<string> {
@@ -36,20 +41,15 @@ export class GitLabRepository extends Repository {
 
     const createActions = [createAction];
 
-    const result = await createCommit(
+    const sha = await createCommit(
       this.accessToken,
-      this.fullPath,
+      this.fqBranch,
       this.applicationName,
-      "main",
       commitMessage,
       createActions
     );
 
-    if (result.errors.length > 0 || !result.sha) {
-      throw new Error(result.errors.join("\n"));
-    }
-
-    return result.sha;
+    return sha;
   }
 
   async updateFile(path: string, content: string): Promise<string> {
@@ -64,20 +64,15 @@ export class GitLabRepository extends Repository {
 
     const createActions = [createAction];
 
-    const result = await createCommit(
+    const sha = await createCommit(
       this.accessToken,
-      this.fullPath,
+      this.fqBranch,
       this.applicationName,
-      "main",
       commitMessage,
       createActions
     );
 
-    if (result.errors.length > 0 || !result.sha) {
-      throw new Error(result.errors.join("\n"));
-    }
-
-    return result.sha;
+    return sha;
   }
 
   readFile(path: string): Promise<string>;
@@ -98,28 +93,17 @@ export class GitLabRepository extends Repository {
 
     const createActions = [createAction];
 
-    const result = await createCommit(
+    await createCommit(
       this.accessToken,
-      this.fullPath,
+      this.fqBranch,
       this.applicationName,
-      "main",
       commitMessage,
       createActions
     );
-
-    if (result.errors.length > 0 || !result.sha) {
-      throw new Error(result.errors.join("\n"));
-    }
   }
 
   async createTag(name: string): Promise<FullyQualifiedTag> {
-    const newTagRef = await createTag(
-      this.accessToken,
-      this.owner,
-      this.repositoryName,
-      name,
-      "main"
-    );
+    const newTagRef = await createTag(this.accessToken, this.fqBranch, name);
 
     return {
       refType: "tag",

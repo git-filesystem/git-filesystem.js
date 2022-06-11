@@ -1,7 +1,8 @@
 import { gql } from "graphql-request";
+import { FullyQualifiedBranch } from "../../ref";
 import { getClient } from "./gql-client";
 
-const createCommitMutation = gql`
+const mutation = gql`
   mutation (
     $fullPath: ID!
     $appId: String
@@ -26,7 +27,7 @@ const createCommitMutation = gql`
   }
 `;
 
-interface CreateCommitMutationVariables {
+interface Variables {
   fullPath: string;
   appId: string;
   branch: string;
@@ -57,41 +58,34 @@ export type CommitAction = CreateCommitAction | UpdateCommitAction | DeleteCommi
 
 export type CommitFileEncoding = "TEXT" | "BASE64";
 
-interface CreateCommitMutationResponse {
+interface Response {
   commitCreate: {
     errors: string[];
-    commit?: {
+    commit: {
       sha: string;
     };
   };
 }
 
-interface CreateCommitResult {
-  errors: string[];
-  sha?: string;
-}
-
 export const createCommit = async (
   accessToken: string,
-  fullPath: string,
+  branch: FullyQualifiedBranch,
   appId: string,
-  branch: string,
   commitMessage: string,
   actions: CommitAction[]
-): Promise<CreateCommitResult> => {
-  const response = await getClient(accessToken).request<
-    CreateCommitMutationResponse,
-    CreateCommitMutationVariables
-  >(createCommitMutation, {
+): Promise<string> => {
+  const { owner, repositoryName, ref } = branch;
+  const fullPath = `${owner}/${repositoryName}`;
+
+  const variables: Variables = {
     fullPath,
     appId,
-    branch,
+    branch: ref,
     commitMessage,
     actions
-  });
-
-  return {
-    errors: response.commitCreate.errors,
-    sha: response.commitCreate.commit?.sha
   };
+
+  const response = await getClient(accessToken).request<Response, Variables>(mutation, variables);
+
+  return response.commitCreate.commit.sha;
 };
