@@ -1,5 +1,6 @@
 import { GitUser, Provider } from "../client";
 import {
+  fqBranchRefPrefix,
   fqTagRefPrefix,
   FullyQualifiedBranch,
   FullyQualifiedBranchRef,
@@ -31,7 +32,7 @@ export class GitHubRepository extends Repository {
     public readonly authorDetails: GitUser | null = null,
     public readonly committerDetails: GitUser | null = null,
     jsonConfig: JsonConfig | null = null,
-    public readonly defaultBranchRef: FullyQualifiedBranchRef = "refs/heads/main"
+    public readonly defaultBranchRef: FullyQualifiedBranchRef = `${fqBranchRefPrefix}main`
   ) {
     super(owner, repositoryName, jsonConfig ?? defaultJsonConfig);
     this.fqBranch = { refType: "branch", owner, repositoryName, ref: defaultBranchRef };
