@@ -1,15 +1,17 @@
 import { gql } from "graphql-request";
 import { getClient } from "./gql-client";
 
-const getAllRepositoriesQuery = gql`
-  projects(membership: true) {
-    nodes {
-      name
+const query = gql`
+  query {
+    projects(membership: true) {
+      nodes {
+        name
+      }
     }
   }
 `;
 
-interface GetAppRepositoriesResponse {
+interface Response {
   projects: {
     nodes: ProjectNode[];
   };
@@ -20,9 +22,6 @@ interface ProjectNode {
 }
 
 export const getAllRepositories = async (accessToken: string): Promise<string[]> => {
-  const response = await getClient(accessToken).request<GetAppRepositoriesResponse>(
-    getAllRepositoriesQuery
-  );
-
+  const response = await getClient(accessToken).request<Response>(query);
   return response.projects.nodes.map(node => node.name);
 };
