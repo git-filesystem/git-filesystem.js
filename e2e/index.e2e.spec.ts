@@ -239,17 +239,17 @@ providers.forEach(provider =>
       });
     });
 
-    // describe("deleting tags", () => {
-    //   it("should be able to delete a tag", async () => {
-    //     const repository = client.getRepository(repositoryName, userAccount);
+    describe("deleting tags", () => {
+      it("should be able to delete a tag", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
 
-    //     await repository.deleteTag(testTagName);
+        await repository.deleteTag(testTagName);
 
-    //     const tags = await repository.getAllTags();
-    //     const tagNames = tags.map(tag => tag.name);
-    //     expect(tagNames).not.toContain(testTagName);
-    //   });
-    // });
+        const tags = await repository.getAllTags();
+        const tagNames = tags.map(tag => tag.ref);
+        expect(tagNames).not.toContain(testTagName);
+      });
+    });
 
     describe("deleting repositories", () => {
       it("should be able to delete a repository", async () => {

@@ -10,9 +10,11 @@ import {
 } from "../ref";
 import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
 import { createTag } from "./gql/create-tag";
+import { deleteTag } from "./gql/delete-tag";
 import { getAllTags } from "./gql/get-all-tags";
 import { getFileContent } from "./gql/get-file-content";
 import { getFileSha } from "./gql/get-file-sha";
+import { getRefIdForTag } from "./gql/get-ref-id-for-tag";
 import { createFile } from "./rest/create-file";
 import { deleteFile } from "./rest/delete-file";
 import { updateFile } from "./rest/update-file";
@@ -110,9 +112,21 @@ export class GitHubRepository extends Repository {
     }));
   }
 
-  deleteTag(name: string): Promise<void> {
-    name;
-    throw new Error("Method not implemented.");
+  async deleteTag(name: string): Promise<void> {
+    const fqTagRef: FullyQualifiedTagRef = isFullyQualifiedTagRef(name)
+      ? name
+      : `${fqTagRefPrefix}${name}`;
+
+    const fqTag: FullyQualifiedTag = {
+      refType: "tag",
+      owner: this.owner,
+      repositoryName: this.repositoryName,
+      ref: fqTagRef
+    };
+
+    const tagId = await getRefIdForTag(this.accessToken, fqTag);
+
+    await deleteTag(this.accessToken, tagId);
   }
 
   private getRef = (tagname?: string): FullyQualifiedRef => {
