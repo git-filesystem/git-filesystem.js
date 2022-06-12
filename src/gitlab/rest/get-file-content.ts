@@ -15,10 +15,12 @@ export const getFileContent = async (
   const urlEncodedProjectFullPath = urlEncode(projectFullPath);
   const urlEncodedFilePath = urlEncode(filePath);
 
-  const path = `projects/${urlEncodedProjectFullPath}/repository/files/${urlEncodedFilePath}/raw?ref=${ref}`;
+  const path = `projects/${urlEncodedProjectFullPath}/repository/files/${urlEncodedFilePath}/raw`;
 
-  const result = await getRestClient(accessToken, true).get<string, AxiosResponse<string>, never>(
-    path
+  const result = await getRestClient(accessToken, true).get<string, AxiosResponse<string>, null>(
+    path,
+    { params: { ref } }
   );
+
   return result.data;
 };

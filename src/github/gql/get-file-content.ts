@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 import { FullyQualifiedRef } from "../../ref";
 import { getClient } from "./gql-client";
 
-const getFileContentQuery = gql`
+const query = gql`
   query ($owner: String!, $repositoryName: String!, $expression: String) {
     repository(owner: $owner, name: $repositoryName) {
       object(expression: $expression) {
@@ -41,10 +41,7 @@ export const getFileContent = async (
     expression: `${ref}:${path}`
   };
 
-  const response = await getClient(accessToken).request<Response, Variables>(
-    getFileContentQuery,
-    variables
-  );
+  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
 
   if (response.repository.object) {
     return response.repository.object.text;

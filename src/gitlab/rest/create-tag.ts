@@ -1,5 +1,6 @@
 import { AxiosResponse } from "axios";
 import { FullyQualifiedBranch, FullyQualifiedTagRef } from "../../ref";
+import { urlEncode } from "../../utils/url-encode";
 import { getRestClient } from "./rest-client";
 
 interface Params {
@@ -17,7 +18,7 @@ export const createTag = async (
   tagName: string
 ): Promise<FullyQualifiedTagRef> => {
   const { owner, repositoryName, ref } = branch;
-  const urlEncodedRepoPath = encodeURIComponent(owner + "/" + repositoryName);
+  const urlEncodedRepoPath = urlEncode(owner + "/" + repositoryName);
   const path = `projects/${urlEncodedRepoPath}/repository/tags`;
 
   const params: Params = {

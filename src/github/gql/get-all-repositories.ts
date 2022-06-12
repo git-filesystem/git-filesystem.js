@@ -1,7 +1,7 @@
 import { gql } from "graphql-request";
 import { getClient } from "./gql-client";
 
-const getAllRepositoriesQuery = gql`
+const query = gql`
   query {
     viewer {
       repositories(
@@ -18,7 +18,7 @@ const getAllRepositoriesQuery = gql`
   }
 `;
 
-interface GetAllRepositoriesQueryResponse {
+interface Response {
   viewer: {
     repositories: {
       nodes: Repo[];
@@ -31,9 +31,7 @@ interface Repo {
 }
 
 export const getAllRepositories = async (accessToken: string) => {
-  const response = await getClient(accessToken).request<GetAllRepositoriesQueryResponse>(
-    getAllRepositoriesQuery
-  );
+  const response = await getClient(accessToken).request<Response>(query);
 
   return response.viewer.repositories.nodes.map(repo => repo.nameWithOwner);
 };

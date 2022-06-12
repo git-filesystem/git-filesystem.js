@@ -1,7 +1,7 @@
 import { gql } from "graphql-request";
 import { getClient } from "./gql-client";
 
-const getIdForUserOrOrgQuery = gql`
+const query = gql`
   query GetIdForUserOrOrg($login: String!) {
     repositoryOwner(login: $login) {
       id
@@ -9,20 +9,17 @@ const getIdForUserOrOrgQuery = gql`
   }
 `;
 
-interface GetIdForUserOrOrgVariables {
+interface Variables {
   login: string;
 }
 
-interface GetIdForUserOrOrgResponse {
+interface Response {
   repositoryOwner: { id: string } | null;
 }
 
 export const getIdForUserOrOrg = async (accessToken: string, login: string) => {
-  const variables: GetIdForUserOrOrgVariables = { login };
-  const result = await getClient(accessToken).request<
-    GetIdForUserOrOrgResponse,
-    GetIdForUserOrOrgVariables
-  >(getIdForUserOrOrgQuery, variables);
+  const variables: Variables = { login };
+  const result = await getClient(accessToken).request<Response, Variables>(query, variables);
 
   if (result.repositoryOwner?.id) {
     return result.repositoryOwner?.id;

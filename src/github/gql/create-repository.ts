@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 import { getIdForUserOrOrg } from "./get-id-for-user-or-org";
 import { getClient } from "./gql-client";
 
-const createRepositoryMutation = gql`
+const mutation = gql`
   mutation ($input: CreateRepositoryInput!) {
     createRepository(input: $input) {
       clientMutationId
@@ -10,7 +10,7 @@ const createRepositoryMutation = gql`
   }
 `;
 
-interface CreateRepositoryVariables {
+interface Variables {
   input: {
     name: string;
     ownerId: string;
@@ -19,7 +19,7 @@ interface CreateRepositoryVariables {
   };
 }
 
-export interface CreateRepositoryResponse {
+interface Response {
   createRepository: {
     clientMutationId: null;
   };
@@ -34,7 +34,7 @@ export const createRepository = async (
 ) => {
   const ownerId = await getIdForUserOrOrg(accessToken, owner);
 
-  const variables: CreateRepositoryVariables = {
+  const variables: Variables = {
     input: {
       name,
       visibility: isPrivate ? "PRIVATE" : "PUBLIC",
@@ -43,8 +43,5 @@ export const createRepository = async (
     }
   };
 
-  await getClient(accessToken).request<CreateRepositoryResponse, CreateRepositoryVariables>(
-    createRepositoryMutation,
-    variables
-  );
+  await getClient(accessToken).request<Response, Variables>(mutation, variables);
 };

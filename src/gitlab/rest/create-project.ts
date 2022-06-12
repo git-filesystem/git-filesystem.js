@@ -1,14 +1,14 @@
 import { AxiosResponse } from "axios";
 import { getRestClient } from "./rest-client";
 
-interface RequestBody {
+interface Body {
   path: string;
   visibility: "public" | "private";
   description: string;
   namespace_id: number;
 }
 
-interface RequestResponse {
+interface Response {
   path_with_namespace: string;
 }
 
@@ -19,18 +19,17 @@ export const createProject = async (
   description: string,
   isPrivate = true
 ) => {
-  const requestBody: RequestBody = {
+  const requestBody: Body = {
     path: name,
     visibility: isPrivate ? "private" : "public",
     description,
     namespace_id: namespaceId
   };
 
-  const { data } = await getRestClient(accessToken).post<
-    RequestResponse,
-    AxiosResponse<RequestResponse>,
-    RequestBody
-  >("projects", requestBody);
+  const { data } = await getRestClient(accessToken).post<Response, AxiosResponse<Response>, Body>(
+    "projects",
+    requestBody
+  );
 
   return data.path_with_namespace;
 };

@@ -1,14 +1,15 @@
 import { AxiosResponse } from "axios";
+import { urlEncode } from "../../utils/url-encode";
 import { getRestClient } from "./rest-client";
 
-interface RequestResponse {
+interface Response {
   message: string;
 }
 
 export const deleteProject = async (accessToken: string, owner: string, name: string) => {
-  const urlEncodedPath = encodeURIComponent(owner + "/" + name);
+  const urlEncodedPath = urlEncode(owner + "/" + name);
 
-  await getRestClient(accessToken).delete<RequestResponse, AxiosResponse<RequestResponse>>(
+  await getRestClient(accessToken).delete<Response, AxiosResponse<Response>>(
     "projects/" + urlEncodedPath
   );
 };

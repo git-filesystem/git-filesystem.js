@@ -1,3 +1,4 @@
+import { urlEncode } from "../../utils/url-encode";
 import { getRestClient } from "./rest-client";
 
 export const deleteTag = async (
@@ -6,8 +7,8 @@ export const deleteTag = async (
   repositoryName: string,
   tagName: string
 ): Promise<void> => {
-  const urlEncodedRepoPath = encodeURIComponent(owner + "/" + repositoryName);
-  const urlEncodedTagName = encodeURIComponent(tagName);
+  const urlEncodedRepoPath = urlEncode(owner + "/" + repositoryName);
+  const urlEncodedTagName = urlEncode(tagName);
 
   const path = `projects/${urlEncodedRepoPath}/repository/tags/${urlEncodedTagName}`;
 

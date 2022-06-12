@@ -3,11 +3,11 @@ import { getClient } from "./gql-client";
 
 /*
 
-This file isn't very as it can't yet search but file content :/
+This file isn't very useful as it can't yet search by file content :/
 
 */
 
-const searchRepositoriesByFileQuery = gql`
+const query = gql`
   query ($filePath: String) {
     projects(membership: true) {
       nodes {
@@ -24,11 +24,11 @@ const searchRepositoriesByFileQuery = gql`
   }
 `;
 
-interface SearchRepositoriesByFileVariables {
+interface Variables {
   filePath: string;
 }
 
-interface SearchRepositoriesByFileResponse {
+interface Response {
   project: {
     nodes: ProjectNode[];
   };
@@ -49,14 +49,11 @@ export const searchByFilePath = async (
   accessToken: string,
   filePath: string
 ): Promise<string[]> => {
-  const variables: SearchRepositoriesByFileVariables = {
+  const variables: Variables = {
     filePath
   };
 
-  const response = await getClient(accessToken).request<
-    SearchRepositoriesByFileResponse,
-    SearchRepositoriesByFileVariables
-  >(searchRepositoriesByFileQuery, variables);
+  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
 
   const repositoryNames = response.project.nodes
     .filter(n => !!n.repository.tree?.lastCommit?.shortId)

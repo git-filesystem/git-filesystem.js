@@ -1,7 +1,7 @@
 import { gql } from "graphql-request";
 import { getClient } from "./gql-client";
 
-const getAllRepositoriesForOwnerQuery = gql`
+const query = gql`
   query ($login: String!) {
     repositoryOwner(login: $login) {
       repositories(
@@ -18,11 +18,11 @@ const getAllRepositoriesForOwnerQuery = gql`
   }
 `;
 
-interface GetAllRepositoriesForOwnerVariables {
+interface Variables {
   login: string;
 }
 
-interface GetAllRepositoriesForOwnerResponse {
+interface Response {
   repositoryOwner?: {
     repositories: {
       nodes: Repo[];
@@ -35,14 +35,11 @@ interface Repo {
 }
 
 export const getAllRepositoriesForOwner = async (accessToken: string, owner: string) => {
-  const variables: GetAllRepositoriesForOwnerVariables = {
+  const variables: Variables = {
     login: owner
   };
 
-  const response = await getClient(accessToken).request<
-    GetAllRepositoriesForOwnerResponse,
-    GetAllRepositoriesForOwnerVariables
-  >(getAllRepositoriesForOwnerQuery, variables);
+  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
 
   if (response.repositoryOwner?.repositories?.nodes) {
     return response.repositoryOwner?.repositories?.nodes.map(repo => repo.nameWithOwner);
