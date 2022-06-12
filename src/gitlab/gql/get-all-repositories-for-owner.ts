@@ -19,7 +19,7 @@ interface GetAllRepositoriesForOwnerVariables {
 
 interface GetAppRepositoriesResponse {
   projects: {
-    nodes: ProjectNode[];
+    nodes?: ProjectNode[];
   };
 }
 
@@ -40,5 +40,5 @@ export const getAllRepositoriesForOwner = async (
     GetAllRepositoriesForOwnerVariables
   >(getAllRepositoriesForOwnerQuery, variables);
 
-  return response.projects.nodes.map(node => node.name);
+  return response.projects.nodes?.map(node => node.name) ?? [];
 };
