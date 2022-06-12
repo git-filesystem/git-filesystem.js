@@ -45,6 +45,37 @@ export interface FullyQualifiedTag {
 export const isFullyQualifiedTagRef = (ref: string): ref is FullyQualifiedTagRef =>
   ref.startsWith(fqTagRefPrefix) && ref.length > fqTagRefPrefix.length;
 
+export const createFullyQualifiedTag = (
+  owner: string,
+  repositoryName: string,
+  tagName: string
+): FullyQualifiedTag => {
+  const fqTagRef: FullyQualifiedTagRef = isFullyQualifiedTagRef(tagName)
+    ? tagName
+    : `${fqTagRefPrefix}${tagName}`;
+
+  return {
+    refType: "tag",
+    owner,
+    repositoryName,
+    ref: fqTagRef
+  };
+};
+
 // All
 
 export type FullyQualifiedRef = FullyQualifiedBranch | FullyQualifiedTag;
+
+export const refNameWithoutPrefix = (
+  ref: FullyQualifiedBranchRef | FullyQualifiedTagRef
+): string => {
+  if (isFullyQualifiedBranchRef(ref)) {
+    return ref.substring(fqBranchRefPrefix.length);
+  }
+
+  if (isFullyQualifiedTagRef(ref)) {
+    return ref.substring(fqTagRefPrefix.length);
+  }
+
+  throw new Error(`Invalid ref: ${ref}`);
+};

@@ -1,11 +1,5 @@
 import { Provider } from "./client";
-import {
-  fqTagRefPrefix,
-  FullyQualifiedBranch,
-  FullyQualifiedRef,
-  FullyQualifiedTag,
-  isFullyQualifiedTagRef
-} from "./ref";
+import { FullyQualifiedBranch, FullyQualifiedTag } from "./ref";
 
 // TODO: Add moving files
 
@@ -54,6 +48,7 @@ export abstract class Repository implements ReadonlyRepository {
     }
 
     const stringContent = await this.readFile(path);
+
     return JSON.parse(stringContent);
   }
 
@@ -68,28 +63,6 @@ export abstract class Repository implements ReadonlyRepository {
       : undefined;
 
     return JSON.stringify(value, null, indentChar);
-  };
-
-  protected getRef = (tagname?: string): FullyQualifiedRef => {
-    if (!tagname) {
-      return this.fqBranch;
-    }
-
-    if (isFullyQualifiedTagRef(tagname)) {
-      return {
-        refType: "tag",
-        owner: this.fqBranch.owner,
-        repositoryName: this.fqBranch.repositoryName,
-        ref: tagname
-      };
-    }
-
-    return {
-      refType: "tag",
-      owner: this.fqBranch.owner,
-      repositoryName: this.fqBranch.repositoryName,
-      ref: `${fqTagRefPrefix}${tagname}`
-    };
   };
 }
 

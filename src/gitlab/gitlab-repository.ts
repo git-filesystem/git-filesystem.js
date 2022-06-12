@@ -1,10 +1,16 @@
 import { GitUser, Provider } from "../client";
-import { FullyQualifiedBranch, FullyQualifiedTag } from "../ref";
+import {
+  createFullyQualifiedTag,
+  FullyQualifiedBranch,
+  FullyQualifiedRef,
+  FullyQualifiedTag
+} from "../ref";
 import { JsonConfig, Repository } from "../repository";
 import { CommitAction, createCommit } from "./gql/create-commit";
 import { allTags } from "./rest/all-tags";
 import { createTag } from "./rest/create-tag";
 import { deleteTag } from "./rest/delete-tag";
+import { getFileContent } from "./rest/get-file-content";
 
 export class GitLabRepository extends Repository {
   provider: Provider = "gitlab";
@@ -68,10 +74,12 @@ export class GitLabRepository extends Repository {
 
   readFile(path: string): Promise<string>;
   readFile(path: string, tagName: string): Promise<string>;
-  readFile(path: unknown, tagName?: unknown): Promise<string> {
-    path;
-    tagName;
-    throw new Error("Method not implemented.");
+  async readFile(path: string, tagName?: string): Promise<string> {
+    const fqRef: FullyQualifiedRef = !tagName
+      ? this.fqBranch
+      : createFullyQualifiedTag(this.fqBranch.owner, this.fqBranch.repositoryName, tagName);
+
+    return await getFileContent(this.accessToken, fqRef, path);
   }
 
   async deleteFile(path: string): Promise<void> {

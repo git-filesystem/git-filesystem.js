@@ -12,11 +12,22 @@ interface Provider {
   name: ProviderName;
   user: string | undefined;
   accessToken: string | undefined;
+  anotherUser: string;
 }
 
 const providers: Provider[] = [
-  { name: "github", user: process.env.E2E_GITHUB_USERNAME, accessToken: process.env.E2E_GITHUB_PAT }
-  // { name: "gitlab", user: process.env.E2E_GITLAB_USERNAME, accessToken: process.env.E2E_GITLAB_PAT }
+  // {
+  //   name: "github",
+  //   user: process.env.E2E_GITHUB_USERNAME,
+  //   accessToken: process.env.E2E_GITHUB_PAT,
+  //   anotherUser: "microsoft"
+  // },
+  {
+    name: "gitlab",
+    user: process.env.E2E_GITLAB_USERNAME,
+    accessToken: process.env.E2E_GITLAB_PAT,
+    anotherUser: "TODO"
+  }
 ];
 
 providers.forEach(provider =>
@@ -53,7 +64,7 @@ providers.forEach(provider =>
       repositoryNameWithOwner = `${userAccount}/${repositoryName}`;
     });
 
-    it(`should get the ${provider.name} client`, () => {
+    fit(`should get the ${provider.name} client`, () => {
       const user: GitUser = {
         name: "gitbuckets-e2e",
         email: "gitbuckets.e2e@tobysmith.uk"
@@ -73,7 +84,7 @@ providers.forEach(provider =>
       expect(client.provider).toBe(provider.name);
     });
 
-    describe("create repositories", () => {
+    fdescribe("create repositories", () => {
       it("should be able to make a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("DoesNotExist");
@@ -85,14 +96,14 @@ providers.forEach(provider =>
         );
 
         expect(repository).toBeDefined();
-        expect(repository.repositoryName).toBe(repositoryName);
+        expect(repository.fqBranch.repositoryName).toBe(repositoryName);
 
         const doesExistAfter = await client.doesRepositoryExist(repositoryName);
         expect(doesExistAfter).toBe("Exists");
       });
     });
 
-    describe("getting repositories", () => {
+    fdescribe("getting repositories", () => {
       it("should be able to get all repositories for the current user", async () => {
         const repositories = await client.getAllRepositories();
 
@@ -101,15 +112,15 @@ providers.forEach(provider =>
       });
 
       if (provider.name === "github")
-        it("should be able to get all repositories for a different user", async () => {
-          const repositories = await client.getAllRepositories("microsoft");
+        it(`should be able to get all repositories for a different user (${provider.anotherUser})`, async () => {
+          const repositories = await client.getAllRepositories(provider.anotherUser);
 
           expect(repositories).toBeDefined();
           expect(repositories).not.toContain(repositoryNameWithOwner);
         });
     });
 
-    describe("creating files", () => {
+    fdescribe("creating files", () => {
       it("should be able to create a new text file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
@@ -252,7 +263,7 @@ providers.forEach(provider =>
       });
     });
 
-    describe("deleting repositories", () => {
+    fdescribe("deleting repositories", () => {
       it("should be able to delete a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("Exists");

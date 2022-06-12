@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import { FullyQualifiedBranch } from "../../ref";
+import { FullyQualifiedBranch, refNameWithoutPrefix } from "../../ref";
 import { getClient } from "./gql-client";
 
 const mutation = gql`
@@ -75,12 +75,13 @@ export const createCommit = async (
   actions: CommitAction[]
 ): Promise<string> => {
   const { owner, repositoryName, ref } = branch;
+  const branchName = refNameWithoutPrefix(ref);
   const fullPath = `${owner}/${repositoryName}`;
 
   const variables: Variables = {
     fullPath,
     appId,
-    branch: ref,
+    branch: branchName,
     commitMessage,
     actions
   };

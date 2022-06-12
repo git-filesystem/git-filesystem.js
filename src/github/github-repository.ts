@@ -1,7 +1,9 @@
 import { GitUser, Provider } from "../client";
 import {
+  createFullyQualifiedTag,
   fqTagRefPrefix,
   FullyQualifiedBranch,
+  FullyQualifiedRef,
   FullyQualifiedTag,
   FullyQualifiedTagRef,
   isFullyQualifiedTagRef
@@ -59,7 +61,10 @@ export class GitHubRepository extends Repository {
   readFile(path: string): Promise<string>;
   readFile(path: string, tagName: string): Promise<string>;
   async readFile(path: string, tagName?: string): Promise<string> {
-    const fqRef = this.getRef(tagName);
+    const fqRef: FullyQualifiedRef = !tagName
+      ? this.fqBranch
+      : createFullyQualifiedTag(this.fqBranch.owner, this.fqBranch.repositoryName, tagName);
+
     return await getFileContent(this.accessToken, fqRef, path);
   }
 
