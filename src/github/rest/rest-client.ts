@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getRestClient = (accessToken: string) =>
+export const getRestClient = (accessToken: string, stopResponseTransformation = false) =>
   axios.create({
     baseURL: "https://api.github.com",
     headers: {
@@ -8,5 +8,5 @@ export const getRestClient = (accessToken: string) =>
       Accept: "application/vnd.github.v3+json",
       Authorization: "token " + accessToken
     },
-    transformResponse: res => res
+    transformResponse: stopResponseTransformation ? res => res : undefined
   });

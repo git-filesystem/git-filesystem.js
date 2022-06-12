@@ -17,6 +17,8 @@ export const getFileContent = async (
 
   const path = `projects/${urlEncodedProjectFullPath}/repository/files/${urlEncodedFilePath}/raw?ref=${ref}`;
 
-  const result = await getRestClient(accessToken).get<string, AxiosResponse<string>, never>(path);
+  const result = await getRestClient(accessToken, true).get<string, AxiosResponse<string>, never>(
+    path
+  );
   return result.data;
 };

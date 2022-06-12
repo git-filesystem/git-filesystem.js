@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getRestClient = (accessToken: string) =>
+export const getRestClient = (accessToken: string, stopResponseTransformation = false) =>
   axios.create({
     baseURL: "https://gitlab.com/api/v4/",
     headers: {
@@ -8,5 +8,5 @@ export const getRestClient = (accessToken: string) =>
       Accept: "application/json",
       "PRIVATE-TOKEN": accessToken
     },
-    transformResponse: res => res
+    transformResponse: stopResponseTransformation ? res => res : undefined
   });
