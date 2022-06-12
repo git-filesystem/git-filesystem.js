@@ -7,7 +7,9 @@ export const deleteTag = async (
   tagName: string
 ): Promise<void> => {
   const urlEncodedRepoPath = encodeURIComponent(owner + "/" + repositoryName);
-  const path = `projects/${urlEncodedRepoPath}/repository/tags/${tagName}`;
+  const urlEncodedTagName = encodeURIComponent(tagName);
+
+  const path = `projects/${urlEncodedRepoPath}/repository/tags/${urlEncodedTagName}`;
 
   await getRestClient(accessToken).delete(path);
 };

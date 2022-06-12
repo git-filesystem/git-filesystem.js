@@ -16,12 +16,12 @@ interface Provider {
 }
 
 const providers: Provider[] = [
-  // {
-  //   name: "github",
-  //   user: process.env.E2E_GITHUB_USERNAME,
-  //   accessToken: process.env.E2E_GITHUB_PAT,
-  //   anotherUser: "microsoft"
-  // },
+  {
+    name: "github",
+    user: process.env.E2E_GITHUB_USERNAME,
+    accessToken: process.env.E2E_GITHUB_PAT,
+    anotherUser: "microsoft"
+  },
   {
     name: "gitlab",
     user: process.env.E2E_GITLAB_USERNAME,
@@ -252,10 +252,20 @@ providers.forEach(provider =>
     });
 
     describe("deleting tags", () => {
-      it("should be able to delete a tag", async () => {
+      it("should be able to delete a tag using the short name", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.deleteTag(testTagName);
+
+        const tags = await repository.getAllTags();
+        const tagNames = tags.map(tag => tag.ref);
+        expect(tagNames).not.toContain(testTagName);
+      });
+
+      it("should be able to delete a tag using the fully qualified name", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await repository.deleteTag(`${fqTagRefPrefix}${testTagName}2`);
 
         const tags = await repository.getAllTags();
         const tagNames = tags.map(tag => tag.ref);
