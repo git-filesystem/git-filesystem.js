@@ -64,7 +64,7 @@ providers.forEach(provider =>
       repositoryNameWithOwner = `${userAccount}/${repositoryName}`;
     });
 
-    fit(`should get the ${provider.name} client`, () => {
+    it(`should get the ${provider.name} client`, () => {
       const user: GitUser = {
         name: "gitbuckets-e2e",
         email: "gitbuckets.e2e@tobysmith.uk"
@@ -84,7 +84,7 @@ providers.forEach(provider =>
       expect(client.provider).toBe(provider.name);
     });
 
-    fdescribe("create repositories", () => {
+    describe("create repositories", () => {
       it("should be able to make a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("DoesNotExist");
@@ -103,7 +103,7 @@ providers.forEach(provider =>
       });
     });
 
-    fdescribe("getting repositories", () => {
+    describe("getting repositories", () => {
       it("should be able to get all repositories for the current user", async () => {
         const repositories = await client.getAllRepositories();
 
@@ -120,7 +120,7 @@ providers.forEach(provider =>
         });
     });
 
-    fdescribe("creating files", () => {
+    describe("creating files", () => {
       it("should be able to create a new text file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
@@ -263,7 +263,7 @@ providers.forEach(provider =>
       });
     });
 
-    fdescribe("deleting repositories", () => {
+    describe("deleting repositories", () => {
       it("should be able to delete a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("Exists");
