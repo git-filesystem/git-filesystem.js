@@ -7,5 +7,6 @@ export const getRestClient = (accessToken: string) =>
       "Content-Type": "application/json",
       Accept: "application/json",
       "PRIVATE-TOKEN": accessToken
-    }
+    },
+    transformResponse: res => res
   });
