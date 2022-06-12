@@ -1,15 +1,12 @@
 import { GitUser, Provider } from "../client";
 import {
-  fqBranchRefPrefix,
   fqTagRefPrefix,
   FullyQualifiedBranch,
-  FullyQualifiedBranchRef,
-  FullyQualifiedRef,
   FullyQualifiedTag,
   FullyQualifiedTagRef,
   isFullyQualifiedTagRef
 } from "../ref";
-import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
+import { JsonConfig, Repository } from "../repository";
 import { createTag } from "./gql/create-tag";
 import { deleteTag } from "./gql/delete-tag";
 import { getAllTags } from "./gql/get-all-tags";
@@ -22,20 +19,16 @@ import { updateFile } from "./rest/update-file";
 
 export class GitHubRepository extends Repository {
   readonly provider: Provider = "github";
-  private readonly fqBranch: FullyQualifiedBranch;
 
   public constructor(
-    owner: string,
-    repositoryName: string,
     public readonly accessToken: string,
+    public readonly fqBranch: FullyQualifiedBranch,
     public readonly applicationName: string,
     public readonly authorDetails: GitUser | null = null,
     public readonly committerDetails: GitUser | null = null,
-    jsonConfig: JsonConfig | null = null,
-    public readonly defaultBranchRef: FullyQualifiedBranchRef = `${fqBranchRefPrefix}main`
+    jsonConfig: JsonConfig | null = null
   ) {
-    super(owner, repositoryName, jsonConfig ?? defaultJsonConfig);
-    this.fqBranch = { refType: "branch", owner, repositoryName, ref: defaultBranchRef };
+    super(jsonConfig);
   }
 
   async createFile(path: string, content: string): Promise<string> {
@@ -92,8 +85,8 @@ export class GitHubRepository extends Repository {
 
     return {
       refType: "tag",
-      owner: this.owner,
-      repositoryName: this.repositoryName,
+      owner: this.fqBranch.owner,
+      repositoryName: this.fqBranch.owner,
       ref: fqTagRef
     };
   }
@@ -101,14 +94,14 @@ export class GitHubRepository extends Repository {
   async getAllTags(): Promise<FullyQualifiedTag[]> {
     const fqTagRefs: FullyQualifiedTagRef[] = await getAllTags(
       this.accessToken,
-      this.owner,
-      this.repositoryName
+      this.fqBranch.owner,
+      this.fqBranch.repositoryName
     );
 
     return fqTagRefs.map<FullyQualifiedTag>(fqTagRef => ({
       refType: "tag",
-      owner: this.owner,
-      repositoryName: this.repositoryName,
+      owner: this.fqBranch.owner,
+      repositoryName: this.fqBranch.repositoryName,
       ref: fqTagRef
     }));
   }
@@ -120,8 +113,8 @@ export class GitHubRepository extends Repository {
 
     const fqTag: FullyQualifiedTag = {
       refType: "tag",
-      owner: this.owner,
-      repositoryName: this.repositoryName,
+      owner: this.fqBranch.owner,
+      repositoryName: this.fqBranch.repositoryName,
       ref: fqTagRef
     };
 
@@ -129,26 +122,4 @@ export class GitHubRepository extends Repository {
 
     await deleteTag(this.accessToken, tagId);
   }
-
-  private getRef = (tagname?: string): FullyQualifiedRef => {
-    if (!tagname) {
-      return this.fqBranch;
-    }
-
-    if (isFullyQualifiedTagRef(tagname)) {
-      return {
-        refType: "tag",
-        owner: this.owner,
-        repositoryName: this.repositoryName,
-        ref: tagname
-      };
-    }
-
-    return {
-      refType: "tag",
-      owner: this.owner,
-      repositoryName: this.repositoryName,
-      ref: `${fqTagRefPrefix}${tagname}`
-    };
-  };
 }

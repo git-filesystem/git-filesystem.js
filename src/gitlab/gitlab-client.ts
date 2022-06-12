@@ -1,6 +1,6 @@
-import { Repository } from "..";
 import { Client, GitUser, Provider, RepositoryExistence } from "../client";
-import { JsonConfig } from "../repository";
+import { createFullyQualifiedBranch } from "../ref";
+import { JsonConfig, Repository } from "../repository";
 import { GitLabRepository } from "./gitlab-repository";
 import { getAllRepositories } from "./gql/get-all-repositories";
 import { getAllRepositoriesForOwner } from "./gql/get-all-repositories-for-owner";
@@ -34,11 +34,14 @@ export class GitLabClient extends Client {
     return await getAllRepositories(this.accessToken);
   }
 
-  getRepository(name: string): Repository {
+  getRepository(name: string): Repository;
+  getRepository(name: string, owner: string): Repository;
+  getRepository(name: string, owner?: string): Repository {
+    const fqBranch = createFullyQualifiedBranch(owner ?? this.owner, name, "main");
+
     return new GitLabRepository(
-      this.owner,
-      name,
       this.accessToken,
+      fqBranch,
       this.applicationName,
       this.authorDetails,
       this.committerDetails,

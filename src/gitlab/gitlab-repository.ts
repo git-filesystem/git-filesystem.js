@@ -1,11 +1,6 @@
 import { GitUser, Provider } from "../client";
-import {
-  fqBranchRefPrefix,
-  FullyQualifiedBranch,
-  FullyQualifiedBranchRef,
-  FullyQualifiedTag
-} from "../ref";
-import { defaultJsonConfig, JsonConfig, Repository } from "../repository";
+import { FullyQualifiedBranch, FullyQualifiedTag } from "../ref";
+import { JsonConfig, Repository } from "../repository";
 import { CommitAction, createCommit } from "./gql/create-commit";
 import { allTags } from "./rest/all-tags";
 import { createTag } from "./rest/create-tag";
@@ -13,20 +8,16 @@ import { deleteTag } from "./rest/delete-tag";
 
 export class GitLabRepository extends Repository {
   provider: Provider = "gitlab";
-  private readonly fqBranch: FullyQualifiedBranch;
 
   public constructor(
-    owner: string,
-    repositoryName: string,
     public readonly accessToken: string,
+    public readonly fqBranch: FullyQualifiedBranch,
     public readonly applicationName: string,
     public readonly authorDetails: GitUser | null = null,
     public readonly committerDetails: GitUser | null = null,
-    jsonConfig: JsonConfig | null = null,
-    public readonly defaultBranchRef: FullyQualifiedBranchRef = `${fqBranchRefPrefix}main`
+    jsonConfig: JsonConfig | null = null
   ) {
-    super(owner, repositoryName, jsonConfig ?? defaultJsonConfig);
-    this.fqBranch = { refType: "branch", owner, repositoryName, ref: defaultBranchRef };
+    super(jsonConfig);
   }
 
   async createFile(path: string, content: string): Promise<string> {
@@ -107,24 +98,28 @@ export class GitLabRepository extends Repository {
 
     return {
       refType: "tag",
-      owner: this.owner,
-      repositoryName: this.repositoryName,
+      owner: this.fqBranch.owner,
+      repositoryName: this.fqBranch.repositoryName,
       ref: newTagRef
     };
   }
 
   async getAllTags(): Promise<FullyQualifiedTag[]> {
-    const newTagRefs = await allTags(this.accessToken, this.owner, this.repositoryName);
+    const newTagRefs = await allTags(
+      this.accessToken,
+      this.fqBranch.owner,
+      this.fqBranch.repositoryName
+    );
 
     return newTagRefs.map(ref => ({
       refType: "tag",
-      owner: this.owner,
-      repositoryName: this.repositoryName,
+      owner: this.fqBranch.owner,
+      repositoryName: this.fqBranch.repositoryName,
       ref
     }));
   }
 
   async deleteTag(name: string): Promise<void> {
-    await deleteTag(this.accessToken, this.owner, this.repositoryName, name);
+    await deleteTag(this.accessToken, this.fqBranch.owner, this.fqBranch.repositoryName, name);
   }
 }

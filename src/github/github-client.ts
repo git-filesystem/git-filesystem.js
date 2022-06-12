@@ -1,5 +1,6 @@
 import { Octokit } from "octokit";
 import { Client, GitUser, Provider, RepositoryExistence } from "../client";
+import { createFullyQualifiedBranch } from "../ref";
 import { JsonConfig, Repository } from "../repository";
 import { GitHubRepository } from "./github-repository";
 import { createRepository } from "./gql/create-repository";
@@ -38,10 +39,11 @@ export class GitHubClient extends Client {
   getRepository(name: string): Repository;
   getRepository(name: string, owner: string): Repository;
   getRepository(name: string, owner?: string): Repository {
+    const fqBranch = createFullyQualifiedBranch(owner ?? this.owner, name, "main");
+
     return new GitHubRepository(
-      owner ?? this.owner,
-      name,
       this.accessToken,
+      fqBranch,
       this.applicationName,
       this.authorDetails,
       this.committerDetails,

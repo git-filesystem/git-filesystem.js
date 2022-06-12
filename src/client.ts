@@ -10,9 +10,11 @@ export abstract class Client {
   abstract getAllRepositories(): Promise<string[]>;
   abstract getAllRepositories(owner: string): Promise<string[]>;
 
+  // TODO: support branch names
   abstract getRepository(name: string): Repository;
   abstract getRepository(name: string, owner: string): Repository;
 
+  // TODO: support branch names
   getReadonlyRepository(name: string): ReadonlyRepository;
   getReadonlyRepository(name: string, owner: string): ReadonlyRepository;
   getReadonlyRepository(name: string, owner?: string): ReadonlyRepository {

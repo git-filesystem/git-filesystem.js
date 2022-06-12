@@ -1,5 +1,11 @@
 import { Provider } from "./client";
-import { FullyQualifiedTag } from "./ref";
+import {
+  fqTagRefPrefix,
+  FullyQualifiedBranch,
+  FullyQualifiedRef,
+  FullyQualifiedTag,
+  isFullyQualifiedTagRef
+} from "./ref";
 
 // TODO: Add moving files
 
@@ -15,13 +21,14 @@ export interface ReadonlyRepository {
 }
 
 export abstract class Repository implements ReadonlyRepository {
-  abstract provider: Provider;
+  public abstract readonly provider: Provider;
+  public abstract readonly fqBranch: FullyQualifiedBranch;
 
-  protected constructor(
-    public readonly owner: string,
-    public readonly repositoryName: string,
-    public readonly jsonConfig: JsonConfig = defaultJsonConfig
-  ) {}
+  private readonly jsonConfig: JsonConfig;
+
+  constructor(jsonConfig: JsonConfig | null) {
+    this.jsonConfig = jsonConfig ?? defaultJsonConfig;
+  }
 
   abstract createFile(path: string, content: string): Promise<string>;
   abstract updateFile(path: string, content: string): Promise<string>;
@@ -61,6 +68,28 @@ export abstract class Repository implements ReadonlyRepository {
       : undefined;
 
     return JSON.stringify(value, null, indentChar);
+  };
+
+  protected getRef = (tagname?: string): FullyQualifiedRef => {
+    if (!tagname) {
+      return this.fqBranch;
+    }
+
+    if (isFullyQualifiedTagRef(tagname)) {
+      return {
+        refType: "tag",
+        owner: this.fqBranch.owner,
+        repositoryName: this.fqBranch.repositoryName,
+        ref: tagname
+      };
+    }
+
+    return {
+      refType: "tag",
+      owner: this.fqBranch.owner,
+      repositoryName: this.fqBranch.repositoryName,
+      ref: `${fqTagRefPrefix}${tagname}`
+    };
   };
 }
 
