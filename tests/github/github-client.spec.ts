@@ -1,4 +1,3 @@
-import { Octokit } from "octokit";
 import { GitUser } from "../../src/client";
 import { GitHubClient } from "../../src/github/github-client";
 import { GitHubRepository } from "../../src/github/github-repository";
@@ -8,19 +7,14 @@ import { getAllRepositoriesForOwner } from "../../src/github/gql/get-all-reposit
 import { isRepositoryArchived } from "../../src/github/gql/is-repository-archived";
 import { deleteRepo } from "../../src/github/rest/delete-repo";
 import { JsonConfig } from "../../src/repository";
-import { setupOctokit } from "../../__mocks__/octokit";
 
-jest.mock("octokit");
-
-jest.mock("../../src/github/gql/get-all-repositories-for-owner");
-jest.mock("../../src/github/gql/get-all-repositories");
-jest.mock("../../src/github/gql/is-repository-archived");
 jest.mock("../../src/github/gql/create-repository");
+jest.mock("../../src/github/gql/get-all-repositories");
+jest.mock("../../src/github/gql/get-all-repositories-for-owner");
+jest.mock("../../src/github/gql/is-repository-archived");
 jest.mock("../../src/github/rest/delete-repo");
 
 describe("github-client", () => {
-  const mockedOctokit = jest.mocked(Octokit);
-
   const mockedGetAllRepositoriesForOwner = jest.mocked(getAllRepositoriesForOwner);
   const mockedGetAllRepositories = jest.mocked(getAllRepositories);
   const mockedIsRepositoryArchived = jest.mocked(isRepositoryArchived);
@@ -28,36 +22,19 @@ describe("github-client", () => {
   const mockedDeleteRepo = jest.mocked(deleteRepo);
 
   beforeEach(() => jest.resetAllMocks());
-  beforeEach(setupOctokit);
   afterAll(() => jest.restoreAllMocks());
 
-  describe("constructor", () => {
-    it("should pass the accessToken to octokit", () => {
-      const accessToken = "123";
-
-      new GitHubClient("any owner", accessToken, "any app");
-
-      expect(mockedOctokit).toHaveBeenCalledWith(expect.objectContaining({ auth: accessToken }));
-    });
-
-    it("should pass the applicationName to octokit", () => {
-      const applicationName = "any app";
-
-      new GitHubClient("any owner", "any accessToken", applicationName);
-
-      expect(mockedOctokit).toHaveBeenCalledWith(
-        expect.objectContaining({ userAgent: applicationName })
-      );
-    });
-  });
-
   describe("getAllRepositories", () => {
-    it("should call getAllRepositoriesForOwner if the owner is given", async () => {
-      const client = new GitHubClient("any owner", "any token", "any app");
+    it("should call getAllRepositoriesForOwner with the correct params if the owner is given", async () => {
+      const token = "any token";
+      const owner = "any owner";
 
-      await client.getAllRepositories("any owner");
+      const client = new GitHubClient(owner, token, "any app");
+
+      await client.getAllRepositories(owner);
 
       expect(mockedGetAllRepositoriesForOwner).toHaveBeenCalledTimes(1);
+      expect(mockedGetAllRepositoriesForOwner).toHaveBeenCalledWith(token, owner);
     });
 
     it("should return the result of getAllRepositoriesForOwner if the owner is given", async () => {
@@ -80,12 +57,15 @@ describe("github-client", () => {
       expect(mockedGetAllRepositories).not.toHaveBeenCalled();
     });
 
-    it("should call getAllRepositories if the owner is not given", async () => {
-      const client = new GitHubClient("any owner", "any token", "any app");
+    it("should call getAllRepositories  with the correct params if the owner is not given", async () => {
+      const token = "any token";
+
+      const client = new GitHubClient("any owner", token, "any app");
 
       await client.getAllRepositories();
 
       expect(mockedGetAllRepositories).toHaveBeenCalledTimes(1);
+      expect(mockedGetAllRepositories).toHaveBeenCalledWith(token);
     });
 
     it("should return the result of getAllRepositories if the owner is not given", async () => {
@@ -110,13 +90,40 @@ describe("github-client", () => {
   });
 
   describe("getRepository", () => {
+    it("should return a GitHubRepository with the given params", () => {
+      const differentOwner = "a different owner";
+
+      const authorDetails: GitUser = { name: "author name", email: "author email" };
+      const committerDetails: GitUser = { name: "committer name", email: "committer email" };
+
+      const client = new GitHubClient(
+        "any owner",
+        "any accessToken",
+        "any app",
+        authorDetails,
+        committerDetails
+      );
+
+      const repository = client.getRepository("any repo", differentOwner) as GitHubRepository;
+
+      expect(repository.provider).toBe("github");
+      expect(repository.fqBranch.owner).toBe(differentOwner);
+      expect(repository.fqBranch.repositoryName).toBe("any repo");
+      expect(repository.accessToken).toBe("any accessToken");
+      expect(repository.applicationName).toBe("any app");
+      expect(repository.authorDetails).toEqual(authorDetails);
+      expect(repository.committerDetails).toEqual(committerDetails);
+    });
+
     it("should return a GitHubRepository with the client owner if an owner is not given", () => {
+      const ownerPassedIntoClient = "owner passed into client";
+
       const authorDetails: GitUser = { name: "any name", email: "any email" };
       const committerDetails: GitUser = { name: "any name", email: "any email" };
       const jsonConfig: JsonConfig = { prettyFormat: false };
 
       const client = new GitHubClient(
-        "any owner",
+        ownerPassedIntoClient,
         "any accessToken",
         "any app",
         authorDetails,
@@ -126,24 +133,7 @@ describe("github-client", () => {
 
       const repository = client.getRepository("any repo") as GitHubRepository;
 
-      expect(repository.provider).toBe("github");
-      expect(repository.owner).toBe("any owner");
-      expect(repository.repositoryName).toBe("any repo");
-      expect(repository.accessToken).toBe("any accessToken");
-      expect(repository.applicationName).toBe("any app");
-      expect(repository.authorDetails).toBe(authorDetails);
-      expect(repository.committerDetails).toBe(committerDetails);
-      expect(repository.jsonConfig).toBe(jsonConfig);
-    });
-
-    it("should return a GitHubRepository with the given owner if an owner is given", () => {
-      const givenOwner = "a different owner";
-
-      const client = new GitHubClient("any owner", "any accessToken", "any app");
-
-      const repository = client.getRepository("any repo", givenOwner) as GitHubRepository;
-
-      expect(repository.owner).toBe(givenOwner);
+      expect(repository.fqBranch.owner).toBe(ownerPassedIntoClient);
     });
   });
 
@@ -330,8 +320,10 @@ describe("github-client", () => {
 
       expect(result).toEqual(
         expect.objectContaining({
-          owner: "any owner",
-          repositoryName: "any repo",
+          fqBranch: expect.objectContaining({
+            owner: "any owner",
+            repositoryName: "any repo"
+          }),
           accessToken: "any accessToken",
           applicationName: "any app"
         })
