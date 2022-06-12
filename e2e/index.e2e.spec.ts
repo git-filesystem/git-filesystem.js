@@ -100,12 +100,13 @@ providers.forEach(provider =>
         expect(repositories).toContain(repositoryNameWithOwner);
       });
 
-      it("should be able to get all repositories for a different user", async () => {
-        const repositories = await client.getAllRepositories("microsoft");
+      if (provider.name === "github")
+        it("should be able to get all repositories for a different user", async () => {
+          const repositories = await client.getAllRepositories("microsoft");
 
-        expect(repositories).toBeDefined();
-        expect(repositories).not.toContain(repositoryNameWithOwner);
-      });
+          expect(repositories).toBeDefined();
+          expect(repositories).not.toContain(repositoryNameWithOwner);
+        });
     });
 
     describe("creating files", () => {
