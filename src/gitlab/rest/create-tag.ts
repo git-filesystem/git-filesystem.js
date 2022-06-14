@@ -1,4 +1,3 @@
-import { AxiosResponse } from "axios";
 import { FullyQualifiedBranch, FullyQualifiedTagRef } from "../../ref";
 import { urlEncode } from "../../utils/url-encode";
 import { getRestClient } from "./rest-client";
@@ -26,10 +25,10 @@ export const createTag = async (
     ref
   };
 
-  const { data } = await getRestClient(accessToken).post<Response[], AxiosResponse<Response>, null>(
+  const { data } = await getRestClient(accessToken).post<Params, null, Response>(
     path,
     null,
-    { params }
+    params
   );
 
   return `refs/tags/${data.name}`;

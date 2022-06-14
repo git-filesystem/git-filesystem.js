@@ -1,4 +1,3 @@
-import { AxiosResponse } from "axios";
 import { getRestClient } from "./rest-client";
 
 interface Body {
@@ -26,10 +25,7 @@ export const createProject = async (
     namespace_id: namespaceId
   };
 
-  const { data } = await getRestClient(accessToken).post<Response, AxiosResponse<Response>, Body>(
-    "projects",
-    requestBody
-  );
+  const { data } = await getRestClient(accessToken).post<Body, Response>("projects", requestBody);
 
   return data.path_with_namespace;
 };

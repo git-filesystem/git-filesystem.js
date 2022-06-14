@@ -1,7 +1,10 @@
-import { AxiosResponse } from "axios";
-import { FullyQualifiedRef } from "../../ref";
+import { FullyQualifiedBranchRef, FullyQualifiedRef, FullyQualifiedTagRef } from "../../ref";
 import { urlEncode } from "../../utils/url-encode";
 import { getRestClient } from "./rest-client";
+
+interface Params {
+  ref: FullyQualifiedBranchRef | FullyQualifiedTagRef;
+}
 
 export const getFileContent = async (
   accessToken: string,
@@ -17,10 +20,9 @@ export const getFileContent = async (
 
   const path = `projects/${urlEncodedProjectFullPath}/repository/files/${urlEncodedFilePath}/raw`;
 
-  const result = await getRestClient(accessToken, true).get<string, AxiosResponse<string>, null>(
-    path,
-    { params: { ref } }
-  );
+  const params: Params = { ref };
+
+  const result = await getRestClient(accessToken, false).get<Params, string>(path, params);
 
   return result.data;
 };

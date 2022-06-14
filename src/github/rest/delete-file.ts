@@ -1,4 +1,3 @@
-import { AxiosResponse } from "axios";
 import { FullyQualifiedBranch } from "../../ref";
 import { getRestClient } from "./rest-client";
 
@@ -38,11 +37,10 @@ export const deleteFile = async (
     author
   };
 
-  const { data } = await getRestClient(accessToken).delete<
-    RequestResponse,
-    AxiosResponse<RequestResponse>,
-    RequestBody
-  >(path, { data: body });
+  const { data } = await getRestClient(accessToken).delete<RequestBody, RequestResponse>(
+    path,
+    body
+  );
 
   return data.sha;
 };

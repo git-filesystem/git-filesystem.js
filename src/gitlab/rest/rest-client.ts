@@ -1,12 +1,18 @@
-import axios from "axios";
+import { RestClient } from "../../rest-client";
 
-export const getRestClient = (accessToken: string, stopResponseTransformation = false) =>
-  axios.create({
-    baseURL: "https://gitlab.com/api/v4/",
-    headers: {
+export const getRestClient = (accessToken: string, parseResponseBody = true): RestClient =>
+  new GitLabRestClient(accessToken, parseResponseBody);
+
+class GitLabRestClient extends RestClient {
+  constructor(accessToken: string, parseResponseBody = true) {
+    const baseUrl = "https://gitlab.com/api/v4";
+
+    const headers = {
       "Content-Type": "application/json",
       Accept: "application/json",
       "PRIVATE-TOKEN": accessToken
-    },
-    transformResponse: stopResponseTransformation ? res => res : undefined
-  });
+    };
+
+    super(baseUrl, headers, parseResponseBody);
+  }
+}

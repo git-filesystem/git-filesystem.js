@@ -1,4 +1,3 @@
-import { AxiosResponse } from "axios";
 import { FullyQualifiedBranch } from "../../ref";
 import { base64encode } from "../../utils/base64";
 import { getRestClient } from "./rest-client";
@@ -44,11 +43,7 @@ export const updateFile = async (
     author
   };
 
-  const { data } = await getRestClient(accessToken).put<
-    RequestResponse,
-    AxiosResponse<RequestResponse>,
-    RequestBody
-  >(path, body);
+  const { data } = await getRestClient(accessToken).put<RequestBody, RequestResponse>(path, body);
 
   return data.sha;
 };

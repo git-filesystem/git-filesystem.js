@@ -1,12 +1,17 @@
-import axios from "axios";
+import { RestClient } from "../../rest-client";
 
-export const getRestClient = (accessToken: string, stopResponseTransformation = false) =>
-  axios.create({
-    baseURL: "https://api.github.com",
-    headers: {
+export const getRestClient = (accessToken: string): RestClient => new GitHubRestClient(accessToken);
+
+class GitHubRestClient extends RestClient {
+  constructor(accessToken: string) {
+    const baseURL = "https://api.github.com";
+
+    const headers = {
       "Content-Type": "application/json",
       Accept: "application/vnd.github.v3+json",
       Authorization: "token " + accessToken
-    },
-    transformResponse: stopResponseTransformation ? res => res : undefined
-  });
+    };
+
+    super(baseURL, headers);
+  }
+}
