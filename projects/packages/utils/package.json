@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "@gitbuckets/utils",
+  "version": "0.0.0",
+  "author": {
+    "name": "Toby Smith",
+    "email": "tobysmith568@hotmail.co.uk",
+    "url": "https://tobysmith.uk"
+  },
+  "license": "ISC",
+  "description": "Utilities shared by different gitbuckets libraries",
+  "source": "src/main.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "prettier": "@tobysmith568/prettier-config",
+  "homepage": "https://github.com/tobysmith568/gitbuckets.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobysmith568/gitbuckets.js.git"
+  },
+  "scripts": {
+    "build": "parcel build",
+    "watch": "parcel watch --no-hmr",
+    "publish": "echo 'todo publishing'"
+  },
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/tobysmith568/gitbuckets.js/issues"
+  },
+  "devDependencies": {
+    "@gitbuckets/tsconfig": "*"
+  },
+  "dependencies": {
+    "js-base64": "^3.7.2"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "name": "@gitbuckets/github",
+  "version": "0.0.0",
+  "author": {
+    "name": "Toby Smith",
+    "email": "tobysmith568@hotmail.co.uk",
+    "url": "https://tobysmith.uk"
+  },
+  "license": "ISC",
+  "description": "A file system API for GitHub repositories",
+  "source": "src/main.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "homepage": "https://github.com/tobysmith568/gitbuckets.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobysmith568/gitbuckets.js.git"
+  },
+  "scripts": {
+    "build": "parcel build",
+    "watch": "parcel watch --no-hmr",
+    "test": "jest",
+    "test-ci": "jest --coverage --ci",
+    "publish": "echo 'todo publishing'"
+  },
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/tobysmith568/gitbuckets.js/issues"
+  },
+  "dependencies": {
+    "@gitbuckets/abstractions": "*",
+    "@gitbuckets/utils": "*",
+    "@tobysmith568/prettier-config": "^2.0.0",
+    "graphql-request": "^4.3.0",
+    "octokit": "^1.8.0"
+  },
+  "devDependencies": {
+    "@gitbuckets/tsconfig": "*",
+    "@types/jest": "^28.1.2",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5"
+  }
+}

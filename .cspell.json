@@ -1,11 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "ignorePaths": ["/dist/"],
+  "ignorePaths": ["dist"],
   "dictionaryDefinitions": [],
   "dictionaries": ["en-gb", "node", "npm", "typescript"],
   "words": [],
   "ignoreWords": ["tobysmith", "gitbuckets"],
   "import": [],
-  "ignoreRegExpList": []
+  "ignoreRegExpList": ["esbenp\\.prettier-vscode", "dbaeumer\\.vscode-eslint"]
 }

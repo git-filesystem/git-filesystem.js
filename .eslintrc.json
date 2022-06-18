@@ -11,6 +11,6 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
-  "rules": {},
-  "ignorePatterns": ["/dist/"]
+  "ignorePatterns": ["dist", "node_modules"],
+  "rules": {}
 }

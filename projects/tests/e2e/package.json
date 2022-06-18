@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "@gitbuckets/e2e-tests",
+  "version": "0.0.0",
+  "author": {
+    "name": "Toby Smith",
+    "email": "tobysmith568@hotmail.co.uk",
+    "url": "https://tobysmith.uk"
+  },
+  "license": "ISC",
+  "prettier": "@tobysmith568/prettier-config",
+  "homepage": "https://github.com/tobysmith568/gitbuckets.js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobysmith568/gitbuckets.js.git"
+  },
+  "scripts": {
+    "watch": "echo no-op",
+    "test-e2e": "jest",
+    "test-e2e-ci": "jest --coverage --ci"
+  },
+  "files": [
+    "src"
+  ],
+  "bugs": {
+    "url": "https://github.com/tobysmith568/gitbuckets.js/issues"
+  },
+  "dependencies": {
+    "gitbuckets": "*"
+  }
+}
