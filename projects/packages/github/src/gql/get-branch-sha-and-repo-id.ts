@@ -55,7 +55,9 @@ export const getBranchShaAndRepoId = async (
   const repoId = result.repository?.id;
 
   if (!branchSha || !repoId) {
-    throw new Error(`Could not get branch sha or repo id for ${fqBranch}`);
+    throw new Error(
+      `Could not get branch sha or repo id for ${fqBranch.owner}/${fqBranch.repositoryName}/${fqBranch.ref}`
+    );
   }
 
   return { branchSha, repoId };
