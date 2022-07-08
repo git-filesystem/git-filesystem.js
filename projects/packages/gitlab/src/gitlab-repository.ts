@@ -8,13 +8,13 @@ import {
   Provider,
   Repository
 } from "@gitbuckets/abstractions";
-import { CommitAction, createCommit } from "./gql/create-commit";
+import { GitLabCommitBuilder } from "./gitlab-commit-builder";
 import { allTags } from "./rest/all-tags";
 import { createTag } from "./rest/create-tag";
 import { deleteTag } from "./rest/delete-tag";
 import { getFileContent } from "./rest/get-file-content";
 
-export class GitLabRepository extends Repository {
+export class GitLabRepository implements Repository {
   provider: Provider = "gitlab";
 
   public constructor(
@@ -23,55 +23,23 @@ export class GitLabRepository extends Repository {
     public readonly applicationName: string,
     public readonly authorDetails: GitUser | null = null,
     public readonly committerDetails: GitUser | null = null,
-    jsonConfig: JsonConfig | null = null
-  ) {
-    super(jsonConfig);
-  }
+    public readonly jsonConfig: JsonConfig | null = null
+  ) {}
 
   async createFile(path: string, content: string): Promise<string> {
+    const commitBuilder = new GitLabCommitBuilder(this);
+    commitBuilder.createFile(path, content);
+
     const commitMessage = `Create ${path}`;
-
-    const createAction: CommitAction = {
-      action: "CREATE",
-      content,
-      filePath: path,
-      encoding: "TEXT"
-    };
-
-    const createActions = [createAction];
-
-    const sha = await createCommit(
-      this.accessToken,
-      this.fqBranch,
-      this.applicationName,
-      commitMessage,
-      createActions
-    );
-
-    return sha;
+    return await commitBuilder.createCommit(commitMessage);
   }
 
   async updateFile(path: string, content: string): Promise<string> {
+    const commitBuilder = new GitLabCommitBuilder(this);
+    commitBuilder.updateFile(path, content);
+
     const commitMessage = `Update ${path}`;
-
-    const createAction: CommitAction = {
-      action: "UPDATE",
-      content,
-      filePath: path,
-      encoding: "TEXT"
-    };
-
-    const createActions = [createAction];
-
-    const sha = await createCommit(
-      this.accessToken,
-      this.fqBranch,
-      this.applicationName,
-      commitMessage,
-      createActions
-    );
-
-    return sha;
+    return await commitBuilder.createCommit(commitMessage);
   }
 
   readFile(path: string): Promise<string>;
@@ -85,22 +53,40 @@ export class GitLabRepository extends Repository {
   }
 
   async deleteFile(path: string): Promise<void> {
+    const commitBuilder = new GitLabCommitBuilder(this);
+    commitBuilder.deleteFile(path);
+
     const commitMessage = `Delete ${path}`;
+    await commitBuilder.createCommit(commitMessage);
+  }
 
-    const createAction: CommitAction = {
-      action: "DELETE",
-      filePath: path
-    };
+  public async createJsonFile<T>(path: string, content: T): Promise<string> {
+    const commitBuilder = new GitLabCommitBuilder(this);
+    commitBuilder.createJsonFile(path, content);
 
-    const createActions = [createAction];
+    const commitMessage = `Create ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
+  }
 
-    await createCommit(
-      this.accessToken,
-      this.fqBranch,
-      this.applicationName,
-      commitMessage,
-      createActions
-    );
+  public async readJsonFile<T>(path: string): Promise<T>;
+  public async readJsonFile<T>(path: string, tagName: string): Promise<T>;
+  public async readJsonFile<T>(path: string, tagName?: string): Promise<T> {
+    if (tagName) {
+      const stringContent = await this.readFile(path, tagName);
+      return JSON.parse(stringContent);
+    }
+
+    const stringContent = await this.readFile(path);
+
+    return JSON.parse(stringContent);
+  }
+
+  public async updateJsonFile<T>(path: string, content: T): Promise<string> {
+    const commitBuilder = new GitLabCommitBuilder(this);
+    commitBuilder.updateJsonFile(path, content);
+
+    const commitMessage = `Update ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
   }
 
   async createTag(name: string): Promise<FullyQualifiedTag> {

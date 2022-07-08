@@ -14,8 +14,8 @@ interface RequestBody {
   message: string;
   tree: string;
   parents: readonly [string] | undefined;
-  author: GitHubGitUser | null;
-  committer: GitHubGitUser | null;
+  author: GitHubGitUser | undefined;
+  committer: GitHubGitUser | undefined;
 }
 
 interface RequestResponse {
@@ -27,20 +27,26 @@ export const createCommit = async (
   branch: FullyQualifiedBranch,
   commitActions: CommitAction[],
   commitMessage?: string,
-  committer: GitHubGitUser | null = null,
-  author: GitHubGitUser | null = null
+  committer: GitHubGitUser | undefined = undefined,
+  author: GitHubGitUser | undefined = undefined
 ): Promise<string> => {
   const { owner, repositoryName } = branch;
 
+  console.log("Before getting sha");
   let currentShaOnBranch = await getBranchSha(accessToken, branch);
   const repoIsEmpty = !currentShaOnBranch;
+  console.log("After getting sha");
 
   if (!currentShaOnBranch) {
+    console.log("Before creating initial commit");
     currentShaOnBranch = await createInitialCommit(accessToken, branch);
+    console.log("After creating initial commit");
   }
 
+  console.log("Before create tree");
   const baseTree = repoIsEmpty ? null : currentShaOnBranch;
   const shaOfTree = await createTree(accessToken, branch, baseTree, commitActions);
+  console.log("After create tree");
 
   const path = `repos/${owner}/${repositoryName}/git/commits`;
 
@@ -52,10 +58,14 @@ export const createCommit = async (
     committer
   };
 
+  console.log("Before create commit");
   const { data } = await getRestClient(accessToken).post<RequestBody, RequestResponse>(path, body);
   const { sha } = data;
+  console.log("After create commit");
 
+  console.log("Before update branch");
   await updateBranchSha(accessToken, branch, sha);
+  console.log("After update branch");
 
   return sha;
 };

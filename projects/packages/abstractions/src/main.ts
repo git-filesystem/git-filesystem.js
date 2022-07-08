@@ -1,5 +1,7 @@
 export { Client } from "./client";
 export type { GitUser, Provider, RepositoryExistence } from "./client";
+export { CommitBuilder, defaultJsonConfig } from "./commit-builder";
+export type { JsonConfig } from "./commit-builder";
 export {
   createFullyQualifiedBranch,
   createFullyQualifiedTag,
@@ -16,6 +18,5 @@ export type {
   FullyQualifiedTag,
   FullyQualifiedTagRef
 } from "./ref";
-export { defaultJsonConfig, Repository } from "./repository";
-export type { JsonConfig, ReadonlyRepository } from "./repository";
+export type { ReadonlyRepository, Repository } from "./repository";
 export { RestClient } from "./rest-client";

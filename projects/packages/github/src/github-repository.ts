@@ -11,15 +11,14 @@ import {
   Provider,
   Repository
 } from "@gitbuckets/abstractions";
+import { GitHubCommitBuilder } from "./github-commit-builder";
 import { createTag } from "./gql/create-tag";
 import { deleteTag } from "./gql/delete-tag";
 import { getAllTags } from "./gql/get-all-tags";
 import { getFileContent } from "./gql/get-file-content";
 import { getRefIdForTag } from "./gql/get-ref-id-for-tag";
-import { createCommit } from "./rest/create-commit";
-import { CreateCommitAction, DeleteCommitAction, UpdateCommitAction } from "./rest/create-tree";
 
-export class GitHubRepository extends Repository {
+export class GitHubRepository implements Repository {
   readonly provider: Provider = "github";
 
   public constructor(
@@ -28,49 +27,23 @@ export class GitHubRepository extends Repository {
     public readonly applicationName: string,
     public readonly authorDetails: GitUser | null = null,
     public readonly committerDetails: GitUser | null = null,
-    jsonConfig: JsonConfig | null = null
-  ) {
-    super(jsonConfig);
-  }
+    public readonly jsonConfig: JsonConfig | null = null
+  ) {}
 
   async createFile(path: string, content: string): Promise<string> {
-    const createAction: CreateCommitAction = {
-      action: "CREATE",
-      filePath: path,
-      content
-    };
+    const commitBuilder = new GitHubCommitBuilder(this);
+    commitBuilder.createFile(path, content);
 
-    const commitActions = [createAction];
     const commitMessage = `Create ${path}`;
-
-    return await createCommit(
-      this.accessToken,
-      this.fqBranch,
-      commitActions,
-      commitMessage,
-      this.committerDetails,
-      this.authorDetails
-    );
+    return await commitBuilder.createCommit(commitMessage);
   }
 
   async updateFile(path: string, content: string): Promise<string> {
-    const createAction: UpdateCommitAction = {
-      action: "UPDATE",
-      filePath: path,
-      content
-    };
+    const commitBuilder = new GitHubCommitBuilder(this);
+    commitBuilder.updateFile(path, content);
 
-    const commitActions = [createAction];
     const commitMessage = `Update ${path}`;
-
-    return await createCommit(
-      this.accessToken,
-      this.fqBranch,
-      commitActions,
-      commitMessage,
-      this.committerDetails,
-      this.authorDetails
-    );
+    return await commitBuilder.createCommit(commitMessage);
   }
 
   readFile(path: string): Promise<string>;
@@ -84,22 +57,40 @@ export class GitHubRepository extends Repository {
   }
 
   async deleteFile(path: string): Promise<void> {
-    const createAction: DeleteCommitAction = {
-      action: "DELETE",
-      filePath: path
-    };
+    const commitBuilder = new GitHubCommitBuilder(this);
+    commitBuilder.deleteFile(path);
 
-    const commitActions = [createAction];
     const commitMessage = `Delete ${path}`;
+    await commitBuilder.createCommit(commitMessage);
+  }
 
-    await createCommit(
-      this.accessToken,
-      this.fqBranch,
-      commitActions,
-      commitMessage,
-      this.committerDetails,
-      this.authorDetails
-    );
+  public async createJsonFile<T>(path: string, content: T): Promise<string> {
+    const commitBuilder = new GitHubCommitBuilder(this);
+    commitBuilder.createJsonFile(path, content);
+
+    const commitMessage = `Create ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
+  }
+
+  public async readJsonFile<T>(path: string): Promise<T>;
+  public async readJsonFile<T>(path: string, tagName: string): Promise<T>;
+  public async readJsonFile<T>(path: string, tagName?: string): Promise<T> {
+    if (tagName) {
+      const stringContent = await this.readFile(path, tagName);
+      return JSON.parse(stringContent);
+    }
+
+    const stringContent = await this.readFile(path);
+
+    return JSON.parse(stringContent);
+  }
+
+  public async updateJsonFile<T>(path: string, content: T): Promise<string> {
+    const commitBuilder = new GitHubCommitBuilder(this);
+    commitBuilder.updateJsonFile(path, content);
+
+    const commitMessage = `Update ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
   }
 
   async createTag(name: string): Promise<FullyQualifiedTag> {

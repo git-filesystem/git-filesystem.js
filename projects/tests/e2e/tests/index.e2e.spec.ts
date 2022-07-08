@@ -25,13 +25,13 @@ const providers: Provider[] = [
     user: process.env.E2E_GITHUB_USERNAME,
     accessToken: process.env.E2E_GITHUB_PAT,
     anotherUser: "microsoft"
-  },
-  {
-    name: "gitlab",
-    user: process.env.E2E_GITLAB_USERNAME,
-    accessToken: process.env.E2E_GITLAB_PAT,
-    anotherUser: "TODO"
   }
+  // {
+  //   name: "gitlab",
+  //   user: process.env.E2E_GITLAB_USERNAME,
+  //   accessToken: process.env.E2E_GITLAB_PAT,
+  //   anotherUser: "TODO"
+  // }
 ];
 
 providers.forEach(provider =>
@@ -68,7 +68,7 @@ providers.forEach(provider =>
       repositoryNameWithOwner = `${userAccount}/${repositoryName}`;
     });
 
-    it(`should get the ${provider.name} client`, () => {
+    fit(`should get the ${provider.name} client`, () => {
       const user: GitUser = {
         name: "gitbuckets-e2e",
         email: "gitbuckets.e2e@tobysmith.uk"
@@ -89,7 +89,7 @@ providers.forEach(provider =>
     });
 
     describe("create repositories", () => {
-      it("should be able to make a repository", async () => {
+      fit("should be able to make a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("DoesNotExist");
 
@@ -107,7 +107,7 @@ providers.forEach(provider =>
       });
     });
 
-    describe("getting repositories", () => {
+    fdescribe("getting repositories", () => {
       it("should be able to get all repositories for the current user", async () => {
         const repositories = await client.getAllRepositories();
 
@@ -125,7 +125,7 @@ providers.forEach(provider =>
     });
 
     describe("creating files", () => {
-      it("should be able to create a new text file", async () => {
+      fit("should be able to create a new text file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.createFile(testFilePath, originalTextFileContent);
@@ -277,7 +277,7 @@ providers.forEach(provider =>
       });
     });
 
-    describe("deleting repositories", () => {
+    fdescribe("deleting repositories", () => {
       it("should be able to delete a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("Exists");
