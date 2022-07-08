@@ -10,7 +10,7 @@
   "scripts": {
     "build": "lerna run build",
     "watch": "lerna exec --parallel npm run watch",
-    "test": "lerna run test --parallel",
+    "test": "lerna run test --stream",
     "test:e2e": "lerna run test-e2e"
   },
   "devDependencies": {

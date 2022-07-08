@@ -15,11 +15,9 @@ import { createTag } from "./gql/create-tag";
 import { deleteTag } from "./gql/delete-tag";
 import { getAllTags } from "./gql/get-all-tags";
 import { getFileContent } from "./gql/get-file-content";
-import { getFileSha } from "./gql/get-file-sha";
 import { getRefIdForTag } from "./gql/get-ref-id-for-tag";
-import { createFile } from "./rest/create-file";
-import { deleteFile } from "./rest/delete-file";
-import { updateFile } from "./rest/update-file";
+import { createCommit } from "./rest/create-commit";
+import { CreateCommitAction, DeleteCommitAction, UpdateCommitAction } from "./rest/create-tree";
 
 export class GitHubRepository extends Repository {
   readonly provider: Provider = "github";
@@ -36,25 +34,40 @@ export class GitHubRepository extends Repository {
   }
 
   async createFile(path: string, content: string): Promise<string> {
-    return await createFile(
+    const createAction: CreateCommitAction = {
+      action: "CREATE",
+      filePath: path,
+      content
+    };
+
+    const commitActions = [createAction];
+    const commitMessage = `Create ${path}`;
+
+    return await createCommit(
       this.accessToken,
       this.fqBranch,
-      path,
-      content,
+      commitActions,
+      commitMessage,
       this.committerDetails,
       this.authorDetails
     );
   }
 
   async updateFile(path: string, content: string): Promise<string> {
-    const sha = await getFileSha(this.accessToken, this.fqBranch, path);
+    const createAction: UpdateCommitAction = {
+      action: "UPDATE",
+      filePath: path,
+      content
+    };
 
-    return await updateFile(
+    const commitActions = [createAction];
+    const commitMessage = `Update ${path}`;
+
+    return await createCommit(
       this.accessToken,
       this.fqBranch,
-      path,
-      content,
-      sha,
+      commitActions,
+      commitMessage,
       this.committerDetails,
       this.authorDetails
     );
@@ -71,13 +84,19 @@ export class GitHubRepository extends Repository {
   }
 
   async deleteFile(path: string): Promise<void> {
-    const sha = await getFileSha(this.accessToken, this.fqBranch, path);
+    const createAction: DeleteCommitAction = {
+      action: "DELETE",
+      filePath: path
+    };
 
-    await deleteFile(
+    const commitActions = [createAction];
+    const commitMessage = `Delete ${path}`;
+
+    await createCommit(
       this.accessToken,
       this.fqBranch,
-      path,
-      sha,
+      commitActions,
+      commitMessage,
       this.committerDetails,
       this.authorDetails
     );
