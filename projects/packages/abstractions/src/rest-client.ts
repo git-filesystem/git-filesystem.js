@@ -59,6 +59,26 @@ export abstract class RestClient {
     return { data, status };
   }
 
+  public async patch<TBody, TRes>(path: string, body: TBody): Promise<RestResponse<TRes>>;
+  public async patch<TParams, TBody, TRes>(
+    path: string,
+    body: TBody,
+    params: TParams
+  ): Promise<RestResponse<TRes>>;
+  public async patch<TParams, TBody, TRes>(
+    path: string,
+    body: TBody,
+    params?: TParams
+  ): Promise<RestResponse<TRes>> {
+    const { data, status } = await this.axiosClient.patch<TRes, AxiosResponse<TRes>, TBody>(
+      path,
+      body,
+      { params }
+    );
+
+    return { data, status };
+  }
+
   public async delete<TRes>(path: string): Promise<RestResponse<TRes>>;
   public async delete<TBody, TRes>(path: string, body: TBody): Promise<RestResponse<TRes>>;
   public async delete<TParams, TBody, TRes>(
