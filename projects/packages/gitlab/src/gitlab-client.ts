@@ -23,9 +23,9 @@ export class GitLabClient extends Client {
     private readonly owner: string,
     private readonly accessToken: string,
     private readonly applicationName: string,
-    private readonly authorDetails: GitUser | null = null,
-    private readonly committerDetails: GitUser | null = null,
-    private readonly jsonConfig: JsonConfig | null = null
+    private readonly authorDetails?: GitUser,
+    private readonly committerDetails?: GitUser,
+    private readonly jsonConfig?: JsonConfig
   ) {
     super();
   }

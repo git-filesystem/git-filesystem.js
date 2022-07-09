@@ -25,9 +25,9 @@ export class GitHubRepository implements Repository {
     public readonly accessToken: string,
     public readonly fqBranch: FullyQualifiedBranch,
     public readonly applicationName: string,
-    public readonly authorDetails: GitUser | null = null,
-    public readonly committerDetails: GitUser | null = null,
-    public readonly jsonConfig: JsonConfig | null = null
+    public readonly authorDetails?: GitUser,
+    public readonly committerDetails?: GitUser,
+    public readonly jsonConfig?: JsonConfig
   ) {}
 
   async createFile(path: string, content: string): Promise<string> {

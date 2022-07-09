@@ -19,7 +19,7 @@
     "url": "git+https://github.com/tobysmith568/gitbuckets.js.git"
   },
   "scripts": {
-    "build": "parcel build",
+    "build": "tsc --noEmit && parcel build",
     "watch": "parcel watch --no-hmr",
     "test": "jest",
     "test-ci": "jest --coverage --ci",

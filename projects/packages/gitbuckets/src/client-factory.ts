@@ -8,9 +8,9 @@ export class ClientFactory {
     owner: string,
     accessToken: string,
     applicationName: string,
-    authorDetails: GitUser | null = null,
-    committerDetails: GitUser | null = null,
-    jsonConfig: JsonConfig | null = null
+    authorDetails?: GitUser,
+    committerDetails?: GitUser,
+    jsonConfig?: JsonConfig
   ): Client {
     switch (provider) {
       case "github":

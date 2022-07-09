@@ -1,7 +1,7 @@
 export abstract class CommitBuilder {
   private readonly jsonConfig: JsonConfig;
 
-  constructor(jsonConfig: JsonConfig | null) {
+  constructor(jsonConfig?: JsonConfig) {
     this.jsonConfig = jsonConfig ?? defaultJsonConfig;
   }
 

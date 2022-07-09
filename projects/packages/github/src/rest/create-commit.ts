@@ -32,21 +32,15 @@ export const createCommit = async (
 ): Promise<string> => {
   const { owner, repositoryName } = branch;
 
-  console.log("Before getting sha");
   let currentShaOnBranch = await getBranchSha(accessToken, branch);
   const repoIsEmpty = !currentShaOnBranch;
-  console.log("After getting sha");
 
   if (!currentShaOnBranch) {
-    console.log("Before creating initial commit");
     currentShaOnBranch = await createInitialCommit(accessToken, branch);
-    console.log("After creating initial commit");
   }
 
-  console.log("Before create tree");
   const baseTree = repoIsEmpty ? null : currentShaOnBranch;
   const shaOfTree = await createTree(accessToken, branch, baseTree, commitActions);
-  console.log("After create tree");
 
   const path = `repos/${owner}/${repositoryName}/git/commits`;
 
@@ -58,14 +52,9 @@ export const createCommit = async (
     committer
   };
 
-  console.log("Before create commit");
   const { data } = await getRestClient(accessToken).post<RequestBody, RequestResponse>(path, body);
   const { sha } = data;
-  console.log("After create commit");
 
-  console.log("Before update branch");
   await updateBranchSha(accessToken, branch, sha);
-  console.log("After update branch");
-
   return sha;
 };
