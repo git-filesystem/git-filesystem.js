@@ -1,0 +1,10 @@
+query getBranchShaAndRepoId($owner: String!, $name: String!, $branch: String!) {
+  repository(owner: $owner, name: $name) {
+    id
+    ref(qualifiedName: $branch) {
+      target {
+        oid
+      }
+    }
+  }
+}

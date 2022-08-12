@@ -19,11 +19,12 @@
     "url": "git+https://github.com/tobysmith568/gitbuckets.js.git"
   },
   "scripts": {
-    "build": "tsc --noEmit && parcel build",
+    "build": "tsc && parcel build",
     "watch": "parcel watch --no-hmr",
     "test": "jest",
     "test-ci": "jest --coverage --ci",
-    "publish": "echo 'todo publishing'"
+    "publish": "echo 'todo publishing'",
+    "generate": "graphql-codegen --config .gql-codegen.yml"
   },
   "files": [
     "dist"
@@ -35,11 +36,17 @@
     "@gitbuckets/abstractions": "*",
     "@gitbuckets/utils": "*",
     "@tobysmith568/prettier-config": "^2.0.0",
+    "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
     "octokit": "^1.8.0"
   },
   "devDependencies": {
     "@gitbuckets/tsconfig": "*",
+    "@graphql-codegen/cli": "2.11.6",
+    "@graphql-codegen/typescript": "2.7.3",
+    "@graphql-codegen/typescript-graphql-request": "^4.5.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-resolvers": "2.7.3",
     "@types/jest": "^28.1.2",
     "jest": "^28.1.1",
     "ts-jest": "^28.0.5"

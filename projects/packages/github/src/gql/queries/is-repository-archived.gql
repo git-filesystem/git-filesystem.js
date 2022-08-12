@@ -1,0 +1,5 @@
+query isRepositoryArchived($name: String!, $owner: String!) {
+  repository(name: $name, owner: $owner) {
+    isArchived
+  }
+}

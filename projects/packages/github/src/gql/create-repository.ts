@@ -1,29 +1,5 @@
-import { gql } from "graphql-request";
 import { getIdForUserOrOrg } from "./get-id-for-user-or-org";
-import { getClient } from "./gql-client";
-
-const mutation = gql`
-  mutation ($input: CreateRepositoryInput!) {
-    createRepository(input: $input) {
-      clientMutationId
-    }
-  }
-`;
-
-interface Variables {
-  input: {
-    name: string;
-    ownerId: string;
-    visibility: "PRIVATE" | "PUBLIC";
-    description: string;
-  };
-}
-
-interface Response {
-  createRepository: {
-    clientMutationId: null;
-  };
-}
+import { getClient } from "./sdk/gql-client";
 
 export const createRepository = async (
   accessToken: string,
@@ -31,17 +7,15 @@ export const createRepository = async (
   owner: string,
   isPrivate = true,
   description: string | undefined
-) => {
+): Promise<void> => {
   const ownerId = await getIdForUserOrOrg(accessToken, owner);
 
-  const variables: Variables = {
+  await getClient(accessToken).createRepository({
     input: {
       name,
       visibility: isPrivate ? "PRIVATE" : "PUBLIC",
       description: description ?? "",
       ownerId
     }
-  };
-
-  await getClient(accessToken).request<Response, Variables>(mutation, variables);
+  });
 };

@@ -1,7 +1,7 @@
 import { gql } from "graphql-request";
 import { getClient } from "./gql-client";
 
-const query = gql`
+export const query = gql`
   query ($login: ID!) {
     namespace(fullPath: $login) {
       projects {

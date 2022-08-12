@@ -10,8 +10,8 @@ export interface FullyQualifiedBranch {
   ref: FullyQualifiedBranchRef;
 }
 
-export const isFullyQualifiedBranchRef = (ref: string): ref is FullyQualifiedBranchRef =>
-  ref.startsWith(fqBranchRefPrefix) && ref.length > fqBranchRefPrefix.length;
+export const isFullyQualifiedBranchRef = (ref?: string | null): ref is FullyQualifiedBranchRef =>
+  !!ref && ref.startsWith(fqBranchRefPrefix) && ref.length > fqBranchRefPrefix.length;
 
 export const createFullyQualifiedBranch = (
   owner: string,
@@ -42,8 +42,8 @@ export interface FullyQualifiedTag {
   ref: FullyQualifiedTagRef;
 }
 
-export const isFullyQualifiedTagRef = (ref: string): ref is FullyQualifiedTagRef =>
-  ref.startsWith(fqTagRefPrefix) && ref.length > fqTagRefPrefix.length;
+export const isFullyQualifiedTagRef = (ref?: string | null): ref is FullyQualifiedTagRef =>
+  !!ref && ref.startsWith(fqTagRefPrefix) && ref.length > fqTagRefPrefix.length;
 
 export const createFullyQualifiedTag = (
   owner: string,

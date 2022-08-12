@@ -1,0 +1,5 @@
+mutation createTag($repoId: ID!, $name: String!, $sha: GitObjectID!) {
+  createRef(input: { repositoryId: $repoId, name: $name, oid: $sha }) {
+    clientMutationId
+  }
+}

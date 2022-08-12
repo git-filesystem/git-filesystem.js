@@ -1,45 +1,23 @@
 import { FullyQualifiedRef } from "@gitbuckets/abstractions";
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
+import { getClient } from "./sdk/gql-client";
 
-const query = gql`
-  query ($owner: String!, $repositoryName: String!, $expression: String) {
-    repository(owner: $owner, name: $repositoryName) {
-      object(expression: $expression) {
-        ... on Blob {
-          oid
-        }
-      }
-    }
-  }
-`;
-
-interface Variables {
-  owner: string;
-  repositoryName: string;
-  expression: string;
-}
-
-interface Response {
-  repository: {
-    object?: {
-      oid: string;
-    };
-  };
-}
-
-export const getFileSha = async (accessToken: string, fqRef: FullyQualifiedRef, path: string) => {
+export const getFileSha = async (
+  accessToken: string,
+  fqRef: FullyQualifiedRef,
+  path: string
+): Promise<string> => {
   const { owner, repositoryName, ref } = fqRef;
 
-  const variables: Variables = {
+  const response = await getClient(accessToken).getFileSha({
     owner,
     repositoryName,
     expression: `${ref}:${path}`
-  };
+  });
 
-  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
-
-  if (response.repository.object) {
+  if (
+    response.repository?.object?.__typename === "Blob" &&
+    typeof response.repository.object.oid === "string"
+  ) {
     return response.repository.object.oid;
   }
 

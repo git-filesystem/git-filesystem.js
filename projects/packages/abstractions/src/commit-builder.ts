@@ -8,6 +8,7 @@ export abstract class CommitBuilder {
   abstract createFile(path: string, content: string): void;
   abstract updateFile(path: string, content: string): void;
   abstract readFile(path: string): Promise<string>;
+  abstract readFile(path: string, tagName: string): Promise<string>;
   abstract deleteFile(path: string): void;
 
   abstract createCommit(commitMessage: string): Promise<string>;

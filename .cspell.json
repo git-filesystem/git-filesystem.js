@@ -4,7 +4,7 @@
   "ignorePaths": ["dist"],
   "dictionaryDefinitions": [],
   "dictionaries": ["en-gb", "node", "npm", "typescript"],
-  "words": [],
+  "words": ["codegen"],
   "ignoreWords": ["tobysmith", "gitbuckets"],
   "import": [],
   "ignoreRegExpList": ["esbenp\\.prettier-vscode", "dbaeumer\\.vscode-eslint"]

@@ -7,7 +7,7 @@ This file isn't very useful as it can't yet search by file content :/
 
 */
 
-const query = gql`
+export const query = gql`
   query ($filePath: String) {
     projects(membership: true) {
       nodes {

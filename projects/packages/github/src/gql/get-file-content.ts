@@ -1,49 +1,23 @@
 import { FullyQualifiedRef } from "@gitbuckets/abstractions";
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
-
-const query = gql`
-  query ($owner: String!, $repositoryName: String!, $expression: String) {
-    repository(owner: $owner, name: $repositoryName) {
-      object(expression: $expression) {
-        ... on Blob {
-          text
-        }
-      }
-    }
-  }
-`;
-
-interface Variables {
-  owner: string;
-  repositoryName: string;
-  expression: string;
-}
-
-interface Response {
-  repository: {
-    object?: {
-      text: string;
-    };
-  };
-}
+import { getClient } from "./sdk/gql-client";
 
 export const getFileContent = async (
   accessToken: string,
   fqRef: FullyQualifiedRef,
   path: string
-) => {
+): Promise<string> => {
   const { owner, repositoryName, ref } = fqRef;
 
-  const variables: Variables = {
+  const response = await getClient(accessToken).getFileContent({
     owner,
     repositoryName,
     expression: `${ref}:${path}`
-  };
+  });
 
-  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
-
-  if (response.repository.object) {
+  if (
+    response.repository?.object?.__typename === "Blob" &&
+    typeof response.repository.object.text === "string"
+  ) {
     return response.repository.object.text;
   }
 

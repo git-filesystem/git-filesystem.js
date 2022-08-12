@@ -1,30 +1,5 @@
 import { FullyQualifiedTag } from "@gitbuckets/abstractions";
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
-
-const query = gql`
-  query ($owner: String!, $repo: String!, $tag: String!) {
-    repository(owner: $owner, name: $repo) {
-      ref(qualifiedName: $tag) {
-        id
-      }
-    }
-  }
-`;
-
-interface Variables {
-  owner: string;
-  repo: string;
-  tag: string;
-}
-
-interface Response {
-  repository?: {
-    ref?: {
-      id: string;
-    };
-  };
-}
+import { getClient } from "./sdk/gql-client";
 
 export const getRefIdForTag = async (
   accessToken: string,
@@ -32,13 +7,11 @@ export const getRefIdForTag = async (
 ): Promise<string> => {
   const { owner, repositoryName, ref } = fqTag;
 
-  const variables: Variables = {
+  const response = await getClient(accessToken).getRefIdForTag({
     owner,
     repo: repositoryName,
     tag: ref
-  };
-
-  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
+  });
 
   const refId = response.repository?.ref?.id;
 

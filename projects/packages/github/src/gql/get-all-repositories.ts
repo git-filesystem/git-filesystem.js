@@ -1,37 +1,11 @@
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
+import { getClient } from "./sdk/gql-client";
 
-const query = gql`
-  query {
-    viewer {
-      repositories(
-        ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]
-        affiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]
-        orderBy: { field: PUSHED_AT, direction: DESC }
-        first: 100
-      ) {
-        nodes {
-          nameWithOwner
-        }
-      }
-    }
-  }
-`;
+export const getAllRepositories = async (accessToken: string): Promise<string[]> => {
+  const response = await getClient(accessToken).getAllRepositories();
 
-interface Response {
-  viewer: {
-    repositories: {
-      nodes: Repo[];
-    };
-  };
-}
-
-interface Repo {
-  nameWithOwner: string;
-}
-
-export const getAllRepositories = async (accessToken: string) => {
-  const response = await getClient(accessToken).request<Response>(query);
-
-  return response.viewer.repositories.nodes.map(repo => repo.nameWithOwner);
+  return (
+    response.viewer.repositories.nodes?.map(repo => repo?.nameWithOwner).filter(isAString) ?? []
+  );
 };
+
+const isAString = (input: unknown): input is string => typeof input === "string";

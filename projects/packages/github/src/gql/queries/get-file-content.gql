@@ -1,0 +1,9 @@
+query getFileContent($owner: String!, $repositoryName: String!, $expression: String) {
+  repository(owner: $owner, name: $repositoryName) {
+    object(expression: $expression) {
+      ... on Blob {
+        text
+      }
+    }
+  }
+}

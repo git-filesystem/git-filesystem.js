@@ -2,7 +2,7 @@ import { FullyQualifiedBranch, refNameWithoutPrefix } from "@gitbuckets/abstract
 import { gql } from "graphql-request";
 import { getClient } from "./gql-client";
 
-const mutation = gql`
+export const mutation = gql`
   mutation (
     $fullPath: ID!
     $appId: String

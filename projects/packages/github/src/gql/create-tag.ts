@@ -1,38 +1,17 @@
 import { FullyQualifiedBranch, FullyQualifiedTagRef } from "@gitbuckets/abstractions";
-import { gql } from "graphql-request";
 import { getBranchShaAndRepoId } from "./get-branch-sha-and-repo-id";
-import { getClient } from "./gql-client";
-
-const mutation = gql`
-  mutation ($repoId: ID!, $name: String!, $sha: GitObjectID!) {
-    createRef(input: { repositoryId: $repoId, name: $name, oid: $sha }) {
-      clientMutationId
-    }
-  }
-`;
-
-interface Response {
-  clientMutationId: null;
-}
-
-interface Variables {
-  repoId: string;
-  name: string;
-  sha: string;
-}
+import { getClient } from "./sdk/gql-client";
 
 export const createTag = async (
   accessToken: string,
   fqBranch: FullyQualifiedBranch,
   ref: FullyQualifiedTagRef
-) => {
+): Promise<void> => {
   const { repoId, branchSha } = await getBranchShaAndRepoId(accessToken, fqBranch);
 
-  const variables: Variables = {
+  await getClient(accessToken).createTag({
     repoId,
     name: ref,
     sha: branchSha
-  };
-
-  await getClient(accessToken).request<Response, Variables>(mutation, variables);
+  });
 };

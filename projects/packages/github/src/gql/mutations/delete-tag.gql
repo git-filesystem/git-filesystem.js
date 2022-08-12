@@ -1,0 +1,5 @@
+mutation deleteTag($tag: ID!) {
+  deleteRef(input: { refId: $tag }) {
+    clientMutationId
+  }
+}

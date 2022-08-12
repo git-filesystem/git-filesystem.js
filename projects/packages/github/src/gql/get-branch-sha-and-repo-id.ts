@@ -1,36 +1,5 @@
 import { FullyQualifiedBranch } from "@gitbuckets/abstractions";
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
-
-const query = gql`
-  query ($owner: String!, $name: String!, $branch: String!) {
-    repository(owner: $owner, name: $name) {
-      id
-      ref(qualifiedName: $branch) {
-        target {
-          oid
-        }
-      }
-    }
-  }
-`;
-
-interface Response {
-  repository?: {
-    id: string;
-    ref?: {
-      target: {
-        oid: string;
-      };
-    };
-  };
-}
-
-interface Variables {
-  owner: string;
-  name: string;
-  branch: string;
-}
+import { getClient } from "./sdk/gql-client";
 
 export interface Result {
   branchSha: string;
@@ -43,13 +12,11 @@ export const getBranchShaAndRepoId = async (
 ) => {
   const { owner, repositoryName, ref } = fqBranch;
 
-  const variables: Variables = {
+  const result = await getClient(accessToken).getBranchShaAndRepoId({
     owner,
     name: repositoryName,
     branch: ref
-  };
-
-  const result = await getClient(accessToken).request<Response, Variables>(query, variables);
+  });
 
   const branchSha = result.repository?.ref?.target?.oid;
   const repoId = result.repository?.id;

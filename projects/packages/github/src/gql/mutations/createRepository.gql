@@ -1,0 +1,5 @@
+mutation createRepository($input: CreateRepositoryInput!) {
+  createRepository(input: $input) {
+    clientMutationId
+  }
+}

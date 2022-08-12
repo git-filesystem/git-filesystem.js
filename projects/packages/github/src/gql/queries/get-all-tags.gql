@@ -1,0 +1,9 @@
+query getAllTags($name: String!, $owner: String!) {
+  repository(name: $name, owner: $owner) {
+    refs(first: 100, refPrefix: "refs/tags/") {
+      nodes {
+        name
+      }
+    }
+  }
+}

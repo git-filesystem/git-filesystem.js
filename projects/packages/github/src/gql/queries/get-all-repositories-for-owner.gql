@@ -1,0 +1,14 @@
+query getAllRepositoriesForOwner($login: String!) {
+  repositoryOwner(login: $login) {
+    repositories(
+      ownerAffiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]
+      affiliations: [OWNER, COLLABORATOR, ORGANIZATION_MEMBER]
+      orderBy: { field: PUSHED_AT, direction: DESC }
+      first: 100
+    ) {
+      nodes {
+        nameWithOwner
+      }
+    }
+  }
+}

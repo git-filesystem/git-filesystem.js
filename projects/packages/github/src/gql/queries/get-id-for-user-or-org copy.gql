@@ -1,0 +1,5 @@
+query getIdForUserOrOrg($login: String!) {
+  repositoryOwner(login: $login) {
+    id
+  }
+}
