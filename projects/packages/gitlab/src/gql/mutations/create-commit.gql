@@ -1,0 +1,22 @@
+mutation createCommit(
+  $fullPath: ID!
+  $appId: String
+  $branch: String!
+  $commitMessage: String!
+  $actions: [CommitAction!]!
+) {
+  commitCreate(
+    input: {
+      projectPath: $fullPath
+      clientMutationId: $appId
+      branch: $branch
+      message: $commitMessage
+      actions: $actions
+    }
+  ) {
+    errors
+    commit {
+      sha
+    }
+  }
+}

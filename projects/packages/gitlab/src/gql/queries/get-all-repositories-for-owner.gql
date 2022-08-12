@@ -1,0 +1,9 @@
+query getAllRepositoriesForOwner($login: ID!) {
+  namespace(fullPath: $login) {
+    projects {
+      nodes {
+        fullPath
+      }
+    }
+  }
+}

@@ -1,39 +1,5 @@
 import { FullyQualifiedBranch, refNameWithoutPrefix } from "@gitbuckets/abstractions";
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
-
-export const mutation = gql`
-  mutation (
-    $fullPath: ID!
-    $appId: String
-    $branch: String!
-    $commitMessage: String!
-    $actions: [CommitAction!]!
-  ) {
-    commitCreate(
-      input: {
-        projectPath: $fullPath
-        clientMutationId: $appId
-        branch: $branch
-        message: $commitMessage
-        actions: $actions
-      }
-    ) {
-      errors
-      commit {
-        sha
-      }
-    }
-  }
-`;
-
-interface Variables {
-  fullPath: string;
-  appId: string;
-  branch: string;
-  commitMessage: string;
-  actions: CommitAction[];
-}
+import { getClient } from "./sdk/gql-client";
 
 type CreateCommitAction = {
   action: "CREATE";
@@ -58,15 +24,6 @@ export type CommitAction = CreateCommitAction | UpdateCommitAction | DeleteCommi
 
 export type CommitFileEncoding = "TEXT" | "BASE64";
 
-interface Response {
-  commitCreate: {
-    errors: string[];
-    commit: {
-      sha: string;
-    };
-  };
-}
-
 export const createCommit = async (
   accessToken: string,
   branch: FullyQualifiedBranch,
@@ -78,15 +35,17 @@ export const createCommit = async (
   const branchName = refNameWithoutPrefix(ref);
   const fullPath = `${owner}/${repositoryName}`;
 
-  const variables: Variables = {
+  const response = await getClient(accessToken).createCommit({
     fullPath,
     appId,
     branch: branchName,
     commitMessage,
     actions
-  };
+  });
 
-  const response = await getClient(accessToken).request<Response, Variables>(mutation, variables);
+  if (response.commitCreate?.commit?.__typename === "Commit") {
+    return response.commitCreate.commit.sha;
+  }
 
-  return response.commitCreate.commit.sha;
+  throw new Error("Unable to create commit");
 };

@@ -1,31 +1,13 @@
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
-
-export const query = gql`
-  query {
-    projects(membership: true) {
-      nodes {
-        name
-        namespace {
-          path
-        }
-      }
-    }
-  }
-`;
-
-interface Response {
-  projects: {
-    nodes: {
-      name: string;
-      namespace: {
-        path: string;
-      };
-    }[];
-  };
-}
+import { getClient } from "./sdk/gql-client";
 
 export const getAllRepositories = async (accessToken: string): Promise<string[]> => {
-  const response = await getClient(accessToken).request<Response>(query);
-  return response.projects.nodes.map(node => `${node.namespace.path}/${node.name}`);
+  const response = await getClient(accessToken).getAllRepositories();
+
+  return (
+    response.projects?.nodes
+      ?.map(node => (node?.namespace ? `${node.namespace.path}/${node.name}` : null))
+      .filter(isString) ?? []
+  );
 };
+
+const isString = (input: unknown): input is string => typeof input === "string";

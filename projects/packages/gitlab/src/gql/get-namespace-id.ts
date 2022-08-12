@@ -1,30 +1,18 @@
 import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
+import { getClient } from "./sdk/gql-client";
 
 export const query = gql`
-  query ($name: ID!) {
+  query getNamespaceId($name: ID!) {
     namespace(fullPath: $name) {
       id
     }
   }
 `;
 
-interface Variables {
-  name: string;
-}
-
-interface Response {
-  namespace?: {
-    id: string;
-  };
-}
-
 export const getNamespaceId = async (accessToken: string, owner: string): Promise<number> => {
-  const variables: Variables = {
+  const response = await getClient(accessToken).getNamespaceId({
     name: owner
-  };
-
-  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
+  });
 
   const fullId = response.namespace?.id;
 

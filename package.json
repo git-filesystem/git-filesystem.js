@@ -11,7 +11,8 @@
     "build": "lerna run build",
     "watch": "lerna exec --parallel npm run watch",
     "test": "lerna run test --stream",
-    "test:e2e": "lerna run test-e2e"
+    "test:e2e": "lerna run test-e2e",
+    "generate": "lerna run generate"
   },
   "devDependencies": {
     "@parcel/packager-ts": "^2.6.0",

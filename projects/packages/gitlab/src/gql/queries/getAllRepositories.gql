@@ -1,0 +1,10 @@
+query getAllRepositories {
+  projects(membership: true) {
+    nodes {
+      name
+      namespace {
+        path
+      }
+    }
+  }
+}

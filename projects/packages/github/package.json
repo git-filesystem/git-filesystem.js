@@ -58,7 +58,6 @@
     "@graphql-codegen/typescript": "2.7.3",
     "@graphql-codegen/typescript-graphql-request": "^4.5.3",
     "@graphql-codegen/typescript-operations": "^2.5.3",
-    "@graphql-codegen/typescript-resolvers": "2.7.3",
     "@types/jest": "^28.1.2",
     "jest": "^28.1.1",
     "ts-jest": "^28.0.5"

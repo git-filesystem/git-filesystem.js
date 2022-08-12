@@ -1,0 +1,5 @@
+query isRepositoryArchived($fullPath: ID!) {
+  project(fullPath: $fullPath) {
+    archived
+  }
+}

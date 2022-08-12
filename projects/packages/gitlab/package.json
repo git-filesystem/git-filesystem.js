@@ -22,7 +22,8 @@
   "scripts": {
     "build": "tsc --noEmit && parcel build",
     "watch": "parcel watch --no-hmr",
-    "publish": "echo 'todo publishing'"
+    "publish": "echo 'todo publishing'",
+    "generate": "graphql-codegen --config .gql-codegen.yml"
   },
   "files": [
     "dist"
@@ -30,13 +31,30 @@
   "bugs": {
     "url": "https://github.com/tobysmith568/gitbuckets.js/issues"
   },
-  "devDependencies": {
-    "@gitbuckets/tsconfig": "*"
+  "targets": {
+    "main": {
+      "includeNodeModules": [
+        "@gitbuckets/utils"
+      ]
+    },
+    "module": {
+      "includeNodeModules": [
+        "@gitbuckets/utils"
+      ]
+    }
   },
   "dependencies": {
     "@gitbuckets/abstractions": "*",
-    "@gitbuckets/utils": "*",
+    "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
     "octokit": "^1.8.0"
+  },
+  "devDependencies": {
+    "@gitbuckets/tsconfig": "*",
+    "@gitbuckets/utils": "*",
+    "@graphql-codegen/cli": "2.11.6",
+    "@graphql-codegen/typescript": "2.7.3",
+    "@graphql-codegen/typescript-graphql-request": "^4.5.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3"
   }
 }

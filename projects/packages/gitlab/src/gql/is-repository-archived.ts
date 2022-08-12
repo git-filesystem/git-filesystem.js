@@ -1,23 +1,4 @@
-import { gql } from "graphql-request";
-import { getClient } from "./gql-client";
-
-export const query = gql`
-  query ($fullPath: ID!) {
-    project(fullPath: $fullPath) {
-      archived
-    }
-  }
-`;
-
-interface Variables {
-  fullPath: string;
-}
-
-interface Response {
-  project: {
-    archived: boolean;
-  };
-}
+import { getClient } from "./sdk/gql-client";
 
 export const isRepositoryArchived = async (
   accessToken: string,
@@ -26,11 +7,13 @@ export const isRepositoryArchived = async (
 ): Promise<boolean> => {
   const fullPath = `${owner}/${name}`;
 
-  const variables: Variables = {
+  const response = await getClient(accessToken).isRepositoryArchived({
     fullPath
-  };
+  });
 
-  const response = await getClient(accessToken).request<Response, Variables>(query, variables);
+  if (response.project?.archived !== null && response.project?.archived !== undefined) {
+    return response.project.archived;
+  }
 
-  return response.project.archived;
+  throw new Error(`Cannot find ${fullPath}`);
 };

@@ -1,0 +1,14 @@
+query searchByFilePath($filePath: String) {
+  projects(membership: true) {
+    nodes {
+      fullPath
+      repository {
+        tree(path: $filePath) {
+          lastCommit {
+            shortId
+          }
+        }
+      }
+    }
+  }
+}
