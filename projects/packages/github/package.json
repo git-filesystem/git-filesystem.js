@@ -32,9 +32,20 @@
   "bugs": {
     "url": "https://github.com/tobysmith568/gitbuckets.js/issues"
   },
+  "targets": {
+    "main": {
+      "includeNodeModules": [
+        "@gitbuckets/utils"
+      ]
+    },
+    "module": {
+      "includeNodeModules": [
+        "@gitbuckets/utils"
+      ]
+    }
+  },
   "dependencies": {
     "@gitbuckets/abstractions": "*",
-    "@gitbuckets/utils": "*",
     "@tobysmith568/prettier-config": "^2.0.0",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
@@ -42,6 +53,7 @@
   },
   "devDependencies": {
     "@gitbuckets/tsconfig": "*",
+    "@gitbuckets/utils": "*",
     "@graphql-codegen/cli": "2.11.6",
     "@graphql-codegen/typescript": "2.7.3",
     "@graphql-codegen/typescript-graphql-request": "^4.5.3",
