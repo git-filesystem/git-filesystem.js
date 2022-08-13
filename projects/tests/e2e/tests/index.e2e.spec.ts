@@ -25,13 +25,13 @@ const providers: Provider[] = [
     user: process.env.E2E_GITHUB_USERNAME,
     accessToken: process.env.E2E_GITHUB_PAT,
     anotherUser: "microsoft"
+  },
+  {
+    name: "gitlab",
+    user: process.env.E2E_GITLAB_USERNAME,
+    accessToken: process.env.E2E_GITLAB_PAT,
+    anotherUser: "TODO"
   }
-  // {
-  //   name: "gitlab",
-  //   user: process.env.E2E_GITLAB_USERNAME,
-  //   accessToken: process.env.E2E_GITLAB_PAT,
-  //   anotherUser: "TODO"
-  // }
 ];
 
 providers.forEach(provider =>

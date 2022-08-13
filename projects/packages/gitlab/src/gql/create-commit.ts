@@ -43,7 +43,10 @@ export const createCommit = async (
     actions
   });
 
-  if (response.commitCreate?.commit?.__typename === "Commit") {
+  if (
+    !!response.commitCreate?.commit?.sha &&
+    typeof response.commitCreate.commit.sha === "string"
+  ) {
     return response.commitCreate.commit.sha;
   }
 
