@@ -49,7 +49,7 @@
     "@tobysmith568/prettier-config": "^2.0.0",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
-    "octokit": "^1.8.0"
+    "octokit": "^2.0.0"
   },
   "devDependencies": {
     "@gitbuckets/tsconfig": "*",
