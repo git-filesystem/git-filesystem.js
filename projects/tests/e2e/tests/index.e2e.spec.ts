@@ -107,7 +107,7 @@ providers.forEach(provider =>
       });
     });
 
-    fdescribe("getting repositories", () => {
+    describe("getting repositories", () => {
       it("should be able to get all repositories for the current user", async () => {
         const repositories = await client.getAllRepositories();
 
@@ -277,7 +277,7 @@ providers.forEach(provider =>
       });
     });
 
-    fdescribe("deleting repositories", () => {
+    describe("deleting repositories", () => {
       it("should be able to delete a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("Exists");

@@ -1,7 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "ignorePaths": ["dist"],
+  "ignorePaths": [
+    "dist",
+    "*.generated.*",
+    "projects/packages/gitlab/src/gql/sdk/gitlab_schema.graphql"
+  ],
   "dictionaryDefinitions": [],
   "dictionaries": ["en-gb", "node", "npm", "typescript"],
   "words": ["codegen"],
