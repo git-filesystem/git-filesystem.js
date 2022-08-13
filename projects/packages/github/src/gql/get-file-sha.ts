@@ -15,7 +15,8 @@ export const getFileSha = async (
   });
 
   if (
-    response.repository?.object?.__typename === "Blob" &&
+    !!response.repository?.object &&
+    "oid" in response.repository.object &&
     typeof response.repository.object.oid === "string"
   ) {
     return response.repository.object.oid;

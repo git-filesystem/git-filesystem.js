@@ -15,7 +15,8 @@ export const getFileContent = async (
   });
 
   if (
-    response.repository?.object?.__typename === "Blob" &&
+    !!response.repository?.object &&
+    "text" in response.repository.object &&
     typeof response.repository.object.text === "string"
   ) {
     return response.repository.object.text;
