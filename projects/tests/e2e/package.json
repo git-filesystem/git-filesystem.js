@@ -16,8 +16,7 @@
   },
   "scripts": {
     "watch": "echo no-op",
-    "test-e2e": "jest",
-    "test-e2e-ci": "jest --coverage --ci"
+    "e2e-test": "jest"
   },
   "files": [
     "src"

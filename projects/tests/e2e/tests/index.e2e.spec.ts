@@ -68,7 +68,7 @@ providers.forEach(provider =>
       repositoryNameWithOwner = `${userAccount}/${repositoryName}`;
     });
 
-    fit(`should get the ${provider.name} client`, () => {
+    it(`should get the ${provider.name} client`, () => {
       const user: GitUser = {
         name: "gitbuckets-e2e",
         email: "gitbuckets.e2e@tobysmith.uk"
@@ -89,7 +89,7 @@ providers.forEach(provider =>
     });
 
     describe("create repositories", () => {
-      fit("should be able to make a repository", async () => {
+      it("should be able to make a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("DoesNotExist");
 
@@ -125,7 +125,7 @@ providers.forEach(provider =>
     });
 
     describe("creating files", () => {
-      fit("should be able to create a new text file", async () => {
+      it("should be able to create a new text file", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
 
         await repository.createFile(testFilePath, originalTextFileContent);
