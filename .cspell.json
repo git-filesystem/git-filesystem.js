@@ -2,14 +2,20 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
   "ignorePaths": [
-    "dist",
+    "/dist",
+    "/coverage",
     "*.generated.*",
-    "projects/packages/gitlab/src/gql/sdk/gitlab_schema.graphql"
+    "packages/gitlab/src/lib/gql/sdk/gitlab_schema.graphql"
   ],
   "dictionaryDefinitions": [],
   "dictionaries": ["en-gb", "node", "npm", "typescript"],
   "words": ["codegen"],
   "ignoreWords": ["tobysmith", "gitbuckets"],
   "import": [],
-  "ignoreRegExpList": ["esbenp\\.prettier-vscode", "dbaeumer\\.vscode-eslint"]
+  "ignoreRegExpList": [
+    "esbenp\\.prettier-vscode",
+    "dbaeumer\\.vscode-eslint",
+    "@nrwl\\/",
+    "\\.lib\\.swcrc"
+  ]
 }

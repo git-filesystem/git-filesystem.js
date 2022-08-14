@@ -1,4 +1,15 @@
-dist
-*.generated.*
+# Add files here to ignore them from prettier formatting
 
-projects/packages/gitlab/src/gql/sdk/gitlab_schema.graphql
+# Directories
+
+/dist
+/coverage
+/tmp
+
+# Files
+
+/packages/gitlab/src/lib/gql/sdk/gitlab_schema.graphql
+
+# General
+
+*.generated.*

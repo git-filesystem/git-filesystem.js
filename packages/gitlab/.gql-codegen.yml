@@ -1,0 +1,14 @@
+overwrite: true
+schema: src/lib/gql/sdk/gitlab_schema.graphql
+documents:
+  - src/lib/gql/queries/**
+  - src/lib/gql/mutations/**
+generates:
+  src/lib/gql/sdk/sdk.generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
+    config:
+      gqlImport: graphql-request#gql
+      enumsAsTypes: true

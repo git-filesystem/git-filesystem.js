@@ -1,0 +1,55 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/gitlab/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/gitlab",
+        "main": "packages/gitlab/src/index.ts",
+        "tsConfig": "packages/gitlab/tsconfig.lib.json",
+        "assets": ["packages/gitlab/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      }
+    },
+    "publish": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs gitlab {args.ver} {args.tag}"
+      },
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/gitlab/**/*.ts"],
+        "maxWarnings": 0
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/gitlab"],
+      "options": {
+        "jestConfig": "packages/gitlab/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "codegen": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx graphql-codegen --config .gql-codegen.yml",
+        "cwd": "./packages/github"
+      }
+    }
+  },
+  "tags": ["scope:gitlab"]
+}

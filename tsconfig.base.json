@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@gitbuckets/abstractions": ["packages/abstractions/src/index.ts"],
+      "@gitbuckets/github": ["packages/github/src/index.ts"],
+      "@gitbuckets/gitlab": ["packages/gitlab/src/index.ts"],
+      "@gitbuckets/utils": ["packages/utils/src/index.ts"],
+      "gitbuckets": ["packages/gitbuckets/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

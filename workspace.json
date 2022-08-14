@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "abstractions": "packages/abstractions",
+    "gitbuckets": "packages/gitbuckets",
+    "gitbuckets-e2e": "packages/gitbuckets-e2e",
+    "github": "packages/github",
+    "gitlab": "packages/gitlab",
+    "utils": "packages/utils"
+  }
+}

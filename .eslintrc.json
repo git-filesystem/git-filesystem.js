@@ -1,16 +1,47 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["@typescript-eslint"],
-  "ignorePatterns": ["dist", "node_modules", "*.generated.*"],
-  "rules": {}
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "scope:shared",
+                "onlyDependOnLibsWithTags": ["scope:shared"]
+              },
+              {
+                "sourceTag": "scope:github",
+                "onlyDependOnLibsWithTags": ["scope:shared", "scope:github"]
+              },
+              {
+                "sourceTag": "scope:gitlab",
+                "onlyDependOnLibsWithTags": ["scope:shared", "scope:gitlab"]
+              },
+              {
+                "sourceTag": "scope:gitbuckets",
+                "bannedExternalImports": ["*"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["@tobysmith568/eslint-config/configs/node", "plugin:@nrwl/nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    }
+  ]
 }

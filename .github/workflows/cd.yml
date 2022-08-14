@@ -1,0 +1,12 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    name: Run CI
+    uses: ./.github/workflows/ci.yml
+    secrets: inherit

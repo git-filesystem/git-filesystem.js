@@ -1,0 +1,7 @@
+query getRefIdForTag($owner: String!, $repo: String!, $tag: String!) {
+  repository(owner: $owner, name: $repo) {
+    ref(qualifiedName: $tag) {
+      id
+    }
+  }
+}
