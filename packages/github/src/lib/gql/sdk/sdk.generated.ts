@@ -2506,7 +2506,7 @@ export type CommitMessage = {
  * qualified).
  *
  * The Ref may be specified by its global node ID or by the
- * repository nameWithOwner and branch name.
+ * `repositoryNameWithOwner` and `branchName`.
  *
  * ### Examples
  *
@@ -2514,10 +2514,10 @@ export type CommitMessage = {
  *
  *     { "id": "MDM6UmVmMTpyZWZzL2hlYWRzL21haW4=" }
  *
- * Specify a branch using nameWithOwner and branch name:
+ * Specify a branch using `repositoryNameWithOwner` and `branchName`:
  *
  *     {
- *       "nameWithOwner": "github/graphql-client",
+ *       "repositoryNameWithOwner": "github/graphql-client",
  *       "branchName": "main"
  *     }
  */
@@ -5042,6 +5042,8 @@ export type DiscussionCategory = Node & RepositoryNode & {
   name: Scalars['String'];
   /** The repository associated with this node. */
   repository: Repository;
+  /** The slug of this category. */
+  slug: Scalars['String'];
   /** Identifies the date and time when the object was last updated. */
   updatedAt: Scalars['DateTime'];
 };
@@ -5457,7 +5459,7 @@ export type EnablePullRequestAutoMergeInput = {
   commitBody?: InputMaybe<Scalars['String']>;
   /** Commit headline to use for the commit when the PR is mergable; if omitted, a default message will be used. */
   commitHeadline?: InputMaybe<Scalars['String']>;
-  /** The merge method to use. If omitted, defaults to 'MERGE' */
+  /** The merge method to use. If omitted, defaults to `MERGE` */
   mergeMethod?: InputMaybe<PullRequestMergeMethod>;
   /** ID of the pull request to enable auto-merge on. */
   pullRequestId: Scalars['ID'];
@@ -6591,7 +6593,12 @@ export type EnterpriseUserAccountMembershipRole =
   /** The user is a member of an organization in the enterprise. */
   | 'MEMBER'
   /** The user is an owner of an organization in the enterprise. */
-  | 'OWNER';
+  | 'OWNER'
+  /**
+   * The user is not an owner of the enterprise, and not a member or owner of any
+   * organizations in the enterprise; only for EMU-enabled enterprises.
+   */
+  | 'UNAFFILIATED';
 
 /** The possible GitHub Enterprise deployments where this user can exist. */
 export type EnterpriseUserDeployment =
@@ -9756,7 +9763,7 @@ export type Mutation = {
   unpinIssue?: Maybe<UnpinIssuePayload>;
   /** Marks a review thread as unresolved. */
   unresolveReviewThread?: Maybe<UnresolveReviewThreadPayload>;
-  /** Create a new branch protection rule */
+  /** Update a branch protection rule */
   updateBranchProtectionRule?: Maybe<UpdateBranchProtectionRulePayload>;
   /** Update a check run */
   updateCheckRun?: Maybe<UpdateCheckRunPayload>;
@@ -9818,6 +9825,8 @@ export type Mutation = {
   updateNotificationRestrictionSetting?: Maybe<UpdateNotificationRestrictionSettingPayload>;
   /** Sets whether private repository forks are enabled for an organization. */
   updateOrganizationAllowPrivateRepositoryForkingSetting?: Maybe<UpdateOrganizationAllowPrivateRepositoryForkingSettingPayload>;
+  /** Sets whether contributors are required to sign off on web-based commits for repositories in an organization. */
+  updateOrganizationWebCommitSignoffSetting?: Maybe<UpdateOrganizationWebCommitSignoffSettingPayload>;
   /** Updates an existing project. */
   updateProject?: Maybe<UpdateProjectPayload>;
   /** Updates an existing project card. */
@@ -9883,6 +9892,8 @@ export type Mutation = {
   updateRefs?: Maybe<UpdateRefsPayload>;
   /** Update information about a repository. */
   updateRepository?: Maybe<UpdateRepositoryPayload>;
+  /** Sets whether contributors are required to sign off on web-based commits for a repository. */
+  updateRepositoryWebCommitSignoffSetting?: Maybe<UpdateRepositoryWebCommitSignoffSettingPayload>;
   /** Change visibility of your sponsorship and opt in or out of email updates from the maintainer. */
   updateSponsorshipPreferences?: Maybe<UpdateSponsorshipPreferencesPayload>;
   /** Updates the state for subscribable subjects. */
@@ -10917,6 +10928,12 @@ export type MutationUpdateOrganizationAllowPrivateRepositoryForkingSettingArgs =
 
 
 /** The root query for implementing GraphQL mutations. */
+export type MutationUpdateOrganizationWebCommitSignoffSettingArgs = {
+  input: UpdateOrganizationWebCommitSignoffSettingInput;
+};
+
+
+/** The root query for implementing GraphQL mutations. */
 export type MutationUpdateProjectArgs = {
   input: UpdateProjectInput;
 };
@@ -11015,6 +11032,12 @@ export type MutationUpdateRefsArgs = {
 /** The root query for implementing GraphQL mutations. */
 export type MutationUpdateRepositoryArgs = {
   input: UpdateRepositoryInput;
+};
+
+
+/** The root query for implementing GraphQL mutations. */
+export type MutationUpdateRepositoryWebCommitSignoffSettingArgs = {
+  input: UpdateRepositoryWebCommitSignoffSettingInput;
 };
 
 
@@ -12712,6 +12735,8 @@ export type Organization = Actor & MemberStatusable & Node & PackageOwner & Prof
   viewerIsFollowing: Scalars['Boolean'];
   /** True if the viewer is sponsoring this user/organization. */
   viewerIsSponsoring: Scalars['Boolean'];
+  /** Whether contributors are required to sign off on web-based commits for repositories in this organization. */
+  webCommitSignoffRequired: Scalars['Boolean'];
   /** The organization's public profile URL. */
   websiteUrl?: Maybe<Scalars['URI']>;
 };
@@ -14536,12 +14561,12 @@ export type ProjectNextFieldType =
   | 'REVIEWERS'
   /** Single Select */
   | 'SINGLE_SELECT'
-  /** Tasks */
-  | 'TASKS'
   /** Text */
   | 'TEXT'
   /** Title */
-  | 'TITLE';
+  | 'TITLE'
+  /** Tracks */
+  | 'TRACKS';
 
 /** An item within a new Project. */
 export type ProjectNextItem = Node & {
@@ -15061,12 +15086,12 @@ export type ProjectV2FieldType =
   | 'REVIEWERS'
   /** Single Select */
   | 'SINGLE_SELECT'
-  /** Tasks */
-  | 'TASKS'
   /** Text */
   | 'TEXT'
   /** Title */
-  | 'TITLE';
+  | 'TITLE'
+  /** Tracks */
+  | 'TRACKS';
 
 /** The values that can be used to update a field of an item inside a Project. Only 1 value can be updated at a time. */
 export type ProjectV2FieldValue = {
@@ -19337,6 +19362,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   discussion?: Maybe<Discussion>;
   /** A list of discussion categories that are available in the repository. */
   discussionCategories: DiscussionCategoryConnection;
+  /** A discussion category by slug. */
+  discussionCategory?: Maybe<DiscussionCategory>;
   /** A list of discussions that have been opened in the repository. */
   discussions: DiscussionConnection;
   /** The number of kilobytes this repository occupies on disk. */
@@ -19539,6 +19566,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   vulnerabilityAlerts?: Maybe<RepositoryVulnerabilityAlertConnection>;
   /** A list of users watching the repository. */
   watchers: UserConnection;
+  /** Whether contributors are required to sign off on web-based commits in this repository. */
+  webCommitSignoffRequired: Scalars['Boolean'];
 };
 
 
@@ -19632,6 +19661,12 @@ export type RepositoryDiscussionCategoriesArgs = {
   filterByAssignable?: InputMaybe<Scalars['Boolean']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A repository contains the content for a project. */
+export type RepositoryDiscussionCategoryArgs = {
+  slug: Scalars['String'];
 };
 
 
@@ -20599,6 +20634,8 @@ export type RepositoryVulnerabilityAlert = Node & RepositoryNode & {
   dependabotUpdate?: Maybe<DependabotUpdate>;
   /** The scope of an alert's dependency */
   dependencyScope?: Maybe<RepositoryVulnerabilityAlertDependencyScope>;
+  /** Comment explaining the reason the alert was dismissed */
+  dismissComment?: Maybe<Scalars['String']>;
   /** The reason the alert was dismissed */
   dismissReason?: Maybe<Scalars['String']>;
   /** When was the alert dismissed? */
@@ -22170,6 +22207,8 @@ export type StartRepositoryMigrationInput = {
   gitArchiveUrl?: InputMaybe<Scalars['String']>;
   /** The GitHub personal access token of the user importing to the target repository. */
   githubPat?: InputMaybe<Scalars['String']>;
+  /** Whether to lock the source repository. */
+  lockSource?: InputMaybe<Scalars['Boolean']>;
   /** The signed URL to access the user-uploaded metadata archive */
   metadataArchiveUrl?: InputMaybe<Scalars['String']>;
   /** The ID of the organization that will own the imported repository. */
@@ -24561,6 +24600,27 @@ export type UpdateOrganizationAllowPrivateRepositoryForkingSettingPayload = {
   organization?: Maybe<Organization>;
 };
 
+/** Autogenerated input type of UpdateOrganizationWebCommitSignoffSetting */
+export type UpdateOrganizationWebCommitSignoffSettingInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** The ID of the organization on which to set the web commit signoff setting. */
+  organizationId: Scalars['ID'];
+  /** Enable signoff on web-based commits for repositories in the organization? */
+  webCommitSignoffRequired: Scalars['Boolean'];
+};
+
+/** Autogenerated return type of UpdateOrganizationWebCommitSignoffSetting */
+export type UpdateOrganizationWebCommitSignoffSettingPayload = {
+  __typename?: 'UpdateOrganizationWebCommitSignoffSettingPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** A message confirming the result of updating the web commit signoff setting. */
+  message?: Maybe<Scalars['String']>;
+  /** The organization with the updated web commit signoff setting. */
+  organization?: Maybe<Organization>;
+};
+
 /** Autogenerated input type of UpdateProjectCard */
 export type UpdateProjectCardInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -25036,6 +25096,27 @@ export type UpdateRepositoryPayload = {
   __typename?: 'UpdateRepositoryPayload';
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: Maybe<Scalars['String']>;
+  /** The updated repository. */
+  repository?: Maybe<Repository>;
+};
+
+/** Autogenerated input type of UpdateRepositoryWebCommitSignoffSetting */
+export type UpdateRepositoryWebCommitSignoffSettingInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** The ID of the repository to update. */
+  repositoryId: Scalars['ID'];
+  /** Indicates if the repository should require signoff on web-based commits. */
+  webCommitSignoffRequired: Scalars['Boolean'];
+};
+
+/** Autogenerated return type of UpdateRepositoryWebCommitSignoffSetting */
+export type UpdateRepositoryWebCommitSignoffSettingPayload = {
+  __typename?: 'UpdateRepositoryWebCommitSignoffSettingPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** A message confirming the result of updating the web commit signoff setting. */
+  message?: Maybe<Scalars['String']>;
   /** The updated repository. */
   repository?: Maybe<Repository>;
 };
