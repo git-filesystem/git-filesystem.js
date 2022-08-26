@@ -2314,7 +2314,11 @@ export type CommitComment = Comment & Deletable & Minimizable & Node & Reactable
   isMinimized: Scalars['Boolean'];
   /** The moment the editor made the last edit */
   lastEditedAt?: Maybe<Scalars['DateTime']>;
-  /** Returns why the comment was minimized. */
+  /**
+   * Returns why the comment was minimized. One of `abuse`, `off-topic`,
+   * `outdated`, `resolved`, `duplicate` and `spam`. Note that the case and
+   * formatting of these values differs from the inputs to the `MinimizeComment` mutation.
+   */
   minimizedReason?: Maybe<Scalars['String']>;
   /** Identifies the file path associated with the comment. */
   path?: Maybe<Scalars['String']>;
@@ -5104,7 +5108,11 @@ export type DiscussionComment = Comment & Deletable & Minimizable & Node & React
   isMinimized: Scalars['Boolean'];
   /** The moment the editor made the last edit */
   lastEditedAt?: Maybe<Scalars['DateTime']>;
-  /** Returns why the comment was minimized. */
+  /**
+   * Returns why the comment was minimized. One of `abuse`, `off-topic`,
+   * `outdated`, `resolved`, `duplicate` and `spam`. Note that the case and
+   * formatting of these values differs from the inputs to the `MinimizeComment` mutation.
+   */
   minimizedReason?: Maybe<Scalars['String']>;
   /** Identifies when the comment was published at. */
   publishedAt?: Maybe<Scalars['DateTime']>;
@@ -7088,7 +7096,11 @@ export type GistComment = Comment & Deletable & Minimizable & Node & Updatable &
   isMinimized: Scalars['Boolean'];
   /** The moment the editor made the last edit */
   lastEditedAt?: Maybe<Scalars['DateTime']>;
-  /** Returns why the comment was minimized. */
+  /**
+   * Returns why the comment was minimized. One of `abuse`, `off-topic`,
+   * `outdated`, `resolved`, `duplicate` and `spam`. Note that the case and
+   * formatting of these values differs from the inputs to the `MinimizeComment` mutation.
+   */
   minimizedReason?: Maybe<Scalars['String']>;
   /** Identifies when the comment was published at. */
   publishedAt?: Maybe<Scalars['DateTime']>;
@@ -7950,7 +7962,11 @@ export type IssueComment = Comment & Deletable & Minimizable & Node & Reactable 
   issue: Issue;
   /** The moment the editor made the last edit */
   lastEditedAt?: Maybe<Scalars['DateTime']>;
-  /** Returns why the comment was minimized. */
+  /**
+   * Returns why the comment was minimized. One of `abuse`, `off-topic`,
+   * `outdated`, `resolved`, `duplicate` and `spam`. Note that the case and
+   * formatting of these values differs from the inputs to the `MinimizeComment` mutation.
+   */
   minimizedReason?: Maybe<Scalars['String']>;
   /** Identifies when the comment was published at. */
   publishedAt?: Maybe<Scalars['DateTime']>;
@@ -9347,7 +9363,11 @@ export type MilestonedEvent = Node & {
 export type Minimizable = {
   /** Returns whether or not a comment has been minimized. */
   isMinimized: Scalars['Boolean'];
-  /** Returns why the comment was minimized. */
+  /**
+   * Returns why the comment was minimized. One of `abuse`, `off-topic`,
+   * `outdated`, `resolved`, `duplicate` and `spam`. Note that the case and
+   * formatting of these values differs from the inputs to the `MinimizeComment` mutation.
+   */
   minimizedReason?: Maybe<Scalars['String']>;
   /** Check if the current viewer can minimize this object. */
   viewerCanMinimize: Scalars['Boolean'];
@@ -16646,7 +16666,11 @@ export type PullRequestReviewComment = Comment & Deletable & Minimizable & Node 
   isMinimized: Scalars['Boolean'];
   /** The moment the editor made the last edit */
   lastEditedAt?: Maybe<Scalars['DateTime']>;
-  /** Returns why the comment was minimized. */
+  /**
+   * Returns why the comment was minimized. One of `abuse`, `off-topic`,
+   * `outdated`, `resolved`, `duplicate` and `spam`. Note that the case and
+   * formatting of these values differs from the inputs to the `MinimizeComment` mutation.
+   */
   minimizedReason?: Maybe<Scalars['String']>;
   /** Identifies the original commit associated with the comment. */
   originalCommit?: Maybe<Commit>;
@@ -23472,6 +23496,8 @@ export type TrackedIssueStates =
 export type TransferIssueInput = {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Whether to create labels if they don't exist in the target repository (matched by name) */
+  createLabelsIfMissing?: InputMaybe<Scalars['Boolean']>;
   /** The Node ID of the issue to be transferred */
   issueId: Scalars['ID'];
   /** The Node ID of the repository the issue should be transferred to */
