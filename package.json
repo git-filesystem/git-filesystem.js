@@ -8,7 +8,7 @@
   "dependencies": {
     "@swc/helpers": "~0.4.0",
     "axios": "^0.27.2",
-    "graphql-request": "^4.3.0",
+    "graphql-request": "^5.0.0",
     "js-base64": "^3.7.2",
     "octokit": "^2.0.5",
     "tslib": "^2.3.0"
@@ -16,7 +16,7 @@
   "devDependencies": {
     "@graphql-codegen/cli": "^2.11.6",
     "@graphql-codegen/typescript": "^2.7.3",
-    "@graphql-codegen/typescript-graphql-request": "^4.5.3",
+    "@graphql-codegen/typescript-graphql-request": "^4.5.4",
     "@graphql-codegen/typescript-operations": "^2.5.3",
     "@nrwl/cli": "14.5.10",
     "@nrwl/eslint-plugin-nx": "14.5.10",
