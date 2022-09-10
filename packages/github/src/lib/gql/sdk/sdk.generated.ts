@@ -1623,8 +1623,12 @@ export type CheckRunFilter = {
   checkName?: InputMaybe<Scalars['String']>;
   /** Filters the check runs by this type. */
   checkType?: InputMaybe<CheckRunType>;
-  /** Filters the check runs by this status. */
+  /** Filters the check runs by these conclusions. */
+  conclusions?: InputMaybe<Array<CheckConclusionState>>;
+  /** Filters the check runs by this status. Superceded by statuses. */
   status?: InputMaybe<CheckStatusState>;
+  /** Filters the check runs by this status. Overrides status. */
+  statuses?: InputMaybe<Array<CheckStatusState>>;
 };
 
 /** Descriptive details about the check run. */
@@ -2102,8 +2106,19 @@ export type Commit = GitObject & Node & Subscribable & UniformResourceLocatable 
   authors: GitActorConnection;
   /** Fetches `git blame` information. */
   blame: Blame;
-  /** The number of changed files in this commit. */
+  /**
+   * We recommend using the `changedFielsIfAvailable` field instead of
+   * `changedFiles`, as `changedFiles` will cause your request to return an error
+   * if GitHub is unable to calculate the number of changed files.
+   * @deprecated `changedFiles` will be removed. Use `changedFilesIfAvailable` instead. Removal on 2023-01-01 UTC.
+   */
   changedFiles: Scalars['Int'];
+  /**
+   * The number of changed files in this commit. If GitHub is unable to calculate
+   * the number of changed files (for example due to a timeout), this will return
+   * `null`. We recommend using this field instead of `changedFiles`.
+   */
+  changedFilesIfAvailable?: Maybe<Scalars['Int']>;
   /** The check suites associated with a commit. */
   checkSuites?: Maybe<CheckSuiteConnection>;
   /** Comments made on the commit. */
@@ -5638,6 +5653,21 @@ export type EnterpriseAdministratorRole =
   /** Represents an owner of the enterprise account. */
   | 'OWNER';
 
+/** The possible values for the enterprise allow private repository forking policy value. */
+export type EnterpriseAllowPrivateRepositoryForkingPolicyValue =
+  /** Members can fork a repository to an organization within this enterprise. */
+  | 'ENTERPRISE_ORGANIZATIONS'
+  /** Members can fork a repository to their enterprise-managed user account or an organization inside this enterprise. */
+  | 'ENTERPRISE_ORGANIZATIONS_USER_ACCOUNTS'
+  /** Members can fork a repository to their user account or an organization, either inside or outside of this enterprise. */
+  | 'EVERYWHERE'
+  /** Members can fork a repository only within the same organization (intra-org). */
+  | 'SAME_ORGANIZATION'
+  /** Members can fork a repository to their user account or within the same organization. */
+  | 'SAME_ORGANIZATION_USER_ACCOUNTS'
+  /** Members can fork a repository to their user account. */
+  | 'USER_ACCOUNTS';
+
 /** Metadata for an audit entry containing enterprise account information. */
 export type EnterpriseAuditEntryData = {
   /** The HTTP path for this enterprise. */
@@ -5867,6 +5897,8 @@ export type EnterpriseOwnerInfo = {
   allowPrivateRepositoryForkingSetting: EnterpriseEnabledDisabledSettingValue;
   /** A list of enterprise organizations configured with the provided private repository forking setting value. */
   allowPrivateRepositoryForkingSettingOrganizations: OrganizationConnection;
+  /** The value for the allow private repository forking policy on the enterprise. */
+  allowPrivateRepositoryForkingSettingPolicyValue?: Maybe<EnterpriseAllowPrivateRepositoryForkingPolicyValue>;
   /** The setting value for base repository permissions for organizations in this enterprise. */
   defaultRepositoryPermissionSetting: EnterpriseDefaultRepositoryPermissionSettingValue;
   /** A list of enterprise organizations configured with the provided base repository permission. */
@@ -22173,6 +22205,30 @@ export type SquashMergeCommitTitle =
   /** Default to the pull request's title. */
   | 'PR_TITLE';
 
+/** Represents an SSH signature on a Commit or Tag. */
+export type SshSignature = GitSignature & {
+  __typename?: 'SshSignature';
+  /** Email used to sign this object. */
+  email: Scalars['String'];
+  /** True if the signature is valid and verified by GitHub. */
+  isValid: Scalars['Boolean'];
+  /** Hex-encoded fingerprint of the key that signed this object. */
+  keyFingerprint?: Maybe<Scalars['String']>;
+  /** Payload for GPG signing object. Raw ODB object without the signature header. */
+  payload: Scalars['String'];
+  /** ASCII-armored signature header from object. */
+  signature: Scalars['String'];
+  /** GitHub user corresponding to the email signing this commit. */
+  signer?: Maybe<User>;
+  /**
+   * The state of this signature. `VALID` if signature is valid and verified by
+   * GitHub, otherwise represents reason why signature is considered invalid.
+   */
+  state: GitSignatureState;
+  /** True if the signature was made with GitHub's signing key. */
+  wasSignedByGitHub: Scalars['Boolean'];
+};
+
 /** Ways in which star connections can be ordered. */
 export type StarOrder = {
   /** The direction in which to order nodes. */
@@ -24120,6 +24176,8 @@ export type UpdateEnterpriseAllowPrivateRepositoryForkingSettingInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** The ID of the enterprise on which to set the allow private repository forking setting. */
   enterpriseId: Scalars['ID'];
+  /** The value for the allow private repository forking policy on the enterprise. */
+  policyValue?: InputMaybe<EnterpriseAllowPrivateRepositoryForkingPolicyValue>;
   /** The value for the allow private repository forking setting on the enterprise. */
   settingValue: EnterpriseEnabledDisabledSettingValue;
 };
@@ -26257,8 +26315,20 @@ export type Workflow = Node & {
   id: Scalars['ID'];
   /** The name of the workflow. */
   name: Scalars['String'];
+  /** The runs of the workflow. */
+  runs: WorkflowRunConnection;
   /** Identifies the date and time when the object was last updated. */
   updatedAt: Scalars['DateTime'];
+};
+
+
+/** A workflow contains meta information about an Actions workflow file. */
+export type WorkflowRunsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<WorkflowRunOrder>;
 };
 
 /** A workflow run. */
@@ -26304,6 +26374,41 @@ export type WorkflowRunPendingDeploymentRequestsArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
 };
+
+/** The connection type for WorkflowRun. */
+export type WorkflowRunConnection = {
+  __typename?: 'WorkflowRunConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<WorkflowRunEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<WorkflowRun>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
+/** An edge in a connection. */
+export type WorkflowRunEdge = {
+  __typename?: 'WorkflowRunEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<WorkflowRun>;
+};
+
+/** Ways in which lists of workflow runs can be ordered upon return. */
+export type WorkflowRunOrder = {
+  /** The direction in which to order workflow runs by the specified field. */
+  direction: OrderDirection;
+  /** The field by which to order workflows. */
+  field: WorkflowRunOrderField;
+};
+
+/** Properties by which workflow run connections can be ordered. */
+export type WorkflowRunOrderField =
+  /** Order workflow runs by most recently created */
+  | 'CREATED_AT';
 
 export type CreateTagMutationVariables = Exact<{
   repoId: Scalars['ID'];
