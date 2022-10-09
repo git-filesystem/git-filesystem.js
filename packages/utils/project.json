@@ -15,17 +15,17 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }
     },
+    "version": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "node tools/scripts/version.mjs utils {args.version}"
+      }
+    },
     "publish": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "node tools/scripts/publish.mjs utils {args.ver} {args.tag}"
-      },
-      "dependsOn": [
-        {
-          "projects": "self",
-          "target": "build"
-        }
-      ]
+        "command": "node tools/scripts/publish.mjs utils {args.tag}"
+      }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

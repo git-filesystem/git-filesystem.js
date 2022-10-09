@@ -26,7 +26,7 @@ npm install @git-filesystem/gitlab
 ## Example Usage
 
 ```ts
-import { GitLabClient } from "@git-filesystem/gitlab"
+import { GitLabClient } from "@git-filesystem/gitlab";
 
 const gitHubClient = new GitLabClient("gitlab-username", "access-token", "user-agent-name");
 

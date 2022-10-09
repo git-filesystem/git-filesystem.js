@@ -30,13 +30,28 @@ npm install git-filesystem
 ## Example Usage
 
 ```ts
-import { ClientFactory } from "git-filesystem"
+import { ClientFactory } from "git-filesystem";
 
-const gitHubClient = new ClientFactory().getClientForProvider("github", "github-username", "access-token", "user-agent-name");
+const gitHubClient = new ClientFactory().getClientForProvider(
+  "github",
+  "github-username",
+  "access-token",
+  "user-agent-name"
+);
 // or
-const gitLabClient = new ClientFactory().getClientForProvider("gitlab", "gitlab-username", "access-token", "user-agent-name");
+const gitLabClient = new ClientFactory().getClientForProvider(
+  "gitlab",
+  "gitlab-username",
+  "access-token",
+  "user-agent-name"
+);
 // or
-const bitBucketClient = new ClientFactory().getClientForProvider("bitbucket", "bitbucket-username", "access-token", "user-agent-name");
+const bitBucketClient = new ClientFactory().getClientForProvider(
+  "bitbucket",
+  "bitbucket-username",
+  "access-token",
+  "user-agent-name"
+);
 
 // and then
 

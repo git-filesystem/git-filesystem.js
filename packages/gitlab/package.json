@@ -16,5 +16,8 @@
   },
   "bugs": {
     "url": "https://github.com/git-filesystem/git-filesystem.js/issues"
+  },
+  "dependencies": {
+    "graphql": "^16.6.0"
   }
 }
