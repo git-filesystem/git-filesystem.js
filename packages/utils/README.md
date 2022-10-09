@@ -1,11 +1,9 @@
-# utils
+# @git-filesystem/utils
 
-This library was generated with [Nx](https://nx.dev).
+This package contains utility functions used by the various packages in the [git-filesystem](https://github.com/git-filesystem/git-filesystem.js) ecosystem.
 
-## Building
+You probably don't need to install this package yourself manually.
 
-Run `nx build utils` to build the library.
+## License
 
-## Running unit tests
-
-Run `nx test utils` to execute the unit tests via [Jest](https://jestjs.io).
+@git-filesystem/utils is licensed under the [ISC License](./LICENSE.md).

@@ -1,11 +1,43 @@
-# github
+# @git-filesystem/github
 
-This library was generated with [Nx](https://nx.dev).
+This package contains the GitHub implementation used by the [git-filesystem](https://github.com/git-filesystem/git-filesystem.js) npm package.
 
-## Building
+Use this to read & write specifically to GitHub repositories only; else use the [git-filesystem](https://github.com/git-filesystem/git-filesystem.js) package to write to repositories hosted with multiple cloud providers.
 
-Run `nx build github` to build the library.
+This package exposes methods for:
 
-## Running unit tests
+- Creating a repository
+- Deleting a repository
+- Searching for repositories
 
-Run `nx test github` to execute the unit tests via [Jest](https://jestjs.io).
+- Creating a file
+- Overwriting a file
+- Deleting a file
+
+- Creating tags
+- Reading files from tags
+
+## Installation
+
+```bash
+npm install @git-filesystem/github
+```
+
+## Example Usage
+
+```ts
+import { GitHubClient } from "@git-filesystem/github"
+
+const gitHubClient = new GitHubClient("github-username", "access-token", "user-agent-name");
+
+const gitHubRepository = gitHubClient.getRepository("repository-name");
+
+let fileContent = await gitHubRepository.readFile("file/path.txt");
+fileContent += "\n\nNewData";
+
+await gitHubRepository.updateFile("file/path.txt", fileContent);
+```
+
+## License
+
+@git-filesystem/github is licensed under the [ISC License](./LICENSE.md).

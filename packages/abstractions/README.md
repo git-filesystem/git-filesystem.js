@@ -1,11 +1,10 @@
-# abstractions
+# @git-filesystem/abstractions
 
-This library was generated with [Nx](https://nx.dev).
+This package contains the abstractions shared by the different git cloud provider implementations in the [git-filesystem](https://github.com/git-filesystem/git-filesystem.js) ecosystem.
 
-## Building
+You probably don't need to install this package yourself manually.
 
-Run `nx build abstractions` to build the library.
 
-## Running unit tests
+## License
 
-Run `nx test abstractions` to execute the unit tests via [Jest](https://jestjs.io).
+@git-filesystem/abstractions is licensed under the [ISC License](./LICENSE.md).

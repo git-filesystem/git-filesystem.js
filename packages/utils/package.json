@@ -1,5 +1,20 @@
 {
   "name": "@git-filesystem/utils",
-  "version": "0.0.1",
-  "type": "commonjs"
+  "version": "0.0.0",
+  "type": "commonjs",
+  "license": "ISC",
+  "description": "Utility functions used by the various packages in the git-filesystem package ecosystem.",
+  "homepage": "https://github.com/git-filesystem/git-filesystem.js/tree/main/packages/utils#readme",
+  "author": {
+    "name": "Toby Smith",
+    "email": "tobysmith568@hotmail.co.uk",
+    "url": "https://tobysmith.uk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git-filesystem/git-filesystem.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/git-filesystem/git-filesystem.js/issues"
+  }
 }

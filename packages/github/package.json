@@ -1,5 +1,20 @@
 {
   "name": "@git-filesystem/github",
-  "version": "0.0.1",
-  "type": "commonjs"
+  "version": "0.0.0",
+  "type": "commonjs",
+  "license": "ISC",
+  "description": "The GitHub implementation used by the git-filesystem package. Use this to read & write specifically to GitHub repositories only.",
+  "homepage": "https://github.com/git-filesystem/git-filesystem.js/tree/main/packages/github#readme",
+  "author": {
+    "name": "Toby Smith",
+    "email": "tobysmith568@hotmail.co.uk",
+    "url": "https://tobysmith.uk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git-filesystem/git-filesystem.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/git-filesystem/git-filesystem.js/issues"
+  }
 }

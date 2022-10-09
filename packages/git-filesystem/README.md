@@ -1,6 +1,6 @@
 # git-filesystem
 
-A shared abstraction for cloud Git providers exposing a file-system-like API.
+A shared abstraction for cloud Git providers exposing a file-system-like API. Use this to read & write to repositories like they're file systems.
 
 Supports:
 
@@ -27,42 +27,25 @@ Exposes methods for:
 npm install git-filesystem
 ```
 
-## Building Locally
+## Example Usage
 
-```bash
-npm run build
-```
+```ts
+import { ClientFactory } from "git-filesystem"
 
-## Running Tests Locally
+const gitHubClient = new ClientFactory().getClientForProvider("github", "github-username", "access-token", "user-agent-name");
+// or
+const gitLabClient = new ClientFactory().getClientForProvider("gitlab", "gitlab-username", "access-token", "user-agent-name");
+// or
+const bitBucketClient = new ClientFactory().getClientForProvider("bitbucket", "bitbucket-username", "access-token", "user-agent-name");
 
-### Unit
+// and then
 
-```bash
-npm run test
-```
+const gitHubRepository = gitHubClient.getRepository("repository-name");
 
-### End-to-end
+let fileContent = await gitHubRepository.readFile("file/path.txt");
+fileContent += "\n\nNewData";
 
-The End-2-End tests require access to GitHub, GitLab, and BitBucket accounts.
-If you don't have access to accounts that can be used for testing, then you can't run them locally.
-
-To set them up, make a file called `.jest.env` in the root of the project with the following:
-
-```ini
-E2E_GITHUB_USERNAME=<username>
-E2E_GITHUB_PAT=<personal access token>
-
-E2E_GITLAB_USERNAME=<username>
-E2E_GITLAB_PAT=<personal access token>
-
-BITBUCKET_USERNAME=<username>
-BITBUCKET_PAT=<personal access token>
-```
-
-Then run:
-
-```bash
-npm run test:e2e
+await gitHubRepository.updateFile("file/path.txt", fileContent);
 ```
 
 ## License
