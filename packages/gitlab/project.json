@@ -24,7 +24,7 @@
     "publish": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "node tools/scripts/publish.mjs gitlab {args.ver} {args.tag}"
+        "command": "node tools/scripts/publish.mjs gitlab {args.tag}"
       },
       "dependsOn": [
         {
