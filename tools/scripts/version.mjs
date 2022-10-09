@@ -1,4 +1,4 @@
-import { readCachedProjectGraph } from "@nrwl/devkit";
+import { readCachedProjectGraph, createProjectGraphAsync } from "@nrwl/devkit";
 import chalk from "chalk";
 import { execSync } from "child_process";
 
@@ -10,15 +10,13 @@ function invariant(condition, message) {
 }
 const [, , name, version] = process.argv;
 
-console.log({ name, version });
-
-// A simple SemVer validation to validate the version
 const validVersion = /^\d+\.\d+\.\d+(-\w+\.\d+)?/;
 invariant(
   version && validVersion.test(version),
   `No version provided or version did not match Semantic Versioning, expected: #.#.#-tag.# or #.#.#, got ${version}.`
 );
 
+await createProjectGraphAsync();
 const graph = readCachedProjectGraph();
 const project = graph.nodes[name];
 

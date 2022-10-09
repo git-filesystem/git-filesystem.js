@@ -3,11 +3,18 @@ name: CI
 on:
   push:
     branches:
+      - main
       - renovate/*
   pull_request:
     branches:
       - main
   workflow_call:
+    inputs:
+      version:
+        description: The npm version
+        default: ""
+        required: false
+        type: string
 
 jobs:
   lint:
@@ -52,6 +59,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Set Version
+        if: inputs.version != ''
+        run: npx nx run-many --target version --args="--version=${{ inputs.version }}"
 
       - name: Build
         run: npx nx run-many --target build
@@ -101,9 +112,6 @@ jobs:
           # - 16
           - 18
 
-    needs:
-      - build
-
     name: E2E Test (Node ${{ matrix.node }} on ${{ matrix.os }})
 
     runs-on: ${{ matrix.os }}
@@ -115,11 +123,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: npm
-
-      - name: Download Builds
-        uses: actions/download-artifact@v3
-        with:
-          name: Build
 
       - name: Install dependencies
         run: npm ci
