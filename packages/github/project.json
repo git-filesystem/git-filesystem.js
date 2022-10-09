@@ -10,7 +10,7 @@
         "outputPath": "dist/packages/github",
         "main": "packages/github/src/index.ts",
         "tsConfig": "packages/github/tsconfig.lib.json",
-        "assets": ["packages/github/*.md"],
+        "assets": ["LICENSE.md", "packages/github/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }

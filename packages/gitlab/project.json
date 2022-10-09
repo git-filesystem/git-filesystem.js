@@ -10,7 +10,7 @@
         "outputPath": "dist/packages/gitlab",
         "main": "packages/gitlab/src/index.ts",
         "tsConfig": "packages/gitlab/tsconfig.lib.json",
-        "assets": ["packages/gitlab/*.md"],
+        "assets": ["LICENSE.md", "packages/gitlab/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }

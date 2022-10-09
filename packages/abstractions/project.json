@@ -10,7 +10,7 @@
         "outputPath": "dist/packages/abstractions",
         "main": "packages/abstractions/src/index.ts",
         "tsConfig": "packages/abstractions/tsconfig.lib.json",
-        "assets": ["packages/abstractions/*.md"],
+        "assets": ["LICENSE.md", "packages/abstractions/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }
