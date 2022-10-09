@@ -6,7 +6,7 @@ import {
   Provider,
   Repository,
   RepositoryExistence
-} from "@gitbuckets/abstractions";
+} from "@git-filesystem/abstractions";
 import { Octokit } from "octokit";
 import { GitHubRepository } from "./github-repository";
 import { createRepository } from "./gql/create-repository";

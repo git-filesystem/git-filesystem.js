@@ -3,8 +3,8 @@
   "version": 2,
   "projects": {
     "abstractions": "packages/abstractions",
-    "gitbuckets": "packages/gitbuckets",
-    "gitbuckets-e2e": "packages/gitbuckets-e2e",
+    "git-filesystem": "packages/git-filesystem",
+    "git-filesystem-e2e": "packages/git-filesystem-e2e",
     "github": "packages/github",
     "gitlab": "packages/gitlab",
     "utils": "packages/utils"

@@ -1,5 +1,5 @@
-import { FullyQualifiedBranch, FullyQualifiedTagRef } from "@gitbuckets/abstractions";
-import { urlEncode } from "@gitbuckets/utils";
+import { FullyQualifiedBranch, FullyQualifiedTagRef } from "@git-filesystem/abstractions";
+import { urlEncode } from "@git-filesystem/utils";
 import { getRestClient } from "./rest-client";
 
 interface Params {

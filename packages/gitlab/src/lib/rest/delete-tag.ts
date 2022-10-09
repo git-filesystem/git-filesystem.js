@@ -1,4 +1,4 @@
-import { urlEncode } from "@gitbuckets/utils";
+import { urlEncode } from "@git-filesystem/utils";
 import { getRestClient } from "./rest-client";
 
 export const deleteTag = async (

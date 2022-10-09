@@ -7,11 +7,12 @@ const { exclude: _, ...swcJestConfig } = JSON.parse(
   readFileSync(`${__dirname}/.lib.swcrc`, "utf-8")
 );
 export default {
-  displayName: "gitbuckets",
+  displayName: "git-filesystem-e2e",
   preset: "../../jest.preset.js",
   transform: {
     "^.+\\.[tj]s$": ["@swc/jest", swcJestConfig]
   },
   moduleFileExtensions: ["ts", "js", "html"],
-  coverageDirectory: "../../coverage/packages/gitbuckets"
+  coverageDirectory: "../../coverage/packages/git-filesystem-e2e",
+  setupFiles: ["<rootDir>/setupFile.js"]
 };

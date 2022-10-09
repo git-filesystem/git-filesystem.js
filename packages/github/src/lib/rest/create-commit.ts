@@ -1,4 +1,4 @@
-import { FullyQualifiedBranch } from "@gitbuckets/abstractions";
+import { FullyQualifiedBranch } from "@git-filesystem/abstractions";
 import { getBranchSha } from "../gql/get-branch-sha";
 import { createInitialCommit } from "./create-initial-commit";
 import { CommitAction, createTree } from "./create-tree";

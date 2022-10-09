@@ -25,7 +25,7 @@
                 "onlyDependOnLibsWithTags": ["scope:shared", "scope:gitlab"]
               },
               {
-                "sourceTag": "scope:gitbuckets",
+                "sourceTag": "scope:git-filesystem",
                 "bannedExternalImports": ["*"]
               }
             ]

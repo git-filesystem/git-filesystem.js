@@ -1,4 +1,4 @@
-import { GitUser, JsonConfig } from "@gitbuckets/abstractions";
+import { GitUser, JsonConfig } from "@git-filesystem/abstractions";
 import { GitHubClient } from "../src/lib/github-client";
 import { GitHubRepository } from "../src/lib/github-repository";
 import { createRepository } from "../src/lib/gql/create-repository";

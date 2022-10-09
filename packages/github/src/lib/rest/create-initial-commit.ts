@@ -1,5 +1,5 @@
-import { FullyQualifiedBranch } from "@gitbuckets/abstractions";
-import { base64encode } from "@gitbuckets/utils";
+import { FullyQualifiedBranch } from "@git-filesystem/abstractions";
+import { base64encode } from "@git-filesystem/utils";
 import { GitHubGitUser } from "./create-commit";
 import { getRestClient } from "./rest-client";
 

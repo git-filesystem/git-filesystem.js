@@ -4,7 +4,7 @@ import {
   fqTagRefPrefix,
   GitUser,
   Provider as ProviderName
-} from "gitbuckets";
+} from "git-filesystem";
 
 /*
 
@@ -76,8 +76,8 @@ providers.forEach(provider =>
 
     it(`should get the ${provider.name} client`, () => {
       const user: GitUser = {
-        name: "gitbuckets-e2e",
-        email: "gitbuckets.e2e@tobysmith.uk"
+        name: "git-filesystem-e2e",
+        email: "git-filesystem.e2e@tobysmith.uk"
       };
 
       const factory = new ClientFactory();

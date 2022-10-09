@@ -1,16 +1,16 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/gitbuckets/src",
+  "sourceRoot": "packages/git-filesystem/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/gitbuckets",
-        "main": "packages/gitbuckets/src/index.ts",
-        "tsConfig": "packages/gitbuckets/tsconfig.lib.json",
-        "assets": ["packages/gitbuckets/*.md"],
+        "outputPath": "dist/packages/git-filesystem",
+        "main": "packages/git-filesystem/src/index.ts",
+        "tsConfig": "packages/git-filesystem/tsconfig.lib.json",
+        "assets": ["packages/git-filesystem/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }
@@ -18,7 +18,7 @@
     "publish": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "node tools/scripts/publish.mjs gitbuckets {args.ver} {args.tag}"
+        "command": "node tools/scripts/publish.mjs git-filesystem {args.ver} {args.tag}"
       },
       "dependsOn": [
         {
@@ -31,18 +31,18 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/gitbuckets/**/*.ts"],
+        "lintFilePatterns": ["packages/git-filesystem/**/*.ts"],
         "maxWarnings": 0
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/gitbuckets"],
+      "outputs": ["coverage/packages/git-filesystem"],
       "options": {
-        "jestConfig": "packages/gitbuckets/jest.config.ts",
+        "jestConfig": "packages/git-filesystem/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["scope:gitbuckets"]
+  "tags": ["scope:git-filesystem"]
 }

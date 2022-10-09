@@ -1,4 +1,4 @@
-import { RestClient } from "@gitbuckets/abstractions";
+import { RestClient } from "@git-filesystem/abstractions";
 
 export const getRestClient = (accessToken: string, parseResponseBody = true): RestClient =>
   new GitLabRestClient(accessToken, parseResponseBody);

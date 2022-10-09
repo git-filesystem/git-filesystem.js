@@ -2,7 +2,7 @@ import {
   fqTagRefPrefix,
   FullyQualifiedTagRef,
   isFullyQualifiedTagRef
-} from "@gitbuckets/abstractions";
+} from "@git-filesystem/abstractions";
 import { getClient } from "./sdk/gql-client";
 
 export const getAllTags = async (

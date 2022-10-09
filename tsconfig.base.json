@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gitbuckets/abstractions": ["packages/abstractions/src/index.ts"],
-      "@gitbuckets/github": ["packages/github/src/index.ts"],
-      "@gitbuckets/gitlab": ["packages/gitlab/src/index.ts"],
-      "@gitbuckets/utils": ["packages/utils/src/index.ts"],
-      "gitbuckets": ["packages/gitbuckets/src/index.ts"]
+      "@git-filesystem/abstractions": ["packages/abstractions/src/index.ts"],
+      "@git-filesystem/github": ["packages/github/src/index.ts"],
+      "@git-filesystem/gitlab": ["packages/gitlab/src/index.ts"],
+      "@git-filesystem/utils": ["packages/utils/src/index.ts"],
+      "git-filesystem": ["packages/git-filesystem/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

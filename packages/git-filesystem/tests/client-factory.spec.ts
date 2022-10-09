@@ -1,6 +1,6 @@
-import { Provider } from "@gitbuckets/abstractions";
-import { GitHubClient } from "@gitbuckets/github";
-import { GitLabClient } from "@gitbuckets/gitlab";
+import { Provider } from "@git-filesystem/abstractions";
+import { GitHubClient } from "@git-filesystem/github";
+import { GitLabClient } from "@git-filesystem/gitlab";
 import { ClientFactory } from "../src/lib/client-factory";
 
 const invalidProviderNames = [

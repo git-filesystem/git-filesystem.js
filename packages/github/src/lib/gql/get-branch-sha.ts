@@ -1,4 +1,4 @@
-import { FullyQualifiedBranch } from "@gitbuckets/abstractions";
+import { FullyQualifiedBranch } from "@git-filesystem/abstractions";
 import { getClient } from "./sdk/gql-client";
 
 export interface Result {

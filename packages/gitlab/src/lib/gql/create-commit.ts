@@ -1,4 +1,4 @@
-import { FullyQualifiedBranch, refNameWithoutPrefix } from "@gitbuckets/abstractions";
+import { FullyQualifiedBranch, refNameWithoutPrefix } from "@git-filesystem/abstractions";
 import { getClient } from "./sdk/gql-client";
 
 type CreateCommitAction = {

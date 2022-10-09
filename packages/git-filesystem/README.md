@@ -1,4 +1,4 @@
-# git-buckets.js
+# git-filesystem
 
 A shared abstraction for cloud Git providers exposing a file-system-like API.
 
@@ -24,7 +24,7 @@ Exposes methods for:
 ## Installation
 
 ```bash
-npm install git-buckets
+npm install git-filesystem
 ```
 
 ## Building Locally
@@ -67,4 +67,4 @@ npm run test:e2e
 
 ## License
 
-Git-buckets is licensed under the [ISC License](./LICENSE.md).
+git-filesystem is licensed under the [ISC License](./LICENSE.md).

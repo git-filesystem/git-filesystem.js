@@ -1,4 +1,4 @@
-import { FullyQualifiedBranch } from "@gitbuckets/abstractions";
+import { FullyQualifiedBranch } from "@git-filesystem/abstractions";
 import { getRestClient } from "./rest-client";
 
 interface RequestBody {

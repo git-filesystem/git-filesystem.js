@@ -1,4 +1,4 @@
-import { FullyQualifiedTag } from "@gitbuckets/abstractions";
+import { FullyQualifiedTag } from "@git-filesystem/abstractions";
 import { getClient } from "./sdk/gql-client";
 
 export const getRefIdForTag = async (

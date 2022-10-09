@@ -10,7 +10,7 @@
   "dictionaryDefinitions": [],
   "dictionaries": ["en-gb", "node", "npm", "typescript"],
   "words": ["codegen"],
-  "ignoreWords": ["tobysmith", "gitbuckets"],
+  "ignoreWords": ["tobysmith", "git-filesystem"],
   "import": [],
   "ignoreRegExpList": [
     "esbenp\\.prettier-vscode",

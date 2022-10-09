@@ -1,4 +1,4 @@
-import { CommitBuilder } from "@gitbuckets/abstractions";
+import { CommitBuilder } from "@git-filesystem/abstractions";
 import { GitLabRepository } from "./gitlab-repository";
 import { CommitAction, createCommit } from "./gql/create-commit";
 

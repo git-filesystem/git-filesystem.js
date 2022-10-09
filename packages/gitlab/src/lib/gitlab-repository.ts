@@ -7,7 +7,7 @@ import {
   JsonConfig,
   Provider,
   Repository
-} from "@gitbuckets/abstractions";
+} from "@git-filesystem/abstractions";
 import { GitLabCommitBuilder } from "./gitlab-commit-builder";
 import { allTags } from "./rest/all-tags";
 import { createTag } from "./rest/create-tag";

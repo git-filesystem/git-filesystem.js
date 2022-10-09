@@ -6,7 +6,7 @@ import {
   Provider,
   Repository,
   RepositoryExistence
-} from "@gitbuckets/abstractions";
+} from "@git-filesystem/abstractions";
 import { GitLabRepository } from "./gitlab-repository";
 import { getAllRepositories } from "./gql/get-all-repositories";
 import { getAllRepositoriesForOwner } from "./gql/get-all-repositories-for-owner";

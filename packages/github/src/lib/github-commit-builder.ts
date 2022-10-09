@@ -1,4 +1,4 @@
-import { CommitBuilder } from "@gitbuckets/abstractions";
+import { CommitBuilder } from "@git-filesystem/abstractions";
 import { GitHubRepository } from "./github-repository";
 import { createCommit } from "./rest/create-commit";
 import { CommitAction } from "./rest/create-tree";

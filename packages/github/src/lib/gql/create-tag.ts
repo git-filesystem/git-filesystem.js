@@ -1,4 +1,4 @@
-import { FullyQualifiedBranch, FullyQualifiedTagRef } from "@gitbuckets/abstractions";
+import { FullyQualifiedBranch, FullyQualifiedTagRef } from "@git-filesystem/abstractions";
 import { getBranchShaAndRepoId } from "./get-branch-sha-and-repo-id";
 import { getClient } from "./sdk/gql-client";
 

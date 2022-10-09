@@ -1,6 +1,6 @@
-import { Client, GitUser, JsonConfig, Provider } from "@gitbuckets/abstractions";
-import { GitHubClient } from "@gitbuckets/github";
-import { GitLabClient } from "@gitbuckets/gitlab";
+import { Client, GitUser, JsonConfig, Provider } from "@git-filesystem/abstractions";
+import { GitHubClient } from "@git-filesystem/github";
+import { GitLabClient } from "@git-filesystem/gitlab";
 
 export class ClientFactory {
   public getClientForProvider(

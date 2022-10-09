@@ -1,5 +1,5 @@
 {
-  "name": "@gitbuckets/utils",
+  "name": "@git-filesystem/utils",
   "version": "0.0.1",
   "type": "commonjs"
 }

@@ -10,7 +10,7 @@ import {
   JsonConfig,
   Provider,
   Repository
-} from "@gitbuckets/abstractions";
+} from "@git-filesystem/abstractions";
 import { GitHubCommitBuilder } from "./github-commit-builder";
 import { createTag } from "./gql/create-tag";
 import { deleteTag } from "./gql/delete-tag";
