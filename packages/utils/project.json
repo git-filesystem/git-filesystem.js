@@ -15,6 +15,12 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       }
     },
+    "version": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "node tools/scripts/version.mjs utils {args.version}"
+      }
+    },
     "publish": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
