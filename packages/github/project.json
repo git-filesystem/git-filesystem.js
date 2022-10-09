@@ -16,13 +16,13 @@
       }
     },
     "version": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "node tools/scripts/version.mjs github {args.version}"
       }
     },
     "publish": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "node tools/scripts/publish.mjs github {args.tag}"
       }
@@ -44,7 +44,7 @@
       }
     },
     "codegen": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "command": "npx graphql-codegen --config .gql-codegen.yml",
         "cwd": "./packages/github"
