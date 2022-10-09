@@ -26,7 +26,7 @@ npm install @git-filesystem/github
 ## Example Usage
 
 ```ts
-import { GitHubClient } from "@git-filesystem/github"
+import { GitHubClient } from "@git-filesystem/github";
 
 const gitHubClient = new GitHubClient("github-username", "access-token", "user-agent-name");
 

@@ -4,7 +4,6 @@ This package contains the abstractions shared by the different git cloud provide
 
 You probably don't need to install this package yourself manually.
 
-
 ## License
 
 @git-filesystem/abstractions is licensed under the [ISC License](./LICENSE.md).
