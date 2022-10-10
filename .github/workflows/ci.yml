@@ -116,6 +116,8 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
+    concurrency: ${{ matrix.os }}
+
     steps:
       - uses: actions/checkout@v3
 
