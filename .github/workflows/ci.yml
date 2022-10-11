@@ -102,6 +102,7 @@ jobs:
   e2e:
     strategy:
       fail-fast: false
+      max-parallel: 3
       matrix:
         os:
           - ubuntu-latest
@@ -115,8 +116,6 @@ jobs:
     name: E2E Test (Node ${{ matrix.node }} on ${{ matrix.os }})
 
     runs-on: ${{ matrix.os }}
-
-    concurrency: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v3
