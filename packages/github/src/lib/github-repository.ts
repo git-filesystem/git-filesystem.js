@@ -76,6 +76,14 @@ export class GitHubRepository implements Repository {
     return await commitBuilder.createCommit(commitMessage);
   }
 
+  public async updateJsonFile<T>(path: string, content: T): Promise<string> {
+    const commitBuilder = this.createCommitBuilder();
+    commitBuilder.updateJsonFile(path, content);
+
+    const commitMessage = `Update ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
+  }
+
   public async readJsonFile<T>(path: string): Promise<T>;
   public async readJsonFile<T>(path: string, tagName: string): Promise<T>;
   public async readJsonFile<T>(path: string, tagName?: string): Promise<T> {
@@ -85,16 +93,7 @@ export class GitHubRepository implements Repository {
     }
 
     const stringContent = await this.readFile(path);
-
     return JSON.parse(stringContent);
-  }
-
-  public async updateJsonFile<T>(path: string, content: T): Promise<string> {
-    const commitBuilder = this.createCommitBuilder();
-    commitBuilder.updateJsonFile(path, content);
-
-    const commitMessage = `Update ${path}`;
-    return await commitBuilder.createCommit(commitMessage);
   }
 
   async createTag(name: string): Promise<FullyQualifiedTag> {
@@ -107,7 +106,7 @@ export class GitHubRepository implements Repository {
     return {
       refType: "tag",
       owner: this.fqBranch.owner,
-      repositoryName: this.fqBranch.owner,
+      repositoryName: this.fqBranch.repositoryName,
       ref: fqTagRef
     };
   }
