@@ -102,6 +102,7 @@ jobs:
   e2e:
     strategy:
       fail-fast: false
+      max-parallel: 3
       matrix:
         os:
           - ubuntu-latest

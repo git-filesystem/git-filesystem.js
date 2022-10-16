@@ -14,5 +14,6 @@ export default {
   },
   moduleFileExtensions: ["ts", "js", "html"],
   coverageDirectory: "../../coverage/packages/git-filesystem-e2e",
-  setupFiles: ["<rootDir>/setupFile.js"]
+  setupFiles: ["<rootDir>/setupFile.js"],
+  testTimeout: 10_000
 };

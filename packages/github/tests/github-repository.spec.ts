@@ -66,6 +66,12 @@ describe("GitHubRepository", () => {
     repository = new GitHubRepository(accessToken, fqBranch, applicationName);
   });
 
+  describe("provider", () => {
+    it("should have the provider 'github'", () => {
+      expect(repository.provider).toBe("github");
+    });
+  });
+
   describe("createFile", () => {
     it("should create the file using a commitBuilder", async () => {
       const path = "path";
