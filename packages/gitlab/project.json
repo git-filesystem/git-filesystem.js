@@ -37,7 +37,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/gitlab"],
+      "outputs": ["{workspaceRoot}/coverage/packages/gitlab"],
       "options": {
         "jestConfig": "packages/gitlab/jest.config.ts",
         "passWithNoTests": true

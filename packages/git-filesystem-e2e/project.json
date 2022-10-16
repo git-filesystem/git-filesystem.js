@@ -13,7 +13,7 @@
     },
     "e2e-test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/git-filesystem-e2e"],
+      "outputs": ["{workspaceRoot}/coverage/packages/git-filesystem-e2e"],
       "options": {
         "jestConfig": "packages/git-filesystem-e2e/jest.config.ts",
         "passWithNoTests": true

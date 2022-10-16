@@ -37,7 +37,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/abstractions"],
+      "outputs": ["{workspaceRoot}/coverage/packages/abstractions"],
       "options": {
         "jestConfig": "packages/abstractions/jest.config.ts",
         "passWithNoTests": true

@@ -37,7 +37,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/github"],
+      "outputs": ["{workspaceRoot}/coverage/packages/github"],
       "options": {
         "jestConfig": "packages/github/jest.config.ts",
         "passWithNoTests": true

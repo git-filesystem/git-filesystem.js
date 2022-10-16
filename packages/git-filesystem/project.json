@@ -37,7 +37,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/git-filesystem"],
+      "outputs": ["{workspaceRoot}/coverage/packages/git-filesystem"],
       "options": {
         "jestConfig": "packages/git-filesystem/jest.config.ts",
         "passWithNoTests": true

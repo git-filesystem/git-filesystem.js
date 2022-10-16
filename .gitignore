@@ -1,3 +1,4 @@
+tmp/
 .jest.env
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,node,visualstudiocode
