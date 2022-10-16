@@ -15,8 +15,8 @@ on:
         default: ""
         required: false
         type: string
-    
-concurrency: 
+
+concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
