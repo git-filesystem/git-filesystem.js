@@ -1,4 +1,5 @@
 import { Provider } from "./client";
+import { CommitBuilder } from "./commit-builder";
 import { FullyQualifiedBranch, FullyQualifiedTag } from "./ref";
 
 // TODO: Add moving files
@@ -18,6 +19,8 @@ export interface ReadonlyRepository {
 export interface Repository extends ReadonlyRepository {
   readonly provider: Provider;
   readonly fqBranch: FullyQualifiedBranch;
+
+  createCommitBuilder(): CommitBuilder;
 
   createFile(path: string, content: string): Promise<string>;
   updateFile(path: string, content: string): Promise<string>;

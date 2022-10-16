@@ -26,8 +26,12 @@ export class GitLabRepository implements Repository {
     public readonly jsonConfig?: JsonConfig
   ) {}
 
+  createCommitBuilder(): GitLabCommitBuilder {
+    return new GitLabCommitBuilder(this);
+  }
+
   async createFile(path: string, content: string): Promise<string> {
-    const commitBuilder = new GitLabCommitBuilder(this);
+    const commitBuilder = this.createCommitBuilder();
     commitBuilder.createFile(path, content);
 
     const commitMessage = `Create ${path}`;
@@ -35,7 +39,7 @@ export class GitLabRepository implements Repository {
   }
 
   async updateFile(path: string, content: string): Promise<string> {
-    const commitBuilder = new GitLabCommitBuilder(this);
+    const commitBuilder = this.createCommitBuilder();
     commitBuilder.updateFile(path, content);
 
     const commitMessage = `Update ${path}`;
@@ -53,7 +57,7 @@ export class GitLabRepository implements Repository {
   }
 
   async deleteFile(path: string): Promise<void> {
-    const commitBuilder = new GitLabCommitBuilder(this);
+    const commitBuilder = this.createCommitBuilder();
     commitBuilder.deleteFile(path);
 
     const commitMessage = `Delete ${path}`;
@@ -61,7 +65,7 @@ export class GitLabRepository implements Repository {
   }
 
   public async createJsonFile<T>(path: string, content: T): Promise<string> {
-    const commitBuilder = new GitLabCommitBuilder(this);
+    const commitBuilder = this.createCommitBuilder();
     commitBuilder.createJsonFile(path, content);
 
     const commitMessage = `Create ${path}`;
@@ -82,7 +86,7 @@ export class GitLabRepository implements Repository {
   }
 
   public async updateJsonFile<T>(path: string, content: T): Promise<string> {
-    const commitBuilder = new GitLabCommitBuilder(this);
+    const commitBuilder = this.createCommitBuilder();
     commitBuilder.updateJsonFile(path, content);
 
     const commitMessage = `Update ${path}`;
