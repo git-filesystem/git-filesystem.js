@@ -20,3 +20,4 @@ export type {
 } from "./lib/ref";
 export type { ReadonlyRepository, Repository } from "./lib/repository";
 export { RestClient } from "./lib/rest-client";
+export { createFileNotFoundError } from "./lib/errors/file-not-found";

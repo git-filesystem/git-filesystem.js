@@ -1,9 +1,11 @@
 import {
+  createFileNotFoundError,
   FullyQualifiedBranchRef,
   FullyQualifiedRef,
   FullyQualifiedTagRef
 } from "@git-filesystem/abstractions";
 import { urlEncode } from "@git-filesystem/utils";
+import { AxiosError } from "axios";
 import { getRestClient } from "./rest-client";
 
 interface Params {
@@ -26,7 +28,14 @@ export const getFileContent = async (
 
   const params: Params = { ref };
 
-  const result = await getRestClient(accessToken, false).get<Params, string>(path, params);
+  try {
+    const result = await getRestClient(accessToken, false).get<Params, string>(path, params);
+    return result.data;
+  } catch (e) {
+    if (e instanceof AxiosError && e.response?.status === 404) {
+      throw createFileNotFoundError(filePath);
+    }
 
-  return result.data;
+    throw e;
+  }
 };

@@ -8,9 +8,9 @@ import {
 
 /*
 
-  Test order matters!
+Test order matters!
 
- */
+*/
 
 interface Provider {
   name: ProviderName;
@@ -58,15 +58,17 @@ providers.forEach(provider =>
     const testTagName = "test-tag";
 
     beforeAll(() => {
-      // eslint-disable-next-line jest/no-standalone-expect
+      /* eslint-disable jest/no-standalone-expect */
+      /* eslint-disable @typescript-eslint/no-non-null-assertion */
+
       expect(provider.accessToken).toBeDefined();
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       accessToken = provider.accessToken!;
 
-      // eslint-disable-next-line jest/no-standalone-expect
       expect(provider.user).toBeDefined();
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       userAccount = provider.user!;
+
+      /* eslint-enable jest/no-standalone-expect */
+      /* eslint-enable @typescript-eslint/no-non-null-assertion */
 
       const currentMs = new Date().getUTCMilliseconds();
       const randomNumber = Math.floor(Math.random() * 1000) + 1;
@@ -170,6 +172,24 @@ providers.forEach(provider =>
       });
     });
 
+    describe("reading files", () => {
+      it("should be able to read a file that does exist", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        const resultingFileContent = await repository.readFile(testFilePath);
+
+        expect(resultingFileContent).toBe(originalTextFileContent);
+      });
+
+      it("should throw when reading a file that does not exist", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        await expect(repository.readFile("file-does-not.exist")).rejects.toThrow(
+          "File file-does-not.exist not found"
+        );
+      });
+    });
+
     describe("creating a tag", () => {
       it("should be able to create a tag with the short name", async () => {
         const repository = client.getRepository(repositoryName, userAccount);
@@ -247,6 +267,60 @@ providers.forEach(provider =>
           `${fqTagRefPrefix}${testTagName}`
         );
         expect(writtenObject).toEqual(originalJsonFileContent);
+      });
+    });
+
+    describe("commit builder", () => {
+      it("should be able to read new file content before it's committed", async () => {
+        const filePath = "temp-file-name.txt";
+        const fileContent = "temp content not to be committed";
+
+        const repository = client.getRepository(repositoryName, userAccount);
+        const commitBuilder = repository.createCommitBuilder();
+
+        commitBuilder.createFile(filePath, fileContent);
+
+        const result = await commitBuilder.readFile(filePath);
+
+        expect(result).toBe(fileContent);
+      });
+
+      it("should be able to read updated file content before it's committed", async () => {
+        const fileContent = "temp content not to be committed";
+
+        const repository = client.getRepository(repositoryName, userAccount);
+        const commitBuilder = repository.createCommitBuilder();
+
+        commitBuilder.updateFile(testFilePath, fileContent);
+
+        const result = await commitBuilder.readFile(testFilePath);
+
+        expect(result).toBe(fileContent);
+      });
+
+      it("should be able to read original file content from the repository before the commit builder is committed", async () => {
+        const fileContent = "temp content not to be committed";
+        const fileContentBeforeCommitBuilderIsUsed = updatedTextFileContent;
+
+        const repository = client.getRepository(repositoryName, userAccount);
+        const commitBuilder = repository.createCommitBuilder();
+
+        commitBuilder.updateFile(testFilePath, fileContent);
+
+        const result = await repository.readFile(testFilePath);
+
+        expect(result).toBe(fileContentBeforeCommitBuilderIsUsed);
+      });
+
+      it("should be able to read file content from a file unrelated to the commit builder", async () => {
+        const fileContentBeforeCommitBuilderIsUsed = updatedTextFileContent;
+
+        const repository = client.getRepository(repositoryName, userAccount);
+        const commitBuilder = repository.createCommitBuilder();
+
+        const result = await commitBuilder.readFile(testFilePath);
+
+        expect(result).toBe(fileContentBeforeCommitBuilderIsUsed);
       });
     });
 
