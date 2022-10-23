@@ -51,6 +51,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Build
+          path: dist
 
       - name: Get Latest Tag
         uses: tobysmith568/npm-publish-latest-tag@v1
