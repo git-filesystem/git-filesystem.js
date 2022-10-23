@@ -28,4 +28,4 @@ invariant(
 
 process.chdir(outputPath);
 
-execSync(`npm publish --access public --tag ${tag} --dry-run`);
+execSync(`npm publish --access public --tag ${tag}`);
