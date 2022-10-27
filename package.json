@@ -20,7 +20,7 @@
     "@graphql-codegen/typescript-graphql-request": "^4.5.4",
     "@graphql-codegen/typescript-operations": "^2.5.3",
     "@nrwl/cli": "15.0.0",
-    "@nrwl/eslint-plugin-nx": "15.0.1",
+    "@nrwl/eslint-plugin-nx": "15.0.2",
     "@nrwl/jest": "15.0.1",
     "@nrwl/js": "15.0.0",
     "@nrwl/linter": "15.0.0",
