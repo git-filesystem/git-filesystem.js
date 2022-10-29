@@ -2610,6 +2610,59 @@ export type CommittableBranch = {
   repositoryNameWithOwner?: InputMaybe<Scalars['String']>;
 };
 
+/** Represents a comparison between two commit revisions. */
+export type Comparison = Node & {
+  __typename?: 'Comparison';
+  /** The number of commits ahead of the base branch. */
+  aheadBy: Scalars['Int'];
+  /** The base revision of this comparison. */
+  baseTarget: GitObject;
+  /** The number of commits behind the base branch. */
+  behindBy: Scalars['Int'];
+  /** The commits which compose this comparison. */
+  commits: ComparisonCommitConnection;
+  /** The head revision of this comparison. */
+  headTarget: GitObject;
+  id: Scalars['ID'];
+  /** The status of this comparison. */
+  status: ComparisonStatus;
+};
+
+
+/** Represents a comparison between two commit revisions. */
+export type ComparisonCommitsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for Commit. */
+export type ComparisonCommitConnection = {
+  __typename?: 'ComparisonCommitConnection';
+  /** The total count of authors and co-authors across all commits. */
+  authorCount: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CommitEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Commit>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
+/** The status of a git comparison between two refs. */
+export type ComparisonStatus =
+  /** The head ref is ahead of the base ref. */
+  | 'AHEAD'
+  /** The head ref is behind the base ref. */
+  | 'BEHIND'
+  /** The head ref is both ahead and behind of the base ref, indicating git history has diverged. */
+  | 'DIVERGED'
+  /** The head ref and base ref are identical. */
+  | 'IDENTICAL';
+
 /** Represents a 'connected' event on a given issue or pull request. */
 export type ConnectedEvent = Node & {
   __typename?: 'ConnectedEvent';
@@ -5583,11 +5636,22 @@ export type EnablePullRequestAutoMergeInput = {
   authorEmail?: InputMaybe<Scalars['String']>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
-  /** Commit body to use for the commit when the PR is mergable; if omitted, a default message will be used. */
+  /**
+   * Commit body to use for the commit when the PR is mergable; if omitted, a
+   * default message will be used. NOTE: when merging with a merge queue any input
+   * value for commit message is ignored.
+   */
   commitBody?: InputMaybe<Scalars['String']>;
-  /** Commit headline to use for the commit when the PR is mergable; if omitted, a default message will be used. */
+  /**
+   * Commit headline to use for the commit when the PR is mergable; if omitted, a
+   * default message will be used. NOTE: when merging with a merge queue any input
+   * value for commit headline is ignored.
+   */
   commitHeadline?: InputMaybe<Scalars['String']>;
-  /** The merge method to use. If omitted, defaults to `MERGE` */
+  /**
+   * The merge method to use. If omitted, defaults to `MERGE`. NOTE: when merging
+   * with a merge queue any input value for merge method is ignored.
+   */
   mergeMethod?: InputMaybe<PullRequestMergeMethod>;
   /** ID of the pull request to enable auto-merge on. */
   pullRequestId: Scalars['ID'];
@@ -15127,6 +15191,8 @@ export type ProjectV2 = Closable & Node & Updatable & {
   resourcePath: Scalars['URI'];
   /** The project's short description. */
   shortDescription?: Maybe<Scalars['String']>;
+  /** The teams the project is linked to. */
+  teams: TeamConnection;
   /** The project's name. */
   title: Scalars['String'];
   /** Identifies the date and time when the object was last updated. */
@@ -15175,6 +15241,16 @@ export type ProjectV2RepositoriesArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   orderBy?: InputMaybe<RepositoryOrder>;
+};
+
+
+/** New projects that manage issues, pull requests and drafts using tables and boards. */
+export type ProjectV2TeamsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<TeamOrder>;
 };
 
 
@@ -15876,6 +15952,37 @@ export type ProjectV2SortByEdge = {
   node?: Maybe<ProjectV2SortBy>;
 };
 
+/** Represents a sort by field and direction. */
+export type ProjectV2SortByField = {
+  __typename?: 'ProjectV2SortByField';
+  /** The direction of the sorting. Possible values are ASC and DESC. */
+  direction: OrderDirection;
+  /** The field by which items are sorted. */
+  field: ProjectV2FieldConfiguration;
+};
+
+/** The connection type for ProjectV2SortByField. */
+export type ProjectV2SortByFieldConnection = {
+  __typename?: 'ProjectV2SortByFieldConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProjectV2SortByFieldEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProjectV2SortByField>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
+/** An edge in a connection. */
+export type ProjectV2SortByFieldEdge = {
+  __typename?: 'ProjectV2SortByFieldEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProjectV2SortByField>;
+};
+
 /** A view within a ProjectV2. */
 export type ProjectV2View = Node & {
   __typename?: 'ProjectV2View';
@@ -15903,12 +16010,22 @@ export type ProjectV2View = Node & {
   number: Scalars['Int'];
   /** The project that contains this view. */
   project: ProjectV2;
-  /** The view's sort-by config. */
+  /**
+   * The view's sort-by config.
+   * @deprecated The `ProjectV2View#sort_by` API is deprecated in favour of the more capable `ProjectV2View#sort_by_fields` API. Check out the `ProjectV2View#sort_by_fields` API as an example for the more capable alternative. Removal on 2023-04-01 UTC.
+   */
   sortBy?: Maybe<ProjectV2SortByConnection>;
+  /** The view's sort-by config. */
+  sortByFields?: Maybe<ProjectV2SortByFieldConnection>;
   /** Identifies the date and time when the object was last updated. */
   updatedAt: Scalars['DateTime'];
-  /** The view's vertical-group-by field. */
+  /**
+   * The view's vertical-group-by field.
+   * @deprecated The `ProjectV2View#vertical_group_by` API is deprecated in favour of the more capable `ProjectV2View#vertical_group_by_fields` API. Check out the `ProjectV2View#vertical_group_by_fields` API as an example for the more capable alternative. Removal on 2023-04-01 UTC.
+   */
   verticalGroupBy?: Maybe<ProjectV2FieldConnection>;
+  /** The view's vertical-group-by field. */
+  verticalGroupByFields?: Maybe<ProjectV2FieldConfigurationConnection>;
   /**
    * The view's visible fields.
    * @deprecated The `ProjectV2View#visibleFields` API is deprecated in favour of the more capable `ProjectV2View#fields` API. Check out the `ProjectV2View#fields` API as an example for the more capable alternative. Removal on 2023-01-01 UTC.
@@ -15957,7 +16074,26 @@ export type ProjectV2ViewSortByArgs = {
 
 
 /** A view within a ProjectV2. */
+export type ProjectV2ViewSortByFieldsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A view within a ProjectV2. */
 export type ProjectV2ViewVerticalGroupByArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2FieldOrder>;
+};
+
+
+/** A view within a ProjectV2. */
+export type ProjectV2ViewVerticalGroupByFieldsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -17955,6 +18091,8 @@ export type Ref = Node & {
   associatedPullRequests: PullRequestConnection;
   /** Branch protection rules for this ref */
   branchProtectionRule?: Maybe<BranchProtectionRule>;
+  /** Compares the current ref as a base ref to another head ref, if the comparison can be made. */
+  compare?: Maybe<Comparison>;
   id: Scalars['ID'];
   /** The ref name. */
   name: Scalars['String'];
@@ -17980,6 +18118,12 @@ export type RefAssociatedPullRequestsArgs = {
   last?: InputMaybe<Scalars['Int']>;
   orderBy?: InputMaybe<IssueOrder>;
   states?: InputMaybe<Array<PullRequestState>>;
+};
+
+
+/** Represents a Git reference. */
+export type RefCompareArgs = {
+  headRef: Scalars['String'];
 };
 
 /** The connection type for Ref. */
@@ -22933,6 +23077,10 @@ export type Team = MemberStatusable & Node & Subscribable & {
   parentTeam?: Maybe<Team>;
   /** The level of privacy the team has. */
   privacy: TeamPrivacy;
+  /** Finds and returns the project according to the provided project number. */
+  projectV2?: Maybe<ProjectV2>;
+  /** List of projects this team has collaborator access to. */
+  projectsV2: ProjectV2Connection;
   /** A list of repositories this team has access to. */
   repositories: TeamRepositoryConnection;
   /** The HTTP path for this team's repositories */
@@ -23041,6 +23189,22 @@ export type TeamMembersArgs = {
   orderBy?: InputMaybe<TeamMemberOrder>;
   query?: InputMaybe<Scalars['String']>;
   role?: InputMaybe<TeamMemberRole>;
+};
+
+
+/** A team of users in an organization. */
+export type TeamProjectV2Args = {
+  number: Scalars['Int'];
+};
+
+
+/** A team of users in an organization. */
+export type TeamProjectsV2Args = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<ProjectV2Order>;
 };
 
 
@@ -23923,6 +24087,8 @@ export type TreeEntry = {
   extension?: Maybe<Scalars['String']>;
   /** Whether or not this tree entry is generated */
   isGenerated: Scalars['Boolean'];
+  /** The programming language this file is written in. */
+  language?: Maybe<Language>;
   /** Number of lines in the file. */
   lineCount?: Maybe<Scalars['Int']>;
   /** Entry file mode. */
