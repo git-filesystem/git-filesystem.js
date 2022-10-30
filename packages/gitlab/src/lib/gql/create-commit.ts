@@ -1,4 +1,8 @@
-import { FullyQualifiedBranch, refNameWithoutPrefix } from "@git-filesystem/abstractions";
+import {
+  CommitError,
+  FullyQualifiedBranch,
+  refNameWithoutPrefix
+} from "@git-filesystem/abstractions";
 import { getClient } from "./sdk/gql-client";
 
 type CreateCommitAction = {
@@ -48,6 +52,10 @@ export const createCommit = async (
     typeof response.commitCreate.commit.sha === "string"
   ) {
     return response.commitCreate.commit.sha;
+  }
+
+  if (response.commitCreate?.errors) {
+    throw new CommitError(response.commitCreate.errors);
   }
 
   throw new Error("Unable to create commit");
