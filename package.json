@@ -31,7 +31,7 @@
     "@tobysmith568/eslint-config": "^1.0.2",
     "@tobysmith568/prettier-config": "^2.0.0",
     "@types/jest": "^29.0.0",
-    "@types/node": "18.11.7",
+    "@types/node": "18.11.9",
     "@typescript-eslint/eslint-plugin": "5.42.0",
     "@typescript-eslint/parser": "5.41.0",
     "cspell": "^6.6.1",
