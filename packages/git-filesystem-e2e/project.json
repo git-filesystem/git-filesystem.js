@@ -11,7 +11,7 @@
         "maxWarnings": 0
       }
     },
-    "e2e-test": {
+    "e2e": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/git-filesystem-e2e"],
       "options": {

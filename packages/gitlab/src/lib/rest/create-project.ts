@@ -1,3 +1,5 @@
+import { repositoryAlreadyExistsError } from "@git-filesystem/abstractions";
+import { AxiosError } from "axios";
 import { getRestClient } from "./rest-client";
 
 interface Body {
@@ -25,7 +27,19 @@ export const createProject = async (
     namespace_id: namespaceId
   };
 
-  const { data } = await getRestClient(accessToken).post<Body, Response>("projects", requestBody);
+  try {
+    const { data } = await getRestClient(accessToken).post<Body, Response>("projects", requestBody);
 
-  return data.path_with_namespace;
+    return data.path_with_namespace;
+  } catch (e) {
+    if (e instanceof AxiosError && Array.isArray(e.response?.data.message.name)) {
+      const messages = e.response?.data.message.name as Array<unknown>;
+
+      if (messages.find(m => m === "has already been taken")) {
+        throw repositoryAlreadyExistsError(name);
+      }
+    }
+
+    throw e;
+  }
 };

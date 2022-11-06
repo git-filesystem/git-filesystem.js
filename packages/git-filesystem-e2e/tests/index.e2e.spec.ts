@@ -97,7 +97,7 @@ providers.forEach(provider =>
     });
 
     describe("create repositories", () => {
-      it("should be able to make a repository", async () => {
+      it("should be able to create a repository", async () => {
         const doesExistBefore = await client.doesRepositoryExist(repositoryName);
         expect(doesExistBefore).toBe("DoesNotExist");
 
@@ -113,6 +113,20 @@ providers.forEach(provider =>
         const doesExistAfter = await client.doesRepositoryExist(repositoryName);
         expect(doesExistAfter).toBe("Exists");
       });
+
+      it("should throw when trying to create a repository that already exists", async () => {
+        const doesExistBefore = await client.doesRepositoryExist(repositoryName);
+        expect(doesExistBefore).toBe("Exists");
+
+        const action = () =>
+          client.createRepository(
+            repositoryName,
+            true,
+            `Temporary repository for e2e test run ${repositoryName}`
+          );
+
+        await expect(action).rejects.toThrow(`Repository ${repositoryName} already exists`);
+      });
     });
 
     describe("getting repositories", () => {
@@ -123,6 +137,8 @@ providers.forEach(provider =>
         expect(repositories).toContain(repositoryNameWithOwner);
       });
 
+      // TODO: Implement for GitLab too
+      // TODO: Fix exposing personal private repos
       if (provider.name === "github")
         it(`should be able to get all repositories for a different user (${provider.anotherUser})`, async () => {
           const repositories = await client.getAllRepositories(provider.anotherUser);

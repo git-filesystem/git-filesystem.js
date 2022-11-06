@@ -133,7 +133,7 @@ jobs:
         run: npm ci
 
       - name: Run E2E Tests
-        run: npx nx run-many --target e2e-test -- --ci
+        run: npx nx run-many --target e2e -- --ci
         env:
           E2E_GITHUB_USERNAME: ${{ secrets.E2E_GITHUB_USERNAME }}
           E2E_GITHUB_PAT: ${{ secrets.E2E_GITHUB_PAT }}
