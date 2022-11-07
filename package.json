@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "license": "UNLICENSED",
   "prettier": "@tobysmith568/prettier-config",
-  "scripts": {},
+  "scripts": {
+    "build": "npx nx run-many --target build"
+  },
   "dependencies": {
     "@swc/helpers": "~0.4.0",
     "axios": "^0.27.2",

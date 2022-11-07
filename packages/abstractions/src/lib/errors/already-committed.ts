@@ -1,2 +1,5 @@
-export const createAlreadyCommittedError = () =>
-  new Error(`This CommitBuilder has already been committed`);
+export class AlreadyCommittedError extends Error {
+  constructor() {
+    super("This CommitBuilder has already been committed");
+  }
+}

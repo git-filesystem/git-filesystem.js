@@ -1,5 +1,5 @@
 import {
-  createFileNotFoundError,
+  FileNotFoundError,
   FullyQualifiedBranchRef,
   FullyQualifiedRef,
   FullyQualifiedTagRef
@@ -33,7 +33,7 @@ export const getFileContent = async (
     return result.data;
   } catch (e) {
     if (e instanceof AxiosError && e.response?.status === 404) {
-      throw createFileNotFoundError(filePath);
+      throw new FileNotFoundError(filePath);
     }
 
     throw e;

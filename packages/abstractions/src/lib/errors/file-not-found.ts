@@ -1,2 +1,5 @@
-export const createFileNotFoundError = (filePath: string) =>
-  new Error(`File ${filePath} not found`);
+export class FileNotFoundError extends Error {
+  constructor(filePath: string) {
+    super(`File ${filePath} not found`);
+  }
+}

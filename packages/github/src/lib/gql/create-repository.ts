@@ -1,4 +1,4 @@
-import { repositoryAlreadyExistsError } from "@git-filesystem/abstractions";
+import { RepositoryAlreadyExistsError } from "@git-filesystem/abstractions";
 import { ClientError } from "graphql-request";
 import { getIdForUserOrOrg } from "./get-id-for-user-or-org";
 import { getClient } from "./sdk/gql-client";
@@ -26,7 +26,7 @@ export const createRepository = async (
       e instanceof ClientError &&
       e.response.errors?.find(error => error.message === "Name already exists on this account")
     ) {
-      throw repositoryAlreadyExistsError(name);
+      throw new RepositoryAlreadyExistsError(name);
     }
 
     throw e;

@@ -20,7 +20,7 @@ export type {
 } from "./lib/ref";
 export type { ReadonlyRepository, Repository } from "./lib/repository";
 export { RestClient } from "./lib/rest-client";
-export { createFileNotFoundError } from "./lib/errors/file-not-found";
-export { createAlreadyCommittedError } from "./lib/errors/already-committed";
+export { FileNotFoundError } from "./lib/errors/file-not-found";
+export { AlreadyCommittedError } from "./lib/errors/already-committed";
 export { CommitError } from "./lib/errors/commit-error";
-export { repositoryAlreadyExistsError } from "./lib/errors/repository-already-exists";
+export { RepositoryAlreadyExistsError } from "./lib/errors/repository-already-exists";

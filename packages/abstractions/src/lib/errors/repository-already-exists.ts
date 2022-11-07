@@ -1,2 +1,5 @@
-export const repositoryAlreadyExistsError = (name: string) =>
-  new Error(`Repository ${name} already exists`);
+export class RepositoryAlreadyExistsError extends Error {
+  constructor(repoName: string) {
+    super(`Repository ${repoName} already exists`);
+  }
+}

@@ -1,4 +1,4 @@
-import { CommitBuilder, createAlreadyCommittedError } from "@git-filesystem/abstractions";
+import { CommitBuilder, AlreadyCommittedError } from "@git-filesystem/abstractions";
 import { GitLabRepository } from "./gitlab-repository";
 import { CommitAction, createCommit } from "./gql/create-commit";
 
@@ -109,7 +109,7 @@ export class GitLabCommitBuilder extends CommitBuilder {
 
   private ensureNotCommitted() {
     if (this.hasBeenCommitted) {
-      throw createAlreadyCommittedError();
+      throw new AlreadyCommittedError();
     }
   }
 

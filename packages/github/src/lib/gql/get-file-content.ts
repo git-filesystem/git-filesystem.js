@@ -1,4 +1,4 @@
-import { createFileNotFoundError, FullyQualifiedRef } from "@git-filesystem/abstractions";
+import { FileNotFoundError, FullyQualifiedRef } from "@git-filesystem/abstractions";
 import { getClient } from "./sdk/gql-client";
 
 export const getFileContent = async (
@@ -22,5 +22,5 @@ export const getFileContent = async (
     return response.repository.object.text;
   }
 
-  throw createFileNotFoundError(path);
+  throw new FileNotFoundError(path);
 };

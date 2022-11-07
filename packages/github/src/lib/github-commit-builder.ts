@@ -1,4 +1,4 @@
-import { CommitBuilder, createAlreadyCommittedError } from "@git-filesystem/abstractions";
+import { CommitBuilder, AlreadyCommittedError } from "@git-filesystem/abstractions";
 import { GitHubRepository } from "./github-repository";
 import { createCommit } from "./rest/create-commit";
 import { CommitAction } from "./rest/create-tree";
@@ -109,7 +109,7 @@ export class GitHubCommitBuilder extends CommitBuilder {
 
   private ensureNotCommitted() {
     if (this.hasBeenCommitted) {
-      throw createAlreadyCommittedError();
+      throw new AlreadyCommittedError();
     }
   }
 

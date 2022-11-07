@@ -1,4 +1,4 @@
-import { repositoryAlreadyExistsError } from "@git-filesystem/abstractions";
+import { RepositoryAlreadyExistsError } from "@git-filesystem/abstractions";
 import { AxiosError } from "axios";
 import { getRestClient } from "./rest-client";
 
@@ -36,7 +36,7 @@ export const createProject = async (
       const messages = e.response?.data.message.name as Array<unknown>;
 
       if (messages.find(m => m === "has already been taken")) {
-        throw repositoryAlreadyExistsError(name);
+        throw new RepositoryAlreadyExistsError(name);
       }
     }
 
