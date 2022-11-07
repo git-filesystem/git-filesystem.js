@@ -1,6 +1,12 @@
-import { CommitBuilder, AlreadyCommittedError } from "@git-filesystem/abstractions";
+import {
+  CommitBuilder,
+  AlreadyCommittedError,
+  EmptyCommitError,
+  MultipleFileActionsError,
+  FileNotFoundError
+} from "@git-filesystem/abstractions";
 import { GitLabRepository } from "./gitlab-repository";
-import { CommitAction, createCommit } from "./gql/create-commit";
+import { CommitAction, CommitActionType, createCommit } from "./gql/create-commit";
 
 export class GitLabCommitBuilder extends CommitBuilder {
   private commitActions: CommitAction[] = [];
@@ -16,8 +22,11 @@ export class GitLabCommitBuilder extends CommitBuilder {
     const currentActionForPath = this.currentActionForPath(path);
 
     if (currentActionForPath) {
-      //TODO: Make more detailed
-      throw new Error("Cannot have two actions for the same file");
+      throw new MultipleFileActionsError<CommitActionType>(
+        path,
+        currentActionForPath.action,
+        "CREATE"
+      );
     }
 
     const createAction: CommitAction = {
@@ -36,8 +45,11 @@ export class GitLabCommitBuilder extends CommitBuilder {
     const currentActionForPath = this.currentActionForPath(path);
 
     if (currentActionForPath) {
-      //TODO: Make more detailed
-      throw new Error("Cannot have two actions for the same file");
+      throw new MultipleFileActionsError<CommitActionType>(
+        path,
+        currentActionForPath.action,
+        "UPDATE"
+      );
     }
 
     const updateAction: CommitAction = {
@@ -60,8 +72,7 @@ export class GitLabCommitBuilder extends CommitBuilder {
     }
 
     if (currentActionForPath.action === "DELETE") {
-      //TODO: Make more detailed
-      throw new Error("Cannot read file that will be deleted");
+      throw new FileNotFoundError(path);
     }
 
     return currentActionForPath.content;
@@ -73,8 +84,11 @@ export class GitLabCommitBuilder extends CommitBuilder {
     const currentActionForPath = this.currentActionForPath(path);
 
     if (currentActionForPath) {
-      //TODO: Make more detailed
-      throw new Error("Cannot have two actions for the same file");
+      throw new MultipleFileActionsError<CommitActionType>(
+        path,
+        currentActionForPath.action,
+        "DELETE"
+      );
     }
 
     const deleteAction: CommitAction = {
@@ -91,8 +105,7 @@ export class GitLabCommitBuilder extends CommitBuilder {
     const numberOfActions = this.commitActions.length;
 
     if (numberOfActions === 0) {
-      //TODO: Make more detailed
-      throw new Error("Cannot create empty commit");
+      throw new EmptyCommitError();
     }
 
     const result = await createCommit(

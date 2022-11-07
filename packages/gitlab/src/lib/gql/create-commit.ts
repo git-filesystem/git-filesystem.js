@@ -25,6 +25,7 @@ type DeleteCommitAction = {
 };
 
 export type CommitAction = CreateCommitAction | UpdateCommitAction | DeleteCommitAction;
+export type CommitActionType = CommitAction["action"];
 
 export type CommitFileEncoding = "TEXT" | "BASE64";
 

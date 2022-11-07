@@ -5,7 +5,9 @@
   "license": "UNLICENSED",
   "prettier": "@tobysmith568/prettier-config",
   "scripts": {
-    "build": "npx nx run-many --target build"
+    "build": "npx nx run-many --target build",
+    "test": "npx nx run-many --target test",
+    "e2e": "npx nx run-many --target e2e"
   },
   "dependencies": {
     "@swc/helpers": "~0.4.0",

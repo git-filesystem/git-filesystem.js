@@ -1,7 +1,13 @@
-import { CommitBuilder, AlreadyCommittedError } from "@git-filesystem/abstractions";
+import {
+  CommitBuilder,
+  AlreadyCommittedError,
+  EmptyCommitError,
+  MultipleFileActionsError,
+  FileNotFoundError
+} from "@git-filesystem/abstractions";
 import { GitHubRepository } from "./github-repository";
 import { createCommit } from "./rest/create-commit";
-import { CommitAction } from "./rest/create-tree";
+import { CommitAction, CommitActionType } from "./rest/create-tree";
 
 export class GitHubCommitBuilder extends CommitBuilder {
   private commitActions: CommitAction[] = [];
@@ -17,8 +23,11 @@ export class GitHubCommitBuilder extends CommitBuilder {
     const currentActionForPath = this.currentActionForPath(path);
 
     if (currentActionForPath) {
-      //TODO: Make more detailed
-      throw new Error("Cannot have two actions for the same file");
+      throw new MultipleFileActionsError<CommitActionType>(
+        path,
+        currentActionForPath.action,
+        "CREATE"
+      );
     }
 
     const createAction: CommitAction = {
@@ -36,8 +45,11 @@ export class GitHubCommitBuilder extends CommitBuilder {
     const currentActionForPath = this.currentActionForPath(path);
 
     if (currentActionForPath) {
-      //TODO: Make more detailed
-      throw new Error("Cannot have two actions for the same file");
+      throw new MultipleFileActionsError<CommitActionType>(
+        path,
+        currentActionForPath.action,
+        "UPDATE"
+      );
     }
 
     const updateAction: CommitAction = {
@@ -59,8 +71,7 @@ export class GitHubCommitBuilder extends CommitBuilder {
     }
 
     if (currentActionForPath.action === "DELETE") {
-      //TODO: Make more detailed
-      throw new Error("Cannot read file that will be deleted");
+      throw new FileNotFoundError(path);
     }
 
     return currentActionForPath.content;
@@ -72,8 +83,11 @@ export class GitHubCommitBuilder extends CommitBuilder {
     const currentActionForPath = this.currentActionForPath(path);
 
     if (currentActionForPath) {
-      //TODO: Make more detailed
-      throw new Error("Cannot have two actions for the same file");
+      throw new MultipleFileActionsError<CommitActionType>(
+        path,
+        currentActionForPath.action,
+        "DELETE"
+      );
     }
 
     const deleteAction: CommitAction = {
@@ -90,8 +104,7 @@ export class GitHubCommitBuilder extends CommitBuilder {
     const numberOfActions = this.commitActions.length;
 
     if (numberOfActions === 0) {
-      //TODO: Make more detailed
-      throw new Error("Cannot create empty commit");
+      throw new EmptyCommitError();
     }
 
     const result = await createCommit(

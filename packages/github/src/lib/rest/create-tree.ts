@@ -19,6 +19,7 @@ export type DeleteCommitAction = {
 };
 
 export type CommitAction = CreateCommitAction | UpdateCommitAction | DeleteCommitAction;
+export type CommitActionType = CommitAction["action"];
 
 interface RequestBody {
   base_tree: string | undefined | null;
