@@ -4,7 +4,7 @@
   "type": "commonjs",
   "license": "ISC",
   "description": "A shared abstraction for cloud Git providers exposing a file-system-like API. Read & write to GitHub/GitLab/Bitbucket repositories like they're file systems.",
-  "homepage": "https://github.com/git-filesystem/git-filesystem.js/tree/main/packages/git-filesystem#readme",
+  "homepage": "https://git-filesystem.github.io",
   "author": {
     "name": "Toby Smith",
     "email": "tobysmith568@hotmail.co.uk",

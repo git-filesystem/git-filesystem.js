@@ -1,8 +1,8 @@
 # @git-filesystem/github
 
-This package contains the GitHub implementation used by the [git-filesystem](https://github.com/git-filesystem/git-filesystem.js) npm package.
+This package contains the GitHub implementation used by the [git-filesystem](https://www.npmjs.com/package/git-filesystem) npm package.
 
-Use this to read & write specifically to GitHub repositories only; else use the [git-filesystem](https://github.com/git-filesystem/git-filesystem.js) package to write to repositories hosted with multiple cloud providers.
+Use this to read & write specifically to GitHub repositories only; else use the [git-filesystem](https://www.npmjs.com/package/git-filesystem) package to write to repositories hosted with multiple cloud providers.
 
 This package exposes methods for:
 

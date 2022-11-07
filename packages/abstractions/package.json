@@ -4,7 +4,7 @@
   "type": "commonjs",
   "license": "ISC",
   "description": "The abstractions shared by the different git cloud provider implementations in the git-filesystem ecosystem.",
-  "homepage": "https://github.com/git-filesystem/git-filesystem.js/tree/main/packages/abstractions#readme",
+  "homepage": "https://git-filesystem.github.io",
   "author": {
     "name": "Toby Smith",
     "email": "tobysmith568@hotmail.co.uk",

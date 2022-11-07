@@ -4,7 +4,7 @@
   "type": "commonjs",
   "license": "ISC",
   "description": "Utility functions used by the various packages in the git-filesystem package ecosystem.",
-  "homepage": "https://github.com/git-filesystem/git-filesystem.js/tree/main/packages/utils#readme",
+  "homepage": "https://git-filesystem.github.io",
   "author": {
     "name": "Toby Smith",
     "email": "tobysmith568@hotmail.co.uk",

@@ -4,7 +4,7 @@
   "type": "commonjs",
   "license": "ISC",
   "description": "The GitLab implementation used by the git-filesystem package. Use this to read & write specifically to GitLab repositories only.",
-  "homepage": "https://github.com/git-filesystem/git-filesystem.js/tree/main/packages/gitlab#readme",
+  "homepage": "https://git-filesystem.github.io",
   "author": {
     "name": "Toby Smith",
     "email": "tobysmith568@hotmail.co.uk",
