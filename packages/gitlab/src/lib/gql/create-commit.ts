@@ -59,5 +59,5 @@ export const createCommit = async (
     throw new CommitError(response.commitCreate.errors);
   }
 
-  throw new Error("Unable to create commit");
+  throw new CommitError(["Unknown error"]);
 };

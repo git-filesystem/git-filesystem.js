@@ -158,6 +158,18 @@ providers.forEach(provider =>
         expect(resultingFileContent).toBe(originalTextFileContent);
       });
 
+      // Github cannot tell the difference between creates and updates
+      if (provider.name !== "github")
+        it("should throw when creating a text file that already exists", async () => {
+          const repository = client.getRepository(repositoryName, userAccount);
+
+          const action = () => repository.createFile(testFilePath, originalTextFileContent);
+
+          await expect(action).rejects.toThrow(
+            "Unable to create commit: A file with this name already exists"
+          );
+        });
+
       it("should be able to create a new text file in a directory that doesn't exist", async () => {
         const deepFilePath = "deep/test-file.txt";
         const repository = client.getRepository(repositoryName, userAccount);
