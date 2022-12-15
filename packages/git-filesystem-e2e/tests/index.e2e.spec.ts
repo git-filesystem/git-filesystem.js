@@ -6,6 +6,8 @@ import {
   Provider as ProviderName
 } from "git-filesystem";
 
+jest.retryTimes(3, { logErrorsBeforeRetry: true });
+
 /*
 
 Test order matters!
