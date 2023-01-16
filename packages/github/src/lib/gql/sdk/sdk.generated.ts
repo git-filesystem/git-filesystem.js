@@ -557,6 +557,8 @@ export type AddReactionPayload = {
   clientMutationId?: Maybe<Scalars['String']>;
   /** The reaction object. */
   reaction?: Maybe<Reaction>;
+  /** The reaction groups for the subject. */
+  reactionGroups?: Maybe<Array<ReactionGroup>>;
   /** The reactable subject. */
   subject?: Maybe<Reactable>;
 };
@@ -3657,6 +3659,8 @@ export type CreatePullRequestInput = {
    * in the same network, namespace `head_ref_name` with a user like this: `username:branch`.
    */
   headRefName: Scalars['String'];
+  /** The Node ID of the head repository. */
+  headRepositoryId?: InputMaybe<Scalars['ID']>;
   /** Indicates whether maintainers can modify the pull request. */
   maintainerCanModify?: InputMaybe<Scalars['Boolean']>;
   /** The Node ID of the repository. */
@@ -10216,6 +10220,8 @@ export type Mutation = {
   moveProjectColumn?: Maybe<MoveProjectColumnPayload>;
   /** Pin an issue to a repository */
   pinIssue?: Maybe<PinIssuePayload>;
+  /** Publish an existing sponsorship tier that is currently still a draft to a GitHub Sponsors profile. */
+  publishSponsorsTier?: Maybe<PublishSponsorsTierPayload>;
   /** Regenerates the identity provider recovery codes for an enterprise */
   regenerateEnterpriseIdentityProviderRecoveryCodes?: Maybe<RegenerateEnterpriseIdentityProviderRecoveryCodesPayload>;
   /** Regenerates a verifiable domain's verification token. */
@@ -10252,6 +10258,8 @@ export type Mutation = {
   rerequestCheckSuite?: Maybe<RerequestCheckSuitePayload>;
   /** Marks a review thread as resolved. */
   resolveReviewThread?: Maybe<ResolveReviewThreadPayload>;
+  /** Retire a published payment tier from your GitHub Sponsors profile so it cannot be used to start new sponsorships. */
+  retireSponsorsTier?: Maybe<RetireSponsorsTierPayload>;
   /** Revoke the migrator role to a user for all organizations under an enterprise account. */
   revokeEnterpriseOrganizationsMigratorRole?: Maybe<RevokeEnterpriseOrganizationsMigratorRolePayload>;
   /** Revoke the migrator role from a user or a team. */
@@ -10264,6 +10272,8 @@ export type Mutation = {
   setRepositoryInteractionLimit?: Maybe<SetRepositoryInteractionLimitPayload>;
   /** Set a user level interaction limit for an user's public repositories. */
   setUserInteractionLimit?: Maybe<SetUserInteractionLimitPayload>;
+  /** Starts a GitHub Enterprise Importer organization migration. */
+  startOrganizationMigration?: Maybe<StartOrganizationMigrationPayload>;
   /** Starts a GitHub Enterprise Importer (GEI) repository migration. */
   startRepositoryMigration?: Maybe<StartRepositoryMigrationPayload>;
   /** Submits a pending pull request review. */
@@ -11105,6 +11115,12 @@ export type MutationPinIssueArgs = {
 
 
 /** The root query for implementing GraphQL mutations. */
+export type MutationPublishSponsorsTierArgs = {
+  input: PublishSponsorsTierInput;
+};
+
+
+/** The root query for implementing GraphQL mutations. */
 export type MutationRegenerateEnterpriseIdentityProviderRecoveryCodesArgs = {
   input: RegenerateEnterpriseIdentityProviderRecoveryCodesInput;
 };
@@ -11213,6 +11229,12 @@ export type MutationResolveReviewThreadArgs = {
 
 
 /** The root query for implementing GraphQL mutations. */
+export type MutationRetireSponsorsTierArgs = {
+  input: RetireSponsorsTierInput;
+};
+
+
+/** The root query for implementing GraphQL mutations. */
 export type MutationRevokeEnterpriseOrganizationsMigratorRoleArgs = {
   input: RevokeEnterpriseOrganizationsMigratorRoleInput;
 };
@@ -11245,6 +11267,12 @@ export type MutationSetRepositoryInteractionLimitArgs = {
 /** The root query for implementing GraphQL mutations. */
 export type MutationSetUserInteractionLimitArgs = {
   input: SetUserInteractionLimitInput;
+};
+
+
+/** The root query for implementing GraphQL mutations. */
+export type MutationStartOrganizationMigrationArgs = {
+  input: StartOrganizationMigrationInput;
 };
 
 
@@ -13208,7 +13236,7 @@ export type Organization = Actor & MemberStatusable & Node & PackageOwner & Prof
   ipAllowListEntries: IpAllowListEntryConnection;
   /** The setting value for whether the organization has IP allow list configuration for installed GitHub Apps enabled. */
   ipAllowListForInstalledAppsEnabledSetting: IpAllowListForInstalledAppsEnabledSettingValue;
-  /** Check if the given account is sponsoring this user/organization. */
+  /** Whether the given account is sponsoring this user/organization. */
   isSponsoredBy: Scalars['Boolean'];
   /** True if the viewer is sponsored by this user/organization. */
   isSponsoringViewer: Scalars['Boolean'];
@@ -13304,15 +13332,9 @@ export type Organization = Actor & MemberStatusable & Node & PackageOwner & Prof
   sponsorsActivities: SponsorsActivityConnection;
   /** The GitHub Sponsors listing for this user or organization. */
   sponsorsListing?: Maybe<SponsorsListing>;
-  /**
-   * The sponsorship from the viewer to this user/organization; that is, the
-   * sponsorship where you're the sponsor. Only returns a sponsorship if it is active.
-   */
+  /** The sponsorship from the viewer to this user/organization; that is, the sponsorship where you're the sponsor. */
   sponsorshipForViewerAsSponsor?: Maybe<Sponsorship>;
-  /**
-   * The sponsorship from this user/organization to the viewer; that is, the
-   * sponsorship you're receiving. Only returns a sponsorship if it is active.
-   */
+  /** The sponsorship from this user/organization to the viewer; that is, the sponsorship you're receiving. */
   sponsorshipForViewerAsSponsorable?: Maybe<Sponsorship>;
   /** List of sponsorship updates sent from this sponsorable to sponsors. */
   sponsorshipNewsletters: SponsorshipNewsletterConnection;
@@ -13328,6 +13350,12 @@ export type Organization = Actor & MemberStatusable & Node & PackageOwner & Prof
   teamsResourcePath: Scalars['URI'];
   /** The HTTP URL listing organization's teams */
   teamsUrl: Scalars['URI'];
+  /**
+   * The amount in United States cents (e.g., 500 = $5.00 USD) that this entity has
+   * spent on GitHub to fund sponsorships. Only returns a value when viewed by the
+   * user themselves or by a user who can manage sponsorships for the requested organization.
+   */
+  totalSponsorshipAmountAsSponsorInCents?: Maybe<Scalars['Int']>;
   /** The organization's Twitter username. */
   twitterUsername?: Maybe<Scalars['String']>;
   /** Identifies the date and time when the object was last updated. */
@@ -13648,6 +13676,18 @@ export type OrganizationSponsorsActivitiesArgs = {
 
 
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
+export type OrganizationSponsorshipForViewerAsSponsorArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** An account on GitHub, with one or more owners, that has repositories, members and teams. */
+export type OrganizationSponsorshipForViewerAsSponsorableArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** An account on GitHub, with one or more owners, that has repositories, members and teams. */
 export type OrganizationSponsorshipNewslettersArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -13659,6 +13699,7 @@ export type OrganizationSponsorshipNewslettersArgs = {
 
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
 export type OrganizationSponsorshipsAsMaintainerArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -13670,6 +13711,7 @@ export type OrganizationSponsorshipsAsMaintainerArgs = {
 
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
 export type OrganizationSponsorshipsAsSponsorArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -13698,6 +13740,14 @@ export type OrganizationTeamsArgs = {
   role?: InputMaybe<TeamRole>;
   rootTeamsOnly?: InputMaybe<Scalars['Boolean']>;
   userLogins?: InputMaybe<Array<Scalars['String']>>;
+};
+
+
+/** An account on GitHub, with one or more owners, that has repositories, members and teams. */
+export type OrganizationTotalSponsorshipAmountAsSponsorInCentsArgs = {
+  since?: InputMaybe<Scalars['DateTime']>;
+  sponsorableLogins?: InputMaybe<Array<Scalars['String']>>;
+  until?: InputMaybe<Scalars['DateTime']>;
 };
 
 /** An audit entry in an organization audit log. */
@@ -13918,6 +13968,49 @@ export type OrganizationMembersCanCreateRepositoriesSettingValue =
   | 'INTERNAL'
   /** Members will be able to create only private repositories. */
   | 'PRIVATE';
+
+/** A GitHub Enterprise Importer (GEI) organization migration. */
+export type OrganizationMigration = Node & {
+  __typename?: 'OrganizationMigration';
+  /** Identifies the date and time when the object was created. */
+  createdAt: Scalars['DateTime'];
+  /** Identifies the primary key from the database. */
+  databaseId?: Maybe<Scalars['String']>;
+  /** The reason the organization migration failed. */
+  failureReason?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  /** The remaining amount of repos to be migrated. */
+  remainingRepositoriesCount?: Maybe<Scalars['Int']>;
+  /** The name of the source organization to be migrated. */
+  sourceOrgName: Scalars['String'];
+  /** The URL of the source organization to migrate. */
+  sourceOrgUrl: Scalars['URI'];
+  /** The migration state. */
+  state: OrganizationMigrationState;
+  /** The name of the target organization. */
+  targetOrgName: Scalars['String'];
+  /** The total amount of repositories to be migrated. */
+  totalRepositoriesCount?: Maybe<Scalars['Int']>;
+};
+
+/** The Octoshift Organization migration state. */
+export type OrganizationMigrationState =
+  /** The Octoshift migration has failed. */
+  | 'FAILED'
+  /** The Octoshift migration is in progress. */
+  | 'IN_PROGRESS'
+  /** The Octoshift migration has not started. */
+  | 'NOT_STARTED'
+  /** The Octoshift migration is performing post repository migrations. */
+  | 'POST_REPO_MIGRATION'
+  /** The Octoshift migration is performing pre repository migrations. */
+  | 'PRE_REPO_MIGRATION'
+  /** The Octoshift migration has been queued. */
+  | 'QUEUED'
+  /** The Octoshift org migration is performing repository migrations. */
+  | 'REPO_MIGRATION'
+  /** The Octoshift migration has succeeded. */
+  | 'SUCCEEDED';
 
 /** Used for argument of CreateProjectV2 mutation. */
 export type OrganizationOrUser = Organization | User;
@@ -14944,6 +15037,11 @@ export type ProjectNext = Closable & Node & Updatable & {
    */
   description?: Maybe<Scalars['String']>;
   /**
+   * List of fields and their constraints in the project
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  fieldConstraints: ProjectNextFieldConfigurationConnection;
+  /**
    * List of fields in the project
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
    */
@@ -15006,6 +15104,15 @@ export type ProjectNext = Closable & Node & Updatable & {
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
    */
   views: ProjectViewConnection;
+};
+
+
+/** New projects that manage issues, pull requests and drafts using tables and boards. */
+export type ProjectNextFieldConstraintsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -15146,6 +15253,31 @@ export type ProjectNextFieldCommon = {
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
    */
   updatedAt: Scalars['DateTime'];
+};
+
+/** Configurations for project next fields. */
+export type ProjectNextFieldConfiguration = ProjectNextField | ProjectNextIterationField | ProjectNextSingleSelectField;
+
+/** The connection type for ProjectNextFieldConfiguration. */
+export type ProjectNextFieldConfigurationConnection = {
+  __typename?: 'ProjectNextFieldConfigurationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProjectNextFieldConfigurationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProjectNextFieldConfiguration>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
+/** An edge in a connection. */
+export type ProjectNextFieldConfigurationEdge = {
+  __typename?: 'ProjectNextFieldConfigurationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProjectNextFieldConfiguration>;
 };
 
 /** The connection type for ProjectNextField. */
@@ -15316,6 +15448,11 @@ export type ProjectNextItemFieldValue = Node & {
    */
   projectField: ProjectNextField;
   /**
+   * The project field that contains this value and it's constraint.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  projectFieldConstraint: ProjectNextFieldConfiguration;
+  /**
    * The project item that contains this value.
    * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
    */
@@ -15352,6 +15489,107 @@ export type ProjectNextItemFieldValueEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<ProjectNextItemFieldValue>;
+};
+
+/** An iteration field inside a project. */
+export type ProjectNextIterationField = Node & ProjectNextFieldCommon & {
+  __typename?: 'ProjectNextIterationField';
+  /**
+   * Iteration configuration settings
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  configuration: ProjectNextIterationFieldConfiguration;
+  /**
+   * Identifies the date and time when the object was created.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  createdAt: Scalars['DateTime'];
+  /**
+   * The field's type.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  dataType: ProjectNextFieldType;
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  databaseId?: Maybe<Scalars['Int']>;
+  id: Scalars['ID'];
+  /**
+   * The project field's name.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  name: Scalars['String'];
+  /**
+   * The project that contains this field.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  project: ProjectNext;
+  /**
+   * The field's settings.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  settings?: Maybe<Scalars['String']>;
+  /**
+   * Identifies the date and time when the object was last updated.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  updatedAt: Scalars['DateTime'];
+};
+
+/** Iteration field configuration for a project. */
+export type ProjectNextIterationFieldConfiguration = {
+  __typename?: 'ProjectNextIterationFieldConfiguration';
+  /**
+   * The iteration's completed iterations
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  completedIterations: Array<ProjectNextIterationFieldIteration>;
+  /**
+   * The iteration's duration in days
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  duration: Scalars['Int'];
+  /**
+   * The iteration's iterations
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  iterations: Array<ProjectNextIterationFieldIteration>;
+  /**
+   * The iteration's start day of the week
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  startDay: Scalars['Int'];
+};
+
+/** Iteration field iteration settings for a project. */
+export type ProjectNextIterationFieldIteration = {
+  __typename?: 'ProjectNextIterationFieldIteration';
+  /**
+   * The iteration's duration in days
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  duration: Scalars['Int'];
+  /**
+   * The iteration's ID.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  id: Scalars['String'];
+  /**
+   * The iteration's start date
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  startDate: Scalars['Date'];
+  /**
+   * The iteration's title.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  title: Scalars['String'];
+  /**
+   * The iteration's html title.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  titleHTML: Scalars['String'];
 };
 
 /** Properties by which the return project can be ordered. */
@@ -15395,6 +15633,72 @@ export type ProjectNextOwnerProjectsNextArgs = {
   last?: InputMaybe<Scalars['Int']>;
   query?: InputMaybe<Scalars['String']>;
   sortBy?: InputMaybe<ProjectNextOrderField>;
+};
+
+/** A single select field inside a project. */
+export type ProjectNextSingleSelectField = Node & ProjectNextFieldCommon & {
+  __typename?: 'ProjectNextSingleSelectField';
+  /**
+   * Identifies the date and time when the object was created.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  createdAt: Scalars['DateTime'];
+  /**
+   * The field's type.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  dataType: ProjectNextFieldType;
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  databaseId?: Maybe<Scalars['Int']>;
+  id: Scalars['ID'];
+  /**
+   * The project field's name.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  name: Scalars['String'];
+  /**
+   * Options for the single select field
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  options: Array<ProjectNextSingleSelectFieldOption>;
+  /**
+   * The project that contains this field.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  project: ProjectNext;
+  /**
+   * The field's settings.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  settings?: Maybe<Scalars['String']>;
+  /**
+   * Identifies the date and time when the object was last updated.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  updatedAt: Scalars['DateTime'];
+};
+
+/** Single select field option for a configuration for a project. */
+export type ProjectNextSingleSelectFieldOption = {
+  __typename?: 'ProjectNextSingleSelectFieldOption';
+  /**
+   * The option's ID.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  id: Scalars['String'];
+  /**
+   * The option's name.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  name: Scalars['String'];
+  /**
+   * The option's html name.
+   * @deprecated The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/, to find a suitable replacement. Removal on 2023-01-01 UTC.
+   */
+  nameHTML: Scalars['String'];
 };
 
 /** Ways in which lists of projects can be ordered upon return. */
@@ -16639,6 +16943,23 @@ export type PublicKeyEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<PublicKey>;
+};
+
+/** Autogenerated input type of PublishSponsorsTier */
+export type PublishSponsorsTierInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** The ID of the draft tier to publish. */
+  tierId: Scalars['ID'];
+};
+
+/** Autogenerated return type of PublishSponsorsTier */
+export type PublishSponsorsTierPayload = {
+  __typename?: 'PublishSponsorsTierPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The tier that was published. */
+  sponsorsTier?: Maybe<SponsorsTier>;
 };
 
 /** A repository pull request. */
@@ -18957,6 +19278,8 @@ export type RemoveReactionPayload = {
   clientMutationId?: Maybe<Scalars['String']>;
   /** The reaction object. */
   reaction?: Maybe<Reaction>;
+  /** The reaction groups for the subject. */
+  reactionGroups?: Maybe<Array<ReactionGroup>>;
   /** The reactable subject. */
   subject?: Maybe<Reactable>;
 };
@@ -20166,6 +20489,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   hasIssuesEnabled: Scalars['Boolean'];
   /** Indicates if the repository has the Projects feature enabled. */
   hasProjectsEnabled: Scalars['Boolean'];
+  /** Whether vulnerability alerts are enabled for the repository. */
+  hasVulnerabilityAlertsEnabled: Scalars['Boolean'];
   /** Indicates if the repository has wiki feature enabled. */
   hasWikiEnabled: Scalars['Boolean'];
   /** The repository's URL. */
@@ -21659,6 +21984,23 @@ export type RestrictedContribution = Contribution & {
   user: User;
 };
 
+/** Autogenerated input type of RetireSponsorsTier */
+export type RetireSponsorsTierInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** The ID of the published tier to retire. */
+  tierId: Scalars['ID'];
+};
+
+/** Autogenerated return type of RetireSponsorsTier */
+export type RetireSponsorsTierPayload = {
+  __typename?: 'RetireSponsorsTierPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The tier that was retired. */
+  sponsorsTier?: Maybe<SponsorsTier>;
+};
+
 /** A user, team, or app who has the ability to dismiss a review on a protected branch. */
 export type ReviewDismissalAllowance = Node & {
   __typename?: 'ReviewDismissalAllowance';
@@ -22422,7 +22764,7 @@ export type Sponsorable = {
   estimatedNextSponsorsPayoutInCents: Scalars['Int'];
   /** True if this user/organization has a GitHub Sponsors listing. */
   hasSponsorsListing: Scalars['Boolean'];
-  /** Check if the given account is sponsoring this user/organization. */
+  /** Whether the given account is sponsoring this user/organization. */
   isSponsoredBy: Scalars['Boolean'];
   /** True if the viewer is sponsored by this user/organization. */
   isSponsoringViewer: Scalars['Boolean'];
@@ -22436,15 +22778,9 @@ export type Sponsorable = {
   sponsorsActivities: SponsorsActivityConnection;
   /** The GitHub Sponsors listing for this user or organization. */
   sponsorsListing?: Maybe<SponsorsListing>;
-  /**
-   * The sponsorship from the viewer to this user/organization; that is, the
-   * sponsorship where you're the sponsor. Only returns a sponsorship if it is active.
-   */
+  /** The sponsorship from the viewer to this user/organization; that is, the sponsorship where you're the sponsor. */
   sponsorshipForViewerAsSponsor?: Maybe<Sponsorship>;
-  /**
-   * The sponsorship from this user/organization to the viewer; that is, the
-   * sponsorship you're receiving. Only returns a sponsorship if it is active.
-   */
+  /** The sponsorship from this user/organization to the viewer; that is, the sponsorship you're receiving. */
   sponsorshipForViewerAsSponsorable?: Maybe<Sponsorship>;
   /** List of sponsorship updates sent from this sponsorable to sponsors. */
   sponsorshipNewsletters: SponsorshipNewsletterConnection;
@@ -22452,6 +22788,12 @@ export type Sponsorable = {
   sponsorshipsAsMaintainer: SponsorshipConnection;
   /** This object's sponsorships as the sponsor. */
   sponsorshipsAsSponsor: SponsorshipConnection;
+  /**
+   * The amount in United States cents (e.g., 500 = $5.00 USD) that this entity has
+   * spent on GitHub to fund sponsorships. Only returns a value when viewed by the
+   * user themselves or by a user who can manage sponsorships for the requested organization.
+   */
+  totalSponsorshipAmountAsSponsorInCents?: Maybe<Scalars['Int']>;
   /** Whether or not the viewer is able to sponsor this user/organization. */
   viewerCanSponsor: Scalars['Boolean'];
   /** True if the viewer is sponsoring this user/organization. */
@@ -22502,6 +22844,18 @@ export type SponsorableSponsorsActivitiesArgs = {
 
 
 /** Entities that can sponsor or be sponsored through GitHub Sponsors. */
+export type SponsorableSponsorshipForViewerAsSponsorArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** Entities that can sponsor or be sponsored through GitHub Sponsors. */
+export type SponsorableSponsorshipForViewerAsSponsorableArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** Entities that can sponsor or be sponsored through GitHub Sponsors. */
 export type SponsorableSponsorshipNewslettersArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -22513,6 +22867,7 @@ export type SponsorableSponsorshipNewslettersArgs = {
 
 /** Entities that can sponsor or be sponsored through GitHub Sponsors. */
 export type SponsorableSponsorshipsAsMaintainerArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -22524,12 +22879,21 @@ export type SponsorableSponsorshipsAsMaintainerArgs = {
 
 /** Entities that can sponsor or be sponsored through GitHub Sponsors. */
 export type SponsorableSponsorshipsAsSponsorArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   maintainerLogins?: InputMaybe<Array<Scalars['String']>>;
   orderBy?: InputMaybe<SponsorshipOrder>;
+};
+
+
+/** Entities that can sponsor or be sponsored through GitHub Sponsors. */
+export type SponsorableTotalSponsorshipAmountAsSponsorInCentsArgs = {
+  since?: InputMaybe<Scalars['DateTime']>;
+  sponsorableLogins?: InputMaybe<Array<Scalars['String']>>;
+  until?: InputMaybe<Scalars['DateTime']>;
 };
 
 /** Entities that can be sponsored via GitHub Sponsors */
@@ -23175,6 +23539,12 @@ export type SponsorsListing = Node & {
   /** The current goal the maintainer is trying to reach with GitHub Sponsors, if any. */
   activeGoal?: Maybe<SponsorsGoal>;
   /**
+   * The Stripe Connect account currently in use for payouts for this Sponsors
+   * listing, if any. Will only return a value when queried by the maintainer
+   * themselves, or by an admin of the sponsorable organization.
+   */
+  activeStripeConnectAccount?: Maybe<StripeConnectAccount>;
+  /**
    * The name of the country or region with the maintainer's bank account or fiscal
    * host. Will only return a value when queried by the maintainer themselves, or
    * by an admin of the sponsorable organization.
@@ -23401,10 +23771,15 @@ export type Sponsorship = Node & {
   /** Identifies the date and time when the object was created. */
   createdAt: Scalars['DateTime'];
   id: Scalars['ID'];
+  /**
+   * Whether the sponsorship is active. False implies the sponsor is a past sponsor
+   * of the maintainer, while true implies they are a current sponsor.
+   */
+  isActive: Scalars['Boolean'];
   /** Whether this sponsorship represents a one-time payment versus a recurring sponsorship. */
   isOneTimePayment: Scalars['Boolean'];
   /**
-   * Check if the sponsor has chosen to receive sponsorship update emails sent from
+   * Whether the sponsor has chosen to receive sponsorship update emails sent from
    * the sponsorable. Only returns a non-null value when the viewer has permission to know this.
    */
   isSponsorOptedIntoEmail?: Maybe<Scalars['Boolean']>;
@@ -23465,6 +23840,8 @@ export type SponsorshipEdge = {
 /** An update sent to sponsors of a user or organization on GitHub Sponsors. */
 export type SponsorshipNewsletter = Node & {
   __typename?: 'SponsorshipNewsletter';
+  /** The author of the newsletter. */
+  author?: Maybe<User>;
   /** The contents of the newsletter, the message the sponsorable wanted to give. */
   body: Scalars['String'];
   /** Identifies the date and time when the object was created. */
@@ -23657,6 +24034,29 @@ export type StarredRepositoryEdge = {
   starredAt: Scalars['DateTime'];
 };
 
+/** Autogenerated input type of StartOrganizationMigration */
+export type StartOrganizationMigrationInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** The migration source access token. */
+  sourceAccessToken: Scalars['String'];
+  /** The URL of the organization to migrate. */
+  sourceOrgUrl: Scalars['URI'];
+  /** The ID of the enterprise the target organization belongs to. */
+  targetEnterpriseId: Scalars['ID'];
+  /** The name of the target organization. */
+  targetOrgName: Scalars['String'];
+};
+
+/** Autogenerated return type of StartOrganizationMigration */
+export type StartOrganizationMigrationPayload = {
+  __typename?: 'StartOrganizationMigrationPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** The new organization migration. */
+  orgMigration?: Maybe<OrganizationMigration>;
+};
+
 /** Autogenerated input type of StartRepositoryMigration */
 export type StartRepositoryMigrationInput = {
   /** The migration source access token. */
@@ -23839,6 +24239,32 @@ export type StatusState =
   | 'PENDING'
   /** Status is successful. */
   | 'SUCCESS';
+
+/** A Stripe Connect account for receiving sponsorship funds from GitHub Sponsors. */
+export type StripeConnectAccount = {
+  __typename?: 'StripeConnectAccount';
+  /** The account number used to identify this Stripe Connect account. */
+  accountId: Scalars['String'];
+  /**
+   * The name of the country or region of an external account, such as a bank
+   * account, tied to the Stripe Connect account. Will only return a value when
+   * queried by the maintainer of the associated GitHub Sponsors profile
+   * themselves, or by an admin of the sponsorable organization.
+   */
+  billingCountryOrRegion?: Maybe<Scalars['String']>;
+  /**
+   * The name of the country or region of the Stripe Connect account. Will only
+   * return a value when queried by the maintainer of the associated GitHub
+   * Sponsors profile themselves, or by an admin of the sponsorable organization.
+   */
+  countryOrRegion?: Maybe<Scalars['String']>;
+  /** Whether this Stripe Connect account is currently in use for the associated GitHub Sponsors profile. */
+  isActive: Scalars['Boolean'];
+  /** The GitHub Sponsors profile associated with this Stripe Connect account. */
+  sponsorsListing: SponsorsListing;
+  /** The URL to access this Stripe Connect account on Stripe's website. */
+  stripeDashboardUrl: Scalars['URI'];
+};
 
 /** Autogenerated input type of SubmitPullRequestReview */
 export type SubmitPullRequestReviewInput = {
@@ -26365,6 +26791,15 @@ export type UpdateProjectNextItemFieldInput = {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
   /**
+   * The id of the field to be updated. Only supports custom fields and status for now.
+   *
+   * **Upcoming Change on 2023-01-01 UTC**
+   * **Description:** `fieldConstraintId` will be removed. Follow the ProjectV2 guide at https://github.blog/changelog/2022-06-23-the-new-github-issues-june-23rd-update/,
+   * to find a suitable replacement.
+   * **Reason:** The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API.
+   */
+  fieldConstraintId?: InputMaybe<Scalars['ID']>;
+  /**
    * The id of the field to be updated.
    *
    * **Upcoming Change on 2023-01-01 UTC**
@@ -26373,6 +26808,14 @@ export type UpdateProjectNextItemFieldInput = {
    * **Reason:** The `ProjectNext` API is deprecated in favour of the more capable `ProjectV2` API.
    */
   fieldId?: InputMaybe<Scalars['ID']>;
+  /**
+   * The id of the field to be updated. Only supports custom fields and status for now.
+   *
+   * **Upcoming Change on 2022-10-01 UTC**
+   * **Description:** `fieldWithSettingId` will be removed. Use `fieldConstraintId` instead
+   * **Reason:** Renamed to fieldConstraintId to improve naming consistency.
+   */
+  fieldWithSettingId?: InputMaybe<Scalars['ID']>;
   /**
    * The id of the item to be updated. This field is required.
    *
@@ -26960,7 +27403,7 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectNextOwner
   isHireable: Scalars['Boolean'];
   /** Whether or not this user is a site administrator. */
   isSiteAdmin: Scalars['Boolean'];
-  /** Check if the given account is sponsoring this user/organization. */
+  /** Whether the given account is sponsoring this user/organization. */
   isSponsoredBy: Scalars['Boolean'];
   /** True if the viewer is sponsored by this user/organization. */
   isSponsoringViewer: Scalars['Boolean'];
@@ -27047,15 +27490,9 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectNextOwner
   sponsorsActivities: SponsorsActivityConnection;
   /** The GitHub Sponsors listing for this user or organization. */
   sponsorsListing?: Maybe<SponsorsListing>;
-  /**
-   * The sponsorship from the viewer to this user/organization; that is, the
-   * sponsorship where you're the sponsor. Only returns a sponsorship if it is active.
-   */
+  /** The sponsorship from the viewer to this user/organization; that is, the sponsorship where you're the sponsor. */
   sponsorshipForViewerAsSponsor?: Maybe<Sponsorship>;
-  /**
-   * The sponsorship from this user/organization to the viewer; that is, the
-   * sponsorship you're receiving. Only returns a sponsorship if it is active.
-   */
+  /** The sponsorship from this user/organization to the viewer; that is, the sponsorship you're receiving. */
   sponsorshipForViewerAsSponsorable?: Maybe<Sponsorship>;
   /** List of sponsorship updates sent from this sponsorable to sponsors. */
   sponsorshipNewsletters: SponsorshipNewsletterConnection;
@@ -27069,6 +27506,12 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectNextOwner
   status?: Maybe<UserStatus>;
   /** Repositories the user has contributed to, ordered by contribution rank, plus repositories the user has created */
   topRepositories: RepositoryConnection;
+  /**
+   * The amount in United States cents (e.g., 500 = $5.00 USD) that this entity has
+   * spent on GitHub to fund sponsorships. Only returns a value when viewed by the
+   * user themselves or by a user who can manage sponsorships for the requested organization.
+   */
+  totalSponsorshipAmountAsSponsorInCents?: Maybe<Scalars['Int']>;
   /** The user's Twitter username. */
   twitterUsername?: Maybe<Scalars['String']>;
   /** Identifies the date and time when the object was last updated. */
@@ -27452,6 +27895,18 @@ export type UserSponsorsActivitiesArgs = {
 
 
 /** A user is an individual's account on GitHub that owns repositories and can make new content. */
+export type UserSponsorshipForViewerAsSponsorArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** A user is an individual's account on GitHub that owns repositories and can make new content. */
+export type UserSponsorshipForViewerAsSponsorableArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** A user is an individual's account on GitHub that owns repositories and can make new content. */
 export type UserSponsorshipNewslettersArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -27463,6 +27918,7 @@ export type UserSponsorshipNewslettersArgs = {
 
 /** A user is an individual's account on GitHub that owns repositories and can make new content. */
 export type UserSponsorshipsAsMaintainerArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -27474,6 +27930,7 @@ export type UserSponsorshipsAsMaintainerArgs = {
 
 /** A user is an individual's account on GitHub that owns repositories and can make new content. */
 export type UserSponsorshipsAsSponsorArgs = {
+  activeOnly?: InputMaybe<Scalars['Boolean']>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -27502,6 +27959,14 @@ export type UserTopRepositoriesArgs = {
   last?: InputMaybe<Scalars['Int']>;
   orderBy: RepositoryOrder;
   since?: InputMaybe<Scalars['DateTime']>;
+};
+
+
+/** A user is an individual's account on GitHub that owns repositories and can make new content. */
+export type UserTotalSponsorshipAmountAsSponsorInCentsArgs = {
+  since?: InputMaybe<Scalars['DateTime']>;
+  sponsorableLogins?: InputMaybe<Array<Scalars['String']>>;
+  until?: InputMaybe<Scalars['DateTime']>;
 };
 
 
