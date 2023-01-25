@@ -1,11 +1,6 @@
 import { FullyQualifiedBranch } from "@git-filesystem/abstractions";
 import { getClient } from "./sdk/gql-client";
 
-export interface Result {
-  branchSha: string;
-  repoId: string;
-}
-
 export const getBranchSha = async (
   accessToken: string,
   fqBranch: FullyQualifiedBranch

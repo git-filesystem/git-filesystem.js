@@ -36,7 +36,7 @@ export const createCommit = async (
   const repoIsEmpty = !currentShaOnBranch;
 
   if (!currentShaOnBranch) {
-    currentShaOnBranch = await createInitialCommit(accessToken, branch);
+    currentShaOnBranch = await createInitialCommit(accessToken, branch, committer, author);
   }
 
   const baseTree = repoIsEmpty ? null : currentShaOnBranch;

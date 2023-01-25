@@ -62,8 +62,7 @@ export class GitHubCommitBuilder extends CommitBuilder {
   }
 
   public async readFile(path: string): Promise<string> {
-    this.ensureNotCommitted();
-
+    // TODO: public async readFile(path: string, tagName: string): Promise<string> {
     const currentActionForPath = this.currentActionForPath(path);
 
     if (!currentActionForPath) {
