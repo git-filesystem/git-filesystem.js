@@ -78,6 +78,13 @@ providers.forEach(provider =>
       repositoryNameWithOwner = `${userAccount}/${repositoryName}`;
     });
 
+    beforeEach(async () => {
+      if (process.env["CI"]) {
+        console.log("Detected running in a CI environment. Pausing before running next test");
+        await new Promise<void>(r => setTimeout(() => r(), 500));
+      }
+    });
+
     it(`should get the ${provider.name} client`, () => {
       const user: GitUser = {
         name: "git-filesystem-e2e",
