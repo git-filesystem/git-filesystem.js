@@ -41,7 +41,7 @@
     "cspell": "^6.6.1",
     "dotenv": "^16.0.1",
     "eslint": "~8.35.0",
-    "eslint-config-prettier": "8.6.0",
+    "eslint-config-prettier": "8.7.0",
     "jest": "^29.0.0",
     "jest-environment-jsdom": "^29.0.0",
     "nx": "15.0.4",
