@@ -36,7 +36,7 @@
     "@tobysmith568/prettier-config": "^2.0.0",
     "@types/jest": "^29.0.0",
     "@types/node": "18.15.1",
-    "@typescript-eslint/eslint-plugin": "5.54.1",
+    "@typescript-eslint/eslint-plugin": "5.55.0",
     "@typescript-eslint/parser": "5.53.0",
     "cspell": "^6.6.1",
     "dotenv": "^16.0.1",
