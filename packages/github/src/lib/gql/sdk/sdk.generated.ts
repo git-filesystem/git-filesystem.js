@@ -1047,6 +1047,8 @@ export type BranchProtectionRule = Node & {
   requireLastPushApproval: Scalars['Boolean'];
   /** Number of approving reviews required to update matching branches. */
   requiredApprovingReviewCount?: Maybe<Scalars['Int']>;
+  /** List of required deployment environments that must be deployed successfully to update matching branches */
+  requiredDeploymentEnvironments?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** List of required status check contexts that must pass for commits to be accepted to matching branches. */
   requiredStatusCheckContexts?: Maybe<Array<Maybe<Scalars['String']>>>;
   /** List of required status checks that must pass for commits to be accepted to matching branches. */
@@ -1059,6 +1061,8 @@ export type BranchProtectionRule = Node & {
   requiresCommitSignatures: Scalars['Boolean'];
   /** Are conversations required to be resolved before merging. */
   requiresConversationResolution: Scalars['Boolean'];
+  /** Does this branch require deployment to specific environments before merging */
+  requiresDeployments: Scalars['Boolean'];
   /** Are merge commits prohibited from being pushed to this branch. */
   requiresLinearHistory: Scalars['Boolean'];
   /** Are status checks required to update matching branches. */
@@ -3153,6 +3157,8 @@ export type CreateBranchProtectionRuleInput = {
   requireLastPushApproval?: InputMaybe<Scalars['Boolean']>;
   /** Number of approving reviews required to update matching branches. */
   requiredApprovingReviewCount?: InputMaybe<Scalars['Int']>;
+  /** The list of required deployment environments */
+  requiredDeploymentEnvironments?: InputMaybe<Array<Scalars['String']>>;
   /** List of required status check contexts that must pass for commits to be accepted to matching branches. */
   requiredStatusCheckContexts?: InputMaybe<Array<Scalars['String']>>;
   /** The list of required status checks */
@@ -3165,6 +3171,8 @@ export type CreateBranchProtectionRuleInput = {
   requiresCommitSignatures?: InputMaybe<Scalars['Boolean']>;
   /** Are conversations required to be resolved before merging. */
   requiresConversationResolution?: InputMaybe<Scalars['Boolean']>;
+  /** Are successful deployments required before merging. */
+  requiresDeployments?: InputMaybe<Scalars['Boolean']>;
   /** Are merge commits prohibited from being pushed to this branch. */
   requiresLinearHistory?: InputMaybe<Scalars['Boolean']>;
   /** Are status checks required to update matching branches. */
@@ -15064,6 +15072,8 @@ export type ProjectV2 = Closable & Node & Updatable & {
   shortDescription?: Maybe<Scalars['String']>;
   /** The teams the project is linked to. */
   teams: TeamConnection;
+  /** Returns true if this project is a template. */
+  template: Scalars['Boolean'];
   /** The project's name. */
   title: Scalars['String'];
   /** Identifies the date and time when the object was last updated. */
@@ -19962,6 +19972,7 @@ export type RepositoryCollaboratorsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  login?: InputMaybe<Scalars['String']>;
   query?: InputMaybe<Scalars['String']>;
 };
 
@@ -21963,6 +21974,62 @@ export type SmimeSignature = GitSignature & {
   /** True if the signature was made with GitHub's signing key. */
   wasSignedByGitHub: Scalars['Boolean'];
 };
+
+/** Social media profile associated with a user. */
+export type SocialAccount = {
+  __typename?: 'SocialAccount';
+  /** Name of the social media account as it appears on the profile. */
+  displayName: Scalars['String'];
+  /** Software or company that hosts the social media account. */
+  provider: SocialAccountProvider;
+  /** URL of the social media account. */
+  url: Scalars['URI'];
+};
+
+/** The connection type for SocialAccount. */
+export type SocialAccountConnection = {
+  __typename?: 'SocialAccountConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<SocialAccountEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<SocialAccount>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int'];
+};
+
+/** An edge in a connection. */
+export type SocialAccountEdge = {
+  __typename?: 'SocialAccountEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<SocialAccount>;
+};
+
+/** Software or company that hosts social media accounts. */
+export type SocialAccountProvider =
+  /** Social media and networking website. */
+  | 'FACEBOOK'
+  /** Catch-all for social media providers that do not yet have specific handling. */
+  | 'GENERIC'
+  /** Fork of Mastodon with a greater focus on local posting. */
+  | 'HOMETOWN'
+  /** Social media website with a focus on photo and video sharing. */
+  | 'INSTAGRAM'
+  /** Professional networking website. */
+  | 'LINKEDIN'
+  /** Open-source federated microblogging service. */
+  | 'MASTODON'
+  /** Social news aggregation and discussion website. */
+  | 'REDDIT'
+  /** Live-streaming service. */
+  | 'TWITCH'
+  /** Microblogging website. */
+  | 'TWITTER'
+  /** Online video platform. */
+  | 'YOUTUBE';
 
 /** Entities that can sponsor others via GitHub Sponsors */
 export type Sponsor = Organization | User;
@@ -25169,6 +25236,8 @@ export type UpdateBranchProtectionRuleInput = {
   requireLastPushApproval?: InputMaybe<Scalars['Boolean']>;
   /** Number of approving reviews required to update matching branches. */
   requiredApprovingReviewCount?: InputMaybe<Scalars['Int']>;
+  /** The list of required deployment environments */
+  requiredDeploymentEnvironments?: InputMaybe<Array<Scalars['String']>>;
   /** List of required status check contexts that must pass for commits to be accepted to matching branches. */
   requiredStatusCheckContexts?: InputMaybe<Array<Scalars['String']>>;
   /** The list of required status checks */
@@ -25181,6 +25250,8 @@ export type UpdateBranchProtectionRuleInput = {
   requiresCommitSignatures?: InputMaybe<Scalars['Boolean']>;
   /** Are conversations required to be resolved before merging. */
   requiresConversationResolution?: InputMaybe<Scalars['Boolean']>;
+  /** Are successful deployments required before merging. */
+  requiresDeployments?: InputMaybe<Scalars['Boolean']>;
   /** Are merge commits prohibited from being pushed to this branch. */
   requiresLinearHistory?: InputMaybe<Scalars['Boolean']>;
   /** Are status checks required to update matching branches. */
@@ -26560,6 +26631,8 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & P
   resourcePath: Scalars['URI'];
   /** Replies this user has saved */
   savedReplies?: Maybe<SavedReplyConnection>;
+  /** The user's social media accounts, ordered as they appear on the user's profile. */
+  socialAccounts: SocialAccountConnection;
   /** List of users and organizations this entity is sponsoring. */
   sponsoring: SponsorConnection;
   /** List of sponsors for this user or organization. */
@@ -26917,6 +26990,15 @@ export type UserSavedRepliesArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   orderBy?: InputMaybe<SavedReplyOrder>;
+};
+
+
+/** A user is an individual's account on GitHub that owns repositories and can make new content. */
+export type UserSocialAccountsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -27355,6 +27437,8 @@ export type WorkflowRun = Node & UniformResourceLocatable & {
   databaseId?: Maybe<Scalars['Int']>;
   /** The log of deployment reviews */
   deploymentReviews: DeploymentReviewConnection;
+  /** The event that triggered the workflow run */
+  event: Scalars['String'];
   id: Scalars['ID'];
   /** The pending deployment requests of all check runs in this workflow run */
   pendingDeploymentRequests: DeploymentRequestConnection;
