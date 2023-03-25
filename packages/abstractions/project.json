@@ -1,4 +1,5 @@
 {
+  "name": "abstractions",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/abstractions/src",
   "projectType": "library",
