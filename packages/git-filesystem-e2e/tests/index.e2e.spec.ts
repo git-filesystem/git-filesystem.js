@@ -60,17 +60,8 @@ providers.forEach(provider =>
     const testTagName = "test-tag";
 
     beforeAll(() => {
-      /* eslint-disable jest/no-standalone-expect */
-      /* eslint-disable @typescript-eslint/no-non-null-assertion */
-
-      expect(provider.accessToken).toBeDefined();
-      accessToken = provider.accessToken!;
-
-      expect(provider.user).toBeDefined();
-      userAccount = provider.user!;
-
-      /* eslint-enable jest/no-standalone-expect */
-      /* eslint-enable @typescript-eslint/no-non-null-assertion */
+      accessToken = provider.accessToken as string;
+      userAccount = provider.user as string;
 
       const currentMs = new Date().getUTCMilliseconds();
       const randomNumber = Math.floor(Math.random() * 1000) + 1;
@@ -81,8 +72,13 @@ providers.forEach(provider =>
     beforeEach(async () => {
       if (process.env["CI"]) {
         console.log("Detected running in a CI environment. Pausing before running next test");
-        await new Promise<void>(r => setTimeout(() => r(), 500));
+        await new Promise<void>(r => setTimeout(() => r(), 1000));
       }
+    });
+
+    it("should have the correct environment variables", () => {
+      expect(provider.accessToken).toBeDefined();
+      expect(provider.user).toBeDefined();
     });
 
     it(`should get the ${provider.name} client`, () => {
