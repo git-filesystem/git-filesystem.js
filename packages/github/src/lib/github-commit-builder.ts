@@ -5,6 +5,7 @@ import {
   MultipleFileActionsError,
   FileNotFoundError
 } from "@git-filesystem/abstractions";
+import { getDirectory, getDirectoryParts } from "@git-filesystem/utils";
 import { GitHubRepository } from "./github-repository";
 import { createCommit } from "./rest/create-commit";
 import { CommitAction, CommitActionType } from "./rest/create-tree";
@@ -15,6 +16,38 @@ export class GitHubCommitBuilder extends CommitBuilder {
 
   public constructor(private readonly repository: GitHubRepository) {
     super(repository.jsonConfig);
+  }
+
+  public getAllFiles(directory: string): Promise<string[]>;
+  public getAllFiles(directory: string, tagName: string): Promise<string[]>;
+  public async getAllFiles(directory: string, tagName?: string): Promise<string[]> {
+    const remoteFilesInDir = tagName
+      ? await this.repository.getAllFiles(directory, tagName)
+      : await this.repository.getAllFiles(directory);
+
+    const formattedDirectory = getDirectory(directory);
+
+    const localFilesInDir = this.commitActions
+      .filter(ca => ca.action === "CREATE" && getDirectory(ca.filePath) === formattedDirectory)
+      .map(ca => ca.filePath);
+
+    return [...remoteFilesInDir, ...localFilesInDir].sort();
+  }
+
+  public getAllDirectories(directory: string): Promise<string[]>;
+  public getAllDirectories(directory: string, tagName: string): Promise<string[]>;
+  public async getAllDirectories(directory: string, tagName?: string): Promise<string[]> {
+    const remoteDirsInDir = tagName
+      ? await this.repository.getAllDirectories(directory, tagName)
+      : await this.repository.getAllDirectories(directory);
+
+    const localFiles = this.commitActions
+      .filter(ca => ca.action === "CREATE")
+      .map(ca => ca.filePath);
+
+    const localDirsInDir = getChildDirectories(directory, localFiles);
+
+    return [...remoteDirsInDir, ...localDirsInDir].sort();
   }
 
   public createFile(path: string, content: string): void {
@@ -129,3 +162,25 @@ export class GitHubCommitBuilder extends CommitBuilder {
     return this.commitActions.find(ca => ca.filePath === path) ?? null;
   }
 }
+
+const getChildDirectories = (targetDirectory: string, allFiles: string[]): string[] => {
+  const targetDirectoryParts = getDirectoryParts(targetDirectory);
+
+  const result = new Set<string>();
+
+  for (const file of allFiles) {
+    const fileParts = getDirectoryParts(file);
+
+    if (fileParts.length <= targetDirectoryParts.length) {
+      continue;
+    }
+
+    const isChild = targetDirectoryParts.every((part, index) => part === fileParts[index]);
+
+    if (isChild) {
+      result.add(fileParts[targetDirectoryParts.length]);
+    }
+  }
+
+  return [...result];
+};

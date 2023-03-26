@@ -303,6 +303,54 @@ providers.forEach(provider =>
       });
     });
 
+    describe("getting files", () => {
+      it("should be able to get all files in the top-level directory of a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        const files = await repository.getAllFiles("/");
+
+        expect(files).toBeDefined();
+        expect(files).toHaveLength(2);
+        expect(files).toContain(testFilePath);
+        expect(files).toContain(jsonFilePath);
+      });
+
+      it("should be able to get all files in a directory of a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        const files = await repository.getAllFiles("deep");
+
+        expect(files).toBeDefined();
+        expect(files).toHaveLength(2);
+        expect(files).toContain(testFilePath);
+        expect(files).toContain(jsonFilePath);
+      });
+    });
+
+    describe("getting files from a tag", () => {
+      it("should be able to get all files in the top-level directory of a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        const files = await repository.getAllFiles("/", testTagName);
+
+        expect(files).toBeDefined();
+        expect(files).toHaveLength(2);
+        expect(files).toContain(testFilePath);
+        expect(files).toContain(jsonFilePath);
+      });
+
+      it("should be able to get all files in a directory of a repository", async () => {
+        const repository = client.getRepository(repositoryName, userAccount);
+
+        const files = await repository.getAllFiles("deep", testTagName);
+
+        expect(files).toBeDefined();
+        expect(files).toHaveLength(2);
+        expect(files).toContain(testFilePath);
+        expect(files).toContain(jsonFilePath);
+      });
+    });
+
     describe("commit builder", () => {
       it("should be able to read new file content before it's committed", async () => {
         const filePath = "temp-file-name.txt";

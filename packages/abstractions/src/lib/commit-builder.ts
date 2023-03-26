@@ -5,10 +5,17 @@ export abstract class CommitBuilder {
     this.jsonConfig = jsonConfig ?? defaultJsonConfig;
   }
 
-  abstract createFile(path: string, content: string): void;
-  abstract updateFile(path: string, content: string): void;
+  abstract getAllFiles(directory: string): Promise<string[]>;
+  abstract getAllFiles(directory: string, tagName: string): Promise<string[]>;
+
+  abstract getAllDirectories(directory: string): Promise<string[]>;
+  abstract getAllDirectories(directory: string, tagName: string): Promise<string[]>;
+
   abstract readFile(path: string): Promise<string>;
   abstract readFile(path: string, tagName: string): Promise<string>;
+
+  abstract createFile(path: string, content: string): void;
+  abstract updateFile(path: string, content: string): void;
   abstract deleteFile(path: string): void;
 
   abstract createCommit(commitMessage: string): Promise<string>;

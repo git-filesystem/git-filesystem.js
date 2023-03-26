@@ -7,10 +7,16 @@ import { FullyQualifiedBranch, FullyQualifiedTag } from "./ref";
 export interface ReadonlyRepository {
   readonly provider: Provider;
 
+  getAllTags(): Promise<FullyQualifiedTag[]>;
+
+  getAllFiles(directory: string): Promise<string[]>;
+  getAllFiles(directory: string, tagName: string): Promise<string[]>;
+
+  getAllDirectories(directory: string): Promise<string[]>;
+  getAllDirectories(directory: string, tagName: string): Promise<string[]>;
+
   readFile(path: string): Promise<string>;
   readFile(path: string, tagName: string): Promise<string>;
-
-  getAllTags(): Promise<FullyQualifiedTag[]>;
 
   readJsonFile<T>(path: string): Promise<T>;
   readJsonFile<T>(path: string, tagName: string): Promise<T>;

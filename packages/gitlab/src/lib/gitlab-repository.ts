@@ -12,10 +12,12 @@ import { GitLabCommitBuilder } from "./gitlab-commit-builder";
 import { allTags } from "./rest/all-tags";
 import { createTag } from "./rest/create-tag";
 import { deleteTag } from "./rest/delete-tag";
+import { getDirsInDir } from "./rest/get-dirs-in-dir";
 import { getFileContent } from "./rest/get-file-content";
+import { getFilesInDir } from "./rest/get-files-in-dir";
 
 export class GitLabRepository implements Repository {
-  provider: Provider = "gitlab";
+  readonly provider: Provider = "gitlab";
 
   public constructor(
     public readonly accessToken: string,
@@ -26,50 +28,51 @@ export class GitLabRepository implements Repository {
     public readonly jsonConfig?: JsonConfig
   ) {}
 
-  createCommitBuilder(): GitLabCommitBuilder {
-    return new GitLabCommitBuilder(this);
+  public async getAllTags(): Promise<FullyQualifiedTag[]> {
+    const newTagRefs = await allTags(
+      this.accessToken,
+      this.fqBranch.owner,
+      this.fqBranch.repositoryName
+    );
+
+    return newTagRefs.map(ref => ({
+      refType: "tag",
+      owner: this.fqBranch.owner,
+      repositoryName: this.fqBranch.repositoryName,
+      ref
+    }));
   }
 
-  async createFile(path: string, content: string): Promise<string> {
-    const commitBuilder = this.createCommitBuilder();
-    commitBuilder.createFile(path, content);
+  public getAllFiles(directory: string): Promise<string[]>;
+  public getAllFiles(directory: string, tagName: string): Promise<string[]>;
+  public async getAllFiles(directory: string, tagName?: string): Promise<string[]> {
+    const fqRef: FullyQualifiedRef = !tagName
+      ? this.fqBranch
+      : createFullyQualifiedTag(this.fqBranch.owner, this.fqBranch.repositoryName, tagName);
 
-    const commitMessage = `Create ${path}`;
-    return await commitBuilder.createCommit(commitMessage);
+    const files = await getFilesInDir(this.accessToken, directory, fqRef);
+    return files.map(file => file.name);
   }
 
-  async updateFile(path: string, content: string): Promise<string> {
-    const commitBuilder = this.createCommitBuilder();
-    commitBuilder.updateFile(path, content);
+  public getAllDirectories(directory: string): Promise<string[]>;
+  public getAllDirectories(directory: string, tagName: string): Promise<string[]>;
+  public async getAllDirectories(directory: string, tagName?: string): Promise<string[]> {
+    const fqRef: FullyQualifiedRef = !tagName
+      ? this.fqBranch
+      : createFullyQualifiedTag(this.fqBranch.owner, this.fqBranch.repositoryName, tagName);
 
-    const commitMessage = `Update ${path}`;
-    return await commitBuilder.createCommit(commitMessage);
+    const directories = await getDirsInDir(this.accessToken, directory, fqRef);
+    return directories.map(dir => dir.name);
   }
 
-  readFile(path: string): Promise<string>;
-  readFile(path: string, tagName: string): Promise<string>;
-  async readFile(path: string, tagName?: string): Promise<string> {
+  public readFile(path: string): Promise<string>;
+  public readFile(path: string, tagName: string): Promise<string>;
+  public async readFile(path: string, tagName?: string): Promise<string> {
     const fqRef: FullyQualifiedRef = !tagName
       ? this.fqBranch
       : createFullyQualifiedTag(this.fqBranch.owner, this.fqBranch.repositoryName, tagName);
 
     return await getFileContent(this.accessToken, fqRef, path);
-  }
-
-  async deleteFile(path: string): Promise<void> {
-    const commitBuilder = this.createCommitBuilder();
-    commitBuilder.deleteFile(path);
-
-    const commitMessage = `Delete ${path}`;
-    await commitBuilder.createCommit(commitMessage);
-  }
-
-  public async createJsonFile<T>(path: string, content: T): Promise<string> {
-    const commitBuilder = this.createCommitBuilder();
-    commitBuilder.createJsonFile(path, content);
-
-    const commitMessage = `Create ${path}`;
-    return await commitBuilder.createCommit(commitMessage);
   }
 
   public async readJsonFile<T>(path: string): Promise<T>;
@@ -85,6 +88,42 @@ export class GitLabRepository implements Repository {
     return JSON.parse(stringContent);
   }
 
+  public createCommitBuilder(): GitLabCommitBuilder {
+    return new GitLabCommitBuilder(this);
+  }
+
+  public async createFile(path: string, content: string): Promise<string> {
+    const commitBuilder = this.createCommitBuilder();
+    commitBuilder.createFile(path, content);
+
+    const commitMessage = `Create ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
+  }
+
+  public async updateFile(path: string, content: string): Promise<string> {
+    const commitBuilder = this.createCommitBuilder();
+    commitBuilder.updateFile(path, content);
+
+    const commitMessage = `Update ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
+  }
+
+  public async deleteFile(path: string): Promise<void> {
+    const commitBuilder = this.createCommitBuilder();
+    commitBuilder.deleteFile(path);
+
+    const commitMessage = `Delete ${path}`;
+    await commitBuilder.createCommit(commitMessage);
+  }
+
+  public async createJsonFile<T>(path: string, content: T): Promise<string> {
+    const commitBuilder = this.createCommitBuilder();
+    commitBuilder.createJsonFile(path, content);
+
+    const commitMessage = `Create ${path}`;
+    return await commitBuilder.createCommit(commitMessage);
+  }
+
   public async updateJsonFile<T>(path: string, content: T): Promise<string> {
     const commitBuilder = this.createCommitBuilder();
     commitBuilder.updateJsonFile(path, content);
@@ -93,7 +132,7 @@ export class GitLabRepository implements Repository {
     return await commitBuilder.createCommit(commitMessage);
   }
 
-  async createTag(name: string): Promise<FullyQualifiedTag> {
+  public async createTag(name: string): Promise<FullyQualifiedTag> {
     const newTagRef = await createTag(this.accessToken, this.fqBranch, name);
 
     return {
@@ -104,22 +143,7 @@ export class GitLabRepository implements Repository {
     };
   }
 
-  async getAllTags(): Promise<FullyQualifiedTag[]> {
-    const newTagRefs = await allTags(
-      this.accessToken,
-      this.fqBranch.owner,
-      this.fqBranch.repositoryName
-    );
-
-    return newTagRefs.map(ref => ({
-      refType: "tag",
-      owner: this.fqBranch.owner,
-      repositoryName: this.fqBranch.repositoryName,
-      ref
-    }));
-  }
-
-  async deleteTag(name: string): Promise<void> {
+  public async deleteTag(name: string): Promise<void> {
     await deleteTag(this.accessToken, this.fqBranch.owner, this.fqBranch.repositoryName, name);
   }
 }
