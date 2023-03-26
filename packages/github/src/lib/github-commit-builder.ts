@@ -5,7 +5,7 @@ import {
   MultipleFileActionsError,
   FileNotFoundError
 } from "@git-filesystem/abstractions";
-import { getDirectory, getDirectoryParts } from "@git-filesystem/utils";
+import { getDirectory, getChildDirectories } from "@git-filesystem/utils";
 import { GitHubRepository } from "./github-repository";
 import { createCommit } from "./rest/create-commit";
 import { CommitAction, CommitActionType } from "./rest/create-tree";
@@ -162,25 +162,3 @@ export class GitHubCommitBuilder extends CommitBuilder {
     return this.commitActions.find(ca => ca.filePath === path) ?? null;
   }
 }
-
-const getChildDirectories = (targetDirectory: string, allFiles: string[]): string[] => {
-  const targetDirectoryParts = getDirectoryParts(targetDirectory);
-
-  const result = new Set<string>();
-
-  for (const file of allFiles) {
-    const fileParts = getDirectoryParts(file);
-
-    if (fileParts.length <= targetDirectoryParts.length) {
-      continue;
-    }
-
-    const isChild = targetDirectoryParts.every((part, index) => part === fileParts[index]);
-
-    if (isChild) {
-      result.add(fileParts[targetDirectoryParts.length]);
-    }
-  }
-
-  return [...result];
-};

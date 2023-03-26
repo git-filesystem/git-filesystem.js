@@ -5,6 +5,7 @@ import {
   MultipleFileActionsError,
   FileNotFoundError
 } from "@git-filesystem/abstractions";
+import { getChildDirectories, getDirectory } from "@git-filesystem/utils";
 import { GitLabRepository } from "./gitlab-repository";
 import { CommitAction, CommitActionType, createCommit } from "./gql/create-commit";
 
@@ -14,6 +15,38 @@ export class GitLabCommitBuilder extends CommitBuilder {
 
   public constructor(private readonly repository: GitLabRepository) {
     super(repository.jsonConfig);
+  }
+
+  public getAllFiles(directory: string): Promise<string[]>;
+  public getAllFiles(directory: string, tagName: string): Promise<string[]>;
+  public async getAllFiles(directory: string, tagName?: string): Promise<string[]> {
+    const remoteFilesInDir = tagName
+      ? await this.repository.getAllFiles(directory, tagName)
+      : await this.repository.getAllFiles(directory);
+
+    const formattedDirectory = getDirectory(directory);
+
+    const localFilesInDir = this.commitActions
+      .filter(ca => ca.action === "CREATE" && getDirectory(ca.filePath) === formattedDirectory)
+      .map(ca => ca.filePath);
+
+    return [...remoteFilesInDir, ...localFilesInDir].sort();
+  }
+
+  public getAllDirectories(directory: string): Promise<string[]>;
+  public getAllDirectories(directory: string, tagName: string): Promise<string[]>;
+  public async getAllDirectories(directory: string, tagName?: string): Promise<string[]> {
+    const remoteDirsInDir = tagName
+      ? await this.repository.getAllDirectories(directory, tagName)
+      : await this.repository.getAllDirectories(directory);
+
+    const localFiles = this.commitActions
+      .filter(ca => ca.action === "CREATE")
+      .map(ca => ca.filePath);
+
+    const localDirsInDir = getChildDirectories(directory, localFiles);
+
+    return [...remoteDirsInDir, ...localDirsInDir].sort();
   }
 
   public createFile(path: string, content: string): void {

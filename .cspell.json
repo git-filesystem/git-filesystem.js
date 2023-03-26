@@ -10,12 +10,7 @@
   "dictionaryDefinitions": [],
   "dictionaries": ["en-gb", "node", "npm", "typescript"],
   "words": ["codegen"],
-  "ignoreWords": ["tobysmith", "git-filesystem"],
+  "ignoreWords": ["tobysmith", "git-filesystem", "swcrc"],
   "import": [],
-  "ignoreRegExpList": [
-    "esbenp\\.prettier-vscode",
-    "dbaeumer\\.vscode-eslint",
-    "@nrwl\\/",
-    "\\.lib\\.swcrc"
-  ]
+  "ignoreRegExpList": ["esbenp\\.prettier-vscode", "dbaeumer\\.vscode-eslint", "@nrwl\\/"]
 }

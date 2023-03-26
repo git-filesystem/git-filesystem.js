@@ -1,4 +1,4 @@
-import { getDirectory } from "./get-directory";
+import { getDirectory } from "../../src/lib/paths/get-directory";
 
 describe("getDirectory", () => {
   it("should return the directory of a file", () => {
