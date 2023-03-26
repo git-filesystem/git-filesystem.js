@@ -1,3 +1,4 @@
+import { randomUUID } from "crypto";
 import {
   Client,
   ClientFactory,
@@ -63,9 +64,7 @@ providers.forEach(provider =>
       accessToken = provider.accessToken as string;
       userAccount = provider.user as string;
 
-      const currentMs = new Date().getUTCMilliseconds();
-      const randomNumber = Math.floor(Math.random() * 1000) + 1;
-      repositoryName = `e2e-test-${currentMs}-${randomNumber}`;
+      repositoryName = `e2e-test-${randomUUID()}`;
       repositoryNameWithOwner = `${userAccount}/${repositoryName}`;
     });
 
