@@ -15,6 +15,11 @@ export type Scalars = {
   Float: number;
   /** A (potentially binary) string encoded using base64. */
   Base64String: any;
+  /**
+   * Represents non-fractional signed whole numeric values. Since the value may
+   * exceed the size of a 32-bit integer, it's encoded as a string.
+   */
+  BigInt: any;
   /** An ISO-8601 encoded date string. */
   Date: any;
   /** An ISO-8601 encoded UTC date string. */
@@ -478,8 +483,11 @@ export type AddPullRequestReviewThreadInput = {
   body: Scalars['String'];
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
-  /** The line of the blob to which the thread refers. The end of the line range for multi-line comments. */
-  line: Scalars['Int'];
+  /**
+   * The line of the blob to which the thread refers, required for line-level
+   * threads. The end of the line range for multi-line comments.
+   */
+  line?: InputMaybe<Scalars['Int']>;
   /** Path to the file being commented on. */
   path: Scalars['String'];
   /** The node ID of the pull request reviewing */
@@ -8208,6 +8216,8 @@ export type Issue = Assignable & Closable & Comment & Labelable & Lockable & Nod
   databaseId?: Maybe<Scalars['Int']>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']>;
   /** The hovercard information for this issue */
   hovercard: Hovercard;
   id: Scalars['ID'];
@@ -8478,6 +8488,8 @@ export type IssueComment = Comment & Deletable & Minimizable & Node & Reactable 
   databaseId?: Maybe<Scalars['Int']>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']>;
   id: Scalars['ID'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean'];
@@ -13879,6 +13891,7 @@ export type OrganizationTeamsArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   ldapMapped?: InputMaybe<Scalars['Boolean']>;
+  notificationSetting?: InputMaybe<TeamNotificationSetting>;
   orderBy?: InputMaybe<TeamOrder>;
   privacy?: InputMaybe<TeamPrivacy>;
   query?: InputMaybe<Scalars['String']>;
@@ -14687,6 +14700,8 @@ export type PinnedIssue = Node & {
   __typename?: 'PinnedIssue';
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']>;
   id: Scalars['ID'];
   /** The issue that was pinned. */
   issue: Issue;
@@ -21271,11 +21286,6 @@ export type RepositoryVulnerabilityAlert = Node & RepositoryNode & {
   dismissedAt?: Maybe<Scalars['DateTime']>;
   /** The user who dismissed the alert */
   dismisser?: Maybe<User>;
-  /**
-   * The reason the alert was marked as fixed.
-   * @deprecated The `fixReason` field is being removed. You can still use `fixedAt` and `dismissReason`. Removal on 2023-04-01 UTC.
-   */
-  fixReason?: Maybe<Scalars['String']>;
   /** When was the alert fixed? */
   fixedAt?: Maybe<Scalars['DateTime']>;
   id: Scalars['ID'];
@@ -24019,6 +24029,8 @@ export type Team = MemberStatusable & Node & Subscribable & {
   newTeamResourcePath: Scalars['URI'];
   /** The HTTP URL creating a new team */
   newTeamUrl: Scalars['URI'];
+  /** The notification setting that the team has set. */
+  notificationSetting: TeamNotificationSetting;
   /** The organization that owns this team. */
   organization: Organization;
   /** The parent team of the team. */
@@ -24688,6 +24700,13 @@ export type TeamMembershipType =
   | 'CHILD_TEAM'
   /** Includes only immediate members of the team. */
   | 'IMMEDIATE';
+
+/** The possible team notification values. */
+export type TeamNotificationSetting =
+  /** No one will receive notifications. */
+  | 'NOTIFICATIONS_DISABLED'
+  /** Everyone will receive notifications when the team is @mentioned. */
+  | 'NOTIFICATIONS_ENABLED';
 
 /** Ways in which team connections can be ordered. */
 export type TeamOrder = {
