@@ -8,6 +8,11 @@ export const deleteTag = async (
   tagName: string
 ): Promise<void> => {
   const urlEncodedRepoPath = urlEncode(owner + "/" + repositoryName);
+
+  if (tagName.startsWith("refs/tags/")) {
+    tagName = tagName.substring(10);
+  }
+
   const urlEncodedTagName = urlEncode(tagName);
 
   const path = `projects/${urlEncodedRepoPath}/repository/tags/${urlEncodedTagName}`;

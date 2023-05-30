@@ -20,16 +20,25 @@ export const createTag = async (
   const urlEncodedRepoPath = urlEncode(owner + "/" + repositoryName);
   const path = `projects/${urlEncodedRepoPath}/repository/tags`;
 
+  if (tagName.startsWith("refs/tags/")) {
+    tagName = tagName.substring(10);
+  }
+
   const params: Params = {
     tag_name: tagName,
     ref
   };
 
-  const { data } = await getRestClient(accessToken).post<Params, null, Response>(
-    path,
-    null,
-    params
-  );
+  try {
+    const { data } = await getRestClient(accessToken).post<Params, null, Response>(
+      path,
+      null,
+      params
+    );
 
-  return `refs/tags/${data.name}`;
+    return `refs/tags/${data.name}`;
+  } catch (e) {
+    console.log({ e });
+    throw e;
+  }
 };
