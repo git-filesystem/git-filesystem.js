@@ -1,5 +1,5 @@
 import { GraphQLClient } from 'graphql-request';
-import * as Dom from 'graphql-request/dist/types.dom';
+import { GraphQLClientRequestHeaders } from 'graphql-request/build/cjs/types';
 import { gql } from 'graphql-request';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
@@ -16294,22 +16294,22 @@ const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationTy
 
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
-    createCommit(variables: CreateCommitMutationVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<CreateCommitMutation> {
+    createCommit(variables: CreateCommitMutationVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<CreateCommitMutation> {
       return withWrapper((wrappedRequestHeaders) => client.request<CreateCommitMutation>(CreateCommitDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'createCommit', 'mutation');
     },
-    getAllRepositoriesForOwner(variables: GetAllRepositoriesForOwnerQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<GetAllRepositoriesForOwnerQuery> {
+    getAllRepositoriesForOwner(variables: GetAllRepositoriesForOwnerQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<GetAllRepositoriesForOwnerQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<GetAllRepositoriesForOwnerQuery>(GetAllRepositoriesForOwnerDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getAllRepositoriesForOwner', 'query');
     },
-    getAllRepositories(variables?: GetAllRepositoriesQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<GetAllRepositoriesQuery> {
+    getAllRepositories(variables?: GetAllRepositoriesQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<GetAllRepositoriesQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<GetAllRepositoriesQuery>(GetAllRepositoriesDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getAllRepositories', 'query');
     },
-    getNamespaceId(variables: GetNamespaceIdQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<GetNamespaceIdQuery> {
+    getNamespaceId(variables: GetNamespaceIdQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<GetNamespaceIdQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<GetNamespaceIdQuery>(GetNamespaceIdDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'getNamespaceId', 'query');
     },
-    isRepositoryArchived(variables: IsRepositoryArchivedQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<IsRepositoryArchivedQuery> {
+    isRepositoryArchived(variables: IsRepositoryArchivedQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<IsRepositoryArchivedQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<IsRepositoryArchivedQuery>(IsRepositoryArchivedDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'isRepositoryArchived', 'query');
     },
-    searchByFilePath(variables?: SearchByFilePathQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<SearchByFilePathQuery> {
+    searchByFilePath(variables?: SearchByFilePathQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<SearchByFilePathQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<SearchByFilePathQuery>(SearchByFilePathDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'searchByFilePath', 'query');
     }
   };
