@@ -48,7 +48,7 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "npx graphql-codegen --config .gql-codegen.yml",
-        "cwd": "./packages/github"
+        "cwd": "./packages/gitlab"
       }
     }
   },
