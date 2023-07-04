@@ -32,12 +32,12 @@
     "libsDir": "packages"
   },
   "pluginsConfig": {
-    "@nrwl/js": {
+    "@nx/js": {
       "analyzeSourceFiles": true
     }
   },
   "generators": {
-    "@nrwl/js:library": {
+    "@nx/js:library": {
       "compiler": "swc",
       "testEnvironment": "node"
     }
