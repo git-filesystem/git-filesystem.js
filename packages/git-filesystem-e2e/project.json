@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/git-filesystem-e2e/**/*.ts"],
@@ -13,7 +13,7 @@
       }
     },
     "e2e": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/git-filesystem-e2e"],
       "options": {
         "jestConfig": "packages/git-filesystem-e2e/jest.config.ts",
