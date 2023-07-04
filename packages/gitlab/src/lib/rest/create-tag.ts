@@ -16,6 +16,10 @@ export const createTag = async (
   branch: FullyQualifiedBranch,
   tagName: string
 ): Promise<FullyQualifiedTagRef> => {
+  if (tagName.startsWith("refs/tags/")) {
+    tagName = tagName.replace("refs/tags/", "");
+  }
+
   const { owner, repositoryName, ref } = branch;
   const urlEncodedRepoPath = urlEncode(owner + "/" + repositoryName);
   const path = `projects/${urlEncodedRepoPath}/repository/tags`;
