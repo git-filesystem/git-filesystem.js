@@ -14,11 +14,79 @@ export type Scalars = {
   Int: number;
   Float: number;
   /**
+   * A `AchievementsAchievementID` is a global ID. It is encoded as a string.
+   *
+   * An example `AchievementsAchievementID` is: `"gid://gitlab/Achievements::Achievement/1"`.
+   */
+  AchievementsAchievementID: any;
+  /**
+   * A `AchievementsUserAchievementID` is a global ID. It is encoded as a string.
+   *
+   * An example `AchievementsUserAchievementID` is: `"gid://gitlab/Achievements::UserAchievement/1"`.
+   */
+  AchievementsUserAchievementID: any;
+  /**
+   * A `AiModelID` is a global ID. It is encoded as a string.
+   *
+   * An example `AiModelID` is: `"gid://gitlab/Ai::Model/1"`.
+   */
+  AiModelID: any;
+  /**
+   * A `AlertManagementAlertID` is a global ID. It is encoded as a string.
+   *
+   * An example `AlertManagementAlertID` is: `"gid://gitlab/AlertManagement::Alert/1"`.
+   */
+  AlertManagementAlertID: any;
+  /**
    * A `AlertManagementHttpIntegrationID` is a global ID. It is encoded as a string.
    *
    * An example `AlertManagementHttpIntegrationID` is: `"gid://gitlab/AlertManagement::HttpIntegration/1"`.
    */
   AlertManagementHttpIntegrationID: any;
+  /**
+   * A `AnalyticsDevopsAdoptionEnabledNamespaceID` is a global ID. It is encoded as a string.
+   *
+   * An example `AnalyticsDevopsAdoptionEnabledNamespaceID` is: `"gid://gitlab/Analytics::DevopsAdoption::EnabledNamespace/1"`.
+   */
+  AnalyticsDevopsAdoptionEnabledNamespaceID: any;
+  /**
+   * A `AppSecFuzzingCoverageCorpusID` is a global ID. It is encoded as a string.
+   *
+   * An example `AppSecFuzzingCoverageCorpusID` is: `"gid://gitlab/AppSec::Fuzzing::Coverage::Corpus/1"`.
+   */
+  AppSecFuzzingCoverageCorpusID: any;
+  /**
+   * A `AuditEventsExternalAuditEventDestinationID` is a global ID. It is encoded as a string.
+   *
+   * An example `AuditEventsExternalAuditEventDestinationID` is: `"gid://gitlab/AuditEvents::ExternalAuditEventDestination/1"`.
+   */
+  AuditEventsExternalAuditEventDestinationID: any;
+  /**
+   * A `AuditEventsGoogleCloudLoggingConfigurationID` is a global ID. It is encoded as a string.
+   *
+   * An example `AuditEventsGoogleCloudLoggingConfigurationID` is:
+   * `"gid://gitlab/AuditEvents::GoogleCloudLoggingConfiguration/1"`.
+   */
+  AuditEventsGoogleCloudLoggingConfigurationID: any;
+  /**
+   * A `AuditEventsInstanceExternalAuditEventDestinationID` is a global ID. It is encoded as a string.
+   *
+   * An example `AuditEventsInstanceExternalAuditEventDestinationID` is:
+   * `"gid://gitlab/AuditEvents::InstanceExternalAuditEventDestination/1"`.
+   */
+  AuditEventsInstanceExternalAuditEventDestinationID: any;
+  /**
+   * A `AuditEventsStreamingHeaderID` is a global ID. It is encoded as a string.
+   *
+   * An example `AuditEventsStreamingHeaderID` is: `"gid://gitlab/AuditEvents::Streaming::Header/1"`.
+   */
+  AuditEventsStreamingHeaderID: any;
+  /**
+   * A `AuditEventsStreamingInstanceHeaderID` is a global ID. It is encoded as a string.
+   *
+   * An example `AuditEventsStreamingInstanceHeaderID` is: `"gid://gitlab/AuditEvents::Streaming::InstanceHeader/1"`.
+   */
+  AuditEventsStreamingInstanceHeaderID: any;
   /**
    * A `AwardableID` is a global ID. It is encoded as a string.
    *
@@ -37,11 +105,35 @@ export type Scalars = {
    */
   BoardID: any;
   /**
+   * A `BoardsEpicBoardID` is a global ID. It is encoded as a string.
+   *
+   * An example `BoardsEpicBoardID` is: `"gid://gitlab/Boards::EpicBoard/1"`.
+   */
+  BoardsEpicBoardID: any;
+  /**
+   * A `BoardsEpicListID` is a global ID. It is encoded as a string.
+   *
+   * An example `BoardsEpicListID` is: `"gid://gitlab/Boards::EpicList/1"`.
+   */
+  BoardsEpicListID: any;
+  /**
    * A `CiBuildID` is a global ID. It is encoded as a string.
    *
    * An example `CiBuildID` is: `"gid://gitlab/Ci::Build/1"`.
    */
   CiBuildID: any;
+  /**
+   * A `CiCatalogResourceID` is a global ID. It is encoded as a string.
+   *
+   * An example `CiCatalogResourceID` is: `"gid://gitlab/Ci::Catalog::Resource/1"`.
+   */
+  CiCatalogResourceID: any;
+  /**
+   * A `CiJobArtifactID` is a global ID. It is encoded as a string.
+   *
+   * An example `CiJobArtifactID` is: `"gid://gitlab/Ci::JobArtifact/1"`.
+   */
+  CiJobArtifactID: any;
   /**
    * A `CiPipelineID` is a global ID. It is encoded as a string.
    *
@@ -49,11 +141,29 @@ export type Scalars = {
    */
   CiPipelineID: any;
   /**
+   * A `CiPipelineScheduleID` is a global ID. It is encoded as a string.
+   *
+   * An example `CiPipelineScheduleID` is: `"gid://gitlab/Ci::PipelineSchedule/1"`.
+   */
+  CiPipelineScheduleID: any;
+  /**
    * A `CiRunnerID` is a global ID. It is encoded as a string.
    *
    * An example `CiRunnerID` is: `"gid://gitlab/Ci::Runner/1"`.
    */
   CiRunnerID: any;
+  /**
+   * A `CiRunnerManagerID` is a global ID. It is encoded as a string.
+   *
+   * An example `CiRunnerManagerID` is: `"gid://gitlab/Ci::RunnerManager/1"`.
+   */
+  CiRunnerManagerID: any;
+  /**
+   * A `CiStageID` is a global ID. It is encoded as a string.
+   *
+   * An example `CiStageID` is: `"gid://gitlab/Ci::Stage/1"`.
+   */
+  CiStageID: any;
   /**
    * A `ClustersAgentID` is a global ID. It is encoded as a string.
    *
@@ -79,6 +189,12 @@ export type Scalars = {
    */
   Color: any;
   /**
+   * A `ComplianceManagementFrameworkID` is a global ID. It is encoded as a string.
+   *
+   * An example `ComplianceManagementFrameworkID` is: `"gid://gitlab/ComplianceManagement::Framework/1"`.
+   */
+  ComplianceManagementFrameworkID: any;
+  /**
    * A `ContainerRepositoryID` is a global ID. It is encoded as a string.
    *
    * An example `ContainerRepositoryID` is: `"gid://gitlab/ContainerRepository/1"`.
@@ -102,6 +218,42 @@ export type Scalars = {
    * An example `CustomerRelationsOrganizationID` is: `"gid://gitlab/CustomerRelations::Organization/1"`.
    */
   CustomerRelationsOrganizationID: any;
+  /**
+   * A `DastProfileID` is a global ID. It is encoded as a string.
+   *
+   * An example `DastProfileID` is: `"gid://gitlab/Dast::Profile/1"`.
+   */
+  DastProfileID: any;
+  /**
+   * A `DastProfileScheduleID` is a global ID. It is encoded as a string.
+   *
+   * An example `DastProfileScheduleID` is: `"gid://gitlab/Dast::ProfileSchedule/1"`.
+   */
+  DastProfileScheduleID: any;
+  /**
+   * A `DastScannerProfileID` is a global ID. It is encoded as a string.
+   *
+   * An example `DastScannerProfileID` is: `"gid://gitlab/DastScannerProfile/1"`.
+   */
+  DastScannerProfileID: any;
+  /**
+   * A `DastSiteProfileID` is a global ID. It is encoded as a string.
+   *
+   * An example `DastSiteProfileID` is: `"gid://gitlab/DastSiteProfile/1"`.
+   */
+  DastSiteProfileID: any;
+  /**
+   * A `DastSiteTokenID` is a global ID. It is encoded as a string.
+   *
+   * An example `DastSiteTokenID` is: `"gid://gitlab/DastSiteToken/1"`.
+   */
+  DastSiteTokenID: any;
+  /**
+   * A `DastSiteValidationID` is a global ID. It is encoded as a string.
+   *
+   * An example `DastSiteValidationID` is: `"gid://gitlab/DastSiteValidation/1"`.
+   */
+  DastSiteValidationID: any;
   /** Date represented in ISO 8601 */
   Date: any;
   /**
@@ -110,6 +262,18 @@ export type Scalars = {
    * An example `DependencyProxyManifestID` is: `"gid://gitlab/DependencyProxy::Manifest/1"`.
    */
   DependencyProxyManifestID: any;
+  /**
+   * A `DeploymentID` is a global ID. It is encoded as a string.
+   *
+   * An example `DeploymentID` is: `"gid://gitlab/Deployment/1"`.
+   */
+  DeploymentID: any;
+  /**
+   * A `DescriptionVersionID` is a global ID. It is encoded as a string.
+   *
+   * An example `DescriptionVersionID` is: `"gid://gitlab/DescriptionVersion/1"`.
+   */
+  DescriptionVersionID: any;
   /**
    * A `DesignManagementDesignAtVersionID` is a global ID. It is encoded as a string.
    *
@@ -147,11 +311,35 @@ export type Scalars = {
    */
   Duration: any;
   /**
+   * A `EmailID` is a global ID. It is encoded as a string.
+   *
+   * An example `EmailID` is: `"gid://gitlab/Email/1"`.
+   */
+  EmailID: any;
+  /**
    * A `EnvironmentID` is a global ID. It is encoded as a string.
    *
    * An example `EnvironmentID` is: `"gid://gitlab/Environment/1"`.
    */
   EnvironmentID: any;
+  /**
+   * A `EpicID` is a global ID. It is encoded as a string.
+   *
+   * An example `EpicID` is: `"gid://gitlab/Epic/1"`.
+   */
+  EpicID: any;
+  /**
+   * A `EpicTreeSortingID` is a global ID. It is encoded as a string.
+   *
+   * An example `EpicTreeSortingID` is: `"gid://gitlab/EpicTreeSorting/1"`.
+   */
+  EpicTreeSortingID: any;
+  /**
+   * A `GeoBaseRegistryID` is a global ID. It is encoded as a string.
+   *
+   * An example `GeoBaseRegistryID` is: `"gid://gitlab/Geo::BaseRegistry/1"`.
+   */
+  GeoBaseRegistryID: any;
   /**
    * A `GitlabErrorTrackingDetailedErrorID` is a global ID. It is encoded as a string.
    *
@@ -162,7 +350,11 @@ export type Scalars = {
    * A global identifier.
    *
    * A global identifier represents an object uniquely across the application.
-   * An example of such an identifier is `"gid://gitlab/User/1"`.
+   * An example of a global identifier is `"gid://gitlab/User/1"`.
+   *
+   * `gid://gitlab` stands for the root name.
+   * `User` is the name of the ActiveRecord class of the record.
+   * `1` is the record id as per the id in the db table.
    *
    * Global identifiers are encoded as strings.
    */
@@ -176,11 +368,47 @@ export type Scalars = {
   /** An ISO 8601-encoded date */
   ISO8601Date: any;
   /**
+   * A `IncidentManagementEscalationPolicyID` is a global ID. It is encoded as a string.
+   *
+   * An example `IncidentManagementEscalationPolicyID` is: `"gid://gitlab/IncidentManagement::EscalationPolicy/1"`.
+   */
+  IncidentManagementEscalationPolicyID: any;
+  /**
+   * A `IncidentManagementEscalationRuleID` is a global ID. It is encoded as a string.
+   *
+   * An example `IncidentManagementEscalationRuleID` is: `"gid://gitlab/IncidentManagement::EscalationRule/1"`.
+   */
+  IncidentManagementEscalationRuleID: any;
+  /**
+   * A `IncidentManagementIssuableResourceLinkID` is a global ID. It is encoded as a string.
+   *
+   * An example `IncidentManagementIssuableResourceLinkID` is: `"gid://gitlab/IncidentManagement::IssuableResourceLink/1"`.
+   */
+  IncidentManagementIssuableResourceLinkID: any;
+  /**
+   * A `IncidentManagementOncallParticipantID` is a global ID. It is encoded as a string.
+   *
+   * An example `IncidentManagementOncallParticipantID` is: `"gid://gitlab/IncidentManagement::OncallParticipant/1"`.
+   */
+  IncidentManagementOncallParticipantID: any;
+  /**
+   * A `IncidentManagementOncallRotationID` is a global ID. It is encoded as a string.
+   *
+   * An example `IncidentManagementOncallRotationID` is: `"gid://gitlab/IncidentManagement::OncallRotation/1"`.
+   */
+  IncidentManagementOncallRotationID: any;
+  /**
    * A `IncidentManagementTimelineEventID` is a global ID. It is encoded as a string.
    *
    * An example `IncidentManagementTimelineEventID` is: `"gid://gitlab/IncidentManagement::TimelineEvent/1"`.
    */
   IncidentManagementTimelineEventID: any;
+  /**
+   * A `IncidentManagementTimelineEventTagID` is a global ID. It is encoded as a string.
+   *
+   * An example `IncidentManagementTimelineEventTagID` is: `"gid://gitlab/IncidentManagement::TimelineEventTag/1"`.
+   */
+  IncidentManagementTimelineEventTagID: any;
   /**
    * A `IntegrationsPrometheusID` is a global ID. It is encoded as a string.
    *
@@ -200,6 +428,25 @@ export type Scalars = {
    * An example `IssueID` is: `"gid://gitlab/Issue/1"`.
    */
   IssueID: any;
+  /**
+   * A `IssueParentID` is a global ID. It is encoded as a string.
+   *
+   * An example `IssueParentID` is: `"gid://gitlab/IssueParent/1"`.
+   */
+  IssueParentID: any;
+  /**
+   * A `IterationID` is a global ID. It is encoded as a string.
+   *
+   * An example `IterationID` is: `"gid://gitlab/Iteration/1"`.
+   * The older format `"gid://gitlab/EEIteration/1"` was deprecated in 13.3.
+   */
+  IterationID: any;
+  /**
+   * A `IterationsCadenceID` is a global ID. It is encoded as a string.
+   *
+   * An example `IterationsCadenceID` is: `"gid://gitlab/Iterations::Cadence/1"`.
+   */
+  IterationsCadenceID: any;
   /** Represents untyped JSON */
   JSON: any;
   /**
@@ -208,6 +455,8 @@ export type Scalars = {
    * An example `CommitStatusID` is: `"gid://gitlab/CommitStatus/1"`.
    */
   JobID: any;
+  /** JSON object as raw string */
+  JsonString: any;
   /**
    * A `LabelID` is a global ID. It is encoded as a string.
    *
@@ -238,6 +487,18 @@ export type Scalars = {
    * An example `MilestoneID` is: `"gid://gitlab/Milestone/1"`.
    */
   MilestoneID: any;
+  /**
+   * A `NamespaceID` is a global ID. It is encoded as a string.
+   *
+   * An example `NamespaceID` is: `"gid://gitlab/Namespace/1"`.
+   */
+  NamespaceID: any;
+  /**
+   * A `NamespacesNamespaceBanID` is a global ID. It is encoded as a string.
+   *
+   * An example `NamespacesNamespaceBanID` is: `"gid://gitlab/Namespaces::NamespaceBan/1"`.
+   */
+  NamespacesNamespaceBanID: any;
   /**
    * A `NoteID` is a global ID. It is encoded as a string.
    *
@@ -311,6 +572,14 @@ export type Scalars = {
    */
   PackagesPypiMetadatumID: any;
   /**
+   * A `PathLockID` is a global ID. It is encoded as a string.
+   *
+   * An example `PathLockID` is: `"gid://gitlab/PathLock/1"`.
+   */
+  PathLockID: any;
+  /** String or integer. */
+  PayloadAlertFieldPathSegment: any;
+  /**
    * A `ProjectID` is a global ID. It is encoded as a string.
    *
    * An example `ProjectID` is: `"gid://gitlab/Project/1"`.
@@ -329,11 +598,29 @@ export type Scalars = {
    */
   ReleasesLinkID: any;
   /**
+   * A `RemoteDevelopmentWorkspaceID` is a global ID. It is encoded as a string.
+   *
+   * An example `RemoteDevelopmentWorkspaceID` is: `"gid://gitlab/RemoteDevelopment::Workspace/1"`.
+   */
+  RemoteDevelopmentWorkspaceID: any;
+  /**
+   * A `SecurityTrainingProviderID` is a global ID. It is encoded as a string.
+   *
+   * An example `SecurityTrainingProviderID` is: `"gid://gitlab/Security::TrainingProvider/1"`.
+   */
+  SecurityTrainingProviderID: any;
+  /**
    * A `SnippetID` is a global ID. It is encoded as a string.
    *
    * An example `SnippetID` is: `"gid://gitlab/Snippet/1"`.
    */
   SnippetID: any;
+  /**
+   * A `SystemNoteMetadataID` is a global ID. It is encoded as a string.
+   *
+   * An example `SystemNoteMetadataID` is: `"gid://gitlab/SystemNoteMetadata/1"`.
+   */
+  SystemNoteMetadataID: any;
   /**
    * A `TerraformStateID` is a global ID. It is encoded as a string.
    *
@@ -388,6 +675,24 @@ export type Scalars = {
    */
   UsersSavedReplyID: any;
   /**
+   * A `VulnerabilitiesExternalIssueLinkID` is a global ID. It is encoded as a string.
+   *
+   * An example `VulnerabilitiesExternalIssueLinkID` is: `"gid://gitlab/Vulnerabilities::ExternalIssueLink/1"`.
+   */
+  VulnerabilitiesExternalIssueLinkID: any;
+  /**
+   * A `VulnerabilitiesScannerID` is a global ID. It is encoded as a string.
+   *
+   * An example `VulnerabilitiesScannerID` is: `"gid://gitlab/Vulnerabilities::Scanner/1"`.
+   */
+  VulnerabilitiesScannerID: any;
+  /**
+   * A `VulnerabilityID` is a global ID. It is encoded as a string.
+   *
+   * An example `VulnerabilityID` is: `"gid://gitlab/Vulnerability/1"`.
+   */
+  VulnerabilityID: any;
+  /**
    * A `WorkItemID` is a global ID. It is encoded as a string.
    *
    * An example `WorkItemID` is: `"gid://gitlab/WorkItem/1"`.
@@ -415,6 +720,8 @@ export type AccessLevel = {
 
 /** Access level to a resource */
 export type AccessLevelEnum =
+  /** Admin access. */
+  | 'ADMIN'
   /** Developer access. */
   | 'DEVELOPER'
   /** Guest access. */
@@ -430,10 +737,229 @@ export type AccessLevelEnum =
   /** Reporter access. */
   | 'REPORTER';
 
+/** Representation of a GitLab group. */
+export type AccessLevelGroup = {
+  __typename?: 'AccessLevelGroup';
+  /** Avatar URL of the group. */
+  avatarUrl?: Maybe<Scalars['String']>;
+  /** ID of the group. */
+  id: Scalars['ID'];
+  /** Name of the group. */
+  name: Scalars['String'];
+  /** Parent group. */
+  parent?: Maybe<AccessLevelGroup>;
+  /** Web URL of the group. */
+  webUrl: Scalars['String'];
+};
+
+/** Representation of a GitLab user. */
+export type AccessLevelUser = {
+  __typename?: 'AccessLevelUser';
+  /** URL of the user's avatar. */
+  avatarUrl?: Maybe<Scalars['String']>;
+  /** ID of the user. */
+  id: Scalars['ID'];
+  /**
+   * Human-readable name of the user.
+   * Returns `****` if the user is a project bot and the requester does not have permission to view the project.
+   */
+  name: Scalars['String'];
+  /** User's public email. */
+  publicEmail?: Maybe<Scalars['String']>;
+  /** Username of the user. Unique within this instance of GitLab. */
+  username: Scalars['String'];
+  /** Web path of the user. */
+  webPath: Scalars['String'];
+  /** Web URL of the user. */
+  webUrl: Scalars['String'];
+};
+
+export type Achievement = {
+  __typename?: 'Achievement';
+  /** URL to avatar of the achievement. */
+  avatarUrl?: Maybe<Scalars['String']>;
+  /** Timestamp the achievement was created. */
+  createdAt: Scalars['Time'];
+  /** Description or notes for the achievement. */
+  description?: Maybe<Scalars['String']>;
+  /** ID of the achievement. */
+  id: Scalars['AchievementsAchievementID'];
+  /** Name of the achievement. */
+  name: Scalars['String'];
+  /** Namespace of the achievement. */
+  namespace?: Maybe<Namespace>;
+  /** Timestamp the achievement was last updated. */
+  updatedAt: Scalars['Time'];
+  /**
+   * Recipients for the achievement. Introduced in 15.10: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  userAchievements?: Maybe<UserAchievementConnection>;
+};
+
+
+export type AchievementUserAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for Achievement. */
+export type AchievementConnection = {
+  __typename?: 'AchievementConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<AchievementEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Achievement>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type AchievementEdge = {
+  __typename?: 'AchievementEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Achievement>;
+};
+
+/** Autogenerated input type of AchievementsAward */
+export type AchievementsAwardInput = {
+  /** Global ID of the achievement being awarded. */
+  achievementId: Scalars['AchievementsAchievementID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the user being awarded the achievement. */
+  userId: Scalars['UserID'];
+};
+
+/** Autogenerated return type of AchievementsAward */
+export type AchievementsAwardPayload = {
+  __typename?: 'AchievementsAwardPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Achievement award. */
+  userAchievement?: Maybe<UserAchievement>;
+};
+
+/** Autogenerated input type of AchievementsCreate */
+export type AchievementsCreateInput = {
+  /** Avatar for the achievement. */
+  avatar?: InputMaybe<Scalars['Upload']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of or notes for the achievement. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Name for the achievement. */
+  name: Scalars['String'];
+  /** Namespace for the achievement. */
+  namespaceId: Scalars['NamespaceID'];
+};
+
+/** Autogenerated return type of AchievementsCreate */
+export type AchievementsCreatePayload = {
+  __typename?: 'AchievementsCreatePayload';
+  /** Achievement created. */
+  achievement?: Maybe<Achievement>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of AchievementsDelete */
+export type AchievementsDeleteInput = {
+  /** Global ID of the achievement being deleted. */
+  achievementId: Scalars['AchievementsAchievementID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of AchievementsDelete */
+export type AchievementsDeletePayload = {
+  __typename?: 'AchievementsDeletePayload';
+  /** Achievement. */
+  achievement?: Maybe<Achievement>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of AchievementsRevoke */
+export type AchievementsRevokeInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the user achievement being revoked. */
+  userAchievementId: Scalars['AchievementsUserAchievementID'];
+};
+
+/** Autogenerated return type of AchievementsRevoke */
+export type AchievementsRevokePayload = {
+  __typename?: 'AchievementsRevokePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Achievement award. */
+  userAchievement?: Maybe<UserAchievement>;
+};
+
+/** Autogenerated input type of AchievementsUpdate */
+export type AchievementsUpdateInput = {
+  /** Global ID of the achievement being updated. */
+  achievementId: Scalars['AchievementsAchievementID'];
+  /** Avatar for the achievement. */
+  avatar?: InputMaybe<Scalars['Upload']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of or notes for the achievement. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Name for the achievement. */
+  name?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of AchievementsUpdate */
+export type AchievementsUpdatePayload = {
+  __typename?: 'AchievementsUpdatePayload';
+  /** Achievement. */
+  achievement?: Maybe<Achievement>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of AddProjectToSecurityDashboard */
+export type AddProjectToSecurityDashboardInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the project to be added to Instance Security Dashboard. */
+  id: Scalars['ProjectID'];
+};
+
+/** Autogenerated return type of AddProjectToSecurityDashboard */
+export type AddProjectToSecurityDashboardPayload = {
+  __typename?: 'AddProjectToSecurityDashboardPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Project that was added to the Instance Security Dashboard. */
+  project?: Maybe<Project>;
+};
+
 /** Autogenerated input type of AdminSidekiqQueuesDeleteJobs */
 export type AdminSidekiqQueuesDeleteJobsInput = {
   /** Delete jobs matching artifact_size in the context metadata. */
   artifactSize?: InputMaybe<Scalars['String']>;
+  /** Delete jobs matching artifact_used_cdn in the context metadata. */
+  artifactUsedCdn?: InputMaybe<Scalars['String']>;
   /** Delete jobs matching artifacts_dependencies_count in the context metadata. */
   artifactsDependenciesCount?: InputMaybe<Scalars['String']>;
   /** Delete jobs matching artifacts_dependencies_size in the context metadata. */
@@ -448,6 +974,8 @@ export type AdminSidekiqQueuesDeleteJobsInput = {
   featureCategory?: InputMaybe<Scalars['String']>;
   /** Delete jobs matching job_id in the context metadata. */
   jobId?: InputMaybe<Scalars['String']>;
+  /** Delete jobs matching merge_action_status in the context metadata. */
+  mergeActionStatus?: InputMaybe<Scalars['String']>;
   /** Delete jobs matching pipeline_id in the context metadata. */
   pipelineId?: InputMaybe<Scalars['String']>;
   /** Delete jobs matching project in the context metadata. */
@@ -462,8 +990,12 @@ export type AdminSidekiqQueuesDeleteJobsInput = {
   rootCallerId?: InputMaybe<Scalars['String']>;
   /** Delete jobs matching root_namespace in the context metadata. */
   rootNamespace?: InputMaybe<Scalars['String']>;
+  /** Delete jobs matching subscription_plan in the context metadata. */
+  subscriptionPlan?: InputMaybe<Scalars['String']>;
   /** Delete jobs matching user in the context metadata. */
   user?: InputMaybe<Scalars['String']>;
+  /** Delete jobs matching user_id in the context metadata. */
+  userId?: InputMaybe<Scalars['String']>;
   /** Delete jobs with the given worker class. */
   workerClass?: InputMaybe<Scalars['String']>;
 };
@@ -526,11 +1058,213 @@ export type AgentTokenStatus =
   /** Revoked agent token. */
   | 'REVOKED';
 
+/** Autogenerated input type of AiAction */
+export type AiActionInput = {
+  /** Input for analyze_ci_job_failure AI action. */
+  analyzeCiJobFailure?: InputMaybe<AnalyzeCiJobFailureInput>;
+  /** Input for chat AI action. */
+  chat?: InputMaybe<AiChatInput>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Input for explain_code AI action. */
+  explainCode?: InputMaybe<AiExplainCodeInput>;
+  /** Input for explain_vulnerability AI action. */
+  explainVulnerability?: InputMaybe<AiExplainVulnerabilityInput>;
+  /** Input for fill_in_merge_request_template AI action. */
+  fillInMergeRequestTemplate?: InputMaybe<AiFillInMergeRequestTemplateInput>;
+  /** Input for generate_commit_message AI action. */
+  generateCommitMessage?: InputMaybe<AiGenerateCommitMessageInput>;
+  /** Input for generate_description AI action. */
+  generateDescription?: InputMaybe<AiGenerateDescriptionInput>;
+  /** Input for generate_test_file AI action. */
+  generateTestFile?: InputMaybe<GenerateTestFileInput>;
+  /** Indicates the response format. */
+  markupFormat?: InputMaybe<MarkupFormat>;
+  /** Input for summarize_comments AI action. */
+  summarizeComments?: InputMaybe<AiSummarizeCommentsInput>;
+  /** Input for summarize_review AI action. */
+  summarizeReview?: InputMaybe<AiSummarizeReviewInput>;
+  /** Input for tanuki_bot AI action. */
+  tanukiBot?: InputMaybe<AiTanukiBotInput>;
+};
+
+/** Autogenerated return type of AiAction */
+export type AiActionPayload = {
+  __typename?: 'AiActionPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** ID of the request. */
+  requestId?: Maybe<Scalars['String']>;
+};
+
+/** Roles to filter in chat message. */
+export type AiCachedMessageRole =
+  /** Filter only assistant messages. */
+  | 'ASSISTANT'
+  /** Filter only user messages. */
+  | 'USER';
+
+export type AiCachedMessageType = {
+  __typename?: 'AiCachedMessageType';
+  /** Content of the message. Can be null for failed responses. */
+  content?: Maybe<Scalars['String']>;
+  /** Errors that occurred while asynchronously fetching an AI (assistant) response. */
+  errors: Array<Scalars['String']>;
+  /** UUID of the message. */
+  id?: Maybe<Scalars['ID']>;
+  /** UUID of the original request message. */
+  requestId?: Maybe<Scalars['ID']>;
+  /** Message role. */
+  role: AiCachedMessageRole;
+  /** Message timestamp. */
+  timestamp: Scalars['Time'];
+};
+
+/** The connection type for AiCachedMessageType. */
+export type AiCachedMessageTypeConnection = {
+  __typename?: 'AiCachedMessageTypeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<AiCachedMessageTypeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<AiCachedMessageType>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type AiCachedMessageTypeEdge = {
+  __typename?: 'AiCachedMessageTypeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<AiCachedMessageType>;
+};
+
+export type AiChatInput = {
+  /** Content of the message. */
+  content: Scalars['String'];
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type AiExplainCodeInput = {
+  /** Code messages that is passed to be explained by AI. */
+  messages: Array<AiExplainCodeMessageInput>;
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type AiExplainCodeMessageInput = {
+  /** Content of the message. */
+  content: Scalars['String'];
+  /** Role of the message (system, user, assistant). */
+  role: Scalars['String'];
+};
+
+export type AiExplainVulnerabilityInput = {
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type AiFillInMergeRequestTemplateInput = {
+  /** Template content to fill in. */
+  content: Scalars['String'];
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+  /** Source branch of the changes. */
+  sourceBranch: Scalars['String'];
+  /** ID of the project where the changes are from. */
+  sourceProjectId?: InputMaybe<Scalars['ID']>;
+  /** Target branch of where the changes will be merged into. */
+  targetBranch: Scalars['String'];
+  /** Title of the merge request to be created. */
+  title: Scalars['String'];
+};
+
+export type AiGenerateCommitMessageInput = {
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type AiGenerateDescriptionInput = {
+  /** Content of the message. */
+  content: Scalars['String'];
+  /** Name of the description template to use to generate message off of. */
+  descriptionTemplateName?: InputMaybe<Scalars['String']>;
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type AiMessageType = {
+  __typename?: 'AiMessageType';
+  /** Content of the message or null if loading. */
+  content?: Maybe<Scalars['String']>;
+  /** Errors that occurred while asynchronously fetching an AI(assistant) response. */
+  errors: Array<Scalars['String']>;
+  /** Global ID of the message. */
+  id?: Maybe<Scalars['ID']>;
+  /** Whether the content is still being fetched, for a message with the assistant role. */
+  isFetching?: Maybe<Scalars['Boolean']>;
+  /** Role of the message (system, user, assistant). */
+  role: Scalars['String'];
+};
+
+/** The connection type for AiMessageType. */
+export type AiMessageTypeConnection = {
+  __typename?: 'AiMessageTypeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<AiMessageTypeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<AiMessageType>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type AiMessageTypeEdge = {
+  __typename?: 'AiMessageTypeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<AiMessageType>;
+};
+
+export type AiResponse = {
+  __typename?: 'AiResponse';
+  /** Errors return by AI API as response. */
+  errors?: Maybe<Array<Scalars['String']>>;
+  /** ID of the original request. */
+  requestId?: Maybe<Scalars['String']>;
+  /** Response body from AI API. */
+  responseBody?: Maybe<Scalars['String']>;
+};
+
+export type AiSummarizeCommentsInput = {
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type AiSummarizeReviewInput = {
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type AiTanukiBotInput = {
+  /** GitLab documentation question for AI to answer. */
+  question: Scalars['String'];
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
 /** Describes an alert from the project's Alert Management */
 export type AlertManagementAlert = NoteableInterface & Todoable & {
   __typename?: 'AlertManagementAlert';
   /** Assignees of the alert. */
   assignees?: Maybe<UserCoreConnection>;
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
   /** Timestamp the alert was created. */
   createdAt?: Maybe<Scalars['Time']>;
   /** Description of the alert. */
@@ -549,6 +1283,8 @@ export type AlertManagementAlert = NoteableInterface & Todoable & {
   eventCount?: Maybe<Scalars['Int']>;
   /** List of hosts the alert came from. */
   hosts?: Maybe<Array<Scalars['String']>>;
+  /** ID of the alert. */
+  id: Scalars['ID'];
   /** Internal ID of the alert. */
   iid: Scalars['ID'];
   /** Issue attached to the alert. */
@@ -558,8 +1294,6 @@ export type AlertManagementAlert = NoteableInterface & Todoable & {
    * @deprecated Use issue field. Deprecated in 13.10.
    */
   issueIid?: Maybe<Scalars['ID']>;
-  /** URL for metrics embed for the alert. */
-  metricsDashboardUrl?: Maybe<Scalars['String']>;
   /** Monitoring tool the alert came from. */
   monitoringTool?: Maybe<Scalars['String']>;
   /** All notes on this noteable. */
@@ -589,6 +1323,15 @@ export type AlertManagementAlert = NoteableInterface & Todoable & {
 
 /** Describes an alert from the project's Alert Management */
 export type AlertManagementAlertAssigneesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Describes an alert from the project's Alert Management */
+export type AlertManagementAlertCommentersArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -733,6 +1476,12 @@ export type AlertManagementHttpIntegration = AlertManagementIntegration & {
   id: Scalars['ID'];
   /** Name of the integration. */
   name?: Maybe<Scalars['String']>;
+  /** Extract alert fields from payload example for custom mapping. */
+  payloadAlertFields?: Maybe<Array<AlertManagementPayloadAlertField>>;
+  /** The custom mapping of GitLab alert attributes to fields from the payload_example. */
+  payloadAttributeMappings?: Maybe<Array<AlertManagementPayloadAlertMappingField>>;
+  /** Example of an alert payload. */
+  payloadExample?: Maybe<Scalars['JsonString']>;
   /** Token used to authenticate alert notification requests. */
   token?: Maybe<Scalars['String']>;
   /** Type of integration. */
@@ -804,6 +1553,74 @@ export type AlertManagementIntegrationType =
   | 'HTTP'
   /** Prometheus integration. */
   | 'PROMETHEUS';
+
+/** Parsed field from an alert used for custom mappings */
+export type AlertManagementPayloadAlertField = {
+  __typename?: 'AlertManagementPayloadAlertField';
+  /** Human-readable label of the payload path. */
+  label?: Maybe<Scalars['String']>;
+  /** Path to value inside payload JSON. */
+  path?: Maybe<Array<Scalars['PayloadAlertFieldPathSegment']>>;
+  /** Type of the parsed value. */
+  type?: Maybe<AlertManagementPayloadAlertFieldType>;
+};
+
+/** Field that are available while modifying the custom mapping attributes for an HTTP integration */
+export type AlertManagementPayloadAlertFieldInput = {
+  /** GitLab alert field name. */
+  fieldName: AlertManagementPayloadAlertFieldName;
+  /** Human-readable label of the payload path. */
+  label?: InputMaybe<Scalars['String']>;
+  /** Path to value inside payload JSON. */
+  path: Array<Scalars['PayloadAlertFieldPathSegment']>;
+  /** Type of the parsed value. */
+  type: AlertManagementPayloadAlertFieldType;
+};
+
+/** Values for alert field names used in the custom mapping */
+export type AlertManagementPayloadAlertFieldName =
+  /** A high-level summary of the problem. */
+  | 'DESCRIPTION'
+  /** The resolved time of the incident. */
+  | 'END_TIME'
+  /** The unique identifier of the alert. This can be used to group occurrences of the same alert. */
+  | 'FINGERPRINT'
+  /** The name of the associated GitLab environment. */
+  | 'GITLAB_ENVIRONMENT_NAME'
+  /** One or more hosts, as to where this incident occurred. */
+  | 'HOSTS'
+  /** The name of the associated monitoring tool. */
+  | 'MONITORING_TOOL'
+  /** The affected service. */
+  | 'SERVICE'
+  /** The severity of the alert. */
+  | 'SEVERITY'
+  /** The time of the incident. */
+  | 'START_TIME'
+  /** The title of the incident. */
+  | 'TITLE';
+
+/** Values for alert field types used in the custom mapping */
+export type AlertManagementPayloadAlertFieldType =
+  /** Array field type. */
+  | 'ARRAY'
+  /** DateTime field type. */
+  | 'DATETIME'
+  /** String field type. */
+  | 'STRING';
+
+/** Parsed field (with its name) from an alert used for custom mappings */
+export type AlertManagementPayloadAlertMappingField = {
+  __typename?: 'AlertManagementPayloadAlertMappingField';
+  /** GitLab alert field name. */
+  fieldName?: Maybe<AlertManagementPayloadAlertFieldName>;
+  /** Human-readable label of the payload path. */
+  label?: Maybe<Scalars['String']>;
+  /** Path to value inside payload JSON. */
+  path?: Maybe<Array<Scalars['PayloadAlertFieldPathSegment']>>;
+  /** Type of the parsed value. */
+  type?: Maybe<AlertManagementPayloadAlertFieldType>;
+};
 
 /** An endpoint and credentials used to accept Prometheus alerts for a project */
 export type AlertManagementPrometheusIntegration = AlertManagementIntegration & {
@@ -904,6 +1721,223 @@ export type AlertTodoCreatePayload = {
   todo?: Maybe<Todo>;
 };
 
+export type AnalyzeCiJobFailureInput = {
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+/** Data associated with configuring API fuzzing scans in GitLab CI */
+export type ApiFuzzingCiConfiguration = {
+  __typename?: 'ApiFuzzingCiConfiguration';
+  /** All available scan modes. */
+  scanModes?: Maybe<Array<ApiFuzzingScanMode>>;
+  /** All default scan profiles. */
+  scanProfiles?: Maybe<Array<ApiFuzzingScanProfile>>;
+};
+
+/** All possible ways to specify the API surface for an API fuzzing scan. */
+export type ApiFuzzingScanMode =
+  /** The API surface is specified by a HAR file. */
+  | 'HAR'
+  /** The API surface is specified by a OPENAPI file. */
+  | 'OPENAPI'
+  /** The API surface is specified by a POSTMAN file. */
+  | 'POSTMAN';
+
+/** An API Fuzzing scan profile. */
+export type ApiFuzzingScanProfile = {
+  __typename?: 'ApiFuzzingScanProfile';
+  /** Short description of the profile. */
+  description?: Maybe<Scalars['String']>;
+  /** Unique name of the profile. */
+  name?: Maybe<Scalars['String']>;
+  /** Syntax highlighted HTML representation of the YAML. */
+  yaml?: Maybe<Scalars['String']>;
+};
+
+/** Describes a project approval rule regarding who can approve merge requests. */
+export type ApprovalProjectRule = {
+  __typename?: 'ApprovalProjectRule';
+  /** Number of required approvals. */
+  approvalsRequired?: Maybe<Scalars['Int']>;
+  /** List of users eligible to approve merge requests for this approval rule. */
+  eligibleApprovers?: Maybe<UserCoreConnection>;
+  /** ID of the rule. */
+  id: Scalars['GlobalID'];
+  /** Name of the rule. */
+  name?: Maybe<Scalars['String']>;
+  /** Type of the rule. */
+  type?: Maybe<ApprovalRuleType>;
+};
+
+
+/** Describes a project approval rule regarding who can approve merge requests. */
+export type ApprovalProjectRuleEligibleApproversArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for ApprovalProjectRule. */
+export type ApprovalProjectRuleConnection = {
+  __typename?: 'ApprovalProjectRuleConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ApprovalProjectRuleEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ApprovalProjectRule>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ApprovalProjectRuleEdge = {
+  __typename?: 'ApprovalProjectRuleEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ApprovalProjectRule>;
+};
+
+/** Describes a rule for who can approve merge requests. */
+export type ApprovalRule = {
+  __typename?: 'ApprovalRule';
+  /** Indicates if the rule can be ignored if it is invalid. */
+  allowMergeWhenInvalid?: Maybe<Scalars['Boolean']>;
+  /** Number of required approvals. */
+  approvalsRequired?: Maybe<Scalars['Int']>;
+  /** Indicates if the rule is satisfied. */
+  approved?: Maybe<Scalars['Boolean']>;
+  /** List of users defined in the rule that approved the merge request. */
+  approvedBy?: Maybe<UserCoreConnection>;
+  /** List of users, defined in the rule, who commented on the merge request. */
+  commentedBy?: Maybe<UserCoreConnection>;
+  /** Indicates if the rule contains approvers from a hidden group. */
+  containsHiddenGroups?: Maybe<Scalars['Boolean']>;
+  /** List of all users eligible to approve the merge request (defined explicitly and from associated groups). */
+  eligibleApprovers?: Maybe<Array<UserCore>>;
+  /** List of groups added as approvers for the rule. */
+  groups?: Maybe<GroupConnection>;
+  /** ID of the rule. */
+  id: Scalars['GlobalID'];
+  /** Indicates if the rule is invalid and cannot be approved. */
+  invalid?: Maybe<Scalars['Boolean']>;
+  /** Name of the rule. */
+  name?: Maybe<Scalars['String']>;
+  /** Indicates if the rule was overridden for the merge request. */
+  overridden?: Maybe<Scalars['Boolean']>;
+  /** Named section of the Code Owners file that the rule applies to. */
+  section?: Maybe<Scalars['String']>;
+  /** Source rule used to create the rule. */
+  sourceRule?: Maybe<ApprovalRule>;
+  /** Type of the rule. */
+  type?: Maybe<ApprovalRuleType>;
+  /** List of users added as approvers for the rule. */
+  users?: Maybe<UserCoreConnection>;
+};
+
+
+/** Describes a rule for who can approve merge requests. */
+export type ApprovalRuleApprovedByArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Describes a rule for who can approve merge requests. */
+export type ApprovalRuleCommentedByArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Describes a rule for who can approve merge requests. */
+export type ApprovalRuleGroupsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Describes a rule for who can approve merge requests. */
+export type ApprovalRuleUsersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The kind of an approval rule. */
+export type ApprovalRuleType =
+  /** A `any_approver` approval rule. */
+  | 'ANY_APPROVER'
+  /** A `code_owner` approval rule. */
+  | 'CODE_OWNER'
+  /** A `regular` approval rule. */
+  | 'REGULAR'
+  /** A `report_approver` approval rule. */
+  | 'REPORT_APPROVER';
+
+/** Autogenerated input type of ApproveDeployment */
+export type ApproveDeploymentInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Comment to go with the approval. */
+  comment?: InputMaybe<Scalars['String']>;
+  /** ID of the deployment. */
+  id: Scalars['DeploymentID'];
+  /** Name of the User/Group/Role to use for the approval, when the user belongs to multiple approval rules. */
+  representedAs?: InputMaybe<Scalars['String']>;
+  /** Status of the approval (either `APPROVED` or `REJECTED`). */
+  status: DeploymentsApprovalStatus;
+};
+
+/** Autogenerated return type of ApproveDeployment */
+export type ApproveDeploymentPayload = {
+  __typename?: 'ApproveDeploymentPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** DeploymentApproval after mutation. */
+  deploymentApproval: DeploymentApproval;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of ArtifactDestroy */
+export type ArtifactDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the artifact to delete. */
+  id: Scalars['CiJobArtifactID'];
+};
+
+/** Autogenerated return type of ArtifactDestroy */
+export type ArtifactDestroyPayload = {
+  __typename?: 'ArtifactDestroyPayload';
+  /** Deleted artifact. */
+  artifact?: Maybe<CiJobArtifact>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Represents a vulnerability asset type. */
+export type AssetType = {
+  __typename?: 'AssetType';
+  /** Name of the asset. */
+  name: Scalars['String'];
+  /** Type of the asset. */
+  type: Scalars['String'];
+  /** URL of the asset. */
+  url: Scalars['String'];
+};
+
 /** Assignee ID wildcard values */
 export type AssigneeWildcardId =
   /** An assignee is assigned. */
@@ -911,12 +1945,305 @@ export type AssigneeWildcardId =
   /** No assignee is assigned. */
   | 'NONE';
 
+/**
+ * Represents the YAML definitions for audit events defined in
+ * `ee/config/audit_events/types/<event-type-name>.yml` and
+ * `config/audit_events/types/<event-type-name>.yml`.
+ */
+export type AuditEventDefinition = {
+  __typename?: 'AuditEventDefinition';
+  /** Description of what action the audit event tracks. */
+  description: Scalars['String'];
+  /** Feature category associated with the event. */
+  featureCategory: Scalars['String'];
+  /** Link to the issue introducing the event. For olderaudit events, it can be a commit URL rather than amerge request URL. */
+  introducedByIssue?: Maybe<Scalars['String']>;
+  /**
+   * Link to the merge request introducing the event. Forolder audit events, it can
+   * be a commit URL rather thana merge request URL.
+   */
+  introducedByMr?: Maybe<Scalars['String']>;
+  /** Milestone the event was introduced in. */
+  milestone: Scalars['String'];
+  /** Key name of the audit event. */
+  name: Scalars['String'];
+  /** Indicates if the event is saved to PostgreSQL database. */
+  savedToDatabase: Scalars['Boolean'];
+  /** Indicates if the event is streamed to an external destination. */
+  streamed: Scalars['Boolean'];
+};
+
+/** The connection type for AuditEventDefinition. */
+export type AuditEventDefinitionConnection = {
+  __typename?: 'AuditEventDefinitionConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<AuditEventDefinitionEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<AuditEventDefinition>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type AuditEventDefinitionEdge = {
+  __typename?: 'AuditEventDefinitionEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<AuditEventDefinition>;
+};
+
+/** Represents a HTTP header key/value that belongs to an audit streaming destination. */
+export type AuditEventStreamingHeader = BaseHeaderInterface & {
+  __typename?: 'AuditEventStreamingHeader';
+  /** ID of the header. */
+  id: Scalars['ID'];
+  /** Key of the header. */
+  key: Scalars['String'];
+  /** Value of the header. */
+  value: Scalars['String'];
+};
+
+/** The connection type for AuditEventStreamingHeader. */
+export type AuditEventStreamingHeaderConnection = {
+  __typename?: 'AuditEventStreamingHeaderConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<AuditEventStreamingHeaderEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<AuditEventStreamingHeader>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type AuditEventStreamingHeaderEdge = {
+  __typename?: 'AuditEventStreamingHeaderEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<AuditEventStreamingHeader>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingDestinationEventsAdd */
+export type AuditEventsStreamingDestinationEventsAddInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Destination id. */
+  destinationId: Scalars['AuditEventsExternalAuditEventDestinationID'];
+  /** List of event type filters to add for streaming. */
+  eventTypeFilters: Array<Scalars['String']>;
+};
+
+/** Autogenerated return type of AuditEventsStreamingDestinationEventsAdd */
+export type AuditEventsStreamingDestinationEventsAddPayload = {
+  __typename?: 'AuditEventsStreamingDestinationEventsAddPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Event type filters present. */
+  eventTypeFilters?: Maybe<Array<Scalars['String']>>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingDestinationEventsRemove */
+export type AuditEventsStreamingDestinationEventsRemoveInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Destination URL. */
+  destinationId: Scalars['AuditEventsExternalAuditEventDestinationID'];
+  /** List of event type filters to remove from streaming. */
+  eventTypeFilters: Array<Scalars['String']>;
+};
+
+/** Autogenerated return type of AuditEventsStreamingDestinationEventsRemove */
+export type AuditEventsStreamingDestinationEventsRemovePayload = {
+  __typename?: 'AuditEventsStreamingDestinationEventsRemovePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingHeadersCreate */
+export type AuditEventsStreamingHeadersCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Destination to associate header with. */
+  destinationId: Scalars['AuditEventsExternalAuditEventDestinationID'];
+  /** Header key. */
+  key: Scalars['String'];
+  /** Header value. */
+  value: Scalars['String'];
+};
+
+/** Autogenerated return type of AuditEventsStreamingHeadersCreate */
+export type AuditEventsStreamingHeadersCreatePayload = {
+  __typename?: 'AuditEventsStreamingHeadersCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created header. */
+  header?: Maybe<AuditEventStreamingHeader>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingHeadersDestroy */
+export type AuditEventsStreamingHeadersDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Header to delete. */
+  headerId: Scalars['AuditEventsStreamingHeaderID'];
+};
+
+/** Autogenerated return type of AuditEventsStreamingHeadersDestroy */
+export type AuditEventsStreamingHeadersDestroyPayload = {
+  __typename?: 'AuditEventsStreamingHeadersDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingHeadersUpdate */
+export type AuditEventsStreamingHeadersUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Header to update. */
+  headerId: Scalars['AuditEventsStreamingHeaderID'];
+  /** Header key. */
+  key: Scalars['String'];
+  /** Header value. */
+  value: Scalars['String'];
+};
+
+/** Autogenerated return type of AuditEventsStreamingHeadersUpdate */
+export type AuditEventsStreamingHeadersUpdatePayload = {
+  __typename?: 'AuditEventsStreamingHeadersUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updates header. */
+  header?: Maybe<AuditEventStreamingHeader>;
+};
+
+/** Represents a HTTP header key/value that belongs to an instance level audit streaming destination. */
+export type AuditEventsStreamingInstanceHeader = BaseHeaderInterface & {
+  __typename?: 'AuditEventsStreamingInstanceHeader';
+  /** ID of the header. */
+  id: Scalars['ID'];
+  /** Key of the header. */
+  key: Scalars['String'];
+  /** Value of the header. */
+  value: Scalars['String'];
+};
+
+/** The connection type for AuditEventsStreamingInstanceHeader. */
+export type AuditEventsStreamingInstanceHeaderConnection = {
+  __typename?: 'AuditEventsStreamingInstanceHeaderConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<AuditEventsStreamingInstanceHeaderEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<AuditEventsStreamingInstanceHeader>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type AuditEventsStreamingInstanceHeaderEdge = {
+  __typename?: 'AuditEventsStreamingInstanceHeaderEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<AuditEventsStreamingInstanceHeader>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingInstanceHeadersCreate */
+export type AuditEventsStreamingInstanceHeadersCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Instance level external destination to associate header with. */
+  destinationId: Scalars['AuditEventsInstanceExternalAuditEventDestinationID'];
+  /** Header key. */
+  key: Scalars['String'];
+  /** Header value. */
+  value: Scalars['String'];
+};
+
+/** Autogenerated return type of AuditEventsStreamingInstanceHeadersCreate */
+export type AuditEventsStreamingInstanceHeadersCreatePayload = {
+  __typename?: 'AuditEventsStreamingInstanceHeadersCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created header. */
+  header?: Maybe<AuditEventsStreamingInstanceHeader>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingInstanceHeadersDestroy */
+export type AuditEventsStreamingInstanceHeadersDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Header to delete. */
+  headerId: Scalars['AuditEventsStreamingInstanceHeaderID'];
+};
+
+/** Autogenerated return type of AuditEventsStreamingInstanceHeadersDestroy */
+export type AuditEventsStreamingInstanceHeadersDestroyPayload = {
+  __typename?: 'AuditEventsStreamingInstanceHeadersDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of AuditEventsStreamingInstanceHeadersUpdate */
+export type AuditEventsStreamingInstanceHeadersUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Header to update. */
+  headerId: Scalars['AuditEventsStreamingInstanceHeaderID'];
+  /** Header key. */
+  key: Scalars['String'];
+  /** Header value. */
+  value: Scalars['String'];
+};
+
+/** Autogenerated return type of AuditEventsStreamingInstanceHeadersUpdate */
+export type AuditEventsStreamingInstanceHeadersUpdatePayload = {
+  __typename?: 'AuditEventsStreamingInstanceHeadersUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updates header. */
+  header?: Maybe<AuditEventsStreamingInstanceHeader>;
+};
+
 /** User availability status */
 export type AvailabilityEnum =
   /** Busy */
   | 'BUSY'
   /** Not Set */
   | 'NOT_SET';
+
+/** Available fields to be exported as CSV */
+export type AvailableExportFields =
+  /** Author name. */
+  | 'AUTHOR'
+  /** Author username. */
+  | 'AUTHOR_USERNAME'
+  /** Date of creation. */
+  | 'CREATED_AT'
+  /** Description. */
+  | 'DESCRIPTION'
+  /** Unique identifier. */
+  | 'ID'
+  /** Title. */
+  | 'TITLE'
+  /** Type of the work item. */
+  | 'TYPE';
 
 /** An emoji awarded by a user */
 export type AwardEmoji = {
@@ -954,6 +2281,26 @@ export type AwardEmojiAddPayload = {
   clientMutationId?: Maybe<Scalars['String']>;
   /** Errors encountered during execution of the mutation. */
   errors: Array<Scalars['String']>;
+};
+
+/** The connection type for AwardEmoji. */
+export type AwardEmojiConnection = {
+  __typename?: 'AwardEmojiConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<AwardEmojiEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<AwardEmoji>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type AwardEmojiEdge = {
+  __typename?: 'AwardEmojiEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<AwardEmoji>;
 };
 
 /** Autogenerated input type of AwardEmojiRemove */
@@ -998,6 +2345,15 @@ export type AwardEmojiTogglePayload = {
   errors: Array<Scalars['String']>;
   /** Indicates the status of the emoji. True if the toggle awarded the emoji, and false if the toggle removed the emoji. */
   toggledOn: Scalars['Boolean'];
+};
+
+export type BaseHeaderInterface = {
+  /** ID of the header. */
+  id: Scalars['ID'];
+  /** Key of the header. */
+  key: Scalars['String'];
+  /** Value of the header. */
+  value: Scalars['String'];
 };
 
 export type BaseService = Service & {
@@ -1085,16 +2441,28 @@ export type BlobViewersType =
 /** Represents a project or group issue board */
 export type Board = {
   __typename?: 'Board';
+  /** Board assignee. */
+  assignee?: Maybe<UserCore>;
   /** Timestamp of when the board was created. */
   createdAt: Scalars['Time'];
+  /** Epics associated with board issues. */
+  epics?: Maybe<BoardEpicConnection>;
   /** Whether or not backlog list is hidden. */
   hideBacklogList?: Maybe<Scalars['Boolean']>;
   /** Whether or not closed list is hidden. */
   hideClosedList?: Maybe<Scalars['Boolean']>;
   /** ID (global ID) of the board. */
   id: Scalars['ID'];
+  /** Board iteration. */
+  iteration?: Maybe<Iteration>;
+  /** Board iteration cadence. */
+  iterationCadence?: Maybe<IterationCadence>;
+  /** Labels of the board. */
+  labels?: Maybe<LabelConnection>;
   /** Lists of the board. */
   lists?: Maybe<BoardListConnection>;
+  /** Board milestone. */
+  milestone?: Maybe<Milestone>;
   /** Name of the board. */
   name?: Maybe<Scalars['String']>;
   /** Timestamp of when the board was last updated. */
@@ -1103,6 +2471,27 @@ export type Board = {
   webPath: Scalars['String'];
   /** Web URL of the board. */
   webUrl: Scalars['String'];
+  /** Weight of the board. */
+  weight?: Maybe<Scalars['Int']>;
+};
+
+
+/** Represents a project or group issue board */
+export type BoardEpicsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  issueFilters?: InputMaybe<BoardIssueInput>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents a project or group issue board */
+export type BoardLabelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -1136,17 +2525,369 @@ export type BoardEdge = {
   node?: Maybe<Board>;
 };
 
+/** Represents an epic on an issue board */
+export type BoardEpic = CurrentUserTodos & Eventable & NoteableInterface & Todoable & {
+  __typename?: 'BoardEpic';
+  /** Ancestors (parents) of the epic. */
+  ancestors?: Maybe<EpicConnection>;
+  /** Author of the epic. */
+  author: UserCore;
+  /** List of award emojis associated with the epic. */
+  awardEmoji?: Maybe<AwardEmojiConnection>;
+  /** Indicates the epic is blocked. */
+  blocked?: Maybe<Scalars['Boolean']>;
+  /** Count of epics blocking this epic. */
+  blockedByCount?: Maybe<Scalars['Int']>;
+  /** Epics blocking this epic. */
+  blockedByEpics?: Maybe<EpicConnection>;
+  /** Count of epics that this epic is blocking. */
+  blockingCount?: Maybe<Scalars['Int']>;
+  /** Children (sub-epics) of the epic. */
+  children?: Maybe<EpicConnection>;
+  /** Timestamp of when the epic was closed. */
+  closedAt?: Maybe<Scalars['Time']>;
+  /** Color of the epic. Returns `null` if `epic_color_highlight` feature flag is disabled. */
+  color?: Maybe<Scalars['String']>;
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
+  /** Indicates if the epic is confidential. */
+  confidential?: Maybe<Scalars['Boolean']>;
+  /** Timestamp of when the epic was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** To-do items for the current user. */
+  currentUserTodos: TodoConnection;
+  /** Default Project for issue creation. Based on the project the user created the last issue in. */
+  defaultProjectForIssueCreation?: Maybe<Project>;
+  /** Number of open and closed descendant epics and issues. */
+  descendantCounts?: Maybe<EpicDescendantCount>;
+  /** Total weight of open and closed issues in the epic and its descendants. */
+  descendantWeightSum?: Maybe<EpicDescendantWeights>;
+  /** Description of the epic. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description` */
+  descriptionHtml?: Maybe<Scalars['String']>;
+  /** All discussions on this noteable. */
+  discussions: DiscussionConnection;
+  /** Number of downvotes the epic has received. */
+  downvotes: Scalars['Int'];
+  /** Due date of the epic. */
+  dueDate?: Maybe<Scalars['Time']>;
+  /** Fixed due date of the epic. */
+  dueDateFixed?: Maybe<Scalars['Time']>;
+  /** Inherited due date of the epic from child epics or milestones. */
+  dueDateFromInheritedSource?: Maybe<Scalars['Time']>;
+  /** Inherited due date of the epic from milestones. */
+  dueDateFromMilestones?: Maybe<Scalars['Time']>;
+  /** Indicates if the due date has been manually set. */
+  dueDateIsFixed?: Maybe<Scalars['Boolean']>;
+  /** List of events associated with the object. */
+  events?: Maybe<EventConnection>;
+  /** Group to which the epic belongs. */
+  group: Group;
+  /** Indicates if the epic has children. */
+  hasChildren: Scalars['Boolean'];
+  /** Indicates if the epic has direct issues. */
+  hasIssues: Scalars['Boolean'];
+  /** Indicates if the epic has a parent epic. */
+  hasParent: Scalars['Boolean'];
+  /** Current health status of the epic. */
+  healthStatus?: Maybe<EpicHealthStatus>;
+  /** ID of the epic. */
+  id: Scalars['ID'];
+  /** Internal ID of the epic. */
+  iid: Scalars['ID'];
+  /** A list of issues associated with the epic. */
+  issues?: Maybe<EpicIssueConnection>;
+  /** Labels assigned to the epic. */
+  labels?: Maybe<LabelConnection>;
+  /** All notes on this noteable. */
+  notes: NoteConnection;
+  /** Parent epic of the epic. */
+  parent?: Maybe<Epic>;
+  /** List of participants for the epic. */
+  participants?: Maybe<UserCoreConnection>;
+  /** Internal reference of the epic. Returned in shortened format by default. */
+  reference: Scalars['String'];
+  /** URI path of the epic-issue relationship. */
+  relationPath?: Maybe<Scalars['String']>;
+  /** Relative position of the epic in the epic tree. */
+  relativePosition?: Maybe<Scalars['Int']>;
+  /** Start date of the epic. */
+  startDate?: Maybe<Scalars['Time']>;
+  /** Fixed start date of the epic. */
+  startDateFixed?: Maybe<Scalars['Time']>;
+  /** Inherited start date of the epic from child epics or milestones. */
+  startDateFromInheritedSource?: Maybe<Scalars['Time']>;
+  /** Inherited start date of the epic from milestones. */
+  startDateFromMilestones?: Maybe<Scalars['Time']>;
+  /** Indicates if the start date has been manually set. */
+  startDateIsFixed?: Maybe<Scalars['Boolean']>;
+  /** State of the epic. */
+  state: EpicState;
+  /** Indicates the currently logged in user is subscribed to the epic. */
+  subscribed: Scalars['Boolean'];
+  /** Text color generated for the epic. Returns `null` if `epic_color_highlight` feature flag is disabled. */
+  textColor?: Maybe<Scalars['String']>;
+  /** Title of the epic. */
+  title?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `title` */
+  titleHtml?: Maybe<Scalars['String']>;
+  /** Timestamp of when the epic was updated. */
+  updatedAt?: Maybe<Scalars['Time']>;
+  /** Number of upvotes the epic has received. */
+  upvotes: Scalars['Int'];
+  /** Number of user discussions in the epic. */
+  userDiscussionsCount: Scalars['Int'];
+  /** Number of user notes of the epic. */
+  userNotesCount: Scalars['Int'];
+  /** Permissions for the current user on the resource */
+  userPermissions: EpicPermissions;
+  /** User preferences for the epic on the issue board. */
+  userPreferences?: Maybe<BoardEpicUserPreferences>;
+  /** Web path of the epic. */
+  webPath: Scalars['String'];
+  /** Web URL of the epic. */
+  webUrl: Scalars['String'];
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicAncestorsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  createdAfter?: InputMaybe<Scalars['Time']>;
+  createdBefore?: InputMaybe<Scalars['Time']>;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iidStartsWith?: InputMaybe<Scalars['String']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  includeDescendantGroups?: InputMaybe<Scalars['Boolean']>;
+  labelName?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  not?: InputMaybe<NegatedEpicFilterInput>;
+  or?: InputMaybe<UnionedEpicFilterInput>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<EpicSort>;
+  state?: InputMaybe<EpicState>;
+  timeframe?: InputMaybe<Timeframe>;
+  topLevelHierarchyOnly?: InputMaybe<Scalars['Boolean']>;
+  updatedAfter?: InputMaybe<Scalars['Time']>;
+  updatedBefore?: InputMaybe<Scalars['Time']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicAwardEmojiArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicBlockedByEpicsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicChildrenArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  createdAfter?: InputMaybe<Scalars['Time']>;
+  createdBefore?: InputMaybe<Scalars['Time']>;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iidStartsWith?: InputMaybe<Scalars['String']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  includeDescendantGroups?: InputMaybe<Scalars['Boolean']>;
+  labelName?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  not?: InputMaybe<NegatedEpicFilterInput>;
+  or?: InputMaybe<UnionedEpicFilterInput>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<EpicSort>;
+  state?: InputMaybe<EpicState>;
+  timeframe?: InputMaybe<Timeframe>;
+  topLevelHierarchyOnly?: InputMaybe<Scalars['Boolean']>;
+  updatedAfter?: InputMaybe<Scalars['Time']>;
+  updatedBefore?: InputMaybe<Scalars['Time']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicCommentersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicCurrentUserTodosArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  state?: InputMaybe<TodoStateEnum>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicDiscussionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicEventsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicIssuesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicLabelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicNotesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicParticipantsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic on an issue board */
+export type BoardEpicReferenceArgs = {
+  full?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** The connection type for BoardEpic. */
+export type BoardEpicConnection = {
+  __typename?: 'BoardEpicConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<BoardEpicEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<BoardEpic>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of BoardEpicCreate */
+export type BoardEpicCreateInput = {
+  /** Global ID of the board that the epic is in. */
+  boardId: Scalars['BoardsEpicBoardID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Group the epic to create is in. */
+  groupPath: Scalars['ID'];
+  /** Global ID of the epic board list in which epic will be created. */
+  listId: Scalars['BoardsEpicListID'];
+  /** Title of the epic. */
+  title: Scalars['String'];
+};
+
+/** Autogenerated return type of BoardEpicCreate */
+export type BoardEpicCreatePayload = {
+  __typename?: 'BoardEpicCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Epic after creation. */
+  epic?: Maybe<Epic>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type BoardEpicEdge = {
+  __typename?: 'BoardEpicEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<BoardEpic>;
+};
+
+/** Represents user preferences for a board epic */
+export type BoardEpicUserPreferences = {
+  __typename?: 'BoardEpicUserPreferences';
+  /** Indicates epic should be displayed as collapsed. */
+  collapsed: Scalars['Boolean'];
+};
+
 export type BoardIssueInput = {
   /** Filter by assignee username. */
   assigneeUsername?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  /** Filter by assignee wildcard. Incompatible with assigneeUsername. */
+  /** Filter by assignee wildcard. Incompatible with assigneeUsername and assigneeUsernames. */
   assigneeWildcardId?: InputMaybe<AssigneeWildcardId>;
   /** Filter by author username. */
   authorUsername?: InputMaybe<Scalars['String']>;
   /** Filter by confidentiality. */
   confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Filter by epic ID. Incompatible with epicWildcardId. */
+  epicId?: InputMaybe<Scalars['EpicID']>;
+  /** Filter by epic ID wildcard. Incompatible with epicId. */
+  epicWildcardId?: InputMaybe<EpicWildcardId>;
+  /** Health status of the issue, "none" and "any" values are supported. */
+  healthStatusFilter?: InputMaybe<HealthStatusFilter>;
   /** List of IIDs of issues. For example `["1", "2"]`. */
   iids?: InputMaybe<Array<Scalars['String']>>;
+  /** Filter by a list of iteration cadence IDs. */
+  iterationCadenceId?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  /** Filter by a list of iteration IDs. Incompatible with iterationWildcardId. */
+  iterationId?: InputMaybe<Array<Scalars['IterationID']>>;
+  /** Filter by iteration title. */
+  iterationTitle?: InputMaybe<Scalars['String']>;
+  /** Filter by iteration ID wildcard. */
+  iterationWildcardId?: InputMaybe<IterationWildcardId>;
   /** Filter by label name. */
   labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Filter by milestone title. */
@@ -1157,17 +2898,25 @@ export type BoardIssueInput = {
   myReactionEmoji?: InputMaybe<Scalars['String']>;
   /** List of negated arguments. */
   not?: InputMaybe<NegatedBoardIssueInput>;
+  /** List of arguments with inclusive OR. */
+  or?: InputMaybe<UnionedIssueFilterInput>;
   /** Filter by release tag. */
   releaseTag?: InputMaybe<Scalars['String']>;
   /** Search query for issue title or description. */
   search?: InputMaybe<Scalars['String']>;
   /** Filter by the given issue types. */
   types?: InputMaybe<Array<IssueType>>;
+  /** Filter by weight. */
+  weight?: InputMaybe<Scalars['String']>;
+  /** Filter by weight ID wildcard. Incompatible with weight. */
+  weightWildcardId?: InputMaybe<WeightWildcardId>;
 };
 
 /** Represents a list for an issue board */
 export type BoardList = {
   __typename?: 'BoardList';
+  /** Assignee in the list. */
+  assignee?: Maybe<UserCore>;
   /** Indicates if the list is collapsed for this user. */
   collapsed?: Maybe<Scalars['Boolean']>;
   /** ID (global ID) of the list. */
@@ -1176,14 +2925,31 @@ export type BoardList = {
   issues?: Maybe<IssueConnection>;
   /** Count of issues in the list. */
   issuesCount?: Maybe<Scalars['Int']>;
+  /** Iteration of the list. */
+  iteration?: Maybe<Iteration>;
   /** Label of the list. */
   label?: Maybe<Label>;
+  /** Current limit metric for the list. */
+  limitMetric?: Maybe<ListLimitMetric>;
   /** Type of the list. */
   listType: Scalars['String'];
+  /** Maximum number of issues in the list. */
+  maxIssueCount?: Maybe<Scalars['Int']>;
+  /** Maximum weight of issues in the list. */
+  maxIssueWeight?: Maybe<Scalars['Int']>;
+  /** Milestone of the list. */
+  milestone?: Maybe<Milestone>;
   /** Position of list within the board. */
   position?: Maybe<Scalars['Int']>;
   /** Title of the list. */
   title: Scalars['String'];
+  /** Total weight of all issues in the list, encoded as a string. */
+  totalIssueWeight?: Maybe<Scalars['BigInt']>;
+  /**
+   * Total weight of all issues in the list. Deprecated in 16.2: Use `totalIssueWeight`.
+   * @deprecated Use `totalIssueWeight`. Deprecated in 16.2.
+   */
+  totalWeight?: Maybe<Scalars['Int']>;
 };
 
 
@@ -1209,14 +2975,20 @@ export type BoardListConnection = {
 
 /** Autogenerated input type of BoardListCreate */
 export type BoardListCreateInput = {
+  /** Global ID of an existing user. */
+  assigneeId?: InputMaybe<Scalars['UserID']>;
   /** Create the backlog list. */
   backlog?: InputMaybe<Scalars['Boolean']>;
   /** Global ID of the issue board to mutate. */
   boardId: Scalars['BoardID'];
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of an existing iteration. */
+  iterationId?: InputMaybe<Scalars['IterationID']>;
   /** Global ID of an existing label. */
   labelId?: InputMaybe<Scalars['LabelID']>;
+  /** Global ID of an existing milestone. */
+  milestoneId?: InputMaybe<Scalars['MilestoneID']>;
 };
 
 /** Autogenerated return type of BoardListCreate */
@@ -1239,12 +3011,207 @@ export type BoardListEdge = {
   node?: Maybe<BoardList>;
 };
 
+/** Autogenerated input type of BoardListUpdateLimitMetrics */
+export type BoardListUpdateLimitMetricsInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** New limit metric type for the list. */
+  limitMetric?: InputMaybe<ListLimitMetric>;
+  /** Global ID of the list. */
+  listId: Scalars['ListID'];
+  /** New maximum issue count limit. */
+  maxIssueCount?: InputMaybe<Scalars['Int']>;
+  /** New maximum issue weight limit. */
+  maxIssueWeight?: InputMaybe<Scalars['Int']>;
+};
+
+/** Autogenerated return type of BoardListUpdateLimitMetrics */
+export type BoardListUpdateLimitMetricsPayload = {
+  __typename?: 'BoardListUpdateLimitMetricsPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated list. */
+  list?: Maybe<BoardList>;
+};
+
 export type Branch = {
   __typename?: 'Branch';
   /** Commit for the branch. */
   commit?: Maybe<Commit>;
   /** Name of the branch. */
   name: Scalars['String'];
+};
+
+/** Branch protection details for a branch rule. */
+export type BranchProtection = {
+  __typename?: 'BranchProtection';
+  /** Toggle force push to the branch for users with write access. */
+  allowForcePush: Scalars['Boolean'];
+  /** Enforce code owner approvals before allowing a merge. */
+  codeOwnerApprovalRequired: Scalars['Boolean'];
+  /** Details about who can merge when this branch is the source branch. */
+  mergeAccessLevels?: Maybe<MergeAccessLevelConnection>;
+  /** Details about who can push when this branch is the source branch. */
+  pushAccessLevels?: Maybe<PushAccessLevelConnection>;
+  /** Details about who can unprotect this branch. */
+  unprotectAccessLevels?: Maybe<UnprotectAccessLevelConnection>;
+};
+
+
+/** Branch protection details for a branch rule. */
+export type BranchProtectionMergeAccessLevelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Branch protection details for a branch rule. */
+export type BranchProtectionPushAccessLevelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Branch protection details for a branch rule. */
+export type BranchProtectionUnprotectAccessLevelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** List of branch rules for a project, grouped by branch name. */
+export type BranchRule = {
+  __typename?: 'BranchRule';
+  /** Merge request approval rules configured for this branch rule. */
+  approvalRules?: Maybe<ApprovalProjectRuleConnection>;
+  /** Branch protections configured for this branch rule. */
+  branchProtection?: Maybe<BranchProtection>;
+  /** Timestamp of when the branch rule was created. */
+  createdAt: Scalars['Time'];
+  /** External status checks configured for this branch rule. */
+  externalStatusChecks?: Maybe<ExternalStatusCheckConnection>;
+  /** Check if this branch rule protects the project's default branch. */
+  isDefault: Scalars['Boolean'];
+  /** Check if this branch rule protects access for the branch. */
+  isProtected: Scalars['Boolean'];
+  /** Number of existing branches that match this branch rule. */
+  matchingBranchesCount: Scalars['Int'];
+  /** Branch name, with wildcards, for the branch rules. */
+  name: Scalars['String'];
+  /** Timestamp of when the branch rule was last updated. */
+  updatedAt: Scalars['Time'];
+};
+
+
+/** List of branch rules for a project, grouped by branch name. */
+export type BranchRuleApprovalRulesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** List of branch rules for a project, grouped by branch name. */
+export type BranchRuleExternalStatusChecksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for BranchRule. */
+export type BranchRuleConnection = {
+  __typename?: 'BranchRuleConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<BranchRuleEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<BranchRule>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type BranchRuleEdge = {
+  __typename?: 'BranchRuleEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<BranchRule>;
+};
+
+/** Autogenerated input type of BuildForecast */
+export type BuildForecastInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the context for the forecast to pick an appropriate model. */
+  contextId: Scalars['GlobalID'];
+  /** Number of data points to forecast. */
+  horizon: Scalars['Int'];
+  /** Type of the forecast. */
+  type: Scalars['String'];
+};
+
+/** Autogenerated return type of BuildForecast */
+export type BuildForecastPayload = {
+  __typename?: 'BuildForecastPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created forecast. */
+  forecast: Forecast;
+};
+
+/** Autogenerated input type of BulkDestroyJobArtifacts */
+export type BulkDestroyJobArtifactsInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global IDs of the job artifacts to destroy. */
+  ids: Array<Scalars['CiJobArtifactID']>;
+  /** Global Project ID of the job artifacts to destroy. Incompatible with projectPath. */
+  projectId: Scalars['ProjectID'];
+};
+
+/** Autogenerated return type of BulkDestroyJobArtifacts */
+export type BulkDestroyJobArtifactsPayload = {
+  __typename?: 'BulkDestroyJobArtifactsPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Number of job artifacts deleted. */
+  destroyedCount?: Maybe<Scalars['Int']>;
+  /** IDs of job artifacts that were deleted. */
+  destroyedIds?: Maybe<Array<Scalars['CiJobArtifactID']>>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of BulkEnableDevopsAdoptionNamespaces */
+export type BulkEnableDevopsAdoptionNamespacesInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Display namespace ID. */
+  displayNamespaceId?: InputMaybe<Scalars['NamespaceID']>;
+  /** List of Namespace IDs. */
+  namespaceIds: Array<Scalars['NamespaceID']>;
+};
+
+/** Autogenerated return type of BulkEnableDevopsAdoptionNamespaces */
+export type BulkEnableDevopsAdoptionNamespacesPayload = {
+  __typename?: 'BulkEnableDevopsAdoptionNamespacesPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Enabled namespaces after mutation. */
+  enabledNamespaces?: Maybe<Array<DevopsAdoptionEnabledNamespace>>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
 };
 
 /** Autogenerated input type of BulkRunnerDelete */
@@ -1266,6 +3233,59 @@ export type BulkRunnerDeletePayload = {
   deletedIds?: Maybe<Array<Scalars['CiRunnerID']>>;
   /** Errors encountered during execution of the mutation. */
   errors: Array<Scalars['String']>;
+};
+
+/** Represents the total number of issues and their weights for a particular day */
+export type BurnupChartDailyTotals = {
+  __typename?: 'BurnupChartDailyTotals';
+  /** Number of closed issues as of this day. */
+  completedCount: Scalars['Int'];
+  /** Total weight of closed issues as of this day. */
+  completedWeight: Scalars['Int'];
+  /** Date for burnup totals. */
+  date: Scalars['ISO8601Date'];
+  /** Number of issues as of this day. */
+  scopeCount: Scalars['Int'];
+  /** Total weight of issues as of this day. */
+  scopeWeight: Scalars['Int'];
+};
+
+/** Autogenerated input type of CatalogResourcesCreate */
+export type CatalogResourcesCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Project to convert to a catalog resource. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of CatalogResourcesCreate */
+export type CatalogResourcesCreatePayload = {
+  __typename?: 'CatalogResourcesCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of CiAiGenerateConfig */
+export type CiAiGenerateConfigInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Project path for the project related to the open config editor. */
+  projectPath: Scalars['ID'];
+  /** Content of the user message to be sent to the language model. */
+  userContent: Scalars['String'];
+};
+
+/** Autogenerated return type of CiAiGenerateConfig */
+export type CiAiGenerateConfigPayload = {
+  __typename?: 'CiAiGenerateConfigPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** User chat message. */
+  userMessage?: Maybe<AiMessageType>;
 };
 
 export type CiApplicationSettings = {
@@ -1302,28 +3322,129 @@ export type CiBuildNeedEdge = {
   node?: Maybe<CiBuildNeed>;
 };
 
-/** Autogenerated input type of CiCdSettingsUpdate */
-export type CiCdSettingsUpdateInput = {
-  /** A unique identifier for the client performing the mutation. */
-  clientMutationId?: InputMaybe<Scalars['String']>;
-  /** Full Path of the project the settings belong to. */
-  fullPath: Scalars['ID'];
-  /** Indicates CI job tokens generated in this project have restricted access to resources. */
-  jobTokenScopeEnabled?: InputMaybe<Scalars['Boolean']>;
-  /** Indicates if the latest artifact should be kept for this project. */
-  keepLatestArtifact?: InputMaybe<Scalars['Boolean']>;
+export type CiCatalogResource = {
+  __typename?: 'CiCatalogResource';
+  /**
+   * Description of the catalog resource. Introduced in 15.11: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  description?: Maybe<Scalars['String']>;
+  /**
+   * Number of times the catalog resource has been forked. Introduced in 16.1: This
+   * feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  forksCount: Scalars['Int'];
+  /**
+   * Icon for the catalog resource. Introduced in 15.11: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  icon?: Maybe<Scalars['String']>;
+  /**
+   * ID of the catalog resource. Introduced in 15.11: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  id: Scalars['ID'];
+  /**
+   * Latest version of the catalog resource. Introduced in 16.1: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  latestVersion?: Maybe<Release>;
+  /**
+   * Name of the catalog resource. Introduced in 15.11: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  name?: Maybe<Scalars['String']>;
+  /**
+   * GitLab Flavored Markdown rendering of `readme` Introduced in 16.1: This
+   * feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  readmeHtml: Scalars['String'];
+  /**
+   * Root namespace of the catalog resource. Introduced in 16.1: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  rootNamespace?: Maybe<Namespace>;
+  /**
+   * Number of times the catalog resource has been starred. Introduced in 16.1:
+   * This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  starCount: Scalars['Int'];
+  /**
+   * Versions of the catalog resource. This field can only be resolved for one
+   * catalog resource in any single request. Introduced in 16.2: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.2.
+   */
+  versions?: Maybe<ReleaseConnection>;
+  /**
+   * Web path of the catalog resource. Introduced in 16.1: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  webPath?: Maybe<Scalars['String']>;
 };
 
-/** Autogenerated return type of CiCdSettingsUpdate */
-export type CiCdSettingsUpdatePayload = {
-  __typename?: 'CiCdSettingsUpdatePayload';
-  /** CI/CD settings after mutation. */
-  ciCdSettings: ProjectCiCdSetting;
-  /** A unique identifier for the client performing the mutation. */
-  clientMutationId?: Maybe<Scalars['String']>;
-  /** Errors encountered during execution of the mutation. */
-  errors: Array<Scalars['String']>;
+
+export type CiCatalogResourceVersionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<ReleaseSort>;
 };
+
+/** The connection type for CiCatalogResource. */
+export type CiCatalogResourceConnection = {
+  __typename?: 'CiCatalogResourceConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CiCatalogResourceEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CiCatalogResource>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CiCatalogResourceEdge = {
+  __typename?: 'CiCatalogResourceEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CiCatalogResource>;
+};
+
+/** Values for sorting catalog resources */
+export type CiCatalogResourceSort =
+  /** Created at ascending order. */
+  | 'CREATED_ASC'
+  /** Created at descending order. */
+  | 'CREATED_DESC'
+  /** Name by ascending order. */
+  | 'NAME_ASC'
+  /** Name by descending order. */
+  | 'NAME_DESC'
+  /** Updated at ascending order. */
+  | 'UPDATED_ASC'
+  /** Updated at descending order. */
+  | 'UPDATED_DESC'
+  /** Created at ascending order. */
+  | 'created_asc'
+  /** Created at descending order. */
+  | 'created_desc'
+  /** Updated at ascending order. */
+  | 'updated_asc'
+  /** Updated at descending order. */
+  | 'updated_desc';
 
 export type CiConfig = {
   __typename?: 'CiConfig';
@@ -1389,7 +3510,7 @@ export type CiConfigGroupEdge = {
 
 export type CiConfigInclude = {
   __typename?: 'CiConfigInclude';
-  /** File blob location. It can be masked if it contains masked variables, e.g., "https://gitlab.com/gitlab-org/gitlab/-/blob/e52d6d0246d7375291850e61f0abc101fbda9dc2/.gitlab/ci/build-images.gitlab-ci.yml". */
+  /** File blob location. It can be masked if it contains masked variables. For example, `"https://gitlab.com/gitlab-org/gitlab/-/blob/e52d6d0246d7375291850e61f0abc101fbda9dc2/.gitlab/ci/build-images.gitlab-ci.yml"`. */
   blob?: Maybe<Scalars['String']>;
   /** Current project scope, e.g., "gitlab-org/gitlab". */
   contextProject?: Maybe<Scalars['String']>;
@@ -1400,9 +3521,9 @@ export type CiConfigInclude = {
    * and `ref`. Values can be masked if they contain masked variables.
    */
   extra?: Maybe<Scalars['JSON']>;
-  /** File location. It can be masked if it contains masked variables, e.g., ".gitlab/ci/build-images.gitlab-ci.yml". */
+  /** File location. It can be masked if it contains masked variables. For example, `".gitlab/ci/build-images.gitlab-ci.yml"`. */
   location?: Maybe<Scalars['String']>;
-  /** File raw location. It can be masked if it contains masked variables, e.g., "https://gitlab.com/gitlab-org/gitlab/-/raw/e52d6d0246d7375291850e61f0abc101fbda9dc2/.gitlab/ci/build-images.gitlab-ci.yml". */
+  /** File raw location. It can be masked if it contains masked variables. For example, `"https://gitlab.com/gitlab-org/gitlab/-/raw/e52d6d0246d7375291850e61f0abc101fbda9dc2/.gitlab/ci/build-images.gitlab-ci.yml"`. */
   raw?: Maybe<Scalars['String']>;
   /** Include type. */
   type?: Maybe<CiConfigIncludeType>;
@@ -1410,6 +3531,8 @@ export type CiConfigInclude = {
 
 /** Include type. */
 export type CiConfigIncludeType =
+  /** Component include. */
+  | 'component'
   /** Project file include. */
   | 'file'
   /** Local include. */
@@ -1552,6 +3675,43 @@ export type CiConfigStatus =
   /** Configuration file is valid. */
   | 'VALID';
 
+/** CI/CD config variables. */
+export type CiConfigVariable = {
+  __typename?: 'CiConfigVariable';
+  /** Description for the CI/CD config variable. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the variable. */
+  key?: Maybe<Scalars['String']>;
+  /** Value of the variable. */
+  value?: Maybe<Scalars['String']>;
+  /** Value options for the variable. */
+  valueOptions?: Maybe<Array<Scalars['String']>>;
+};
+
+/** Represents a deployment freeze window of a project */
+export type CiFreezePeriod = {
+  __typename?: 'CiFreezePeriod';
+  /** Time zone for the cron fields, defaults to UTC if not provided. */
+  cronTimezone?: Maybe<Scalars['String']>;
+  /** End of the freeze period in cron format. */
+  endCron: Scalars['String'];
+  /** Timestamp (UTC) of when the current/next active period ends. */
+  endTime?: Maybe<Scalars['Time']>;
+  /** Start of the freeze period in cron format. */
+  startCron: Scalars['String'];
+  /** Timestamp (UTC) of when the current/next active period starts. */
+  startTime?: Maybe<Scalars['Time']>;
+  /** Freeze period status. */
+  status: CiFreezePeriodStatus;
+};
+
+/** Deploy freeze period status */
+export type CiFreezePeriodStatus =
+  /** Freeze period is active. */
+  | 'ACTIVE'
+  /** Freeze period is inactive. */
+  | 'INACTIVE';
+
 export type CiGroup = {
   __typename?: 'CiGroup';
   /** Detailed status of the group. */
@@ -1594,9 +3754,38 @@ export type CiGroupEdge = {
   node?: Maybe<CiGroup>;
 };
 
+/** Ci/CD environment scope for a group. */
+export type CiGroupEnvironmentScope = {
+  __typename?: 'CiGroupEnvironmentScope';
+  /** Scope name defininig the enviromnments that can use the variable. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for CiGroupEnvironmentScope. */
+export type CiGroupEnvironmentScopeConnection = {
+  __typename?: 'CiGroupEnvironmentScopeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CiGroupEnvironmentScopeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CiGroupEnvironmentScope>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CiGroupEnvironmentScopeEdge = {
+  __typename?: 'CiGroupEnvironmentScopeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CiGroupEnvironmentScope>;
+};
+
 /** CI/CD variables for a group. */
 export type CiGroupVariable = CiVariable & {
   __typename?: 'CiGroupVariable';
+  /** Description of the variable. */
+  description?: Maybe<Scalars['String']>;
   /** Scope defining the environments that can use the variable. */
   environmentScope?: Maybe<Scalars['String']>;
   /** ID of the variable. */
@@ -1620,6 +3809,8 @@ export type CiGroupVariableConnection = {
   __typename?: 'CiGroupVariableConnection';
   /** A list of edges. */
   edges?: Maybe<Array<Maybe<CiGroupVariableEdge>>>;
+  /** Maximum amount of group CI/CD variables. */
+  limit: Scalars['Int'];
   /** A list of nodes. */
   nodes?: Maybe<Array<Maybe<CiGroupVariable>>>;
   /** Information to aid in pagination. */
@@ -1684,10 +3875,20 @@ export type CiJob = {
   __typename?: 'CiJob';
   /** Indicates the job is active. */
   active: Scalars['Boolean'];
+  /**
+   * Ai generated analysis of the root cause of failure. Introduced in 16.1: This
+   * feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  aiFailureAnalysis?: Maybe<Scalars['String']>;
   /** Whether the job is allowed to fail. */
   allowFailure: Scalars['Boolean'];
   /** Artifacts generated by the job. */
   artifacts?: Maybe<CiJobArtifactConnection>;
+  /** URL for browsing the artifact's archive. */
+  browseArtifactsPath?: Maybe<Scalars['String']>;
+  /** Indicates whether the current user can play the job. */
+  canPlayJob: Scalars['Boolean'];
   /** Indicates the job can be canceled. */
   cancelable: Scalars['Boolean'];
   /** Path to the commit that triggered the job. */
@@ -1704,6 +3905,10 @@ export type CiJob = {
   downstreamPipeline?: Maybe<Pipeline>;
   /** Duration of the job in seconds. */
   duration?: Maybe<Scalars['Int']>;
+  /** When the job was erased. */
+  erasedAt?: Maybe<Scalars['Time']>;
+  /** Message on why the job failed. */
+  failureMessage?: Maybe<Scalars['String']>;
   /** When a job has finished running. */
   finishedAt?: Maybe<Scalars['Time']>;
   /** ID of the job. */
@@ -1720,6 +3925,8 @@ export type CiJob = {
   needs?: Maybe<CiBuildNeedConnection>;
   /** Pipeline the job belongs to. */
   pipeline?: Maybe<Pipeline>;
+  /** Play path of the job. */
+  playPath?: Maybe<Scalars['String']>;
   /** Indicates the job can be played. */
   playable: Scalars['Boolean'];
   /**
@@ -1727,6 +3934,8 @@ export type CiJob = {
    * needed jobs if the job uses the `needs` keyword, or the previous stage jobs otherwise.
    */
   previousStageJobsOrNeeds?: Maybe<JobNeedUnionConnection>;
+  /** Project that the job belongs to. */
+  project?: Maybe<Project>;
   /** When the job was enqueued and marked as pending. */
   queuedAt?: Maybe<Scalars['Time']>;
   /** How long the job was enqueued before starting. */
@@ -1739,6 +3948,16 @@ export type CiJob = {
   retried?: Maybe<Scalars['Boolean']>;
   /** Indicates the job can be retried. */
   retryable: Scalars['Boolean'];
+  /** Runner assigned to execute the job. */
+  runner?: Maybe<CiRunner>;
+  /**
+   * Runner manager assigned to the job. Introduced in 15.11: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  runnerManager?: Maybe<CiRunnerManager>;
+  /** Indicates the job is scheduled. */
+  scheduled: Scalars['Boolean'];
   /** Schedule for the build. */
   scheduledAt?: Maybe<Scalars['Time']>;
   /** Type of job scheduling. Value is `dag` if the job uses the `needs` keyword, and `stage` otherwise. */
@@ -1755,10 +3974,14 @@ export type CiJob = {
   stuck: Scalars['Boolean'];
   /** Tags for the current job. */
   tags?: Maybe<Array<Scalars['String']>>;
+  /** Trace generated by the job. */
+  trace?: Maybe<CiJobTrace>;
   /** Whether the job was triggered. */
   triggered?: Maybe<Scalars['Boolean']>;
   /** Permissions for the current user on the resource */
   userPermissions: JobPermissions;
+  /** Web path of the job. */
+  webPath?: Maybe<Scalars['String']>;
 };
 
 
@@ -1797,10 +4020,16 @@ export type CiJobArtifact = {
   __typename?: 'CiJobArtifact';
   /** URL for downloading the artifact's file. */
   downloadPath?: Maybe<Scalars['String']>;
+  /** Expiry date of the artifact. */
+  expireAt?: Maybe<Scalars['Time']>;
   /** File type of the artifact. */
   fileType?: Maybe<JobArtifactFileType>;
+  /** ID of the artifact. */
+  id: Scalars['CiJobArtifactID'];
   /** File name of the artifact. */
   name?: Maybe<Scalars['String']>;
+  /** Size of the artifact in bytes. */
+  size: Scalars['BigInt'];
 };
 
 /** The connection type for CiJobArtifact. */
@@ -1885,6 +4114,12 @@ export type CiJobStatus =
 export type CiJobTokenScopeAddProjectInput = {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Direction of access, which defaults to INBOUND. Deprecated in 16.0: Outbound
+   * job token scope is being removed. This field can now only be set to INBOUND.
+   * @deprecated Outbound job token scope is being removed. This field can now only be set to INBOUND. Deprecated in 16.0.
+   */
+  direction?: InputMaybe<CiJobTokenScopeDirection>;
   /** Project that the CI job token scope belongs to. */
   projectPath: Scalars['ID'];
   /** Project to be added to the CI job token scope. */
@@ -1894,7 +4129,7 @@ export type CiJobTokenScopeAddProjectInput = {
 /** Autogenerated return type of CiJobTokenScopeAddProject */
 export type CiJobTokenScopeAddProjectPayload = {
   __typename?: 'CiJobTokenScopeAddProjectPayload';
-  /** CI job token's scope of access. */
+  /** CI job token's access scope. */
   ciJobTokenScope?: Maybe<CiJobTokenScopeType>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: Maybe<Scalars['String']>;
@@ -1902,10 +4137,19 @@ export type CiJobTokenScopeAddProjectPayload = {
   errors: Array<Scalars['String']>;
 };
 
+/** Direction of access. */
+export type CiJobTokenScopeDirection =
+  /** Target projects in the inbound allowlist can access the scope project through their job tokens. */
+  | 'INBOUND'
+  /** Job token scope project can access target project in the outbound allowlist. */
+  | 'OUTBOUND';
+
 /** Autogenerated input type of CiJobTokenScopeRemoveProject */
 export type CiJobTokenScopeRemoveProjectInput = {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Direction of access, which defaults to outbound. */
+  direction?: InputMaybe<CiJobTokenScopeDirection>;
   /** Project that the CI job token scope belongs to. */
   projectPath: Scalars['ID'];
   /** Project to be removed from the CI job token scope. */
@@ -1925,8 +4169,33 @@ export type CiJobTokenScopeRemoveProjectPayload = {
 
 export type CiJobTokenScopeType = {
   __typename?: 'CiJobTokenScopeType';
-  /** Allow list of projects that can be accessed by CI Job tokens created by this project. */
+  /** Allow list of projects that can access the current project through its CI Job tokens. */
+  inboundAllowlist: ProjectConnection;
+  /** Allow list of projects that are accessible using the current project's CI Job tokens. */
+  outboundAllowlist: ProjectConnection;
+  /**
+   * Allow list of projects that can be accessed by CI Job tokens created by this
+   * project. Deprecated in 15.9: The `projects` attribute is being deprecated. Use
+   * `outbound_allowlist`.
+   * @deprecated The `projects` attribute is being deprecated. Use `outbound_allowlist`. Deprecated in 15.9.
+   */
   projects: ProjectConnection;
+};
+
+
+export type CiJobTokenScopeTypeInboundAllowlistArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type CiJobTokenScopeTypeOutboundAllowlistArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -1935,6 +4204,66 @@ export type CiJobTokenScopeTypeProjectsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+};
+
+export type CiJobTrace = {
+  __typename?: 'CiJobTrace';
+  /**
+   * HTML summary containing the last 10 lines of the trace. Introduced in 15.11:
+   * This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  htmlSummary: Scalars['String'];
+};
+
+/** Representation of duration statistics for a group of CI jobs. */
+export type CiJobsDurationStatistics = {
+  __typename?: 'CiJobsDurationStatistics';
+  /**
+   * 50th percentile. 50% of the durations are lower than this value. Introduced in
+   * 15.8: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  p50?: Maybe<Scalars['Duration']>;
+  /**
+   * 75th percentile. 75% of the durations are lower than this value. Introduced in
+   * 15.8: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  p75?: Maybe<Scalars['Duration']>;
+  /**
+   * 90th percentile. 90% of the durations are lower than this value. Introduced in
+   * 15.8: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  p90?: Maybe<Scalars['Duration']>;
+  /**
+   * 95th percentile. 95% of the durations are lower than this value. Introduced in
+   * 15.8: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  p95?: Maybe<Scalars['Duration']>;
+  /**
+   * 99th percentile. 99% of the durations are lower than this value. Introduced in
+   * 15.8: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  p99?: Maybe<Scalars['Duration']>;
+};
+
+/** Statistics for a group of CI jobs. */
+export type CiJobsStatistics = {
+  __typename?: 'CiJobsStatistics';
+  /**
+   * Statistics for amount of time that jobs were waiting to be picked up. The
+   * calculation is performed based on the most recent 100 jobs executed by the
+   * 5000 most recently created runners in context. If no filter is applied to
+   * runners, the calculation is performed based on the most recent 100 jobs
+   * globally. Introduced in 15.8: This feature is an Experiment. It can be changed
+   * or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  queuedDuration?: Maybe<CiJobsDurationStatistics>;
 };
 
 /** CI/CD variables given to a manual job. */
@@ -1978,9 +4307,88 @@ export type CiManualVariableEdge = {
   node?: Maybe<CiManualVariable>;
 };
 
+export type CiMinutesNamespaceMonthlyUsage = {
+  __typename?: 'CiMinutesNamespaceMonthlyUsage';
+  /** Total number of units of compute used by all projects in the namespace. */
+  minutes?: Maybe<Scalars['Int']>;
+  /** Month related to the usage data. */
+  month?: Maybe<Scalars['String']>;
+  /** Month related to the usage data in ISO 8601 date format. */
+  monthIso8601?: Maybe<Scalars['ISO8601Date']>;
+  /** Compute usage data for projects in the namespace. */
+  projects?: Maybe<CiMinutesProjectMonthlyUsageConnection>;
+  /** Total duration (in seconds) of shared runners use by the namespace for the month. */
+  sharedRunnersDuration?: Maybe<Scalars['Int']>;
+};
+
+
+export type CiMinutesNamespaceMonthlyUsageProjectsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for CiMinutesNamespaceMonthlyUsage. */
+export type CiMinutesNamespaceMonthlyUsageConnection = {
+  __typename?: 'CiMinutesNamespaceMonthlyUsageConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CiMinutesNamespaceMonthlyUsageEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CiMinutesNamespaceMonthlyUsage>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CiMinutesNamespaceMonthlyUsageEdge = {
+  __typename?: 'CiMinutesNamespaceMonthlyUsageEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CiMinutesNamespaceMonthlyUsage>;
+};
+
+export type CiMinutesProjectMonthlyUsage = {
+  __typename?: 'CiMinutesProjectMonthlyUsage';
+  /** Number of units of compute used by the project in the month. */
+  minutes?: Maybe<Scalars['Int']>;
+  /**
+   * Name of the project. Deprecated in 15.6: Use `project.name`.
+   * @deprecated Use `project.name`. Deprecated in 15.6.
+   */
+  name?: Maybe<Scalars['String']>;
+  /** Project having the recorded usage. */
+  project?: Maybe<Project>;
+  /** Total duration (in seconds) of shared runners use by the project for the month. */
+  sharedRunnersDuration?: Maybe<Scalars['Int']>;
+};
+
+/** The connection type for CiMinutesProjectMonthlyUsage. */
+export type CiMinutesProjectMonthlyUsageConnection = {
+  __typename?: 'CiMinutesProjectMonthlyUsageConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CiMinutesProjectMonthlyUsageEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CiMinutesProjectMonthlyUsage>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CiMinutesProjectMonthlyUsageEdge = {
+  __typename?: 'CiMinutesProjectMonthlyUsageEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CiMinutesProjectMonthlyUsage>;
+};
+
 /** CI/CD variables for a project. */
 export type CiProjectVariable = CiVariable & {
   __typename?: 'CiProjectVariable';
+  /** Description of the variable. */
+  description?: Maybe<Scalars['String']>;
   /** Scope defining the environments that can use the variable. */
   environmentScope?: Maybe<Scalars['String']>;
   /** ID of the variable. */
@@ -2004,6 +4412,8 @@ export type CiProjectVariableConnection = {
   __typename?: 'CiProjectVariableConnection';
   /** A list of edges. */
   edges?: Maybe<Array<Maybe<CiProjectVariableEdge>>>;
+  /** Maximum amount of project CI/CD variables. */
+  limit: Scalars['Int'];
   /** A list of nodes. */
   nodes?: Maybe<Array<Maybe<CiProjectVariable>>>;
   /** Information to aid in pagination. */
@@ -2030,47 +4440,100 @@ export type CiRunner = {
   active: Scalars['Boolean'];
   /** Admin URL of the runner. Only available for administrators. */
   adminUrl?: Maybe<Scalars['String']>;
-  /** Architecture provided by the the runner. */
+  /**
+   * Architecture provided by the the runner. Deprecated in 16.2: Use field in `manager` object instead.
+   * @deprecated Use field in `manager` object instead. Deprecated in 16.2.
+   */
   architectureName?: Maybe<Scalars['String']>;
   /** Timestamp of last contact from this runner. */
   contactedAt?: Maybe<Scalars['Time']>;
   /** Timestamp of creation of this runner. */
   createdAt?: Maybe<Scalars['Time']>;
+  /** User that created this runner. */
+  createdBy?: Maybe<UserCore>;
   /** Description of the runner. */
   description?: Maybe<Scalars['String']>;
   /** Admin form URL of the runner. Only available for administrators. */
   editAdminUrl?: Maybe<Scalars['String']>;
-  /** Executor last advertised by the runner. */
+  /**
+   * Ephemeral authentication token used for runner manager registration. Only
+   * available for the creator of the runner for a limited time during
+   * registration. Introduced in 15.9: This feature is an Experiment. It can be
+   * changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  ephemeralAuthenticationToken?: Maybe<Scalars['String']>;
+  /**
+   * URL of the registration page of the runner manager. Only available for the
+   * creator of the runner for a limited time during registration. Introduced in
+   * 15.11: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  ephemeralRegisterUrl?: Maybe<Scalars['String']>;
+  /**
+   * Executor last advertised by the runner. Deprecated in 16.2: Use field in `manager` object instead.
+   * @deprecated Use field in `manager` object instead. Deprecated in 16.2.
+   */
   executorName?: Maybe<Scalars['String']>;
   /** Groups the runner is associated with. For group runners only. */
   groups?: Maybe<GroupConnection>;
   /** ID of the runner. */
   id: Scalars['CiRunnerID'];
-  /** IP address of the runner. */
+  /**
+   * IP address of the runner. Deprecated in 16.2: Use field in `manager` object instead.
+   * @deprecated Use field in `manager` object instead. Deprecated in 16.2.
+   */
   ipAddress?: Maybe<Scalars['String']>;
   /** Number of jobs processed by the runner (limited to 1000, plus one to indicate that more items exist). */
   jobCount?: Maybe<Scalars['Int']>;
-  /** Jobs assigned to the runner. */
+  /**
+   * Job execution status of the runner. Introduced in 15.7: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.7.
+   */
+  jobExecutionStatus?: Maybe<CiRunnerJobExecutionStatus>;
+  /** Jobs assigned to the runner. This field can only be resolved for one runner in any single request. */
   jobs?: Maybe<CiJobConnection>;
   /** Indicates the runner is locked. */
   locked?: Maybe<Scalars['Boolean']>;
   /** Runner's maintenance notes. */
   maintenanceNote?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `maintenance_note` */
+  /** GitLab Flavored Markdown rendering of `maintenance_note` */
   maintenanceNoteHtml?: Maybe<Scalars['String']>;
+  /**
+   * Machines associated with the runner configuration. Introduced in 15.10: This
+   * feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  managers?: Maybe<CiRunnerManagerConnection>;
   /** Maximum timeout (in seconds) for jobs processed by the runner. */
   maximumTimeout?: Maybe<Scalars['Int']>;
   /** Project that owns the runner. For project runners only. */
   ownerProject?: Maybe<Project>;
   /** Indicates the runner is paused and not available to run jobs. */
   paused: Scalars['Boolean'];
-  /** Platform provided by the runner. */
+  /**
+   * Platform provided by the runner. Deprecated in 16.2: Use field in `manager` object instead.
+   * @deprecated Use field in `manager` object instead. Deprecated in 16.2.
+   */
   platformName?: Maybe<Scalars['String']>;
+  /** Private projects' "compute cost factor" associated with the runner (GitLab.com only). */
+  privateProjectsMinutesCostFactor?: Maybe<Scalars['Float']>;
   /** Number of projects that the runner is associated with. */
   projectCount?: Maybe<Scalars['Int']>;
-  /** Projects the runner is associated with. For project runners only. */
+  /** Find projects the runner is associated with. For project runners only. */
   projects?: Maybe<ProjectConnection>;
-  /** Revision of the runner. */
+  /** Public projects' "compute cost factor" associated with the runner (GitLab.com only). */
+  publicProjectsMinutesCostFactor?: Maybe<Scalars['Float']>;
+  /**
+   * URL of the temporary registration page of the runner. Only available before
+   * the runner is registered. Only available for administrators.
+   */
+  registerAdminUrl?: Maybe<Scalars['String']>;
+  /**
+   * Revision of the runner. Deprecated in 16.2: Use field in `manager` object instead.
+   * @deprecated Use field in `manager` object instead. Deprecated in 16.2.
+   */
   revision?: Maybe<Scalars['String']>;
   /** Indicates the runner is able to run untagged jobs. */
   runUntagged: Scalars['Boolean'];
@@ -2084,9 +4547,18 @@ export type CiRunner = {
   tagList?: Maybe<Array<Scalars['String']>>;
   /** Runner token expiration time. */
   tokenExpiresAt?: Maybe<Scalars['Time']>;
+  /**
+   * Availability of upgrades for the runner. Introduced in 14.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 14.10.
+   */
+  upgradeStatus?: Maybe<CiRunnerUpgradeStatus>;
   /** Permissions for the current user on the resource */
   userPermissions: RunnerPermissions;
-  /** Version of the runner. */
+  /**
+   * Version of the runner. Deprecated in 16.2: Use field in `manager` object instead.
+   * @deprecated Use field in `manager` object instead. Deprecated in 16.2.
+   */
   version?: Maybe<Scalars['String']>;
 };
 
@@ -2108,11 +4580,24 @@ export type CiRunnerJobsArgs = {
 };
 
 
+export type CiRunnerManagersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type CiRunnerProjectsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  membership?: InputMaybe<Scalars['Boolean']>;
+  search?: InputMaybe<Scalars['String']>;
+  searchNamespaces?: InputMaybe<Scalars['Boolean']>;
+  sort?: InputMaybe<Scalars['String']>;
+  topics?: InputMaybe<Array<Scalars['String']>>;
 };
 
 
@@ -2133,6 +4618,8 @@ export type CiRunnerConnection = {
   count: Scalars['Int'];
   /** A list of edges. */
   edges?: Maybe<Array<Maybe<CiRunnerEdge>>>;
+  /** Jobs statistics for jobs executed by a collection of runners. Available only to admins. */
+  jobsStatistics?: Maybe<CiJobsStatistics>;
   /** A list of nodes. */
   nodes?: Maybe<Array<Maybe<CiRunner>>>;
   /** Information to aid in pagination. */
@@ -2154,6 +4641,84 @@ export type CiRunnerEdge = {
   /** Web URL of the runner. The value depends on where you put this field in the query. You can use it for projects or groups. */
   webUrl?: Maybe<Scalars['String']>;
 };
+
+export type CiRunnerJobExecutionStatus =
+  /** Runner is idle. Introduced in 15.7: This feature is an Experiment. It can be changed or removed at any time. */
+  | 'IDLE'
+  /** Runner is executing jobs. Introduced in 15.7: This feature is an Experiment. It can be changed or removed at any time. */
+  | 'RUNNING';
+
+export type CiRunnerManager = {
+  __typename?: 'CiRunnerManager';
+  /** Architecture provided by the runner manager. */
+  architectureName?: Maybe<Scalars['String']>;
+  /** Timestamp of last contact from the runner manager. */
+  contactedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of creation of the runner manager. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Executor last advertised by the runner. */
+  executorName?: Maybe<Scalars['String']>;
+  /** ID of the runner manager. */
+  id: Scalars['CiRunnerManagerID'];
+  /** IP address of the runner manager. */
+  ipAddress?: Maybe<Scalars['String']>;
+  /** Platform provided by the runner manager. */
+  platformName?: Maybe<Scalars['String']>;
+  /** Revision of the runner. */
+  revision?: Maybe<Scalars['String']>;
+  /** Runner configuration for the runner manager. */
+  runner?: Maybe<CiRunner>;
+  /** Status of the runner manager. */
+  status: CiRunnerStatus;
+  /** System ID associated with the runner manager. */
+  systemId: Scalars['String'];
+  /**
+   * Availability of upgrades for the runner manager. Introduced in 16.1: This
+   * feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  upgradeStatus?: Maybe<CiRunnerUpgradeStatus>;
+  /** Version of the runner. */
+  version?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for CiRunnerManager. */
+export type CiRunnerManagerConnection = {
+  __typename?: 'CiRunnerManagerConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CiRunnerManagerEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CiRunnerManager>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CiRunnerManagerEdge = {
+  __typename?: 'CiRunnerManagerEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CiRunnerManager>;
+};
+
+/** Values for filtering runners in namespaces. The previous type name `RunnerMembershipFilter` was deprecated in 15.4. */
+export type CiRunnerMembershipFilter =
+  /**
+   * Include all runners. This list includes runners for all projects in the group
+   * and subgroups, as well as for the parent groups and instance. Introduced in
+   * 15.5: This feature is an Experiment. It can be changed or removed at any time.
+   */
+  | 'ALL_AVAILABLE'
+  /**
+   * Include runners that have either a direct or inherited relationship. These
+   * runners can be specific to a project or a group.
+   */
+  | 'DESCENDANTS'
+  /** Include runners that have a direct relationship. */
+  | 'DIRECT';
 
 /** Values for sorting runners */
 export type CiRunnerSort =
@@ -2204,6 +4769,51 @@ export type CiRunnerUpgradeStatus =
   | 'NOT_AVAILABLE'
   /** Upgrade is available and recommended for the runner. */
   | 'RECOMMENDED';
+
+/** Represents the Geo replication and verification state of a ci_secure_file. */
+export type CiSecureFileRegistry = {
+  __typename?: 'CiSecureFileRegistry';
+  /** ID of the Ci Secure File. */
+  ciSecureFileId: Scalars['ID'];
+  /** Timestamp when the CiSecureFileRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the CiSecureFileRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the CiSecureFileRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the CiSecureFileRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the CiSecureFileRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the CiSecureFileRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the CiSecureFileRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the CiSecureFileRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the CiSecureFileRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for CiSecureFileRegistry. */
+export type CiSecureFileRegistryConnection = {
+  __typename?: 'CiSecureFileRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CiSecureFileRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CiSecureFileRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CiSecureFileRegistryEdge = {
+  __typename?: 'CiSecureFileRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CiSecureFileRegistry>;
+};
 
 export type CiStage = {
   __typename?: 'CiStage';
@@ -2287,6 +4897,13 @@ export type CiVariableInput = {
   value: Scalars['String'];
 };
 
+/** Values for sorting variables */
+export type CiVariableSort =
+  /** Sorted by key in ascending order. */
+  | 'KEY_ASC'
+  /** Sorted by key in descending order. */
+  | 'KEY_DESC';
+
 export type CiVariableType =
   /** Env var type. */
   | 'ENV_VAR'
@@ -2313,6 +4930,8 @@ export type ClusterAgent = {
   tokens?: Maybe<ClusterAgentTokenConnection>;
   /** Timestamp the cluster agent was updated. */
   updatedAt?: Maybe<Scalars['Time']>;
+  /** Container images reported on the agent vulnerabilities. */
+  vulnerabilityImages?: Maybe<VulnerabilityContainerImageConnection>;
   /** Web path of the cluster agent. */
   webPath?: Maybe<Scalars['String']>;
 };
@@ -2339,7 +4958,14 @@ export type ClusterAgentTokensArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
-  status?: InputMaybe<AgentTokenStatus>;
+};
+
+
+export type ClusterAgentVulnerabilityImagesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 export type ClusterAgentActivityEvent = {
@@ -2376,6 +5002,62 @@ export type ClusterAgentActivityEventEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<ClusterAgentActivityEvent>;
+};
+
+export type ClusterAgentAuthorizationCiAccess = {
+  __typename?: 'ClusterAgentAuthorizationCiAccess';
+  /** Authorized cluster agent. */
+  agent?: Maybe<ClusterAgent>;
+  /** Configuration for the authorized project. */
+  config?: Maybe<Scalars['JSON']>;
+};
+
+/** The connection type for ClusterAgentAuthorizationCiAccess. */
+export type ClusterAgentAuthorizationCiAccessConnection = {
+  __typename?: 'ClusterAgentAuthorizationCiAccessConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ClusterAgentAuthorizationCiAccessEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ClusterAgentAuthorizationCiAccess>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ClusterAgentAuthorizationCiAccessEdge = {
+  __typename?: 'ClusterAgentAuthorizationCiAccessEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ClusterAgentAuthorizationCiAccess>;
+};
+
+export type ClusterAgentAuthorizationUserAccess = {
+  __typename?: 'ClusterAgentAuthorizationUserAccess';
+  /** Authorized cluster agent. */
+  agent?: Maybe<ClusterAgent>;
+  /** Configuration for the authorized project. */
+  config?: Maybe<Scalars['JSON']>;
+};
+
+/** The connection type for ClusterAgentAuthorizationUserAccess. */
+export type ClusterAgentAuthorizationUserAccessConnection = {
+  __typename?: 'ClusterAgentAuthorizationUserAccessConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ClusterAgentAuthorizationUserAccessEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ClusterAgentAuthorizationUserAccess>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ClusterAgentAuthorizationUserAccessEdge = {
+  __typename?: 'ClusterAgentAuthorizationUserAccessEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ClusterAgentAuthorizationUserAccess>;
 };
 
 /** The connection type for ClusterAgent. */
@@ -2501,6 +5183,124 @@ export type ClusterAgentTokenRevokePayload = {
   errors: Array<Scalars['String']>;
 };
 
+/** Represents the code coverage activity for a group */
+export type CodeCoverageActivity = {
+  __typename?: 'CodeCoverageActivity';
+  /** Average percentage of the different code coverage results available for the group. */
+  averageCoverage?: Maybe<Scalars['Float']>;
+  /** Number of different code coverage results available for the group. */
+  coverageCount?: Maybe<Scalars['Int']>;
+  /** Date when the code coverage was created. */
+  date: Scalars['Date'];
+  /** Number of projects with code coverage results for the group. */
+  projectCount?: Maybe<Scalars['Int']>;
+};
+
+/** The connection type for CodeCoverageActivity. */
+export type CodeCoverageActivityConnection = {
+  __typename?: 'CodeCoverageActivityConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CodeCoverageActivityEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CodeCoverageActivity>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CodeCoverageActivityEdge = {
+  __typename?: 'CodeCoverageActivityEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CodeCoverageActivity>;
+};
+
+/** Represents the code coverage summary for a project */
+export type CodeCoverageSummary = {
+  __typename?: 'CodeCoverageSummary';
+  /** Average percentage of the different code coverage results available for the project. */
+  averageCoverage?: Maybe<Scalars['Float']>;
+  /** Number of different code coverage results available. */
+  coverageCount?: Maybe<Scalars['Int']>;
+  /** Latest date when the code coverage was created for the project. */
+  lastUpdatedOn?: Maybe<Scalars['Date']>;
+};
+
+/** Represents a code quality degradation on the pipeline. */
+export type CodeQualityDegradation = {
+  __typename?: 'CodeQualityDegradation';
+  /** Description of the code quality degradation. */
+  description: Scalars['String'];
+  /** Code Quality plugin that reported the finding. */
+  engineName: Scalars['String'];
+  /** Unique fingerprint to identify the code quality degradation. For example, an MD5 hash. */
+  fingerprint: Scalars['String'];
+  /** Line on which the code quality degradation occurred. */
+  line: Scalars['Int'];
+  /** Relative path to the file containing the code quality degradation. */
+  path: Scalars['String'];
+  /** Status of the degradation (BLOCKER, CRITICAL, MAJOR, MINOR, INFO, UNKNOWN). */
+  severity: CodeQualityDegradationSeverity;
+  /** URL to the file along with line number. */
+  webUrl?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for CodeQualityDegradation. */
+export type CodeQualityDegradationConnection = {
+  __typename?: 'CodeQualityDegradationConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CodeQualityDegradationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CodeQualityDegradation>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CodeQualityDegradationEdge = {
+  __typename?: 'CodeQualityDegradationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CodeQualityDegradation>;
+};
+
+export type CodeQualityDegradationSeverity =
+  /** Code Quality degradation has a status of blocker. */
+  | 'BLOCKER'
+  /** Code Quality degradation has a status of critical. */
+  | 'CRITICAL'
+  /** Code Quality degradation has a status of info. */
+  | 'INFO'
+  /** Code Quality degradation has a status of major. */
+  | 'MAJOR'
+  /** Code Quality degradation has a status of minor. */
+  | 'MINOR'
+  /** Code Quality degradation has a status of unknown. */
+  | 'UNKNOWN';
+
+/** Code Quality report for a pipeline */
+export type CodeQualityReportSummary = {
+  __typename?: 'CodeQualityReportSummary';
+  /** Total number of blocker status. */
+  blocker?: Maybe<Scalars['Int']>;
+  /** Total number of Code Quality reports. */
+  count?: Maybe<Scalars['Int']>;
+  /** Total number of critical status. */
+  critical?: Maybe<Scalars['Int']>;
+  /** Total number of info status. */
+  info?: Maybe<Scalars['Int']>;
+  /** Total number of major status. */
+  major?: Maybe<Scalars['Int']>;
+  /** Total number of minor status. */
+  minor?: Maybe<Scalars['Int']>;
+  /** Total number of unknown status. */
+  unknown?: Maybe<Scalars['Int']>;
+};
+
 export type Commit = Todoable & {
   __typename?: 'Commit';
   /** Author of the commit. */
@@ -2515,11 +5315,11 @@ export type Commit = Todoable & {
   authoredDate?: Maybe<Scalars['Time']>;
   /** Description of the commit message. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** Full title of the commit message. */
   fullTitle?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `full_title` */
+  /** GitLab Flavored Markdown rendering of `full_title` */
   fullTitleHtml?: Maybe<Scalars['String']>;
   /** ID (global ID) of the commit. */
   id: Scalars['ID'];
@@ -2531,11 +5331,13 @@ export type Commit = Todoable & {
   sha: Scalars['String'];
   /** Short SHA1 ID of the commit. */
   shortId: Scalars['String'];
+  /** Signature of the commit. */
+  signature?: Maybe<CommitSignature>;
   /** Rendered HTML of the commit signature. */
   signatureHtml?: Maybe<Scalars['String']>;
   /** Title of the commit message. */
   title?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `title` */
+  /** GitLab Flavored Markdown rendering of `title` */
   titleHtml?: Maybe<Scalars['String']>;
   /** Web path of the commit. */
   webPath: Scalars['String'];
@@ -2646,6 +5448,272 @@ export type CommitEncoding =
   /** Text encoding. */
   | 'TEXT';
 
+export type CommitParentNames = {
+  __typename?: 'CommitParentNames';
+  /** Names of the commit parent (branch or tag). */
+  names?: Maybe<Array<Scalars['String']>>;
+};
+
+export type CommitReferences = {
+  __typename?: 'CommitReferences';
+  /** Get branch names containing a given commit. */
+  containingBranches?: Maybe<CommitParentNames>;
+  /** Get tag names containing a given commit. */
+  containingTags?: Maybe<CommitParentNames>;
+  /** Get branch names tipping at a given commit. */
+  tippingBranches?: Maybe<CommitParentNames>;
+  /** Get tag names tipping at a given commit. */
+  tippingTags?: Maybe<CommitParentNames>;
+};
+
+
+export type CommitReferencesContainingBranchesArgs = {
+  excludeTipped?: Scalars['Boolean'];
+  limit?: Scalars['Int'];
+};
+
+
+export type CommitReferencesContainingTagsArgs = {
+  excludeTipped?: Scalars['Boolean'];
+  limit?: Scalars['Int'];
+};
+
+
+export type CommitReferencesTippingBranchesArgs = {
+  limit?: Scalars['Int'];
+};
+
+
+export type CommitReferencesTippingTagsArgs = {
+  limit?: Scalars['Int'];
+};
+
+/** Represents signing information for a commit */
+export type CommitSignature = {
+  /** SHA of the associated commit. */
+  commitSha?: Maybe<Scalars['String']>;
+  /** Project of the associated commit. */
+  project?: Maybe<Project>;
+  /** Indicates verification status of the associated key or certificate. */
+  verificationStatus?: Maybe<VerificationStatus>;
+};
+
+/** Comparable security report type */
+export type ComparableSecurityReportType =
+  /** API Fuzzing report */
+  | 'API_FUZZING'
+  /** Container Scanning report */
+  | 'CONTAINER_SCANNING'
+  /** Coverage Fuzzing report */
+  | 'COVERAGE_FUZZING'
+  /** DAST report */
+  | 'DAST'
+  /** Dependency Scanning report */
+  | 'DEPENDENCY_SCANNING'
+  /** SAST report */
+  | 'SAST'
+  /** Secret Detection report */
+  | 'SECRET_DETECTION';
+
+/** Represents compared security report. */
+export type ComparedSecurityReport = {
+  __typename?: 'ComparedSecurityReport';
+  /**
+   * New vulnerability findings. Introduced in 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  added?: Maybe<Array<ComparedSecurityReportFinding>>;
+  /** Time of the base report creation. */
+  baseReportCreatedAt?: Maybe<Scalars['Time']>;
+  /** Indicates whether the base report out of date. */
+  baseReportOutOfDate?: Maybe<Scalars['Boolean']>;
+  /**
+   * Fixed vulnerability findings. Introduced in 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  fixed?: Maybe<Array<ComparedSecurityReportFinding>>;
+  /** Time of the base report creation. */
+  headReportCreatedAt?: Maybe<Scalars['Time']>;
+};
+
+/** Represents finding. */
+export type ComparedSecurityReportFinding = {
+  __typename?: 'ComparedSecurityReportFinding';
+  /** Description of the vulnerability finding. */
+  description?: Maybe<Scalars['String']>;
+  /** IID of the pipeline. */
+  foundByPipelineIid?: Maybe<Scalars['String']>;
+  /** Severity of the vulnerability finding. */
+  severity?: Maybe<VulnerabilitySeverity>;
+  /** Finding status. */
+  state?: Maybe<VulnerabilityState>;
+  /** Title of the vulnerability finding. */
+  title?: Maybe<Scalars['String']>;
+  /** UUIDv5 digest based on the vulnerability's report type, primary identifier, location, fingerprint, project identifier. */
+  uuid?: Maybe<Scalars['String']>;
+};
+
+/** Represents a ComplianceFramework associated with a Project */
+export type ComplianceFramework = {
+  __typename?: 'ComplianceFramework';
+  /** Hexadecimal representation of compliance framework's label color. */
+  color: Scalars['String'];
+  /** Default compliance framework for the group. */
+  default?: Maybe<Scalars['Boolean']>;
+  /** Description of the compliance framework. */
+  description: Scalars['String'];
+  /** Compliance framework ID. */
+  id: Scalars['ID'];
+  /** Name of the compliance framework. */
+  name: Scalars['String'];
+  /**
+   * Full path of the compliance pipeline configuration stored in a project
+   * repository, such as `.gitlab/.compliance-gitlab-ci.yml@compliance/hipaa`
+   * **(ULTIMATE)**.
+   */
+  pipelineConfigurationFullPath?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for ComplianceFramework. */
+export type ComplianceFrameworkConnection = {
+  __typename?: 'ComplianceFrameworkConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ComplianceFrameworkEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ComplianceFramework>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ComplianceFrameworkEdge = {
+  __typename?: 'ComplianceFrameworkEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ComplianceFramework>;
+};
+
+export type ComplianceFrameworkFilters = {
+  /** ID of the compliance framework. */
+  id?: InputMaybe<Scalars['ComplianceManagementFrameworkID']>;
+  /** Negated compliance framework filter input. */
+  not?: InputMaybe<NegatedComplianceFrameworkFilters>;
+  /** Checks presence of compliance framework of the project, "none" and "any" values are supported. */
+  presenceFilter?: InputMaybe<ComplianceFrameworkPresenceFilter>;
+};
+
+export type ComplianceFrameworkInput = {
+  /** New color representation of the compliance framework in hex format. e.g. #FCA121. */
+  color?: InputMaybe<Scalars['String']>;
+  /** Set this compliance framework as the default framework for the group. */
+  default?: InputMaybe<Scalars['Boolean']>;
+  /** New description for the compliance framework. */
+  description?: InputMaybe<Scalars['String']>;
+  /** New name for the compliance framework. */
+  name?: InputMaybe<Scalars['String']>;
+  /**
+   * Full path of the compliance pipeline configuration stored in a project
+   * repository, such as `.gitlab/.compliance-gitlab-ci.yml@compliance/hipaa`
+   * **(ULTIMATE)**.
+   */
+  pipelineConfigurationFullPath?: InputMaybe<Scalars['String']>;
+};
+
+/** ComplianceFramework of a project for filtering */
+export type ComplianceFrameworkPresenceFilter =
+  /** Any compliance framework is assigned. */
+  | 'ANY'
+  /** No compliance framework is assigned. */
+  | 'NONE';
+
+/** Compliance violation associated with a merged merge request. */
+export type ComplianceViolation = {
+  __typename?: 'ComplianceViolation';
+  /** Compliance violation ID. */
+  id: Scalars['ID'];
+  /** Merge request the compliance violation occurred in. */
+  mergeRequest: MergeRequest;
+  /** Reason the compliance violation occurred. */
+  reason: ComplianceViolationReason;
+  /** Severity of the compliance violation. */
+  severityLevel: ComplianceViolationSeverity;
+  /** User suspected of causing the compliance violation. */
+  violatingUser: UserCore;
+};
+
+/** The connection type for ComplianceViolation. */
+export type ComplianceViolationConnection = {
+  __typename?: 'ComplianceViolationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ComplianceViolationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ComplianceViolation>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ComplianceViolationEdge = {
+  __typename?: 'ComplianceViolationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ComplianceViolation>;
+};
+
+export type ComplianceViolationInput = {
+  /** Merge requests merged after this date (inclusive). */
+  mergedAfter?: InputMaybe<Scalars['Date']>;
+  /** Merge requests merged before this date (inclusive). */
+  mergedBefore?: InputMaybe<Scalars['Date']>;
+  /** Filter compliance violations by project. */
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
+  /** Filter compliance violations by target branch. */
+  targetBranch?: InputMaybe<Scalars['String']>;
+};
+
+/** Reason for the compliance violation. */
+export type ComplianceViolationReason =
+  /** Approved by committer */
+  | 'APPROVED_BY_COMMITTER'
+  /** Approved by insufficient users */
+  | 'APPROVED_BY_INSUFFICIENT_USERS'
+  /** Approved by merge request author */
+  | 'APPROVED_BY_MERGE_REQUEST_AUTHOR';
+
+/** Severity of the compliance violation. */
+export type ComplianceViolationSeverity =
+  /** Critical severity */
+  | 'CRITICAL'
+  /** High severity */
+  | 'HIGH'
+  /** Info severity */
+  | 'INFO'
+  /** Low severity */
+  | 'LOW'
+  /** Medium severity */
+  | 'MEDIUM';
+
+/** Compliance violation sort values. */
+export type ComplianceViolationSort =
+  /** Date merged in ascending order, further sorted by ID in ascending order. */
+  | 'MERGED_AT_ASC'
+  /** Date merged in descending order, further sorted by ID in descending order. */
+  | 'MERGED_AT_DESC'
+  /** Merge request title in ascending order, further sorted by ID in ascending order. */
+  | 'MERGE_REQUEST_TITLE_ASC'
+  /** Merge request title in descending order, further sorted by ID in descending order. */
+  | 'MERGE_REQUEST_TITLE_DESC'
+  /** Severity in ascending order, further sorted by ID in ascending order. */
+  | 'SEVERITY_LEVEL_ASC'
+  /** Severity in descending order, further sorted by ID in descending order. */
+  | 'SEVERITY_LEVEL_DESC'
+  /** Violation reason in ascending order, further sorted by ID in ascending order. */
+  | 'VIOLATION_REASON_ASC'
+  /** Violation reason in descending order, further sorted by ID in descending order. */
+  | 'VIOLATION_REASON_DESC';
+
 /** Composer metadata */
 export type ComposerMetadata = {
   __typename?: 'ComposerMetadata';
@@ -2699,6 +5767,48 @@ export type ConanMetadatumFileTypeEnum =
   | 'PACKAGE_FILE'
   /** A recipe file type. */
   | 'RECIPE_FILE';
+
+/** Autogenerated input type of ConfigureContainerScanning */
+export type ConfigureContainerScanningInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of ConfigureContainerScanning */
+export type ConfigureContainerScanningPayload = {
+  __typename?: 'ConfigureContainerScanningPayload';
+  /** Branch that has the new/modified `.gitlab-ci.yml` file. */
+  branch?: Maybe<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Redirect path to use when the response is successful. */
+  successPath?: Maybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of ConfigureDependencyScanning */
+export type ConfigureDependencyScanningInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of ConfigureDependencyScanning */
+export type ConfigureDependencyScanningPayload = {
+  __typename?: 'ConfigureDependencyScanningPayload';
+  /** Branch that has the new/modified `.gitlab-ci.yml` file. */
+  branch?: Maybe<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Redirect path to use when the response is successful. */
+  successPath?: Maybe<Scalars['String']>;
+};
 
 /** Autogenerated input type of ConfigureSastIac */
 export type ConfigureSastIacInput = {
@@ -2794,6 +5904,60 @@ export type ConnectedAgentEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<ConnectedAgent>;
+};
+
+/** Values for sorting contacts */
+export type ContactSort =
+  /** Created at ascending order. */
+  | 'CREATED_ASC'
+  /** Created at descending order. */
+  | 'CREATED_DESC'
+  /** Description in ascending order. */
+  | 'DESCRIPTION_ASC'
+  /** Description in descending order. */
+  | 'DESCRIPTION_DESC'
+  /** Email in ascending order. */
+  | 'EMAIL_ASC'
+  /** Email in descending order. */
+  | 'EMAIL_DESC'
+  /** First name in ascending order. */
+  | 'FIRST_NAME_ASC'
+  /** First name in descending order. */
+  | 'FIRST_NAME_DESC'
+  /** Last name in ascending order. */
+  | 'LAST_NAME_ASC'
+  /** Last name in descending order. */
+  | 'LAST_NAME_DESC'
+  /** Organization in ascending order. */
+  | 'ORGANIZATION_ASC'
+  /** Organization in descending order. */
+  | 'ORGANIZATION_DESC'
+  /** Phone in ascending order. */
+  | 'PHONE_ASC'
+  /** Phone in descending order. */
+  | 'PHONE_DESC'
+  /** Updated at ascending order. */
+  | 'UPDATED_ASC'
+  /** Updated at descending order. */
+  | 'UPDATED_DESC'
+  /** Created at ascending order. */
+  | 'created_asc'
+  /** Created at descending order. */
+  | 'created_desc'
+  /** Updated at ascending order. */
+  | 'updated_asc'
+  /** Updated at descending order. */
+  | 'updated_desc';
+
+/** Represents the total number of contacts for the represented states. */
+export type ContactStateCounts = {
+  __typename?: 'ContactStateCounts';
+  /** Number of contacts with state `ACTIVE` */
+  active?: Maybe<Scalars['Int']>;
+  /** Number of contacts with state `ALL` */
+  all?: Maybe<Scalars['Int']>;
+  /** Number of contacts with state `INACTIVE` */
+  inactive?: Maybe<Scalars['Int']>;
 };
 
 /** A tag expiration policy designed to keep only the images that matter most */
@@ -2972,6 +6136,51 @@ export type ContainerRepositoryEdge = {
   node?: Maybe<ContainerRepository>;
 };
 
+/** Represents the Geo replication and verification state of an Container Repository. */
+export type ContainerRepositoryRegistry = {
+  __typename?: 'ContainerRepositoryRegistry';
+  /** ID of the ContainerRepository. */
+  containerRepositoryId: Scalars['ID'];
+  /** Timestamp when the ContainerRepositoryRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the ContainerRepositoryRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the ContainerRepositoryRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the ContainerRepositoryRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the ContainerRepositoryRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the ContainerRepositoryRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the ContainerRepositoryRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the ContainerRepositoryRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the ContainerRepositoryRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for ContainerRepositoryRegistry. */
+export type ContainerRepositoryRegistryConnection = {
+  __typename?: 'ContainerRepositoryRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ContainerRepositoryRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ContainerRepositoryRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ContainerRepositoryRegistryEdge = {
+  __typename?: 'ContainerRepositoryRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ContainerRepositoryRegistry>;
+};
+
 /** Values for sorting container repositories */
 export type ContainerRepositorySort =
   /** Created at ascending order. */
@@ -2999,6 +6208,8 @@ export type ContainerRepositorySort =
 export type ContainerRepositoryStatus =
   /** Delete Failed status. */
   | 'DELETE_FAILED'
+  /** Delete Ongoing status. */
+  | 'DELETE_ONGOING'
   /** Delete Scheduled status. */
   | 'DELETE_SCHEDULED';
 
@@ -3051,6 +6262,97 @@ export type ContainerRepositoryTagSort =
   | 'NAME_ASC'
   /** Ordered by name in descending order. */
   | 'NAME_DESC';
+
+/** Represents the contributions of a user. */
+export type ContributionAnalyticsContribution = {
+  __typename?: 'ContributionAnalyticsContribution';
+  /** Number of issues closed by the user. */
+  issuesClosed?: Maybe<Scalars['Int']>;
+  /** Number of issues created by the user. */
+  issuesCreated?: Maybe<Scalars['Int']>;
+  /** Number of merge requests approved by the user. */
+  mergeRequestsApproved?: Maybe<Scalars['Int']>;
+  /** Number of merge requests closed by the user. */
+  mergeRequestsClosed?: Maybe<Scalars['Int']>;
+  /** Number of merge requests created by the user. */
+  mergeRequestsCreated?: Maybe<Scalars['Int']>;
+  /** Number of merge requests merged by the user. */
+  mergeRequestsMerged?: Maybe<Scalars['Int']>;
+  /** Number of repository pushes the user made. */
+  repoPushed?: Maybe<Scalars['Int']>;
+  /** Total number of events contributed by the user. */
+  totalEvents?: Maybe<Scalars['Int']>;
+  /** Contributor User object. */
+  user?: Maybe<UserCore>;
+};
+
+/** The connection type for ContributionAnalyticsContribution. */
+export type ContributionAnalyticsContributionConnection = {
+  __typename?: 'ContributionAnalyticsContributionConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ContributionAnalyticsContributionEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ContributionAnalyticsContribution>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ContributionAnalyticsContributionEdge = {
+  __typename?: 'ContributionAnalyticsContributionEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ContributionAnalyticsContribution>;
+};
+
+/** Autogenerated input type of CorpusCreate */
+export type CorpusCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Project the corpus belongs to. */
+  fullPath: Scalars['ID'];
+  /** ID of the corpus package. */
+  packageId: Scalars['PackagesPackageID'];
+};
+
+/** Autogenerated return type of CorpusCreate */
+export type CorpusCreatePayload = {
+  __typename?: 'CorpusCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Corpus for a coverage fuzzing job. */
+export type CoverageFuzzingCorpus = {
+  __typename?: 'CoverageFuzzingCorpus';
+  /** ID of the corpus. */
+  id: Scalars['AppSecFuzzingCoverageCorpusID'];
+  /** Package of the corpus. */
+  package: PackageDetailsType;
+};
+
+/** The connection type for CoverageFuzzingCorpus. */
+export type CoverageFuzzingCorpusConnection = {
+  __typename?: 'CoverageFuzzingCorpusConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<CoverageFuzzingCorpusEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<CoverageFuzzingCorpus>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type CoverageFuzzingCorpusEdge = {
+  __typename?: 'CoverageFuzzingCorpusEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<CoverageFuzzingCorpus>;
+};
 
 /** Autogenerated input type of CreateAlertIssue */
 export type CreateAlertIssueInput = {
@@ -3108,6 +6410,8 @@ export type CreateAnnotationPayload = {
 
 /** Autogenerated input type of CreateBoard */
 export type CreateBoardInput = {
+  /** ID of user to be assigned to the board. */
+  assigneeId?: InputMaybe<Scalars['UserID']>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Full path of the group with which the resource is associated. */
@@ -3116,10 +6420,22 @@ export type CreateBoardInput = {
   hideBacklogList?: InputMaybe<Scalars['Boolean']>;
   /** Whether or not closed list is hidden. */
   hideClosedList?: InputMaybe<Scalars['Boolean']>;
+  /** ID of iteration cadence to be assigned to the board. */
+  iterationCadenceId?: InputMaybe<Scalars['IterationsCadenceID']>;
+  /** ID of iteration to be assigned to the board. */
+  iterationId?: InputMaybe<Scalars['IterationID']>;
+  /** IDs of labels to be added to the board. */
+  labelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+  /** Labels of the issue. */
+  labels?: InputMaybe<Array<Scalars['String']>>;
+  /** ID of milestone to be assigned to the board. */
+  milestoneId?: InputMaybe<Scalars['MilestoneID']>;
   /** Board name. */
   name?: InputMaybe<Scalars['String']>;
   /** Full path of the project with which the resource is associated. */
   projectPath?: InputMaybe<Scalars['ID']>;
+  /** Weight value to be assigned to the board. */
+  weight?: InputMaybe<Scalars['Int']>;
 };
 
 /** Autogenerated return type of CreateBoard */
@@ -3162,7 +6478,7 @@ export type CreateClusterAgentInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Name of the cluster agent. */
   name: Scalars['String'];
-  /** Full path of the associated project for this cluster agent. */
+  /** Full path of the associated project for the cluster agent. */
   projectPath: Scalars['ID'];
 };
 
@@ -3175,6 +6491,27 @@ export type CreateClusterAgentPayload = {
   clusterAgent?: Maybe<ClusterAgent>;
   /** Errors encountered during execution of the mutation. */
   errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of CreateComplianceFramework */
+export type CreateComplianceFrameworkInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the namespace to add the compliance framework to. */
+  namespacePath: Scalars['ID'];
+  /** Parameters to update the compliance framework with. */
+  params: ComplianceFrameworkInput;
+};
+
+/** Autogenerated return type of CreateComplianceFramework */
+export type CreateComplianceFrameworkPayload = {
+  __typename?: 'CreateComplianceFrameworkPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created compliance framework. */
+  framework?: Maybe<ComplianceFramework>;
 };
 
 /** Autogenerated input type of CreateCustomEmoji */
@@ -3206,8 +6543,13 @@ export type CreateDiffNoteInput = {
   body: Scalars['String'];
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
-  /** Confidentiality flag of a note. Default is false. */
+  /**
+   * Confidentiality flag of a note. Default is false. Deprecated in 15.3: This was renamed.
+   * @deprecated This was renamed. Please use `internal`. Deprecated in 15.3.
+   */
   confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Internal flag for a note. Default is false. */
+  internal?: InputMaybe<Scalars['Boolean']>;
   /** Global ID of the resource to add a note to. */
   noteableId: Scalars['NoteableID'];
   /** Position of this note on a diff. */
@@ -3225,14 +6567,64 @@ export type CreateDiffNotePayload = {
   note?: Maybe<Note>;
 };
 
+/** Autogenerated input type of CreateEpic */
+export type CreateEpicInput = {
+  /** IDs of labels to be added to the epic. */
+  addLabelIds?: InputMaybe<Array<Scalars['ID']>>;
+  /** Array of labels to be added to the epic. */
+  addLabels?: InputMaybe<Array<Scalars['String']>>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Color of the epic. Available only when feature flag `epic_color_highlight` is
+   * enabled. This flag is disabled by default, because the feature is experimental
+   * and is subject to change without notice.
+   */
+  color?: InputMaybe<Scalars['Color']>;
+  /** Indicates if the epic is confidential. */
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Description of the epic. */
+  description?: InputMaybe<Scalars['String']>;
+  /** End date of the epic. */
+  dueDateFixed?: InputMaybe<Scalars['String']>;
+  /** Indicates end date should be sourced from due_date_fixed field not the issue milestones. */
+  dueDateIsFixed?: InputMaybe<Scalars['Boolean']>;
+  /** Group the epic to mutate is in. */
+  groupPath: Scalars['ID'];
+  /** IDs of labels to be removed from the epic. */
+  removeLabelIds?: InputMaybe<Array<Scalars['ID']>>;
+  /** Start date of the epic. */
+  startDateFixed?: InputMaybe<Scalars['String']>;
+  /** Indicates start date should be sourced from start_date_fixed field not the issue milestones. */
+  startDateIsFixed?: InputMaybe<Scalars['Boolean']>;
+  /** Title of the epic. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of CreateEpic */
+export type CreateEpicPayload = {
+  __typename?: 'CreateEpicPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Created epic. */
+  epic?: Maybe<Epic>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 /** Autogenerated input type of CreateImageDiffNote */
 export type CreateImageDiffNoteInput = {
   /** Content of the note. */
   body: Scalars['String'];
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
-  /** Confidentiality flag of a note. Default is false. */
+  /**
+   * Confidentiality flag of a note. Default is false. Deprecated in 15.3: This was renamed.
+   * @deprecated This was renamed. Please use `internal`. Deprecated in 15.3.
+   */
   confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Internal flag for a note. Default is false. */
+  internal?: InputMaybe<Scalars['Boolean']>;
   /** Global ID of the resource to add a note to. */
   noteableId: Scalars['NoteableID'];
   /** Position of this note on a diff. */
@@ -3266,8 +6658,22 @@ export type CreateIssueInput = {
   discussionToResolve?: InputMaybe<Scalars['String']>;
   /** Due date of the issue. */
   dueDate?: InputMaybe<Scalars['ISO8601Date']>;
+  /** ID of an epic to associate the issue with. */
+  epicId?: InputMaybe<Scalars['EpicID']>;
+  /** Desired health status. */
+  healthStatus?: InputMaybe<HealthStatus>;
   /** IID (internal ID) of a project issue. Only admins and project owners can modify. */
   iid?: InputMaybe<Scalars['Int']>;
+  /** Global iteration cadence ID. Required when `iterationWildcardId` is provided. */
+  iterationCadenceId?: InputMaybe<Scalars['IterationsCadenceID']>;
+  /** Global iteration ID. Mutually exlusive argument with `iterationWildcardId`. */
+  iterationId?: InputMaybe<Scalars['IterationID']>;
+  /**
+   * Iteration wildcard ID. Supported values are: `CURRENT`. Mutually exclusive
+   * argument with `iterationId`. iterationCadenceId also required when this
+   * argument is provided.
+   */
+  iterationWildcardId?: InputMaybe<IssueCreationIterationWildcardId>;
   /** IDs of labels to be added to the issue. */
   labelIds?: InputMaybe<Array<Scalars['LabelID']>>;
   /** Labels of the issue. */
@@ -3288,6 +6694,8 @@ export type CreateIssueInput = {
   title: Scalars['String'];
   /** Type of the issue. */
   type?: InputMaybe<IssueType>;
+  /** Weight of the issue. */
+  weight?: InputMaybe<Scalars['Int']>;
 };
 
 /** Autogenerated return type of CreateIssue */
@@ -3301,16 +6709,52 @@ export type CreateIssuePayload = {
   issue?: Maybe<Issue>;
 };
 
+/** Autogenerated input type of CreateIteration */
+export type CreateIterationInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the iteration. */
+  description?: InputMaybe<Scalars['String']>;
+  /** End date of the iteration. */
+  dueDate?: InputMaybe<Scalars['String']>;
+  /** Full path of the group with which the resource is associated. */
+  groupPath?: InputMaybe<Scalars['ID']>;
+  /** Global ID of the iteration cadence to be assigned to the new iteration. */
+  iterationsCadenceId?: InputMaybe<Scalars['IterationsCadenceID']>;
+  /** Full path of the project with which the resource is associated. */
+  projectPath?: InputMaybe<Scalars['ID']>;
+  /** Start date of the iteration. */
+  startDate?: InputMaybe<Scalars['String']>;
+  /** Title of the iteration. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of CreateIteration */
+export type CreateIterationPayload = {
+  __typename?: 'CreateIterationPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created iteration. */
+  iteration?: Maybe<Iteration>;
+};
+
 /** Autogenerated input type of CreateNote */
 export type CreateNoteInput = {
   /** Content of the note. */
   body: Scalars['String'];
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
-  /** Confidentiality flag of a note. Default is false. */
+  /**
+   * Confidentiality flag of a note. Default is false. Deprecated in 15.3: This was renamed.
+   * @deprecated This was renamed. Please use `internal`. Deprecated in 15.3.
+   */
   confidential?: InputMaybe<Scalars['Boolean']>;
-  /** Global ID of the discussion this note is in reply to. */
+  /** Global ID of the discussion the note is in reply to. */
   discussionId?: InputMaybe<Scalars['DiscussionID']>;
+  /** Internal flag for a note. Default is false. */
+  internal?: InputMaybe<Scalars['Boolean']>;
   /** SHA of the head commit which is used to ensure that the merge request has not been updated since the request was sent. */
   mergeRequestDiffHeadSha?: InputMaybe<Scalars['String']>;
   /** Global ID of the resource to add a note to. */
@@ -3326,6 +6770,29 @@ export type CreateNotePayload = {
   errors: Array<Scalars['String']>;
   /** Note after mutation. */
   note?: Maybe<Note>;
+};
+
+/** Autogenerated input type of CreateRequirement */
+export type CreateRequirementInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the requirement. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Full project path the requirement is associated with. */
+  projectPath: Scalars['ID'];
+  /** Title of the requirement. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of CreateRequirement */
+export type CreateRequirementPayload = {
+  __typename?: 'CreateRequirementPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Requirement after mutation. */
+  requirement?: Maybe<Requirement>;
 };
 
 /** Autogenerated input type of CreateSnippet */
@@ -3355,6 +6822,68 @@ export type CreateSnippetPayload = {
   errors: Array<Scalars['String']>;
   /** Snippet after mutation. */
   snippet?: Maybe<Snippet>;
+};
+
+/** Autogenerated input type of CreateTestCase */
+export type CreateTestCaseInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Test case description. */
+  description?: InputMaybe<Scalars['String']>;
+  /** IDs of labels to be added to the test case. */
+  labelIds?: InputMaybe<Array<Scalars['ID']>>;
+  /** Project full path to create the test case in. */
+  projectPath: Scalars['ID'];
+  /** Test case title. */
+  title: Scalars['String'];
+};
+
+/** Autogenerated return type of CreateTestCase */
+export type CreateTestCasePayload = {
+  __typename?: 'CreateTestCasePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Test case created. */
+  testCase?: Maybe<Issue>;
+};
+
+/** Represents the current license */
+export type CurrentLicense = {
+  __typename?: 'CurrentLicense';
+  /** Date when the license was activated. */
+  activatedAt?: Maybe<Scalars['Date']>;
+  /** Number of billable users on the system. */
+  billableUsersCount?: Maybe<Scalars['Int']>;
+  /** Date, including grace period, when licensed features will be blocked. */
+  blockChangesAt?: Maybe<Scalars['Date']>;
+  /** Company of the licensee. */
+  company?: Maybe<Scalars['String']>;
+  /** Date when the license was added. */
+  createdAt?: Maybe<Scalars['Date']>;
+  /** Email of the licensee. */
+  email?: Maybe<Scalars['String']>;
+  /** Date when the license expires. */
+  expiresAt?: Maybe<Scalars['Date']>;
+  /** ID of the license extracted from the license data. */
+  id: Scalars['ID'];
+  /** Date when the license was last synced. */
+  lastSync?: Maybe<Scalars['Time']>;
+  /** Highest number of billable users on the system during the term of the current license. */
+  maximumUserCount?: Maybe<Scalars['Int']>;
+  /** Name of the licensee. */
+  name?: Maybe<Scalars['String']>;
+  /** Name of the subscription plan. */
+  plan: Scalars['String'];
+  /** Date when the license started. */
+  startsAt?: Maybe<Scalars['Date']>;
+  /** Type of the license. */
+  type: Scalars['String'];
+  /** Number of paid users in the license. */
+  usersInLicenseCount?: Maybe<Scalars['Int']>;
+  /** Number of users over the paid users in the license. */
+  usersOverLicenseCount?: Maybe<Scalars['Int']>;
 };
 
 export type CurrentUserTodos = {
@@ -3480,9 +7009,11 @@ export type CustomerRelationsContactEdge = {
 };
 
 export type CustomerRelationsContactState =
-  /** Active contact. */
+  /** Active contacts. */
   | 'active'
-  /** Inactive contact. */
+  /** All available contacts. */
+  | 'all'
+  /** Inactive contacts. */
   | 'inactive';
 
 /** Autogenerated input type of CustomerRelationsContactUpdate */
@@ -3582,9 +7113,11 @@ export type CustomerRelationsOrganizationEdge = {
 };
 
 export type CustomerRelationsOrganizationState =
-  /** Active organization. */
+  /** Active organizations. */
   | 'active'
-  /** Inactive organization. */
+  /** All available organizations. */
+  | 'all'
+  /** Inactive organizations. */
   | 'inactive';
 
 /** Autogenerated input type of CustomerRelationsOrganizationUpdate */
@@ -3614,6 +7147,890 @@ export type CustomerRelationsOrganizationUpdatePayload = {
   organization: CustomerRelationsOrganization;
 };
 
+/** Autogenerated input type of DastOnDemandScanCreate */
+export type DastOnDemandScanCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the scanner profile to be used for the scan. */
+  dastScannerProfileId?: InputMaybe<Scalars['DastScannerProfileID']>;
+  /** ID of the site profile to be used for the scan. */
+  dastSiteProfileId: Scalars['DastSiteProfileID'];
+  /** Project the site profile belongs to. */
+  fullPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of DastOnDemandScanCreate */
+export type DastOnDemandScanCreatePayload = {
+  __typename?: 'DastOnDemandScanCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** URL of the pipeline that was created. */
+  pipelineUrl?: Maybe<Scalars['String']>;
+};
+
+/** Represents a DAST Pre Scan Verification */
+export type DastPreScanVerification = {
+  __typename?: 'DastPreScanVerification';
+  /** Pre Scan Verifications Steps. */
+  preScanVerificationSteps?: Maybe<Array<DastPreScanVerificationStep>>;
+  /** Status of the pre scan verification. */
+  status?: Maybe<DastPreScanVerificationStatus>;
+  /** Whether or not the configuration has changed after the last pre scan run. */
+  valid: Scalars['Boolean'];
+};
+
+/** Check type of the pre scan verification step. */
+export type DastPreScanVerificationCheckType =
+  /** Authentication check */
+  | 'AUTHENTICATION'
+  /** Connection check */
+  | 'CONNECTION'
+  /** Crawling check */
+  | 'CRAWLING';
+
+/** Status of DAST pre scan verification. */
+export type DastPreScanVerificationStatus =
+  /** Pre Scan Verification complete without errors. */
+  | 'COMPLETE'
+  /** Pre Scan Verification finished with one or more errors. */
+  | 'COMPLETE_WITH_ERRORS'
+  /** Pre Scan Validation unable to finish. */
+  | 'FAILED'
+  /** Pre Scan Verification in execution. */
+  | 'RUNNING';
+
+/** Represents a DAST Pre Scan Verification Step */
+export type DastPreScanVerificationStep = {
+  __typename?: 'DastPreScanVerificationStep';
+  /** Type of the pre scan verification check. */
+  checkType?: Maybe<DastPreScanVerificationCheckType>;
+  /** Errors that occurred in the pre scan verification step. */
+  errors?: Maybe<Array<Scalars['String']>>;
+  /**
+   * Name of the pre scan verification step. Deprecated in 15.10: This was renamed.
+   * @deprecated This was renamed. Please use `DastPreScanVerificationStep.checkType`. Deprecated in 15.10.
+   */
+  name?: Maybe<Scalars['String']>;
+  /** Whether or not the pre scan verification step has errors. */
+  success: Scalars['Boolean'];
+};
+
+/** Represents a DAST Profile */
+export type DastProfile = {
+  __typename?: 'DastProfile';
+  /** Associated branch. */
+  branch?: Maybe<DastProfileBranch>;
+  /**
+   * DAST Pre Scan Verification associated with the site profile. Will always
+   * return `null` if `dast_on_demand_scans_scheduler` feature flag is disabled.
+   */
+  dastPreScanVerification?: Maybe<DastPreScanVerification>;
+  /** Associated profile schedule. */
+  dastProfileSchedule?: Maybe<DastProfileSchedule>;
+  /** Associated scanner profile. */
+  dastScannerProfile?: Maybe<DastScannerProfile>;
+  /** Associated site profile. */
+  dastSiteProfile?: Maybe<DastSiteProfile>;
+  /** Description of the scan. */
+  description?: Maybe<Scalars['String']>;
+  /** Relative web path to the edit page of a profile. */
+  editPath?: Maybe<Scalars['String']>;
+  /** ID of the profile. */
+  id: Scalars['DastProfileID'];
+  /** Name of the profile. */
+  name?: Maybe<Scalars['String']>;
+  /** Runner tags associated with the profile. */
+  tagList?: Maybe<Array<Scalars['String']>>;
+};
+
+/** Represents a DAST Profile Branch */
+export type DastProfileBranch = {
+  __typename?: 'DastProfileBranch';
+  /** Indicates whether or not the branch exists. */
+  exists?: Maybe<Scalars['Boolean']>;
+  /** Name of the branch. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** Represents DAST Profile Cadence. */
+export type DastProfileCadence = {
+  __typename?: 'DastProfileCadence';
+  /** Duration of the DAST profile cadence. */
+  duration?: Maybe<Scalars['Int']>;
+  /** Unit for the duration of DAST profile cadence. */
+  unit?: Maybe<DastProfileCadenceUnit>;
+};
+
+/** Represents DAST Profile Cadence. */
+export type DastProfileCadenceInput = {
+  /** Duration of the DAST Profile Cadence. */
+  duration?: InputMaybe<Scalars['Int']>;
+  /** Unit for the duration of DAST Profile Cadence. */
+  unit?: InputMaybe<DastProfileCadenceUnit>;
+};
+
+/** Unit for the duration of Dast Profile Cadence. */
+export type DastProfileCadenceUnit =
+  /** DAST Profile Cadence duration in days. */
+  | 'DAY'
+  /** DAST Profile Cadence duration in months. */
+  | 'MONTH'
+  /** DAST Profile Cadence duration in weeks. */
+  | 'WEEK'
+  /** DAST Profile Cadence duration in years. */
+  | 'YEAR';
+
+/** The connection type for DastProfile. */
+export type DastProfileConnection = {
+  __typename?: 'DastProfileConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DastProfileEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DastProfile>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of DastProfileCreate */
+export type DastProfileCreateInput = {
+  /** Associated branch. */
+  branchName?: InputMaybe<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Represents a DAST Profile Schedule. */
+  dastProfileSchedule?: InputMaybe<DastProfileScheduleInput>;
+  /** ID of the scanner profile to be associated. */
+  dastScannerProfileId: Scalars['DastScannerProfileID'];
+  /** ID of the site profile to be associated. */
+  dastSiteProfileId: Scalars['DastSiteProfileID'];
+  /** Description of the profile. Defaults to an empty string. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Project the profile belongs to. */
+  fullPath: Scalars['ID'];
+  /** Name of the profile. */
+  name: Scalars['String'];
+  /** Run scan using profile after creation. Defaults to false. */
+  runAfterCreate?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates the runner tags associated with the profile. */
+  tagList?: InputMaybe<Array<Scalars['String']>>;
+};
+
+/** Autogenerated return type of DastProfileCreate */
+export type DastProfileCreatePayload = {
+  __typename?: 'DastProfileCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Created profile. */
+  dastProfile?: Maybe<DastProfile>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** URL of the pipeline that was created. Requires `runAfterCreate` to be set to `true`. */
+  pipelineUrl?: Maybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of DastProfileDelete */
+export type DastProfileDeleteInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the profile to be deleted. */
+  id: Scalars['DastProfileID'];
+};
+
+/** Autogenerated return type of DastProfileDelete */
+export type DastProfileDeletePayload = {
+  __typename?: 'DastProfileDeletePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type DastProfileEdge = {
+  __typename?: 'DastProfileEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DastProfile>;
+};
+
+/** Autogenerated input type of DastProfileRun */
+export type DastProfileRunInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Full path for the project the scanner profile belongs to. Deprecated in 14.5: Full path not required to qualify Global ID.
+   * @deprecated Full path not required to qualify Global ID. Deprecated in 14.5.
+   */
+  fullPath?: InputMaybe<Scalars['ID']>;
+  /** ID of the profile to be used for the scan. */
+  id: Scalars['DastProfileID'];
+};
+
+/** Autogenerated return type of DastProfileRun */
+export type DastProfileRunPayload = {
+  __typename?: 'DastProfileRunPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** URL of the pipeline that was created. */
+  pipelineUrl?: Maybe<Scalars['String']>;
+};
+
+/** Represents a DAST profile schedule. */
+export type DastProfileSchedule = {
+  __typename?: 'DastProfileSchedule';
+  /** Status of the DAST profile schedule. */
+  active?: Maybe<Scalars['Boolean']>;
+  /** Cadence of the DAST profile schedule. */
+  cadence?: Maybe<DastProfileCadence>;
+  /** ID of the DAST profile schedule. */
+  id: Scalars['DastProfileScheduleID'];
+  /** Next run time of the DAST profile schedule in the given timezone. */
+  nextRunAt?: Maybe<Scalars['Time']>;
+  /** Status of the current owner of the DAST profile schedule. */
+  ownerValid?: Maybe<Scalars['Boolean']>;
+  /** Start time of the DAST profile schedule in the given timezone. */
+  startsAt?: Maybe<Scalars['Time']>;
+  /** Time zone of the start time of the DAST profile schedule. */
+  timezone?: Maybe<Scalars['String']>;
+};
+
+/** Input type for DAST Profile Schedules */
+export type DastProfileScheduleInput = {
+  /** Status of a Dast Profile Schedule. */
+  active?: InputMaybe<Scalars['Boolean']>;
+  /** Cadence of a Dast Profile Schedule. */
+  cadence?: InputMaybe<DastProfileCadenceInput>;
+  /** Start time of a Dast Profile Schedule. */
+  startsAt?: InputMaybe<Scalars['Time']>;
+  /** Time Zone for the Start time of a Dast Profile Schedule. */
+  timezone?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of DastProfileUpdate */
+export type DastProfileUpdateInput = {
+  /** Associated branch. */
+  branchName?: InputMaybe<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Represents a DAST profile schedule. */
+  dastProfileSchedule?: InputMaybe<DastProfileScheduleInput>;
+  /** ID of the scanner profile to be associated. */
+  dastScannerProfileId?: InputMaybe<Scalars['DastScannerProfileID']>;
+  /** ID of the site profile to be associated. */
+  dastSiteProfileId?: InputMaybe<Scalars['DastSiteProfileID']>;
+  /** Description of the profile. Defaults to an empty string. */
+  description?: InputMaybe<Scalars['String']>;
+  /**
+   * Project the profile belongs to. Deprecated in 14.5: Full path not required to qualify Global ID.
+   * @deprecated Full path not required to qualify Global ID. Deprecated in 14.5.
+   */
+  fullPath?: InputMaybe<Scalars['ID']>;
+  /** ID of the profile to be deleted. */
+  id: Scalars['DastProfileID'];
+  /** Name of the profile. */
+  name?: InputMaybe<Scalars['String']>;
+  /** Run scan using profile after update. Defaults to false. */
+  runAfterUpdate?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates the runner tags associated with the profile. */
+  tagList?: InputMaybe<Array<Scalars['String']>>;
+};
+
+/** Autogenerated return type of DastProfileUpdate */
+export type DastProfileUpdatePayload = {
+  __typename?: 'DastProfileUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Updated profile. */
+  dastProfile?: Maybe<DastProfile>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /**
+   * The URL of the pipeline that was created. Requires the input argument
+   * `runAfterUpdate` to be set to `true` when calling the mutation, otherwise no
+   * pipeline will be created.
+   */
+  pipelineUrl?: Maybe<Scalars['String']>;
+};
+
+/** Scan method to be used by the scanner. */
+export type DastScanMethodType =
+  /** GraphQL scan method. */
+  | 'GRAPHQL'
+  /** HAR scan method. */
+  | 'HAR'
+  /** OpenAPI scan method. */
+  | 'OPENAPI'
+  /** Postman scan method. */
+  | 'POSTMAN_COLLECTION'
+  /** Website scan method. */
+  | 'WEBSITE';
+
+export type DastScanTypeEnum =
+  /** Active DAST scan. This scan will make active attacks against the target site. */
+  | 'ACTIVE'
+  /** Passive DAST scan. This scan will not make active attacks against the target site. */
+  | 'PASSIVE';
+
+/** Represents a DAST scanner profile */
+export type DastScannerProfile = {
+  __typename?: 'DastScannerProfile';
+  /** Relative web path to the edit page of a scanner profile. */
+  editPath?: Maybe<Scalars['String']>;
+  /** ID of the DAST scanner profile. */
+  id: Scalars['DastScannerProfileID'];
+  /** Name of the DAST scanner profile. */
+  profileName?: Maybe<Scalars['String']>;
+  /** List of security policy names that are referencing given project. */
+  referencedInSecurityPolicies?: Maybe<Array<Scalars['String']>>;
+  /** Indicates the type of DAST scan that will run. Either a Passive Scan or an Active Scan. */
+  scanType?: Maybe<DastScanTypeEnum>;
+  /** Indicates if debug messages should be included in DAST console output. True to include the debug messages. */
+  showDebugMessages: Scalars['Boolean'];
+  /** Maximum number of minutes allowed for the spider to traverse the site. */
+  spiderTimeout?: Maybe<Scalars['Int']>;
+  /**
+   * Runner tags associated with the scanner profile. Deprecated in 15.8: Moved to DastProfile.
+   * @deprecated Moved to DastProfile. Deprecated in 15.8.
+   */
+  tagList?: Maybe<Array<Scalars['String']>>;
+  /** Maximum number of seconds allowed for the site under test to respond to a request. */
+  targetTimeout?: Maybe<Scalars['Int']>;
+  /**
+   * Indicates if the AJAX spider should be used to crawl the target site. True to
+   * run the AJAX spider in addition to the traditional spider, and false to run
+   * only the traditional spider.
+   */
+  useAjaxSpider: Scalars['Boolean'];
+};
+
+/** The connection type for DastScannerProfile. */
+export type DastScannerProfileConnection = {
+  __typename?: 'DastScannerProfileConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DastScannerProfileEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DastScannerProfile>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of DastScannerProfileCreate */
+export type DastScannerProfileCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Project the scanner profile belongs to. */
+  fullPath: Scalars['ID'];
+  /** Name of the scanner profile. */
+  profileName: Scalars['String'];
+  /** Indicates the type of DAST scan that will run. Either a Passive Scan or an Active Scan. */
+  scanType?: InputMaybe<DastScanTypeEnum>;
+  /** Indicates if debug messages should be included in DAST console output. True to include the debug messages. */
+  showDebugMessages?: InputMaybe<Scalars['Boolean']>;
+  /** Maximum number of minutes allowed for the spider to traverse the site. */
+  spiderTimeout?: InputMaybe<Scalars['Int']>;
+  /**
+   * Indicates the runner tags associated with the scanner profile. Deprecated in 15.8: Moved to DastProfile.
+   * @deprecated Moved to DastProfile. Deprecated in 15.8.
+   */
+  tagList?: InputMaybe<Array<Scalars['String']>>;
+  /** Maximum number of seconds allowed for the site under test to respond to a request. */
+  targetTimeout?: InputMaybe<Scalars['Int']>;
+  /**
+   * Indicates if the AJAX spider should be used to crawl the target site. True to
+   * run the AJAX spider in addition to the traditional spider, and false to run
+   * only the traditional spider.
+   */
+  useAjaxSpider?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** Autogenerated return type of DastScannerProfileCreate */
+export type DastScannerProfileCreatePayload = {
+  __typename?: 'DastScannerProfileCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Created scanner profile. */
+  dastScannerProfile?: Maybe<DastScannerProfile>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /**
+   * ID of the scanner profile. Deprecated in 14.10: use `dastScannerProfile` field.
+   * @deprecated use `dastScannerProfile` field. Deprecated in 14.10.
+   */
+  id?: Maybe<Scalars['DastScannerProfileID']>;
+};
+
+/** Autogenerated input type of DastScannerProfileDelete */
+export type DastScannerProfileDeleteInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Full path for the project the scanner profile belongs to. Deprecated in 14.5: Full path not required to qualify Global ID.
+   * @deprecated Full path not required to qualify Global ID. Deprecated in 14.5.
+   */
+  fullPath?: InputMaybe<Scalars['ID']>;
+  /** ID of the scanner profile to be deleted. */
+  id: Scalars['DastScannerProfileID'];
+};
+
+/** Autogenerated return type of DastScannerProfileDelete */
+export type DastScannerProfileDeletePayload = {
+  __typename?: 'DastScannerProfileDeletePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type DastScannerProfileEdge = {
+  __typename?: 'DastScannerProfileEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DastScannerProfile>;
+};
+
+/** Autogenerated input type of DastScannerProfileUpdate */
+export type DastScannerProfileUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Project the scanner profile belongs to. Deprecated in 14.5: Full path not required to qualify Global ID.
+   * @deprecated Full path not required to qualify Global ID. Deprecated in 14.5.
+   */
+  fullPath?: InputMaybe<Scalars['ID']>;
+  /** ID of the scanner profile to be updated. */
+  id: Scalars['DastScannerProfileID'];
+  /** Name of the scanner profile. */
+  profileName: Scalars['String'];
+  /** Indicates the type of DAST scan that will run. Either a Passive Scan or an Active Scan. */
+  scanType?: InputMaybe<DastScanTypeEnum>;
+  /** Indicates if debug messages should be included in DAST console output. True to include the debug messages. */
+  showDebugMessages?: InputMaybe<Scalars['Boolean']>;
+  /** Maximum number of minutes allowed for the spider to traverse the site. */
+  spiderTimeout: Scalars['Int'];
+  /**
+   * Indicates the runner tags associated with the scanner profile. Deprecated in 15.8: Moved to DastProfile.
+   * @deprecated Moved to DastProfile. Deprecated in 15.8.
+   */
+  tagList?: InputMaybe<Array<Scalars['String']>>;
+  /** Maximum number of seconds allowed for the site under test to respond to a request. */
+  targetTimeout: Scalars['Int'];
+  /**
+   * Indicates if the AJAX spider should be used to crawl the target site. True to
+   * run the AJAX spider in addition to the traditional spider, and false to run
+   * only the traditional spider.
+   */
+  useAjaxSpider?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** Autogenerated return type of DastScannerProfileUpdate */
+export type DastScannerProfileUpdatePayload = {
+  __typename?: 'DastScannerProfileUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Updated scanner profile. */
+  dastScannerProfile?: Maybe<DastScannerProfile>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /**
+   * ID of the scanner profile. Deprecated in 14.10: use `dastScannerProfile` field.
+   * @deprecated use `dastScannerProfile` field. Deprecated in 14.10.
+   */
+  id?: Maybe<Scalars['DastScannerProfileID']>;
+};
+
+/** Represents a DAST Site Profile */
+export type DastSiteProfile = {
+  __typename?: 'DastSiteProfile';
+  /** Target authentication details. */
+  auth?: Maybe<DastSiteProfileAuth>;
+  /** Relative web path to the edit page of a site profile. */
+  editPath?: Maybe<Scalars['String']>;
+  /** URLs to skip during an authenticated scan. */
+  excludedUrls?: Maybe<Array<Scalars['String']>>;
+  /** ID of the site profile. */
+  id: Scalars['DastSiteProfileID'];
+  /** Normalized URL of the target to be scanned. */
+  normalizedTargetUrl?: Maybe<Scalars['String']>;
+  /** Name of the site profile. */
+  profileName?: Maybe<Scalars['String']>;
+  /** List of security policy names that are referencing given project. */
+  referencedInSecurityPolicies?: Maybe<Array<Scalars['String']>>;
+  /** Comma-separated list of request header names and values to be added to every request made by DAST. */
+  requestHeaders?: Maybe<Scalars['String']>;
+  /** Scan File Path used as input for the scanner. */
+  scanFilePath?: Maybe<Scalars['String']>;
+  /** Scan method used by the scanner. */
+  scanMethod?: Maybe<DastScanMethodType>;
+  /** Type of target to be scanned. */
+  targetType?: Maybe<DastTargetTypeEnum>;
+  /** URL of the target to be scanned. */
+  targetUrl?: Maybe<Scalars['String']>;
+  /** Permissions for the current user on the resource */
+  userPermissions: DastSiteProfilePermissions;
+  /** Site profile validation start time. */
+  validationStartedAt?: Maybe<Scalars['Time']>;
+  /** Current validation status of the site profile. */
+  validationStatus?: Maybe<DastSiteProfileValidationStatusEnum>;
+};
+
+/** Input type for DastSiteProfile authentication */
+export type DastSiteProfileAuth = {
+  __typename?: 'DastSiteProfileAuth';
+  /** Indicates whether authentication is enabled. */
+  enabled?: Maybe<Scalars['Boolean']>;
+  /** Redacted password to authenticate with on the target website. */
+  password?: Maybe<Scalars['String']>;
+  /** Name of password field at the sign-in HTML form. */
+  passwordField?: Maybe<Scalars['String']>;
+  /** Name or ID of sign-in submit button at the sign-in HTML form. */
+  submitField?: Maybe<Scalars['String']>;
+  /** The URL of the page containing the sign-in HTML form on the target website. */
+  url?: Maybe<Scalars['String']>;
+  /** Username to authenticate with on the target website. */
+  username?: Maybe<Scalars['String']>;
+  /** Name of username field at the sign-in HTML form. */
+  usernameField?: Maybe<Scalars['String']>;
+};
+
+/** Input type for DastSiteProfile authentication */
+export type DastSiteProfileAuthInput = {
+  /** Indicates whether authentication is enabled. */
+  enabled?: InputMaybe<Scalars['Boolean']>;
+  /** Password to authenticate with on the target. */
+  password?: InputMaybe<Scalars['String']>;
+  /** Name of password field at the sign-in HTML form. */
+  passwordField?: InputMaybe<Scalars['String']>;
+  /** Name or ID of sign-in submit button at the sign-in HTML form. */
+  submitField?: InputMaybe<Scalars['String']>;
+  /** The URL of the page containing the sign-in HTML form on the target website. */
+  url?: InputMaybe<Scalars['String']>;
+  /** Username to authenticate with on the target. */
+  username?: InputMaybe<Scalars['String']>;
+  /** Name of username field at the sign-in HTML form. */
+  usernameField?: InputMaybe<Scalars['String']>;
+};
+
+/** The connection type for DastSiteProfile. */
+export type DastSiteProfileConnection = {
+  __typename?: 'DastSiteProfileConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DastSiteProfileEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DastSiteProfile>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of DastSiteProfileCreate */
+export type DastSiteProfileCreateInput = {
+  /** Parameters for authentication. */
+  auth?: InputMaybe<DastSiteProfileAuthInput>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** URLs to skip during an authenticated scan. Defaults to `[]`. */
+  excludedUrls?: InputMaybe<Array<Scalars['String']>>;
+  /** Project the site profile belongs to. */
+  fullPath: Scalars['ID'];
+  /** Name of the site profile. */
+  profileName: Scalars['String'];
+  /** Comma-separated list of request header names and values to be added to every request made by DAST. */
+  requestHeaders?: InputMaybe<Scalars['String']>;
+  /** File Path or URL used as input for the scan method. */
+  scanFilePath?: InputMaybe<Scalars['String']>;
+  /** Scan method by the scanner. */
+  scanMethod?: InputMaybe<DastScanMethodType>;
+  /** Type of target to be scanned. */
+  targetType?: InputMaybe<DastTargetTypeEnum>;
+  /** URL of the target to be scanned. */
+  targetUrl?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of DastSiteProfileCreate */
+export type DastSiteProfileCreatePayload = {
+  __typename?: 'DastSiteProfileCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Site Profile object. */
+  dastSiteProfile?: Maybe<DastSiteProfile>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /**
+   * ID of the site profile. Deprecated in 14.10: use `dastSiteProfile.id` field.
+   * @deprecated use `dastSiteProfile.id` field. Deprecated in 14.10.
+   */
+  id?: Maybe<Scalars['DastSiteProfileID']>;
+};
+
+/** Autogenerated input type of DastSiteProfileDelete */
+export type DastSiteProfileDeleteInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Project the site profile belongs to. Deprecated in 14.5: Full path not required to qualify Global ID.
+   * @deprecated Full path not required to qualify Global ID. Deprecated in 14.5.
+   */
+  fullPath?: InputMaybe<Scalars['ID']>;
+  /** ID of the site profile to be deleted. */
+  id: Scalars['DastSiteProfileID'];
+};
+
+/** Autogenerated return type of DastSiteProfileDelete */
+export type DastSiteProfileDeletePayload = {
+  __typename?: 'DastSiteProfileDeletePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type DastSiteProfileEdge = {
+  __typename?: 'DastSiteProfileEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DastSiteProfile>;
+};
+
+/** Check permissions for the current user on site profile */
+export type DastSiteProfilePermissions = {
+  __typename?: 'DastSiteProfilePermissions';
+  /** Indicates the user can perform `create_on_demand_dast_scan` on this resource */
+  createOnDemandDastScan: Scalars['Boolean'];
+};
+
+/** Autogenerated input type of DastSiteProfileUpdate */
+export type DastSiteProfileUpdateInput = {
+  /** Parameters for authentication. */
+  auth?: InputMaybe<DastSiteProfileAuthInput>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** URLs to skip during an authenticated scan. */
+  excludedUrls?: InputMaybe<Array<Scalars['String']>>;
+  /**
+   * Project the site profile belongs to. Deprecated in 14.5: Full path not required to qualify Global ID.
+   * @deprecated Full path not required to qualify Global ID. Deprecated in 14.5.
+   */
+  fullPath?: InputMaybe<Scalars['ID']>;
+  /** ID of the site profile to be updated. */
+  id: Scalars['DastSiteProfileID'];
+  /** Name of the site profile. */
+  profileName: Scalars['String'];
+  /** Comma-separated list of request header names and values to be added to every request made by DAST. */
+  requestHeaders?: InputMaybe<Scalars['String']>;
+  /** File Path or URL used as input for the scan method. */
+  scanFilePath?: InputMaybe<Scalars['String']>;
+  /** Scan method by the scanner. */
+  scanMethod?: InputMaybe<DastScanMethodType>;
+  /** Type of target to be scanned. */
+  targetType?: InputMaybe<DastTargetTypeEnum>;
+  /** URL of the target to be scanned. */
+  targetUrl?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of DastSiteProfileUpdate */
+export type DastSiteProfileUpdatePayload = {
+  __typename?: 'DastSiteProfileUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Site profile object. */
+  dastSiteProfile?: Maybe<DastSiteProfile>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /**
+   * ID of the site profile. Deprecated in 14.10: use `dastSiteProfile.id` field.
+   * @deprecated use `dastSiteProfile.id` field. Deprecated in 14.10.
+   */
+  id?: Maybe<Scalars['DastSiteProfileID']>;
+};
+
+export type DastSiteProfileValidationStatusEnum =
+  /** Site validation process finished but failed. */
+  | 'FAILED_VALIDATION'
+  /** Site validation process is in progress. */
+  | 'INPROGRESS_VALIDATION'
+  /** No site validation exists. */
+  | 'NONE'
+  /** Site validation process finished successfully. */
+  | 'PASSED_VALIDATION'
+  /** Site validation process has not started. */
+  | 'PENDING_VALIDATION';
+
+/** Autogenerated input type of DastSiteTokenCreate */
+export type DastSiteTokenCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Project the site token belongs to. */
+  fullPath: Scalars['ID'];
+  /** URL of the target to be validated. */
+  targetUrl?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of DastSiteTokenCreate */
+export type DastSiteTokenCreatePayload = {
+  __typename?: 'DastSiteTokenCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** ID of the site token. */
+  id?: Maybe<Scalars['DastSiteTokenID']>;
+  /** Current validation status of the target. */
+  status?: Maybe<DastSiteProfileValidationStatusEnum>;
+  /** Token string. */
+  token?: Maybe<Scalars['String']>;
+};
+
+/** Represents a DAST Site Validation */
+export type DastSiteValidation = {
+  __typename?: 'DastSiteValidation';
+  /** Global ID of the site validation. */
+  id: Scalars['DastSiteValidationID'];
+  /** Normalized URL of the target to be validated. */
+  normalizedTargetUrl?: Maybe<Scalars['String']>;
+  /** Status of the site validation. */
+  status: DastSiteProfileValidationStatusEnum;
+  /** Timestamp of when the validation started. */
+  validationStartedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for DastSiteValidation. */
+export type DastSiteValidationConnection = {
+  __typename?: 'DastSiteValidationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DastSiteValidationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DastSiteValidation>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of DastSiteValidationCreate */
+export type DastSiteValidationCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the site token. */
+  dastSiteTokenId: Scalars['DastSiteTokenID'];
+  /** Project the site profile belongs to. */
+  fullPath: Scalars['ID'];
+  /** Validation strategy to be used. */
+  strategy?: InputMaybe<DastSiteValidationStrategyEnum>;
+  /** Path to be requested during validation. */
+  validationPath: Scalars['String'];
+};
+
+/** Autogenerated return type of DastSiteValidationCreate */
+export type DastSiteValidationCreatePayload = {
+  __typename?: 'DastSiteValidationCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** ID of the site validation. */
+  id?: Maybe<Scalars['DastSiteValidationID']>;
+  /** Current validation status. */
+  status?: Maybe<DastSiteProfileValidationStatusEnum>;
+};
+
+/** An edge in a connection. */
+export type DastSiteValidationEdge = {
+  __typename?: 'DastSiteValidationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DastSiteValidation>;
+};
+
+/** Autogenerated input type of DastSiteValidationRevoke */
+export type DastSiteValidationRevokeInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Project the site validation belongs to. */
+  fullPath: Scalars['ID'];
+  /** Normalized URL of the target to be revoked. */
+  normalizedTargetUrl: Scalars['String'];
+};
+
+/** Autogenerated return type of DastSiteValidationRevoke */
+export type DastSiteValidationRevokePayload = {
+  __typename?: 'DastSiteValidationRevokePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+export type DastSiteValidationStatusEnum =
+  /** Site validation process finished but failed. */
+  | 'FAILED_VALIDATION'
+  /** Site validation process is in progress. */
+  | 'INPROGRESS_VALIDATION'
+  /** Site validation process finished successfully. */
+  | 'PASSED_VALIDATION'
+  /** Site validation process has not started. */
+  | 'PENDING_VALIDATION';
+
+export type DastSiteValidationStrategyEnum =
+  /** Header validation. */
+  | 'HEADER'
+  /** Meta tag validation. */
+  | 'META_TAG'
+  /** Text file validation. */
+  | 'TEXT_FILE';
+
+export type DastTargetTypeEnum =
+  /** API target. */
+  | 'API'
+  /** Website target. */
+  | 'WEBSITE';
+
+/** Color of the data visualization palette */
+export type DataVisualizationColorEnum =
+  /** Aqua color */
+  | 'AQUA'
+  /** Blue color */
+  | 'BLUE'
+  /** Green color */
+  | 'GREEN'
+  /** Magenta color */
+  | 'MAGENTA'
+  /** Orange color */
+  | 'ORANGE';
+
+/** Weight of the data visualization palette */
+export type DataVisualizationWeightEnum =
+  /** 50 weight */
+  | 'WEIGHT_50'
+  /** 100 weight */
+  | 'WEIGHT_100'
+  /** 200 weight */
+  | 'WEIGHT_200'
+  /** 300 weight */
+  | 'WEIGHT_300'
+  /** 400 weight */
+  | 'WEIGHT_400'
+  /** 500 weight */
+  | 'WEIGHT_500'
+  /** 600 weight */
+  | 'WEIGHT_600'
+  /** 700 weight */
+  | 'WEIGHT_700'
+  /** 800 weight */
+  | 'WEIGHT_800'
+  /** 900 weight */
+  | 'WEIGHT_900'
+  /** 950 weight */
+  | 'WEIGHT_950';
+
 /** Autogenerated input type of DeleteAnnotation */
 export type DeleteAnnotationInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -3640,6 +8057,51 @@ export type DeleteJobsResponse = {
   deletedJobs?: Maybe<Scalars['Int']>;
   /** Queue size after processing. */
   queueSize?: Maybe<Scalars['Int']>;
+};
+
+export type DeletedNote = {
+  __typename?: 'DeletedNote';
+  /** ID of the discussion for the deleted note. */
+  discussionId?: Maybe<Scalars['DiscussionID']>;
+  /** ID of the deleted note. */
+  id: Scalars['NoteID'];
+  /** Whether deleted note is the last note in the discussion. */
+  lastDiscussionNote?: Maybe<Scalars['Boolean']>;
+};
+
+/** A software dependency used by a project */
+export type Dependency = {
+  __typename?: 'Dependency';
+  /** ID of the dependency. */
+  id: Scalars['GlobalID'];
+  /** Information about where the dependency is located. */
+  location?: Maybe<Location>;
+  /** Name of the dependency. */
+  name: Scalars['String'];
+  /** Description of the tool used to manage the dependency. */
+  packager?: Maybe<PackageManager>;
+  /** Version of the dependency. */
+  version?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for Dependency. */
+export type DependencyConnection = {
+  __typename?: 'DependencyConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DependencyEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Dependency>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DependencyEdge = {
+  __typename?: 'DependencyEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Dependency>;
 };
 
 /** Represents metadata associated with a dependency link */
@@ -3676,6 +8138,51 @@ export type DependencyProxyBlobEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<DependencyProxyBlob>;
+};
+
+/** Represents the Geo replication and verification state of a dependency_proxy_blob */
+export type DependencyProxyBlobRegistry = {
+  __typename?: 'DependencyProxyBlobRegistry';
+  /** Timestamp when the DependencyProxyBlobRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the Dependency Proxy Blob. */
+  dependencyProxyBlobId: Scalars['ID'];
+  /** ID of the DependencyProxyBlobRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the DependencyProxyBlobRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the DependencyProxyBlobRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the DependencyProxyBlobRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the DependencyProxyBlobRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the DependencyProxyBlobRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the DependencyProxyBlobRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the DependencyProxyBlobRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for DependencyProxyBlobRegistry. */
+export type DependencyProxyBlobRegistryConnection = {
+  __typename?: 'DependencyProxyBlobRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DependencyProxyBlobRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DependencyProxyBlobRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DependencyProxyBlobRegistryEdge = {
+  __typename?: 'DependencyProxyBlobRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DependencyProxyBlobRegistry>;
 };
 
 /** Group-level Dependency Proxy TTL policy settings */
@@ -3732,6 +8239,51 @@ export type DependencyProxyManifestEdge = {
   node?: Maybe<DependencyProxyManifest>;
 };
 
+/** Represents the Geo replication and verification state of a dependency_proxy_manifest */
+export type DependencyProxyManifestRegistry = {
+  __typename?: 'DependencyProxyManifestRegistry';
+  /** Timestamp when the DependencyProxyManifestRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the Dependency Proxy Manifest. */
+  dependencyProxyManifestId: Scalars['ID'];
+  /** ID of the DependencyProxyManifestRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the DependencyProxyManifestRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the DependencyProxyManifestRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the DependencyProxyManifestRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the DependencyProxyManifestRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the DependencyProxyManifestRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the DependencyProxyManifestRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the DependencyProxyManifestRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for DependencyProxyManifestRegistry. */
+export type DependencyProxyManifestRegistryConnection = {
+  __typename?: 'DependencyProxyManifestRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DependencyProxyManifestRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DependencyProxyManifestRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DependencyProxyManifestRegistryEdge = {
+  __typename?: 'DependencyProxyManifestRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DependencyProxyManifestRegistry>;
+};
+
 export type DependencyProxyManifestStatus =
   /** Dependency proxy manifest has a status of default. */
   | 'DEFAULT'
@@ -3749,11 +8301,234 @@ export type DependencyProxySetting = {
   enabled: Scalars['Boolean'];
 };
 
+/** Values for sorting dependencies */
+export type DependencySort =
+  /** Name by ascending order. */
+  | 'NAME_ASC'
+  /** Name by descending order. */
+  | 'NAME_DESC'
+  /** Packager by ascending order. */
+  | 'PACKAGER_ASC'
+  /** Packager by descending order. */
+  | 'PACKAGER_DESC';
+
+/** The deployment of an environment */
+export type Deployment = {
+  __typename?: 'Deployment';
+  /** Approval summary of the deployment.This field can only be resolved for one deployment in any single request. */
+  approvalSummary?: Maybe<DeploymentApprovalSummary>;
+  /** Current approvals of the deployment. */
+  approvals?: Maybe<Array<DeploymentApproval>>;
+  /** Commit details of the deployment. */
+  commit?: Maybe<Commit>;
+  /** When the deployment record was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** When the deployment finished. */
+  finishedAt?: Maybe<Scalars['Time']>;
+  /** Global ID of the deployment. */
+  id?: Maybe<Scalars['ID']>;
+  /** Project-level internal ID of the deployment. */
+  iid?: Maybe<Scalars['ID']>;
+  /** Pipeline job of the deployment. */
+  job?: Maybe<CiJob>;
+  /** Number of pending unified approvals on the deployment. */
+  pendingApprovalCount?: Maybe<Scalars['Int']>;
+  /** Git-Ref that the deployment ran on. */
+  ref?: Maybe<Scalars['String']>;
+  /** Git-SHA that the deployment ran on. */
+  sha?: Maybe<Scalars['String']>;
+  /** Status of the deployment. */
+  status?: Maybe<DeploymentStatus>;
+  /** True or false if the deployment ran on a Git-tag. */
+  tag?: Maybe<Scalars['Boolean']>;
+  /** Git tags that contain this deployment. This field can only be resolved for two deployments in any single request. */
+  tags?: Maybe<Array<DeploymentTag>>;
+  /** User who executed the deployment. */
+  triggerer?: Maybe<UserCore>;
+  /** When the deployment record was updated. */
+  updatedAt?: Maybe<Scalars['Time']>;
+  /** Permissions for the current user on the resource */
+  userPermissions: DeploymentPermissions;
+};
+
+/** Approval of the deployment. */
+export type DeploymentApproval = {
+  __typename?: 'DeploymentApproval';
+  /** Additional comment. */
+  comment?: Maybe<Scalars['String']>;
+  /** When the user approved/rejected first time. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Whether the deployment was approved/rejected. */
+  status?: Maybe<DeploymentsApprovalStatus>;
+  /** When the user updated the approval. */
+  updatedAt?: Maybe<Scalars['Time']>;
+  /** User who approved or rejected the deployment. */
+  user?: Maybe<UserCore>;
+};
+
+/** Approval summary of the deployment. */
+export type DeploymentApprovalSummary = {
+  __typename?: 'DeploymentApprovalSummary';
+  /** Approval Rules for the deployment. */
+  rules?: Maybe<Array<ProtectedEnvironmentApprovalRuleForSummary>>;
+  /** Status of the approvals. */
+  status?: Maybe<DeploymentApprovalSummaryStatus>;
+  /** Total pending approval count. */
+  totalPendingApprovalCount?: Maybe<Scalars['Int']>;
+  /** Total number of required approvals. */
+  totalRequiredApprovals?: Maybe<Scalars['Int']>;
+};
+
+/** Status of the deployment approval summary. */
+export type DeploymentApprovalSummaryStatus =
+  /** Summarized deployment approval status that is approved. */
+  | 'APPROVED'
+  /** Summarized deployment approval status that is pending approval. */
+  | 'PENDING_APPROVAL'
+  /** Summarized deployment approval status that is rejected. */
+  | 'REJECTED';
+
+/** The connection type for Deployment. */
+export type DeploymentConnection = {
+  __typename?: 'DeploymentConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DeploymentEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Deployment>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DeploymentEdge = {
+  __typename?: 'DeploymentEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Deployment>;
+};
+
+export type DeploymentPermissions = {
+  __typename?: 'DeploymentPermissions';
+  /**
+   * Indicates the user can perform `approve_deployment` on this resource. This
+   * field can only be resolved for one environment in any single request.
+   */
+  approveDeployment: Scalars['Boolean'];
+  /** Indicates the user can perform `destroy_deployment` on this resource */
+  destroyDeployment: Scalars['Boolean'];
+  /** Indicates the user can perform `update_deployment` on this resource */
+  updateDeployment: Scalars['Boolean'];
+};
+
+/** All deployment statuses. */
+export type DeploymentStatus =
+  /** A deployment that is blocked. */
+  | 'BLOCKED'
+  /** A deployment that is canceled. */
+  | 'CANCELED'
+  /** A deployment that is created. */
+  | 'CREATED'
+  /** A deployment that is failed. */
+  | 'FAILED'
+  /** A deployment that is running. */
+  | 'RUNNING'
+  /** A deployment that is skipped. */
+  | 'SKIPPED'
+  /** A deployment that is success. */
+  | 'SUCCESS';
+
+/** Tags for a given deployment */
+export type DeploymentTag = {
+  __typename?: 'DeploymentTag';
+  /** Name of this git tag. */
+  name?: Maybe<Scalars['String']>;
+  /** Path for this tag. */
+  path?: Maybe<Scalars['String']>;
+};
+
+/** All environment deployment tiers. */
+export type DeploymentTier =
+  /** Development. */
+  | 'DEVELOPMENT'
+  /** Other. */
+  | 'OTHER'
+  /** Production. */
+  | 'PRODUCTION'
+  /** Staging. */
+  | 'STAGING'
+  /** Testing. */
+  | 'TESTING';
+
+/** Status of the deployment approval. */
+export type DeploymentsApprovalStatus =
+  /** A deployment approval that is approved. */
+  | 'APPROVED'
+  /** A deployment approval that is rejected. */
+  | 'REJECTED';
+
+/** Values for ordering deployments by a specific field */
+export type DeploymentsOrderByInput = {
+  /** Order by Created time. */
+  createdAt?: InputMaybe<SortDirectionEnum>;
+  /** Order by Finished time. */
+  finishedAt?: InputMaybe<SortDirectionEnum>;
+};
+
+export type DescriptionVersion = {
+  __typename?: 'DescriptionVersion';
+  /**
+   * Whether current user can delete description version associated to the note
+   * metadata. Deprecated in 15.7: For backwards compatibility with REST API
+   * version and to be removed in a next iteration.
+   * @deprecated For backwards compatibility with REST API version and to be removed in a next iteration. Deprecated in 15.7.
+   */
+  canDelete?: Maybe<Scalars['Boolean']>;
+  /**
+   * Web path to delete description version associated to the note metadata.
+   * Deprecated in 15.7: For backwards compatibility with REST API version and to
+   * be removed in a next iteration.
+   * @deprecated For backwards compatibility with REST API version and to be removed in a next iteration. Deprecated in 15.7.
+   */
+  deletePath?: Maybe<Scalars['String']>;
+  /**
+   * Whether description version associated to the note metadata is deleted.
+   * Deprecated in 15.7: For backwards compatibility with REST API version and to
+   * be removed in a next iteration.
+   * @deprecated For backwards compatibility with REST API version and to be removed in a next iteration. Deprecated in 15.7.
+   */
+  deleted?: Maybe<Scalars['Boolean']>;
+  /** Content of the given description version. */
+  description?: Maybe<Scalars['String']>;
+  /** Description diff between versions. */
+  diff?: Maybe<Scalars['String']>;
+  /**
+   * Web path to description version associated to the note metadata. Deprecated in
+   * 15.7: For backwards compatibility with REST API version and to be removed in a
+   * next iteration.
+   * @deprecated For backwards compatibility with REST API version and to be removed in a next iteration. Deprecated in 15.7.
+   */
+  diffPath?: Maybe<Scalars['String']>;
+  /** ID of the description version. */
+  id: Scalars['DescriptionVersionID'];
+};
+
+
+export type DescriptionVersionDiffArgs = {
+  versionId?: InputMaybe<Scalars['DescriptionVersionID']>;
+};
+
 /** A single design */
 export type Design = CurrentUserTodos & DesignFields & NoteableInterface & Todoable & {
   __typename?: 'Design';
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
   /** To-do items for the current user. */
   currentUserTodos: TodoConnection;
+  /** Description of the design. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description` */
+  descriptionHtml?: Maybe<Scalars['String']>;
   /** Diff refs for this design. */
   diffRefs: DiffRefs;
   /** All discussions on this noteable. */
@@ -3782,6 +8557,15 @@ export type Design = CurrentUserTodos & DesignFields & NoteableInterface & Todoa
   versions: DesignVersionConnection;
   /** URL of the design. */
   webUrl: Scalars['String'];
+};
+
+
+/** A single design */
+export type DesignCommentersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -4052,6 +8836,72 @@ export type DesignManagementMovePayload = {
   errors: Array<Scalars['String']>;
 };
 
+/** Represents the Geo replication and verification state of a Design Management Repository */
+export type DesignManagementRepositoryRegistry = {
+  __typename?: 'DesignManagementRepositoryRegistry';
+  /** Timestamp when the DesignManagementRepositoryRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the Design Management Repository. */
+  designManagementRepositoryId: Scalars['ID'];
+  /** ID of the DesignManagementRepositoryRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the DesignManagementRepositoryRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the DesignManagementRepositoryRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the DesignManagementRepositoryRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the DesignManagementRepositoryRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the DesignManagementRepositoryRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the DesignManagementRepositoryRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the DesignManagementRepositoryRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for DesignManagementRepositoryRegistry. */
+export type DesignManagementRepositoryRegistryConnection = {
+  __typename?: 'DesignManagementRepositoryRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DesignManagementRepositoryRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DesignManagementRepositoryRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DesignManagementRepositoryRegistryEdge = {
+  __typename?: 'DesignManagementRepositoryRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DesignManagementRepositoryRegistry>;
+};
+
+/** Autogenerated input type of DesignManagementUpdate */
+export type DesignManagementUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the design. */
+  description?: InputMaybe<Scalars['String']>;
+  /** ID of the design to update. */
+  id: Scalars['DesignManagementDesignID'];
+};
+
+/** Autogenerated return type of DesignManagementUpdate */
+export type DesignManagementUpdatePayload = {
+  __typename?: 'DesignManagementUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Updated design. */
+  design: Design;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 /** Autogenerated input type of DesignManagementUpload */
 export type DesignManagementUploadInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -4193,6 +9043,23 @@ export type DestroyBoardPayload = {
   errors: Array<Scalars['String']>;
 };
 
+/** Autogenerated input type of DestroyComplianceFramework */
+export type DestroyComplianceFrameworkInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the compliance framework to destroy. */
+  id: Scalars['ComplianceManagementFrameworkID'];
+};
+
+/** Autogenerated return type of DestroyComplianceFramework */
+export type DestroyComplianceFrameworkPayload = {
+  __typename?: 'DestroyComplianceFrameworkPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 /** Autogenerated input type of DestroyContainerRepository */
 export type DestroyContainerRepositoryInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -4248,6 +9115,25 @@ export type DestroyCustomEmojiPayload = {
   clientMutationId?: Maybe<Scalars['String']>;
   /** Deleted custom emoji. */
   customEmoji?: Maybe<CustomEmoji>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of DestroyEpicBoard */
+export type DestroyEpicBoardInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the board to destroy. */
+  id: Scalars['BoardsEpicBoardID'];
+};
+
+/** Autogenerated return type of DestroyEpicBoard */
+export type DestroyEpicBoardPayload = {
+  __typename?: 'DestroyEpicBoardPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Epic board after mutation. */
+  epicBoard?: Maybe<EpicBoard>;
   /** Errors encountered during execution of the mutation. */
   errors: Array<Scalars['String']>;
 };
@@ -4324,6 +9210,23 @@ export type DestroyPackagePayload = {
   errors: Array<Scalars['String']>;
 };
 
+/** Autogenerated input type of DestroyPackages */
+export type DestroyPackagesInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global IDs of the Packages. Max 20 */
+  ids: Array<Scalars['PackagesPackageID']>;
+};
+
+/** Autogenerated return type of DestroyPackages */
+export type DestroyPackagesPayload = {
+  __typename?: 'DestroyPackagesPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 /** Autogenerated input type of DestroySnippet */
 export type DestroySnippetInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -4342,6 +9245,37 @@ export type DestroySnippetPayload = {
   /** Snippet after mutation. */
   snippet?: Maybe<Snippet>;
 };
+
+/** Detailed representation of whether a GitLab merge request can be merged. */
+export type DetailedMergeStatus =
+  /** Merge request is blocked by another merge request. */
+  | 'BLOCKED_STATUS'
+  /** Can not merge the source into the target branch, potential conflict. */
+  | 'BROKEN_STATUS'
+  /** Currently checking for mergeability. */
+  | 'CHECKING'
+  /** Pipeline must succeed before merging. */
+  | 'CI_MUST_PASS'
+  /** Pipeline is still running. */
+  | 'CI_STILL_RUNNING'
+  /** Discussions must be resolved before merging. */
+  | 'DISCUSSIONS_NOT_RESOLVED'
+  /** Merge request must not be draft before merging. */
+  | 'DRAFT_STATUS'
+  /** Status checks must pass. */
+  | 'EXTERNAL_STATUS_CHECKS'
+  /** Branch can be merged. */
+  | 'MERGEABLE'
+  /** Merge request must be approved before merging. */
+  | 'NOT_APPROVED'
+  /** Merge request must be open before merging. */
+  | 'NOT_OPEN'
+  /** There are denied policies for the merge request. */
+  | 'POLICIES_DENIED'
+  /** Merge request diff is being created. */
+  | 'PREPARING'
+  /** Merge status has not been checked. */
+  | 'UNCHECKED';
 
 export type DetailedStatus = {
   __typename?: 'DetailedStatus';
@@ -4365,6 +9299,109 @@ export type DetailedStatus = {
   text?: Maybe<Scalars['String']>;
   /** Tooltip associated with the status. */
   tooltip?: Maybe<Scalars['String']>;
+};
+
+/** Enabled namespace for DevopsAdoption */
+export type DevopsAdoptionEnabledNamespace = {
+  __typename?: 'DevopsAdoptionEnabledNamespace';
+  /** Namespace where data should be displayed. */
+  displayNamespace?: Maybe<Namespace>;
+  /** ID of the enabled namespace. */
+  id: Scalars['ID'];
+  /** Metrics snapshot for previous month for the enabled namespace. */
+  latestSnapshot?: Maybe<DevopsAdoptionSnapshot>;
+  /** Namespace which should be calculated. */
+  namespace?: Maybe<Namespace>;
+  /** Data snapshots of the namespace. */
+  snapshots?: Maybe<DevopsAdoptionSnapshotConnection>;
+};
+
+
+/** Enabled namespace for DevopsAdoption */
+export type DevopsAdoptionEnabledNamespaceSnapshotsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  endTimeAfter?: InputMaybe<Scalars['Time']>;
+  endTimeBefore?: InputMaybe<Scalars['Time']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for DevopsAdoptionEnabledNamespace. */
+export type DevopsAdoptionEnabledNamespaceConnection = {
+  __typename?: 'DevopsAdoptionEnabledNamespaceConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DevopsAdoptionEnabledNamespaceEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DevopsAdoptionEnabledNamespace>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DevopsAdoptionEnabledNamespaceEdge = {
+  __typename?: 'DevopsAdoptionEnabledNamespaceEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DevopsAdoptionEnabledNamespace>;
+};
+
+/** Snapshot */
+export type DevopsAdoptionSnapshot = {
+  __typename?: 'DevopsAdoptionSnapshot';
+  /** Total number of projects with existing CODEOWNERS file. */
+  codeOwnersUsedCount?: Maybe<Scalars['Int']>;
+  /** Total number of projects with enabled coverage fuzzing. */
+  coverageFuzzingEnabledCount?: Maybe<Scalars['Int']>;
+  /** Total number of projects with enabled DAST. */
+  dastEnabledCount?: Maybe<Scalars['Int']>;
+  /** Total number of projects with enabled dependency scanning. */
+  dependencyScanningEnabledCount?: Maybe<Scalars['Int']>;
+  /** At least one deployment succeeded. */
+  deploySucceeded: Scalars['Boolean'];
+  /** End time for the snapshot where the data points were collected. */
+  endTime: Scalars['Time'];
+  /** At least one issue was opened. */
+  issueOpened: Scalars['Boolean'];
+  /** At least one merge request was approved. */
+  mergeRequestApproved: Scalars['Boolean'];
+  /** At least one merge request was opened. */
+  mergeRequestOpened: Scalars['Boolean'];
+  /** At least one pipeline succeeded. */
+  pipelineSucceeded: Scalars['Boolean'];
+  /** Time the snapshot was recorded. */
+  recordedAt: Scalars['Time'];
+  /** At least one runner was used. */
+  runnerConfigured: Scalars['Boolean'];
+  /** Total number of projects with enabled SAST. */
+  sastEnabledCount?: Maybe<Scalars['Int']>;
+  /** Start time for the snapshot where the data points were collected. */
+  startTime: Scalars['Time'];
+  /** Total number of projects. */
+  totalProjectsCount?: Maybe<Scalars['Int']>;
+  /** Total number of projects with vulnerability management used at least once. */
+  vulnerabilityManagementUsedCount?: Maybe<Scalars['Int']>;
+};
+
+/** The connection type for DevopsAdoptionSnapshot. */
+export type DevopsAdoptionSnapshotConnection = {
+  __typename?: 'DevopsAdoptionSnapshotConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DevopsAdoptionSnapshotEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DevopsAdoptionSnapshot>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DevopsAdoptionSnapshotEdge = {
+  __typename?: 'DevopsAdoptionSnapshotEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DevopsAdoptionSnapshot>;
 };
 
 export type DiffImagePositionInput = {
@@ -4487,6 +9524,23 @@ export type DiffStatsSummary = {
   fileCount: Scalars['Int'];
 };
 
+/** Autogenerated input type of DisableDevopsAdoptionNamespace */
+export type DisableDevopsAdoptionNamespaceInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** One or many IDs of the enabled namespaces to disable. */
+  id: Array<Scalars['AnalyticsDevopsAdoptionEnabledNamespaceID']>;
+};
+
+/** Autogenerated return type of DisableDevopsAdoptionNamespace */
+export type DisableDevopsAdoptionNamespacePayload = {
+  __typename?: 'DisableDevopsAdoptionNamespacePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 export type Discussion = ResolvableInterface & {
   __typename?: 'Discussion';
   /** Timestamp of the discussion's creation. */
@@ -4558,6 +9612,97 @@ export type DiscussionToggleResolvePayload = {
   errors: Array<Scalars['String']>;
 };
 
+/** All information related to DORA metrics. */
+export type Dora = {
+  __typename?: 'Dora';
+  /** DORA metrics for the current group or project. */
+  metrics?: Maybe<Array<DoraMetric>>;
+};
+
+
+/** All information related to DORA metrics. */
+export type DoraMetricsArgs = {
+  endDate?: InputMaybe<Scalars['Date']>;
+  environmentTiers?: InputMaybe<Array<DeploymentTier>>;
+  interval?: InputMaybe<DoraMetricBucketingInterval>;
+  metric?: InputMaybe<DoraMetricType>;
+  startDate?: InputMaybe<Scalars['Date']>;
+};
+
+export type DoraMetric = {
+  __typename?: 'DoraMetric';
+  /** Percentage of deployments that caused incidents in production. */
+  changeFailureRate?: Maybe<Scalars['Float']>;
+  /** Date of the data point. */
+  date?: Maybe<Scalars['String']>;
+  /** Number of deployments per day. */
+  deploymentFrequency?: Maybe<Scalars['Float']>;
+  /** Median time to deploy a merged merge request. */
+  leadTimeForChanges?: Maybe<Scalars['Float']>;
+  /** Median time to close an incident. */
+  timeToRestoreService?: Maybe<Scalars['Float']>;
+  /**
+   * Value of the data point. Deprecated in 15.10: Moved to corresponding metric field.
+   * @deprecated Moved to corresponding metric field. Deprecated in 15.10.
+   */
+  value?: Maybe<Scalars['Float']>;
+};
+
+/** All possible ways that DORA metrics can be aggregated. */
+export type DoraMetricBucketingInterval =
+  /** All data points are combined into a single value. */
+  | 'ALL'
+  /** Data points are combined into chunks by day. */
+  | 'DAILY'
+  /** Data points are combined into chunks by month. */
+  | 'MONTHLY';
+
+/** All supported DORA metric types. */
+export type DoraMetricType =
+  /** Change failure rate. */
+  | 'CHANGE_FAILURE_RATE'
+  /** Deployment frequency. */
+  | 'DEPLOYMENT_FREQUENCY'
+  /** Lead time for changes. */
+  | 'LEAD_TIME_FOR_CHANGES'
+  /** Time to restore service. */
+  | 'TIME_TO_RESTORE_SERVICE';
+
+/** Aggregated DORA score counts for projects for the last complete month. */
+export type DoraPerformanceScoreCount = {
+  __typename?: 'DoraPerformanceScoreCount';
+  /** Number of projects that score "high" on the metric. */
+  highProjectsCount?: Maybe<Scalars['Int']>;
+  /** Number of projects that score "low" on the metric. */
+  lowProjectsCount?: Maybe<Scalars['Int']>;
+  /** Number of projects that score "medium" on the metric. */
+  mediumProjectsCount?: Maybe<Scalars['Int']>;
+  /** Name of the DORA metric. */
+  metricName: Scalars['String'];
+  /** Number of projects with no data. */
+  noDataProjectsCount?: Maybe<Scalars['Int']>;
+};
+
+/** The connection type for DoraPerformanceScoreCount. */
+export type DoraPerformanceScoreCountConnection = {
+  __typename?: 'DoraPerformanceScoreCountConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<DoraPerformanceScoreCountEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<DoraPerformanceScoreCount>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type DoraPerformanceScoreCountEdge = {
+  __typename?: 'DoraPerformanceScoreCountEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<DoraPerformanceScoreCount>;
+};
+
 /** Autogenerated input type of EchoCreate */
 export type EchoCreateInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -4575,6 +9720,97 @@ export type EchoCreatePayload = {
   clientMutationId?: Maybe<Scalars['String']>;
   /** Messages returned to the user. */
   echoes?: Maybe<Array<Scalars['String']>>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+export type EgressNode = {
+  __typename?: 'EgressNode';
+  /** Artifacts egress for that project in that period of time. */
+  artifactsEgress: Scalars['BigInt'];
+  /** First day of the node range. There is one node per month. */
+  date: Scalars['String'];
+  /** Packages egress for that project in that period of time. */
+  packagesEgress: Scalars['BigInt'];
+  /** Registry egress for that project in that period of time. */
+  registryEgress: Scalars['BigInt'];
+  /** Repository egress for that project in that period of time. */
+  repositoryEgress: Scalars['BigInt'];
+  /** Total egress for that project in that period of time. */
+  totalEgress: Scalars['BigInt'];
+};
+
+/** The connection type for EgressNode. */
+export type EgressNodeConnection = {
+  __typename?: 'EgressNodeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EgressNodeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<EgressNode>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type EgressNodeEdge = {
+  __typename?: 'EgressNodeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<EgressNode>;
+};
+
+export type Email = {
+  __typename?: 'Email';
+  /** Timestamp the email was confirmed. */
+  confirmedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp the email was created. */
+  createdAt: Scalars['Time'];
+  /** Email address. */
+  email: Scalars['String'];
+  /** Internal ID of the email. */
+  id: Scalars['ID'];
+  /** Timestamp the email was last updated. */
+  updatedAt: Scalars['Time'];
+};
+
+/** The connection type for Email. */
+export type EmailConnection = {
+  __typename?: 'EmailConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EmailEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Email>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type EmailEdge = {
+  __typename?: 'EmailEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Email>;
+};
+
+/** Autogenerated input type of EnableDevopsAdoptionNamespace */
+export type EnableDevopsAdoptionNamespaceInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Display namespace ID. */
+  displayNamespaceId?: InputMaybe<Scalars['NamespaceID']>;
+  /** Namespace ID. */
+  namespaceId: Scalars['NamespaceID'];
+};
+
+/** Autogenerated return type of EnableDevopsAdoptionNamespace */
+export type EnableDevopsAdoptionNamespacePayload = {
+  __typename?: 'EnableDevopsAdoptionNamespacePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Enabled namespace after mutation. */
+  enabledNamespace?: Maybe<DevopsAdoptionEnabledNamespace>;
   /** Errors encountered during execution of the mutation. */
   errors: Array<Scalars['String']>;
 };
@@ -4606,24 +9842,84 @@ export type EntryType =
 /** Describes where code is deployed for a project */
 export type Environment = {
   __typename?: 'Environment';
+  /** When the environment is going to be deleted automatically. */
+  autoDeleteAt?: Maybe<Scalars['Time']>;
+  /** When the environment is going to be stopped automatically. */
+  autoStopAt?: Maybe<Scalars['Time']>;
+  /** Cluster agent of the environment. */
+  clusterAgent?: Maybe<ClusterAgent>;
+  /** When the environment was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Deployment freeze periods of the environment. */
+  deployFreezes?: Maybe<Array<CiFreezePeriod>>;
+  /** Deployments of the environment. This field can only be resolved for one environment in any single request. */
+  deployments?: Maybe<DeploymentConnection>;
+  /** Folder name of the environment. */
+  environmentType?: Maybe<Scalars['String']>;
+  /** External URL of the environment. */
+  externalUrl?: Maybe<Scalars['String']>;
   /** ID of the environment. */
   id: Scalars['ID'];
+  /** Last deployment of the environment. */
+  lastDeployment?: Maybe<Deployment>;
   /** Most severe open alert for the environment. If multiple alerts have equal severity, the most recent is returned. */
   latestOpenedMostSevereAlert?: Maybe<AlertManagementAlert>;
-  /** Metrics dashboard schema for the environment. */
+  /**
+   * Metrics dashboard schema for the environment. Deprecated in 16.0: Returns no data. Underlying feature was removed in 16.0.
+   * @deprecated Returns no data. Underlying feature was removed in 16.0. Deprecated in 16.0.
+   */
   metricsDashboard?: Maybe<MetricsDashboard>;
   /** Human-readable name of the environment. */
   name: Scalars['String'];
   /** Path to the environment. */
   path: Scalars['String'];
+  /** Protected Environments for the environment. */
+  protectedEnvironments?: Maybe<ProtectedEnvironmentConnection>;
+  /** Slug of the environment. */
+  slug?: Maybe<Scalars['String']>;
   /** State of the environment, for example: available/stopped. */
   state: Scalars['String'];
+  /** Deployment tier of the environment. */
+  tier?: Maybe<DeploymentTier>;
+  /** When the environment was updated. */
+  updatedAt?: Maybe<Scalars['Time']>;
+  /**
+   * Permissions for the current user on the resource. This field can only be
+   * resolved for one environment in any single request.
+   */
+  userPermissions: EnvironmentPermissions;
+};
+
+
+/** Describes where code is deployed for a project */
+export type EnvironmentDeploymentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  orderBy?: InputMaybe<DeploymentsOrderByInput>;
+  statuses?: InputMaybe<Array<DeploymentStatus>>;
+};
+
+
+/** Describes where code is deployed for a project */
+export type EnvironmentLastDeploymentArgs = {
+  status: DeploymentStatus;
 };
 
 
 /** Describes where code is deployed for a project */
 export type EnvironmentMetricsDashboardArgs = {
   path: Scalars['String'];
+};
+
+
+/** Describes where code is deployed for a project */
+export type EnvironmentProtectedEnvironmentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 /** The connection type for Environment. */
@@ -4637,6 +9933,50 @@ export type EnvironmentConnection = {
   pageInfo: PageInfo;
 };
 
+/** Autogenerated input type of EnvironmentCreate */
+export type EnvironmentCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Cluster agent of the environment. */
+  clusterAgentId?: InputMaybe<Scalars['ClustersAgentID']>;
+  /** External URL of the environment. */
+  externalUrl?: InputMaybe<Scalars['String']>;
+  /** Name of the environment. */
+  name: Scalars['String'];
+  /** Full path of the project. */
+  projectPath: Scalars['ID'];
+  /** Tier of the environment. */
+  tier?: InputMaybe<DeploymentTier>;
+};
+
+/** Autogenerated return type of EnvironmentCreate */
+export type EnvironmentCreatePayload = {
+  __typename?: 'EnvironmentCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Created environment. */
+  environment?: Maybe<Environment>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of EnvironmentDelete */
+export type EnvironmentDeleteInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the environment to Delete. */
+  id: Scalars['EnvironmentID'];
+};
+
+/** Autogenerated return type of EnvironmentDelete */
+export type EnvironmentDeletePayload = {
+  __typename?: 'EnvironmentDeletePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 /** An edge in a connection. */
 export type EnvironmentEdge = {
   __typename?: 'EnvironmentEdge';
@@ -4644,6 +9984,62 @@ export type EnvironmentEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<Environment>;
+};
+
+export type EnvironmentPermissions = {
+  __typename?: 'EnvironmentPermissions';
+  /** Indicates the user can perform `destroy_environment` on this resource */
+  destroyEnvironment: Scalars['Boolean'];
+  /** Indicates the user can perform `stop_environment` on this resource */
+  stopEnvironment: Scalars['Boolean'];
+  /** Indicates the user can perform `update_environment` on this resource */
+  updateEnvironment: Scalars['Boolean'];
+};
+
+/** Autogenerated input type of EnvironmentStop */
+export type EnvironmentStopInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Force environment to stop without executing on_stop actions. */
+  force?: InputMaybe<Scalars['Boolean']>;
+  /** Global ID of the environment to stop. */
+  id: Scalars['EnvironmentID'];
+};
+
+/** Autogenerated return type of EnvironmentStop */
+export type EnvironmentStopPayload = {
+  __typename?: 'EnvironmentStopPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Environment after attempt to stop. */
+  environment?: Maybe<Environment>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of EnvironmentUpdate */
+export type EnvironmentUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Cluster agent of the environment. */
+  clusterAgentId?: InputMaybe<Scalars['ClustersAgentID']>;
+  /** External URL of the environment. */
+  externalUrl?: InputMaybe<Scalars['String']>;
+  /** Global ID of the environment to update. */
+  id: Scalars['EnvironmentID'];
+  /** Tier of the environment. */
+  tier?: InputMaybe<DeploymentTier>;
+};
+
+/** Autogenerated return type of EnvironmentUpdate */
+export type EnvironmentUpdatePayload = {
+  __typename?: 'EnvironmentUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Environment after attempt to update. */
+  environment?: Maybe<Environment>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
 };
 
 /** Autogenerated input type of EnvironmentsCanaryIngressUpdate */
@@ -4665,6 +10061,1514 @@ export type EnvironmentsCanaryIngressUpdatePayload = {
   errors: Array<Scalars['String']>;
 };
 
+/** Represents an epic */
+export type Epic = CurrentUserTodos & Eventable & NoteableInterface & Todoable & {
+  __typename?: 'Epic';
+  /** Ancestors (parents) of the epic. */
+  ancestors?: Maybe<EpicConnection>;
+  /** Author of the epic. */
+  author: UserCore;
+  /** List of award emojis associated with the epic. */
+  awardEmoji?: Maybe<AwardEmojiConnection>;
+  /** Indicates the epic is blocked. */
+  blocked?: Maybe<Scalars['Boolean']>;
+  /** Count of epics blocking this epic. */
+  blockedByCount?: Maybe<Scalars['Int']>;
+  /** Epics blocking this epic. */
+  blockedByEpics?: Maybe<EpicConnection>;
+  /** Count of epics that this epic is blocking. */
+  blockingCount?: Maybe<Scalars['Int']>;
+  /** Children (sub-epics) of the epic. */
+  children?: Maybe<EpicConnection>;
+  /** Timestamp of when the epic was closed. */
+  closedAt?: Maybe<Scalars['Time']>;
+  /** Color of the epic. Returns `null` if `epic_color_highlight` feature flag is disabled. */
+  color?: Maybe<Scalars['String']>;
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
+  /** Indicates if the epic is confidential. */
+  confidential?: Maybe<Scalars['Boolean']>;
+  /** Timestamp of when the epic was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** To-do items for the current user. */
+  currentUserTodos: TodoConnection;
+  /** Default Project for issue creation. Based on the project the user created the last issue in. */
+  defaultProjectForIssueCreation?: Maybe<Project>;
+  /** Number of open and closed descendant epics and issues. */
+  descendantCounts?: Maybe<EpicDescendantCount>;
+  /** Total weight of open and closed issues in the epic and its descendants. */
+  descendantWeightSum?: Maybe<EpicDescendantWeights>;
+  /** Description of the epic. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description` */
+  descriptionHtml?: Maybe<Scalars['String']>;
+  /** All discussions on this noteable. */
+  discussions: DiscussionConnection;
+  /** Number of downvotes the epic has received. */
+  downvotes: Scalars['Int'];
+  /** Due date of the epic. */
+  dueDate?: Maybe<Scalars['Time']>;
+  /** Fixed due date of the epic. */
+  dueDateFixed?: Maybe<Scalars['Time']>;
+  /** Inherited due date of the epic from child epics or milestones. */
+  dueDateFromInheritedSource?: Maybe<Scalars['Time']>;
+  /** Inherited due date of the epic from milestones. */
+  dueDateFromMilestones?: Maybe<Scalars['Time']>;
+  /** Indicates if the due date has been manually set. */
+  dueDateIsFixed?: Maybe<Scalars['Boolean']>;
+  /** List of events associated with the object. */
+  events?: Maybe<EventConnection>;
+  /** Group to which the epic belongs. */
+  group: Group;
+  /** Indicates if the epic has children. */
+  hasChildren: Scalars['Boolean'];
+  /** Indicates if the epic has direct issues. */
+  hasIssues: Scalars['Boolean'];
+  /** Indicates if the epic has a parent epic. */
+  hasParent: Scalars['Boolean'];
+  /** Current health status of the epic. */
+  healthStatus?: Maybe<EpicHealthStatus>;
+  /** ID of the epic. */
+  id: Scalars['ID'];
+  /** Internal ID of the epic. */
+  iid: Scalars['ID'];
+  /** A list of issues associated with the epic. */
+  issues?: Maybe<EpicIssueConnection>;
+  /** Labels assigned to the epic. */
+  labels?: Maybe<LabelConnection>;
+  /** All notes on this noteable. */
+  notes: NoteConnection;
+  /** Parent epic of the epic. */
+  parent?: Maybe<Epic>;
+  /** List of participants for the epic. */
+  participants?: Maybe<UserCoreConnection>;
+  /** Internal reference of the epic. Returned in shortened format by default. */
+  reference: Scalars['String'];
+  /** URI path of the epic-issue relationship. */
+  relationPath?: Maybe<Scalars['String']>;
+  /** Relative position of the epic in the epic tree. */
+  relativePosition?: Maybe<Scalars['Int']>;
+  /** Start date of the epic. */
+  startDate?: Maybe<Scalars['Time']>;
+  /** Fixed start date of the epic. */
+  startDateFixed?: Maybe<Scalars['Time']>;
+  /** Inherited start date of the epic from child epics or milestones. */
+  startDateFromInheritedSource?: Maybe<Scalars['Time']>;
+  /** Inherited start date of the epic from milestones. */
+  startDateFromMilestones?: Maybe<Scalars['Time']>;
+  /** Indicates if the start date has been manually set. */
+  startDateIsFixed?: Maybe<Scalars['Boolean']>;
+  /** State of the epic. */
+  state: EpicState;
+  /** Indicates the currently logged in user is subscribed to the epic. */
+  subscribed: Scalars['Boolean'];
+  /** Text color generated for the epic. Returns `null` if `epic_color_highlight` feature flag is disabled. */
+  textColor?: Maybe<Scalars['String']>;
+  /** Title of the epic. */
+  title?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `title` */
+  titleHtml?: Maybe<Scalars['String']>;
+  /** Timestamp of when the epic was updated. */
+  updatedAt?: Maybe<Scalars['Time']>;
+  /** Number of upvotes the epic has received. */
+  upvotes: Scalars['Int'];
+  /** Number of user discussions in the epic. */
+  userDiscussionsCount: Scalars['Int'];
+  /** Number of user notes of the epic. */
+  userNotesCount: Scalars['Int'];
+  /** Permissions for the current user on the resource */
+  userPermissions: EpicPermissions;
+  /** Web path of the epic. */
+  webPath: Scalars['String'];
+  /** Web URL of the epic. */
+  webUrl: Scalars['String'];
+};
+
+
+/** Represents an epic */
+export type EpicAncestorsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  createdAfter?: InputMaybe<Scalars['Time']>;
+  createdBefore?: InputMaybe<Scalars['Time']>;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iidStartsWith?: InputMaybe<Scalars['String']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  includeDescendantGroups?: InputMaybe<Scalars['Boolean']>;
+  labelName?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  not?: InputMaybe<NegatedEpicFilterInput>;
+  or?: InputMaybe<UnionedEpicFilterInput>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<EpicSort>;
+  state?: InputMaybe<EpicState>;
+  timeframe?: InputMaybe<Timeframe>;
+  topLevelHierarchyOnly?: InputMaybe<Scalars['Boolean']>;
+  updatedAfter?: InputMaybe<Scalars['Time']>;
+  updatedBefore?: InputMaybe<Scalars['Time']>;
+};
+
+
+/** Represents an epic */
+export type EpicAwardEmojiArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicBlockedByEpicsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicChildrenArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  createdAfter?: InputMaybe<Scalars['Time']>;
+  createdBefore?: InputMaybe<Scalars['Time']>;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iidStartsWith?: InputMaybe<Scalars['String']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  includeDescendantGroups?: InputMaybe<Scalars['Boolean']>;
+  labelName?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  not?: InputMaybe<NegatedEpicFilterInput>;
+  or?: InputMaybe<UnionedEpicFilterInput>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<EpicSort>;
+  state?: InputMaybe<EpicState>;
+  timeframe?: InputMaybe<Timeframe>;
+  topLevelHierarchyOnly?: InputMaybe<Scalars['Boolean']>;
+  updatedAfter?: InputMaybe<Scalars['Time']>;
+  updatedBefore?: InputMaybe<Scalars['Time']>;
+};
+
+
+/** Represents an epic */
+export type EpicCommentersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicCurrentUserTodosArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  state?: InputMaybe<TodoStateEnum>;
+};
+
+
+/** Represents an epic */
+export type EpicDiscussionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicEventsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicIssuesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicLabelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicNotesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicParticipantsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic */
+export type EpicReferenceArgs = {
+  full?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** Autogenerated input type of EpicAddIssue */
+export type EpicAddIssueInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Group the epic to mutate belongs to. */
+  groupPath: Scalars['ID'];
+  /** IID of the epic to mutate. */
+  iid: Scalars['ID'];
+  /** IID of the issue to be added. */
+  issueIid: Scalars['String'];
+  /** Full path of the project the issue belongs to. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of EpicAddIssue */
+export type EpicAddIssuePayload = {
+  __typename?: 'EpicAddIssuePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Epic after mutation. */
+  epic?: Maybe<Epic>;
+  /** Epic-issue relationship. */
+  epicIssue?: Maybe<EpicIssue>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Represents an epic board */
+export type EpicBoard = {
+  __typename?: 'EpicBoard';
+  /** Whether or not display epic colors. */
+  displayColors?: Maybe<Scalars['Boolean']>;
+  /** Whether or not backlog list is hidden. */
+  hideBacklogList?: Maybe<Scalars['Boolean']>;
+  /** Whether or not closed list is hidden. */
+  hideClosedList?: Maybe<Scalars['Boolean']>;
+  /** Global ID of the epic board. */
+  id: Scalars['BoardsEpicBoardID'];
+  /** Labels of the board. */
+  labels?: Maybe<LabelConnection>;
+  /** Epic board lists. */
+  lists?: Maybe<EpicListConnection>;
+  /** Name of the epic board. */
+  name?: Maybe<Scalars['String']>;
+  /** Web path of the epic board. */
+  webPath: Scalars['String'];
+  /** Web URL of the epic board. */
+  webUrl: Scalars['String'];
+};
+
+
+/** Represents an epic board */
+export type EpicBoardLabelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents an epic board */
+export type EpicBoardListsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  epicFilters?: InputMaybe<EpicFilters>;
+  first?: InputMaybe<Scalars['Int']>;
+  id?: InputMaybe<Scalars['BoardsEpicListID']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for EpicBoard. */
+export type EpicBoardConnection = {
+  __typename?: 'EpicBoardConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EpicBoardEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<EpicBoard>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of EpicBoardCreate */
+export type EpicBoardCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Whether or not display epic colors. Ignored unless `epic_color_highlight` flag is enabled. */
+  displayColors?: InputMaybe<Scalars['Boolean']>;
+  /** Full path of the group with which the resource is associated. */
+  groupPath?: InputMaybe<Scalars['ID']>;
+  /** Whether or not backlog list is hidden. */
+  hideBacklogList?: InputMaybe<Scalars['Boolean']>;
+  /** Whether or not closed list is hidden. */
+  hideClosedList?: InputMaybe<Scalars['Boolean']>;
+  /** IDs of labels to be added to the board. */
+  labelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+  /** Labels of the issue. */
+  labels?: InputMaybe<Array<Scalars['String']>>;
+  /** Board name. */
+  name?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of EpicBoardCreate */
+export type EpicBoardCreatePayload = {
+  __typename?: 'EpicBoardCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Created epic board. */
+  epicBoard?: Maybe<EpicBoard>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type EpicBoardEdge = {
+  __typename?: 'EpicBoardEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<EpicBoard>;
+};
+
+/** Autogenerated input type of EpicBoardListCreate */
+export type EpicBoardListCreateInput = {
+  /** Create the backlog list. */
+  backlog?: InputMaybe<Scalars['Boolean']>;
+  /** Global ID of the issue board to mutate. */
+  boardId: Scalars['BoardsEpicBoardID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of an existing label. */
+  labelId?: InputMaybe<Scalars['LabelID']>;
+};
+
+/** Autogenerated return type of EpicBoardListCreate */
+export type EpicBoardListCreatePayload = {
+  __typename?: 'EpicBoardListCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Epic list in the epic board. */
+  list?: Maybe<EpicList>;
+};
+
+/** Autogenerated input type of EpicBoardListDestroy */
+export type EpicBoardListDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the epic board list to destroy. */
+  listId: Scalars['BoardsEpicListID'];
+};
+
+/** Autogenerated return type of EpicBoardListDestroy */
+export type EpicBoardListDestroyPayload = {
+  __typename?: 'EpicBoardListDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Epic board list. `null` if the board was destroyed successfully. */
+  list?: Maybe<EpicList>;
+};
+
+/** Autogenerated input type of EpicBoardUpdate */
+export type EpicBoardUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Whether or not display epic colors. Ignored unless `epic_color_highlight` flag is enabled. */
+  displayColors?: InputMaybe<Scalars['Boolean']>;
+  /** Whether or not backlog list is hidden. */
+  hideBacklogList?: InputMaybe<Scalars['Boolean']>;
+  /** Whether or not closed list is hidden. */
+  hideClosedList?: InputMaybe<Scalars['Boolean']>;
+  /** Epic board global ID. */
+  id: Scalars['BoardsEpicBoardID'];
+  /** IDs of labels to be added to the board. */
+  labelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+  /** Labels of the issue. */
+  labels?: InputMaybe<Array<Scalars['String']>>;
+  /** Board name. */
+  name?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of EpicBoardUpdate */
+export type EpicBoardUpdatePayload = {
+  __typename?: 'EpicBoardUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Updated epic board. */
+  epicBoard?: Maybe<EpicBoard>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** The connection type for Epic. */
+export type EpicConnection = {
+  __typename?: 'EpicConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EpicEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Epic>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Counts of descendent epics */
+export type EpicDescendantCount = {
+  __typename?: 'EpicDescendantCount';
+  /** Number of closed child epics. */
+  closedEpics?: Maybe<Scalars['Int']>;
+  /** Number of closed epic issues. */
+  closedIssues?: Maybe<Scalars['Int']>;
+  /** Number of opened child epics. */
+  openedEpics?: Maybe<Scalars['Int']>;
+  /** Number of opened epic issues. */
+  openedIssues?: Maybe<Scalars['Int']>;
+};
+
+/** Total weight of open and closed descendant issues */
+export type EpicDescendantWeights = {
+  __typename?: 'EpicDescendantWeights';
+  /** Total weight of completed (closed) issues in this epic, including epic descendants. */
+  closedIssues?: Maybe<Scalars['Int']>;
+  /** Total weight of opened issues in this epic, including epic descendants. */
+  openedIssues?: Maybe<Scalars['Int']>;
+};
+
+/** An edge in a connection. */
+export type EpicEdge = {
+  __typename?: 'EpicEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Epic>;
+};
+
+export type EpicFilters = {
+  /** Filter by author username. */
+  authorUsername?: InputMaybe<Scalars['String']>;
+  /** Filter by confidentiality. */
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Filter by label name. */
+  labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Filter by reaction emoji applied by the current user. Wildcard values "NONE" and "ANY" are supported. */
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  /** Negated epic arguments. */
+  not?: InputMaybe<NegatedEpicBoardIssueInput>;
+  /** List of arguments with inclusive OR. Ignored unless `or_issuable_queries` flag is enabled. */
+  or?: InputMaybe<UnionedEpicFilterInput>;
+  /** Search query for epic title or description. */
+  search?: InputMaybe<Scalars['String']>;
+};
+
+/** Health status of child issues */
+export type EpicHealthStatus = {
+  __typename?: 'EpicHealthStatus';
+  /** Number of issues at risk. */
+  issuesAtRisk?: Maybe<Scalars['Int']>;
+  /** Number of issues that need attention. */
+  issuesNeedingAttention?: Maybe<Scalars['Int']>;
+  /** Number of issues on track. */
+  issuesOnTrack?: Maybe<Scalars['Int']>;
+};
+
+/** Relationship between an epic and an issue */
+export type EpicIssue = CurrentUserTodos & NoteableInterface & Todoable & {
+  __typename?: 'EpicIssue';
+  /**
+   * Alert associated to this issue. Deprecated in 15.6: Use `alert_management_alerts`.
+   * @deprecated Use `alert_management_alerts`. Deprecated in 15.6.
+   */
+  alertManagementAlert?: Maybe<AlertManagementAlert>;
+  /** Alert Management alerts associated to this issue. */
+  alertManagementAlerts?: Maybe<AlertManagementAlertConnection>;
+  /** Assignees of the issue. */
+  assignees?: Maybe<UserCoreConnection>;
+  /** User that created the issue. */
+  author: UserCore;
+  /** Indicates the issue is blocked. */
+  blocked: Scalars['Boolean'];
+  /** Count of issues blocking this issue. */
+  blockedByCount?: Maybe<Scalars['Int']>;
+  /** Issues blocking this issue. */
+  blockedByIssues?: Maybe<IssueConnection>;
+  /** Count of issues this issue is blocking. */
+  blockingCount: Scalars['Int'];
+  /** Issue this issue was closed as a duplicate of. */
+  closedAsDuplicateOf?: Maybe<Issue>;
+  /** Timestamp of when the issue was closed. */
+  closedAt?: Maybe<Scalars['Time']>;
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
+  /** Indicates the issue is confidential. */
+  confidential: Scalars['Boolean'];
+  /** User specific email address for the issue. */
+  createNoteEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the issue was created. */
+  createdAt: Scalars['Time'];
+  /** To-do items for the current user. */
+  currentUserTodos: TodoConnection;
+  /** Customer relations contacts of the issue. */
+  customerRelationsContacts?: Maybe<CustomerRelationsContactConnection>;
+  /** Description of the issue. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description` */
+  descriptionHtml?: Maybe<Scalars['String']>;
+  /** Collection of design images associated with this issue. */
+  designCollection?: Maybe<DesignCollection>;
+  /** Indicates discussion is locked on the issue. */
+  discussionLocked: Scalars['Boolean'];
+  /** All discussions on this noteable. */
+  discussions: DiscussionConnection;
+  /** Number of downvotes the issue has received. */
+  downvotes: Scalars['Int'];
+  /** Due date of the issue. */
+  dueDate?: Maybe<Scalars['Time']>;
+  /** Indicates if a project has email notifications disabled: `true` if email notifications are disabled. */
+  emailsDisabled: Scalars['Boolean'];
+  /** Epic to which this issue belongs. */
+  epic?: Maybe<Epic>;
+  /** ID of the epic-issue relation. */
+  epicIssueId: Scalars['ID'];
+  /** Escalation policy associated with the issue. Available for issues which support escalation. */
+  escalationPolicy?: Maybe<EscalationPolicyType>;
+  /** Escalation status of the issue. */
+  escalationStatus?: Maybe<IssueEscalationStatus>;
+  /**
+   * Indicates if the issue belongs to an epic.
+   *             Can return true and not show an associated epic when the user has no access to the epic.
+   */
+  hasEpic: Scalars['Boolean'];
+  /** Current health status. */
+  healthStatus?: Maybe<HealthStatus>;
+  /** Indicates the issue is hidden because the author has been banned. */
+  hidden?: Maybe<Scalars['Boolean']>;
+  /** Human-readable time estimate of the issue. */
+  humanTimeEstimate?: Maybe<Scalars['String']>;
+  /** Human-readable total time reported as spent on the issue. */
+  humanTotalTimeSpent?: Maybe<Scalars['String']>;
+  /** Global ID of the epic-issue relation. */
+  id?: Maybe<Scalars['ID']>;
+  /** Internal ID of the issue. */
+  iid: Scalars['ID'];
+  /** Issuable resource links of the incident issue. */
+  issuableResourceLinks?: Maybe<IssuableResourceLinkConnection>;
+  /** Iteration of the issue. */
+  iteration?: Maybe<Iteration>;
+  /** Labels of the issue. */
+  labels?: Maybe<LabelConnection>;
+  /** Number of merge requests that close the issue on merge. */
+  mergeRequestsCount: Scalars['Int'];
+  /** Metric images associated to the issue. */
+  metricImages?: Maybe<Array<MetricImage>>;
+  /** Milestone of the issue. */
+  milestone?: Maybe<Milestone>;
+  /** Indicates if issue got moved from other project. */
+  moved?: Maybe<Scalars['Boolean']>;
+  /** Updated Issue after it got moved to another project. */
+  movedTo?: Maybe<Issue>;
+  /** All notes on this noteable. */
+  notes: NoteConnection;
+  /** List of participants in the issue. */
+  participants?: Maybe<UserCoreConnection>;
+  /** ID of the issue project. */
+  projectId: Scalars['Int'];
+  /** Internal reference of the issue. Returned in shortened format by default. */
+  reference: Scalars['String'];
+  /** Merge requests related to the issue. This field can only be resolved for one issue in any single request. */
+  relatedMergeRequests?: Maybe<MergeRequestConnection>;
+  /** Related vulnerabilities of the issue. */
+  relatedVulnerabilities?: Maybe<VulnerabilityConnection>;
+  /** URI path of the epic-issue relation. */
+  relationPath?: Maybe<Scalars['String']>;
+  /** Relative position of the issue (used for positioning in epic tree and issue boards). */
+  relativePosition?: Maybe<Scalars['Int']>;
+  /** Severity level of the incident. */
+  severity?: Maybe<IssuableSeverity>;
+  /** Timestamp of when the issue SLA expires. */
+  slaDueAt?: Maybe<Scalars['Time']>;
+  /** State of the issue. */
+  state: IssueState;
+  /** Indicates whether an issue is published to the status page. */
+  statusPagePublishedIncident?: Maybe<Scalars['Boolean']>;
+  /** Indicates the currently logged in user is subscribed to the issue. */
+  subscribed: Scalars['Boolean'];
+  /** Task completion status of the issue. */
+  taskCompletionStatus: TaskCompletionStatus;
+  /** Time estimate of the issue. */
+  timeEstimate: Scalars['Int'];
+  /** Timelogs on the issue. */
+  timelogs: TimelogConnection;
+  /** Title of the issue. */
+  title: Scalars['String'];
+  /** GitLab Flavored Markdown rendering of `title` */
+  titleHtml?: Maybe<Scalars['String']>;
+  /** Total time reported as spent on the issue. */
+  totalTimeSpent: Scalars['Int'];
+  /** Type of the issue. */
+  type?: Maybe<IssueType>;
+  /** Timestamp of when the issue was last updated. */
+  updatedAt: Scalars['Time'];
+  /** User that last updated the issue. */
+  updatedBy?: Maybe<UserCore>;
+  /** Number of upvotes the issue has received. */
+  upvotes: Scalars['Int'];
+  /** Number of user discussions in the issue. */
+  userDiscussionsCount: Scalars['Int'];
+  /** Number of user notes of the issue. */
+  userNotesCount: Scalars['Int'];
+  /** Permissions for the current user on the resource */
+  userPermissions: IssuePermissions;
+  /** Web path of the issue. */
+  webPath: Scalars['String'];
+  /** Web URL of the issue. */
+  webUrl: Scalars['String'];
+  /** Weight of the issue. */
+  weight?: Maybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueAlertManagementAlertsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  assigneeUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  domain?: AlertManagementDomainFilter;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<AlertManagementAlertSort>;
+  statuses?: InputMaybe<Array<AlertManagementStatus>>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueAssigneesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueBlockedByIssuesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueCommentersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueCurrentUserTodosArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  state?: InputMaybe<TodoStateEnum>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueCustomerRelationsContactsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueDiscussionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueIssuableResourceLinksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  incidentId: Scalars['IssueID'];
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueLabelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueNotesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueParticipantsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueReferenceArgs = {
+  full?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueRelatedMergeRequestsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueRelatedVulnerabilitiesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Relationship between an epic and an issue */
+export type EpicIssueTimelogsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for EpicIssue. */
+export type EpicIssueConnection = {
+  __typename?: 'EpicIssueConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EpicIssueEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<EpicIssue>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Total weight of issues collection. */
+  weight: Scalars['Int'];
+};
+
+/** An edge in a connection. */
+export type EpicIssueEdge = {
+  __typename?: 'EpicIssueEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<EpicIssue>;
+};
+
+/** Represents an epic board list */
+export type EpicList = {
+  __typename?: 'EpicList';
+  /** Indicates if this list is collapsed for this user. */
+  collapsed?: Maybe<Scalars['Boolean']>;
+  /** List epics. */
+  epics?: Maybe<EpicConnection>;
+  /**
+   * Count of epics in the list. Deprecated in 14.9: This was renamed.
+   * @deprecated This was renamed. Please use `metadata`. Deprecated in 14.9.
+   */
+  epicsCount?: Maybe<Scalars['Int']>;
+  /** Global ID of the board list. */
+  id: Scalars['BoardsEpicListID'];
+  /** Label of the list. */
+  label?: Maybe<Label>;
+  /** Type of the list. */
+  listType: Scalars['String'];
+  /** Epic list metatada. */
+  metadata?: Maybe<EpicListMetadata>;
+  /** Position of the list within the board. */
+  position?: Maybe<Scalars['Int']>;
+  /** Title of the list. */
+  title: Scalars['String'];
+};
+
+
+/** Represents an epic board list */
+export type EpicListEpicsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  filters?: InputMaybe<EpicFilters>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for EpicList. */
+export type EpicListConnection = {
+  __typename?: 'EpicListConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EpicListEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<EpicList>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type EpicListEdge = {
+  __typename?: 'EpicListEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<EpicList>;
+};
+
+/** Represents epic board list metadata */
+export type EpicListMetadata = {
+  __typename?: 'EpicListMetadata';
+  /** Count of epics in the list. */
+  epicsCount?: Maybe<Scalars['Int']>;
+  /**
+   * Total weight of all issues in the list. Introduced in 14.7: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 14.7.
+   */
+  totalWeight?: Maybe<Scalars['Int']>;
+};
+
+/** Autogenerated input type of EpicMoveList */
+export type EpicMoveListInput = {
+  /** Global ID of the board that the epic is in. */
+  boardId: Scalars['BoardsEpicBoardID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the epic to mutate. */
+  epicId: Scalars['EpicID'];
+  /** ID of the board list that the epic will be moved from. Required if moving between lists. */
+  fromListId?: InputMaybe<Scalars['BoardsEpicListID']>;
+  /** ID of epic that should be placed after the current epic. */
+  moveAfterId?: InputMaybe<Scalars['EpicID']>;
+  /** ID of epic that should be placed before the current epic. */
+  moveBeforeId?: InputMaybe<Scalars['EpicID']>;
+  /** Position of epics within the board list. Positions start at 0. Use -1 to move to the end of the list. */
+  positionInList?: InputMaybe<Scalars['Int']>;
+  /** ID of the list the epic will be in after mutation. */
+  toListId: Scalars['BoardsEpicListID'];
+};
+
+/** Autogenerated return type of EpicMoveList */
+export type EpicMoveListPayload = {
+  __typename?: 'EpicMoveListPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Epic after mutation. */
+  epic?: Maybe<Epic>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Check permissions for the current user on an epic */
+export type EpicPermissions = {
+  __typename?: 'EpicPermissions';
+  /** Indicates the user can perform `admin_epic` on this resource */
+  adminEpic: Scalars['Boolean'];
+  /** Indicates the user can perform `award_emoji` on this resource */
+  awardEmoji: Scalars['Boolean'];
+  /** Indicates the user can perform `create_epic` on this resource */
+  createEpic: Scalars['Boolean'];
+  /** Indicates the user can perform `create_note` on this resource */
+  createNote: Scalars['Boolean'];
+  /** Indicates the user can perform `destroy_epic` on this resource */
+  destroyEpic: Scalars['Boolean'];
+  /** Indicates the user can perform `read_epic` on this resource */
+  readEpic: Scalars['Boolean'];
+  /** Indicates the user can perform `read_epic_iid` on this resource */
+  readEpicIid: Scalars['Boolean'];
+  /** Indicates the user can perform `update_epic` on this resource */
+  updateEpic: Scalars['Boolean'];
+};
+
+/** Autogenerated input type of EpicSetSubscription */
+export type EpicSetSubscriptionInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Group the epic to mutate belongs to. */
+  groupPath: Scalars['ID'];
+  /** IID of the epic to mutate. */
+  iid: Scalars['ID'];
+  /** Desired state of the subscription. */
+  subscribedState: Scalars['Boolean'];
+};
+
+/** Autogenerated return type of EpicSetSubscription */
+export type EpicSetSubscriptionPayload = {
+  __typename?: 'EpicSetSubscriptionPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Epic after mutation. */
+  epic?: Maybe<Epic>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Roadmap sort values */
+export type EpicSort =
+  /** Sort by created_at by ascending order. */
+  | 'CREATED_AT_ASC'
+  /** Sort by created_at by descending order. */
+  | 'CREATED_AT_DESC'
+  /** Sort by end date in ascending order. */
+  | 'END_DATE_ASC'
+  /** Sort by end date in descending order. */
+  | 'END_DATE_DESC'
+  /** Sort by start date in ascending order. */
+  | 'START_DATE_ASC'
+  /** Sort by start date in descending order. */
+  | 'START_DATE_DESC'
+  /** Sort by title in ascending order. */
+  | 'TITLE_ASC'
+  /** Sort by title in descending order. */
+  | 'TITLE_DESC'
+  /** Sort by updated_at by ascending order. */
+  | 'UPDATED_AT_ASC'
+  /** Sort by updated_at by descending order. */
+  | 'UPDATED_AT_DESC'
+  /** End date at ascending order. */
+  | 'end_date_asc'
+  /** End date at descending order. */
+  | 'end_date_desc'
+  /** Start date at ascending order. */
+  | 'start_date_asc'
+  /** Start date at descending order. */
+  | 'start_date_desc';
+
+/** State of an epic */
+export type EpicState =
+  /** All epics. */
+  | 'all'
+  /** Closed epics. */
+  | 'closed'
+  /** Open epics. */
+  | 'opened';
+
+/** State event of an epic */
+export type EpicStateEvent =
+  /** Close the epic. */
+  | 'CLOSE'
+  /** Reopen the epic. */
+  | 'REOPEN';
+
+/** A node of an epic tree. */
+export type EpicTreeNodeFieldsInputType = {
+  /** ID of the epic issue or issue the epic or issue is switched with. */
+  adjacentReferenceId?: InputMaybe<Scalars['EpicTreeSortingID']>;
+  /** ID of the epic issue or epic that is being moved. */
+  id: Scalars['EpicTreeSortingID'];
+  /** ID of the new parent epic. */
+  newParentId?: InputMaybe<Scalars['EpicID']>;
+  /** Type of switch. Valid values are `after` or `before`. */
+  relativePosition?: InputMaybe<MoveType>;
+};
+
+/** Autogenerated input type of EpicTreeReorder */
+export type EpicTreeReorderInput = {
+  /** ID of the base epic of the tree. */
+  baseEpicId: Scalars['EpicID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Parameters for updating the tree positions. */
+  moved: EpicTreeNodeFieldsInputType;
+};
+
+/** Autogenerated return type of EpicTreeReorder */
+export type EpicTreeReorderPayload = {
+  __typename?: 'EpicTreeReorderPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Epic ID wildcard values */
+export type EpicWildcardId =
+  /** Any epic is assigned. */
+  | 'ANY'
+  /** No epic is assigned. */
+  | 'NONE';
+
+/** Autogenerated input type of EscalationPolicyCreate */
+export type EscalationPolicyCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the escalation policy. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Name of the escalation policy. */
+  name: Scalars['String'];
+  /** Project to create the escalation policy for. */
+  projectPath: Scalars['ID'];
+  /** Steps of the escalation policy. */
+  rules: Array<EscalationRuleInput>;
+};
+
+/** Autogenerated return type of EscalationPolicyCreate */
+export type EscalationPolicyCreatePayload = {
+  __typename?: 'EscalationPolicyCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Escalation policy. */
+  escalationPolicy?: Maybe<EscalationPolicyType>;
+};
+
+/** Autogenerated input type of EscalationPolicyDestroy */
+export type EscalationPolicyDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Escalation policy internal ID to remove. */
+  id: Scalars['IncidentManagementEscalationPolicyID'];
+};
+
+/** Autogenerated return type of EscalationPolicyDestroy */
+export type EscalationPolicyDestroyPayload = {
+  __typename?: 'EscalationPolicyDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Escalation policy. */
+  escalationPolicy?: Maybe<EscalationPolicyType>;
+};
+
+/** Represents an escalation policy */
+export type EscalationPolicyType = {
+  __typename?: 'EscalationPolicyType';
+  /** Description of the escalation policy. */
+  description?: Maybe<Scalars['String']>;
+  /** ID of the escalation policy. */
+  id?: Maybe<Scalars['IncidentManagementEscalationPolicyID']>;
+  /** Name of the escalation policy. */
+  name?: Maybe<Scalars['String']>;
+  /** Steps of the escalation policy. */
+  rules?: Maybe<Array<EscalationRuleType>>;
+};
+
+/** The connection type for EscalationPolicyType. */
+export type EscalationPolicyTypeConnection = {
+  __typename?: 'EscalationPolicyTypeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EscalationPolicyTypeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<EscalationPolicyType>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type EscalationPolicyTypeEdge = {
+  __typename?: 'EscalationPolicyTypeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<EscalationPolicyType>;
+};
+
+/** Autogenerated input type of EscalationPolicyUpdate */
+export type EscalationPolicyUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the escalation policy. */
+  description?: InputMaybe<Scalars['String']>;
+  /** ID of the on-call schedule to create the on-call rotation in. */
+  id: Scalars['IncidentManagementEscalationPolicyID'];
+  /** Name of the escalation policy. */
+  name?: InputMaybe<Scalars['String']>;
+  /** Steps of the escalation policy. */
+  rules?: InputMaybe<Array<EscalationRuleInput>>;
+};
+
+/** Autogenerated return type of EscalationPolicyUpdate */
+export type EscalationPolicyUpdatePayload = {
+  __typename?: 'EscalationPolicyUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Escalation policy. */
+  escalationPolicy?: Maybe<EscalationPolicyType>;
+};
+
+/** Represents an escalation rule */
+export type EscalationRuleInput = {
+  /** Time in seconds before the rule is activated. */
+  elapsedTimeSeconds: Scalars['Int'];
+  /** On-call schedule to notify. */
+  oncallScheduleIid?: InputMaybe<Scalars['ID']>;
+  /** Status required to prevent the rule from activating. */
+  status: EscalationRuleStatus;
+  /** Username of the user to notify. */
+  username?: InputMaybe<Scalars['String']>;
+};
+
+/** Escalation rule statuses */
+export type EscalationRuleStatus =
+  /** . */
+  | 'ACKNOWLEDGED'
+  /** . */
+  | 'RESOLVED';
+
+/** Represents an escalation rule for an escalation policy */
+export type EscalationRuleType = {
+  __typename?: 'EscalationRuleType';
+  /** Time in seconds before the rule is activated. */
+  elapsedTimeSeconds?: Maybe<Scalars['Int']>;
+  /** ID of the escalation policy. */
+  id?: Maybe<Scalars['IncidentManagementEscalationRuleID']>;
+  /** On-call schedule to notify. */
+  oncallSchedule?: Maybe<IncidentManagementOncallSchedule>;
+  /** Status required to prevent the rule from activating. */
+  status?: Maybe<EscalationRuleStatus>;
+  /** User to notify. */
+  user?: Maybe<UserCore>;
+};
+
+/** Representing an event */
+export type Event = {
+  __typename?: 'Event';
+  /** Action of the event. */
+  action: EventAction;
+  /** Author of this event. */
+  author: UserCore;
+  /** When this event was created. */
+  createdAt: Scalars['Time'];
+  /** ID of the event. */
+  id: Scalars['ID'];
+  /** When this event was updated. */
+  updatedAt: Scalars['Time'];
+};
+
+/** Event action */
+export type EventAction =
+  /** Approved action */
+  | 'APPROVED'
+  /** Closed action */
+  | 'CLOSED'
+  /** Commented action */
+  | 'COMMENTED'
+  /** Created action */
+  | 'CREATED'
+  /** Destroyed action */
+  | 'DESTROYED'
+  /** Expired action */
+  | 'EXPIRED'
+  /** Joined action */
+  | 'JOINED'
+  /** Left action */
+  | 'LEFT'
+  /** Merged action */
+  | 'MERGED'
+  /** Pushed action */
+  | 'PUSHED'
+  /** Reopened action */
+  | 'REOPENED'
+  /** Updated action */
+  | 'UPDATED';
+
+/** The connection type for Event. */
+export type EventConnection = {
+  __typename?: 'EventConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<EventEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Event>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type EventEdge = {
+  __typename?: 'EventEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Event>;
+};
+
+export type Eventable = {
+  /** List of events associated with the object. */
+  events?: Maybe<EventConnection>;
+};
+
+
+export type EventableEventsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+export type ExplainVulnerabilityPrompt = {
+  __typename?: 'ExplainVulnerabilityPrompt';
+  /** AI text prompt generated using the vulnerability's information, including the vulnerable code. */
+  promptWithCode?: Maybe<Scalars['String']>;
+  /** AI text prompt generated using the vulnerability's information, excluding the vulnerable code. */
+  promptWithoutCode?: Maybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of ExportRequirements */
+export type ExportRequirementsInput = {
+  /** Filter requirements by author username. */
+  authorUsername?: InputMaybe<Array<Scalars['String']>>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full project path the requirements are associated with. */
+  projectPath: Scalars['ID'];
+  /** Search query for requirement title. */
+  search?: InputMaybe<Scalars['String']>;
+  /** List of selected requirements fields to be exported. */
+  selectedFields?: InputMaybe<Array<Scalars['String']>>;
+  /** List requirements by sort order. */
+  sort?: InputMaybe<Sort>;
+  /** Filter requirements by state. */
+  state?: InputMaybe<RequirementState>;
+};
+
+/** Autogenerated return type of ExportRequirements */
+export type ExportRequirementsPayload = {
+  __typename?: 'ExportRequirementsPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Represents an external resource to send audit events to */
+export type ExternalAuditEventDestination = ExternalAuditEventDestinationInterface & {
+  __typename?: 'ExternalAuditEventDestination';
+  /** External destination to send audit events to. */
+  destinationUrl: Scalars['String'];
+  /** List of event type filters added for streaming. */
+  eventTypeFilters: Array<Scalars['String']>;
+  /** Group the destination belongs to. */
+  group: Group;
+  /** List of additional HTTP headers sent with each event. */
+  headers: AuditEventStreamingHeaderConnection;
+  /** ID of the destination. */
+  id: Scalars['ID'];
+  /** Verification token to validate source of event. */
+  verificationToken: Scalars['String'];
+};
+
+
+/** Represents an external resource to send audit events to */
+export type ExternalAuditEventDestinationHeadersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for ExternalAuditEventDestination. */
+export type ExternalAuditEventDestinationConnection = {
+  __typename?: 'ExternalAuditEventDestinationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ExternalAuditEventDestinationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ExternalAuditEventDestination>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of ExternalAuditEventDestinationCreate */
+export type ExternalAuditEventDestinationCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Destination URL. */
+  destinationUrl: Scalars['String'];
+  /** Group path. */
+  groupPath: Scalars['ID'];
+  /** Verification token. */
+  verificationToken?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of ExternalAuditEventDestinationCreate */
+export type ExternalAuditEventDestinationCreatePayload = {
+  __typename?: 'ExternalAuditEventDestinationCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Destination created. */
+  externalAuditEventDestination?: Maybe<ExternalAuditEventDestination>;
+};
+
+/** Autogenerated input type of ExternalAuditEventDestinationDestroy */
+export type ExternalAuditEventDestinationDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of external audit event destination to destroy. */
+  id: Scalars['AuditEventsExternalAuditEventDestinationID'];
+};
+
+/** Autogenerated return type of ExternalAuditEventDestinationDestroy */
+export type ExternalAuditEventDestinationDestroyPayload = {
+  __typename?: 'ExternalAuditEventDestinationDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type ExternalAuditEventDestinationEdge = {
+  __typename?: 'ExternalAuditEventDestinationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ExternalAuditEventDestination>;
+};
+
+export type ExternalAuditEventDestinationInterface = {
+  /** External destination to send audit events to. */
+  destinationUrl: Scalars['String'];
+  /** ID of the destination. */
+  id: Scalars['ID'];
+  /** Verification token to validate source of event. */
+  verificationToken: Scalars['String'];
+};
+
+/** Autogenerated input type of ExternalAuditEventDestinationUpdate */
+export type ExternalAuditEventDestinationUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Destination URL to change. */
+  destinationUrl?: InputMaybe<Scalars['String']>;
+  /** ID of external audit event destination to update. */
+  id: Scalars['AuditEventsExternalAuditEventDestinationID'];
+};
+
+/** Autogenerated return type of ExternalAuditEventDestinationUpdate */
+export type ExternalAuditEventDestinationUpdatePayload = {
+  __typename?: 'ExternalAuditEventDestinationUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated destination. */
+  externalAuditEventDestination?: Maybe<ExternalAuditEventDestination>;
+};
+
+/** Represents an external issue */
+export type ExternalIssue = {
+  __typename?: 'ExternalIssue';
+  /** Timestamp of when the issue was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Type of external tracker. */
+  externalTracker?: Maybe<Scalars['String']>;
+  /** Relative reference of the issue in the external tracker. */
+  relativeReference?: Maybe<Scalars['String']>;
+  /** Status of the issue in the external tracker. */
+  status?: Maybe<Scalars['String']>;
+  /** Title of the issue in the external tracker. */
+  title?: Maybe<Scalars['String']>;
+  /** Timestamp of when the issue was updated. */
+  updatedAt?: Maybe<Scalars['Time']>;
+  /** URL to the issue in the external tracker. */
+  webUrl?: Maybe<Scalars['String']>;
+};
+
+/** Describes an external status check. */
+export type ExternalStatusCheck = {
+  __typename?: 'ExternalStatusCheck';
+  /** External URL for the status check. */
+  externalUrl: Scalars['String'];
+  /** ID of the rule. */
+  id: Scalars['GlobalID'];
+  /** Name of the rule. */
+  name: Scalars['String'];
+};
+
+/** The connection type for ExternalStatusCheck. */
+export type ExternalStatusCheckConnection = {
+  __typename?: 'ExternalStatusCheckConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ExternalStatusCheckEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ExternalStatusCheck>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ExternalStatusCheckEdge = {
+  __typename?: 'ExternalStatusCheckEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ExternalStatusCheck>;
+};
+
 export type FileUpload = {
   __typename?: 'FileUpload';
   /** Global ID of the upload. */
@@ -4673,6 +11577,625 @@ export type FileUpload = {
   path: Scalars['String'];
   /** Size of the upload in bytes. */
   size: Scalars['Int'];
+};
+
+/** Represents security reports comparison for vulnerability findings. */
+export type FindingReportsComparer = {
+  __typename?: 'FindingReportsComparer';
+  /**
+   * Compared security report. Introduced in 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  report?: Maybe<ComparedSecurityReport>;
+  /** Comparison status. */
+  status?: Maybe<FindingReportsComparerStatus>;
+  /** Text explaining the status. */
+  statusReason?: Maybe<Scalars['String']>;
+};
+
+/** Report comparison status */
+export type FindingReportsComparerStatus =
+  /** An error happened while generating the report. */
+  | 'ERROR'
+  /** Report was generated. */
+  | 'PARSED'
+  /** Report is being generated. */
+  | 'PARSING';
+
+/** Information about specific forecast created */
+export type Forecast = {
+  __typename?: 'Forecast';
+  /** Status of the forecast. */
+  status: ForecastStatus;
+  /** Actual forecast values. */
+  values?: Maybe<ForecastDatapointConnection>;
+};
+
+
+/** Information about specific forecast created */
+export type ForecastValuesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** Information about specific forecast datapoint */
+export type ForecastDatapoint = {
+  __typename?: 'ForecastDatapoint';
+  /** Datapoint of the forecast. Usually a date. */
+  datapoint: Scalars['String'];
+  /** Value of the given datapoint. */
+  value?: Maybe<Scalars['Float']>;
+};
+
+/** The connection type for ForecastDatapoint. */
+export type ForecastDatapointConnection = {
+  __typename?: 'ForecastDatapointConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ForecastDatapointEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ForecastDatapoint>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ForecastDatapointEdge = {
+  __typename?: 'ForecastDatapointEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ForecastDatapoint>;
+};
+
+/** List of statuses for forecasting model. */
+export type ForecastStatus =
+  /** Forecast is ready. */
+  | 'READY'
+  /** Forecast is unavailable. */
+  | 'UNAVAILABLE';
+
+/** Details of the fork project compared to its upstream project. */
+export type ForkDetails = {
+  __typename?: 'ForkDetails';
+  /** Number of commits ahead of upstream. */
+  ahead?: Maybe<Scalars['Int']>;
+  /** Number of commits behind upstream. */
+  behind?: Maybe<Scalars['Int']>;
+  /** Indicates if the fork conflicts with its upstream project. */
+  hasConflicts?: Maybe<Scalars['Boolean']>;
+  /** Indicates if there is a synchronization in progress. */
+  isSyncing?: Maybe<Scalars['Boolean']>;
+};
+
+export type GenerateTestFileInput = {
+  /** File path to generate test files for. */
+  filePath: Scalars['String'];
+  /** Global ID of the resource to mutate. */
+  resourceId: Scalars['AiModelID'];
+};
+
+export type GeoNode = {
+  __typename?: 'GeoNode';
+  /** Find Ci Secure File registries on this Geo node */
+  ciSecureFileRegistries?: Maybe<CiSecureFileRegistryConnection>;
+  /** Maximum concurrency of container repository sync for this secondary node. */
+  containerRepositoriesMaxCapacity?: Maybe<Scalars['Int']>;
+  /** Find Container Repository registries on this Geo node. */
+  containerRepositoryRegistries?: Maybe<ContainerRepositoryRegistryConnection>;
+  /**
+   * Find Dependency Proxy Blob registries on this Geo node. Introduced in 15.6:
+   * This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.6.
+   */
+  dependencyProxyBlobRegistries?: Maybe<DependencyProxyBlobRegistryConnection>;
+  /** Find Dependency Proxy Manifest registries on this Geo node. */
+  dependencyProxyManifestRegistries?: Maybe<DependencyProxyManifestRegistryConnection>;
+  /**
+   * Find Design Repository registries on this Geo node. Ignored if
+   * `geo_design_management_repository_replication` feature flag is disabled.
+   * Introduced in 16.1: This feature is an Experiment. It can be changed or
+   * removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  designManagementRepositoryRegistries?: Maybe<DesignManagementRepositoryRegistryConnection>;
+  /** Indicates whether this Geo node is enabled. */
+  enabled?: Maybe<Scalars['Boolean']>;
+  /** Maximum concurrency of LFS/attachment backfill for this secondary node. */
+  filesMaxCapacity?: Maybe<Scalars['Int']>;
+  /** Find group wiki repository registries on this Geo node. */
+  groupWikiRepositoryRegistries?: Maybe<GroupWikiRepositoryRegistryConnection>;
+  /** ID of this GeoNode. */
+  id: Scalars['ID'];
+  /** URL defined on the primary node secondary nodes should use to contact it. */
+  internalUrl?: Maybe<Scalars['String']>;
+  /** Find Job Artifact registries on this Geo node. */
+  jobArtifactRegistries?: Maybe<JobArtifactRegistryConnection>;
+  /** Find LFS object registries on this Geo node. */
+  lfsObjectRegistries?: Maybe<LfsObjectRegistryConnection>;
+  /** Find merge request diff registries on this Geo node. */
+  mergeRequestDiffRegistries?: Maybe<MergeRequestDiffRegistryConnection>;
+  /** Interval (in days) in which the repository verification is valid. After expiry, it is reverted. */
+  minimumReverificationInterval?: Maybe<Scalars['Int']>;
+  /** Unique identifier for this Geo node. */
+  name?: Maybe<Scalars['String']>;
+  /** Package file registries of the GeoNode. */
+  packageFileRegistries?: Maybe<PackageFileRegistryConnection>;
+  /** Find Pages Deployment registries on this Geo node */
+  pagesDeploymentRegistries?: Maybe<PagesDeploymentRegistryConnection>;
+  /** Find pipeline artifact registries on this Geo node. */
+  pipelineArtifactRegistries?: Maybe<PipelineArtifactRegistryConnection>;
+  /** Indicates whether this Geo node is the primary. */
+  primary?: Maybe<Scalars['Boolean']>;
+  /**
+   * Find Project Wiki Repository registries on this Geo node. Ignored if
+   * `geo_project_wiki_repository_replication` feature flag is disabled.
+   */
+  projectWikiRepositoryRegistries?: Maybe<ProjectWikiRepositoryRegistryConnection>;
+  /** Maximum concurrency of repository backfill for this secondary node. */
+  reposMaxCapacity?: Maybe<Scalars['Int']>;
+  /** Namespaces that should be synced, if `selective_sync_type` == `namespaces`. */
+  selectiveSyncNamespaces?: Maybe<NamespaceConnection>;
+  /** Repository storages whose projects should be synced, if `selective_sync_type` == `shards`. */
+  selectiveSyncShards?: Maybe<Array<Scalars['String']>>;
+  /** Indicates if syncing is limited to only specific groups, or shards. */
+  selectiveSyncType?: Maybe<Scalars['String']>;
+  /** Find snippet repository registries on this Geo node. */
+  snippetRepositoryRegistries?: Maybe<SnippetRepositoryRegistryConnection>;
+  /** Indicates if this secondary node will replicate blobs in Object Storage. */
+  syncObjectStorage?: Maybe<Scalars['Boolean']>;
+  /** Find terraform state version registries on this Geo node. */
+  terraformStateVersionRegistries?: Maybe<TerraformStateVersionRegistryConnection>;
+  /** Find Upload registries on this Geo node */
+  uploadRegistries?: Maybe<UploadRegistryConnection>;
+  /** User-facing URL for this Geo node. */
+  url?: Maybe<Scalars['String']>;
+  /** Maximum concurrency of repository verification for this secondary node. */
+  verificationMaxCapacity?: Maybe<Scalars['Int']>;
+};
+
+
+export type GeoNodeCiSecureFileRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeContainerRepositoryRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeDependencyProxyBlobRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeDependencyProxyManifestRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeDesignManagementRepositoryRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeGroupWikiRepositoryRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeJobArtifactRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeLfsObjectRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeMergeRequestDiffRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodePackageFileRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodePagesDeploymentRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodePipelineArtifactRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeProjectWikiRepositoryRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeSelectiveSyncNamespacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GeoNodeSnippetRepositoryRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeTerraformStateVersionRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+
+export type GeoNodeUploadRegistriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  keyword?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  replicationState?: InputMaybe<ReplicationStateEnum>;
+  verificationState?: InputMaybe<VerificationStateEnum>;
+};
+
+/** Autogenerated input type of GeoRegistriesUpdate */
+export type GeoRegistriesUpdateInput = {
+  /** Action to be executed on a Geo registry. */
+  action: GeoRegistryAction;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Class of the Geo registry to be updated. */
+  registryClass: GeoRegistryClass;
+  /** ID of the Geo registry entry to be updated. */
+  registryId: Scalars['GeoBaseRegistryID'];
+};
+
+/** Autogenerated return type of GeoRegistriesUpdate */
+export type GeoRegistriesUpdatePayload = {
+  __typename?: 'GeoRegistriesUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated Geo registry entry. */
+  registry?: Maybe<Registrable>;
+};
+
+/** Action to trigger on one or more Geo registries */
+export type GeoRegistryAction =
+  /** Resync a registry. */
+  | 'RESYNC'
+  /** Reverify a registry. */
+  | 'REVERIFY';
+
+/** Geo registry class */
+export type GeoRegistryClass =
+  /** Geo::CiSecureFileRegistry registry class */
+  | 'CI_SECURE_FILE_REGISTRY'
+  /** Geo::ContainerRepositoryRegistry registry class */
+  | 'CONTAINER_REPOSITORY_REGISTRY'
+  /** Geo::DependencyProxyBlobRegistry registry class */
+  | 'DEPENDENCY_PROXY_BLOB_REGISTRY'
+  /** Geo::DependencyProxyManifestRegistry registry class */
+  | 'DEPENDENCY_PROXY_MANIFEST_REGISTRY'
+  /** Geo::DesignManagementRepositoryRegistry registry class */
+  | 'DESIGN_MANAGEMENT_REPOSITORY_REGISTRY'
+  /** Geo::JobArtifactRegistry registry class */
+  | 'JOB_ARTIFACT_REGISTRY'
+  /** Geo::LfsObjectRegistry registry class */
+  | 'LFS_OBJECT_REGISTRY'
+  /** Geo::MergeRequestDiffRegistry registry class */
+  | 'MERGE_REQUEST_DIFF_REGISTRY'
+  /** Geo::PackageFileRegistry registry class */
+  | 'PACKAGE_FILE_REGISTRY'
+  /** Geo::PagesDeploymentRegistry registry class */
+  | 'PAGES_DEPLOYMENT_REGISTRY'
+  /** Geo::PipelineArtifactRegistry registry class */
+  | 'PIPELINE_ARTIFACT_REGISTRY'
+  /** Geo::ProjectWikiRepositoryRegistry registry class */
+  | 'PROJECT_WIKI_REPOSITORY_REGISTRY'
+  /** Geo::SnippetRepositoryRegistry registry class */
+  | 'SNIPPET_REPOSITORY_REGISTRY'
+  /** Geo::TerraformStateVersionRegistry registry class */
+  | 'TERRAFORM_STATE_VERSION_REGISTRY'
+  /** Geo::UploadRegistry registry class */
+  | 'UPLOAD_REGISTRY';
+
+/** Autogenerated input type of GitlabSubscriptionActivate */
+export type GitlabSubscriptionActivateInput = {
+  /** Activation code received after purchasing a GitLab subscription. */
+  activationCode: Scalars['String'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of GitlabSubscriptionActivate */
+export type GitlabSubscriptionActivatePayload = {
+  __typename?: 'GitlabSubscriptionActivatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Array of future subscriptions. */
+  futureSubscriptions?: Maybe<Array<SubscriptionFutureEntry>>;
+  /** Current license. */
+  license?: Maybe<CurrentLicense>;
+};
+
+/** Role of User */
+export type GitlabSubscriptionsUserRole =
+  /** Developer. */
+  | 'DEVELOPER'
+  /** Guest. */
+  | 'GUEST'
+  /** Maintainer. */
+  | 'MAINTAINER'
+  /** Owner. */
+  | 'OWNER'
+  /** Reporter. */
+  | 'REPORTER';
+
+/** Autogenerated input type of GoogleCloudLoggingConfigurationCreate */
+export type GoogleCloudLoggingConfigurationCreateInput = {
+  /**
+   * Email address associated with the service account that will be used to
+   * authenticate and interact with the Google Cloud Logging service. This is part
+   * of the IAM credentials.
+   */
+  clientEmail: Scalars['String'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Unique identifier of the Google Cloud project to which the logging configuration belongs. */
+  googleProjectIdName: Scalars['String'];
+  /** Group path. */
+  groupPath: Scalars['ID'];
+  /**
+   * Unique identifier used to distinguish and manage different logs within the
+   * same Google Cloud project.(defaults to `audit_events`).
+   */
+  logIdName?: InputMaybe<Scalars['String']>;
+  /**
+   * Private Key associated with the service account. This key is used to
+   * authenticate the service account and authorize it to interact with the Google
+   * Cloud Logging service.
+   */
+  privateKey: Scalars['String'];
+};
+
+/** Autogenerated return type of GoogleCloudLoggingConfigurationCreate */
+export type GoogleCloudLoggingConfigurationCreatePayload = {
+  __typename?: 'GoogleCloudLoggingConfigurationCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** configuration created. */
+  googleCloudLoggingConfiguration?: Maybe<GoogleCloudLoggingConfigurationType>;
+};
+
+/** Autogenerated input type of GoogleCloudLoggingConfigurationDestroy */
+export type GoogleCloudLoggingConfigurationDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the Google Cloud logging configuration to destroy. */
+  id: Scalars['AuditEventsGoogleCloudLoggingConfigurationID'];
+};
+
+/** Autogenerated return type of GoogleCloudLoggingConfigurationDestroy */
+export type GoogleCloudLoggingConfigurationDestroyPayload = {
+  __typename?: 'GoogleCloudLoggingConfigurationDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Stores Google Cloud Logging configurations associated with IAM service accounts,used for generating access tokens. */
+export type GoogleCloudLoggingConfigurationType = {
+  __typename?: 'GoogleCloudLoggingConfigurationType';
+  /** Client email. */
+  clientEmail: Scalars['String'];
+  /** Google project ID. */
+  googleProjectIdName: Scalars['String'];
+  /** Group the configuration belongs to. */
+  group: Group;
+  /** ID of the configuration. */
+  id: Scalars['ID'];
+  /** Log ID. */
+  logIdName: Scalars['String'];
+  /** Private key. */
+  privateKey: Scalars['String'];
+};
+
+/** The connection type for GoogleCloudLoggingConfigurationType. */
+export type GoogleCloudLoggingConfigurationTypeConnection = {
+  __typename?: 'GoogleCloudLoggingConfigurationTypeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<GoogleCloudLoggingConfigurationTypeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<GoogleCloudLoggingConfigurationType>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type GoogleCloudLoggingConfigurationTypeEdge = {
+  __typename?: 'GoogleCloudLoggingConfigurationTypeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<GoogleCloudLoggingConfigurationType>;
+};
+
+/** Autogenerated input type of GoogleCloudLoggingConfigurationUpdate */
+export type GoogleCloudLoggingConfigurationUpdateInput = {
+  /**
+   * Email address associated with the service account that will be used to
+   * authenticate and interact with the Google Cloud Logging service. This is part
+   * of the IAM credentials.
+   */
+  clientEmail?: InputMaybe<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Unique identifier of the Google Cloud project to which the logging configuration belongs. */
+  googleProjectIdName?: InputMaybe<Scalars['String']>;
+  /** ID of the google Cloud configuration to update. */
+  id: Scalars['AuditEventsGoogleCloudLoggingConfigurationID'];
+  /** Unique identifier used to distinguish and manage different logs within the same Google Cloud project. */
+  logIdName?: InputMaybe<Scalars['String']>;
+  /**
+   * Private Key associated with the service account. This key is used to
+   * authenticate the service account and authorize it to interact with the Google
+   * Cloud Logging service.
+   */
+  privateKey?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of GoogleCloudLoggingConfigurationUpdate */
+export type GoogleCloudLoggingConfigurationUpdatePayload = {
+  __typename?: 'GoogleCloudLoggingConfigurationUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** configuration updated. */
+  googleCloudLoggingConfiguration?: Maybe<GoogleCloudLoggingConfigurationType>;
+};
+
+/** GPG signature for a signed commit */
+export type GpgSignature = CommitSignature & {
+  __typename?: 'GpgSignature';
+  /** SHA of the associated commit. */
+  commitSha?: Maybe<Scalars['String']>;
+  /** ID of the GPG key. */
+  gpgKeyPrimaryKeyid?: Maybe<Scalars['String']>;
+  /** User email associated with the GPG key. */
+  gpgKeyUserEmail?: Maybe<Scalars['String']>;
+  /** User name associated with the GPG key. */
+  gpgKeyUserName?: Maybe<Scalars['String']>;
+  /** Project of the associated commit. */
+  project?: Maybe<Project>;
+  /** User associated with the key. */
+  user?: Maybe<UserCore>;
+  /** Indicates verification status of the associated key or certificate. */
+  verificationStatus?: Maybe<VerificationStatus>;
 };
 
 export type GrafanaIntegration = {
@@ -4691,30 +12214,67 @@ export type GrafanaIntegration = {
 
 export type Group = {
   __typename?: 'Group';
+  /**
+   * Achievements for the namespace. Returns `null` if the `achievements` feature
+   * flag is disabled. Introduced in 15.8: This feature is an Experiment. It can be
+   * changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  achievements?: Maybe<AchievementConnection>;
+  /**
+   * Size limit for repositories in the namespace in bytes. This limit only applies
+   * to namespaces under Project limit enforcement.
+   */
+  actualRepositorySizeLimit?: Maybe<Scalars['Float']>;
+  /** Actual storage size limit for the namespace in bytes. This limit is agnostic of enforcement type. */
+  actualSizeLimit?: Maybe<Scalars['Float']>;
+  /** Additional storage purchased for the root namespace in bytes. */
+  additionalPurchasedStorageSize?: Maybe<Scalars['Float']>;
+  /** Indicates whether to regularly prune stale group runners. Defaults to false. */
+  allowStaleRunnerPruning: Scalars['Boolean'];
   /** Indicates whether Auto DevOps is enabled for all projects within this group. */
   autoDevopsEnabled?: Maybe<Scalars['Boolean']>;
   /** Avatar URL of the group. */
   avatarUrl?: Maybe<Scalars['String']>;
+  /** Number of billable users in the group. */
+  billableMembersCount?: Maybe<Scalars['Int']>;
   /** A single board of the group. */
   board?: Maybe<Board>;
   /** Boards of the group. */
   boards?: Maybe<BoardConnection>;
   /** List of the group's CI/CD variables. */
   ciVariables?: Maybe<CiGroupVariableConnection>;
+  /** Cluster agents associated with projects in the group and its subgroups. */
+  clusterAgents?: Maybe<ClusterAgentConnection>;
+  /** Represents the code coverage activity for this group. */
+  codeCoverageActivities?: Maybe<CodeCoverageActivityConnection>;
+  /** Compliance frameworks available to projects in this namespace. */
+  complianceFrameworks?: Maybe<ComplianceFrameworkConnection>;
+  /** Counts of contacts by state for the group. */
+  contactStateCounts?: Maybe<ContactStateCounts>;
   /** Find contacts of this group. */
   contacts?: Maybe<CustomerRelationsContactConnection>;
   /** Container repositories of the group. */
   containerRepositories?: Maybe<ContainerRepositoryConnection>;
   /** Number of container repositories in the group. */
   containerRepositoriesCount: Scalars['Int'];
+  /**
+   * Includes at least one project where the repository size exceeds the limit.
+   * This only applies to namespaces under Project limit enforcement.
+   */
+  containsLockedProjects: Scalars['Boolean'];
+  /** Provides the aggregated contributions by users within the group and its subgroups */
+  contributions?: Maybe<ContributionAnalyticsContributionConnection>;
   /** Indicates if the cross_project_pipeline feature is available for the namespace. */
   crossProjectPipelineAvailable: Scalars['Boolean'];
   /**
-   * Custom emoji within this namespace. Available only when feature flag
-   * `custom_emoji` is enabled. This flag is disabled by default, because the
-   * feature is experimental and is subject to change without notice.
+   * Custom emoji within this namespace. Introduced in 13.6: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 13.6.
    */
   customEmoji?: Maybe<CustomEmojiConnection>;
+  /** Data transfer data point for a specific period. This is mocked data under a development feature flag. */
+  dataTransfer?: Maybe<GroupDataTransfer>;
   /** Number of dependency proxy blobs cached in the group. */
   dependencyProxyBlobCount: Scalars['Int'];
   /** Dependency Proxy blobs. */
@@ -4731,24 +12291,67 @@ export type Group = {
   dependencyProxySetting?: Maybe<DependencyProxySetting>;
   /** Total size of the dependency proxy cached images. */
   dependencyProxyTotalSize: Scalars['String'];
+  /** Total size of the dependency proxy cached images in bytes, encoded as a string. */
+  dependencyProxyTotalSizeBytes: Scalars['BigInt'];
+  /**
+   * Total size of the dependency proxy cached images in bytes. Deprecated in 16.1: Use `dependencyProxyTotalSizeBytes`.
+   * @deprecated Use `dependencyProxyTotalSizeBytes`. Deprecated in 16.1.
+   */
+  dependencyProxyTotalSizeInBytes: Scalars['Int'];
   /** List of descendant groups of this group. */
   descendantGroups?: Maybe<GroupConnection>;
   /** Description of the namespace. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
+  /** Group's DORA metrics. */
+  dora?: Maybe<Dora>;
+  /** Group's DORA scores for all projects by DORA key metric for the last complete month. */
+  doraPerformanceScoreCounts?: Maybe<DoraPerformanceScoreCountConnection>;
   /** Indicates if a group has email notifications disabled. */
   emailsDisabled?: Maybe<Scalars['Boolean']>;
+  /** Indicates whether the group has limited users for a free plan. */
+  enforceFreeUserCap?: Maybe<Scalars['Boolean']>;
+  /** Environment scopes of the group. */
+  environmentScopes?: Maybe<CiGroupEnvironmentScopeConnection>;
+  /** Find a single epic. */
+  epic?: Maybe<Epic>;
+  /** Find a single epic board. */
+  epicBoard?: Maybe<EpicBoard>;
+  /** Find epic boards. */
+  epicBoards?: Maybe<EpicBoardConnection>;
+  /** Find epics. */
+  epics?: Maybe<EpicConnection>;
+  /** Indicates if Epics are enabled for namespace */
+  epicsEnabled?: Maybe<Scalars['Boolean']>;
+  /** External locations that receive audit events belonging to the group. */
+  externalAuditEventDestinations?: Maybe<ExternalAuditEventDestinationConnection>;
+  /**
+   * Flow metrics for value stream analytics. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  flowMetrics?: Maybe<GroupValueStreamAnalyticsFlowMetrics>;
   /** Full name of the namespace. */
   fullName: Scalars['String'];
   /** Full path of the namespace. */
   fullPath: Scalars['ID'];
+  /** Preview Billable User Changes */
+  gitlabSubscriptionsPreviewBillableUserChange?: Maybe<PreviewBillableUserChange>;
+  /** Google Cloud logging configurations that receive audit events belonging to the group. */
+  googleCloudLoggingConfigurations?: Maybe<GoogleCloudLoggingConfigurationTypeConnection>;
   /** A membership of a user within this group. */
   groupMembers?: Maybe<GroupMemberConnection>;
   /** ID of the namespace. */
   id: Scalars['ID'];
+  /** Status of the temporary storage increase. */
+  isTemporaryStorageIncreaseEnabled: Scalars['Boolean'];
   /** Issues for projects in this group. */
   issues?: Maybe<IssueConnection>;
+  /** Find iteration cadences. */
+  iterationCadences?: Maybe<IterationCadenceConnection>;
+  /** Find iterations. */
+  iterations?: Maybe<IterationConnection>;
   /** Label available on this group. */
   label?: Maybe<Label>;
   /** Labels available on this group. */
@@ -4757,17 +12360,21 @@ export type Group = {
   lfsEnabled?: Maybe<Scalars['Boolean']>;
   /** Indicates if a group is disabled from getting mentioned. */
   mentionsDisabled?: Maybe<Scalars['Boolean']>;
+  /** Compliance violations reported on merge requests merged within the group. */
+  mergeRequestViolations?: Maybe<ComplianceViolationConnection>;
   /** Merge requests for projects in this group. */
   mergeRequests?: Maybe<MergeRequestConnection>;
   /** Milestones of the group. */
   milestones?: Maybe<MilestoneConnection>;
   /** Name of the namespace. */
   name: Scalars['String'];
+  /** Counts of organizations by status for the group. */
+  organizationStateCounts?: Maybe<OrganizationStateCounts>;
   /** Find organizations of this group. */
   organizations?: Maybe<CustomerRelationsOrganizationConnection>;
   /** Package settings for the namespace. */
   packageSettings?: Maybe<PackageSettings>;
-  /** Packages of the group. */
+  /** Packages of the group. This field can only be resolved for one group in any single request. */
   packages?: Maybe<PackageConnection>;
   /** Parent group. */
   parent?: Maybe<Group>;
@@ -4779,6 +12386,13 @@ export type Group = {
   projects: ProjectConnection;
   /** List of recently visited boards of the group. Maximum size is 4. */
   recentIssueBoards?: Maybe<BoardConnection>;
+  /** Releases belonging to projects in the group. */
+  releases?: Maybe<ReleaseConnection>;
+  /**
+   * Number of projects in the root namespace where the repository size exceeds the
+   * limit. This only applies to namespaces under Project limit enforcement.
+   */
+  repositorySizeExcessProjectCount: Scalars['Int'];
   /** Indicates if users can request access to namespace. */
   requestAccessEnabled?: Maybe<Scalars['Boolean']>;
   /** Indicates if all users in this group are required to set up two-factor authentication. */
@@ -4787,34 +12401,74 @@ export type Group = {
   rootStorageStatistics?: Maybe<RootStorageStatistics>;
   /** Find runners visible to the current user. */
   runners?: Maybe<CiRunnerConnection>;
+  /** Scan Execution Policies of the namespace. */
+  scanExecutionPolicies?: Maybe<ScanExecutionPolicyConnection>;
+  /** Scan Result Policies of the project */
+  scanResultPolicies?: Maybe<ScanResultPolicyConnection>;
   /** Indicates if sharing a project with another group within this group is prevented. */
   shareWithGroupLock?: Maybe<Scalars['Boolean']>;
   /** Shared runners availability for the namespace and its descendants. */
   sharedRunnersSetting?: Maybe<SharedRunnersSetting>;
+  /** Group statistics. */
+  stats?: Maybe<GroupStats>;
+  /**
+   * Storage limit included in the root namespace plan in bytes. This limit only
+   * applies to namespaces under Namespace limit enforcement.
+   */
+  storageSizeLimit?: Maybe<Scalars['Float']>;
   /** Permission level required to create subgroups within the group. */
   subgroupCreationLevel?: Maybe<Scalars['String']>;
+  /** Date until the temporary storage increase is active. */
+  temporaryStorageIncreaseEndsOn?: Maybe<Scalars['Time']>;
   /**
-   * Timelog categories for the namespace. Available only when feature flag
-   * `timelog_categories` is enabled. This flag is disabled by default, because the
-   * feature is experimental and is subject to change without notice.
+   * Timelog categories for the namespace. Introduced in 15.3: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.3.
    */
   timelogCategories?: Maybe<TimeTrackingTimelogCategoryConnection>;
   /** Time logged on issues and merge requests in the group and its subgroups. */
   timelogs: TimelogConnection;
+  /** Total repository size of all projects in the root namespace in bytes. */
+  totalRepositorySize?: Maybe<Scalars['Float']>;
+  /**
+   * Total excess repository size of all projects in the root namespace in bytes.
+   * This only applies to namespaces under Project limit enforcement.
+   */
+  totalRepositorySizeExcess?: Maybe<Scalars['Float']>;
   /** Time before two-factor authentication is enforced. */
   twoFactorGracePeriod?: Maybe<Scalars['Int']>;
   /** Permissions for the current user on the resource */
   userPermissions: GroupPermissions;
   /** Visibility of the namespace. */
   visibility?: Maybe<Scalars['String']>;
+  /** Vulnerabilities reported on the projects in the group and its subgroups. */
+  vulnerabilities?: Maybe<VulnerabilityConnection>;
+  /** The historical number of vulnerabilities per day for the projects in the group and its subgroups. */
+  vulnerabilitiesCountByDay?: Maybe<VulnerabilitiesCountByDayConnection>;
+  /** Represents vulnerable project counts for each grade. */
+  vulnerabilityGrades?: Maybe<Array<VulnerableProjectsByGrade>>;
+  /** Vulnerability scanners reported on the project vulnerabilities of the group and its subgroups. */
+  vulnerabilityScanners?: Maybe<VulnerabilityScannerConnection>;
+  /** Counts for each vulnerability severity in the group and its subgroups. */
+  vulnerabilitySeveritiesCount?: Maybe<VulnerabilitySeveritiesCount>;
   /** Web URL of the group. */
   webUrl: Scalars['String'];
-  /**
-   * Work item types available to the group. Returns `null` if `work_items` feature
-   * flag is disabled. This flag is disabled by default, because the feature is
-   * experimental and is subject to change without notice.
-   */
+  /** Work item types available to the group. */
   workItemTypes?: Maybe<WorkItemTypeConnection>;
+};
+
+
+export type GroupAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['AchievementsAchievementID']>>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupBillableMembersCountArgs = {
+  requestedHostedPlan?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -4837,6 +12491,41 @@ export type GroupCiVariablesArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<CiVariableSort>;
+};
+
+
+export type GroupClusterAgentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  hasRemoteDevelopmentAgentConfig?: InputMaybe<Scalars['Boolean']>;
+  hasVulnerabilities?: InputMaybe<Scalars['Boolean']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupCodeCoverageActivitiesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  startDate: Scalars['Date'];
+};
+
+
+export type GroupComplianceFrameworksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  id?: InputMaybe<Scalars['ComplianceManagementFrameworkID']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupContactStateCountsArgs = {
+  search?: InputMaybe<Scalars['String']>;
+  state?: InputMaybe<CustomerRelationsContactState>;
 };
 
 
@@ -4847,6 +12536,7 @@ export type GroupContactsArgs = {
   ids?: InputMaybe<Array<Scalars['CustomerRelationsContactID']>>;
   last?: InputMaybe<Scalars['Int']>;
   search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<ContactSort>;
   state?: InputMaybe<CustomerRelationsContactState>;
 };
 
@@ -4861,11 +12551,27 @@ export type GroupContainerRepositoriesArgs = {
 };
 
 
+export type GroupContributionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  from: Scalars['ISO8601Date'];
+  last?: InputMaybe<Scalars['Int']>;
+  to: Scalars['ISO8601Date'];
+};
+
+
 export type GroupCustomEmojiArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupDataTransferArgs = {
+  from?: InputMaybe<Scalars['Date']>;
+  to?: InputMaybe<Scalars['Date']>;
 };
 
 
@@ -4896,6 +12602,117 @@ export type GroupDescendantGroupsArgs = {
 };
 
 
+export type GroupDoraPerformanceScoreCountsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupEnvironmentScopesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  name?: InputMaybe<Scalars['String']>;
+  search?: InputMaybe<Scalars['String']>;
+};
+
+
+export type GroupEpicArgs = {
+  authorUsername?: InputMaybe<Scalars['String']>;
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  createdAfter?: InputMaybe<Scalars['Time']>;
+  createdBefore?: InputMaybe<Scalars['Time']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iidStartsWith?: InputMaybe<Scalars['String']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  includeDescendantGroups?: InputMaybe<Scalars['Boolean']>;
+  labelName?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  not?: InputMaybe<NegatedEpicFilterInput>;
+  or?: InputMaybe<UnionedEpicFilterInput>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<EpicSort>;
+  state?: InputMaybe<EpicState>;
+  timeframe?: InputMaybe<Timeframe>;
+  topLevelHierarchyOnly?: InputMaybe<Scalars['Boolean']>;
+  updatedAfter?: InputMaybe<Scalars['Time']>;
+  updatedBefore?: InputMaybe<Scalars['Time']>;
+};
+
+
+export type GroupEpicBoardArgs = {
+  id: Scalars['BoardsEpicBoardID'];
+};
+
+
+export type GroupEpicBoardsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupEpicsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  createdAfter?: InputMaybe<Scalars['Time']>;
+  createdBefore?: InputMaybe<Scalars['Time']>;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iidStartsWith?: InputMaybe<Scalars['String']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  includeDescendantGroups?: InputMaybe<Scalars['Boolean']>;
+  labelName?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  not?: InputMaybe<NegatedEpicFilterInput>;
+  or?: InputMaybe<UnionedEpicFilterInput>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<EpicSort>;
+  state?: InputMaybe<EpicState>;
+  timeframe?: InputMaybe<Timeframe>;
+  topLevelHierarchyOnly?: InputMaybe<Scalars['Boolean']>;
+  updatedAfter?: InputMaybe<Scalars['Time']>;
+  updatedBefore?: InputMaybe<Scalars['Time']>;
+};
+
+
+export type GroupExternalAuditEventDestinationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupGitlabSubscriptionsPreviewBillableUserChangeArgs = {
+  addGroupId?: InputMaybe<Scalars['Int']>;
+  addUserEmails?: InputMaybe<Array<Scalars['String']>>;
+  addUserIds?: InputMaybe<Array<Scalars['Int']>>;
+  role: GitlabSubscriptionsUserRole;
+};
+
+
+export type GroupGoogleCloudLoggingConfigurationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type GroupGroupMembersArgs = {
   accessLevels?: InputMaybe<Array<AccessLevelEnum>>;
   after?: InputMaybe<Scalars['String']>;
@@ -4904,6 +12721,7 @@ export type GroupGroupMembersArgs = {
   last?: InputMaybe<Scalars['Int']>;
   relations?: InputMaybe<Array<GroupMemberRelation>>;
   search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<MemberSort>;
 };
 
 
@@ -4912,6 +12730,7 @@ export type GroupIssuesArgs = {
   assigneeId?: InputMaybe<Scalars['String']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  assigneeWildcardId?: InputMaybe<AssigneeWildcardId>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   closedAfter?: InputMaybe<Scalars['Time']>;
@@ -4921,23 +12740,68 @@ export type GroupIssuesArgs = {
   createdBefore?: InputMaybe<Scalars['Time']>;
   crmContactId?: InputMaybe<Scalars['String']>;
   crmOrganizationId?: InputMaybe<Scalars['String']>;
+  epicId?: InputMaybe<Scalars['String']>;
+  epicWildcardId?: InputMaybe<EpicWildcardId>;
   first?: InputMaybe<Scalars['Int']>;
+  healthStatus?: InputMaybe<HealthStatus>;
+  healthStatusFilter?: InputMaybe<HealthStatusFilter>;
   iid?: InputMaybe<Scalars['String']>;
   iids?: InputMaybe<Array<Scalars['String']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
   includeArchived?: InputMaybe<Scalars['Boolean']>;
+  includeSubepics?: InputMaybe<Scalars['Boolean']>;
   includeSubgroups?: InputMaybe<Scalars['Boolean']>;
+  iterationCadenceId?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  iterationId?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
+  iterationTitle?: InputMaybe<Scalars['String']>;
+  iterationWildcardId?: InputMaybe<IterationWildcardId>;
   labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   last?: InputMaybe<Scalars['Int']>;
   milestoneTitle?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   milestoneWildcardId?: InputMaybe<MilestoneWildcardId>;
   myReactionEmoji?: InputMaybe<Scalars['String']>;
   not?: InputMaybe<NegatedIssueFilterInput>;
+  or?: InputMaybe<UnionedIssueFilterInput>;
   search?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<IssueSort>;
   state?: InputMaybe<IssuableState>;
   types?: InputMaybe<Array<IssueType>>;
   updatedAfter?: InputMaybe<Scalars['Time']>;
   updatedBefore?: InputMaybe<Scalars['Time']>;
+  weight?: InputMaybe<Scalars['String']>;
+  weightWildcardId?: InputMaybe<WeightWildcardId>;
+};
+
+
+export type GroupIterationCadencesArgs = {
+  active?: InputMaybe<Scalars['Boolean']>;
+  after?: InputMaybe<Scalars['String']>;
+  automatic?: InputMaybe<Scalars['Boolean']>;
+  before?: InputMaybe<Scalars['String']>;
+  durationInWeeks?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Int']>;
+  id?: InputMaybe<Scalars['IterationsCadenceID']>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  last?: InputMaybe<Scalars['Int']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+
+export type GroupIterationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  id?: InputMaybe<Scalars['ID']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  in?: InputMaybe<Array<IterationSearchableField>>;
+  includeAncestors?: InputMaybe<Scalars['Boolean']>;
+  iterationCadenceIds?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<IterationSort>;
+  state?: InputMaybe<IterationState>;
+  timeframe?: InputMaybe<Timeframe>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -4958,8 +12822,19 @@ export type GroupLabelsArgs = {
 };
 
 
+export type GroupMergeRequestViolationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  filters?: InputMaybe<ComplianceViolationInput>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<ComplianceViolationSort>;
+};
+
+
 export type GroupMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -4989,7 +12864,6 @@ export type GroupMilestonesArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   containingDate?: InputMaybe<Scalars['Time']>;
-  endDate?: InputMaybe<Scalars['Time']>;
   first?: InputMaybe<Scalars['Int']>;
   ids?: InputMaybe<Array<Scalars['ID']>>;
   includeAncestors?: InputMaybe<Scalars['Boolean']>;
@@ -4997,10 +12871,15 @@ export type GroupMilestonesArgs = {
   last?: InputMaybe<Scalars['Int']>;
   searchTitle?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<MilestoneSort>;
-  startDate?: InputMaybe<Scalars['Time']>;
   state?: InputMaybe<MilestoneStateEnum>;
   timeframe?: InputMaybe<Timeframe>;
   title?: InputMaybe<Scalars['String']>;
+};
+
+
+export type GroupOrganizationStateCountsArgs = {
+  search?: InputMaybe<Scalars['String']>;
+  state?: InputMaybe<CustomerRelationsOrganizationState>;
 };
 
 
@@ -5011,6 +12890,7 @@ export type GroupOrganizationsArgs = {
   ids?: InputMaybe<Array<Scalars['CustomerRelationsOrganizationID']>>;
   last?: InputMaybe<Scalars['Int']>;
   search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<OrganizationSort>;
   state?: InputMaybe<CustomerRelationsOrganizationState>;
 };
 
@@ -5031,12 +12911,18 @@ export type GroupPackagesArgs = {
 export type GroupProjectsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
+  complianceFrameworkFilters?: InputMaybe<ComplianceFrameworkFilters>;
   first?: InputMaybe<Scalars['Int']>;
+  hasCodeCoverage?: InputMaybe<Scalars['Boolean']>;
+  hasVulnerabilities?: InputMaybe<Scalars['Boolean']>;
   ids?: InputMaybe<Array<Scalars['ID']>>;
   includeSubgroups?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
+  notAimedForDeletion?: InputMaybe<Scalars['Boolean']>;
   search?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<NamespaceProjectSort>;
+  withIssuesEnabled?: InputMaybe<Scalars['Boolean']>;
+  withMergeRequestsEnabled?: InputMaybe<Scalars['Boolean']>;
 };
 
 
@@ -5048,13 +12934,22 @@ export type GroupRecentIssueBoardsArgs = {
 };
 
 
+export type GroupReleasesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<GroupReleaseSort>;
+};
+
+
 export type GroupRunnersArgs = {
   active?: InputMaybe<Scalars['Boolean']>;
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
-  membership?: InputMaybe<RunnerMembershipFilter>;
+  membership?: InputMaybe<CiRunnerMembershipFilter>;
   paused?: InputMaybe<Scalars['Boolean']>;
   search?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<CiRunnerSort>;
@@ -5062,6 +12957,25 @@ export type GroupRunnersArgs = {
   tagList?: InputMaybe<Array<Scalars['String']>>;
   type?: InputMaybe<CiRunnerType>;
   upgradeStatus?: InputMaybe<CiRunnerUpgradeStatus>;
+};
+
+
+export type GroupScanExecutionPoliciesArgs = {
+  actionScanTypes?: InputMaybe<Array<SecurityReportTypeEnum>>;
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  relationship?: InputMaybe<SecurityPolicyRelationType>;
+};
+
+
+export type GroupScanResultPoliciesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  relationship?: InputMaybe<SecurityPolicyRelationType>;
 };
 
 
@@ -5082,9 +12996,68 @@ export type GroupTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
+};
+
+
+export type GroupVulnerabilitiesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  clusterAgentId?: InputMaybe<Array<Scalars['ClustersAgentID']>>;
+  clusterId?: InputMaybe<Array<Scalars['ClustersClusterID']>>;
+  first?: InputMaybe<Scalars['Int']>;
+  hasIssues?: InputMaybe<Scalars['Boolean']>;
+  hasResolution?: InputMaybe<Scalars['Boolean']>;
+  image?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectId?: InputMaybe<Array<Scalars['ID']>>;
+  reportType?: InputMaybe<Array<VulnerabilityReportType>>;
+  scanner?: InputMaybe<Array<Scalars['String']>>;
+  scannerId?: InputMaybe<Array<Scalars['VulnerabilitiesScannerID']>>;
+  severity?: InputMaybe<Array<VulnerabilitySeverity>>;
+  sort?: InputMaybe<VulnerabilitySort>;
+  state?: InputMaybe<Array<VulnerabilityState>>;
+};
+
+
+export type GroupVulnerabilitiesCountByDayArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  endDate: Scalars['ISO8601Date'];
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  startDate: Scalars['ISO8601Date'];
+};
+
+
+export type GroupVulnerabilityGradesArgs = {
+  includeSubgroups?: InputMaybe<Scalars['Boolean']>;
+  letterGrade?: InputMaybe<VulnerabilityGrade>;
+};
+
+
+export type GroupVulnerabilityScannersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GroupVulnerabilitySeveritiesCountArgs = {
+  clusterAgentId?: InputMaybe<Array<Scalars['ClustersAgentID']>>;
+  hasIssues?: InputMaybe<Scalars['Boolean']>;
+  hasResolution?: InputMaybe<Scalars['Boolean']>;
+  image?: InputMaybe<Array<Scalars['String']>>;
+  projectId?: InputMaybe<Array<Scalars['ID']>>;
+  reportType?: InputMaybe<Array<VulnerabilityReportType>>;
+  scanner?: InputMaybe<Array<Scalars['String']>>;
+  scannerId?: InputMaybe<Array<Scalars['VulnerabilitiesScannerID']>>;
+  severity?: InputMaybe<Array<VulnerabilitySeverity>>;
+  state?: InputMaybe<Array<VulnerabilityState>>;
 };
 
 
@@ -5105,6 +13078,20 @@ export type GroupConnection = {
   nodes?: Maybe<Array<Maybe<Group>>>;
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
+};
+
+export type GroupDataTransfer = {
+  __typename?: 'GroupDataTransfer';
+  /** Data nodes. */
+  egressNodes?: Maybe<EgressNodeConnection>;
+};
+
+
+export type GroupDataTransferEgressNodesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 /** An edge in a connection. */
@@ -5149,6 +13136,31 @@ export type GroupMemberMergeRequestInteractionArgs = {
   id: Scalars['MergeRequestID'];
 };
 
+/** Autogenerated input type of GroupMemberBulkUpdate */
+export type GroupMemberBulkUpdateInput = {
+  /** Access level to update the members to. */
+  accessLevel: MemberAccessLevel;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Date and time the membership expires. */
+  expiresAt?: InputMaybe<Scalars['Time']>;
+  /** Global ID of the group. */
+  groupId: Scalars['GroupID'];
+  /** Global IDs of the members. */
+  userIds: Array<Scalars['UserID']>;
+};
+
+/** Autogenerated return type of GroupMemberBulkUpdate */
+export type GroupMemberBulkUpdatePayload = {
+  __typename?: 'GroupMemberBulkUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Group members after mutation. */
+  groupMembers?: Maybe<Array<GroupMember>>;
+};
+
 /** The connection type for GroupMember. */
 export type GroupMemberConnection = {
   __typename?: 'GroupMemberConnection';
@@ -5184,6 +13196,8 @@ export type GroupMemberRelation =
 export type GroupPermission =
   /** Groups where the user can create projects. */
   | 'CREATE_PROJECTS'
+  /** Groups where the user can import projects to. */
+  | 'IMPORT_PROJECTS'
   /** Groups where the user can transfer projects to. */
   | 'TRANSFER_PROJECTS';
 
@@ -5193,6 +13207,38 @@ export type GroupPermissions = {
   createProjects: Scalars['Boolean'];
   /** Indicates the user can perform `read_group` on this resource */
   readGroup: Scalars['Boolean'];
+};
+
+/** Values for sorting releases belonging to a group */
+export type GroupReleaseSort =
+  /** Released at by ascending order. */
+  | 'RELEASED_AT_ASC'
+  /** Released at by descending order. */
+  | 'RELEASED_AT_DESC';
+
+/** Contains release-related statistics about a group */
+export type GroupReleaseStats = {
+  __typename?: 'GroupReleaseStats';
+  /** Total number of releases in all descendant projects of the group. */
+  releasesCount?: Maybe<Scalars['Int']>;
+  /** Percentage of the group's descendant projects that have at least one release. */
+  releasesPercentage?: Maybe<Scalars['Int']>;
+};
+
+/** Represents the source of a security policy belonging to a group */
+export type GroupSecurityPolicySource = {
+  __typename?: 'GroupSecurityPolicySource';
+  /** Indicates whether this policy is inherited from parent group. */
+  inherited: Scalars['Boolean'];
+  /** Project the policy is associated with. */
+  namespace?: Maybe<Namespace>;
+};
+
+/** Contains statistics about a group */
+export type GroupStats = {
+  __typename?: 'GroupStats';
+  /** Statistics related to releases within the group. */
+  releaseStats?: Maybe<GroupReleaseStats>;
 };
 
 /** Autogenerated input type of GroupUpdate */
@@ -5216,6 +13262,144 @@ export type GroupUpdatePayload = {
   group?: Maybe<Group>;
 };
 
+/** Exposes aggregated value stream flow metrics */
+export type GroupValueStreamAnalyticsFlowMetrics = {
+  __typename?: 'GroupValueStreamAnalyticsFlowMetrics';
+  /** Median time from first commit to issue closed */
+  cycleTime?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Number of production deployments in the given period. */
+  deploymentCount?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Number of issues opened in the given period. */
+  issueCount?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Number of open issues closed (completed) in the given period. Maximum value is 10,001. */
+  issuesCompletedCount?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Median time from when the issue was created to when it was closed. */
+  leadTime?: Maybe<ValueStreamAnalyticsMetric>;
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type GroupValueStreamAnalyticsFlowMetricsCycleTimeArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  projectIds?: InputMaybe<Array<Scalars['ID']>>;
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type GroupValueStreamAnalyticsFlowMetricsDeploymentCountArgs = {
+  from: Scalars['Time'];
+  projectIds?: InputMaybe<Array<Scalars['ID']>>;
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type GroupValueStreamAnalyticsFlowMetricsIssueCountArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  projectIds?: InputMaybe<Array<Scalars['ID']>>;
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type GroupValueStreamAnalyticsFlowMetricsIssuesCompletedCountArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  projectIds?: InputMaybe<Array<Scalars['ID']>>;
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type GroupValueStreamAnalyticsFlowMetricsLeadTimeArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  projectIds?: InputMaybe<Array<Scalars['ID']>>;
+  to: Scalars['Time'];
+};
+
+/** Represents the Geo sync and verification state of a group wiki repository */
+export type GroupWikiRepositoryRegistry = {
+  __typename?: 'GroupWikiRepositoryRegistry';
+  /** Timestamp when the GroupWikiRepositoryRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the Group Wiki Repository. */
+  groupWikiRepositoryId: Scalars['ID'];
+  /** ID of the GroupWikiRepositoryRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the GroupWikiRepositoryRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the GroupWikiRepositoryRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the GroupWikiRepositoryRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the GroupWikiRepositoryRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the GroupWikiRepositoryRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the GroupWikiRepositoryRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the GroupWikiRepositoryRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for GroupWikiRepositoryRegistry. */
+export type GroupWikiRepositoryRegistryConnection = {
+  __typename?: 'GroupWikiRepositoryRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<GroupWikiRepositoryRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<GroupWikiRepositoryRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type GroupWikiRepositoryRegistryEdge = {
+  __typename?: 'GroupWikiRepositoryRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<GroupWikiRepositoryRegistry>;
+};
+
+/** Health status of an issue or epic */
+export type HealthStatus =
+  /** At risk */
+  | 'atRisk'
+  /** Needs attention */
+  | 'needsAttention'
+  /** On track */
+  | 'onTrack';
+
+/** Health status of an issue or epic for filtering */
+export type HealthStatusFilter =
+  /** Any health status is assigned. */
+  | 'ANY'
+  /** No health status is assigned. */
+  | 'NONE'
+  /** At risk */
+  | 'atRisk'
+  /** Needs attention */
+  | 'needsAttention'
+  /** On track */
+  | 'onTrack';
+
 /** Helm file metadata */
 export type HelmFileMetadata = PackageFileMetadata & {
   __typename?: 'HelmFileMetadata';
@@ -5237,6 +13421,10 @@ export type HttpIntegrationCreateInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Name of the integration. */
   name: Scalars['String'];
+  /** Custom mapping of GitLab alert attributes to fields from the payload example. */
+  payloadAttributeMappings?: InputMaybe<Array<AlertManagementPayloadAlertFieldInput>>;
+  /** Example of an alert payload. */
+  payloadExample?: InputMaybe<Scalars['JsonString']>;
   /** Project to create the integration in. */
   projectPath: Scalars['ID'];
 };
@@ -5300,6 +13488,10 @@ export type HttpIntegrationUpdateInput = {
   id: Scalars['AlertManagementHttpIntegrationID'];
   /** Name of the integration. */
   name?: InputMaybe<Scalars['String']>;
+  /** Custom mapping of GitLab alert attributes to fields from the payload example. */
+  payloadAttributeMappings?: InputMaybe<Array<AlertManagementPayloadAlertFieldInput>>;
+  /** Example of an alert payload. */
+  payloadExample?: InputMaybe<Scalars['JsonString']>;
 };
 
 /** Autogenerated return type of HttpIntegrationUpdate */
@@ -5313,8 +13505,454 @@ export type HttpIntegrationUpdatePayload = {
   integration?: Maybe<AlertManagementHttpIntegration>;
 };
 
+/** Describes an incident management on-call rotation */
+export type IncidentManagementOncallRotation = {
+  __typename?: 'IncidentManagementOncallRotation';
+  /** Active period for the on-call rotation. */
+  activePeriod?: Maybe<OncallRotationActivePeriodType>;
+  /** End date and time of the on-call rotation. */
+  endsAt?: Maybe<Scalars['Time']>;
+  /** ID of the on-call rotation. */
+  id: Scalars['IncidentManagementOncallRotationID'];
+  /** Length of the on-call schedule, in the units specified by lengthUnit. */
+  length?: Maybe<Scalars['Int']>;
+  /** Unit of the on-call rotation length. */
+  lengthUnit?: Maybe<OncallRotationUnitEnum>;
+  /** Name of the on-call rotation. */
+  name: Scalars['String'];
+  /** Participants of the on-call rotation. */
+  participants?: Maybe<OncallParticipantTypeConnection>;
+  /** Blocks of time for which a participant is on-call within a given time frame. Time frame cannot exceed one month. */
+  shifts?: Maybe<IncidentManagementOncallShiftConnection>;
+  /** Start date of the on-call rotation. */
+  startsAt?: Maybe<Scalars['Time']>;
+};
+
+
+/** Describes an incident management on-call rotation */
+export type IncidentManagementOncallRotationParticipantsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Describes an incident management on-call rotation */
+export type IncidentManagementOncallRotationShiftsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  endTime: Scalars['Time'];
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  startTime: Scalars['Time'];
+};
+
+/** The connection type for IncidentManagementOncallRotation. */
+export type IncidentManagementOncallRotationConnection = {
+  __typename?: 'IncidentManagementOncallRotationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<IncidentManagementOncallRotationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<IncidentManagementOncallRotation>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type IncidentManagementOncallRotationEdge = {
+  __typename?: 'IncidentManagementOncallRotationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<IncidentManagementOncallRotation>;
+};
+
+/** Describes an incident management on-call schedule */
+export type IncidentManagementOncallSchedule = {
+  __typename?: 'IncidentManagementOncallSchedule';
+  /** Description of the on-call schedule. */
+  description?: Maybe<Scalars['String']>;
+  /** Internal ID of the on-call schedule. */
+  iid: Scalars['ID'];
+  /** Name of the on-call schedule. */
+  name: Scalars['String'];
+  oncallUsers?: Maybe<Array<UserCore>>;
+  /** On-call rotation for the on-call schedule. */
+  rotation?: Maybe<IncidentManagementOncallRotation>;
+  /** On-call rotations for the on-call schedule. */
+  rotations: IncidentManagementOncallRotationConnection;
+  /** Time zone of the on-call schedule. */
+  timezone: Scalars['String'];
+};
+
+
+/** Describes an incident management on-call schedule */
+export type IncidentManagementOncallScheduleRotationArgs = {
+  id: Scalars['IncidentManagementOncallRotationID'];
+};
+
+
+/** Describes an incident management on-call schedule */
+export type IncidentManagementOncallScheduleRotationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for IncidentManagementOncallSchedule. */
+export type IncidentManagementOncallScheduleConnection = {
+  __typename?: 'IncidentManagementOncallScheduleConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<IncidentManagementOncallScheduleEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<IncidentManagementOncallSchedule>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type IncidentManagementOncallScheduleEdge = {
+  __typename?: 'IncidentManagementOncallScheduleEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<IncidentManagementOncallSchedule>;
+};
+
+/** A block of time for which a participant is on-call. */
+export type IncidentManagementOncallShift = {
+  __typename?: 'IncidentManagementOncallShift';
+  /** End time of the on-call shift. */
+  endsAt?: Maybe<Scalars['Time']>;
+  /** Participant assigned to the on-call shift. */
+  participant?: Maybe<OncallParticipantType>;
+  /** Start time of the on-call shift. */
+  startsAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for IncidentManagementOncallShift. */
+export type IncidentManagementOncallShiftConnection = {
+  __typename?: 'IncidentManagementOncallShiftConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<IncidentManagementOncallShiftEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<IncidentManagementOncallShift>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type IncidentManagementOncallShiftEdge = {
+  __typename?: 'IncidentManagementOncallShiftEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<IncidentManagementOncallShift>;
+};
+
+/** CI/CD variables a project inherites from its parent group and ancestors. */
+export type InheritedCiVariable = {
+  __typename?: 'InheritedCiVariable';
+  /** Scope defining the environments that can use the variable. */
+  environmentScope?: Maybe<Scalars['String']>;
+  /** Indicates the path to the CI/CD settings of the group the variable belongs to. */
+  groupCiCdSettingsPath?: Maybe<Scalars['String']>;
+  /** Indicates group the variable belongs to. */
+  groupName?: Maybe<Scalars['String']>;
+  /** ID of the variable. */
+  id: Scalars['ID'];
+  /** Name of the variable. */
+  key?: Maybe<Scalars['String']>;
+  /** Indicates whether the variable is masked. */
+  masked?: Maybe<Scalars['Boolean']>;
+  /** Indicates whether the variable is protected. */
+  protected?: Maybe<Scalars['Boolean']>;
+  /** Indicates whether the variable is raw. */
+  raw?: Maybe<Scalars['Boolean']>;
+  /** Type of the variable. */
+  variableType?: Maybe<CiVariableType>;
+};
+
+/** The connection type for InheritedCiVariable. */
+export type InheritedCiVariableConnection = {
+  __typename?: 'InheritedCiVariableConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<InheritedCiVariableEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<InheritedCiVariable>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type InheritedCiVariableEdge = {
+  __typename?: 'InheritedCiVariableEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<InheritedCiVariable>;
+};
+
+/** Represents an external resource to send instance audit events to */
+export type InstanceExternalAuditEventDestination = ExternalAuditEventDestinationInterface & {
+  __typename?: 'InstanceExternalAuditEventDestination';
+  /** External destination to send audit events to. */
+  destinationUrl: Scalars['String'];
+  /** List of additional HTTP headers sent with each event. */
+  headers: AuditEventsStreamingInstanceHeaderConnection;
+  /** ID of the destination. */
+  id: Scalars['ID'];
+  /** Verification token to validate source of event. */
+  verificationToken: Scalars['String'];
+};
+
+
+/** Represents an external resource to send instance audit events to */
+export type InstanceExternalAuditEventDestinationHeadersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for InstanceExternalAuditEventDestination. */
+export type InstanceExternalAuditEventDestinationConnection = {
+  __typename?: 'InstanceExternalAuditEventDestinationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<InstanceExternalAuditEventDestinationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<InstanceExternalAuditEventDestination>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of InstanceExternalAuditEventDestinationCreate */
+export type InstanceExternalAuditEventDestinationCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Destination URL. */
+  destinationUrl: Scalars['String'];
+};
+
+/** Autogenerated return type of InstanceExternalAuditEventDestinationCreate */
+export type InstanceExternalAuditEventDestinationCreatePayload = {
+  __typename?: 'InstanceExternalAuditEventDestinationCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Destination created. */
+  instanceExternalAuditEventDestination?: Maybe<InstanceExternalAuditEventDestination>;
+};
+
+/** Autogenerated input type of InstanceExternalAuditEventDestinationDestroy */
+export type InstanceExternalAuditEventDestinationDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the external instance audit event destination to destroy. */
+  id: Scalars['AuditEventsInstanceExternalAuditEventDestinationID'];
+};
+
+/** Autogenerated return type of InstanceExternalAuditEventDestinationDestroy */
+export type InstanceExternalAuditEventDestinationDestroyPayload = {
+  __typename?: 'InstanceExternalAuditEventDestinationDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type InstanceExternalAuditEventDestinationEdge = {
+  __typename?: 'InstanceExternalAuditEventDestinationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<InstanceExternalAuditEventDestination>;
+};
+
+/** Autogenerated input type of InstanceExternalAuditEventDestinationUpdate */
+export type InstanceExternalAuditEventDestinationUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Destination URL to change. */
+  destinationUrl?: InputMaybe<Scalars['String']>;
+  /** ID of the external instance audit event destination to update. */
+  id: Scalars['AuditEventsInstanceExternalAuditEventDestinationID'];
+};
+
+/** Autogenerated return type of InstanceExternalAuditEventDestinationUpdate */
+export type InstanceExternalAuditEventDestinationUpdatePayload = {
+  __typename?: 'InstanceExternalAuditEventDestinationUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated destination. */
+  instanceExternalAuditEventDestination?: Maybe<InstanceExternalAuditEventDestination>;
+};
+
+export type InstanceSecurityDashboard = {
+  __typename?: 'InstanceSecurityDashboard';
+  /** Cluster agents associated with projects selected in the Instance Security Dashboard. */
+  clusterAgents?: Maybe<ClusterAgentConnection>;
+  /** Projects selected in Instance Security Dashboard. */
+  projects: ProjectConnection;
+  /** Represents vulnerable project counts for each grade. */
+  vulnerabilityGrades: Array<VulnerableProjectsByGrade>;
+  /** Vulnerability scanners reported on the vulnerabilities from projects selected in Instance Security Dashboard. */
+  vulnerabilityScanners?: Maybe<VulnerabilityScannerConnection>;
+  /** Counts for each vulnerability severity from projects selected in Instance Security Dashboard. */
+  vulnerabilitySeveritiesCount?: Maybe<VulnerabilitySeveritiesCount>;
+};
+
+
+export type InstanceSecurityDashboardClusterAgentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  hasRemoteDevelopmentAgentConfig?: InputMaybe<Scalars['Boolean']>;
+  hasVulnerabilities?: InputMaybe<Scalars['Boolean']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type InstanceSecurityDashboardProjectsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  search?: InputMaybe<Scalars['String']>;
+};
+
+
+export type InstanceSecurityDashboardVulnerabilityGradesArgs = {
+  letterGrade?: InputMaybe<VulnerabilityGrade>;
+};
+
+
+export type InstanceSecurityDashboardVulnerabilityScannersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type InstanceSecurityDashboardVulnerabilitySeveritiesCountArgs = {
+  clusterAgentId?: InputMaybe<Array<Scalars['ClustersAgentID']>>;
+  hasIssues?: InputMaybe<Scalars['Boolean']>;
+  hasResolution?: InputMaybe<Scalars['Boolean']>;
+  image?: InputMaybe<Array<Scalars['String']>>;
+  projectId?: InputMaybe<Array<Scalars['ID']>>;
+  reportType?: InputMaybe<Array<VulnerabilityReportType>>;
+  scanner?: InputMaybe<Array<Scalars['String']>>;
+  scannerId?: InputMaybe<Array<Scalars['VulnerabilitiesScannerID']>>;
+  severity?: InputMaybe<Array<VulnerabilitySeverity>>;
+  state?: InputMaybe<Array<VulnerabilityState>>;
+};
+
 /** Represents an issuable. */
-export type Issuable = Issue | MergeRequest | WorkItem;
+export type Issuable = Epic | Issue | MergeRequest | WorkItem;
+
+/** Describes an issuable resource link for incident issues */
+export type IssuableResourceLink = {
+  __typename?: 'IssuableResourceLink';
+  /** ID of the Issuable resource link. */
+  id: Scalars['IncidentManagementIssuableResourceLinkID'];
+  /** Incident of the resource link. */
+  issue: Issue;
+  /** Web Link to the resource. */
+  link: Scalars['String'];
+  /** Optional text for the link. */
+  linkText?: Maybe<Scalars['String']>;
+  /** Type of the resource link. */
+  linkType: IssuableResourceLinkType;
+};
+
+/** The connection type for IssuableResourceLink. */
+export type IssuableResourceLinkConnection = {
+  __typename?: 'IssuableResourceLinkConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<IssuableResourceLinkEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<IssuableResourceLink>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of IssuableResourceLinkCreate */
+export type IssuableResourceLinkCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Incident id to associate the resource link with. */
+  id: Scalars['IssueID'];
+  /** Link of the resource. */
+  link: Scalars['String'];
+  /** Link text of the resource. */
+  linkText?: InputMaybe<Scalars['String']>;
+  /** Link type of the resource. */
+  linkType?: InputMaybe<IssuableResourceLinkType>;
+};
+
+/** Autogenerated return type of IssuableResourceLinkCreate */
+export type IssuableResourceLinkCreatePayload = {
+  __typename?: 'IssuableResourceLinkCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issuable resource link. */
+  issuableResourceLink?: Maybe<IssuableResourceLink>;
+};
+
+/** Autogenerated input type of IssuableResourceLinkDestroy */
+export type IssuableResourceLinkDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Issuable resource link ID to remove. */
+  id: Scalars['IncidentManagementIssuableResourceLinkID'];
+};
+
+/** Autogenerated return type of IssuableResourceLinkDestroy */
+export type IssuableResourceLinkDestroyPayload = {
+  __typename?: 'IssuableResourceLinkDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issuable resource link. */
+  issuableResourceLink?: Maybe<IssuableResourceLink>;
+};
+
+/** An edge in a connection. */
+export type IssuableResourceLinkEdge = {
+  __typename?: 'IssuableResourceLinkEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<IssuableResourceLink>;
+};
+
+/** Issuable resource link type enum */
+export type IssuableResourceLinkType =
+  /** General link type */
+  | 'general'
+  /** Pagerduty link type */
+  | 'pagerduty'
+  /** Slack link type */
+  | 'slack'
+  /** Zoom link type */
+  | 'zoom';
+
+/** Fields to perform the search in */
+export type IssuableSearchableField =
+  /** Search in description field. */
+  | 'DESCRIPTION'
+  /** Search in title field. */
+  | 'TITLE';
 
 /** Incident severity */
 export type IssuableSeverity =
@@ -5340,18 +13978,40 @@ export type IssuableState =
   /** In open state. */
   | 'opened';
 
+/** Values for subscribing and unsubscribing from issuables */
+export type IssuableSubscriptionEvent =
+  /** Subscribe to an issuable. */
+  | 'SUBSCRIBE'
+  /** Unsubscribe from an issuable. */
+  | 'UNSUBSCRIBE';
+
 export type Issue = CurrentUserTodos & NoteableInterface & Todoable & {
   __typename?: 'Issue';
-  /** Alert associated to this issue. */
+  /**
+   * Alert associated to this issue. Deprecated in 15.6: Use `alert_management_alerts`.
+   * @deprecated Use `alert_management_alerts`. Deprecated in 15.6.
+   */
   alertManagementAlert?: Maybe<AlertManagementAlert>;
+  /** Alert Management alerts associated to this issue. */
+  alertManagementAlerts?: Maybe<AlertManagementAlertConnection>;
   /** Assignees of the issue. */
   assignees?: Maybe<UserCoreConnection>;
   /** User that created the issue. */
   author: UserCore;
+  /** Indicates the issue is blocked. */
+  blocked: Scalars['Boolean'];
+  /** Count of issues blocking this issue. */
+  blockedByCount?: Maybe<Scalars['Int']>;
+  /** Issues blocking this issue. */
+  blockedByIssues?: Maybe<IssueConnection>;
+  /** Count of issues this issue is blocking. */
+  blockingCount: Scalars['Int'];
   /** Issue this issue was closed as a duplicate of. */
   closedAsDuplicateOf?: Maybe<Issue>;
   /** Timestamp of when the issue was closed. */
   closedAt?: Maybe<Scalars['Time']>;
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
   /** Indicates the issue is confidential. */
   confidential: Scalars['Boolean'];
   /** User specific email address for the issue. */
@@ -5364,7 +14024,7 @@ export type Issue = CurrentUserTodos & NoteableInterface & Todoable & {
   customerRelationsContacts?: Maybe<CustomerRelationsContactConnection>;
   /** Description of the issue. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** Collection of design images associated with this issue. */
   designCollection?: Maybe<DesignCollection>;
@@ -5378,12 +14038,20 @@ export type Issue = CurrentUserTodos & NoteableInterface & Todoable & {
   dueDate?: Maybe<Scalars['Time']>;
   /** Indicates if a project has email notifications disabled: `true` if email notifications are disabled. */
   emailsDisabled: Scalars['Boolean'];
+  /** Epic to which this issue belongs. */
+  epic?: Maybe<Epic>;
+  /** Escalation policy associated with the issue. Available for issues which support escalation. */
+  escalationPolicy?: Maybe<EscalationPolicyType>;
   /** Escalation status of the issue. */
   escalationStatus?: Maybe<IssueEscalationStatus>;
   /**
-   * Indicates the issue is hidden because the author has been banned. Will always
-   * return `null` if `ban_user_feature_flag` feature flag is disabled.
+   * Indicates if the issue belongs to an epic.
+   *             Can return true and not show an associated epic when the user has no access to the epic.
    */
+  hasEpic: Scalars['Boolean'];
+  /** Current health status. */
+  healthStatus?: Maybe<HealthStatus>;
+  /** Indicates the issue is hidden because the author has been banned. */
   hidden?: Maybe<Scalars['Boolean']>;
   /** Human-readable time estimate of the issue. */
   humanTimeEstimate?: Maybe<Scalars['String']>;
@@ -5393,10 +14061,16 @@ export type Issue = CurrentUserTodos & NoteableInterface & Todoable & {
   id: Scalars['ID'];
   /** Internal ID of the issue. */
   iid: Scalars['ID'];
+  /** Issuable resource links of the incident issue. */
+  issuableResourceLinks?: Maybe<IssuableResourceLinkConnection>;
+  /** Iteration of the issue. */
+  iteration?: Maybe<Iteration>;
   /** Labels of the issue. */
   labels?: Maybe<LabelConnection>;
   /** Number of merge requests that close the issue on merge. */
   mergeRequestsCount: Scalars['Int'];
+  /** Metric images associated to the issue. */
+  metricImages?: Maybe<Array<MetricImage>>;
   /** Milestone of the issue. */
   milestone?: Maybe<Milestone>;
   /** Indicates if issue got moved from other project. */
@@ -5411,12 +14085,20 @@ export type Issue = CurrentUserTodos & NoteableInterface & Todoable & {
   projectId: Scalars['Int'];
   /** Internal reference of the issue. Returned in shortened format by default. */
   reference: Scalars['String'];
+  /** Merge requests related to the issue. This field can only be resolved for one issue in any single request. */
+  relatedMergeRequests?: Maybe<MergeRequestConnection>;
+  /** Related vulnerabilities of the issue. */
+  relatedVulnerabilities?: Maybe<VulnerabilityConnection>;
   /** Relative position of the issue (used for positioning in epic tree and issue boards). */
   relativePosition?: Maybe<Scalars['Int']>;
   /** Severity level of the incident. */
   severity?: Maybe<IssuableSeverity>;
+  /** Timestamp of when the issue SLA expires. */
+  slaDueAt?: Maybe<Scalars['Time']>;
   /** State of the issue. */
   state: IssueState;
+  /** Indicates whether an issue is published to the status page. */
+  statusPagePublishedIncident?: Maybe<Scalars['Boolean']>;
   /** Indicates the currently logged in user is subscribed to the issue. */
   subscribed: Scalars['Boolean'];
   /** Task completion status of the issue. */
@@ -5427,7 +14109,7 @@ export type Issue = CurrentUserTodos & NoteableInterface & Todoable & {
   timelogs: TimelogConnection;
   /** Title of the issue. */
   title: Scalars['String'];
-  /** The GitLab Flavored Markdown rendering of `title` */
+  /** GitLab Flavored Markdown rendering of `title` */
   titleHtml?: Maybe<Scalars['String']>;
   /** Total time reported as spent on the issue. */
   totalTimeSpent: Scalars['Int'];
@@ -5449,10 +14131,42 @@ export type Issue = CurrentUserTodos & NoteableInterface & Todoable & {
   webPath: Scalars['String'];
   /** Web URL of the issue. */
   webUrl: Scalars['String'];
+  /** Weight of the issue. */
+  weight?: Maybe<Scalars['Int']>;
+};
+
+
+export type IssueAlertManagementAlertsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  assigneeUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  domain?: AlertManagementDomainFilter;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['String']>;
+  last?: InputMaybe<Scalars['Int']>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<AlertManagementAlertSort>;
+  statuses?: InputMaybe<Array<AlertManagementStatus>>;
 };
 
 
 export type IssueAssigneesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type IssueBlockedByIssuesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type IssueCommentersArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -5481,6 +14195,15 @@ export type IssueDiscussionsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type IssueIssuableResourceLinksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  incidentId: Scalars['IssueID'];
   last?: InputMaybe<Scalars['Int']>;
 };
 
@@ -5514,6 +14237,22 @@ export type IssueReferenceArgs = {
 };
 
 
+export type IssueRelatedMergeRequestsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type IssueRelatedVulnerabilitiesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type IssueTimelogsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -5532,7 +14271,14 @@ export type IssueConnection = {
   nodes?: Maybe<Array<Maybe<Issue>>>;
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
+  /** Total weight of issues collection. */
+  weight: Scalars['Int'];
 };
+
+/** Iteration ID wildcard values for issue creation */
+export type IssueCreationIterationWildcardId =
+  /** Current iteration. */
+  | 'CURRENT';
 
 /** An edge in a connection. */
 export type IssueEdge = {
@@ -5554,6 +14300,29 @@ export type IssueEscalationStatus =
   /** Investigation has not started. */
   | 'TRIGGERED';
 
+/** Autogenerated input type of IssueLinkAlerts */
+export type IssueLinkAlertsInput = {
+  /** Alerts references to be linked to the incident. */
+  alertReferences: Array<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** IID of the issue to mutate. */
+  iid: Scalars['String'];
+  /** Project the issue to mutate is in. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of IssueLinkAlerts */
+export type IssueLinkAlertsPayload = {
+  __typename?: 'IssueLinkAlertsPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue after mutation. */
+  issue?: Maybe<Issue>;
+};
+
 /** Autogenerated input type of IssueMove */
 export type IssueMoveInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -5572,6 +14341,8 @@ export type IssueMoveListInput = {
   boardId: Scalars['BoardID'];
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the parent epic. NULL when removing the association. */
+  epicId?: InputMaybe<Scalars['EpicID']>;
   /** ID of the board list that the issue will be moved from. */
   fromListId?: InputMaybe<Scalars['ID']>;
   /** IID of the issue to mutate. */
@@ -5580,6 +14351,8 @@ export type IssueMoveListInput = {
   moveAfterId?: InputMaybe<Scalars['ID']>;
   /** ID of issue that should be placed before the current issue. */
   moveBeforeId?: InputMaybe<Scalars['ID']>;
+  /** Position of issue within the board list. Positions start at 0. Use -1 to move to the end of the list. */
+  positionInList?: InputMaybe<Scalars['Int']>;
   /** Project the issue to mutate is in. */
   projectPath: Scalars['ID'];
   /** ID of the board list that the issue will be moved to. */
@@ -5625,6 +14398,8 @@ export type IssuePermissions = {
   readIssue: Scalars['Boolean'];
   /** Indicates the user can perform `reopen_issue` on this resource */
   reopenIssue: Scalars['Boolean'];
+  /** Indicates the user can perform `update_design` on this resource */
+  updateDesign: Scalars['Boolean'];
   /** Indicates the user can perform `update_issue` on this resource */
   updateIssue: Scalars['Boolean'];
 };
@@ -5725,6 +14500,52 @@ export type IssueSetDueDatePayload = {
   issue?: Maybe<Issue>;
 };
 
+/** Autogenerated input type of IssueSetEpic */
+export type IssueSetEpicInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the epic to be assigned to the issue, epic will be removed if absent or set to null */
+  epicId?: InputMaybe<Scalars['EpicID']>;
+  /** IID of the issue to mutate. */
+  iid: Scalars['String'];
+  /** Project the issue to mutate is in. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of IssueSetEpic */
+export type IssueSetEpicPayload = {
+  __typename?: 'IssueSetEpicPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue after mutation. */
+  issue?: Maybe<Issue>;
+};
+
+/** Autogenerated input type of IssueSetEscalationPolicy */
+export type IssueSetEscalationPolicyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the escalation policy to assign to the issue. Policy will be removed if absent or set to null. */
+  escalationPolicyId?: InputMaybe<Scalars['IncidentManagementEscalationPolicyID']>;
+  /** IID of the issue to mutate. */
+  iid: Scalars['String'];
+  /** Project the issue to mutate is in. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of IssueSetEscalationPolicy */
+export type IssueSetEscalationPolicyPayload = {
+  __typename?: 'IssueSetEscalationPolicyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue after mutation. */
+  issue?: Maybe<Issue>;
+};
+
 /** Autogenerated input type of IssueSetEscalationStatus */
 export type IssueSetEscalationStatusInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -5740,6 +14561,29 @@ export type IssueSetEscalationStatusInput = {
 /** Autogenerated return type of IssueSetEscalationStatus */
 export type IssueSetEscalationStatusPayload = {
   __typename?: 'IssueSetEscalationStatusPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue after mutation. */
+  issue?: Maybe<Issue>;
+};
+
+/** Autogenerated input type of IssueSetIteration */
+export type IssueSetIterationInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** IID of the issue to mutate. */
+  iid: Scalars['String'];
+  /** Iteration to assign to the issue. */
+  iterationId?: InputMaybe<Scalars['IterationID']>;
+  /** Project the issue to mutate is in. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of IssueSetIteration */
+export type IssueSetIterationPayload = {
+  __typename?: 'IssueSetIterationPayload';
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: Maybe<Scalars['String']>;
   /** Errors encountered during execution of the mutation. */
@@ -5817,8 +14661,35 @@ export type IssueSetSubscriptionPayload = {
   issue?: Maybe<Issue>;
 };
 
+/** Autogenerated input type of IssueSetWeight */
+export type IssueSetWeightInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** IID of the issue to mutate. */
+  iid: Scalars['String'];
+  /** Project the issue to mutate is in. */
+  projectPath: Scalars['ID'];
+  /** The desired weight for the issue. If set to null, weight is removed. */
+  weight?: InputMaybe<Scalars['Int']>;
+};
+
+/** Autogenerated return type of IssueSetWeight */
+export type IssueSetWeightPayload = {
+  __typename?: 'IssueSetWeightPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue after mutation. */
+  issue?: Maybe<Issue>;
+};
+
 /** Values for sorting issues */
 export type IssueSort =
+  /** Blocking issues count by ascending order. */
+  | 'BLOCKING_ISSUES_ASC'
+  /** Blocking issues count by descending order. */
+  | 'BLOCKING_ISSUES_DESC'
   /** Closed time by ascending order. */
   | 'CLOSED_AT_ASC'
   /** Closed time by descending order. */
@@ -5835,6 +14706,10 @@ export type IssueSort =
   | 'ESCALATION_STATUS_ASC'
   /** Status from resolved to triggered. */
   | 'ESCALATION_STATUS_DESC'
+  /** Issues with healthy issues first. */
+  | 'HEALTH_STATUS_ASC'
+  /** Issues with unhealthy issues first. */
+  | 'HEALTH_STATUS_DESC'
   /** Label priority by ascending order. */
   | 'LABEL_PRIORITY_ASC'
   /** Label priority by descending order. */
@@ -5851,12 +14726,20 @@ export type IssueSort =
   | 'PRIORITY_ASC'
   /** Priority by descending order. */
   | 'PRIORITY_DESC'
+  /** Published issues shown last. */
+  | 'PUBLISHED_ASC'
+  /** Published issues shown first. */
+  | 'PUBLISHED_DESC'
   /** Relative position by ascending order. */
   | 'RELATIVE_POSITION_ASC'
   /** Severity from less critical to more critical. */
   | 'SEVERITY_ASC'
   /** Severity from more critical to less critical. */
   | 'SEVERITY_DESC'
+  /** Issues with earliest SLA due time shown first. */
+  | 'SLA_DUE_AT_ASC'
+  /** Issues with latest SLA due time shown first. */
+  | 'SLA_DUE_AT_DESC'
   /** Title by ascending order. */
   | 'TITLE_ASC'
   /** Title by descending order. */
@@ -5865,6 +14748,10 @@ export type IssueSort =
   | 'UPDATED_ASC'
   /** Updated at descending order. */
   | 'UPDATED_DESC'
+  /** Weight by ascending order. */
+  | 'WEIGHT_ASC'
+  /** Weight by descending order. */
+  | 'WEIGHT_DESC'
   /** Created at ascending order. */
   | 'created_asc'
   /** Created at descending order. */
@@ -5909,15 +14796,352 @@ export type IssueType =
   | 'INCIDENT'
   /** Issue issue type */
   | 'ISSUE'
+  /**
+   * Key Result issue type. Available only when feature flag `okrs_mvc` is enabled.
+   * Introduced in 15.7: This feature is an Experiment. It can be changed or
+   * removed at any time.
+   */
+  | 'KEY_RESULT'
+  /**
+   * Objective issue type. Available only when feature flag `okrs_mvc` is enabled.
+   * Introduced in 15.6: This feature is an Experiment. It can be changed or
+   * removed at any time.
+   */
+  | 'OBJECTIVE'
   /** Requirement issue type */
   | 'REQUIREMENT'
-  /**
-   * Task issue type. Available only when feature flag `work_items` is enabled.
-   * Introduced in 15.2: This feature is in Alpha. It can be changed or removed at any time.
-   */
+  /** Task issue type. Introduced in 15.2: This feature is an Experiment. It can be changed or removed at any time. */
   | 'TASK'
   /** Test Case issue type */
   | 'TEST_CASE';
+
+/** Autogenerated input type of IssueUnlinkAlert */
+export type IssueUnlinkAlertInput = {
+  /** Global ID of the alert to unlink from the incident. */
+  alertId: Scalars['AlertManagementAlertID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** IID of the issue to mutate. */
+  iid: Scalars['String'];
+  /** Project the issue to mutate is in. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of IssueUnlinkAlert */
+export type IssueUnlinkAlertPayload = {
+  __typename?: 'IssueUnlinkAlertPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue after mutation. */
+  issue?: Maybe<Issue>;
+};
+
+/** Autogenerated input type of IssuesBulkUpdate */
+export type IssuesBulkUpdateInput = {
+  /** Global ID array of the labels that will be added to the issues. */
+  addLabelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+  /**
+   * Global ID array of the users that will be assigned to the given issues.
+   * Existing assignees will be replaced with the ones on this list.
+   */
+  assigneeIds?: InputMaybe<Array<Scalars['UserID']>>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the epic that will be assigned to the issues. */
+  epicId?: InputMaybe<Scalars['EpicID']>;
+  /** Health status that will be assigned to the issues. */
+  healthStatus?: InputMaybe<HealthStatus>;
+  /**
+   * Global ID array of the issues that will be updated. IDs that the user can't
+   * update will be ignored. A max of 100 can be provided.
+   */
+  ids: Array<Scalars['IssueID']>;
+  /** Global ID of the iteration that will be assigned to the issues. */
+  iterationId?: InputMaybe<Scalars['IterationID']>;
+  /** Global ID of the milestone that will be assigned to the issues. */
+  milestoneId?: InputMaybe<Scalars['MilestoneID']>;
+  /**
+   * Global ID of the parent to which the bulk update will be scoped. The parent
+   * can be a project **(FREE)** or a group **(PREMIUM)**. Example `IssueParentID`
+   * are `"gid://gitlab/Project/1"` and `"gid://gitlab/Group/1"`.
+   */
+  parentId: Scalars['IssueParentID'];
+  /** Global ID array of the labels that will be removed from the issues. */
+  removeLabelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+  /** Close or reopen an issue. */
+  stateEvent?: InputMaybe<IssueStateEvent>;
+  /** Subscribe to or unsubscribe from issue notifications. */
+  subscriptionEvent?: InputMaybe<IssuableSubscriptionEvent>;
+};
+
+/** Autogenerated return type of IssuesBulkUpdate */
+export type IssuesBulkUpdatePayload = {
+  __typename?: 'IssuesBulkUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Number of issues that were successfully updated. */
+  updatedIssueCount?: Maybe<Scalars['Int']>;
+};
+
+/** Represents an iteration object */
+export type Iteration = TimeboxReportInterface & {
+  __typename?: 'Iteration';
+  /** Timestamp of iteration creation. */
+  createdAt: Scalars['Time'];
+  /** Description of the iteration. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description` */
+  descriptionHtml?: Maybe<Scalars['String']>;
+  /** Timestamp of the iteration due date. */
+  dueDate?: Maybe<Scalars['Time']>;
+  /** ID of the iteration. */
+  id: Scalars['ID'];
+  /** Internal ID of the iteration. */
+  iid: Scalars['ID'];
+  /** Cadence of the iteration. */
+  iterationCadence: IterationCadence;
+  /** Historically accurate report about the timebox. */
+  report?: Maybe<TimeboxReport>;
+  /** Web path of the iteration, scoped to the query parent. Only valid for Project parents. Returns null in other contexts. */
+  scopedPath?: Maybe<Scalars['String']>;
+  /** Web URL of the iteration, scoped to the query parent. Only valid for Project parents. Returns null in other contexts. */
+  scopedUrl?: Maybe<Scalars['String']>;
+  /**
+   * Sequence number for the iteration when you sort the containing cadence's
+   * iterations by the start and end date. The earliest starting and ending
+   * iteration is assigned 1.
+   */
+  sequence: Scalars['Int'];
+  /** Timestamp of the iteration start date. */
+  startDate?: Maybe<Scalars['Time']>;
+  /** State of the iteration. */
+  state: IterationState;
+  /** Title of the iteration. */
+  title?: Maybe<Scalars['String']>;
+  /** Timestamp of last iteration update. */
+  updatedAt: Scalars['Time'];
+  /** Web path of the iteration. */
+  webPath: Scalars['String'];
+  /** Web URL of the iteration. */
+  webUrl: Scalars['String'];
+};
+
+
+/** Represents an iteration object */
+export type IterationReportArgs = {
+  fullPath?: InputMaybe<Scalars['String']>;
+};
+
+/** Represents an iteration cadence */
+export type IterationCadence = {
+  __typename?: 'IterationCadence';
+  /** Whether the iteration cadence is active. */
+  active?: Maybe<Scalars['Boolean']>;
+  /** Whether the iteration cadence should automatically generate upcoming iterations. */
+  automatic?: Maybe<Scalars['Boolean']>;
+  /** Description of the iteration cadence. Maximum length is 5000 characters. */
+  description?: Maybe<Scalars['String']>;
+  /** Duration in weeks of the iterations within this cadence. */
+  durationInWeeks?: Maybe<Scalars['Int']>;
+  /** Global ID of the iteration cadence. */
+  id: Scalars['IterationsCadenceID'];
+  /** Upcoming iterations to be created when iteration cadence is set to automatic. */
+  iterationsInAdvance?: Maybe<Scalars['Int']>;
+  /** Whether the iteration cadence should roll over issues to the next iteration or not. */
+  rollOver: Scalars['Boolean'];
+  /** Timestamp of the automation start date. */
+  startDate?: Maybe<Scalars['Time']>;
+  /** Title of the iteration cadence. */
+  title: Scalars['String'];
+};
+
+/** The connection type for IterationCadence. */
+export type IterationCadenceConnection = {
+  __typename?: 'IterationCadenceConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<IterationCadenceEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<IterationCadence>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of IterationCadenceCreate */
+export type IterationCadenceCreateInput = {
+  /** Whether the iteration cadence is active. */
+  active: Scalars['Boolean'];
+  /** Whether the iteration cadence should automatically generate upcoming iterations. */
+  automatic: Scalars['Boolean'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the iteration cadence. Maximum length is 5000 characters. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Duration in weeks of the iterations within this cadence. */
+  durationInWeeks?: InputMaybe<Scalars['Int']>;
+  /** Group where the iteration cadence is created. */
+  groupPath: Scalars['ID'];
+  /** Upcoming iterations to be created when iteration cadence is set to automatic. */
+  iterationsInAdvance?: InputMaybe<Scalars['Int']>;
+  /** Whether the iteration cadence should roll over issues to the next iteration or not. */
+  rollOver?: InputMaybe<Scalars['Boolean']>;
+  /** Timestamp of the automation start date. */
+  startDate?: InputMaybe<Scalars['Time']>;
+  /** Title of the iteration cadence. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of IterationCadenceCreate */
+export type IterationCadenceCreatePayload = {
+  __typename?: 'IterationCadenceCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created iteration cadence. */
+  iterationCadence?: Maybe<IterationCadence>;
+};
+
+/** Autogenerated input type of IterationCadenceDestroy */
+export type IterationCadenceDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the iteration cadence. */
+  id: Scalars['IterationsCadenceID'];
+};
+
+/** Autogenerated return type of IterationCadenceDestroy */
+export type IterationCadenceDestroyPayload = {
+  __typename?: 'IterationCadenceDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Group the iteration cadence belongs to. */
+  group: Group;
+};
+
+/** An edge in a connection. */
+export type IterationCadenceEdge = {
+  __typename?: 'IterationCadenceEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<IterationCadence>;
+};
+
+/** Autogenerated input type of IterationCadenceUpdate */
+export type IterationCadenceUpdateInput = {
+  /** Whether the iteration cadence is active. */
+  active?: InputMaybe<Scalars['Boolean']>;
+  /** Whether the iteration cadence should automatically generate upcoming iterations. */
+  automatic?: InputMaybe<Scalars['Boolean']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the iteration cadence. Maximum length is 5000 characters. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Duration in weeks of the iterations within this cadence. */
+  durationInWeeks?: InputMaybe<Scalars['Int']>;
+  /** Global ID of the iteration cadence. */
+  id: Scalars['IterationsCadenceID'];
+  /** Upcoming iterations to be created when iteration cadence is set to automatic. */
+  iterationsInAdvance?: InputMaybe<Scalars['Int']>;
+  /** Whether the iteration cadence should roll over issues to the next iteration or not. */
+  rollOver?: InputMaybe<Scalars['Boolean']>;
+  /** Timestamp of the automation start date. */
+  startDate?: InputMaybe<Scalars['Time']>;
+  /** Title of the iteration cadence. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of IterationCadenceUpdate */
+export type IterationCadenceUpdatePayload = {
+  __typename?: 'IterationCadenceUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated iteration cadence. */
+  iterationCadence?: Maybe<IterationCadence>;
+};
+
+/** The connection type for Iteration. */
+export type IterationConnection = {
+  __typename?: 'IterationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<IterationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Iteration>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of IterationDelete */
+export type IterationDeleteInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the iteration. */
+  id: Scalars['IterationID'];
+};
+
+/** Autogenerated return type of IterationDelete */
+export type IterationDeletePayload = {
+  __typename?: 'IterationDeletePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Group the iteration belongs to. */
+  group: Group;
+};
+
+/** An edge in a connection. */
+export type IterationEdge = {
+  __typename?: 'IterationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Iteration>;
+};
+
+/** Fields to perform the search in */
+export type IterationSearchableField =
+  /** Search in cadence_title field. */
+  | 'CADENCE_TITLE'
+  /** Search in title field. */
+  | 'TITLE';
+
+/** Iteration sort values */
+export type IterationSort =
+  /** Sort by cadence id in ascending and due date in ascending order. */
+  | 'CADENCE_AND_DUE_DATE_ASC'
+  /** Sort by cadence id in ascending and due date in descending order. */
+  | 'CADENCE_AND_DUE_DATE_DESC';
+
+/** State of a GitLab iteration */
+export type IterationState =
+  /** Any iteration. */
+  | 'all'
+  /** Closed iteration. */
+  | 'closed'
+  /** Current iteration. */
+  | 'current'
+  /** Open iteration. */
+  | 'opened'
+  /** Upcoming iteration. */
+  | 'upcoming';
+
+/** Iteration ID wildcard values */
+export type IterationWildcardId =
+  /** An iteration is assigned. */
+  | 'ANY'
+  /** Current iteration. */
+  | 'CURRENT'
+  /** No iteration is assigned. */
+  | 'NONE';
 
 export type JiraImport = {
   __typename?: 'JiraImport';
@@ -6126,6 +15350,8 @@ export type JobArtifactFileType =
   | 'PERFORMANCE'
   /** REQUIREMENTS job artifact file type. */
   | 'REQUIREMENTS'
+  /** REQUIREMENTS V2 job artifact file type. */
+  | 'REQUIREMENTS_V2'
   /** SAST job artifact file type. */
   | 'SAST'
   /** SECRET DETECTION job artifact file type. */
@@ -6134,6 +15360,72 @@ export type JobArtifactFileType =
   | 'TERRAFORM'
   /** TRACE job artifact file type. */
   | 'TRACE';
+
+/** Represents the Geo replication and verification state of a job_artifact. */
+export type JobArtifactRegistry = {
+  __typename?: 'JobArtifactRegistry';
+  /** ID of the Job Artifact. */
+  artifactId: Scalars['ID'];
+  /** Timestamp when the JobArtifactRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the JobArtifactRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the JobArtifactRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the JobArtifactRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the JobArtifactRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the JobArtifactRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the JobArtifactRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the JobArtifactRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the JobArtifactRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for JobArtifactRegistry. */
+export type JobArtifactRegistryConnection = {
+  __typename?: 'JobArtifactRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<JobArtifactRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<JobArtifactRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type JobArtifactRegistryEdge = {
+  __typename?: 'JobArtifactRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<JobArtifactRegistry>;
+};
+
+/** Autogenerated input type of JobArtifactsDestroy */
+export type JobArtifactsDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the job to mutate. */
+  id: Scalars['CiBuildID'];
+};
+
+/** Autogenerated return type of JobArtifactsDestroy */
+export type JobArtifactsDestroyPayload = {
+  __typename?: 'JobArtifactsDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Number of artifacts deleted. */
+  destroyedArtifactsCount: Scalars['Int'];
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Job with artifacts to be deleted. */
+  job?: Maybe<CiJob>;
+};
 
 /** Autogenerated input type of JobCancel */
 export type JobCancelInput = {
@@ -6192,6 +15484,8 @@ export type JobPlayInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** ID of the job to mutate. */
   id: Scalars['CiBuildID'];
+  /** Variables to use when playing a manual job. */
+  variables?: InputMaybe<Array<CiVariableInput>>;
 };
 
 /** Autogenerated return type of JobPlay */
@@ -6255,6 +15549,21 @@ export type Kas = {
   version?: Maybe<Scalars['String']>;
 };
 
+/** Represents an SSH key. */
+export type Key = {
+  __typename?: 'Key';
+  /** Timestamp of when the key was created. */
+  createdAt: Scalars['Time'];
+  /** Timestamp of when the key expires. It's null if it never expires. */
+  expiresAt: Scalars['Time'];
+  /** ID of the key. */
+  id: Scalars['ID'];
+  /** Public key of the key pair. */
+  key: Scalars['String'];
+  /** Title of the key. */
+  title: Scalars['String'];
+};
+
 export type Label = {
   __typename?: 'Label';
   /** Background color of the label. */
@@ -6263,7 +15572,7 @@ export type Label = {
   createdAt: Scalars['Time'];
   /** Description of the label (Markdown rendered as HTML for caching). */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** Label ID. */
   id: Scalars['ID'];
@@ -6327,6 +15636,117 @@ export type LabelEdge = {
   node?: Maybe<Label>;
 };
 
+/** Represents the Geo sync and verification state of an LFS object */
+export type LfsObjectRegistry = {
+  __typename?: 'LfsObjectRegistry';
+  /** Timestamp when the LfsObjectRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the LfsObjectRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the LfsObjectRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the LfsObjectRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** ID of the LFS object. */
+  lfsObjectId: Scalars['ID'];
+  /** Timestamp after which the LfsObjectRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the LfsObjectRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the LfsObjectRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the LfsObjectRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the LfsObjectRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for LfsObjectRegistry. */
+export type LfsObjectRegistryConnection = {
+  __typename?: 'LfsObjectRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<LfsObjectRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<LfsObjectRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type LfsObjectRegistryEdge = {
+  __typename?: 'LfsObjectRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<LfsObjectRegistry>;
+};
+
+/** Represents an entry from the Cloud License history */
+export type LicenseHistoryEntry = {
+  __typename?: 'LicenseHistoryEntry';
+  /** Date when the license was activated. */
+  activatedAt?: Maybe<Scalars['Date']>;
+  /** Date, including grace period, when licensed features will be blocked. */
+  blockChangesAt?: Maybe<Scalars['Date']>;
+  /** Company of the licensee. */
+  company?: Maybe<Scalars['String']>;
+  /** Date when the license was added. */
+  createdAt?: Maybe<Scalars['Date']>;
+  /** Email of the licensee. */
+  email?: Maybe<Scalars['String']>;
+  /** Date when the license expires. */
+  expiresAt?: Maybe<Scalars['Date']>;
+  /** ID of the license extracted from the license data. */
+  id: Scalars['ID'];
+  /** Name of the licensee. */
+  name?: Maybe<Scalars['String']>;
+  /** Name of the subscription plan. */
+  plan: Scalars['String'];
+  /** Date when the license started. */
+  startsAt?: Maybe<Scalars['Date']>;
+  /** Type of the license. */
+  type: Scalars['String'];
+  /** Number of paid users in the license. */
+  usersInLicenseCount?: Maybe<Scalars['Int']>;
+};
+
+/** The connection type for LicenseHistoryEntry. */
+export type LicenseHistoryEntryConnection = {
+  __typename?: 'LicenseHistoryEntryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<LicenseHistoryEntryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<LicenseHistoryEntry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type LicenseHistoryEntryEdge = {
+  __typename?: 'LicenseHistoryEntryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<LicenseHistoryEntry>;
+};
+
+/** List limit metric setting */
+export type ListLimitMetric =
+  /** Limit list by number and total weight of issues. */
+  | 'all_metrics'
+  /** Limit list by number of issues. */
+  | 'issue_count'
+  /** Limit list by total weight of issues. */
+  | 'issue_weights';
+
+export type Location = {
+  __typename?: 'Location';
+  /** HTTP URI path to view the input file in GitLab. */
+  blobPath?: Maybe<Scalars['String']>;
+  /** Path, relative to the root of the repository, of the filewhich was analyzed to detect the dependency. */
+  path?: Maybe<Scalars['String']>;
+};
+
 /** Autogenerated input type of MarkAsSpamSnippet */
 export type MarkAsSpamSnippetInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -6345,6 +15765,15 @@ export type MarkAsSpamSnippetPayload = {
   /** Snippet after mutation. */
   snippet?: Maybe<Snippet>;
 };
+
+/** List markup formats */
+export type MarkupFormat =
+  /** HTML format. */
+  | 'HTML'
+  /** Markdown format. */
+  | 'MARKDOWN'
+  /** Raw format. */
+  | 'RAW';
 
 /** Maven metadata */
 export type MavenMetadata = {
@@ -6387,6 +15816,34 @@ export type MeasurementIdentifier =
   | 'PROJECTS'
   /** User count. */
   | 'USERS';
+
+/** Access level of a group or project member */
+export type MemberAccessLevel =
+  /** Developer access. */
+  | 'DEVELOPER'
+  /** Guest access. */
+  | 'GUEST'
+  /** Maintainer access. */
+  | 'MAINTAINER'
+  /** Minimal access. */
+  | 'MINIMAL_ACCESS'
+  /** Owner access. */
+  | 'OWNER'
+  /** Reporter access. */
+  | 'REPORTER';
+
+/** Name of access levels of a group or project member */
+export type MemberAccessLevelName =
+  /** Developer access. */
+  | 'DEVELOPER'
+  /** Guest access. */
+  | 'GUEST'
+  /** Maintainer access. */
+  | 'MAINTAINER'
+  /** Owner access. */
+  | 'OWNER'
+  /** Reporter access. */
+  | 'REPORTER';
 
 export type MemberInterface = {
   /** GitLab::Access level. */
@@ -6432,10 +15889,78 @@ export type MemberInterfaceEdge = {
   node?: Maybe<MemberInterface>;
 };
 
+/** Values for sorting members */
+export type MemberSort =
+  /** Access level ascending order. */
+  | 'ACCESS_LEVEL_ASC'
+  /** Access level descending order. */
+  | 'ACCESS_LEVEL_DESC'
+  /** Created at ascending order. */
+  | 'CREATED_ASC'
+  /** Created at descending order. */
+  | 'CREATED_DESC'
+  /** Updated at ascending order. */
+  | 'UPDATED_ASC'
+  /** Updated at descending order. */
+  | 'UPDATED_DESC'
+  /** User's full name ascending order. */
+  | 'USER_FULL_NAME_ASC'
+  /** User's full name descending order. */
+  | 'USER_FULL_NAME_DESC'
+  /** Created at ascending order. */
+  | 'created_asc'
+  /** Created at descending order. */
+  | 'created_desc'
+  /** Updated at ascending order. */
+  | 'updated_asc'
+  /** Updated at descending order. */
+  | 'updated_desc';
+
+/** Defines which user roles, users, or groups can merge into a protected branch. */
+export type MergeAccessLevel = {
+  __typename?: 'MergeAccessLevel';
+  /** GitLab::Access level. */
+  accessLevel: Scalars['Int'];
+  /** Human readable representation for this access level. */
+  accessLevelDescription: Scalars['String'];
+  /** Group associated with this access level. */
+  group?: Maybe<AccessLevelGroup>;
+  /** User associated with this access level. */
+  user?: Maybe<AccessLevelUser>;
+};
+
+/** The connection type for MergeAccessLevel. */
+export type MergeAccessLevelConnection = {
+  __typename?: 'MergeAccessLevelConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<MergeAccessLevelEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<MergeAccessLevel>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type MergeAccessLevelEdge = {
+  __typename?: 'MergeAccessLevelEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<MergeAccessLevel>;
+};
+
 export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   __typename?: 'MergeRequest';
   /** Indicates if members of the target project can push to the fork. */
   allowCollaboration?: Maybe<Scalars['Boolean']>;
+  /** Information relating to rules that must be satisfied to merge this merge request. */
+  approvalState: MergeRequestApprovalState;
+  /** Number of approvals left. */
+  approvalsLeft?: Maybe<Scalars['Int']>;
+  /** Number of approvals required. */
+  approvalsRequired?: Maybe<Scalars['Int']>;
+  /** Indicates if the merge request has all the required approvals. Returns true if no required approvals are configured. */
+  approved: Scalars['Boolean'];
   /** Users who approved the merge request. */
   approvedBy?: Maybe<UserCoreConnection>;
   /** Assignees of the merge request. */
@@ -6448,6 +15973,10 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   autoMergeStrategy?: Maybe<Scalars['String']>;
   /** Array of available auto merge strategies. */
   availableAutoMergeStrategies?: Maybe<Array<Scalars['String']>>;
+  /** List of award emojis associated with the merge request. */
+  awardEmoji?: Maybe<AwardEmojiConnection>;
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
   /** Number of commits in the merge request. */
   commitCount?: Maybe<Scalars['Int']>;
   /** Merge request commits. */
@@ -6468,10 +15997,18 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   defaultSquashCommitMessage?: Maybe<Scalars['String']>;
   /** Description of the merge request (Markdown rendered as HTML for caching). */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
+  /** Detailed merge status of the merge request. */
+  detailedMergeStatus?: Maybe<DetailedMergeStatus>;
   /** Diff head SHA of the merge request. */
   diffHeadSha?: Maybe<Scalars['String']>;
+  /**
+   * Diff summaries generated by AI Introduced in 16.1: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  diffLlmSummaries?: Maybe<MergeRequestDiffLlmSummaryConnection>;
   /** References of the base SHA, the head SHA, and the start SHA for this merge request. */
   diffRefs?: Maybe<DiffRefs>;
   /** Details about which files were changed in this merge request. */
@@ -6488,10 +16025,19 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   downvotes: Scalars['Int'];
   /** Indicates if the merge request is a draft. */
   draft: Scalars['Boolean'];
+  /**
+   * Vulnerability finding reports comparison reported on the merge request.
+   * Introduced in 16.1: This feature is an Experiment. It can be changed or
+   * removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  findingReportsComparer?: Maybe<FindingReportsComparer>;
   /** Indicates if the project settings will lead to source branch deletion after merge. */
   forceRemoveSourceBranch?: Maybe<Scalars['Boolean']>;
   /** Indicates if the merge request has CI. */
   hasCi: Scalars['Boolean'];
+  /** Indicates if the source branch has any security reports. */
+  hasSecurityReports: Scalars['Boolean'];
   /** Pipeline running on the branch HEAD of the merge request. */
   headPipeline?: Maybe<Pipeline>;
   /** Human-readable time estimate of the merge request. */
@@ -6519,9 +16065,11 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   mergeStatus?: Maybe<Scalars['String']>;
   /** Merge status of the merge request. */
   mergeStatusEnum?: Maybe<MergeStatus>;
-  /** User who merged this merge request or set it to merge when pipeline succeeds. */
+  /** Number of merge requests in the merge train. */
+  mergeTrainsCount?: Maybe<Scalars['Int']>;
+  /** User who merged this merge request or set it to auto-merge. */
   mergeUser?: Maybe<UserCore>;
-  /** Indicates if the merge has been set to be merged when its pipeline succeeds (MWPS). */
+  /** Indicates if the merge has been set to auto-merge. */
   mergeWhenPipelineSucceeds?: Maybe<Scalars['Boolean']>;
   /** Indicates if the merge request is mergeable. */
   mergeable: Scalars['Boolean'];
@@ -6540,6 +16088,8 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
    * the most recent 500 pipelines will be returned.
    */
   pipelines?: Maybe<PipelineConnection>;
+  /** Timestamp of when the merge request was prepared. */
+  preparedAt?: Maybe<Scalars['Time']>;
   /** Alias for target_project. */
   project: Project;
   /** ID of the merge request project. */
@@ -6554,6 +16104,8 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   reviewers?: Maybe<MergeRequestReviewerConnection>;
   /** Indicates if the merge request is created by @GitLab-Security-Bot. */
   securityAutoFix?: Maybe<Scalars['Boolean']>;
+  /** Indicates if the target branch security reports are out of date. */
+  securityReportsUpToDateOnTargetBranch: Scalars['Boolean'];
   /** Indicates if the merge request will be rebased. */
   shouldBeRebased: Scalars['Boolean'];
   /** Indicates if the source branch of the merge request will be deleted after merge. */
@@ -6568,14 +16120,27 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   sourceProject?: Maybe<Project>;
   /** ID of the merge request source project. */
   sourceProjectId?: Maybe<Scalars['Int']>;
-  /** Indicates if squash on merge is enabled. */
+  /**
+   * Indicates if the merge request is set to be squashed when merged. [Project settings](https://docs.gitlab.com/ee/user/project/merge_requests/squash_and_merge.html#configure-squash-options-for-a-project)
+   * may override this value. Use `squash_on_merge` instead to take project squash
+   * options into account.
+   */
   squash: Scalars['Boolean'];
-  /** Indicates if squash on merge is enabled. */
+  /** Indicates if the merge request will be squashed when merged. */
   squashOnMerge: Scalars['Boolean'];
   /** State of the merge request. */
   state: MergeRequestState;
   /** Indicates if the currently logged in user is subscribed to this merge request. */
   subscribed: Scalars['Boolean'];
+  /**
+   * Suggested reviewers for merge request. Returns `null` if `suggested_reviewers`
+   * feature flag is disabled. This flag is disabled by default and only available
+   * on GitLab.com because the feature is experimental and is subject to change
+   * without notice. Introduced in 15.4: This feature is an Experiment. It can be
+   * changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.4.
+   */
+  suggestedReviewers?: Maybe<SuggestedReviewersType>;
   /** Target branch of the merge request. */
   targetBranch: Scalars['String'];
   /** Indicates if the target branch of the merge request exists. */
@@ -6592,7 +16157,7 @@ export type MergeRequest = CurrentUserTodos & NoteableInterface & Todoable & {
   timelogs: TimelogConnection;
   /** Title of the merge request. */
   title: Scalars['String'];
-  /** The GitLab Flavored Markdown rendering of `title` */
+  /** GitLab Flavored Markdown rendering of `title` */
   titleHtml?: Maybe<Scalars['String']>;
   /** Total time reported as spent on the merge request. */
   totalTimeSpent: Scalars['Int'];
@@ -6620,6 +16185,22 @@ export type MergeRequestApprovedByArgs = {
 
 
 export type MergeRequestAssigneesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type MergeRequestAwardEmojiArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type MergeRequestCommentersArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -6660,6 +16241,14 @@ export type MergeRequestCurrentUserTodosArgs = {
 };
 
 
+export type MergeRequestDiffLlmSummariesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type MergeRequestDiffStatsArgs = {
   path?: InputMaybe<Scalars['String']>;
 };
@@ -6670,6 +16259,11 @@ export type MergeRequestDiscussionsArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type MergeRequestFindingReportsComparerArgs = {
+  reportType: ComparableSecurityReportType;
 };
 
 
@@ -6743,7 +16337,7 @@ export type MergeRequestAcceptInput = {
   iid: Scalars['String'];
   /** Project the merge request to mutate is in. */
   projectPath: Scalars['ID'];
-  /** HEAD SHA at the time when this merge was requested. */
+  /** HEAD SHA at the time when the merge was requested. */
   sha: Scalars['String'];
   /** Should the source branch be removed. */
   shouldRemoveSourceBranch?: InputMaybe<Scalars['Boolean']>;
@@ -6751,7 +16345,7 @@ export type MergeRequestAcceptInput = {
   squash?: InputMaybe<Scalars['Boolean']>;
   /** Custom squash commit message (if squash is true). */
   squashCommitMessage?: InputMaybe<Scalars['String']>;
-  /** How to merge this merge request. */
+  /** How to merge the merge request. */
   strategy?: InputMaybe<MergeStrategyEnum>;
 };
 
@@ -6766,6 +16360,28 @@ export type MergeRequestAcceptPayload = {
   mergeRequest?: Maybe<MergeRequest>;
 };
 
+/** Information relating to rules that must be satisfied to merge this merge request. */
+export type MergeRequestApprovalState = {
+  __typename?: 'MergeRequestApprovalState';
+  /** Indicates if the merge request approval rules are overwritten for the merge request. */
+  approvalRulesOverwritten?: Maybe<Scalars['Boolean']>;
+  /** List of approval rules that are associated with the merge request, but invalid. */
+  invalidApproversRules?: Maybe<Array<ApprovalRule>>;
+  /** List of approval rules associated with the merge request. */
+  rules?: Maybe<Array<ApprovalRule>>;
+  /** List of suggested approvers. */
+  suggestedApprovers?: Maybe<UserCoreConnection>;
+};
+
+
+/** Information relating to rules that must be satisfied to merge this merge request. */
+export type MergeRequestApprovalStateSuggestedApproversArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
 /** A user assigned to a merge request. */
 export type MergeRequestAssignee = User & {
   __typename?: 'MergeRequestAssignee';
@@ -6775,15 +16391,25 @@ export type MergeRequestAssignee = User & {
   authoredMergeRequests?: Maybe<MergeRequestConnection>;
   /** URL of the user's avatar. */
   avatarUrl?: Maybe<Scalars['String']>;
+  /** Bio of the user. */
+  bio?: Maybe<Scalars['String']>;
   /** Indicates if the user is a bot. */
   bot: Scalars['Boolean'];
   /** User callouts that belong to the user. */
   callouts?: Maybe<UserCalloutConnection>;
+  /** User's default commit email. */
+  commitEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the user was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Discord ID of the user. */
+  discord?: Maybe<Scalars['String']>;
   /**
    * User email. Deprecated in 13.7: This was renamed.
    * @deprecated This was renamed. Please use `User.publicEmail`. Deprecated in 13.7.
    */
   email?: Maybe<Scalars['String']>;
+  /** User's email addresses. */
+  emails?: Maybe<EmailConnection>;
   /** Whether Gitpod is enabled at the user level. */
   gitpodEnabled?: Maybe<Scalars['Boolean']>;
   /** Group count for the user. */
@@ -6794,6 +16420,10 @@ export type MergeRequestAssignee = User & {
   groups?: Maybe<GroupConnection>;
   /** ID of the user. */
   id: Scalars['ID'];
+  /** Job title of the user. */
+  jobTitle?: Maybe<Scalars['String']>;
+  /** LinkedIn profile name of the user. */
+  linkedin?: Maybe<Scalars['String']>;
   /** Location of the user. */
   location?: Maybe<Scalars['String']>;
   /** Details of this user's interactions with the merge request. */
@@ -6805,6 +16435,10 @@ export type MergeRequestAssignee = User & {
   name: Scalars['String'];
   /** Personal namespace of the user. */
   namespace?: Maybe<Namespace>;
+  /** User's custom namespace commit emails. */
+  namespaceCommitEmails?: Maybe<NamespaceCommitEmailConnection>;
+  /** Who the user represents or works for. */
+  organization?: Maybe<Scalars['String']>;
   /** Web path to the Gitpod section within user preferences. */
   preferencesGitpodPath?: Maybe<Scalars['String']>;
   /** Web path to enable Gitpod for the user. */
@@ -6817,6 +16451,8 @@ export type MergeRequestAssignee = User & {
   reviewRequestedMergeRequests?: Maybe<MergeRequestConnection>;
   /** Saved replies authored by the user. Will not return saved replies if `saved_replies` feature flag is disabled. */
   savedReplies?: Maybe<SavedReplyConnection>;
+  /** Saved reply authored by the user. Will not return saved reply if `saved_replies` feature flag is disabled. */
+  savedReply?: Maybe<SavedReply>;
   /** Snippets authored by the user. */
   snippets?: Maybe<SnippetConnection>;
   /** Projects starred by the user. */
@@ -6829,6 +16465,15 @@ export type MergeRequestAssignee = User & {
   timelogs?: Maybe<TimelogConnection>;
   /** To-do items of the user. */
   todos?: Maybe<TodoConnection>;
+  /** Twitter username of the user. */
+  twitter?: Maybe<Scalars['String']>;
+  /**
+   * Achievements for the user. Only returns for namespaces where the
+   * `achievements` feature flag is enabled. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  userAchievements?: Maybe<UserAchievementConnection>;
   /** Permissions for the current user on the resource. */
   userPermissions: UserPermissions;
   /** Username of the user. Unique within this instance of GitLab. */
@@ -6837,12 +16482,15 @@ export type MergeRequestAssignee = User & {
   webPath: Scalars['String'];
   /** Web URL of the user. */
   webUrl: Scalars['String'];
+  /** Workspaces owned by the current user. */
+  workspaces?: Maybe<WorkspaceConnection>;
 };
 
 
 /** A user assigned to a merge request. */
 export type MergeRequestAssigneeAssignedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -6871,6 +16519,7 @@ export type MergeRequestAssigneeAssignedMergeRequestsArgs = {
 /** A user assigned to a merge request. */
 export type MergeRequestAssigneeAuthoredMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -6906,6 +16555,15 @@ export type MergeRequestAssigneeCalloutsArgs = {
 
 
 /** A user assigned to a merge request. */
+export type MergeRequestAssigneeEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user assigned to a merge request. */
 export type MergeRequestAssigneeGroupMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -6926,6 +16584,15 @@ export type MergeRequestAssigneeGroupsArgs = {
 
 
 /** A user assigned to a merge request. */
+export type MergeRequestAssigneeNamespaceCommitEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user assigned to a merge request. */
 export type MergeRequestAssigneeProjectMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -6937,6 +16604,7 @@ export type MergeRequestAssigneeProjectMembershipsArgs = {
 /** A user assigned to a merge request. */
 export type MergeRequestAssigneeReviewRequestedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -6972,6 +16640,12 @@ export type MergeRequestAssigneeSavedRepliesArgs = {
 
 
 /** A user assigned to a merge request. */
+export type MergeRequestAssigneeSavedReplyArgs = {
+  id: Scalars['UsersSavedReplyID'];
+};
+
+
+/** A user assigned to a merge request. */
 export type MergeRequestAssigneeSnippetsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7003,6 +16677,7 @@ export type MergeRequestAssigneeTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
@@ -7021,6 +16696,27 @@ export type MergeRequestAssigneeTodosArgs = {
   projectId?: InputMaybe<Array<Scalars['ID']>>;
   state?: InputMaybe<Array<TodoStateEnum>>;
   type?: InputMaybe<Array<TodoTargetEnum>>;
+};
+
+
+/** A user assigned to a merge request. */
+export type MergeRequestAssigneeUserAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user assigned to a merge request. */
+export type MergeRequestAssigneeWorkspacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['RemoteDevelopmentWorkspaceID']>>;
+  includeActualStates?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
 };
 
 /** The connection type for MergeRequestAssignee. */
@@ -7052,15 +16748,25 @@ export type MergeRequestAuthor = User & {
   authoredMergeRequests?: Maybe<MergeRequestConnection>;
   /** URL of the user's avatar. */
   avatarUrl?: Maybe<Scalars['String']>;
+  /** Bio of the user. */
+  bio?: Maybe<Scalars['String']>;
   /** Indicates if the user is a bot. */
   bot: Scalars['Boolean'];
   /** User callouts that belong to the user. */
   callouts?: Maybe<UserCalloutConnection>;
+  /** User's default commit email. */
+  commitEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the user was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Discord ID of the user. */
+  discord?: Maybe<Scalars['String']>;
   /**
    * User email. Deprecated in 13.7: This was renamed.
    * @deprecated This was renamed. Please use `User.publicEmail`. Deprecated in 13.7.
    */
   email?: Maybe<Scalars['String']>;
+  /** User's email addresses. */
+  emails?: Maybe<EmailConnection>;
   /** Whether Gitpod is enabled at the user level. */
   gitpodEnabled?: Maybe<Scalars['Boolean']>;
   /** Group count for the user. */
@@ -7071,6 +16777,10 @@ export type MergeRequestAuthor = User & {
   groups?: Maybe<GroupConnection>;
   /** ID of the user. */
   id: Scalars['ID'];
+  /** Job title of the user. */
+  jobTitle?: Maybe<Scalars['String']>;
+  /** LinkedIn profile name of the user. */
+  linkedin?: Maybe<Scalars['String']>;
   /** Location of the user. */
   location?: Maybe<Scalars['String']>;
   /** Details of this user's interactions with the merge request. */
@@ -7082,6 +16792,10 @@ export type MergeRequestAuthor = User & {
   name: Scalars['String'];
   /** Personal namespace of the user. */
   namespace?: Maybe<Namespace>;
+  /** User's custom namespace commit emails. */
+  namespaceCommitEmails?: Maybe<NamespaceCommitEmailConnection>;
+  /** Who the user represents or works for. */
+  organization?: Maybe<Scalars['String']>;
   /** Web path to the Gitpod section within user preferences. */
   preferencesGitpodPath?: Maybe<Scalars['String']>;
   /** Web path to enable Gitpod for the user. */
@@ -7094,6 +16808,8 @@ export type MergeRequestAuthor = User & {
   reviewRequestedMergeRequests?: Maybe<MergeRequestConnection>;
   /** Saved replies authored by the user. Will not return saved replies if `saved_replies` feature flag is disabled. */
   savedReplies?: Maybe<SavedReplyConnection>;
+  /** Saved reply authored by the user. Will not return saved reply if `saved_replies` feature flag is disabled. */
+  savedReply?: Maybe<SavedReply>;
   /** Snippets authored by the user. */
   snippets?: Maybe<SnippetConnection>;
   /** Projects starred by the user. */
@@ -7106,6 +16822,15 @@ export type MergeRequestAuthor = User & {
   timelogs?: Maybe<TimelogConnection>;
   /** To-do items of the user. */
   todos?: Maybe<TodoConnection>;
+  /** Twitter username of the user. */
+  twitter?: Maybe<Scalars['String']>;
+  /**
+   * Achievements for the user. Only returns for namespaces where the
+   * `achievements` feature flag is enabled. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  userAchievements?: Maybe<UserAchievementConnection>;
   /** Permissions for the current user on the resource. */
   userPermissions: UserPermissions;
   /** Username of the user. Unique within this instance of GitLab. */
@@ -7114,12 +16839,15 @@ export type MergeRequestAuthor = User & {
   webPath: Scalars['String'];
   /** Web URL of the user. */
   webUrl: Scalars['String'];
+  /** Workspaces owned by the current user. */
+  workspaces?: Maybe<WorkspaceConnection>;
 };
 
 
 /** The author of the merge request. */
 export type MergeRequestAuthorAssignedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -7148,6 +16876,7 @@ export type MergeRequestAuthorAssignedMergeRequestsArgs = {
 /** The author of the merge request. */
 export type MergeRequestAuthorAuthoredMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -7183,6 +16912,15 @@ export type MergeRequestAuthorCalloutsArgs = {
 
 
 /** The author of the merge request. */
+export type MergeRequestAuthorEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** The author of the merge request. */
 export type MergeRequestAuthorGroupMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7203,6 +16941,15 @@ export type MergeRequestAuthorGroupsArgs = {
 
 
 /** The author of the merge request. */
+export type MergeRequestAuthorNamespaceCommitEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** The author of the merge request. */
 export type MergeRequestAuthorProjectMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7214,6 +16961,7 @@ export type MergeRequestAuthorProjectMembershipsArgs = {
 /** The author of the merge request. */
 export type MergeRequestAuthorReviewRequestedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7249,6 +16997,12 @@ export type MergeRequestAuthorSavedRepliesArgs = {
 
 
 /** The author of the merge request. */
+export type MergeRequestAuthorSavedReplyArgs = {
+  id: Scalars['UsersSavedReplyID'];
+};
+
+
+/** The author of the merge request. */
 export type MergeRequestAuthorSnippetsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7280,6 +17034,7 @@ export type MergeRequestAuthorTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
@@ -7298,6 +17053,27 @@ export type MergeRequestAuthorTodosArgs = {
   projectId?: InputMaybe<Array<Scalars['ID']>>;
   state?: InputMaybe<Array<TodoStateEnum>>;
   type?: InputMaybe<Array<TodoTargetEnum>>;
+};
+
+
+/** The author of the merge request. */
+export type MergeRequestAuthorUserAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** The author of the merge request. */
+export type MergeRequestAuthorWorkspacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['RemoteDevelopmentWorkspaceID']>>;
+  includeActualStates?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
 };
 
 /** The connection type for MergeRequest. */
@@ -7344,6 +17120,88 @@ export type MergeRequestCreatePayload = {
   mergeRequest?: Maybe<MergeRequest>;
 };
 
+/** A diff summary generated by AI. */
+export type MergeRequestDiffLlmSummary = {
+  __typename?: 'MergeRequestDiffLlmSummary';
+  /** Content of the diff summary. */
+  content: Scalars['String'];
+  /** Timestamp of when the diff summary was created. */
+  createdAt: Scalars['Time'];
+  /** ID of the Merge Request diff associated with the diff summary. */
+  mergeRequestDiffId: Scalars['ID'];
+  /** AI provider that generated the summary. */
+  provider: Scalars['String'];
+  /** Timestamp of when the diff summary was updated. */
+  updatedAt: Scalars['Time'];
+  /** User associated with the diff summary. */
+  user?: Maybe<UserCore>;
+};
+
+/** The connection type for MergeRequestDiffLlmSummary. */
+export type MergeRequestDiffLlmSummaryConnection = {
+  __typename?: 'MergeRequestDiffLlmSummaryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<MergeRequestDiffLlmSummaryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<MergeRequestDiffLlmSummary>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type MergeRequestDiffLlmSummaryEdge = {
+  __typename?: 'MergeRequestDiffLlmSummaryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<MergeRequestDiffLlmSummary>;
+};
+
+/** Represents the Geo sync and verification state of a Merge Request diff */
+export type MergeRequestDiffRegistry = {
+  __typename?: 'MergeRequestDiffRegistry';
+  /** Timestamp when the MergeRequestDiffRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the MergeRequestDiffRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the MergeRequestDiffRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the MergeRequestDiffRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** ID of the Merge Request diff. */
+  mergeRequestDiffId: Scalars['ID'];
+  /** Timestamp after which the MergeRequestDiffRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the MergeRequestDiffRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the MergeRequestDiffRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the MergeRequestDiffRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the MergeRequestDiffRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for MergeRequestDiffRegistry. */
+export type MergeRequestDiffRegistryConnection = {
+  __typename?: 'MergeRequestDiffRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<MergeRequestDiffRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<MergeRequestDiffRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type MergeRequestDiffRegistryEdge = {
+  __typename?: 'MergeRequestDiffRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<MergeRequestDiffRegistry>;
+};
+
 /** An edge in a connection. */
 export type MergeRequestEdge = {
   __typename?: 'MergeRequestEdge';
@@ -7369,15 +17227,25 @@ export type MergeRequestParticipant = User & {
   authoredMergeRequests?: Maybe<MergeRequestConnection>;
   /** URL of the user's avatar. */
   avatarUrl?: Maybe<Scalars['String']>;
+  /** Bio of the user. */
+  bio?: Maybe<Scalars['String']>;
   /** Indicates if the user is a bot. */
   bot: Scalars['Boolean'];
   /** User callouts that belong to the user. */
   callouts?: Maybe<UserCalloutConnection>;
+  /** User's default commit email. */
+  commitEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the user was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Discord ID of the user. */
+  discord?: Maybe<Scalars['String']>;
   /**
    * User email. Deprecated in 13.7: This was renamed.
    * @deprecated This was renamed. Please use `User.publicEmail`. Deprecated in 13.7.
    */
   email?: Maybe<Scalars['String']>;
+  /** User's email addresses. */
+  emails?: Maybe<EmailConnection>;
   /** Whether Gitpod is enabled at the user level. */
   gitpodEnabled?: Maybe<Scalars['Boolean']>;
   /** Group count for the user. */
@@ -7388,6 +17256,10 @@ export type MergeRequestParticipant = User & {
   groups?: Maybe<GroupConnection>;
   /** ID of the user. */
   id: Scalars['ID'];
+  /** Job title of the user. */
+  jobTitle?: Maybe<Scalars['String']>;
+  /** LinkedIn profile name of the user. */
+  linkedin?: Maybe<Scalars['String']>;
   /** Location of the user. */
   location?: Maybe<Scalars['String']>;
   /** Details of this user's interactions with the merge request. */
@@ -7399,6 +17271,10 @@ export type MergeRequestParticipant = User & {
   name: Scalars['String'];
   /** Personal namespace of the user. */
   namespace?: Maybe<Namespace>;
+  /** User's custom namespace commit emails. */
+  namespaceCommitEmails?: Maybe<NamespaceCommitEmailConnection>;
+  /** Who the user represents or works for. */
+  organization?: Maybe<Scalars['String']>;
   /** Web path to the Gitpod section within user preferences. */
   preferencesGitpodPath?: Maybe<Scalars['String']>;
   /** Web path to enable Gitpod for the user. */
@@ -7411,6 +17287,8 @@ export type MergeRequestParticipant = User & {
   reviewRequestedMergeRequests?: Maybe<MergeRequestConnection>;
   /** Saved replies authored by the user. Will not return saved replies if `saved_replies` feature flag is disabled. */
   savedReplies?: Maybe<SavedReplyConnection>;
+  /** Saved reply authored by the user. Will not return saved reply if `saved_replies` feature flag is disabled. */
+  savedReply?: Maybe<SavedReply>;
   /** Snippets authored by the user. */
   snippets?: Maybe<SnippetConnection>;
   /** Projects starred by the user. */
@@ -7423,6 +17301,15 @@ export type MergeRequestParticipant = User & {
   timelogs?: Maybe<TimelogConnection>;
   /** To-do items of the user. */
   todos?: Maybe<TodoConnection>;
+  /** Twitter username of the user. */
+  twitter?: Maybe<Scalars['String']>;
+  /**
+   * Achievements for the user. Only returns for namespaces where the
+   * `achievements` feature flag is enabled. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  userAchievements?: Maybe<UserAchievementConnection>;
   /** Permissions for the current user on the resource. */
   userPermissions: UserPermissions;
   /** Username of the user. Unique within this instance of GitLab. */
@@ -7431,12 +17318,15 @@ export type MergeRequestParticipant = User & {
   webPath: Scalars['String'];
   /** Web URL of the user. */
   webUrl: Scalars['String'];
+  /** Workspaces owned by the current user. */
+  workspaces?: Maybe<WorkspaceConnection>;
 };
 
 
 /** A user participating in a merge request. */
 export type MergeRequestParticipantAssignedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -7465,6 +17355,7 @@ export type MergeRequestParticipantAssignedMergeRequestsArgs = {
 /** A user participating in a merge request. */
 export type MergeRequestParticipantAuthoredMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -7500,6 +17391,15 @@ export type MergeRequestParticipantCalloutsArgs = {
 
 
 /** A user participating in a merge request. */
+export type MergeRequestParticipantEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user participating in a merge request. */
 export type MergeRequestParticipantGroupMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7520,6 +17420,15 @@ export type MergeRequestParticipantGroupsArgs = {
 
 
 /** A user participating in a merge request. */
+export type MergeRequestParticipantNamespaceCommitEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user participating in a merge request. */
 export type MergeRequestParticipantProjectMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7531,6 +17440,7 @@ export type MergeRequestParticipantProjectMembershipsArgs = {
 /** A user participating in a merge request. */
 export type MergeRequestParticipantReviewRequestedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7566,6 +17476,12 @@ export type MergeRequestParticipantSavedRepliesArgs = {
 
 
 /** A user participating in a merge request. */
+export type MergeRequestParticipantSavedReplyArgs = {
+  id: Scalars['UsersSavedReplyID'];
+};
+
+
+/** A user participating in a merge request. */
 export type MergeRequestParticipantSnippetsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7597,6 +17513,7 @@ export type MergeRequestParticipantTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
@@ -7615,6 +17532,27 @@ export type MergeRequestParticipantTodosArgs = {
   projectId?: InputMaybe<Array<Scalars['ID']>>;
   state?: InputMaybe<Array<TodoStateEnum>>;
   type?: InputMaybe<Array<TodoTargetEnum>>;
+};
+
+
+/** A user participating in a merge request. */
+export type MergeRequestParticipantUserAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user participating in a merge request. */
+export type MergeRequestParticipantWorkspacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['RemoteDevelopmentWorkspaceID']>>;
+  includeActualStates?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
 };
 
 /** The connection type for MergeRequestParticipant. */
@@ -7642,6 +17580,8 @@ export type MergeRequestPermissions = {
   __typename?: 'MergeRequestPermissions';
   /** Indicates the user can perform `admin_merge_request` on this resource */
   adminMergeRequest: Scalars['Boolean'];
+  /** Indicates the user can perform `can_approve` on this resource */
+  canApprove: Scalars['Boolean'];
   /** Indicates the user can perform `can_merge` on this resource */
   canMerge: Scalars['Boolean'];
   /** Indicates the user can perform `cherry_pick_on_current_merge_request` on this resource */
@@ -7662,8 +17602,6 @@ export type MergeRequestPermissions = {
 
 /** State of a review of a GitLab merge request. */
 export type MergeRequestReviewState =
-  /** The merge request is attention_requested. */
-  | 'ATTENTION_REQUESTED'
   /** The merge request is reviewed. */
   | 'REVIEWED'
   /** The merge request is unreviewed. */
@@ -7678,15 +17616,25 @@ export type MergeRequestReviewer = User & {
   authoredMergeRequests?: Maybe<MergeRequestConnection>;
   /** URL of the user's avatar. */
   avatarUrl?: Maybe<Scalars['String']>;
+  /** Bio of the user. */
+  bio?: Maybe<Scalars['String']>;
   /** Indicates if the user is a bot. */
   bot: Scalars['Boolean'];
   /** User callouts that belong to the user. */
   callouts?: Maybe<UserCalloutConnection>;
+  /** User's default commit email. */
+  commitEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the user was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Discord ID of the user. */
+  discord?: Maybe<Scalars['String']>;
   /**
    * User email. Deprecated in 13.7: This was renamed.
    * @deprecated This was renamed. Please use `User.publicEmail`. Deprecated in 13.7.
    */
   email?: Maybe<Scalars['String']>;
+  /** User's email addresses. */
+  emails?: Maybe<EmailConnection>;
   /** Whether Gitpod is enabled at the user level. */
   gitpodEnabled?: Maybe<Scalars['Boolean']>;
   /** Group count for the user. */
@@ -7697,6 +17645,10 @@ export type MergeRequestReviewer = User & {
   groups?: Maybe<GroupConnection>;
   /** ID of the user. */
   id: Scalars['ID'];
+  /** Job title of the user. */
+  jobTitle?: Maybe<Scalars['String']>;
+  /** LinkedIn profile name of the user. */
+  linkedin?: Maybe<Scalars['String']>;
   /** Location of the user. */
   location?: Maybe<Scalars['String']>;
   /** Details of this user's interactions with the merge request. */
@@ -7708,6 +17660,10 @@ export type MergeRequestReviewer = User & {
   name: Scalars['String'];
   /** Personal namespace of the user. */
   namespace?: Maybe<Namespace>;
+  /** User's custom namespace commit emails. */
+  namespaceCommitEmails?: Maybe<NamespaceCommitEmailConnection>;
+  /** Who the user represents or works for. */
+  organization?: Maybe<Scalars['String']>;
   /** Web path to the Gitpod section within user preferences. */
   preferencesGitpodPath?: Maybe<Scalars['String']>;
   /** Web path to enable Gitpod for the user. */
@@ -7720,6 +17676,8 @@ export type MergeRequestReviewer = User & {
   reviewRequestedMergeRequests?: Maybe<MergeRequestConnection>;
   /** Saved replies authored by the user. Will not return saved replies if `saved_replies` feature flag is disabled. */
   savedReplies?: Maybe<SavedReplyConnection>;
+  /** Saved reply authored by the user. Will not return saved reply if `saved_replies` feature flag is disabled. */
+  savedReply?: Maybe<SavedReply>;
   /** Snippets authored by the user. */
   snippets?: Maybe<SnippetConnection>;
   /** Projects starred by the user. */
@@ -7732,6 +17690,15 @@ export type MergeRequestReviewer = User & {
   timelogs?: Maybe<TimelogConnection>;
   /** To-do items of the user. */
   todos?: Maybe<TodoConnection>;
+  /** Twitter username of the user. */
+  twitter?: Maybe<Scalars['String']>;
+  /**
+   * Achievements for the user. Only returns for namespaces where the
+   * `achievements` feature flag is enabled. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  userAchievements?: Maybe<UserAchievementConnection>;
   /** Permissions for the current user on the resource. */
   userPermissions: UserPermissions;
   /** Username of the user. Unique within this instance of GitLab. */
@@ -7740,12 +17707,15 @@ export type MergeRequestReviewer = User & {
   webPath: Scalars['String'];
   /** Web URL of the user. */
   webUrl: Scalars['String'];
+  /** Workspaces owned by the current user. */
+  workspaces?: Maybe<WorkspaceConnection>;
 };
 
 
 /** A user assigned to a merge request as a reviewer. */
 export type MergeRequestReviewerAssignedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -7774,6 +17744,7 @@ export type MergeRequestReviewerAssignedMergeRequestsArgs = {
 /** A user assigned to a merge request as a reviewer. */
 export type MergeRequestReviewerAuthoredMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -7809,6 +17780,15 @@ export type MergeRequestReviewerCalloutsArgs = {
 
 
 /** A user assigned to a merge request as a reviewer. */
+export type MergeRequestReviewerEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user assigned to a merge request as a reviewer. */
 export type MergeRequestReviewerGroupMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7829,6 +17809,15 @@ export type MergeRequestReviewerGroupsArgs = {
 
 
 /** A user assigned to a merge request as a reviewer. */
+export type MergeRequestReviewerNamespaceCommitEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user assigned to a merge request as a reviewer. */
 export type MergeRequestReviewerProjectMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7840,6 +17829,7 @@ export type MergeRequestReviewerProjectMembershipsArgs = {
 /** A user assigned to a merge request as a reviewer. */
 export type MergeRequestReviewerReviewRequestedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7875,6 +17865,12 @@ export type MergeRequestReviewerSavedRepliesArgs = {
 
 
 /** A user assigned to a merge request as a reviewer. */
+export type MergeRequestReviewerSavedReplyArgs = {
+  id: Scalars['UsersSavedReplyID'];
+};
+
+
+/** A user assigned to a merge request as a reviewer. */
 export type MergeRequestReviewerSnippetsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -7906,6 +17902,7 @@ export type MergeRequestReviewerTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
@@ -7924,6 +17921,27 @@ export type MergeRequestReviewerTodosArgs = {
   projectId?: InputMaybe<Array<Scalars['ID']>>;
   state?: InputMaybe<Array<TodoStateEnum>>;
   type?: InputMaybe<Array<TodoTargetEnum>>;
+};
+
+
+/** A user assigned to a merge request as a reviewer. */
+export type MergeRequestReviewerUserAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** A user assigned to a merge request as a reviewer. */
+export type MergeRequestReviewerWorkspacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['RemoteDevelopmentWorkspaceID']>>;
+  includeActualStates?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
 };
 
 /** The connection type for MergeRequestReviewer. */
@@ -8088,6 +18106,31 @@ export type MergeRequestSetMilestonePayload = {
   mergeRequest?: Maybe<MergeRequest>;
 };
 
+/** Autogenerated input type of MergeRequestSetReviewers */
+export type MergeRequestSetReviewersInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** IID of the merge request to mutate. */
+  iid: Scalars['String'];
+  /** Operation to perform. Defaults to REPLACE. */
+  operationMode?: InputMaybe<MutationOperationMode>;
+  /** Project the merge request to mutate is in. */
+  projectPath: Scalars['ID'];
+  /** Usernames of reviewers to assign. Replaces existing reviewers by default. */
+  reviewerUsernames: Array<Scalars['String']>;
+};
+
+/** Autogenerated return type of MergeRequestSetReviewers */
+export type MergeRequestSetReviewersPayload = {
+  __typename?: 'MergeRequestSetReviewersPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Merge request after mutation. */
+  mergeRequest?: Maybe<MergeRequest>;
+};
+
 /** Autogenerated input type of MergeRequestSetSubscription */
 export type MergeRequestSetSubscriptionInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -8167,6 +18210,39 @@ export type MergeRequestState =
   /** In open state. */
   | 'opened';
 
+/** Autogenerated input type of MergeRequestUpdateApprovalRule */
+export type MergeRequestUpdateApprovalRuleInput = {
+  /** ID of an approval rule. */
+  approvalRuleId: Scalars['Int'];
+  /** Number of required approvals for a given rule. */
+  approvalsRequired: Scalars['Int'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** IDs of groups as approvers. */
+  groupIds?: InputMaybe<Array<Scalars['String']>>;
+  /** IID of the merge request to mutate. */
+  iid: Scalars['String'];
+  /** Name of the approval rule. */
+  name: Scalars['String'];
+  /** Project the merge request to mutate is in. */
+  projectPath: Scalars['ID'];
+  /** Whether hidden groups should be removed. */
+  removeHiddenGroups?: InputMaybe<Array<Scalars['Boolean']>>;
+  /** IDs of users as approvers. */
+  userIds?: InputMaybe<Array<Scalars['String']>>;
+};
+
+/** Autogenerated return type of MergeRequestUpdateApprovalRule */
+export type MergeRequestUpdateApprovalRulePayload = {
+  __typename?: 'MergeRequestUpdateApprovalRulePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Merge request after mutation. */
+  mergeRequest?: Maybe<MergeRequest>;
+};
+
 /** Autogenerated input type of MergeRequestUpdate */
 export type MergeRequestUpdateInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -8181,6 +18257,8 @@ export type MergeRequestUpdateInput = {
   state?: InputMaybe<MergeRequestNewState>;
   /** Target branch of the merge request. */
   targetBranch?: InputMaybe<Scalars['String']>;
+  /** Estimated time to complete the merge request, or `0` to remove the current estimate. */
+  timeEstimate?: InputMaybe<Scalars['String']>;
   /** Title of the merge request. */
   title?: InputMaybe<Scalars['String']>;
 };
@@ -8217,17 +18295,38 @@ export type MergeStatus =
   | 'UNCHECKED';
 
 export type MergeStrategyEnum =
+  /** Use the add_to_merge_train_when_pipeline_succeeds merge strategy. */
+  | 'ADD_TO_MERGE_TRAIN_WHEN_PIPELINE_SUCCEEDS'
+  /** Use the merge_train merge strategy. */
+  | 'MERGE_TRAIN'
   /** Use the merge_when_pipeline_succeeds merge strategy. */
   | 'MERGE_WHEN_PIPELINE_SUCCEEDS';
 
 export type Metadata = {
   __typename?: 'Metadata';
+  /** Enterprise edition. */
+  enterprise: Scalars['Boolean'];
   /** Metadata about KAS. */
   kas: Kas;
   /** Revision. */
   revision: Scalars['String'];
   /** Version. */
   version: Scalars['String'];
+};
+
+/** Represents a metric image upload */
+export type MetricImage = {
+  __typename?: 'MetricImage';
+  /** File name of the metric image. */
+  fileName?: Maybe<Scalars['String']>;
+  /** File path of the metric image. */
+  filePath?: Maybe<Scalars['String']>;
+  /** ID of the metric upload. */
+  id: Scalars['ID'];
+  /** Internal ID of the metric upload. */
+  iid: Scalars['ID'];
+  /** URL of the metric source. */
+  url: Scalars['String'];
 };
 
 export type MetricsDashboard = {
@@ -8285,7 +18384,7 @@ export type MetricsDashboardAnnotationEdge = {
 };
 
 /** Represents a milestone */
-export type Milestone = {
+export type Milestone = TimeboxReportInterface & {
   __typename?: 'Milestone';
   /** Timestamp of milestone creation. */
   createdAt: Scalars['Time'];
@@ -8308,6 +18407,8 @@ export type Milestone = {
   projectMilestone: Scalars['Boolean'];
   /** Releases associated with this milestone. */
   releases?: Maybe<ReleaseConnection>;
+  /** Historically accurate report about the timebox. */
+  report?: Maybe<TimeboxReport>;
   /** Timestamp of the milestone start date. */
   startDate?: Maybe<Scalars['Time']>;
   /** State of the milestone. */
@@ -8331,6 +18432,12 @@ export type MilestoneReleasesArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents a milestone */
+export type MilestoneReportArgs = {
+  fullPath?: InputMaybe<Scalars['String']>;
 };
 
 /** The connection type for Milestone. */
@@ -8415,25 +18522,77 @@ export type MilestoneWildcardId =
   /** Milestone assigned is due in the future (due date > today). */
   | 'UPCOMING';
 
+/** The position to which the adjacent object should be moved */
+export type MoveType =
+  /** Adjacent object is moved after the object that is being moved. */
+  | 'after'
+  /** Adjacent object is moved before the object that is being moved. */
+  | 'before';
+
 export type Mutation = {
   __typename?: 'Mutation';
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10. */
+  achievementsAward?: Maybe<AchievementsAwardPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8. */
+  achievementsCreate?: Maybe<AchievementsCreatePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11. */
+  achievementsDelete?: Maybe<AchievementsDeletePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10. */
+  achievementsRevoke?: Maybe<AchievementsRevokePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11. */
+  achievementsUpdate?: Maybe<AchievementsUpdatePayload>;
+  addProjectToSecurityDashboard?: Maybe<AddProjectToSecurityDashboardPayload>;
   adminSidekiqQueuesDeleteJobs?: Maybe<AdminSidekiqQueuesDeleteJobsPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11. */
+  aiAction?: Maybe<AiActionPayload>;
   alertSetAssignees?: Maybe<AlertSetAssigneesPayload>;
   alertTodoCreate?: Maybe<AlertTodoCreatePayload>;
+  approveDeployment?: Maybe<ApproveDeploymentPayload>;
+  artifactDestroy?: Maybe<ArtifactDestroyPayload>;
+  auditEventsStreamingDestinationEventsAdd?: Maybe<AuditEventsStreamingDestinationEventsAddPayload>;
+  auditEventsStreamingDestinationEventsRemove?: Maybe<AuditEventsStreamingDestinationEventsRemovePayload>;
+  auditEventsStreamingHeadersCreate?: Maybe<AuditEventsStreamingHeadersCreatePayload>;
+  auditEventsStreamingHeadersDestroy?: Maybe<AuditEventsStreamingHeadersDestroyPayload>;
+  auditEventsStreamingHeadersUpdate?: Maybe<AuditEventsStreamingHeadersUpdatePayload>;
+  auditEventsStreamingInstanceHeadersCreate?: Maybe<AuditEventsStreamingInstanceHeadersCreatePayload>;
+  auditEventsStreamingInstanceHeadersDestroy?: Maybe<AuditEventsStreamingInstanceHeadersDestroyPayload>;
+  auditEventsStreamingInstanceHeadersUpdate?: Maybe<AuditEventsStreamingInstanceHeadersUpdatePayload>;
   awardEmojiAdd?: Maybe<AwardEmojiAddPayload>;
   awardEmojiRemove?: Maybe<AwardEmojiRemovePayload>;
   awardEmojiToggle?: Maybe<AwardEmojiTogglePayload>;
+  boardEpicCreate?: Maybe<BoardEpicCreatePayload>;
   boardListCreate?: Maybe<BoardListCreatePayload>;
-  /** @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.3. */
+  boardListUpdateLimitMetrics?: Maybe<BoardListUpdateLimitMetricsPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0. */
+  buildForecast?: Maybe<BuildForecastPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10. */
+  bulkDestroyJobArtifacts?: Maybe<BulkDestroyJobArtifactsPayload>;
+  /** **BETA** This endpoint is subject to change without notice. */
+  bulkEnableDevopsAdoptionNamespaces?: Maybe<BulkEnableDevopsAdoptionNamespacesPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.3. */
   bulkRunnerDelete?: Maybe<BulkRunnerDeletePayload>;
-  /** @deprecated This was renamed. Please use `ProjectCiCdSettingsUpdate`. Deprecated in 15.0. */
-  ciCdSettingsUpdate?: Maybe<CiCdSettingsUpdatePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11. */
+  catalogResourcesCreate?: Maybe<CatalogResourcesCreatePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0. */
+  ciAiGenerateConfig?: Maybe<CiAiGenerateConfigPayload>;
   ciJobTokenScopeAddProject?: Maybe<CiJobTokenScopeAddProjectPayload>;
   ciJobTokenScopeRemoveProject?: Maybe<CiJobTokenScopeRemoveProjectPayload>;
   clusterAgentDelete?: Maybe<ClusterAgentDeletePayload>;
   clusterAgentTokenCreate?: Maybe<ClusterAgentTokenCreatePayload>;
   clusterAgentTokenRevoke?: Maybe<ClusterAgentTokenRevokePayload>;
   commitCreate?: Maybe<CommitCreatePayload>;
+  /**
+   * Configure Container Scanning for a project by enabling Container Scanning in a new or modified
+   * `.gitlab-ci.yml` file in a new branch. The new branch and a URL to
+   * create a merge request are part of the response.
+   */
+  configureContainerScanning?: Maybe<ConfigureContainerScanningPayload>;
+  /**
+   * Configure Dependency Scanning for a project by enabling Dependency Scanning in a new or modified
+   * `.gitlab-ci.yml` file in a new branch. The new branch and a URL to
+   * create a Merge Request are a part of the response.
+   */
+  configureDependencyScanning?: Maybe<ConfigureDependencyScanningPayload>;
   /**
    * Configure SAST for a project by enabling SAST in a new or modified
    * `.gitlab-ci.yml` file in a new branch. The new branch and a URL to
@@ -8454,20 +18613,22 @@ export type Mutation = {
    * response.
    */
   configureSecretDetection?: Maybe<ConfigureSecretDetectionPayload>;
+  corpusCreate?: Maybe<CorpusCreatePayload>;
   createAlertIssue?: Maybe<CreateAlertIssuePayload>;
+  /** @deprecated Underlying feature was removed in 16.0. Deprecated in 16.0. */
   createAnnotation?: Maybe<CreateAnnotationPayload>;
   createBoard?: Maybe<CreateBoardPayload>;
   createBranch?: Maybe<CreateBranchPayload>;
   createClusterAgent?: Maybe<CreateClusterAgentPayload>;
-  /**
-   *  Available only when feature flag `custom_emoji` is enabled. This flag is
-   * disabled by default, because the feature is experimental and is subject to
-   * change without notice.
-   */
+  createComplianceFramework?: Maybe<CreateComplianceFrameworkPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 13.6. */
   createCustomEmoji?: Maybe<CreateCustomEmojiPayload>;
   createDiffNote?: Maybe<CreateDiffNotePayload>;
+  createEpic?: Maybe<CreateEpicPayload>;
   createImageDiffNote?: Maybe<CreateImageDiffNotePayload>;
   createIssue?: Maybe<CreateIssuePayload>;
+  /** @deprecated Use iterationCreate. Deprecated in 14.0. */
+  createIteration?: Maybe<CreateIterationPayload>;
   /**
    * Creates a Note.
    * If the body of the Note contains only quick actions,
@@ -8475,30 +18636,49 @@ export type Mutation = {
    * returned.
    */
   createNote?: Maybe<CreateNotePayload>;
+  createRequirement?: Maybe<CreateRequirementPayload>;
   createSnippet?: Maybe<CreateSnippetPayload>;
+  createTestCase?: Maybe<CreateTestCasePayload>;
   customerRelationsContactCreate?: Maybe<CustomerRelationsContactCreatePayload>;
   customerRelationsContactUpdate?: Maybe<CustomerRelationsContactUpdatePayload>;
   customerRelationsOrganizationCreate?: Maybe<CustomerRelationsOrganizationCreatePayload>;
   customerRelationsOrganizationUpdate?: Maybe<CustomerRelationsOrganizationUpdatePayload>;
+  dastOnDemandScanCreate?: Maybe<DastOnDemandScanCreatePayload>;
+  dastProfileCreate?: Maybe<DastProfileCreatePayload>;
+  dastProfileDelete?: Maybe<DastProfileDeletePayload>;
+  dastProfileRun?: Maybe<DastProfileRunPayload>;
+  dastProfileUpdate?: Maybe<DastProfileUpdatePayload>;
+  dastScannerProfileCreate?: Maybe<DastScannerProfileCreatePayload>;
+  dastScannerProfileDelete?: Maybe<DastScannerProfileDeletePayload>;
+  dastScannerProfileUpdate?: Maybe<DastScannerProfileUpdatePayload>;
+  dastSiteProfileCreate?: Maybe<DastSiteProfileCreatePayload>;
+  dastSiteProfileDelete?: Maybe<DastSiteProfileDeletePayload>;
+  dastSiteProfileUpdate?: Maybe<DastSiteProfileUpdatePayload>;
+  dastSiteTokenCreate?: Maybe<DastSiteTokenCreatePayload>;
+  dastSiteValidationCreate?: Maybe<DastSiteValidationCreatePayload>;
+  dastSiteValidationRevoke?: Maybe<DastSiteValidationRevokePayload>;
+  /** @deprecated Underlying feature was removed in 16.0. Deprecated in 16.0. */
   deleteAnnotation?: Maybe<DeleteAnnotationPayload>;
   designManagementDelete?: Maybe<DesignManagementDeletePayload>;
   designManagementMove?: Maybe<DesignManagementMovePayload>;
+  designManagementUpdate?: Maybe<DesignManagementUpdatePayload>;
   designManagementUpload?: Maybe<DesignManagementUploadPayload>;
   destroyBoard?: Maybe<DestroyBoardPayload>;
   destroyBoardList?: Maybe<DestroyBoardListPayload>;
+  destroyComplianceFramework?: Maybe<DestroyComplianceFrameworkPayload>;
   destroyContainerRepository?: Maybe<DestroyContainerRepositoryPayload>;
   destroyContainerRepositoryTags?: Maybe<DestroyContainerRepositoryTagsPayload>;
-  /**
-   *  Available only when feature flag `custom_emoji` is enabled. This flag is
-   * disabled by default, because the feature is experimental and is subject to
-   * change without notice.
-   */
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 13.6. */
   destroyCustomEmoji?: Maybe<DestroyCustomEmojiPayload>;
+  destroyEpicBoard?: Maybe<DestroyEpicBoardPayload>;
   destroyNote?: Maybe<DestroyNotePayload>;
   destroyPackage?: Maybe<DestroyPackagePayload>;
   destroyPackageFile?: Maybe<DestroyPackageFilePayload>;
   destroyPackageFiles?: Maybe<DestroyPackageFilesPayload>;
+  destroyPackages?: Maybe<DestroyPackagesPayload>;
   destroySnippet?: Maybe<DestroySnippetPayload>;
+  /** **BETA** This endpoint is subject to change without notice. */
+  disableDevopsAdoptionNamespace?: Maybe<DisableDevopsAdoptionNamespacePayload>;
   /** Toggles the resolved state of a discussion */
   discussionToggleResolve?: Maybe<DiscussionToggleResolvePayload>;
   /**
@@ -8508,29 +18688,91 @@ export type Mutation = {
    * that a user has mutation access.
    */
   echoCreate?: Maybe<EchoCreatePayload>;
+  /** **BETA** This endpoint is subject to change without notice. */
+  enableDevopsAdoptionNamespace?: Maybe<EnableDevopsAdoptionNamespacePayload>;
+  /** Create an environment. */
+  environmentCreate?: Maybe<EnvironmentCreatePayload>;
+  /** Delete an environment. */
+  environmentDelete?: Maybe<EnvironmentDeletePayload>;
+  /** Stop an environment. */
+  environmentStop?: Maybe<EnvironmentStopPayload>;
+  /** Update an environment. */
+  environmentUpdate?: Maybe<EnvironmentUpdatePayload>;
   /**
    * **Deprecated** This endpoint is planned to be removed along with
    * certificate-based clusters. [See this
    * epic](https://gitlab.com/groups/gitlab-org/configure/-/epics/8) for more information.
    */
   environmentsCanaryIngressUpdate?: Maybe<EnvironmentsCanaryIngressUpdatePayload>;
+  epicAddIssue?: Maybe<EpicAddIssuePayload>;
+  epicBoardCreate?: Maybe<EpicBoardCreatePayload>;
+  epicBoardListCreate?: Maybe<EpicBoardListCreatePayload>;
+  /** Destroys an epic board list. */
+  epicBoardListDestroy?: Maybe<EpicBoardListDestroyPayload>;
+  epicBoardUpdate?: Maybe<EpicBoardUpdatePayload>;
+  epicMoveList?: Maybe<EpicMoveListPayload>;
+  epicSetSubscription?: Maybe<EpicSetSubscriptionPayload>;
+  epicTreeReorder?: Maybe<EpicTreeReorderPayload>;
+  escalationPolicyCreate?: Maybe<EscalationPolicyCreatePayload>;
+  escalationPolicyDestroy?: Maybe<EscalationPolicyDestroyPayload>;
+  escalationPolicyUpdate?: Maybe<EscalationPolicyUpdatePayload>;
+  exportRequirements?: Maybe<ExportRequirementsPayload>;
+  externalAuditEventDestinationCreate?: Maybe<ExternalAuditEventDestinationCreatePayload>;
+  externalAuditEventDestinationDestroy?: Maybe<ExternalAuditEventDestinationDestroyPayload>;
+  externalAuditEventDestinationUpdate?: Maybe<ExternalAuditEventDestinationUpdatePayload>;
+  /**
+   * Mutates a Geo registry. Does not mutate the registry entry if
+   * `geo_registries_update_mutation` feature flag is disabled. Introduced in 16.1:
+   * This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  geoRegistriesUpdate?: Maybe<GeoRegistriesUpdatePayload>;
+  gitlabSubscriptionActivate?: Maybe<GitlabSubscriptionActivatePayload>;
+  googleCloudLoggingConfigurationCreate?: Maybe<GoogleCloudLoggingConfigurationCreatePayload>;
+  googleCloudLoggingConfigurationDestroy?: Maybe<GoogleCloudLoggingConfigurationDestroyPayload>;
+  googleCloudLoggingConfigurationUpdate?: Maybe<GoogleCloudLoggingConfigurationUpdatePayload>;
+  groupMemberBulkUpdate?: Maybe<GroupMemberBulkUpdatePayload>;
   groupUpdate?: Maybe<GroupUpdatePayload>;
   httpIntegrationCreate?: Maybe<HttpIntegrationCreatePayload>;
   httpIntegrationDestroy?: Maybe<HttpIntegrationDestroyPayload>;
   httpIntegrationResetToken?: Maybe<HttpIntegrationResetTokenPayload>;
   httpIntegrationUpdate?: Maybe<HttpIntegrationUpdatePayload>;
+  instanceExternalAuditEventDestinationCreate?: Maybe<InstanceExternalAuditEventDestinationCreatePayload>;
+  instanceExternalAuditEventDestinationDestroy?: Maybe<InstanceExternalAuditEventDestinationDestroyPayload>;
+  instanceExternalAuditEventDestinationUpdate?: Maybe<InstanceExternalAuditEventDestinationUpdatePayload>;
+  issuableResourceLinkCreate?: Maybe<IssuableResourceLinkCreatePayload>;
+  issuableResourceLinkDestroy?: Maybe<IssuableResourceLinkDestroyPayload>;
+  issueLinkAlerts?: Maybe<IssueLinkAlertsPayload>;
   issueMove?: Maybe<IssueMovePayload>;
   issueMoveList?: Maybe<IssueMoveListPayload>;
   issueSetAssignees?: Maybe<IssueSetAssigneesPayload>;
   issueSetConfidential?: Maybe<IssueSetConfidentialPayload>;
   issueSetCrmContacts?: Maybe<IssueSetCrmContactsPayload>;
   issueSetDueDate?: Maybe<IssueSetDueDatePayload>;
+  issueSetEpic?: Maybe<IssueSetEpicPayload>;
+  issueSetEscalationPolicy?: Maybe<IssueSetEscalationPolicyPayload>;
   issueSetEscalationStatus?: Maybe<IssueSetEscalationStatusPayload>;
+  issueSetIteration?: Maybe<IssueSetIterationPayload>;
   issueSetLocked?: Maybe<IssueSetLockedPayload>;
   issueSetSeverity?: Maybe<IssueSetSeverityPayload>;
   issueSetSubscription?: Maybe<IssueSetSubscriptionPayload>;
+  issueSetWeight?: Maybe<IssueSetWeightPayload>;
+  issueUnlinkAlert?: Maybe<IssueUnlinkAlertPayload>;
+  /**
+   * Allows updating several properties for a set of issues. Does nothing if the
+   * `bulk_update_issues_mutation` feature flag is disabled. Introduced in 15.9:
+   * This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  issuesBulkUpdate?: Maybe<IssuesBulkUpdatePayload>;
+  iterationCadenceCreate?: Maybe<IterationCadenceCreatePayload>;
+  iterationCadenceDestroy?: Maybe<IterationCadenceDestroyPayload>;
+  iterationCadenceUpdate?: Maybe<IterationCadenceUpdatePayload>;
+  iterationCreate?: Maybe<IterationCreatePayload>;
+  iterationDelete?: Maybe<IterationDeletePayload>;
   jiraImportStart?: Maybe<JiraImportStartPayload>;
   jiraImportUsers?: Maybe<JiraImportUsersPayload>;
+  jobArtifactsDestroy?: Maybe<JobArtifactsDestroyPayload>;
   jobCancel?: Maybe<JobCancelPayload>;
   jobPlay?: Maybe<JobPlayPayload>;
   jobRetry?: Maybe<JobRetryPayload>;
@@ -8550,37 +18792,85 @@ export type Mutation = {
   mergeRequestSetLabels?: Maybe<MergeRequestSetLabelsPayload>;
   mergeRequestSetLocked?: Maybe<MergeRequestSetLockedPayload>;
   mergeRequestSetMilestone?: Maybe<MergeRequestSetMilestonePayload>;
+  mergeRequestSetReviewers?: Maybe<MergeRequestSetReviewersPayload>;
   mergeRequestSetSubscription?: Maybe<MergeRequestSetSubscriptionPayload>;
   /** Update attributes of a merge request */
   mergeRequestUpdate?: Maybe<MergeRequestUpdatePayload>;
+  mergeRequestUpdateApprovalRule?: Maybe<MergeRequestUpdateApprovalRulePayload>;
+  namespaceBanDestroy?: Maybe<NamespaceBanDestroyPayload>;
+  namespaceCiCdSettingsUpdate?: Maybe<NamespaceCiCdSettingsUpdatePayload>;
+  namespaceIncreaseStorageTemporarily?: Maybe<NamespaceIncreaseStorageTemporarilyPayload>;
+  oncallRotationCreate?: Maybe<OncallRotationCreatePayload>;
+  oncallRotationDestroy?: Maybe<OncallRotationDestroyPayload>;
+  oncallRotationUpdate?: Maybe<OncallRotationUpdatePayload>;
+  oncallScheduleCreate?: Maybe<OncallScheduleCreatePayload>;
+  oncallScheduleDestroy?: Maybe<OncallScheduleDestroyPayload>;
+  oncallScheduleUpdate?: Maybe<OncallScheduleUpdatePayload>;
   pagesMarkOnboardingComplete?: Maybe<PagesMarkOnboardingCompletePayload>;
   pipelineCancel?: Maybe<PipelineCancelPayload>;
   pipelineDestroy?: Maybe<PipelineDestroyPayload>;
   pipelineRetry?: Maybe<PipelineRetryPayload>;
+  pipelineScheduleCreate?: Maybe<PipelineScheduleCreatePayload>;
+  pipelineScheduleDelete?: Maybe<PipelineScheduleDeletePayload>;
+  pipelineSchedulePlay?: Maybe<PipelineSchedulePlayPayload>;
+  pipelineScheduleTakeOwnership?: Maybe<PipelineScheduleTakeOwnershipPayload>;
+  pipelineScheduleUpdate?: Maybe<PipelineScheduleUpdatePayload>;
   projectCiCdSettingsUpdate?: Maybe<ProjectCiCdSettingsUpdatePayload>;
+  projectInitializeProductAnalytics?: Maybe<ProjectInitializeProductAnalyticsPayload>;
+  /** Updates multiple members of a project. To use this mutation, you must have at least the Maintainer role. */
+  projectMemberBulkUpdate?: Maybe<ProjectMemberBulkUpdatePayload>;
+  /** Assign (or unset) a compliance framework to a project. */
+  projectSetComplianceFramework?: Maybe<ProjectSetComplianceFrameworkPayload>;
+  projectSetLocked?: Maybe<ProjectSetLockedPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9. */
+  projectSyncFork?: Maybe<ProjectSyncForkPayload>;
   prometheusIntegrationCreate?: Maybe<PrometheusIntegrationCreatePayload>;
   prometheusIntegrationResetToken?: Maybe<PrometheusIntegrationResetTokenPayload>;
   prometheusIntegrationUpdate?: Maybe<PrometheusIntegrationUpdatePayload>;
+  promoteToEpic?: Maybe<PromoteToEpicPayload>;
   releaseAssetLinkCreate?: Maybe<ReleaseAssetLinkCreatePayload>;
   releaseAssetLinkDelete?: Maybe<ReleaseAssetLinkDeletePayload>;
   releaseAssetLinkUpdate?: Maybe<ReleaseAssetLinkUpdatePayload>;
   releaseCreate?: Maybe<ReleaseCreatePayload>;
   releaseDelete?: Maybe<ReleaseDeletePayload>;
   releaseUpdate?: Maybe<ReleaseUpdatePayload>;
+  removeProjectFromSecurityDashboard?: Maybe<RemoveProjectFromSecurityDashboardPayload>;
   /** Repositions a DiffNote on an image (a `Note` where the `position.positionType` is `"image"`) */
   repositionImageDiffNote?: Maybe<RepositionImageDiffNotePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10. */
+  runnerCreate?: Maybe<RunnerCreatePayload>;
   runnerDelete?: Maybe<RunnerDeletePayload>;
   runnerUpdate?: Maybe<RunnerUpdatePayload>;
   runnersRegistrationTokenReset?: Maybe<RunnersRegistrationTokenResetPayload>;
   savedReplyCreate?: Maybe<SavedReplyCreatePayload>;
   savedReplyDestroy?: Maybe<SavedReplyDestroyPayload>;
   savedReplyUpdate?: Maybe<SavedReplyUpdatePayload>;
+  /** Commits the `policy_yaml` content to the assigned security policy project for the given project (`full_path`) */
+  scanExecutionPolicyCommit?: Maybe<ScanExecutionPolicyCommitPayload>;
+  securityFindingCreateIssue?: Maybe<SecurityFindingCreateIssuePayload>;
+  securityFindingCreateMergeRequest?: Maybe<SecurityFindingCreateMergeRequestPayload>;
+  securityFindingDismiss?: Maybe<SecurityFindingDismissPayload>;
+  securityFindingRevertToDetected?: Maybe<SecurityFindingRevertToDetectedPayload>;
+  /**
+   * Assigns the specified project(`security_policy_project_id`) as security policy
+   * project for the given project(`full_path`). If the project already has a
+   * security policy project, this reassigns the project's security policy project
+   * with the given `security_policy_project_id`
+   */
+  securityPolicyProjectAssign?: Maybe<SecurityPolicyProjectAssignPayload>;
+  /** Creates and assigns a security policy project for the given project (`full_path`) */
+  securityPolicyProjectCreate?: Maybe<SecurityPolicyProjectCreatePayload>;
+  /** Unassigns the security policy project for the given project (`full_path`). */
+  securityPolicyProjectUnassign?: Maybe<SecurityPolicyProjectUnassignPayload>;
+  securityTrainingUpdate?: Maybe<SecurityTrainingUpdatePayload>;
   terraformStateDelete?: Maybe<TerraformStateDeletePayload>;
   terraformStateLock?: Maybe<TerraformStateLockPayload>;
   terraformStateUnlock?: Maybe<TerraformStateUnlockPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.6. */
   timelineEventCreate?: Maybe<TimelineEventCreatePayload>;
   timelineEventDestroy?: Maybe<TimelineEventDestroyPayload>;
   timelineEventPromoteFromNote?: Maybe<TimelineEventPromoteFromNotePayload>;
+  timelineEventTagCreate?: Maybe<TimelineEventTagCreatePayload>;
   timelineEventUpdate?: Maybe<TimelineEventUpdatePayload>;
   timelogCreate?: Maybe<TimelogCreatePayload>;
   timelogDelete?: Maybe<TimelogDeletePayload>;
@@ -8591,10 +18881,24 @@ export type Mutation = {
   todosMarkAllDone?: Maybe<TodosMarkAllDonePayload>;
   updateAlertStatus?: Maybe<UpdateAlertStatusPayload>;
   updateBoard?: Maybe<UpdateBoardPayload>;
+  updateBoardEpicUserPreferences?: Maybe<UpdateBoardEpicUserPreferencesPayload>;
   updateBoardList?: Maybe<UpdateBoardListPayload>;
+  updateComplianceFramework?: Maybe<UpdateComplianceFrameworkPayload>;
   updateContainerExpirationPolicy?: Maybe<UpdateContainerExpirationPolicyPayload>;
+  /**
+   * These settings can be adjusted by the group Owner or Maintainer.
+   * [Issue 370471](https://gitlab.com/gitlab-org/gitlab/-/issues/370471) proposes limiting
+   * this to Owners only to match the permissions level in the user interface.
+   */
   updateDependencyProxyImageTtlGroupPolicy?: Maybe<UpdateDependencyProxyImageTtlGroupPolicyPayload>;
+  /**
+   * These settings can be adjusted by the group Owner or Maintainer.
+   * [Issue 370471](https://gitlab.com/gitlab-org/gitlab/-/issues/370471) proposes limiting
+   * this to Owners only to match the permissions level in the user interface.
+   */
   updateDependencyProxySettings?: Maybe<UpdateDependencyProxySettingsPayload>;
+  updateEpic?: Maybe<UpdateEpicPayload>;
+  updateEpicBoardList?: Maybe<UpdateEpicBoardListPayload>;
   /**
    * Updates a DiffNote on an image (a `Note` where the `position.positionType` is `"image"`).
    * If the body of the Note contains only quick actions,
@@ -8603,6 +18907,12 @@ export type Mutation = {
    */
   updateImageDiffNote?: Maybe<UpdateImageDiffNotePayload>;
   updateIssue?: Maybe<UpdateIssuePayload>;
+  updateIteration?: Maybe<UpdateIterationPayload>;
+  /**
+   * These settings can be adjusted by the group Owner or Maintainer.
+   * [Issue 370471](https://gitlab.com/gitlab-org/gitlab/-/issues/370471) proposes limiting
+   * this to Owners only to match the permissions level in the user interface.
+   */
   updateNamespacePackageSettings?: Maybe<UpdateNamespacePackageSettingsPayload>;
   /**
    * Updates a Note.
@@ -8612,63 +18922,109 @@ export type Mutation = {
    */
   updateNote?: Maybe<UpdateNotePayload>;
   updatePackagesCleanupPolicy?: Maybe<UpdatePackagesCleanupPolicyPayload>;
+  updateRequirement?: Maybe<UpdateRequirementPayload>;
   updateSnippet?: Maybe<UpdateSnippetPayload>;
   /** Deletes an upload. */
   uploadDelete?: Maybe<UploadDeletePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1. */
+  userAchievementsDelete?: Maybe<UserAchievementsDeletePayload>;
   userCalloutCreate?: Maybe<UserCalloutCreatePayload>;
   userPreferencesUpdate?: Maybe<UserPreferencesUpdatePayload>;
+  userSetNamespaceCommitEmail?: Maybe<UserSetNamespaceCommitEmailPayload>;
+  vulnerabilityConfirm?: Maybe<VulnerabilityConfirmPayload>;
+  vulnerabilityCreate?: Maybe<VulnerabilityCreatePayload>;
+  vulnerabilityDismiss?: Maybe<VulnerabilityDismissPayload>;
+  vulnerabilityExternalIssueLinkCreate?: Maybe<VulnerabilityExternalIssueLinkCreatePayload>;
+  vulnerabilityExternalIssueLinkDestroy?: Maybe<VulnerabilityExternalIssueLinkDestroyPayload>;
+  vulnerabilityIssueLinkCreate?: Maybe<VulnerabilityIssueLinkCreatePayload>;
+  vulnerabilityResolve?: Maybe<VulnerabilityResolvePayload>;
+  vulnerabilityRevertToDetected?: Maybe<VulnerabilityRevertToDetectedPayload>;
   /**
-   * Creates a work item. Available only when feature flag `work_items` is enabled.
-   * Introduced in 15.1: This feature is in Alpha. It can be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Converts the work item to a new type Introduced in 15.11: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  workItemConvert?: Maybe<WorkItemConvertPayload>;
+  /**
+   * Creates a work item. Introduced in 15.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItemCreate?: Maybe<WorkItemCreatePayload>;
   /**
-   * Creates a work item from a task in another work item's description. Available
-   * only when feature flag `work_items` is enabled. Introduced in 15.1: This
-   * feature is in Alpha. It can be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Creates a work item from a task in another work item's description. Introduced
+   * in 15.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItemCreateFromTask?: Maybe<WorkItemCreateFromTaskPayload>;
   /**
-   * Deletes a work item. Available only when feature flag `work_items` is enabled.
-   * Introduced in 15.1: This feature is in Alpha. It can be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Deletes a work item. Introduced in 15.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItemDelete?: Maybe<WorkItemDeletePayload>;
   /**
-   * Deletes a task in a work item's description. Available only when feature flag
-   * `work_items` is enabled. Introduced in 15.1: This feature is in Alpha. It can
-   * be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Deletes a task in a work item's description. Introduced in 15.1: This feature
+   * is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItemDeleteTask?: Maybe<WorkItemDeleteTaskPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10. */
+  workItemExport?: Maybe<WorkItemExportPayload>;
   /**
-   * Updates a work item by Global ID. Available only when feature flag
-   * `work_items` is enabled. Introduced in 15.1: This feature is in Alpha. It can
-   * be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Updates a work item by Global ID. Introduced in 15.1: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItemUpdate?: Maybe<WorkItemUpdatePayload>;
   /**
-   * Updates a work item's task by Global ID. Available only when feature flag
-   * `work_items` is enabled. Introduced in 15.1: This feature is in Alpha. It can
-   * be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Updates a work item's task by Global ID. Introduced in 15.1: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItemUpdateTask?: Maybe<WorkItemUpdateTaskPayload>;
-  /**
-   * Updates the attributes of a work item's widgets by global ID. Available only
-   * when feature flag `work_items` is enabled. Introduced in 15.1: This feature is
-   * in Alpha. It can be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
-   */
-  workItemUpdateWidgets?: Maybe<WorkItemUpdateWidgetsPayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0. */
+  workspaceCreate?: Maybe<WorkspaceCreatePayload>;
+  /** @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0. */
+  workspaceUpdate?: Maybe<WorkspaceUpdatePayload>;
+};
+
+
+export type MutationAchievementsAwardArgs = {
+  input: AchievementsAwardInput;
+};
+
+
+export type MutationAchievementsCreateArgs = {
+  input: AchievementsCreateInput;
+};
+
+
+export type MutationAchievementsDeleteArgs = {
+  input: AchievementsDeleteInput;
+};
+
+
+export type MutationAchievementsRevokeArgs = {
+  input: AchievementsRevokeInput;
+};
+
+
+export type MutationAchievementsUpdateArgs = {
+  input: AchievementsUpdateInput;
+};
+
+
+export type MutationAddProjectToSecurityDashboardArgs = {
+  input: AddProjectToSecurityDashboardInput;
 };
 
 
 export type MutationAdminSidekiqQueuesDeleteJobsArgs = {
   input: AdminSidekiqQueuesDeleteJobsInput;
+};
+
+
+export type MutationAiActionArgs = {
+  input: AiActionInput;
 };
 
 
@@ -8679,6 +19035,56 @@ export type MutationAlertSetAssigneesArgs = {
 
 export type MutationAlertTodoCreateArgs = {
   input: AlertTodoCreateInput;
+};
+
+
+export type MutationApproveDeploymentArgs = {
+  input: ApproveDeploymentInput;
+};
+
+
+export type MutationArtifactDestroyArgs = {
+  input: ArtifactDestroyInput;
+};
+
+
+export type MutationAuditEventsStreamingDestinationEventsAddArgs = {
+  input: AuditEventsStreamingDestinationEventsAddInput;
+};
+
+
+export type MutationAuditEventsStreamingDestinationEventsRemoveArgs = {
+  input: AuditEventsStreamingDestinationEventsRemoveInput;
+};
+
+
+export type MutationAuditEventsStreamingHeadersCreateArgs = {
+  input: AuditEventsStreamingHeadersCreateInput;
+};
+
+
+export type MutationAuditEventsStreamingHeadersDestroyArgs = {
+  input: AuditEventsStreamingHeadersDestroyInput;
+};
+
+
+export type MutationAuditEventsStreamingHeadersUpdateArgs = {
+  input: AuditEventsStreamingHeadersUpdateInput;
+};
+
+
+export type MutationAuditEventsStreamingInstanceHeadersCreateArgs = {
+  input: AuditEventsStreamingInstanceHeadersCreateInput;
+};
+
+
+export type MutationAuditEventsStreamingInstanceHeadersDestroyArgs = {
+  input: AuditEventsStreamingInstanceHeadersDestroyInput;
+};
+
+
+export type MutationAuditEventsStreamingInstanceHeadersUpdateArgs = {
+  input: AuditEventsStreamingInstanceHeadersUpdateInput;
 };
 
 
@@ -8697,8 +19103,33 @@ export type MutationAwardEmojiToggleArgs = {
 };
 
 
+export type MutationBoardEpicCreateArgs = {
+  input: BoardEpicCreateInput;
+};
+
+
 export type MutationBoardListCreateArgs = {
   input: BoardListCreateInput;
+};
+
+
+export type MutationBoardListUpdateLimitMetricsArgs = {
+  input: BoardListUpdateLimitMetricsInput;
+};
+
+
+export type MutationBuildForecastArgs = {
+  input: BuildForecastInput;
+};
+
+
+export type MutationBulkDestroyJobArtifactsArgs = {
+  input: BulkDestroyJobArtifactsInput;
+};
+
+
+export type MutationBulkEnableDevopsAdoptionNamespacesArgs = {
+  input: BulkEnableDevopsAdoptionNamespacesInput;
 };
 
 
@@ -8707,8 +19138,13 @@ export type MutationBulkRunnerDeleteArgs = {
 };
 
 
-export type MutationCiCdSettingsUpdateArgs = {
-  input: CiCdSettingsUpdateInput;
+export type MutationCatalogResourcesCreateArgs = {
+  input: CatalogResourcesCreateInput;
+};
+
+
+export type MutationCiAiGenerateConfigArgs = {
+  input: CiAiGenerateConfigInput;
 };
 
 
@@ -8742,6 +19178,16 @@ export type MutationCommitCreateArgs = {
 };
 
 
+export type MutationConfigureContainerScanningArgs = {
+  input: ConfigureContainerScanningInput;
+};
+
+
+export type MutationConfigureDependencyScanningArgs = {
+  input: ConfigureDependencyScanningInput;
+};
+
+
 export type MutationConfigureSastArgs = {
   input: ConfigureSastInput;
 };
@@ -8754,6 +19200,11 @@ export type MutationConfigureSastIacArgs = {
 
 export type MutationConfigureSecretDetectionArgs = {
   input: ConfigureSecretDetectionInput;
+};
+
+
+export type MutationCorpusCreateArgs = {
+  input: CorpusCreateInput;
 };
 
 
@@ -8782,6 +19233,11 @@ export type MutationCreateClusterAgentArgs = {
 };
 
 
+export type MutationCreateComplianceFrameworkArgs = {
+  input: CreateComplianceFrameworkInput;
+};
+
+
 export type MutationCreateCustomEmojiArgs = {
   input: CreateCustomEmojiInput;
 };
@@ -8789,6 +19245,11 @@ export type MutationCreateCustomEmojiArgs = {
 
 export type MutationCreateDiffNoteArgs = {
   input: CreateDiffNoteInput;
+};
+
+
+export type MutationCreateEpicArgs = {
+  input: CreateEpicInput;
 };
 
 
@@ -8802,13 +19263,28 @@ export type MutationCreateIssueArgs = {
 };
 
 
+export type MutationCreateIterationArgs = {
+  input: CreateIterationInput;
+};
+
+
 export type MutationCreateNoteArgs = {
   input: CreateNoteInput;
 };
 
 
+export type MutationCreateRequirementArgs = {
+  input: CreateRequirementInput;
+};
+
+
 export type MutationCreateSnippetArgs = {
   input: CreateSnippetInput;
+};
+
+
+export type MutationCreateTestCaseArgs = {
+  input: CreateTestCaseInput;
 };
 
 
@@ -8832,6 +19308,76 @@ export type MutationCustomerRelationsOrganizationUpdateArgs = {
 };
 
 
+export type MutationDastOnDemandScanCreateArgs = {
+  input: DastOnDemandScanCreateInput;
+};
+
+
+export type MutationDastProfileCreateArgs = {
+  input: DastProfileCreateInput;
+};
+
+
+export type MutationDastProfileDeleteArgs = {
+  input: DastProfileDeleteInput;
+};
+
+
+export type MutationDastProfileRunArgs = {
+  input: DastProfileRunInput;
+};
+
+
+export type MutationDastProfileUpdateArgs = {
+  input: DastProfileUpdateInput;
+};
+
+
+export type MutationDastScannerProfileCreateArgs = {
+  input: DastScannerProfileCreateInput;
+};
+
+
+export type MutationDastScannerProfileDeleteArgs = {
+  input: DastScannerProfileDeleteInput;
+};
+
+
+export type MutationDastScannerProfileUpdateArgs = {
+  input: DastScannerProfileUpdateInput;
+};
+
+
+export type MutationDastSiteProfileCreateArgs = {
+  input: DastSiteProfileCreateInput;
+};
+
+
+export type MutationDastSiteProfileDeleteArgs = {
+  input: DastSiteProfileDeleteInput;
+};
+
+
+export type MutationDastSiteProfileUpdateArgs = {
+  input: DastSiteProfileUpdateInput;
+};
+
+
+export type MutationDastSiteTokenCreateArgs = {
+  input: DastSiteTokenCreateInput;
+};
+
+
+export type MutationDastSiteValidationCreateArgs = {
+  input: DastSiteValidationCreateInput;
+};
+
+
+export type MutationDastSiteValidationRevokeArgs = {
+  input: DastSiteValidationRevokeInput;
+};
+
+
 export type MutationDeleteAnnotationArgs = {
   input: DeleteAnnotationInput;
 };
@@ -8844,6 +19390,11 @@ export type MutationDesignManagementDeleteArgs = {
 
 export type MutationDesignManagementMoveArgs = {
   input: DesignManagementMoveInput;
+};
+
+
+export type MutationDesignManagementUpdateArgs = {
+  input: DesignManagementUpdateInput;
 };
 
 
@@ -8862,6 +19413,11 @@ export type MutationDestroyBoardListArgs = {
 };
 
 
+export type MutationDestroyComplianceFrameworkArgs = {
+  input: DestroyComplianceFrameworkInput;
+};
+
+
 export type MutationDestroyContainerRepositoryArgs = {
   input: DestroyContainerRepositoryInput;
 };
@@ -8874,6 +19430,11 @@ export type MutationDestroyContainerRepositoryTagsArgs = {
 
 export type MutationDestroyCustomEmojiArgs = {
   input: DestroyCustomEmojiInput;
+};
+
+
+export type MutationDestroyEpicBoardArgs = {
+  input: DestroyEpicBoardInput;
 };
 
 
@@ -8897,8 +19458,18 @@ export type MutationDestroyPackageFilesArgs = {
 };
 
 
+export type MutationDestroyPackagesArgs = {
+  input: DestroyPackagesInput;
+};
+
+
 export type MutationDestroySnippetArgs = {
   input: DestroySnippetInput;
+};
+
+
+export type MutationDisableDevopsAdoptionNamespaceArgs = {
+  input: DisableDevopsAdoptionNamespaceInput;
 };
 
 
@@ -8912,8 +19483,138 @@ export type MutationEchoCreateArgs = {
 };
 
 
+export type MutationEnableDevopsAdoptionNamespaceArgs = {
+  input: EnableDevopsAdoptionNamespaceInput;
+};
+
+
+export type MutationEnvironmentCreateArgs = {
+  input: EnvironmentCreateInput;
+};
+
+
+export type MutationEnvironmentDeleteArgs = {
+  input: EnvironmentDeleteInput;
+};
+
+
+export type MutationEnvironmentStopArgs = {
+  input: EnvironmentStopInput;
+};
+
+
+export type MutationEnvironmentUpdateArgs = {
+  input: EnvironmentUpdateInput;
+};
+
+
 export type MutationEnvironmentsCanaryIngressUpdateArgs = {
   input: EnvironmentsCanaryIngressUpdateInput;
+};
+
+
+export type MutationEpicAddIssueArgs = {
+  input: EpicAddIssueInput;
+};
+
+
+export type MutationEpicBoardCreateArgs = {
+  input: EpicBoardCreateInput;
+};
+
+
+export type MutationEpicBoardListCreateArgs = {
+  input: EpicBoardListCreateInput;
+};
+
+
+export type MutationEpicBoardListDestroyArgs = {
+  input: EpicBoardListDestroyInput;
+};
+
+
+export type MutationEpicBoardUpdateArgs = {
+  input: EpicBoardUpdateInput;
+};
+
+
+export type MutationEpicMoveListArgs = {
+  input: EpicMoveListInput;
+};
+
+
+export type MutationEpicSetSubscriptionArgs = {
+  input: EpicSetSubscriptionInput;
+};
+
+
+export type MutationEpicTreeReorderArgs = {
+  input: EpicTreeReorderInput;
+};
+
+
+export type MutationEscalationPolicyCreateArgs = {
+  input: EscalationPolicyCreateInput;
+};
+
+
+export type MutationEscalationPolicyDestroyArgs = {
+  input: EscalationPolicyDestroyInput;
+};
+
+
+export type MutationEscalationPolicyUpdateArgs = {
+  input: EscalationPolicyUpdateInput;
+};
+
+
+export type MutationExportRequirementsArgs = {
+  input: ExportRequirementsInput;
+};
+
+
+export type MutationExternalAuditEventDestinationCreateArgs = {
+  input: ExternalAuditEventDestinationCreateInput;
+};
+
+
+export type MutationExternalAuditEventDestinationDestroyArgs = {
+  input: ExternalAuditEventDestinationDestroyInput;
+};
+
+
+export type MutationExternalAuditEventDestinationUpdateArgs = {
+  input: ExternalAuditEventDestinationUpdateInput;
+};
+
+
+export type MutationGeoRegistriesUpdateArgs = {
+  input: GeoRegistriesUpdateInput;
+};
+
+
+export type MutationGitlabSubscriptionActivateArgs = {
+  input: GitlabSubscriptionActivateInput;
+};
+
+
+export type MutationGoogleCloudLoggingConfigurationCreateArgs = {
+  input: GoogleCloudLoggingConfigurationCreateInput;
+};
+
+
+export type MutationGoogleCloudLoggingConfigurationDestroyArgs = {
+  input: GoogleCloudLoggingConfigurationDestroyInput;
+};
+
+
+export type MutationGoogleCloudLoggingConfigurationUpdateArgs = {
+  input: GoogleCloudLoggingConfigurationUpdateInput;
+};
+
+
+export type MutationGroupMemberBulkUpdateArgs = {
+  input: GroupMemberBulkUpdateInput;
 };
 
 
@@ -8939,6 +19640,36 @@ export type MutationHttpIntegrationResetTokenArgs = {
 
 export type MutationHttpIntegrationUpdateArgs = {
   input: HttpIntegrationUpdateInput;
+};
+
+
+export type MutationInstanceExternalAuditEventDestinationCreateArgs = {
+  input: InstanceExternalAuditEventDestinationCreateInput;
+};
+
+
+export type MutationInstanceExternalAuditEventDestinationDestroyArgs = {
+  input: InstanceExternalAuditEventDestinationDestroyInput;
+};
+
+
+export type MutationInstanceExternalAuditEventDestinationUpdateArgs = {
+  input: InstanceExternalAuditEventDestinationUpdateInput;
+};
+
+
+export type MutationIssuableResourceLinkCreateArgs = {
+  input: IssuableResourceLinkCreateInput;
+};
+
+
+export type MutationIssuableResourceLinkDestroyArgs = {
+  input: IssuableResourceLinkDestroyInput;
+};
+
+
+export type MutationIssueLinkAlertsArgs = {
+  input: IssueLinkAlertsInput;
 };
 
 
@@ -8972,8 +19703,23 @@ export type MutationIssueSetDueDateArgs = {
 };
 
 
+export type MutationIssueSetEpicArgs = {
+  input: IssueSetEpicInput;
+};
+
+
+export type MutationIssueSetEscalationPolicyArgs = {
+  input: IssueSetEscalationPolicyInput;
+};
+
+
 export type MutationIssueSetEscalationStatusArgs = {
   input: IssueSetEscalationStatusInput;
+};
+
+
+export type MutationIssueSetIterationArgs = {
+  input: IssueSetIterationInput;
 };
 
 
@@ -8992,6 +19738,46 @@ export type MutationIssueSetSubscriptionArgs = {
 };
 
 
+export type MutationIssueSetWeightArgs = {
+  input: IssueSetWeightInput;
+};
+
+
+export type MutationIssueUnlinkAlertArgs = {
+  input: IssueUnlinkAlertInput;
+};
+
+
+export type MutationIssuesBulkUpdateArgs = {
+  input: IssuesBulkUpdateInput;
+};
+
+
+export type MutationIterationCadenceCreateArgs = {
+  input: IterationCadenceCreateInput;
+};
+
+
+export type MutationIterationCadenceDestroyArgs = {
+  input: IterationCadenceDestroyInput;
+};
+
+
+export type MutationIterationCadenceUpdateArgs = {
+  input: IterationCadenceUpdateInput;
+};
+
+
+export type MutationIterationCreateArgs = {
+  input: IterationCreateInput;
+};
+
+
+export type MutationIterationDeleteArgs = {
+  input: IterationDeleteInput;
+};
+
+
 export type MutationJiraImportStartArgs = {
   input: JiraImportStartInput;
 };
@@ -8999,6 +19785,11 @@ export type MutationJiraImportStartArgs = {
 
 export type MutationJiraImportUsersArgs = {
   input: JiraImportUsersInput;
+};
+
+
+export type MutationJobArtifactsDestroyArgs = {
+  input: JobArtifactsDestroyInput;
 };
 
 
@@ -9072,6 +19863,11 @@ export type MutationMergeRequestSetMilestoneArgs = {
 };
 
 
+export type MutationMergeRequestSetReviewersArgs = {
+  input: MergeRequestSetReviewersInput;
+};
+
+
 export type MutationMergeRequestSetSubscriptionArgs = {
   input: MergeRequestSetSubscriptionInput;
 };
@@ -9079,6 +19875,56 @@ export type MutationMergeRequestSetSubscriptionArgs = {
 
 export type MutationMergeRequestUpdateArgs = {
   input: MergeRequestUpdateInput;
+};
+
+
+export type MutationMergeRequestUpdateApprovalRuleArgs = {
+  input: MergeRequestUpdateApprovalRuleInput;
+};
+
+
+export type MutationNamespaceBanDestroyArgs = {
+  input: NamespaceBanDestroyInput;
+};
+
+
+export type MutationNamespaceCiCdSettingsUpdateArgs = {
+  input: NamespaceCiCdSettingsUpdateInput;
+};
+
+
+export type MutationNamespaceIncreaseStorageTemporarilyArgs = {
+  input: NamespaceIncreaseStorageTemporarilyInput;
+};
+
+
+export type MutationOncallRotationCreateArgs = {
+  input: OncallRotationCreateInput;
+};
+
+
+export type MutationOncallRotationDestroyArgs = {
+  input: OncallRotationDestroyInput;
+};
+
+
+export type MutationOncallRotationUpdateArgs = {
+  input: OncallRotationUpdateInput;
+};
+
+
+export type MutationOncallScheduleCreateArgs = {
+  input: OncallScheduleCreateInput;
+};
+
+
+export type MutationOncallScheduleDestroyArgs = {
+  input: OncallScheduleDestroyInput;
+};
+
+
+export type MutationOncallScheduleUpdateArgs = {
+  input: OncallScheduleUpdateInput;
 };
 
 
@@ -9102,8 +19948,58 @@ export type MutationPipelineRetryArgs = {
 };
 
 
+export type MutationPipelineScheduleCreateArgs = {
+  input: PipelineScheduleCreateInput;
+};
+
+
+export type MutationPipelineScheduleDeleteArgs = {
+  input: PipelineScheduleDeleteInput;
+};
+
+
+export type MutationPipelineSchedulePlayArgs = {
+  input: PipelineSchedulePlayInput;
+};
+
+
+export type MutationPipelineScheduleTakeOwnershipArgs = {
+  input: PipelineScheduleTakeOwnershipInput;
+};
+
+
+export type MutationPipelineScheduleUpdateArgs = {
+  input: PipelineScheduleUpdateInput;
+};
+
+
 export type MutationProjectCiCdSettingsUpdateArgs = {
   input: ProjectCiCdSettingsUpdateInput;
+};
+
+
+export type MutationProjectInitializeProductAnalyticsArgs = {
+  input: ProjectInitializeProductAnalyticsInput;
+};
+
+
+export type MutationProjectMemberBulkUpdateArgs = {
+  input: ProjectMemberBulkUpdateInput;
+};
+
+
+export type MutationProjectSetComplianceFrameworkArgs = {
+  input: ProjectSetComplianceFrameworkInput;
+};
+
+
+export type MutationProjectSetLockedArgs = {
+  input: ProjectSetLockedInput;
+};
+
+
+export type MutationProjectSyncForkArgs = {
+  input: ProjectSyncForkInput;
 };
 
 
@@ -9119,6 +20015,11 @@ export type MutationPrometheusIntegrationResetTokenArgs = {
 
 export type MutationPrometheusIntegrationUpdateArgs = {
   input: PrometheusIntegrationUpdateInput;
+};
+
+
+export type MutationPromoteToEpicArgs = {
+  input: PromoteToEpicInput;
 };
 
 
@@ -9152,8 +20053,18 @@ export type MutationReleaseUpdateArgs = {
 };
 
 
+export type MutationRemoveProjectFromSecurityDashboardArgs = {
+  input: RemoveProjectFromSecurityDashboardInput;
+};
+
+
 export type MutationRepositionImageDiffNoteArgs = {
   input: RepositionImageDiffNoteInput;
+};
+
+
+export type MutationRunnerCreateArgs = {
+  input: RunnerCreateInput;
 };
 
 
@@ -9187,6 +20098,51 @@ export type MutationSavedReplyUpdateArgs = {
 };
 
 
+export type MutationScanExecutionPolicyCommitArgs = {
+  input: ScanExecutionPolicyCommitInput;
+};
+
+
+export type MutationSecurityFindingCreateIssueArgs = {
+  input: SecurityFindingCreateIssueInput;
+};
+
+
+export type MutationSecurityFindingCreateMergeRequestArgs = {
+  input: SecurityFindingCreateMergeRequestInput;
+};
+
+
+export type MutationSecurityFindingDismissArgs = {
+  input: SecurityFindingDismissInput;
+};
+
+
+export type MutationSecurityFindingRevertToDetectedArgs = {
+  input: SecurityFindingRevertToDetectedInput;
+};
+
+
+export type MutationSecurityPolicyProjectAssignArgs = {
+  input: SecurityPolicyProjectAssignInput;
+};
+
+
+export type MutationSecurityPolicyProjectCreateArgs = {
+  input: SecurityPolicyProjectCreateInput;
+};
+
+
+export type MutationSecurityPolicyProjectUnassignArgs = {
+  input: SecurityPolicyProjectUnassignInput;
+};
+
+
+export type MutationSecurityTrainingUpdateArgs = {
+  input: SecurityTrainingUpdateInput;
+};
+
+
 export type MutationTerraformStateDeleteArgs = {
   input: TerraformStateDeleteInput;
 };
@@ -9214,6 +20170,11 @@ export type MutationTimelineEventDestroyArgs = {
 
 export type MutationTimelineEventPromoteFromNoteArgs = {
   input: TimelineEventPromoteFromNoteInput;
+};
+
+
+export type MutationTimelineEventTagCreateArgs = {
+  input: TimelineEventTagCreateInput;
 };
 
 
@@ -9267,8 +20228,18 @@ export type MutationUpdateBoardArgs = {
 };
 
 
+export type MutationUpdateBoardEpicUserPreferencesArgs = {
+  input: UpdateBoardEpicUserPreferencesInput;
+};
+
+
 export type MutationUpdateBoardListArgs = {
   input: UpdateBoardListInput;
+};
+
+
+export type MutationUpdateComplianceFrameworkArgs = {
+  input: UpdateComplianceFrameworkInput;
 };
 
 
@@ -9287,6 +20258,16 @@ export type MutationUpdateDependencyProxySettingsArgs = {
 };
 
 
+export type MutationUpdateEpicArgs = {
+  input: UpdateEpicInput;
+};
+
+
+export type MutationUpdateEpicBoardListArgs = {
+  input: UpdateEpicBoardListInput;
+};
+
+
 export type MutationUpdateImageDiffNoteArgs = {
   input: UpdateImageDiffNoteInput;
 };
@@ -9294,6 +20275,11 @@ export type MutationUpdateImageDiffNoteArgs = {
 
 export type MutationUpdateIssueArgs = {
   input: UpdateIssueInput;
+};
+
+
+export type MutationUpdateIterationArgs = {
+  input: UpdateIterationInput;
 };
 
 
@@ -9312,6 +20298,11 @@ export type MutationUpdatePackagesCleanupPolicyArgs = {
 };
 
 
+export type MutationUpdateRequirementArgs = {
+  input: UpdateRequirementInput;
+};
+
+
 export type MutationUpdateSnippetArgs = {
   input: UpdateSnippetInput;
 };
@@ -9322,6 +20313,11 @@ export type MutationUploadDeleteArgs = {
 };
 
 
+export type MutationUserAchievementsDeleteArgs = {
+  input: UserAchievementsDeleteInput;
+};
+
+
 export type MutationUserCalloutCreateArgs = {
   input: UserCalloutCreateInput;
 };
@@ -9329,6 +20325,56 @@ export type MutationUserCalloutCreateArgs = {
 
 export type MutationUserPreferencesUpdateArgs = {
   input: UserPreferencesUpdateInput;
+};
+
+
+export type MutationUserSetNamespaceCommitEmailArgs = {
+  input: UserSetNamespaceCommitEmailInput;
+};
+
+
+export type MutationVulnerabilityConfirmArgs = {
+  input: VulnerabilityConfirmInput;
+};
+
+
+export type MutationVulnerabilityCreateArgs = {
+  input: VulnerabilityCreateInput;
+};
+
+
+export type MutationVulnerabilityDismissArgs = {
+  input: VulnerabilityDismissInput;
+};
+
+
+export type MutationVulnerabilityExternalIssueLinkCreateArgs = {
+  input: VulnerabilityExternalIssueLinkCreateInput;
+};
+
+
+export type MutationVulnerabilityExternalIssueLinkDestroyArgs = {
+  input: VulnerabilityExternalIssueLinkDestroyInput;
+};
+
+
+export type MutationVulnerabilityIssueLinkCreateArgs = {
+  input: VulnerabilityIssueLinkCreateInput;
+};
+
+
+export type MutationVulnerabilityResolveArgs = {
+  input: VulnerabilityResolveInput;
+};
+
+
+export type MutationVulnerabilityRevertToDetectedArgs = {
+  input: VulnerabilityRevertToDetectedInput;
+};
+
+
+export type MutationWorkItemConvertArgs = {
+  input: WorkItemConvertInput;
 };
 
 
@@ -9352,6 +20398,11 @@ export type MutationWorkItemDeleteTaskArgs = {
 };
 
 
+export type MutationWorkItemExportArgs = {
+  input: WorkItemExportInput;
+};
+
+
 export type MutationWorkItemUpdateArgs = {
   input: WorkItemUpdateInput;
 };
@@ -9362,8 +20413,13 @@ export type MutationWorkItemUpdateTaskArgs = {
 };
 
 
-export type MutationWorkItemUpdateWidgetsArgs = {
-  input: WorkItemUpdateWidgetsInput;
+export type MutationWorkspaceCreateArgs = {
+  input: WorkspaceCreateInput;
+};
+
+
+export type MutationWorkspaceUpdateArgs = {
+  input: WorkspaceUpdateInput;
 };
 
 /** Different toggles for changing mutator behavior */
@@ -9377,11 +20433,34 @@ export type MutationOperationMode =
 
 export type Namespace = {
   __typename?: 'Namespace';
+  /**
+   * Achievements for the namespace. Returns `null` if the `achievements` feature
+   * flag is disabled. Introduced in 15.8: This feature is an Experiment. It can be
+   * changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.8.
+   */
+  achievements?: Maybe<AchievementConnection>;
+  /**
+   * Size limit for repositories in the namespace in bytes. This limit only applies
+   * to namespaces under Project limit enforcement.
+   */
+  actualRepositorySizeLimit?: Maybe<Scalars['Float']>;
+  /** Actual storage size limit for the namespace in bytes. This limit is agnostic of enforcement type. */
+  actualSizeLimit?: Maybe<Scalars['Float']>;
+  /** Additional storage purchased for the root namespace in bytes. */
+  additionalPurchasedStorageSize?: Maybe<Scalars['Float']>;
+  /** Compliance frameworks available to projects in this namespace. */
+  complianceFrameworks?: Maybe<ComplianceFrameworkConnection>;
+  /**
+   * Includes at least one project where the repository size exceeds the limit.
+   * This only applies to namespaces under Project limit enforcement.
+   */
+  containsLockedProjects: Scalars['Boolean'];
   /** Indicates if the cross_project_pipeline feature is available for the namespace. */
   crossProjectPipelineAvailable: Scalars['Boolean'];
   /** Description of the namespace. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** Full name of the namespace. */
   fullName: Scalars['String'];
@@ -9389,6 +20468,8 @@ export type Namespace = {
   fullPath: Scalars['ID'];
   /** ID of the namespace. */
   id: Scalars['ID'];
+  /** Status of the temporary storage increase. */
+  isTemporaryStorageIncreaseEnabled: Scalars['Boolean'];
   /** Indicates if Large File Storage (LFS) is enabled for namespace. */
   lfsEnabled?: Maybe<Scalars['Boolean']>;
   /** Name of the namespace. */
@@ -9399,32 +20480,98 @@ export type Namespace = {
   path: Scalars['String'];
   /** Projects within this namespace. */
   projects: ProjectConnection;
+  /**
+   * Number of projects in the root namespace where the repository size exceeds the
+   * limit. This only applies to namespaces under Project limit enforcement.
+   */
+  repositorySizeExcessProjectCount: Scalars['Int'];
   /** Indicates if users can request access to namespace. */
   requestAccessEnabled?: Maybe<Scalars['Boolean']>;
   /** Aggregated storage statistics of the namespace. Only available for root namespaces. */
   rootStorageStatistics?: Maybe<RootStorageStatistics>;
+  /** Scan Execution Policies of the namespace. */
+  scanExecutionPolicies?: Maybe<ScanExecutionPolicyConnection>;
+  /** Scan Result Policies of the project */
+  scanResultPolicies?: Maybe<ScanResultPolicyConnection>;
   /** Shared runners availability for the namespace and its descendants. */
   sharedRunnersSetting?: Maybe<SharedRunnersSetting>;
   /**
-   * Timelog categories for the namespace. Available only when feature flag
-   * `timelog_categories` is enabled. This flag is disabled by default, because the
-   * feature is experimental and is subject to change without notice.
+   * Storage limit included in the root namespace plan in bytes. This limit only
+   * applies to namespaces under Namespace limit enforcement.
+   */
+  storageSizeLimit?: Maybe<Scalars['Float']>;
+  /** Date until the temporary storage increase is active. */
+  temporaryStorageIncreaseEndsOn?: Maybe<Scalars['Time']>;
+  /**
+   * Timelog categories for the namespace. Introduced in 15.3: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.3.
    */
   timelogCategories?: Maybe<TimeTrackingTimelogCategoryConnection>;
+  /** Total repository size of all projects in the root namespace in bytes. */
+  totalRepositorySize?: Maybe<Scalars['Float']>;
+  /**
+   * Total excess repository size of all projects in the root namespace in bytes.
+   * This only applies to namespaces under Project limit enforcement.
+   */
+  totalRepositorySizeExcess?: Maybe<Scalars['Float']>;
   /** Visibility of the namespace. */
   visibility?: Maybe<Scalars['String']>;
+};
+
+
+export type NamespaceAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['AchievementsAchievementID']>>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type NamespaceComplianceFrameworksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  id?: InputMaybe<Scalars['ComplianceManagementFrameworkID']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type NamespaceProjectsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
+  complianceFrameworkFilters?: InputMaybe<ComplianceFrameworkFilters>;
   first?: InputMaybe<Scalars['Int']>;
+  hasCodeCoverage?: InputMaybe<Scalars['Boolean']>;
+  hasVulnerabilities?: InputMaybe<Scalars['Boolean']>;
   ids?: InputMaybe<Array<Scalars['ID']>>;
   includeSubgroups?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
+  notAimedForDeletion?: InputMaybe<Scalars['Boolean']>;
   search?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<NamespaceProjectSort>;
+  withIssuesEnabled?: InputMaybe<Scalars['Boolean']>;
+  withMergeRequestsEnabled?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+export type NamespaceScanExecutionPoliciesArgs = {
+  actionScanTypes?: InputMaybe<Array<SecurityReportTypeEnum>>;
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  relationship?: InputMaybe<SecurityPolicyRelationType>;
+};
+
+
+export type NamespaceScanResultPoliciesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  relationship?: InputMaybe<SecurityPolicyRelationType>;
 };
 
 
@@ -9435,20 +20582,170 @@ export type NamespaceTimelogCategoriesArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
+export type NamespaceBan = {
+  __typename?: 'NamespaceBan';
+  /** Global ID of the namespace ban. */
+  id: Scalars['GlobalID'];
+  /** Root namespace to which the ban applies. */
+  namespace: Namespace;
+  /** User to which the namespace ban applies. */
+  user: UserCore;
+};
+
+/** Autogenerated input type of NamespaceBanDestroy */
+export type NamespaceBanDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the namespace ban to remove. */
+  id: Scalars['NamespacesNamespaceBanID'];
+};
+
+/** Autogenerated return type of NamespaceBanDestroy */
+export type NamespaceBanDestroyPayload = {
+  __typename?: 'NamespaceBanDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Namespace Ban. */
+  namespaceBan?: Maybe<NamespaceBan>;
+};
+
+export type NamespaceCiCdSetting = {
+  __typename?: 'NamespaceCiCdSetting';
+  /** Indicates if stale runners directly belonging to this namespace should be periodically pruned. */
+  allowStaleRunnerPruning?: Maybe<Scalars['Boolean']>;
+  /** Namespace the CI/CD settings belong to. */
+  namespace?: Maybe<Namespace>;
+};
+
+/** Autogenerated input type of NamespaceCiCdSettingsUpdate */
+export type NamespaceCiCdSettingsUpdateInput = {
+  /** Indicates if stale runners directly belonging to this namespace should be periodically pruned. */
+  allowStaleRunnerPruning?: InputMaybe<Scalars['Boolean']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the namespace the settings belong to. */
+  fullPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of NamespaceCiCdSettingsUpdate */
+export type NamespaceCiCdSettingsUpdatePayload = {
+  __typename?: 'NamespaceCiCdSettingsUpdatePayload';
+  /** CI/CD settings after mutation. */
+  ciCdSettings: NamespaceCiCdSetting;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+export type NamespaceCommitEmail = {
+  __typename?: 'NamespaceCommitEmail';
+  /** Timestamp the namespace commit email was created. */
+  createdAt: Scalars['Time'];
+  /** Email. */
+  email: Email;
+  /** Internal ID of the namespace commit email. */
+  id: Scalars['ID'];
+  /** Namespace. */
+  namespace: Namespace;
+  /** Timestamp the namespace commit email was last updated. */
+  updatedAt: Scalars['Time'];
+};
+
+/** The connection type for NamespaceCommitEmail. */
+export type NamespaceCommitEmailConnection = {
+  __typename?: 'NamespaceCommitEmailConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<NamespaceCommitEmailEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<NamespaceCommitEmail>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type NamespaceCommitEmailEdge = {
+  __typename?: 'NamespaceCommitEmailEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<NamespaceCommitEmail>;
+};
+
+/** The connection type for Namespace. */
+export type NamespaceConnection = {
+  __typename?: 'NamespaceConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<NamespaceEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Namespace>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type NamespaceEdge = {
+  __typename?: 'NamespaceEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Namespace>;
+};
+
+/** Autogenerated input type of NamespaceIncreaseStorageTemporarily */
+export type NamespaceIncreaseStorageTemporarilyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the namespace to mutate. */
+  id: Scalars['NamespaceID'];
+};
+
+/** Autogenerated return type of NamespaceIncreaseStorageTemporarily */
+export type NamespaceIncreaseStorageTemporarilyPayload = {
+  __typename?: 'NamespaceIncreaseStorageTemporarilyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Namespace after mutation. */
+  namespace?: Maybe<Namespace>;
+};
+
 /** Values for sorting projects */
 export type NamespaceProjectSort =
+  /** Sort by latest activity, descending order. */
+  | 'ACTIVITY_DESC'
   /** Most similar to the search query. */
   | 'SIMILARITY'
-  /** Sort by storage size. */
-  | 'STORAGE';
+  /** Sort by excess repository storage size, descending order. */
+  | 'STORAGE'
+  /** Sort by total storage size, ascending order. */
+  | 'STORAGE_SIZE_ASC'
+  /** Sort by total storage size, descending order. */
+  | 'STORAGE_SIZE_DESC';
 
 export type NegatedBoardIssueInput = {
   /** Filter by assignee username. */
   assigneeUsername?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Filter by author username. */
   authorUsername?: InputMaybe<Scalars['String']>;
+  /** Filter by epic ID. Incompatible with epicWildcardId. */
+  epicId?: InputMaybe<Scalars['EpicID']>;
+  /**
+   * Health status not applied to the issue.
+   *                     Includes issues where health status is not set.
+   */
+  healthStatusFilter?: InputMaybe<HealthStatus>;
   /** List of IIDs of issues. For example `["1", "2"]`. */
   iids?: InputMaybe<Array<Scalars['String']>>;
+  /** Filter by a list of iteration IDs. Incompatible with iterationWildcardId. */
+  iterationId?: InputMaybe<Array<Scalars['IterationID']>>;
+  /** Filter by iteration title. */
+  iterationTitle?: InputMaybe<Scalars['String']>;
+  /** Filter by iteration ID wildcard. */
+  iterationWildcardId?: InputMaybe<NegatedIterationWildcardId>;
   /** Filter by label name. */
   labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   /** Filter by milestone title. */
@@ -9461,6 +20758,31 @@ export type NegatedBoardIssueInput = {
   releaseTag?: InputMaybe<Scalars['String']>;
   /** Filter by the given issue types. */
   types?: InputMaybe<Array<IssueType>>;
+  /** Filter by weight. */
+  weight?: InputMaybe<Scalars['String']>;
+};
+
+export type NegatedComplianceFrameworkFilters = {
+  /** ID of the compliance framework. */
+  id?: InputMaybe<Scalars['ComplianceManagementFrameworkID']>;
+};
+
+export type NegatedEpicBoardIssueInput = {
+  /** Filter by author username. */
+  authorUsername?: InputMaybe<Scalars['String']>;
+  /** Filter by label name. */
+  labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Filter by reaction emoji applied by the current user. Wildcard values "NONE" and "ANY" are supported. */
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+};
+
+export type NegatedEpicFilterInput = {
+  /** Filter by author username. */
+  authorUsername?: InputMaybe<Scalars['String']>;
+  /** Filter by label name. */
+  labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** Filter by reaction emoji applied by the current user. */
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
 };
 
 export type NegatedIssueFilterInput = {
@@ -9470,8 +20792,19 @@ export type NegatedIssueFilterInput = {
   assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
   /** Username of a user who didn't author the issue. */
   authorUsername?: InputMaybe<Scalars['String']>;
+  /** ID of an epic not associated with the issues. */
+  epicId?: InputMaybe<Scalars['String']>;
+  /**
+   * Health status not applied to the issue.
+   *                     Includes issues where health status is not set.
+   */
+  healthStatusFilter?: InputMaybe<HealthStatus>;
   /** List of IIDs of issues to exclude. For example, `[1, 2]`. */
   iids?: InputMaybe<Array<Scalars['String']>>;
+  /** List of iteration Global IDs not applied to the issue. */
+  iterationId?: InputMaybe<Array<Scalars['ID']>>;
+  /** Filter by negated iteration ID wildcard. */
+  iterationWildcardId?: InputMaybe<IterationWildcardId>;
   /** Labels not applied to this issue. */
   labelName?: InputMaybe<Array<Scalars['String']>>;
   /** Milestone not applied to this issue. */
@@ -9484,7 +20817,14 @@ export type NegatedIssueFilterInput = {
   releaseTag?: InputMaybe<Array<Scalars['String']>>;
   /** Filters out issues by the given issue types. */
   types?: InputMaybe<Array<IssueType>>;
+  /** Weight not applied to the issue. */
+  weight?: InputMaybe<Scalars['String']>;
 };
+
+/** Negated Iteration ID wildcard values */
+export type NegatedIterationWildcardId =
+  /** Current iteration. */
+  | 'CURRENT';
 
 /** Negated Milestone ID wildcard values */
 export type NegatedMilestoneWildcardId =
@@ -9493,15 +20833,110 @@ export type NegatedMilestoneWildcardId =
   /** Milestone assigned is open but due in the past (due date <= today). */
   | 'UPCOMING';
 
+/** Describes where code is deployed for a project organized by folder. */
+export type NestedEnvironment = {
+  __typename?: 'NestedEnvironment';
+  /** Latest environment in the folder. */
+  environment?: Maybe<Environment>;
+  /** Human-readable name of the environment. */
+  name: Scalars['String'];
+  /** Number of environments nested in the folder. */
+  size: Scalars['Int'];
+};
+
+/** The connection type for NestedEnvironment. */
+export type NestedEnvironmentConnection = {
+  __typename?: 'NestedEnvironmentConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<NestedEnvironmentEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<NestedEnvironment>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type NestedEnvironmentEdge = {
+  __typename?: 'NestedEnvironmentEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<NestedEnvironment>;
+};
+
+/** Represents the network policy */
+export type NetworkPolicy = {
+  __typename?: 'NetworkPolicy';
+  /** Indicates whether this policy is enabled. */
+  enabled: Scalars['Boolean'];
+  /** Environments where this policy is applied. */
+  environments?: Maybe<EnvironmentConnection>;
+  /** Indicates whether this policy is created from AutoDevops. */
+  fromAutoDevops: Scalars['Boolean'];
+  /** Kind of the policy. */
+  kind: NetworkPolicyKind;
+  /** Name of the policy. */
+  name: Scalars['String'];
+  /** Namespace of the policy. */
+  namespace: Scalars['String'];
+  /** Timestamp of when the policy YAML was last updated. */
+  updatedAt: Scalars['Time'];
+  /** YAML definition of the policy. */
+  yaml: Scalars['String'];
+};
+
+
+/** Represents the network policy */
+export type NetworkPolicyEnvironmentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for NetworkPolicy. */
+export type NetworkPolicyConnection = {
+  __typename?: 'NetworkPolicyConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<NetworkPolicyEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<NetworkPolicy>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type NetworkPolicyEdge = {
+  __typename?: 'NetworkPolicyEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<NetworkPolicy>;
+};
+
+/** Kind of the network policy */
+export type NetworkPolicyKind =
+  /** Policy kind of Cilium Network Policy. */
+  | 'CiliumNetworkPolicy'
+  /** Policy kind of Network Policy. */
+  | 'NetworkPolicy';
+
 export type Note = ResolvableInterface & {
   __typename?: 'Note';
   /** User who wrote this note. */
   author: UserCore;
+  /** Indicates whether the note author is a contributor. */
+  authorIsContributor?: Maybe<Scalars['Boolean']>;
+  /** List of award emojis associated with the note. */
+  awardEmoji?: Maybe<AwardEmojiConnection>;
   /** Content of the note. */
   body: Scalars['String'];
-  /** The GitLab Flavored Markdown rendering of `note` */
+  /** GitLab Flavored Markdown rendering of `note` */
   bodyHtml?: Maybe<Scalars['String']>;
-  /** Indicates if this note is confidential. */
+  /**
+   * Indicates if this note is confidential. Deprecated in 15.5: This was renamed.
+   * @deprecated This was renamed. Please use `internal`. Deprecated in 15.5.
+   */
   confidential?: Maybe<Scalars['Boolean']>;
   /** Timestamp of the note creation. */
   createdAt: Scalars['Time'];
@@ -9509,6 +20944,14 @@ export type Note = ResolvableInterface & {
   discussion?: Maybe<Discussion>;
   /** ID of the note. */
   id: Scalars['NoteID'];
+  /** Indicates if this note is internal. */
+  internal?: Maybe<Scalars['Boolean']>;
+  /** Timestamp when note was last edited. */
+  lastEditedAt?: Maybe<Scalars['Time']>;
+  /** User who last edited the note. */
+  lastEditedBy?: Maybe<UserCore>;
+  /** Max access level of the note author in the project. */
+  maxAccessLevelOfAuthor?: Maybe<Scalars['String']>;
   /** Position of this note on a diff. */
   position?: Maybe<DiffPosition>;
   /** Project associated with the note. */
@@ -9525,12 +20968,22 @@ export type Note = ResolvableInterface & {
   system: Scalars['Boolean'];
   /** Name of the icon corresponding to a system note. */
   systemNoteIconName?: Maybe<Scalars['String']>;
+  /** Metadata for the given note if it is a system note. */
+  systemNoteMetadata?: Maybe<SystemNoteMetadata>;
   /** Timestamp of the note's last activity. */
   updatedAt: Scalars['Time'];
   /** URL to view this Note in the Web UI. */
   url?: Maybe<Scalars['String']>;
   /** Permissions for the current user on the resource */
   userPermissions: NotePermissions;
+};
+
+
+export type NoteAwardEmojiArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 /** The connection type for Note. */
@@ -9570,10 +21023,20 @@ export type NotePermissions = {
 };
 
 export type NoteableInterface = {
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
   /** All discussions on this noteable. */
   discussions: DiscussionConnection;
   /** All notes on this noteable. */
   notes: NoteConnection;
+};
+
+
+export type NoteableInterfaceCommentersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -9594,6 +21057,15 @@ export type NoteableInterfaceNotesArgs = {
 
 /** Represents an object that supports notes. */
 export type NoteableType = Design | Issue | MergeRequest;
+
+/** Work item notes collection type. */
+export type NotesFilterType =
+  /** Show all activity */
+  | 'ALL_NOTES'
+  /** Show history only */
+  | 'ONLY_ACTIVITY'
+  /** Show comments only */
+  | 'ONLY_COMMENTS';
 
 /** Nuget dependency link metadata */
 export type NugetDependencyLinkMetadata = {
@@ -9617,9 +21089,315 @@ export type NugetMetadata = {
   projectUrl?: Maybe<Scalars['String']>;
 };
 
+/** The rotation participant and color palette */
+export type OncallParticipantType = {
+  __typename?: 'OncallParticipantType';
+  /** Color palette to assign to the on-call user. For example "blue". */
+  colorPalette?: Maybe<Scalars['String']>;
+  /** Color weight to assign to for the on-call user, for example "500". Max 4 chars. For easy identification of the user. */
+  colorWeight?: Maybe<Scalars['String']>;
+  /** ID of the on-call participant. */
+  id: Scalars['IncidentManagementOncallParticipantID'];
+  /** User who is participating. */
+  user: UserCore;
+};
+
+/** The connection type for OncallParticipantType. */
+export type OncallParticipantTypeConnection = {
+  __typename?: 'OncallParticipantTypeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<OncallParticipantTypeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<OncallParticipantType>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type OncallParticipantTypeEdge = {
+  __typename?: 'OncallParticipantTypeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<OncallParticipantType>;
+};
+
+/** Active period time range for on-call rotation */
+export type OncallRotationActivePeriodInputType = {
+  /** End of the rotation active period in 24 hour format. For example, "18:30". */
+  endTime: Scalars['String'];
+  /** Start of the rotation active period in 24 hour format. For example, "18:30". */
+  startTime: Scalars['String'];
+};
+
+/** Active period time range for on-call rotation */
+export type OncallRotationActivePeriodType = {
+  __typename?: 'OncallRotationActivePeriodType';
+  /** End of the rotation active period. */
+  endTime?: Maybe<Scalars['String']>;
+  /** Start of the rotation active period. */
+  startTime?: Maybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of OncallRotationCreate */
+export type OncallRotationCreateInput = {
+  /** Active period of time that the on-call rotation should take place. */
+  activePeriod?: InputMaybe<OncallRotationActivePeriodInputType>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** End date and time of the on-call rotation, in the timezone of the on-call schedule. */
+  endsAt?: InputMaybe<OncallRotationDateInputType>;
+  /** Name of the on-call rotation. */
+  name: Scalars['String'];
+  /** Usernames of users participating in the on-call rotation. A maximum limit of 100 participants applies. */
+  participants: Array<OncallUserInputType>;
+  /** Project to create the on-call schedule in. */
+  projectPath: Scalars['ID'];
+  /** Rotation length of the on-call rotation. */
+  rotationLength: OncallRotationLengthInputType;
+  /** IID of the on-call schedule to create the on-call rotation in. */
+  scheduleIid: Scalars['String'];
+  /** Start date and time of the on-call rotation, in the timezone of the on-call schedule. */
+  startsAt: OncallRotationDateInputType;
+};
+
+/** Autogenerated return type of OncallRotationCreate */
+export type OncallRotationCreatePayload = {
+  __typename?: 'OncallRotationCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** On-call rotation. */
+  oncallRotation?: Maybe<IncidentManagementOncallRotation>;
+};
+
+/** Date input type for on-call rotation */
+export type OncallRotationDateInputType = {
+  /** Date component of the date in YYYY-MM-DD format. */
+  date: Scalars['String'];
+  /** Time component of the date in 24hr HH:MM format. */
+  time: Scalars['String'];
+};
+
+/** Autogenerated input type of OncallRotationDestroy */
+export type OncallRotationDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the on-call rotation to remove. */
+  id: Scalars['IncidentManagementOncallRotationID'];
+  /** Project to remove the on-call schedule from. */
+  projectPath: Scalars['ID'];
+  /** IID of the on-call schedule to the on-call rotation belongs to. */
+  scheduleIid: Scalars['String'];
+};
+
+/** Autogenerated return type of OncallRotationDestroy */
+export type OncallRotationDestroyPayload = {
+  __typename?: 'OncallRotationDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** On-call rotation. */
+  oncallRotation?: Maybe<IncidentManagementOncallRotation>;
+};
+
+/** The rotation length of the on-call rotation */
+export type OncallRotationLengthInputType = {
+  /** Rotation length of the on-call rotation. */
+  length: Scalars['Int'];
+  /** Unit of the rotation length of the on-call rotation. */
+  unit: OncallRotationUnitEnum;
+};
+
+/** Rotation length unit of an on-call rotation */
+export type OncallRotationUnitEnum =
+  /** Days */
+  | 'DAYS'
+  /** Hours */
+  | 'HOURS'
+  /** Weeks */
+  | 'WEEKS';
+
+/** Autogenerated input type of OncallRotationUpdate */
+export type OncallRotationUpdateInput = {
+  /** Active period of time that the on-call rotation should take place. */
+  activePeriod?: InputMaybe<OncallRotationActivePeriodInputType>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** End date and time of the on-call rotation, in the timezone of the on-call schedule. */
+  endsAt?: InputMaybe<OncallRotationDateInputType>;
+  /** ID of the on-call schedule to create the on-call rotation in. */
+  id: Scalars['IncidentManagementOncallRotationID'];
+  /** Name of the on-call rotation. */
+  name?: InputMaybe<Scalars['String']>;
+  /** Usernames of users participating in the on-call rotation. A maximum limit of 100 participants applies. */
+  participants?: InputMaybe<Array<OncallUserInputType>>;
+  /** Rotation length of the on-call rotation. */
+  rotationLength?: InputMaybe<OncallRotationLengthInputType>;
+  /** Start date and time of the on-call rotation, in the timezone of the on-call schedule. */
+  startsAt?: InputMaybe<OncallRotationDateInputType>;
+};
+
+/** Autogenerated return type of OncallRotationUpdate */
+export type OncallRotationUpdatePayload = {
+  __typename?: 'OncallRotationUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** On-call rotation. */
+  oncallRotation?: Maybe<IncidentManagementOncallRotation>;
+};
+
+/** Autogenerated input type of OncallScheduleCreate */
+export type OncallScheduleCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the on-call schedule. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Name of the on-call schedule. */
+  name: Scalars['String'];
+  /** Project to create the on-call schedule in. */
+  projectPath: Scalars['ID'];
+  /** Timezone of the on-call schedule. */
+  timezone: Scalars['String'];
+};
+
+/** Autogenerated return type of OncallScheduleCreate */
+export type OncallScheduleCreatePayload = {
+  __typename?: 'OncallScheduleCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** On-call schedule. */
+  oncallSchedule?: Maybe<IncidentManagementOncallSchedule>;
+};
+
+/** Autogenerated input type of OncallScheduleDestroy */
+export type OncallScheduleDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** On-call schedule internal ID to remove. */
+  iid: Scalars['String'];
+  /** Project to remove the on-call schedule from. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of OncallScheduleDestroy */
+export type OncallScheduleDestroyPayload = {
+  __typename?: 'OncallScheduleDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** On-call schedule. */
+  oncallSchedule?: Maybe<IncidentManagementOncallSchedule>;
+};
+
+/** Autogenerated input type of OncallScheduleUpdate */
+export type OncallScheduleUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the on-call schedule. */
+  description?: InputMaybe<Scalars['String']>;
+  /** On-call schedule internal ID to update. */
+  iid: Scalars['String'];
+  /** Name of the on-call schedule. */
+  name?: InputMaybe<Scalars['String']>;
+  /** Project to update the on-call schedule in. */
+  projectPath: Scalars['ID'];
+  /** Timezone of the on-call schedule. */
+  timezone?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of OncallScheduleUpdate */
+export type OncallScheduleUpdatePayload = {
+  __typename?: 'OncallScheduleUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** On-call schedule. */
+  oncallSchedule?: Maybe<IncidentManagementOncallSchedule>;
+};
+
+/** The rotation user and color palette */
+export type OncallUserInputType = {
+  /** Value of DataVisualizationColorEnum. The color from the palette to assign to the on-call user. */
+  colorPalette?: InputMaybe<DataVisualizationColorEnum>;
+  /**
+   * Color weight to assign to for the on-call user. To view on-call schedules in
+   * GitLab, do not provide a value below 500. A value between 500 and 950 ensures
+   * sufficient contrast.
+   */
+  colorWeight?: InputMaybe<DataVisualizationWeightEnum>;
+  /** Username of the user to participate in the on-call rotation. For example, `"user_one"`. */
+  username: Scalars['String'];
+};
+
+export type OrchestrationPolicy = {
+  /** Description of the policy. */
+  description: Scalars['String'];
+  /** Indicates whether this policy is enabled. */
+  enabled: Scalars['Boolean'];
+  /** Name of the policy. */
+  name: Scalars['String'];
+  /** Timestamp of when the policy YAML was last updated. */
+  updatedAt: Scalars['Time'];
+  /** YAML definition of the policy. */
+  yaml: Scalars['String'];
+};
+
+/** Values for sorting organizations */
+export type OrganizationSort =
+  /** Created at ascending order. */
+  | 'CREATED_ASC'
+  /** Created at descending order. */
+  | 'CREATED_DESC'
+  /** Default Rate in ascending order. */
+  | 'DEFAULT_RATE_ASC'
+  /** Default Rate in descending order. */
+  | 'DEFAULT_RATE_DESC'
+  /** Description in ascending order. */
+  | 'DESCRIPTION_ASC'
+  /** Description in descending order. */
+  | 'DESCRIPTION_DESC'
+  /** Name in ascending order. */
+  | 'NAME_ASC'
+  /** Name in descending order. */
+  | 'NAME_DESC'
+  /** Updated at ascending order. */
+  | 'UPDATED_ASC'
+  /** Updated at descending order. */
+  | 'UPDATED_DESC'
+  /** Created at ascending order. */
+  | 'created_asc'
+  /** Created at descending order. */
+  | 'created_desc'
+  /** Updated at ascending order. */
+  | 'updated_asc'
+  /** Updated at descending order. */
+  | 'updated_desc';
+
+/** Represents the total number of organizations for the represented states. */
+export type OrganizationStateCounts = {
+  __typename?: 'OrganizationStateCounts';
+  /** Number of organizations with state `ACTIVE` */
+  active?: Maybe<Scalars['Int']>;
+  /** Number of organizations with state `ALL` */
+  all?: Maybe<Scalars['Int']>;
+  /** Number of organizations with state `INACTIVE` */
+  inactive?: Maybe<Scalars['Int']>;
+};
+
 /** Represents a package with pipelines in the Package Registry */
 export type Package = {
   __typename?: 'Package';
+  /** Map of links to perform actions on the package. */
+  _links: PackageLinks;
   /** Whether the user can destroy the package. */
   canDestroy: Scalars['Boolean'];
   /** Date of creation. */
@@ -9667,6 +21445,8 @@ export type PackageTagsArgs = {
 /** Represents a package in the Package Registry */
 export type PackageBase = {
   __typename?: 'PackageBase';
+  /** Map of links to perform actions on the package. */
+  _links: PackageLinks;
   /** Whether the user can destroy the package. */
   canDestroy: Scalars['Boolean'];
   /** Date of creation. */
@@ -9805,6 +21585,8 @@ export type PackageDependencyType =
 /** Represents a package details in the Package Registry */
 export type PackageDetailsType = {
   __typename?: 'PackageDetailsType';
+  /** Map of links to perform actions on the package. */
+  _links: PackageLinks;
   /** Whether the user can destroy the package. */
   canDestroy: Scalars['Boolean'];
   /** Url of the Composer setup endpoint. */
@@ -9819,6 +21601,8 @@ export type PackageDetailsType = {
   dependencyLinks?: Maybe<PackageDependencyLinkConnection>;
   /** ID of the package. */
   id: Scalars['PackagesPackageID'];
+  /** Last time that a file of this package was downloaded. */
+  lastDownloadedAt?: Maybe<Scalars['Time']>;
   /** Url of the Maven project endpoint. */
   mavenUrl?: Maybe<Scalars['String']>;
   /** Package metadata. */
@@ -9837,6 +21621,8 @@ export type PackageDetailsType = {
   pipelines?: Maybe<PipelineConnection>;
   /** Project where the package is stored. */
   project: Project;
+  /** Indicates if there is public access to the package. */
+  publicPackage?: Maybe<Scalars['Boolean']>;
   /** Url of the PyPi project setup endpoint. */
   pypiSetupUrl?: Maybe<Scalars['String']>;
   /** Url of the PyPi project endpoint. */
@@ -9960,6 +21746,51 @@ export type PackageFileMetadata = {
   updatedAt: Scalars['Time'];
 };
 
+/** Represents the Geo sync and verification state of a package file */
+export type PackageFileRegistry = {
+  __typename?: 'PackageFileRegistry';
+  /** Timestamp when the PackageFileRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the PackageFileRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the PackageFileRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the PackageFileRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** ID of the PackageFile. */
+  packageFileId: Scalars['ID'];
+  /** Timestamp after which the PackageFileRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the PackageFileRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the PackageFileRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the PackageFileRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the PackageFileRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for PackageFileRegistry. */
+export type PackageFileRegistryConnection = {
+  __typename?: 'PackageFileRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PackageFileRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PackageFileRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type PackageFileRegistryEdge = {
+  __typename?: 'PackageFileRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PackageFileRegistry>;
+};
+
 /** Values for sorting group packages */
 export type PackageGroupSort =
   /** Ordered by created_at in ascending order. */
@@ -10054,6 +21885,44 @@ export type PackageHelmMetadataType = {
   version: Scalars['String'];
 };
 
+/** Represents links to perform actions on the package */
+export type PackageLinks = {
+  __typename?: 'PackageLinks';
+  /** Path to the package details page. */
+  webPath?: Maybe<Scalars['String']>;
+};
+
+/** Values for package manager */
+export type PackageManager =
+  /** Package manager: bundler. */
+  | 'BUNDLER'
+  /** Package manager: composer. */
+  | 'COMPOSER'
+  /** Package manager: conan. */
+  | 'CONAN'
+  /** Package manager: go. */
+  | 'GO'
+  /** Package manager: gradle. */
+  | 'GRADLE'
+  /** Package manager: maven. */
+  | 'MAVEN'
+  /** Package manager: npm. */
+  | 'NPM'
+  /** Package manager: nuget. */
+  | 'NUGET'
+  /** Package manager: pip. */
+  | 'PIP'
+  /** Package manager: pipenv. */
+  | 'PIPENV'
+  /** Package manager: pnpm. */
+  | 'PNPM'
+  /** Package manager: sbt. */
+  | 'SBT'
+  /** Package manager: setuptools. */
+  | 'SETUPTOOLS'
+  /** Package manager: yarn. */
+  | 'YARN';
+
 /** Represents metadata associated with a Package */
 export type PackageMetadata = ComposerMetadata | ConanMetadata | MavenMetadata | NugetMetadata | PypiMetadata;
 
@@ -10067,6 +21936,12 @@ export type PackageSettings = {
   genericDuplicateExceptionRegex?: Maybe<Scalars['UntrustedRegexp']>;
   /** Indicates whether duplicate generic packages are allowed for this namespace. */
   genericDuplicatesAllowed: Scalars['Boolean'];
+  /** Indicates whether Maven package forwarding is locked for all descendent namespaces. */
+  lockMavenPackageRequestsForwarding: Scalars['Boolean'];
+  /** Indicates whether npm package forwarding is locked for all descendent namespaces. */
+  lockNpmPackageRequestsForwarding: Scalars['Boolean'];
+  /** Indicates whether PyPI package forwarding is locked for all descendent namespaces. */
+  lockPypiPackageRequestsForwarding: Scalars['Boolean'];
   /**
    * When maven_duplicates_allowed is false, you can publish duplicate packages
    * with names that match this regex. Otherwise, this setting has no effect.
@@ -10074,6 +21949,18 @@ export type PackageSettings = {
   mavenDuplicateExceptionRegex?: Maybe<Scalars['UntrustedRegexp']>;
   /** Indicates whether duplicate Maven packages are allowed for this namespace. */
   mavenDuplicatesAllowed: Scalars['Boolean'];
+  /** Indicates whether Maven package forwarding is allowed for this namespace. */
+  mavenPackageRequestsForwarding?: Maybe<Scalars['Boolean']>;
+  /** Indicates whether Maven package forwarding settings are locked by a parent namespace. */
+  mavenPackageRequestsForwardingLocked: Scalars['Boolean'];
+  /** Indicates whether npm package forwarding is allowed for this namespace. */
+  npmPackageRequestsForwarding?: Maybe<Scalars['Boolean']>;
+  /** Indicates whether npm package forwarding settings are locked by a parent namespace. */
+  npmPackageRequestsForwardingLocked: Scalars['Boolean'];
+  /** Indicates whether PyPI package forwarding is allowed for this namespace. */
+  pypiPackageRequestsForwarding?: Maybe<Scalars['Boolean']>;
+  /** Indicates whether PyPI package forwarding settings are locked by a parent namespace. */
+  pypiPackageRequestsForwardingLocked: Scalars['Boolean'];
 };
 
 /** Values for sorting package */
@@ -10155,12 +22042,16 @@ export type PackageTypeEnum =
   | 'HELM'
   /** Packages from the Maven package manager */
   | 'MAVEN'
+  /** Packages from the Ml_model package manager */
+  | 'ML_MODEL'
   /** Packages from the npm package manager */
   | 'NPM'
   /** Packages from the Nuget package manager */
   | 'NUGET'
   /** Packages from the PyPI package manager */
   | 'PYPI'
+  /** Packages from the Rpm package manager */
+  | 'RPM'
   /** Packages from the Rubygems package manager */
   | 'RUBYGEMS'
   /** Packages from the Terraform Module package manager */
@@ -10204,6 +22095,51 @@ export type PageInfo = {
   startCursor?: Maybe<Scalars['String']>;
 };
 
+/** Represents the Geo replication and verification state of a pages_deployment */
+export type PagesDeploymentRegistry = {
+  __typename?: 'PagesDeploymentRegistry';
+  /** Timestamp when the PagesDeploymentRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the PagesDeploymentRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the PagesDeploymentRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the PagesDeploymentRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** ID of the Pages Deployment. */
+  pagesDeploymentId: Scalars['ID'];
+  /** Timestamp after which the PagesDeploymentRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the PagesDeploymentRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the PagesDeploymentRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the PagesDeploymentRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the PagesDeploymentRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for PagesDeploymentRegistry. */
+export type PagesDeploymentRegistryConnection = {
+  __typename?: 'PagesDeploymentRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PagesDeploymentRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PagesDeploymentRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type PagesDeploymentRegistryEdge = {
+  __typename?: 'PagesDeploymentRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PagesDeploymentRegistry>;
+};
+
 /** Autogenerated input type of PagesMarkOnboardingComplete */
 export type PagesMarkOnboardingCompleteInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -10223,6 +22159,37 @@ export type PagesMarkOnboardingCompletePayload = {
   onboardingComplete: Scalars['Boolean'];
 };
 
+/** Represents a file or directory in the project repository that has been locked. */
+export type PathLock = {
+  __typename?: 'PathLock';
+  /** ID of the path lock. */
+  id: Scalars['PathLockID'];
+  /** Locked path. */
+  path?: Maybe<Scalars['String']>;
+  /** User that has locked this path. */
+  user?: Maybe<UserCore>;
+};
+
+/** The connection type for PathLock. */
+export type PathLockConnection = {
+  __typename?: 'PathLockConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PathLockEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PathLock>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type PathLockEdge = {
+  __typename?: 'PathLockEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PathLock>;
+};
+
 export type Pipeline = {
   __typename?: 'Pipeline';
   /** Indicates if the pipeline is active. */
@@ -10231,6 +22198,10 @@ export type Pipeline = {
   beforeSha?: Maybe<Scalars['String']>;
   /** Specifies if a pipeline can be canceled. */
   cancelable: Scalars['Boolean'];
+  /** Code Quality report summary for a pipeline. */
+  codeQualityReportSummary?: Maybe<CodeQualityReportSummary>;
+  /** Code Quality degradations reported on the pipeline. */
+  codeQualityReports?: Maybe<CodeQualityDegradationConnection>;
   /** Git commit of the pipeline. */
   commit?: Maybe<Commit>;
   /** Path to the commit that triggered the pipeline. */
@@ -10249,6 +22220,8 @@ export type Pipeline = {
   coverage?: Maybe<Scalars['Float']>;
   /** Timestamp of the pipeline's creation. */
   createdAt: Scalars['Time'];
+  /** DAST profile associated with the pipeline. */
+  dastProfile?: Maybe<DastProfile>;
   /** Detailed status of the pipeline. */
   detailedStatus: DetailedStatus;
   /** Pipelines this pipeline will trigger. */
@@ -10281,6 +22254,12 @@ export type Pipeline = {
   refPath?: Maybe<Scalars['String']>;
   /** Specifies if a pipeline can be retried. */
   retryable: Scalars['Boolean'];
+  /** Vulnerability finding reported on the pipeline. */
+  securityReportFinding?: Maybe<PipelineSecurityReportFinding>;
+  /** Vulnerability findings reported on the pipeline. */
+  securityReportFindings?: Maybe<PipelineSecurityReportFindingConnection>;
+  /** Vulnerability and scanned resource counts for each security scanner of the pipeline. */
+  securityReportSummary?: Maybe<SecurityReportSummary>;
   /** SHA of the pipeline's commit. */
   sha?: Maybe<Scalars['String']>;
   /** Job where pipeline was triggered from. */
@@ -10315,6 +22294,14 @@ export type Pipeline = {
 };
 
 
+export type PipelineCodeQualityReportsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type PipelineDownstreamArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -10333,10 +22320,29 @@ export type PipelineJobsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
+  jobKind?: InputMaybe<CiJobKind>;
   last?: InputMaybe<Scalars['Int']>;
   retried?: InputMaybe<Scalars['Boolean']>;
   securityReportTypes?: InputMaybe<Array<SecurityReportTypeEnum>>;
   statuses?: InputMaybe<Array<CiJobStatus>>;
+  whenExecuted?: InputMaybe<Array<Scalars['String']>>;
+};
+
+
+export type PipelineSecurityReportFindingArgs = {
+  uuid: Scalars['String'];
+};
+
+
+export type PipelineSecurityReportFindingsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  reportType?: InputMaybe<Array<Scalars['String']>>;
+  scanner?: InputMaybe<Array<Scalars['String']>>;
+  severity?: InputMaybe<Array<Scalars['String']>>;
+  state?: InputMaybe<Array<VulnerabilityState>>;
 };
 
 
@@ -10381,6 +22387,51 @@ export type PipelineAnalytics = {
   yearPipelinesSuccessful?: Maybe<Array<Scalars['Int']>>;
   /** Total yearly pipeline count. */
   yearPipelinesTotals?: Maybe<Array<Scalars['Int']>>;
+};
+
+/** Represents the Geo sync and verification state of a pipeline artifact */
+export type PipelineArtifactRegistry = {
+  __typename?: 'PipelineArtifactRegistry';
+  /** Timestamp when the PipelineArtifactRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the PipelineArtifactRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the PipelineArtifactRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the PipelineArtifactRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** ID of the pipeline artifact. */
+  pipelineArtifactId: Scalars['ID'];
+  /** Timestamp after which the PipelineArtifactRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the PipelineArtifactRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the PipelineArtifactRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the PipelineArtifactRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the PipelineArtifactRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for PipelineArtifactRegistry. */
+export type PipelineArtifactRegistryConnection = {
+  __typename?: 'PipelineArtifactRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PipelineArtifactRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PipelineArtifactRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type PipelineArtifactRegistryEdge = {
+  __typename?: 'PipelineArtifactRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PipelineArtifactRegistry>;
 };
 
 /** Autogenerated input type of PipelineCancel */
@@ -10477,7 +22528,9 @@ export type PipelineMergeRequestEventType =
   /** Pipeline run on the changes in the merge request source branch. */
   | 'DETACHED'
   /** Pipeline run on the changes from the source branch combined with the target branch. */
-  | 'MERGED_RESULT';
+  | 'MERGED_RESULT'
+  /** Pipeline ran as part of a merge train. */
+  | 'MERGE_TRAIN';
 
 export type PipelineMessage = {
   __typename?: 'PipelineMessage';
@@ -10516,6 +22569,270 @@ export type PipelineRetryPayload = {
   pipeline?: Maybe<Pipeline>;
 };
 
+/** Represents a pipeline schedule */
+export type PipelineSchedule = {
+  __typename?: 'PipelineSchedule';
+  /** Indicates if the pipeline schedule is active. */
+  active: Scalars['Boolean'];
+  /** Timestamp of when the pipeline schedule was created. */
+  createdAt: Scalars['Time'];
+  /** Cron notation for the schedule. */
+  cron: Scalars['String'];
+  /** Timezone for the pipeline schedule. */
+  cronTimezone: Scalars['String'];
+  /** Description of the pipeline schedule. */
+  description?: Maybe<Scalars['String']>;
+  /** Edit path of the pipeline schedule. */
+  editPath?: Maybe<Scalars['String']>;
+  /** Indicates if a pipelines schedule belongs to a tag. */
+  forTag: Scalars['Boolean'];
+  /** ID of the pipeline schedule. */
+  id: Scalars['ID'];
+  /** Last pipeline object. */
+  lastPipeline?: Maybe<Pipeline>;
+  /** Time when the next pipeline will run. */
+  nextRunAt: Scalars['Time'];
+  /** Owner of the pipeline schedule. */
+  owner: UserCore;
+  /** Project of the pipeline schedule. */
+  project?: Maybe<Project>;
+  /** Time when the next pipeline will run. */
+  realNextRun: Scalars['Time'];
+  /** Ref of the pipeline schedule. */
+  ref?: Maybe<Scalars['String']>;
+  /** Git ref for the pipeline schedule. */
+  refForDisplay?: Maybe<Scalars['String']>;
+  /** Path to the ref that triggered the pipeline. */
+  refPath?: Maybe<Scalars['String']>;
+  /** Timestamp of when the pipeline schedule was last updated. */
+  updatedAt: Scalars['Time'];
+  /** Permissions for the current user on the resource */
+  userPermissions: PipelineSchedulePermissions;
+  /** Pipeline schedule variables. */
+  variables?: Maybe<PipelineScheduleVariableConnection>;
+};
+
+
+/** Represents a pipeline schedule */
+export type PipelineScheduleVariablesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for PipelineSchedule. */
+export type PipelineScheduleConnection = {
+  __typename?: 'PipelineScheduleConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PipelineScheduleEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PipelineSchedule>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of PipelineScheduleCreate */
+export type PipelineScheduleCreateInput = {
+  /** Indicates if the pipeline schedule should be active or not. */
+  active?: InputMaybe<Scalars['Boolean']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Cron expression of the pipeline schedule. */
+  cron: Scalars['String'];
+  /**
+   * Cron time zone supported by ActiveSupport::TimeZone.
+   * For example: "Pacific Time (US & Canada)" (default: "UTC").
+   */
+  cronTimezone?: InputMaybe<Scalars['String']>;
+  /** Description of the pipeline schedule. */
+  description: Scalars['String'];
+  /** Full path of the project the pipeline schedule is associated with. */
+  projectPath: Scalars['ID'];
+  /** Ref of the pipeline schedule. */
+  ref: Scalars['String'];
+  /** Variables for the pipeline schedule. */
+  variables?: InputMaybe<Array<PipelineScheduleVariableInput>>;
+};
+
+/** Autogenerated return type of PipelineScheduleCreate */
+export type PipelineScheduleCreatePayload = {
+  __typename?: 'PipelineScheduleCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created pipeline schedule. */
+  pipelineSchedule?: Maybe<PipelineSchedule>;
+};
+
+/** Autogenerated input type of PipelineScheduleDelete */
+export type PipelineScheduleDeleteInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the pipeline schedule to mutate. */
+  id: Scalars['CiPipelineScheduleID'];
+};
+
+/** Autogenerated return type of PipelineScheduleDelete */
+export type PipelineScheduleDeletePayload = {
+  __typename?: 'PipelineScheduleDeletePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type PipelineScheduleEdge = {
+  __typename?: 'PipelineScheduleEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PipelineSchedule>;
+};
+
+export type PipelineSchedulePermissions = {
+  __typename?: 'PipelineSchedulePermissions';
+  /** Indicates the user can perform `admin_pipeline_schedule` on this resource */
+  adminPipelineSchedule: Scalars['Boolean'];
+  /** Indicates the user can perform `play_pipeline_schedule` on this resource */
+  playPipelineSchedule: Scalars['Boolean'];
+  /**
+   * Indicates the user can perform `take_ownership_pipeline_schedule` on this
+   * resource Deprecated in 15.9: Use admin_pipeline_schedule permission to
+   * determine if the user can take ownership of a pipeline schedule.
+   * @deprecated Use admin_pipeline_schedule permission to determine if the user can take ownership of a pipeline schedule. Deprecated in 15.9.
+   */
+  takeOwnershipPipelineSchedule: Scalars['Boolean'];
+  /** Indicates the user can perform `update_pipeline_schedule` on this resource */
+  updatePipelineSchedule: Scalars['Boolean'];
+};
+
+/** Autogenerated input type of PipelineSchedulePlay */
+export type PipelineSchedulePlayInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the pipeline schedule to mutate. */
+  id: Scalars['CiPipelineScheduleID'];
+};
+
+/** Autogenerated return type of PipelineSchedulePlay */
+export type PipelineSchedulePlayPayload = {
+  __typename?: 'PipelineSchedulePlayPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Pipeline schedule after mutation. */
+  pipelineSchedule?: Maybe<PipelineSchedule>;
+};
+
+export type PipelineScheduleStatus =
+  /** Active pipeline schedules. */
+  | 'ACTIVE'
+  /** Inactive pipeline schedules. */
+  | 'INACTIVE';
+
+/** Autogenerated input type of PipelineScheduleTakeOwnership */
+export type PipelineScheduleTakeOwnershipInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the pipeline schedule to mutate. */
+  id: Scalars['CiPipelineScheduleID'];
+};
+
+/** Autogenerated return type of PipelineScheduleTakeOwnership */
+export type PipelineScheduleTakeOwnershipPayload = {
+  __typename?: 'PipelineScheduleTakeOwnershipPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated pipeline schedule ownership. */
+  pipelineSchedule?: Maybe<PipelineSchedule>;
+};
+
+/** Autogenerated input type of PipelineScheduleUpdate */
+export type PipelineScheduleUpdateInput = {
+  /** Indicates if the pipeline schedule should be active or not. */
+  active?: InputMaybe<Scalars['Boolean']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Cron expression of the pipeline schedule. */
+  cron?: InputMaybe<Scalars['String']>;
+  /**
+   * Cron time zone supported by ActiveSupport::TimeZone.
+   * For example: "Pacific Time (US & Canada)" (default: "UTC").
+   */
+  cronTimezone?: InputMaybe<Scalars['String']>;
+  /** Description of the pipeline schedule. */
+  description?: InputMaybe<Scalars['String']>;
+  /** ID of the pipeline schedule to mutate. */
+  id: Scalars['CiPipelineScheduleID'];
+  /** Ref of the pipeline schedule. */
+  ref?: InputMaybe<Scalars['String']>;
+  /** Variables for the pipeline schedule. */
+  variables?: InputMaybe<Array<PipelineScheduleVariableInput>>;
+};
+
+/** Autogenerated return type of PipelineScheduleUpdate */
+export type PipelineScheduleUpdatePayload = {
+  __typename?: 'PipelineScheduleUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated pipeline schedule. */
+  pipelineSchedule?: Maybe<PipelineSchedule>;
+};
+
+export type PipelineScheduleVariable = CiVariable & {
+  __typename?: 'PipelineScheduleVariable';
+  /** ID of the variable. */
+  id: Scalars['ID'];
+  /** Name of the variable. */
+  key?: Maybe<Scalars['String']>;
+  /** Indicates whether the variable is raw. */
+  raw?: Maybe<Scalars['Boolean']>;
+  /** Value of the variable. */
+  value?: Maybe<Scalars['String']>;
+  /** Type of the variable. */
+  variableType?: Maybe<CiVariableType>;
+};
+
+/** The connection type for PipelineScheduleVariable. */
+export type PipelineScheduleVariableConnection = {
+  __typename?: 'PipelineScheduleVariableConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PipelineScheduleVariableEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PipelineScheduleVariable>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type PipelineScheduleVariableEdge = {
+  __typename?: 'PipelineScheduleVariableEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PipelineScheduleVariable>;
+};
+
+/** Attributes for the pipeline schedule variable. */
+export type PipelineScheduleVariableInput = {
+  /** Name of the variable. */
+  key: Scalars['String'];
+  /** Value of the variable. */
+  value: Scalars['String'];
+  /** Type of the variable. */
+  variableType: CiVariableType;
+};
+
 export type PipelineScopeEnum =
   /** Branches. */
   | 'BRANCHES'
@@ -10527,6 +22844,95 @@ export type PipelineScopeEnum =
   | 'RUNNING'
   /** Tags. */
   | 'TAGS';
+
+/** Represents vulnerability finding of a security report on the pipeline. */
+export type PipelineSecurityReportFinding = {
+  __typename?: 'PipelineSecurityReportFinding';
+  /** List of assets associated with the vulnerability. */
+  assets?: Maybe<Array<AssetType>>;
+  /** Description of the vulnerability finding. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description` */
+  descriptionHtml?: Maybe<Scalars['String']>;
+  /** Details of the security finding. */
+  details: Array<VulnerabilityDetail>;
+  /** Reason for the dismissal of the security report finding. */
+  dismissalReason?: Maybe<VulnerabilityDismissalReason>;
+  /** Time of the dismissal of the security report finding. */
+  dismissedAt?: Maybe<Scalars['Time']>;
+  /** User who dismissed the security report finding. */
+  dismissedBy?: Maybe<UserCore>;
+  /** Evidence for the vulnerability. */
+  evidence?: Maybe<VulnerabilityEvidence>;
+  /** Indicates whether the vulnerability is a false positive. */
+  falsePositive?: Maybe<Scalars['Boolean']>;
+  /** Identifiers of the vulnerability finding. */
+  identifiers: Array<VulnerabilityIdentifier>;
+  /** List of issue links related to the vulnerability. */
+  issueLinks?: Maybe<VulnerabilityIssueLinkConnection>;
+  /** List of links associated with the vulnerability. */
+  links?: Maybe<Array<VulnerabilityLink>>;
+  /** Location metadata for the vulnerability. Its fields depend on the type of security scan that found the vulnerability. */
+  location?: Maybe<VulnerabilityLocation>;
+  /** Merge request that fixes the vulnerability. */
+  mergeRequest?: Maybe<MergeRequest>;
+  /** Project on which the vulnerability finding was found. */
+  project?: Maybe<Project>;
+  /**
+   * Same as uuid. It is strongly suggested to use the uuid field instead. Deprecated in 16.1: Use uuid instead.
+   * @deprecated Use uuid instead. Deprecated in 16.1.
+   */
+  projectFingerprint?: Maybe<Scalars['String']>;
+  /** Remediations of the security report finding. */
+  remediations?: Maybe<Array<VulnerabilityRemediationType>>;
+  /** Type of the security report that found the vulnerability finding. */
+  reportType?: Maybe<VulnerabilityReportType>;
+  /** Scanner metadata for the vulnerability. */
+  scanner?: Maybe<VulnerabilityScanner>;
+  /** Severity of the vulnerability finding. */
+  severity?: Maybe<VulnerabilitySeverity>;
+  /** Solution for resolving the security report finding. */
+  solution?: Maybe<Scalars['String']>;
+  /** Finding status. */
+  state?: Maybe<VulnerabilityState>;
+  /** Comment for the state of the security report finding. */
+  stateComment?: Maybe<Scalars['String']>;
+  /** Title of the vulnerability finding. */
+  title?: Maybe<Scalars['String']>;
+  /** UUIDv5 digest based on the vulnerability's report type, primary identifier, location, fingerprint, project identifier. */
+  uuid?: Maybe<Scalars['String']>;
+  /** Vulnerability related to the security report finding. */
+  vulnerability?: Maybe<Vulnerability>;
+};
+
+
+/** Represents vulnerability finding of a security report on the pipeline. */
+export type PipelineSecurityReportFindingIssueLinksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for PipelineSecurityReportFinding. */
+export type PipelineSecurityReportFindingConnection = {
+  __typename?: 'PipelineSecurityReportFindingConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PipelineSecurityReportFindingEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PipelineSecurityReportFinding>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type PipelineSecurityReportFindingEdge = {
+  __typename?: 'PipelineSecurityReportFindingEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PipelineSecurityReportFinding>;
+};
 
 export type PipelineStatusEnum =
   /** Pipeline was canceled before completion. */
@@ -10552,10 +22958,149 @@ export type PipelineStatusEnum =
   /** A resource (for example, a runner) that the pipeline requires to run is unavailable. */
   | 'WAITING_FOR_RESOURCE';
 
+export type PreviewBillableUserChange = {
+  __typename?: 'PreviewBillableUserChange';
+  /** Total number of billable users after change. */
+  newBillableUserCount?: Maybe<Scalars['Int']>;
+  /** Number of seats in subscription. */
+  seatsInSubscription?: Maybe<Scalars['Int']>;
+  /** If the group will have an increased overage after change. */
+  willIncreaseOverage?: Maybe<Scalars['Boolean']>;
+};
+
+/** Represents a product analytics dashboard. */
+export type ProductAnalyticsDashboard = {
+  __typename?: 'ProductAnalyticsDashboard';
+  /** Description of the dashboard. */
+  description?: Maybe<Scalars['String']>;
+  /** Panels shown on the dashboard. */
+  panels: ProductAnalyticsDashboardPanelConnection;
+  /** Slug of the dashboard. */
+  slug: Scalars['String'];
+  /** Title of the dashboard. */
+  title: Scalars['String'];
+  /** Indicates whether the dashboard is user-defined or provided by GitLab. */
+  userDefined: Scalars['Boolean'];
+};
+
+
+/** Represents a product analytics dashboard. */
+export type ProductAnalyticsDashboardPanelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** The connection type for ProductAnalyticsDashboard. */
+export type ProductAnalyticsDashboardConnection = {
+  __typename?: 'ProductAnalyticsDashboardConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProductAnalyticsDashboardEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProductAnalyticsDashboard>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ProductAnalyticsDashboardEdge = {
+  __typename?: 'ProductAnalyticsDashboardEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProductAnalyticsDashboard>;
+};
+
+/** Represents a product analytics dashboard panel. */
+export type ProductAnalyticsDashboardPanel = {
+  __typename?: 'ProductAnalyticsDashboardPanel';
+  /** Description of the position and size of the panel. */
+  gridAttributes?: Maybe<Scalars['JSON']>;
+  /** Overrides for the visualization query object. */
+  queryOverrides?: Maybe<Scalars['JSON']>;
+  /** Title of the panel. */
+  title: Scalars['String'];
+  /** Visualization of the panel. */
+  visualization: ProductAnalyticsDashboardVisualization;
+};
+
+/** The connection type for ProductAnalyticsDashboardPanel. */
+export type ProductAnalyticsDashboardPanelConnection = {
+  __typename?: 'ProductAnalyticsDashboardPanelConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProductAnalyticsDashboardPanelEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProductAnalyticsDashboardPanel>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ProductAnalyticsDashboardPanelEdge = {
+  __typename?: 'ProductAnalyticsDashboardPanelEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProductAnalyticsDashboardPanel>;
+};
+
+/** Represents a product analytics dashboard visualization. */
+export type ProductAnalyticsDashboardVisualization = {
+  __typename?: 'ProductAnalyticsDashboardVisualization';
+  /** Data of the visualization. */
+  data: Scalars['JSON'];
+  /** Options of the visualization. */
+  options: Scalars['JSON'];
+  /** Slug of the visualization. */
+  slug: Scalars['String'];
+  /** Type of the visualization. */
+  type: Scalars['String'];
+};
+
+/** The connection type for ProductAnalyticsDashboardVisualization. */
+export type ProductAnalyticsDashboardVisualizationConnection = {
+  __typename?: 'ProductAnalyticsDashboardVisualizationConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProductAnalyticsDashboardVisualizationEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProductAnalyticsDashboardVisualization>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ProductAnalyticsDashboardVisualizationEdge = {
+  __typename?: 'ProductAnalyticsDashboardVisualizationEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProductAnalyticsDashboardVisualization>;
+};
+
+/** Current state of the product analytics stack. */
+export type ProductAnalyticsState =
+  /** Stack has been initialized and has data. */
+  | 'COMPLETE'
+  /** Stack has not been created yet. */
+  | 'CREATE_INSTANCE'
+  /** Stack is currently initializing. */
+  | 'LOADING_INSTANCE'
+  /** Stack is waiting for events from users. */
+  | 'WAITING_FOR_EVENTS';
+
 export type Project = {
   __typename?: 'Project';
+  /** Size limit for the repository in bytes. */
+  actualRepositorySizeLimit?: Maybe<Scalars['Float']>;
   /** Agent configurations defined by the project */
   agentConfigurations?: Maybe<AgentConfigurationConnection>;
+  /**
+   * Ai Chat conversations related to a given project. Introduced in 16.0: This
+   * feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0.
+   */
+  aiConversations?: Maybe<ProjectConversations>;
   /** A single Alert Management alert of the project. */
   alertManagementAlert?: Maybe<AlertManagementAlert>;
   /** Counts of alerts by status for the project. */
@@ -10566,11 +23111,15 @@ export type Project = {
   alertManagementHttpIntegrations?: Maybe<AlertManagementHttpIntegrationConnection>;
   /** Integrations which can receive alerts for the project. */
   alertManagementIntegrations?: Maybe<AlertManagementIntegrationConnection>;
+  /** Extract alert fields from payload for custom mapping. */
+  alertManagementPayloadFields?: Maybe<Array<AlertManagementPayloadAlertField>>;
   /**
    * If `only_allow_merge_if_pipeline_succeeds` is true, indicates if merge
    * requests of the project can also be merged with skipped jobs.
    */
   allowMergeOnSkippedPipeline?: Maybe<Scalars['Boolean']>;
+  /** API fuzzing configuration for the project. */
+  apiFuzzingCiConfiguration?: Maybe<ApiFuzzingCiConfiguration>;
   /** Indicates the archived status of the project. */
   archived?: Maybe<Scalars['Boolean']>;
   /** Indicates if issues referenced by merge requests and commits within the default branch are closed automatically. */
@@ -10581,10 +23130,19 @@ export type Project = {
   board?: Maybe<Board>;
   /** Boards of the project. */
   boards?: Maybe<BoardConnection>;
+  /** Branch rules configured for the project. */
+  branchRules?: Maybe<BranchRuleConnection>;
+  /** Authorized cluster agents for the project through ci_access keyword. */
+  ciAccessAuthorizedAgents?: Maybe<ClusterAgentAuthorizationCiAccessConnection>;
   /** CI/CD settings for the project. */
   ciCdSettings?: Maybe<ProjectCiCdSetting>;
   /** Path of the CI configuration file. */
   ciConfigPathOrDefault: Scalars['String'];
+  /**
+   * CI/CD config variable. Introduced in 15.3: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.3.
+   */
+  ciConfigVariables?: Maybe<Array<CiConfigVariable>>;
   /** The CI Job Tokens scope of access. */
   ciJobTokenScope?: Maybe<CiJobTokenScopeType>;
   /** Find a single CI/CD template by name. */
@@ -10595,6 +23153,16 @@ export type Project = {
   clusterAgent?: Maybe<ClusterAgent>;
   /** Cluster agents associated with the project. */
   clusterAgents?: Maybe<ClusterAgentConnection>;
+  /** Code coverage summary associated with the project. */
+  codeCoverageSummary?: Maybe<CodeCoverageSummary>;
+  /**
+   * Get tag names containing a given commit. Introduced in 16.0: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0.
+   */
+  commitReferences?: Maybe<CommitReferences>;
+  /** Compliance frameworks associated with the project. */
+  complianceFrameworks?: Maybe<ComplianceFrameworkConnection>;
   /** Container expiration policy of the project. */
   containerExpirationPolicy?: Maybe<ContainerExpirationPolicy>;
   /** Indicates if Container Registry is enabled for the current user */
@@ -10603,34 +23171,94 @@ export type Project = {
   containerRepositories?: Maybe<ContainerRepositoryConnection>;
   /** Number of container repositories in the project. */
   containerRepositoriesCount: Scalars['Int'];
+  /** Find corpuses of the project. */
+  corpuses?: Maybe<CoverageFuzzingCorpusConnection>;
   /** Timestamp of the project creation. */
   createdAt?: Maybe<Scalars['Time']>;
+  /** DAST Profile associated with the project. */
+  dastProfile?: Maybe<DastProfile>;
+  /** DAST Profiles associated with the project. */
+  dastProfiles?: Maybe<DastProfileConnection>;
+  /** DAST scanner profiles associated with the project. */
+  dastScannerProfiles?: Maybe<DastScannerProfileConnection>;
+  /** DAST Site Profile associated with the project. */
+  dastSiteProfile?: Maybe<DastSiteProfile>;
+  /** DAST Site Profiles associated with the project. */
+  dastSiteProfiles?: Maybe<DastSiteProfileConnection>;
+  /** DAST Site Validations associated with the project. */
+  dastSiteValidations?: Maybe<DastSiteValidationConnection>;
+  /** Data transfer data point for a specific period. This is mocked data under a development feature flag. */
+  dataTransfer?: Maybe<ProjectDataTransfer>;
+  /**
+   * Software dependencies used by the project. Introduced in 15.9: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  dependencies?: Maybe<DependencyConnection>;
+  /** Details of the deployment of the project. */
+  deployment?: Maybe<Deployment>;
   /** Short description of the project. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
+  /** Project's DORA metrics. */
+  dora?: Maybe<Dora>;
   /** A single environment of the project. */
   environment?: Maybe<Environment>;
-  /** Environments of the project. */
+  /** Environments of the project. This field can only be resolved for one project in any single request. */
   environments?: Maybe<EnvironmentConnection>;
+  /**
+   * Flow metrics for value stream analytics. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  flowMetrics?: Maybe<ProjectValueStreamAnalyticsFlowMetrics>;
+  /**
+   * Details of the fork project compared to its upstream project. Introduced in
+   * 15.7: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.7.
+   */
+  forkDetails?: Maybe<ForkDetails>;
+  /** Namespaces in which the current user can fork the project into. */
+  forkTargets?: Maybe<NamespaceConnection>;
   /** Number of times the project has been forked. */
   forksCount: Scalars['Int'];
   /** Full path of the project. */
   fullPath: Scalars['ID'];
+  /** Preview Billable User Changes */
+  gitlabSubscriptionsPreviewBillableUserChange?: Maybe<PreviewBillableUserChange>;
   /** Grafana integration details for the project. */
   grafanaIntegration?: Maybe<GrafanaIntegration>;
   /** Group of the project. */
   group?: Maybe<Group>;
+  /** Indicates whether Jira issue creation from vulnerabilities is enabled. */
+  hasJiraVulnerabilityIssueCreationEnabled: Scalars['Boolean'];
   /** URL to connect to the project via HTTPS. */
   httpUrlToRepo?: Maybe<Scalars['String']>;
   /** ID of the project. */
   id: Scalars['ID'];
   /** Status of import background job of the project. */
   importStatus?: Maybe<Scalars['String']>;
+  /** Incident Management escalation policies of the project. */
+  incidentManagementEscalationPolicies?: Maybe<EscalationPolicyTypeConnection>;
+  /** Incident Management escalation policy of the project. */
+  incidentManagementEscalationPolicy?: Maybe<EscalationPolicyType>;
+  /** Incident Management On-call schedules of the project. */
+  incidentManagementOncallSchedules?: Maybe<IncidentManagementOncallScheduleConnection>;
   /** Incident Management Timeline event associated with the incident. */
   incidentManagementTimelineEvent?: Maybe<TimelineEventType>;
+  /** Timeline event tags for the project. */
+  incidentManagementTimelineEventTags?: Maybe<Array<TimelineEventTagType>>;
   /** Incident Management Timeline events associated with the incident. */
   incidentManagementTimelineEvents?: Maybe<TimelineEventTypeConnection>;
+  /** List of CI/CD variables the project inherited from its parent group and ancestors. */
+  inheritedCiVariables?: Maybe<InheritedCiVariableConnection>;
+  /**
+   * Indicates if a project is a catalog resource. Introduced in 15.11: This
+   * feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  isCatalogResource?: Maybe<Scalars['Boolean']>;
   /** A single issue of the project. */
   issue?: Maybe<Issue>;
   /** Counts of issues by status for the project. */
@@ -10639,10 +23267,16 @@ export type Project = {
   issues?: Maybe<IssueConnection>;
   /** Indicates if Issues are enabled for the current user */
   issuesEnabled?: Maybe<Scalars['Boolean']>;
+  /** Find iteration cadences. */
+  iterationCadences?: Maybe<IterationCadenceConnection>;
+  /** Find iterations. */
+  iterations?: Maybe<IterationConnection>;
   /** Status of Jira import background job of the project. */
   jiraImportStatus?: Maybe<Scalars['String']>;
   /** Jira imports into the project. */
   jiraImports?: Maybe<JiraImportConnection>;
+  /** One job belonging to the project, selected by ID. */
+  job?: Maybe<CiJob>;
   /** Jobs of a project. This field can only be resolved for one project in any single request. */
   jobs?: Maybe<CiJobConnection>;
   /** Indicates if CI/CD pipeline jobs are enabled for the current user. */
@@ -10651,6 +23285,8 @@ export type Project = {
   label?: Maybe<Label>;
   /** Labels available on this project. */
   labels?: Maybe<LabelConnection>;
+  /** Programming languages used in the project. */
+  languages?: Maybe<Array<RepositoryLanguage>>;
   /** Timestamp of the project last activity. */
   lastActivityAt?: Maybe<Scalars['Time']>;
   /** Indicates if the project has Large File Storage (LFS) enabled. */
@@ -10661,6 +23297,8 @@ export type Project = {
   mergeRequest?: Maybe<MergeRequest>;
   /** Merge requests of the project. */
   mergeRequests?: Maybe<MergeRequestConnection>;
+  /** Indicates that committers of the given merge request cannot approve. */
+  mergeRequestsDisableCommittersApproval: Scalars['Boolean'];
   /** Indicates if Merge Requests are enabled for the current user */
   mergeRequestsEnabled?: Maybe<Scalars['Boolean']>;
   /**
@@ -10677,8 +23315,19 @@ export type Project = {
   nameWithNamespace: Scalars['String'];
   /** Namespace of the project. */
   namespace?: Maybe<Namespace>;
+  /** Environments for this project with nested folders, can only be resolved for one project in any single request */
+  nestedEnvironments?: Maybe<NestedEnvironmentConnection>;
+  /**
+   * Network Policies of the project Deprecated in 14.8: Network policies are
+   * deprecated and will be removed in GitLab 16.0. Since GitLab 15.0 this field
+   * returns no data.
+   * @deprecated Network policies are deprecated and will be removed in GitLab 16.0. Since GitLab 15.0 this field returns no data. Deprecated in 14.8.
+   */
+  networkPolicies?: Maybe<NetworkPolicyConnection>;
   /** Indicates if merge requests of the project can only be merged when all the discussions are resolved. */
   onlyAllowMergeIfAllDiscussionsAreResolved?: Maybe<Scalars['Boolean']>;
+  /** Indicates that merges of merge requests should be blocked unless all status checks have passed. */
+  onlyAllowMergeIfAllStatusChecksPassed?: Maybe<Scalars['Boolean']>;
   /** Indicates if merge requests of the project can only be merged with successful jobs. */
   onlyAllowMergeIfPipelineSucceeds?: Maybe<Scalars['Boolean']>;
   /** Number of open issues for the project. */
@@ -10689,12 +23338,16 @@ export type Project = {
   packagesCleanupPolicy?: Maybe<PackagesCleanupPolicy>;
   /** Path of the project. */
   path: Scalars['String'];
+  /** The project's path locks. */
+  pathLocks?: Maybe<PathLockConnection>;
   /** Build pipeline of the project. */
   pipeline?: Maybe<Pipeline>;
   /** Pipeline analytics. */
   pipelineAnalytics?: Maybe<PipelineAnalytics>;
   /** Build pipeline counts of the project. */
   pipelineCounts?: Maybe<PipelineCounts>;
+  /** Pipeline schedules of the project. This field can only be resolved for one project per request. */
+  pipelineSchedules?: Maybe<PipelineScheduleConnection>;
   /** Build pipelines of the project. */
   pipelines?: Maybe<PipelineConnection>;
   /**
@@ -10702,10 +23355,37 @@ export type Project = {
    * push to Git repositories of the project from the command line.
    */
   printingMergeRequestLinkEnabled?: Maybe<Scalars['Boolean']>;
+  /**
+   * Product Analytics dashboards of the project. Introduced in 15.6: This feature
+   * is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.6.
+   */
+  productAnalyticsDashboards?: Maybe<ProductAnalyticsDashboardConnection>;
+  /**
+   * Product Analytics instrumentation key assigned to the project. Introduced in
+   * 16.0: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0.
+   */
+  productAnalyticsInstrumentationKey?: Maybe<Scalars['String']>;
+  /**
+   * Current state of the product analytics stack for this project.Can only be
+   * called for one project in a single request Introduced in 15.10: This feature
+   * is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  productAnalyticsState?: Maybe<ProductAnalyticsState>;
+  /**
+   * Visualizations of the project or associated configuration project. Introduced
+   * in 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  productAnalyticsVisualizations?: Maybe<ProductAnalyticsDashboardVisualizationConnection>;
   /** Members of the project. */
   projectMembers?: Maybe<MemberInterfaceConnection>;
   /** Indicates if there is public access to pipelines and job details of the project, including output logs and artifacts. */
   publicJobs?: Maybe<Scalars['Boolean']>;
+  /** Project's push rules settings. */
+  pushRules?: Maybe<PushRules>;
   /** List of recently visited boards of the project. Maximum size is 4. */
   recentIssueBoards?: Maybe<BoardConnection>;
   /** A single release of the project. */
@@ -10716,10 +23396,32 @@ export type Project = {
   removeSourceBranchAfterMerge?: Maybe<Scalars['Boolean']>;
   /** Git repository of the project. */
   repository?: Maybe<Repository>;
+  /** Size of repository that exceeds the limit in bytes. */
+  repositorySizeExcess?: Maybe<Scalars['Float']>;
   /** Indicates if users can request member access to the project. */
   requestAccessEnabled?: Maybe<Scalars['Boolean']>;
+  /** Find a single requirement. */
+  requirement?: Maybe<Requirement>;
+  /** Number of requirements for the project by their state. */
+  requirementStatesCount?: Maybe<RequirementStatesCount>;
+  /** Find requirements. */
+  requirements?: Maybe<RequirementConnection>;
+  /** Find runners visible to the current user. */
+  runners?: Maybe<CiRunnerConnection>;
   /** SAST CI configuration for the project. */
   sastCiConfiguration?: Maybe<SastCiConfiguration>;
+  /** Scan Execution Policies of the project */
+  scanExecutionPolicies?: Maybe<ScanExecutionPolicyConnection>;
+  /** Scan Result Policies of the project */
+  scanResultPolicies?: Maybe<ScanResultPolicyConnection>;
+  /** Path to project's security dashboard. */
+  securityDashboardPath?: Maybe<Scalars['String']>;
+  /** Information about security analyzers used in the project. */
+  securityScanners?: Maybe<SecurityScanners>;
+  /** List of security training providers for the project */
+  securityTrainingProviders?: Maybe<Array<ProjectSecurityTraining>>;
+  /** Security training URLs for the enabled training providers of the project. */
+  securityTrainingUrls?: Maybe<Array<SecurityTrainingUrl>>;
   /** Detailed version of a Sentry error on the project. */
   sentryDetailedError?: Maybe<SentryDetailedError>;
   /** Paginated collection of Sentry errors on the project. */
@@ -10728,7 +23430,10 @@ export type Project = {
   serviceDeskAddress?: Maybe<Scalars['String']>;
   /** Indicates if the project has Service Desk enabled. */
   serviceDeskEnabled?: Maybe<Scalars['Boolean']>;
-  /** Project services. */
+  /**
+   * Project services. Deprecated in 15.9: This will be renamed to `Project.integrations`.
+   * @deprecated This will be renamed to `Project.integrations`. Deprecated in 15.9.
+   */
   services?: Maybe<ServiceConnection>;
   /** Indicates if shared runners are enabled for the project. */
   sharedRunnersEnabled?: Maybe<Scalars['Boolean']>;
@@ -10746,6 +23451,8 @@ export type Project = {
   starCount: Scalars['Int'];
   /** Statistics of the project. */
   statistics?: Maybe<ProjectStatistics>;
+  /** Redirects for Statistics of the project. */
+  statisticsDetailsPaths?: Maybe<ProjectStatisticsRedirect>;
   /** Commit message used to apply merge request suggestions. */
   suggestionCommitMessage?: Maybe<Scalars['String']>;
   /**
@@ -10758,32 +23465,52 @@ export type Project = {
   /** Terraform states associated with the project. */
   terraformStates?: Maybe<TerraformStateConnection>;
   /**
-   * Timelog categories for the project. Available only when feature flag
-   * `timelog_categories` is enabled. This flag is disabled by default, because the
-   * feature is experimental and is subject to change without notice.
+   * Timelog categories for the project. Introduced in 15.3: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.3.
    */
   timelogCategories?: Maybe<TimeTrackingTimelogCategoryConnection>;
   /** Time logged on issues and merge requests in the project. */
   timelogs?: Maybe<TimelogConnection>;
   /** List of project topics. */
   topics?: Maybe<Array<Scalars['String']>>;
+  /**
+   * Tracking key assigned to the project. Introduced in 16.0: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0.
+   */
+  trackingKey?: Maybe<Scalars['String']>;
+  /** Authorized cluster agents for the project through user_access keyword. */
+  userAccessAuthorizedAgents?: Maybe<ClusterAgentAuthorizationUserAccessConnection>;
   /** Permissions for the current user on the resource */
   userPermissions: ProjectPermissions;
   /** Visibility of the project. */
   visibility?: Maybe<Scalars['String']>;
+  /**
+   * Visible forks of the project. Introduced in 15.10: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  visibleForks?: Maybe<ProjectConnection>;
+  /** Vulnerabilities reported on the project. */
+  vulnerabilities?: Maybe<VulnerabilityConnection>;
+  /** The historical number of vulnerabilities per day for the project. */
+  vulnerabilitiesCountByDay?: Maybe<VulnerabilitiesCountByDayConnection>;
+  /** Container images reported on the project vulnerabilities. */
+  vulnerabilityImages?: Maybe<VulnerabilityContainerImageConnection>;
+  /** Vulnerability scanners reported on the project vulnerabilities. */
+  vulnerabilityScanners?: Maybe<VulnerabilityScannerConnection>;
+  /** Counts for each vulnerability severity in the project. */
+  vulnerabilitySeveritiesCount?: Maybe<VulnerabilitySeveritiesCount>;
   /** Web URL of the project. */
   webUrl?: Maybe<Scalars['String']>;
   /** Indicates if Wikis are enabled for the current user */
   wikiEnabled?: Maybe<Scalars['Boolean']>;
-  /**
-   * Work item types available to the project. Returns `null` if `work_items`
-   * feature flag is disabled. This flag is disabled by default, because the
-   * feature is experimental and is subject to change without notice.
-   */
+  /** Work item types available to the project. */
   workItemTypes?: Maybe<WorkItemTypeConnection>;
   /**
-   * Work items of the project. Introduced in 15.1: This feature is in Alpha. It can be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Work items of the project. Introduced in 15.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItems?: Maybe<WorkItemConnection>;
 };
@@ -10845,6 +23572,11 @@ export type ProjectAlertManagementIntegrationsArgs = {
 };
 
 
+export type ProjectAlertManagementPayloadFieldsArgs = {
+  payloadExample: Scalars['String'];
+};
+
+
 export type ProjectBoardArgs = {
   id: Scalars['BoardID'];
 };
@@ -10859,6 +23591,27 @@ export type ProjectBoardsArgs = {
 };
 
 
+export type ProjectBranchRulesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectCiAccessAuthorizedAgentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectCiConfigVariablesArgs = {
+  ref: Scalars['String'];
+};
+
+
 export type ProjectCiTemplateArgs = {
   name: Scalars['String'];
 };
@@ -10869,15 +23622,33 @@ export type ProjectCiVariablesArgs = {
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<CiVariableSort>;
 };
 
 
 export type ProjectClusterAgentArgs = {
+  hasRemoteDevelopmentAgentConfig?: InputMaybe<Scalars['Boolean']>;
+  hasVulnerabilities?: InputMaybe<Scalars['Boolean']>;
   name: Scalars['String'];
 };
 
 
 export type ProjectClusterAgentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  hasRemoteDevelopmentAgentConfig?: InputMaybe<Scalars['Boolean']>;
+  hasVulnerabilities?: InputMaybe<Scalars['Boolean']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectCommitReferencesArgs = {
+  commitSha: Scalars['String'];
+};
+
+
+export type ProjectComplianceFrameworksArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -10895,10 +23666,87 @@ export type ProjectContainerRepositoriesArgs = {
 };
 
 
+export type ProjectCorpusesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectDastProfileArgs = {
+  hasDastProfileSchedule?: InputMaybe<Scalars['Boolean']>;
+  id: Scalars['DastProfileID'];
+};
+
+
+export type ProjectDastProfilesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  hasDastProfileSchedule?: InputMaybe<Scalars['Boolean']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectDastScannerProfilesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectDastSiteProfileArgs = {
+  id: Scalars['DastSiteProfileID'];
+};
+
+
+export type ProjectDastSiteProfilesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectDastSiteValidationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  normalizedTargetUrls?: InputMaybe<Array<Scalars['String']>>;
+  status?: InputMaybe<DastSiteValidationStatusEnum>;
+};
+
+
+export type ProjectDataTransferArgs = {
+  from?: InputMaybe<Scalars['Date']>;
+  to?: InputMaybe<Scalars['Date']>;
+};
+
+
+export type ProjectDependenciesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  componentNames?: InputMaybe<Array<Scalars['String']>>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  packageManagers?: InputMaybe<Array<PackageManager>>;
+  sort?: InputMaybe<DependencySort>;
+};
+
+
+export type ProjectDeploymentArgs = {
+  iid: Scalars['ID'];
+};
+
+
 export type ProjectEnvironmentArgs = {
   name?: InputMaybe<Scalars['String']>;
   search?: InputMaybe<Scalars['String']>;
   states?: InputMaybe<Array<Scalars['String']>>;
+  type?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -10910,6 +23758,53 @@ export type ProjectEnvironmentsArgs = {
   name?: InputMaybe<Scalars['String']>;
   search?: InputMaybe<Scalars['String']>;
   states?: InputMaybe<Array<Scalars['String']>>;
+  type?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectForkDetailsArgs = {
+  ref?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectForkTargetsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  search?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectGitlabSubscriptionsPreviewBillableUserChangeArgs = {
+  addGroupId?: InputMaybe<Scalars['Int']>;
+  addUserEmails?: InputMaybe<Array<Scalars['String']>>;
+  addUserIds?: InputMaybe<Array<Scalars['Int']>>;
+  role: GitlabSubscriptionsUserRole;
+};
+
+
+export type ProjectIncidentManagementEscalationPoliciesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  name?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectIncidentManagementEscalationPolicyArgs = {
+  id: Scalars['IncidentManagementEscalationPolicyID'];
+  name?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectIncidentManagementOncallSchedulesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -10928,10 +23823,19 @@ export type ProjectIncidentManagementTimelineEventsArgs = {
 };
 
 
+export type ProjectInheritedCiVariablesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type ProjectIssueArgs = {
   assigneeId?: InputMaybe<Scalars['String']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  assigneeWildcardId?: InputMaybe<AssigneeWildcardId>;
   authorUsername?: InputMaybe<Scalars['String']>;
   closedAfter?: InputMaybe<Scalars['Time']>;
   closedBefore?: InputMaybe<Scalars['Time']>;
@@ -10940,13 +23844,24 @@ export type ProjectIssueArgs = {
   createdBefore?: InputMaybe<Scalars['Time']>;
   crmContactId?: InputMaybe<Scalars['String']>;
   crmOrganizationId?: InputMaybe<Scalars['String']>;
+  epicId?: InputMaybe<Scalars['String']>;
+  epicWildcardId?: InputMaybe<EpicWildcardId>;
+  healthStatus?: InputMaybe<HealthStatus>;
+  healthStatusFilter?: InputMaybe<HealthStatusFilter>;
   iid?: InputMaybe<Scalars['String']>;
   iids?: InputMaybe<Array<Scalars['String']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeSubepics?: InputMaybe<Scalars['Boolean']>;
+  iterationCadenceId?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  iterationId?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
+  iterationTitle?: InputMaybe<Scalars['String']>;
+  iterationWildcardId?: InputMaybe<IterationWildcardId>;
   labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   milestoneTitle?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   milestoneWildcardId?: InputMaybe<MilestoneWildcardId>;
   myReactionEmoji?: InputMaybe<Scalars['String']>;
   not?: InputMaybe<NegatedIssueFilterInput>;
+  or?: InputMaybe<UnionedIssueFilterInput>;
   releaseTag?: InputMaybe<Array<Scalars['String']>>;
   releaseTagWildcardId?: InputMaybe<ReleaseTagWildcardId>;
   search?: InputMaybe<Scalars['String']>;
@@ -10955,6 +23870,8 @@ export type ProjectIssueArgs = {
   types?: InputMaybe<Array<IssueType>>;
   updatedAfter?: InputMaybe<Scalars['Time']>;
   updatedBefore?: InputMaybe<Scalars['Time']>;
+  weight?: InputMaybe<Scalars['String']>;
+  weightWildcardId?: InputMaybe<WeightWildcardId>;
 };
 
 
@@ -10962,6 +23879,7 @@ export type ProjectIssueStatusCountsArgs = {
   assigneeId?: InputMaybe<Scalars['String']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  assigneeWildcardId?: InputMaybe<AssigneeWildcardId>;
   authorUsername?: InputMaybe<Scalars['String']>;
   closedAfter?: InputMaybe<Scalars['Time']>;
   closedBefore?: InputMaybe<Scalars['Time']>;
@@ -10970,19 +23888,31 @@ export type ProjectIssueStatusCountsArgs = {
   createdBefore?: InputMaybe<Scalars['Time']>;
   crmContactId?: InputMaybe<Scalars['String']>;
   crmOrganizationId?: InputMaybe<Scalars['String']>;
+  epicId?: InputMaybe<Scalars['String']>;
+  epicWildcardId?: InputMaybe<EpicWildcardId>;
+  healthStatusFilter?: InputMaybe<HealthStatusFilter>;
   iid?: InputMaybe<Scalars['String']>;
   iids?: InputMaybe<Array<Scalars['String']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeSubepics?: InputMaybe<Scalars['Boolean']>;
+  iterationCadenceId?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  iterationId?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
+  iterationTitle?: InputMaybe<Scalars['String']>;
+  iterationWildcardId?: InputMaybe<IterationWildcardId>;
   labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   milestoneTitle?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   milestoneWildcardId?: InputMaybe<MilestoneWildcardId>;
   myReactionEmoji?: InputMaybe<Scalars['String']>;
   not?: InputMaybe<NegatedIssueFilterInput>;
+  or?: InputMaybe<UnionedIssueFilterInput>;
   releaseTag?: InputMaybe<Array<Scalars['String']>>;
   releaseTagWildcardId?: InputMaybe<ReleaseTagWildcardId>;
   search?: InputMaybe<Scalars['String']>;
   types?: InputMaybe<Array<IssueType>>;
   updatedAfter?: InputMaybe<Scalars['Time']>;
   updatedBefore?: InputMaybe<Scalars['Time']>;
+  weight?: InputMaybe<Scalars['String']>;
+  weightWildcardId?: InputMaybe<WeightWildcardId>;
 };
 
 
@@ -10991,6 +23921,7 @@ export type ProjectIssuesArgs = {
   assigneeId?: InputMaybe<Scalars['String']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  assigneeWildcardId?: InputMaybe<AssigneeWildcardId>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   closedAfter?: InputMaybe<Scalars['Time']>;
@@ -11000,15 +23931,26 @@ export type ProjectIssuesArgs = {
   createdBefore?: InputMaybe<Scalars['Time']>;
   crmContactId?: InputMaybe<Scalars['String']>;
   crmOrganizationId?: InputMaybe<Scalars['String']>;
+  epicId?: InputMaybe<Scalars['String']>;
+  epicWildcardId?: InputMaybe<EpicWildcardId>;
   first?: InputMaybe<Scalars['Int']>;
+  healthStatus?: InputMaybe<HealthStatus>;
+  healthStatusFilter?: InputMaybe<HealthStatusFilter>;
   iid?: InputMaybe<Scalars['String']>;
   iids?: InputMaybe<Array<Scalars['String']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeSubepics?: InputMaybe<Scalars['Boolean']>;
+  iterationCadenceId?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  iterationId?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
+  iterationTitle?: InputMaybe<Scalars['String']>;
+  iterationWildcardId?: InputMaybe<IterationWildcardId>;
   labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   last?: InputMaybe<Scalars['Int']>;
   milestoneTitle?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   milestoneWildcardId?: InputMaybe<MilestoneWildcardId>;
   myReactionEmoji?: InputMaybe<Scalars['String']>;
   not?: InputMaybe<NegatedIssueFilterInput>;
+  or?: InputMaybe<UnionedIssueFilterInput>;
   releaseTag?: InputMaybe<Array<Scalars['String']>>;
   releaseTagWildcardId?: InputMaybe<ReleaseTagWildcardId>;
   search?: InputMaybe<Scalars['String']>;
@@ -11017,6 +23959,40 @@ export type ProjectIssuesArgs = {
   types?: InputMaybe<Array<IssueType>>;
   updatedAfter?: InputMaybe<Scalars['Time']>;
   updatedBefore?: InputMaybe<Scalars['Time']>;
+  weight?: InputMaybe<Scalars['String']>;
+  weightWildcardId?: InputMaybe<WeightWildcardId>;
+};
+
+
+export type ProjectIterationCadencesArgs = {
+  active?: InputMaybe<Scalars['Boolean']>;
+  after?: InputMaybe<Scalars['String']>;
+  automatic?: InputMaybe<Scalars['Boolean']>;
+  before?: InputMaybe<Scalars['String']>;
+  durationInWeeks?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Int']>;
+  id?: InputMaybe<Scalars['IterationsCadenceID']>;
+  includeAncestorGroups?: InputMaybe<Scalars['Boolean']>;
+  last?: InputMaybe<Scalars['Int']>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectIterationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  id?: InputMaybe<Scalars['ID']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  in?: InputMaybe<Array<IterationSearchableField>>;
+  includeAncestors?: InputMaybe<Scalars['Boolean']>;
+  iterationCadenceIds?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<IterationSort>;
+  state?: InputMaybe<IterationState>;
+  timeframe?: InputMaybe<Timeframe>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -11028,12 +24004,18 @@ export type ProjectJiraImportsArgs = {
 };
 
 
+export type ProjectJobArgs = {
+  id: Scalars['JobID'];
+};
+
+
 export type ProjectJobsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   statuses?: InputMaybe<Array<CiJobStatus>>;
+  withArtifacts?: InputMaybe<Scalars['Boolean']>;
 };
 
 
@@ -11059,6 +24041,7 @@ export type ProjectMergeRequestArgs = {
 
 export type ProjectMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -11087,17 +24070,36 @@ export type ProjectMilestonesArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   containingDate?: InputMaybe<Scalars['Time']>;
-  endDate?: InputMaybe<Scalars['Time']>;
   first?: InputMaybe<Scalars['Int']>;
   ids?: InputMaybe<Array<Scalars['ID']>>;
   includeAncestors?: InputMaybe<Scalars['Boolean']>;
   last?: InputMaybe<Scalars['Int']>;
   searchTitle?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<MilestoneSort>;
-  startDate?: InputMaybe<Scalars['Time']>;
   state?: InputMaybe<MilestoneStateEnum>;
   timeframe?: InputMaybe<Timeframe>;
   title?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectNestedEnvironmentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  name?: InputMaybe<Scalars['String']>;
+  search?: InputMaybe<Scalars['String']>;
+  states?: InputMaybe<Array<Scalars['String']>>;
+  type?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectNetworkPoliciesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  environmentId?: InputMaybe<Scalars['EnvironmentID']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -11114,6 +24116,14 @@ export type ProjectPackagesArgs = {
 };
 
 
+export type ProjectPathLocksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type ProjectPipelineArgs = {
   iid?: InputMaybe<Scalars['ID']>;
   sha?: InputMaybe<Scalars['String']>;
@@ -11124,6 +24134,16 @@ export type ProjectPipelineCountsArgs = {
   ref?: InputMaybe<Scalars['String']>;
   sha?: InputMaybe<Scalars['String']>;
   source?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectPipelineSchedulesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['ID']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  status?: InputMaybe<PipelineScheduleStatus>;
 };
 
 
@@ -11143,6 +24163,24 @@ export type ProjectPipelinesArgs = {
 };
 
 
+export type ProjectProductAnalyticsDashboardsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  slug?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectProductAnalyticsVisualizationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  slug?: InputMaybe<Scalars['String']>;
+};
+
+
 export type ProjectProjectMembersArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -11150,6 +24188,7 @@ export type ProjectProjectMembersArgs = {
   last?: InputMaybe<Scalars['Int']>;
   relations?: InputMaybe<Array<ProjectMemberRelation>>;
   search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<MemberSort>;
 };
 
 
@@ -11172,6 +24211,82 @@ export type ProjectReleasesArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   sort?: InputMaybe<ReleaseSort>;
+};
+
+
+export type ProjectRequirementArgs = {
+  authorUsername?: InputMaybe<Array<Scalars['String']>>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  lastTestReportState?: InputMaybe<RequirementStatusFilter>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<Sort>;
+  state?: InputMaybe<RequirementState>;
+  workItemIid?: InputMaybe<Scalars['ID']>;
+  workItemIids?: InputMaybe<Array<Scalars['ID']>>;
+};
+
+
+export type ProjectRequirementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  authorUsername?: InputMaybe<Array<Scalars['String']>>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  iid?: InputMaybe<Scalars['ID']>;
+  iids?: InputMaybe<Array<Scalars['ID']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  lastTestReportState?: InputMaybe<RequirementStatusFilter>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<Sort>;
+  state?: InputMaybe<RequirementState>;
+  workItemIid?: InputMaybe<Scalars['ID']>;
+  workItemIids?: InputMaybe<Array<Scalars['ID']>>;
+};
+
+
+export type ProjectRunnersArgs = {
+  active?: InputMaybe<Scalars['Boolean']>;
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  paused?: InputMaybe<Scalars['Boolean']>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<CiRunnerSort>;
+  status?: InputMaybe<CiRunnerStatus>;
+  tagList?: InputMaybe<Array<Scalars['String']>>;
+  type?: InputMaybe<CiRunnerType>;
+  upgradeStatus?: InputMaybe<CiRunnerUpgradeStatus>;
+};
+
+
+export type ProjectScanExecutionPoliciesArgs = {
+  actionScanTypes?: InputMaybe<Array<SecurityReportTypeEnum>>;
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  relationship?: InputMaybe<SecurityPolicyRelationType>;
+};
+
+
+export type ProjectScanResultPoliciesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  relationship?: InputMaybe<SecurityPolicyRelationType>;
+};
+
+
+export type ProjectSecurityTrainingProvidersArgs = {
+  onlyEnabled?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+export type ProjectSecurityTrainingUrlsArgs = {
+  filename?: InputMaybe<Scalars['String']>;
+  identifierExternalIds: Array<Scalars['String']>;
 };
 
 
@@ -11230,9 +24345,87 @@ export type ProjectTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
+};
+
+
+export type ProjectUserAccessAuthorizedAgentsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectVisibleForksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  minimumAccessLevel?: InputMaybe<AccessLevelEnum>;
+};
+
+
+export type ProjectVulnerabilitiesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  clusterAgentId?: InputMaybe<Array<Scalars['ClustersAgentID']>>;
+  clusterId?: InputMaybe<Array<Scalars['ClustersClusterID']>>;
+  first?: InputMaybe<Scalars['Int']>;
+  hasIssues?: InputMaybe<Scalars['Boolean']>;
+  hasResolution?: InputMaybe<Scalars['Boolean']>;
+  image?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectId?: InputMaybe<Array<Scalars['ID']>>;
+  reportType?: InputMaybe<Array<VulnerabilityReportType>>;
+  scanner?: InputMaybe<Array<Scalars['String']>>;
+  scannerId?: InputMaybe<Array<Scalars['VulnerabilitiesScannerID']>>;
+  severity?: InputMaybe<Array<VulnerabilitySeverity>>;
+  sort?: InputMaybe<VulnerabilitySort>;
+  state?: InputMaybe<Array<VulnerabilityState>>;
+};
+
+
+export type ProjectVulnerabilitiesCountByDayArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  endDate: Scalars['ISO8601Date'];
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  startDate: Scalars['ISO8601Date'];
+};
+
+
+export type ProjectVulnerabilityImagesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectVulnerabilityScannersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type ProjectVulnerabilitySeveritiesCountArgs = {
+  clusterAgentId?: InputMaybe<Array<Scalars['ClustersAgentID']>>;
+  hasIssues?: InputMaybe<Scalars['Boolean']>;
+  hasResolution?: InputMaybe<Scalars['Boolean']>;
+  image?: InputMaybe<Array<Scalars['String']>>;
+  projectId?: InputMaybe<Array<Scalars['ID']>>;
+  reportType?: InputMaybe<Array<VulnerabilityReportType>>;
+  scanner?: InputMaybe<Array<Scalars['String']>>;
+  scannerId?: InputMaybe<Array<Scalars['VulnerabilitiesScannerID']>>;
+  severity?: InputMaybe<Array<VulnerabilitySeverity>>;
+  state?: InputMaybe<Array<VulnerabilityState>>;
 };
 
 
@@ -11247,20 +24440,26 @@ export type ProjectWorkItemTypesArgs = {
 
 export type ProjectWorkItemsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   iid?: InputMaybe<Scalars['String']>;
   iids?: InputMaybe<Array<Scalars['String']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
   last?: InputMaybe<Scalars['Int']>;
+  requirementLegacyWidget?: InputMaybe<RequirementLegacyFilterInput>;
   search?: InputMaybe<Scalars['String']>;
   sort?: InputMaybe<WorkItemSort>;
   state?: InputMaybe<IssuableState>;
+  statusWidget?: InputMaybe<StatusFilterInput>;
   types?: InputMaybe<Array<IssueType>>;
 };
 
 export type ProjectCiCdSetting = {
   __typename?: 'ProjectCiCdSetting';
-  /** Indicates CI job tokens generated in this project have restricted access to resources. */
+  /** Indicates CI/CD job tokens generated in other projects have restricted access to this project. */
+  inboundJobTokenScopeEnabled?: Maybe<Scalars['Boolean']>;
+  /** Indicates CI/CD job tokens generated in this project have restricted access to other projects. */
   jobTokenScopeEnabled?: Maybe<Scalars['Boolean']>;
   /** Whether to keep the latest builds artifacts. */
   keepLatestArtifact?: Maybe<Scalars['Boolean']>;
@@ -11278,10 +24477,21 @@ export type ProjectCiCdSettingsUpdateInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Full Path of the project the settings belong to. */
   fullPath: Scalars['ID'];
-  /** Indicates CI job tokens generated in this project have restricted access to resources. */
+  /** Indicates CI/CD job tokens generated in other projects have restricted access to this project. */
+  inboundJobTokenScopeEnabled?: InputMaybe<Scalars['Boolean']>;
+  /**
+   * Indicates CI/CD job tokens generated in this project have restricted access to
+   * other projects. Deprecated in 16.0: Outbound job token scope is being removed.
+   * This field can now only be set to false.
+   * @deprecated Outbound job token scope is being removed. This field can now only be set to false. Deprecated in 16.0.
+   */
   jobTokenScopeEnabled?: InputMaybe<Scalars['Boolean']>;
-  /** Indicates if the latest artifact should be kept for this project. */
+  /** Indicates if the latest artifact should be kept for the project. */
   keepLatestArtifact?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates if merge pipelines are enabled for the project. */
+  mergePipelinesEnabled?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates if merge trains are enabled for the project. */
+  mergeTrainsEnabled?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Autogenerated return type of ProjectCiCdSettingsUpdate */
@@ -11308,6 +24518,40 @@ export type ProjectConnection = {
   pageInfo: PageInfo;
 };
 
+export type ProjectConversations = {
+  __typename?: 'ProjectConversations';
+  /**
+   * Messages generated by open ai and the user. Introduced in 16.0: This feature
+   * is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0.
+   */
+  ciConfigMessages?: Maybe<AiMessageTypeConnection>;
+};
+
+
+export type ProjectConversationsCiConfigMessagesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+export type ProjectDataTransfer = {
+  __typename?: 'ProjectDataTransfer';
+  /** Data nodes. */
+  egressNodes?: Maybe<EgressNodeConnection>;
+  /** Total egress for that project in that period of time. */
+  totalEgress?: Maybe<Scalars['BigInt']>;
+};
+
+
+export type ProjectDataTransferEgressNodesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
 /** An edge in a connection. */
 export type ProjectEdge = {
   __typename?: 'ProjectEdge';
@@ -11315,6 +24559,25 @@ export type ProjectEdge = {
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
   node?: Maybe<Project>;
+};
+
+/** Autogenerated input type of ProjectInitializeProductAnalytics */
+export type ProjectInitializeProductAnalyticsInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project to initialize. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of ProjectInitializeProductAnalytics */
+export type ProjectInitializeProductAnalyticsPayload = {
+  __typename?: 'ProjectInitializeProductAnalyticsPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Project on which the initialization took place. */
+  project?: Maybe<Project>;
 };
 
 /** Represents a Project Membership */
@@ -11348,6 +24611,31 @@ export type ProjectMemberMergeRequestInteractionArgs = {
   id: Scalars['MergeRequestID'];
 };
 
+/** Autogenerated input type of ProjectMemberBulkUpdate */
+export type ProjectMemberBulkUpdateInput = {
+  /** Access level to update the members to. */
+  accessLevel: MemberAccessLevel;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Date and time the membership expires. */
+  expiresAt?: InputMaybe<Scalars['Time']>;
+  /** Global ID of the project. */
+  projectId: Scalars['ProjectID'];
+  /** Global IDs of the members. */
+  userIds: Array<Scalars['UserID']>;
+};
+
+/** Autogenerated return type of ProjectMemberBulkUpdate */
+export type ProjectMemberBulkUpdatePayload = {
+  __typename?: 'ProjectMemberBulkUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Project members after mutation. */
+  projectMembers?: Maybe<Array<ProjectMember>>;
+};
+
 /** The connection type for ProjectMember. */
 export type ProjectMemberConnection = {
   __typename?: 'ProjectMemberConnection';
@@ -11377,12 +24665,16 @@ export type ProjectMemberRelation =
   /** Inherited members */
   | 'INHERITED'
   /** Invited Groups members */
-  | 'INVITED_GROUPS';
+  | 'INVITED_GROUPS'
+  /** Shared Into Ancestors members */
+  | 'SHARED_INTO_ANCESTORS';
 
 export type ProjectPermissions = {
   __typename?: 'ProjectPermissions';
   /** Indicates the user can perform `admin_operations` on this resource */
   adminOperations: Scalars['Boolean'];
+  /** Indicates the user can perform `admin_path_locks` on this resource */
+  adminPathLocks: Scalars['Boolean'];
   /** Indicates the user can perform `admin_project` on this resource */
   adminProject: Scalars['Boolean'];
   /** Indicates the user can perform `admin_remote_mirror` on this resource */
@@ -11439,6 +24731,8 @@ export type ProjectPermissions = {
   readCycleAnalytics: Scalars['Boolean'];
   /** Indicates the user can perform `read_design` on this resource */
   readDesign: Scalars['Boolean'];
+  /** Indicates the user can perform `read_environment` on this resource */
+  readEnvironment: Scalars['Boolean'];
   /** Indicates the user can perform `read_merge_request` on this resource */
   readMergeRequest: Scalars['Boolean'];
   /** Indicates the user can perform `read_pages_content` on this resource */
@@ -11467,6 +24761,75 @@ export type ProjectPermissions = {
   uploadFile: Scalars['Boolean'];
 };
 
+/** Represents the source of a security policy belonging to a project */
+export type ProjectSecurityPolicySource = {
+  __typename?: 'ProjectSecurityPolicySource';
+  /** Project the policy is associated with. */
+  project?: Maybe<Project>;
+};
+
+export type ProjectSecurityTraining = {
+  __typename?: 'ProjectSecurityTraining';
+  /** Description of the training provider. */
+  description?: Maybe<Scalars['String']>;
+  /** ID of the training provider. */
+  id: Scalars['GlobalID'];
+  /** Represents whether the provider is enabled or not. */
+  isEnabled: Scalars['Boolean'];
+  /** Represents whether the provider is set as primary or not. */
+  isPrimary: Scalars['Boolean'];
+  /** Logo URL of the provider. */
+  logoUrl?: Maybe<Scalars['String']>;
+  /** Name of the training provider. */
+  name: Scalars['String'];
+  /** URL of the provider. */
+  url: Scalars['String'];
+};
+
+/** Autogenerated input type of ProjectSetComplianceFramework */
+export type ProjectSetComplianceFrameworkInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the compliance framework to assign to the project. Set to `null` to unset. */
+  complianceFrameworkId?: InputMaybe<Scalars['ComplianceManagementFrameworkID']>;
+  /** ID of the project to change the compliance framework of. */
+  projectId: Scalars['ProjectID'];
+};
+
+/** Autogenerated return type of ProjectSetComplianceFramework */
+export type ProjectSetComplianceFrameworkPayload = {
+  __typename?: 'ProjectSetComplianceFrameworkPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Project after mutation. */
+  project?: Maybe<Project>;
+};
+
+/** Autogenerated input type of ProjectSetLocked */
+export type ProjectSetLockedInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path to the file. */
+  filePath: Scalars['String'];
+  /** Whether or not to lock the file path. */
+  lock: Scalars['Boolean'];
+  /** Full path of the project to mutate. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of ProjectSetLocked */
+export type ProjectSetLockedPayload = {
+  __typename?: 'ProjectSetLockedPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Project after mutation. */
+  project?: Maybe<Project>;
+};
+
 export type ProjectStatistics = {
   __typename?: 'ProjectStatistics';
   /** Build artifacts size of the project in bytes. */
@@ -11493,6 +24856,154 @@ export type ProjectStatistics = {
   wikiSize?: Maybe<Scalars['Float']>;
 };
 
+export type ProjectStatisticsRedirect = {
+  __typename?: 'ProjectStatisticsRedirect';
+  /** Redirection Route for job_artifacts. */
+  buildArtifacts: Scalars['String'];
+  /** Redirection Route for container_registry. */
+  containerRegistry: Scalars['String'];
+  /** Redirection Route for packages. */
+  packages: Scalars['String'];
+  /** Redirection Route for repository. */
+  repository: Scalars['String'];
+  /** Redirection Route for snippets. */
+  snippets: Scalars['String'];
+  /** Redirection Route for wiki. */
+  wiki: Scalars['String'];
+};
+
+/** Autogenerated input type of ProjectSyncFork */
+export type ProjectSyncForkInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project to initialize. */
+  projectPath: Scalars['ID'];
+  /** Ref of the fork to fetch into. */
+  targetBranch: Scalars['String'];
+};
+
+/** Autogenerated return type of ProjectSyncFork */
+export type ProjectSyncForkPayload = {
+  __typename?: 'ProjectSyncForkPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Updated fork details. */
+  details?: Maybe<ForkDetails>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Exposes aggregated value stream flow metrics */
+export type ProjectValueStreamAnalyticsFlowMetrics = {
+  __typename?: 'ProjectValueStreamAnalyticsFlowMetrics';
+  /** Median time from first commit to issue closed */
+  cycleTime?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Number of production deployments in the given period. */
+  deploymentCount?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Number of issues opened in the given period. */
+  issueCount?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Number of open issues closed (completed) in the given period. Maximum value is 10,001. */
+  issuesCompletedCount?: Maybe<ValueStreamAnalyticsMetric>;
+  /** Median time from when the issue was created to when it was closed. */
+  leadTime?: Maybe<ValueStreamAnalyticsMetric>;
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type ProjectValueStreamAnalyticsFlowMetricsCycleTimeArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type ProjectValueStreamAnalyticsFlowMetricsDeploymentCountArgs = {
+  from: Scalars['Time'];
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type ProjectValueStreamAnalyticsFlowMetricsIssueCountArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type ProjectValueStreamAnalyticsFlowMetricsIssuesCompletedCountArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  to: Scalars['Time'];
+};
+
+
+/** Exposes aggregated value stream flow metrics */
+export type ProjectValueStreamAnalyticsFlowMetricsLeadTimeArgs = {
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  from: Scalars['Time'];
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+  milestoneTitle?: InputMaybe<Scalars['String']>;
+  to: Scalars['Time'];
+};
+
+/** Represents the Geo replication and verification state of a project_wiki_repository */
+export type ProjectWikiRepositoryRegistry = {
+  __typename?: 'ProjectWikiRepositoryRegistry';
+  /** Timestamp when the ProjectWikiRepositoryRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the ProjectWikiRepositoryRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the ProjectWikiRepositoryRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the ProjectWikiRepositoryRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** ID of the Project Wiki Repository. */
+  projectWikiRepositoryId: Scalars['ID'];
+  /** Timestamp after which the ProjectWikiRepositoryRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the ProjectWikiRepositoryRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the ProjectWikiRepositoryRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the ProjectWikiRepositoryRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the ProjectWikiRepositoryRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for ProjectWikiRepositoryRegistry. */
+export type ProjectWikiRepositoryRegistryConnection = {
+  __typename?: 'ProjectWikiRepositoryRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProjectWikiRepositoryRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProjectWikiRepositoryRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ProjectWikiRepositoryRegistryEdge = {
+  __typename?: 'ProjectWikiRepositoryRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProjectWikiRepositoryRegistry>;
+};
+
 /** The alert condition for Prometheus */
 export type PrometheusAlert = {
   __typename?: 'PrometheusAlert';
@@ -11507,7 +25018,7 @@ export type PrometheusIntegrationCreateInput = {
   /** Whether the integration is receiving alerts. */
   active: Scalars['Boolean'];
   /** Endpoint at which Prometheus can be queried. */
-  apiUrl: Scalars['String'];
+  apiUrl?: InputMaybe<Scalars['String']>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Project to create the integration in. */
@@ -11567,6 +25078,214 @@ export type PrometheusIntegrationUpdatePayload = {
   integration?: Maybe<AlertManagementPrometheusIntegration>;
 };
 
+/** Autogenerated input type of PromoteToEpic */
+export type PromoteToEpicInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Group the promoted epic will belong to. */
+  groupPath?: InputMaybe<Scalars['ID']>;
+  /** IID of the issue to mutate. */
+  iid: Scalars['String'];
+  /** Project the issue to mutate is in. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of PromoteToEpic */
+export type PromoteToEpicPayload = {
+  __typename?: 'PromoteToEpicPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Epic after issue promotion. */
+  epic?: Maybe<Epic>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue after mutation. */
+  issue?: Maybe<Issue>;
+};
+
+/** Protected Environments of the environment. */
+export type ProtectedEnvironment = {
+  __typename?: 'ProtectedEnvironment';
+  /** Which group, user or role is allowed to approve deployments to the environment. */
+  approvalRules?: Maybe<ProtectedEnvironmentApprovalRuleConnection>;
+  /** Which group, user or role is allowed to execute deployments to the environment. */
+  deployAccessLevels?: Maybe<ProtectedEnvironmentDeployAccessLevelConnection>;
+  /** Group details. Present if it's group-level protected environment. */
+  group?: Maybe<Group>;
+  /**
+   * Name of the environment if it's a project-level protected environment. Tier of
+   * the environment if it's a group-level protected environment.
+   */
+  name?: Maybe<Scalars['String']>;
+  /** Project details. Present if it's project-level protected environment. */
+  project?: Maybe<Project>;
+  /** Required approval count for Unified Approval Setting. */
+  requiredApprovalCount?: Maybe<Scalars['Int']>;
+};
+
+
+/** Protected Environments of the environment. */
+export type ProtectedEnvironmentApprovalRulesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Protected Environments of the environment. */
+export type ProtectedEnvironmentDeployAccessLevelsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** Which group, user or role is allowed to approve deployments to the environment. */
+export type ProtectedEnvironmentApprovalRule = {
+  __typename?: 'ProtectedEnvironmentApprovalRule';
+  /** Role details. Present if it's role specific access control. */
+  accessLevel?: Maybe<AccessLevel>;
+  /** Group details. Present if it's group specific access control. */
+  group?: Maybe<Group>;
+  /** Number of required approvals. */
+  requiredApprovals?: Maybe<Scalars['Int']>;
+  /** User details. Present if it's user specific access control. */
+  user?: Maybe<UserCore>;
+};
+
+/** The connection type for ProtectedEnvironmentApprovalRule. */
+export type ProtectedEnvironmentApprovalRuleConnection = {
+  __typename?: 'ProtectedEnvironmentApprovalRuleConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProtectedEnvironmentApprovalRuleEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProtectedEnvironmentApprovalRule>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ProtectedEnvironmentApprovalRuleEdge = {
+  __typename?: 'ProtectedEnvironmentApprovalRuleEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProtectedEnvironmentApprovalRule>;
+};
+
+/** Which group, user or role is allowed to approve deployments to the environment. */
+export type ProtectedEnvironmentApprovalRuleForSummary = {
+  __typename?: 'ProtectedEnvironmentApprovalRuleForSummary';
+  /** Role details. Present if it's role specific access control. */
+  accessLevel?: Maybe<AccessLevel>;
+  /** Current approvals of the deployment. */
+  approvals?: Maybe<Array<DeploymentApproval>>;
+  /** Approved count. */
+  approvedCount?: Maybe<Scalars['Int']>;
+  /** Group details. Present if it's group specific access control. */
+  group?: Maybe<Group>;
+  /** Pending approval count. */
+  pendingApprovalCount?: Maybe<Scalars['Int']>;
+  /** Number of required approvals. */
+  requiredApprovals?: Maybe<Scalars['Int']>;
+  /** Status of the approval summary. */
+  status?: Maybe<DeploymentApprovalSummaryStatus>;
+  /** User details. Present if it's user specific access control. */
+  user?: Maybe<UserCore>;
+};
+
+/** The connection type for ProtectedEnvironment. */
+export type ProtectedEnvironmentConnection = {
+  __typename?: 'ProtectedEnvironmentConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProtectedEnvironmentEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProtectedEnvironment>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Which group, user or role is allowed to execute deployments to the environment. */
+export type ProtectedEnvironmentDeployAccessLevel = {
+  __typename?: 'ProtectedEnvironmentDeployAccessLevel';
+  /** Role details. Present if it's role specific access control. */
+  accessLevel?: Maybe<AccessLevel>;
+  /** Group details. Present if it's group specific access control. */
+  group?: Maybe<Group>;
+  /** User details. Present if it's user specific access control. */
+  user?: Maybe<UserCore>;
+};
+
+/** The connection type for ProtectedEnvironmentDeployAccessLevel. */
+export type ProtectedEnvironmentDeployAccessLevelConnection = {
+  __typename?: 'ProtectedEnvironmentDeployAccessLevelConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ProtectedEnvironmentDeployAccessLevelEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ProtectedEnvironmentDeployAccessLevel>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ProtectedEnvironmentDeployAccessLevelEdge = {
+  __typename?: 'ProtectedEnvironmentDeployAccessLevelEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProtectedEnvironmentDeployAccessLevel>;
+};
+
+/** An edge in a connection. */
+export type ProtectedEnvironmentEdge = {
+  __typename?: 'ProtectedEnvironmentEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ProtectedEnvironment>;
+};
+
+/** Defines which user roles, users, or groups can push to a protected branch. */
+export type PushAccessLevel = {
+  __typename?: 'PushAccessLevel';
+  /** GitLab::Access level. */
+  accessLevel: Scalars['Int'];
+  /** Human readable representation for this access level. */
+  accessLevelDescription: Scalars['String'];
+  /** Group associated with this access level. */
+  group?: Maybe<AccessLevelGroup>;
+  /** User associated with this access level. */
+  user?: Maybe<AccessLevelUser>;
+};
+
+/** The connection type for PushAccessLevel. */
+export type PushAccessLevelConnection = {
+  __typename?: 'PushAccessLevelConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<PushAccessLevelEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<PushAccessLevel>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type PushAccessLevelEdge = {
+  __typename?: 'PushAccessLevelEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<PushAccessLevel>;
+};
+
+/** Represents rules that commit pushes must follow. */
+export type PushRules = {
+  __typename?: 'PushRules';
+  /** Indicates whether commits not signed through GPG will be rejected. */
+  rejectUnsignedCommits: Scalars['Boolean'];
+};
+
 /** Pypi metadata */
 export type PypiMetadata = {
   __typename?: 'PypiMetadata';
@@ -11578,31 +25297,87 @@ export type PypiMetadata = {
 
 export type Query = {
   __typename?: 'Query';
+  /**
+   * Find AI messages. Introduced in 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  aiMessages: AiCachedMessageTypeConnection;
+  /** Definitions for all audit events available on the instance. */
+  auditEventDefinitions: AuditEventDefinitionConnection;
   /** Find an issue board list. */
   boardList?: Maybe<BoardList>;
   /** CI related settings that apply to the entire instance. */
   ciApplicationSettings?: Maybe<CiApplicationSettings>;
   /**
+   * A single CI/CD Catalog resource visible to an authorized user Introduced in
+   * 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  ciCatalogResource?: Maybe<CiCatalogResource>;
+  /**
+   * All CI/CD Catalog resources under a common namespace, visible to an authorized
+   * user Introduced in 15.11: This feature is an Experiment. It can be changed or
+   * removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  ciCatalogResources?: Maybe<CiCatalogResourceConnection>;
+  /**
    * Linted and processed contents of a CI config.
    * Should not be requested more than once per request.
    */
   ciConfig?: Maybe<CiConfig>;
+  /** Compute usage data for a namespace. */
+  ciMinutesUsage?: Maybe<CiMinutesNamespaceMonthlyUsageConnection>;
+  /** Stage belonging to a CI pipeline. */
+  ciPipelineStage?: Maybe<CiStage>;
   /** List of the instance's CI/CD variables. */
   ciVariables?: Maybe<CiInstanceVariableConnection>;
   /** Find a container repository. */
   containerRepository?: Maybe<ContainerRepositoryDetails>;
+  /** Fields related to the current license. */
+  currentLicense?: Maybe<CurrentLicense>;
   /** Get information about current user. */
   currentUser?: Maybe<UserCore>;
   /** Fields related to design management. */
   designManagement: DesignManagement;
+  /** Get configured DevOps adoption namespaces. **BETA** This endpoint is subject to change without notice. */
+  devopsAdoptionEnabledNamespaces?: Maybe<DevopsAdoptionEnabledNamespaceConnection>;
   /** Testing endpoint to validate the API with */
   echo: Scalars['String'];
+  epicBoardList?: Maybe<EpicList>;
+  /**
+   * Explain This Vulnerability Prompt for a specified Vulnerability Introduced in
+   * 16.2: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.2.
+   */
+  explainVulnerabilityPrompt?: Maybe<ExplainVulnerabilityPrompt>;
+  /** Find a Geo node. */
+  geoNode?: Maybe<GeoNode>;
   /** Whether Gitpod is enabled in application settings. */
   gitpodEnabled?: Maybe<Scalars['Boolean']>;
   /** Find a group. */
   group?: Maybe<Group>;
+  /** Find groups. */
+  groups?: Maybe<GroupConnection>;
+  /** Instance level external audit event destinations. */
+  instanceExternalAuditEventDestinations?: Maybe<InstanceExternalAuditEventDestinationConnection>;
+  /** Fields related to Instance Security Dashboard. */
+  instanceSecurityDashboard?: Maybe<InstanceSecurityDashboard>;
   /** Find an issue. */
   issue?: Maybe<Issue>;
+  /**
+   * Find issues visible to the current user. At least one filter must be provided.
+   * Introduced in 15.6: This feature is an Experiment. It can be changed or
+   * removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.6.
+   */
+  issues?: Maybe<IssueConnection>;
+  /** Find an iteration. */
+  iteration?: Maybe<Iteration>;
+  /** All jobs on this GitLab instance. */
+  jobs?: Maybe<CiJobConnection>;
+  /** Fields related to entries in the license history. */
+  licenseHistoryEntries?: Maybe<LicenseHistoryEntryConnection>;
   /** Find a merge request. */
   mergeRequest?: Maybe<MergeRequest>;
   /** Metadata about GitLab. */
@@ -11611,7 +25386,15 @@ export type Query = {
   milestone?: Maybe<Milestone>;
   /** Find a namespace. */
   namespace?: Maybe<Namespace>;
-  /** Find a package. */
+  /**
+   * Find a note. Introduced in 15.9: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  note?: Maybe<Note>;
+  /**
+   * Find a package. This field can only be resolved for one query in any single
+   * request. Returns `null` if a package has no `default` status.
+   */
   package?: Maybe<PackageDetailsType>;
   /** Find a project. */
   project?: Maybe<Project>;
@@ -11621,14 +25404,29 @@ export type Query = {
   queryComplexity?: Maybe<QueryComplexity>;
   /** Find a runner. */
   runner?: Maybe<CiRunner>;
-  /** Supported runner platforms. */
+  /**
+   * Supported runner platforms. Deprecated in 15.9: No longer used, use
+   * gitlab-runner documentation to learn about supported platforms.
+   * @deprecated No longer used, use gitlab-runner documentation to learn about supported platforms. Deprecated in 15.9.
+   */
   runnerPlatforms?: Maybe<RunnerPlatformConnection>;
-  /** Runner setup instructions. */
+  /**
+   * Runner setup instructions. Deprecated in 15.9: No longer used, use
+   * gitlab-runner documentation to learn about runner registration commands.
+   * @deprecated No longer used, use gitlab-runner documentation to learn about runner registration commands. Deprecated in 15.9.
+   */
   runnerSetup?: Maybe<RunnerSetup>;
   /** Find runners visible to the current user. */
   runners?: Maybe<CiRunnerConnection>;
   /** Find Snippets visible to the current user. */
   snippets?: Maybe<SnippetConnection>;
+  /** Fields related to entries in future subscriptions. */
+  subscriptionFutureEntries?: Maybe<SubscriptionFutureEntryConnection>;
+  /**
+   * Find a synthetic note Introduced in 15.9: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  syntheticNote?: Maybe<Note>;
   /** Find timelogs visible to the current user. */
   timelogs?: Maybe<TimelogConnection>;
   /** Retrieve a single to-do item */
@@ -11641,18 +25439,67 @@ export type Query = {
   user?: Maybe<UserCore>;
   /** Find users. */
   users?: Maybe<UserCoreConnection>;
+  /** Vulnerabilities reported on projects on the current user's instance security dashboard. */
+  vulnerabilities?: Maybe<VulnerabilityConnection>;
+  /** The historical number of vulnerabilities per day for the projects on the current user's instance security dashboard. */
+  vulnerabilitiesCountByDay?: Maybe<VulnerabilitiesCountByDayConnection>;
+  /** Find a vulnerability. */
+  vulnerability?: Maybe<Vulnerability>;
   /**
-   * Find a work item. Returns `null` if `work_items` feature flag is disabled.
-   * Introduced in 15.1: This feature is in Alpha. It can be changed or removed at any time.
-   * @deprecated This feature is in Alpha. It can be changed or removed at any time. Introduced in 15.1.
+   * Find a work item. Introduced in 15.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.1.
    */
   workItem?: Maybe<WorkItem>;
+  /**
+   * Find a workspace. Introduced in 16.0: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0.
+   */
+  workspace?: Maybe<Workspace>;
+  /**
+   * Find workspaces owned by the current user by their IDs. Introduced in 16.0:
+   * This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.0.
+   */
+  workspaces?: Maybe<WorkspaceConnection>;
+};
+
+
+export type QueryAiMessagesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  requestIds?: InputMaybe<Array<Scalars['ID']>>;
+  roles?: InputMaybe<Array<AiCachedMessageRole>>;
+};
+
+
+export type QueryAuditEventDefinitionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
 export type QueryBoardListArgs = {
   id: Scalars['ListID'];
   issueFilters?: InputMaybe<BoardIssueInput>;
+};
+
+
+export type QueryCiCatalogResourceArgs = {
+  id: Scalars['CiCatalogResourceID'];
+};
+
+
+export type QueryCiCatalogResourcesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectPath?: InputMaybe<Scalars['ID']>;
+  sort?: InputMaybe<CiCatalogResourceSort>;
 };
 
 
@@ -11664,11 +25511,27 @@ export type QueryCiConfigArgs = {
 };
 
 
+export type QueryCiMinutesUsageArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  date?: InputMaybe<Scalars['Date']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  namespaceId?: InputMaybe<Scalars['NamespaceID']>;
+};
+
+
+export type QueryCiPipelineStageArgs = {
+  id: Scalars['CiStageID'];
+};
+
+
 export type QueryCiVariablesArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<CiVariableSort>;
 };
 
 
@@ -11677,8 +25540,33 @@ export type QueryContainerRepositoryArgs = {
 };
 
 
+export type QueryDevopsAdoptionEnabledNamespacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  displayNamespaceId?: InputMaybe<Scalars['NamespaceID']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type QueryEchoArgs = {
   text: Scalars['String'];
+};
+
+
+export type QueryEpicBoardListArgs = {
+  epicFilters?: InputMaybe<EpicFilters>;
+  id: Scalars['BoardsEpicListID'];
+};
+
+
+export type QueryExplainVulnerabilityPromptArgs = {
+  vulnerabilityId: Scalars['VulnerabilityID'];
+};
+
+
+export type QueryGeoNodeArgs = {
+  name?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -11687,8 +25575,93 @@ export type QueryGroupArgs = {
 };
 
 
+export type QueryGroupsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  search?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryInstanceExternalAuditEventDestinationsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type QueryIssueArgs = {
   id: Scalars['IssueID'];
+};
+
+
+export type QueryIssuesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  assigneeId?: InputMaybe<Scalars['String']>;
+  assigneeUsername?: InputMaybe<Scalars['String']>;
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  assigneeWildcardId?: InputMaybe<AssigneeWildcardId>;
+  authorUsername?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  closedAfter?: InputMaybe<Scalars['Time']>;
+  closedBefore?: InputMaybe<Scalars['Time']>;
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  createdAfter?: InputMaybe<Scalars['Time']>;
+  createdBefore?: InputMaybe<Scalars['Time']>;
+  crmContactId?: InputMaybe<Scalars['String']>;
+  crmOrganizationId?: InputMaybe<Scalars['String']>;
+  epicId?: InputMaybe<Scalars['String']>;
+  epicWildcardId?: InputMaybe<EpicWildcardId>;
+  first?: InputMaybe<Scalars['Int']>;
+  healthStatusFilter?: InputMaybe<HealthStatusFilter>;
+  iid?: InputMaybe<Scalars['String']>;
+  iids?: InputMaybe<Array<Scalars['String']>>;
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  includeArchived?: InputMaybe<Scalars['Boolean']>;
+  includeSubepics?: InputMaybe<Scalars['Boolean']>;
+  iterationCadenceId?: InputMaybe<Array<Scalars['IterationsCadenceID']>>;
+  iterationId?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
+  iterationTitle?: InputMaybe<Scalars['String']>;
+  iterationWildcardId?: InputMaybe<IterationWildcardId>;
+  labelName?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  last?: InputMaybe<Scalars['Int']>;
+  milestoneTitle?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  milestoneWildcardId?: InputMaybe<MilestoneWildcardId>;
+  myReactionEmoji?: InputMaybe<Scalars['String']>;
+  not?: InputMaybe<NegatedIssueFilterInput>;
+  or?: InputMaybe<UnionedIssueFilterInput>;
+  search?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<IssueSort>;
+  state?: InputMaybe<IssuableState>;
+  types?: InputMaybe<Array<IssueType>>;
+  updatedAfter?: InputMaybe<Scalars['Time']>;
+  updatedBefore?: InputMaybe<Scalars['Time']>;
+  weight?: InputMaybe<Scalars['String']>;
+  weightWildcardId?: InputMaybe<WeightWildcardId>;
+};
+
+
+export type QueryIterationArgs = {
+  id: Scalars['IterationID'];
+};
+
+
+export type QueryJobsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  statuses?: InputMaybe<Array<CiJobStatus>>;
+};
+
+
+export type QueryLicenseHistoryEntriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -11704,6 +25677,11 @@ export type QueryMilestoneArgs = {
 
 export type QueryNamespaceArgs = {
   fullPath: Scalars['ID'];
+};
+
+
+export type QueryNoteArgs = {
+  id: Scalars['NoteID'];
 };
 
 
@@ -11728,6 +25706,8 @@ export type QueryProjectsArgs = {
   searchNamespaces?: InputMaybe<Scalars['Boolean']>;
   sort?: InputMaybe<Scalars['String']>;
   topics?: InputMaybe<Array<Scalars['String']>>;
+  withIssuesEnabled?: InputMaybe<Scalars['Boolean']>;
+  withMergeRequestsEnabled?: InputMaybe<Scalars['Boolean']>;
 };
 
 
@@ -11782,6 +25762,20 @@ export type QuerySnippetsArgs = {
 };
 
 
+export type QuerySubscriptionFutureEntriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type QuerySyntheticNoteArgs = {
+  noteableId: Scalars['NoteableID'];
+  sha: Scalars['String'];
+};
+
+
 export type QueryTimelogsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -11791,6 +25785,7 @@ export type QueryTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
@@ -11841,8 +25836,59 @@ export type QueryUsersArgs = {
 };
 
 
+export type QueryVulnerabilitiesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  clusterAgentId?: InputMaybe<Array<Scalars['ClustersAgentID']>>;
+  clusterId?: InputMaybe<Array<Scalars['ClustersClusterID']>>;
+  first?: InputMaybe<Scalars['Int']>;
+  hasIssues?: InputMaybe<Scalars['Boolean']>;
+  hasResolution?: InputMaybe<Scalars['Boolean']>;
+  image?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectId?: InputMaybe<Array<Scalars['ID']>>;
+  reportType?: InputMaybe<Array<VulnerabilityReportType>>;
+  scanner?: InputMaybe<Array<Scalars['String']>>;
+  scannerId?: InputMaybe<Array<Scalars['VulnerabilitiesScannerID']>>;
+  severity?: InputMaybe<Array<VulnerabilitySeverity>>;
+  sort?: InputMaybe<VulnerabilitySort>;
+  state?: InputMaybe<Array<VulnerabilityState>>;
+};
+
+
+export type QueryVulnerabilitiesCountByDayArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  endDate: Scalars['ISO8601Date'];
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  startDate: Scalars['ISO8601Date'];
+};
+
+
+export type QueryVulnerabilityArgs = {
+  id: Scalars['VulnerabilityID'];
+};
+
+
 export type QueryWorkItemArgs = {
   id: Scalars['WorkItemID'];
+};
+
+
+export type QueryWorkspaceArgs = {
+  id: Scalars['RemoteDevelopmentWorkspaceID'];
+};
+
+
+export type QueryWorkspacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['RemoteDevelopmentWorkspaceID']>>;
+  includeActualStates?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
 };
 
 export type QueryComplexity = {
@@ -11862,6 +25908,33 @@ export type RecentFailures = {
   count?: Maybe<Scalars['Int']>;
 };
 
+/** Type of ref */
+export type RefType =
+  /** Ref type for branches. */
+  | 'HEADS'
+  /** Ref type for tags. */
+  | 'TAGS';
+
+export type Registrable = CiSecureFileRegistry | ContainerRepositoryRegistry | DependencyProxyBlobRegistry | DependencyProxyManifestRegistry | DesignManagementRepositoryRegistry | JobArtifactRegistry | LfsObjectRegistry | MergeRequestDiffRegistry | PackageFileRegistry | PagesDeploymentRegistry | PipelineArtifactRegistry | ProjectWikiRepositoryRegistry | SnippetRepositoryRegistry | TerraformStateVersionRegistry | UploadRegistry;
+
+/** State of a Geo registry */
+export type RegistryState =
+  /** Registry that failed to sync. */
+  | 'FAILED'
+  /** Registry waiting to be synced. */
+  | 'PENDING'
+  /** Registry currently syncing. */
+  | 'STARTED'
+  /** Registry that is synced. */
+  | 'SYNCED';
+
+/** The position to which the object should be moved */
+export type RelativePositionType =
+  /** Object is moved after an adjacent object. */
+  | 'AFTER'
+  /** Object is moved before an adjacent object. */
+  | 'BEFORE';
+
 /** Represents a release */
 export type Release = {
   __typename?: 'Release';
@@ -11875,7 +25948,7 @@ export type Release = {
   createdAt?: Maybe<Scalars['Time']>;
   /** Description (also known as "release notes") of the release. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** Evidence for the release. */
   evidences?: Maybe<ReleaseEvidenceConnection>;
@@ -11924,8 +25997,6 @@ export type ReleaseAssetLink = {
   directAssetPath?: Maybe<Scalars['String']>;
   /** Direct asset URL of the link. */
   directAssetUrl?: Maybe<Scalars['String']>;
-  /** Indicates the link points to an external resource. */
-  external?: Maybe<Scalars['Boolean']>;
   /** ID of the link. */
   id: Scalars['ID'];
   /** Type of the link: `other`, `runbook`, `image`, `package`; defaults to `other`. */
@@ -12118,7 +26189,11 @@ export type ReleaseCreateInput = {
   projectPath: Scalars['ID'];
   /** Commit SHA or branch name to use if creating a new tag. */
   ref?: InputMaybe<Scalars['String']>;
-  /** Date and time for the release. Defaults to the current date and time. */
+  /**
+   * Date and time for the release. Defaults to the current time. Expected in ISO
+   * 8601 format (`2019-03-15T08:00:00Z`). Only provide this field if creating an
+   * upcoming or historical release.
+   */
   releasedAt?: InputMaybe<Scalars['Time']>;
   /** Message to use if creating a new annotated tag. */
   tagMessage?: InputMaybe<Scalars['String']>;
@@ -12294,6 +26369,33 @@ export type ReleaseUpdatePayload = {
   release?: Maybe<Release>;
 };
 
+/** Autogenerated input type of RemoveProjectFromSecurityDashboard */
+export type RemoveProjectFromSecurityDashboardInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the project to remove from the Instance Security Dashboard. */
+  id: Scalars['ProjectID'];
+};
+
+/** Autogenerated return type of RemoveProjectFromSecurityDashboard */
+export type RemoveProjectFromSecurityDashboardPayload = {
+  __typename?: 'RemoveProjectFromSecurityDashboardPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+export type ReplicationStateEnum =
+  /** Replication process finished but failed. */
+  | 'FAILED'
+  /** Replication process has not started. */
+  | 'PENDING'
+  /** Replication process is in progress. */
+  | 'STARTED'
+  /** Replication process finished successfully. */
+  | 'SYNCED';
+
 /** Autogenerated input type of RepositionImageDiffNote */
 export type RepositionImageDiffNoteInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -12321,6 +26423,8 @@ export type Repository = {
   blobs?: Maybe<RepositoryBlobConnection>;
   /** Names of branches available in this repository that match the search pattern. */
   branchNames?: Maybe<Array<Scalars['String']>>;
+  /** Path to CODEOWNERS file in a ref. */
+  codeOwnersPath?: Maybe<Scalars['String']>;
   /** Shows a disk path of the repository. */
   diskPath?: Maybe<Scalars['String']>;
   /** Indicates repository has no visible content. */
@@ -12343,6 +26447,7 @@ export type RepositoryBlobsArgs = {
   last?: InputMaybe<Scalars['Int']>;
   paths: Array<Scalars['String']>;
   ref?: InputMaybe<Scalars['String']>;
+  refType?: InputMaybe<RefType>;
 };
 
 
@@ -12350,6 +26455,11 @@ export type RepositoryBranchNamesArgs = {
   limit: Scalars['Int'];
   offset: Scalars['Int'];
   searchPattern: Scalars['String'];
+};
+
+
+export type RepositoryCodeOwnersPathArgs = {
+  ref?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -12361,6 +26471,7 @@ export type RepositoryPaginatedTreeArgs = {
   path?: InputMaybe<Scalars['String']>;
   recursive?: InputMaybe<Scalars['Boolean']>;
   ref?: InputMaybe<Scalars['String']>;
+  refType?: InputMaybe<RefType>;
 };
 
 
@@ -12368,6 +26479,7 @@ export type RepositoryTreeArgs = {
   path?: InputMaybe<Scalars['String']>;
   recursive?: InputMaybe<Scalars['Boolean']>;
   ref?: InputMaybe<Scalars['String']>;
+  refType?: InputMaybe<RefType>;
 };
 
 export type RepositoryBlob = {
@@ -12382,6 +26494,8 @@ export type RepositoryBlob = {
   canModifyBlob?: Maybe<Scalars['Boolean']>;
   /** Web path for code navigation. */
   codeNavigationPath?: Maybe<Scalars['String']>;
+  /** List of code owners for the blob. */
+  codeOwners?: Maybe<Array<UserCore>>;
   /** Web path to edit the blob in the old-style editor. */
   editBlobPath?: Maybe<Scalars['String']>;
   /** Web path to blob on an environment. */
@@ -12435,7 +26549,7 @@ export type RepositoryBlob = {
   /** Web path to download the raw blob. */
   rawPath?: Maybe<Scalars['String']>;
   /** Size (in bytes) of the blob, or the blob target if stored externally. */
-  rawSize?: Maybe<Scalars['Int']>;
+  rawSize?: Maybe<Scalars['BigInt']>;
   /** Raw content of the blob, if the blob is text data. */
   rawTextBlob?: Maybe<Scalars['String']>;
   /** Web path to replace the blob content. */
@@ -12445,7 +26559,7 @@ export type RepositoryBlob = {
   /** Blob content simple viewer. */
   simpleViewer: BlobViewer;
   /** Size (in bytes) of the blob. */
-  size?: Maybe<Scalars['Int']>;
+  size?: Maybe<Scalars['BigInt']>;
   /** Whether the blob's content is stored externally (for instance, in LFS). */
   storedExternally?: Maybe<Scalars['Boolean']>;
   /** Web path of the blob. */
@@ -12472,6 +26586,131 @@ export type RepositoryBlobEdge = {
   node?: Maybe<RepositoryBlob>;
 };
 
+export type RepositoryLanguage = {
+  __typename?: 'RepositoryLanguage';
+  /** Color to visualize the repository language. */
+  color?: Maybe<Scalars['Color']>;
+  /** Name of the repository language. */
+  name: Scalars['String'];
+  /** Percentage of the repository's languages. */
+  share?: Maybe<Scalars['Float']>;
+};
+
+/** Represents a requirement */
+export type Requirement = {
+  __typename?: 'Requirement';
+  /** Author of the requirement. */
+  author: UserCore;
+  /** Timestamp of when the requirement was created. */
+  createdAt: Scalars['Time'];
+  /** Description of the requirement. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description`. */
+  descriptionHtml?: Maybe<Scalars['String']>;
+  /** ID of the requirement. */
+  id: Scalars['ID'];
+  /**
+   * Internal ID of the requirement. Deprecated in 15.8: Use work_item_iid instead.
+   * @deprecated Use work_item_iid instead. Deprecated in 15.8.
+   */
+  iid: Scalars['ID'];
+  /** Indicates if latest test report was created by user. */
+  lastTestReportManuallyCreated?: Maybe<Scalars['Boolean']>;
+  /** Latest requirement test report state. */
+  lastTestReportState?: Maybe<TestReportState>;
+  /** Project to which the requirement belongs. */
+  project: Project;
+  /** State of the requirement. */
+  state: RequirementState;
+  /** Test reports of the requirement. */
+  testReports?: Maybe<TestReportConnection>;
+  /** Title of the requirement. */
+  title?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `title`. */
+  titleHtml?: Maybe<Scalars['String']>;
+  /** Timestamp of when the requirement was last updated. */
+  updatedAt: Scalars['Time'];
+  /** Permissions for the current user on the resource */
+  userPermissions: RequirementPermissions;
+  /** Work item IID of the requirement, will replace current IID as identifier soon. */
+  workItemIid: Scalars['ID'];
+};
+
+
+/** Represents a requirement */
+export type RequirementTestReportsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  sort?: InputMaybe<Sort>;
+};
+
+/** The connection type for Requirement. */
+export type RequirementConnection = {
+  __typename?: 'RequirementConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<RequirementEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Requirement>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type RequirementEdge = {
+  __typename?: 'RequirementEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Requirement>;
+};
+
+export type RequirementLegacyFilterInput = {
+  /** List of legacy requirement IIDs of work items. or example `["1", "2"]`. */
+  legacyIids: Array<Scalars['String']>;
+};
+
+/** Check permissions for the current user on a requirement */
+export type RequirementPermissions = {
+  __typename?: 'RequirementPermissions';
+  /** Indicates the user can perform `admin_requirement` on this resource */
+  adminRequirement: Scalars['Boolean'];
+  /** Indicates the user can perform `create_requirement` on this resource */
+  createRequirement: Scalars['Boolean'];
+  /** Indicates the user can perform `destroy_requirement` on this resource */
+  destroyRequirement: Scalars['Boolean'];
+  /** Indicates the user can perform `read_requirement` on this resource */
+  readRequirement: Scalars['Boolean'];
+  /** Indicates the user can perform `update_requirement` on this resource */
+  updateRequirement: Scalars['Boolean'];
+};
+
+/** State of a requirement */
+export type RequirementState =
+  /** Archived requirement. */
+  | 'ARCHIVED'
+  /** Open requirement. */
+  | 'OPENED';
+
+/** Counts of requirements by their state */
+export type RequirementStatesCount = {
+  __typename?: 'RequirementStatesCount';
+  /** Number of archived requirements. */
+  archived?: Maybe<Scalars['Int']>;
+  /** Number of opened requirements. */
+  opened?: Maybe<Scalars['Int']>;
+};
+
+/** Status of a requirement based on last test report */
+export type RequirementStatusFilter =
+  /** Failed test report. */
+  | 'FAILED'
+  /** Requirements without any test report. */
+  | 'MISSING'
+  /** Passed test report. */
+  | 'PASSED';
+
 export type ResolvableInterface = {
   /** Indicates if the object can be resolved. */
   resolvable: Scalars['Boolean'];
@@ -12497,6 +26736,8 @@ export type RootStorageStatistics = {
   packagesSize: Scalars['Float'];
   /** CI pipeline artifacts size in bytes. */
   pipelineArtifactsSize: Scalars['Float'];
+  /** Indicates whether the deduplicated Container Registry size for the namespace is an estimated value or not. */
+  registrySizeEstimated: Scalars['Boolean'];
   /** Git repository size in bytes. */
   repositorySize: Scalars['Float'];
   /** Snippets size in bytes. */
@@ -12537,6 +26778,45 @@ export type RunnerArchitectureEdge = {
   node?: Maybe<RunnerArchitecture>;
 };
 
+/** Autogenerated input type of RunnerCreate */
+export type RunnerCreateInput = {
+  /** Access level of the runner. */
+  accessLevel?: InputMaybe<CiRunnerAccessLevel>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the runner. */
+  description?: InputMaybe<Scalars['String']>;
+  /** Global ID of the group that the runner is created in (valid only for group runner). */
+  groupId?: InputMaybe<Scalars['GroupID']>;
+  /** Indicates the runner is locked. */
+  locked?: InputMaybe<Scalars['Boolean']>;
+  /** Runner's maintenance notes. */
+  maintenanceNote?: InputMaybe<Scalars['String']>;
+  /** Maximum timeout (in seconds) for jobs processed by the runner. */
+  maximumTimeout?: InputMaybe<Scalars['Int']>;
+  /** Indicates the runner is not allowed to receive jobs. */
+  paused?: InputMaybe<Scalars['Boolean']>;
+  /** Global ID of the project that the runner is created in (valid only for project runner). */
+  projectId?: InputMaybe<Scalars['ProjectID']>;
+  /** Indicates the runner is able to run untagged jobs. */
+  runUntagged?: InputMaybe<Scalars['Boolean']>;
+  /** Type of the runner to create. */
+  runnerType: CiRunnerType;
+  /** Tags associated with the runner. */
+  tagList?: InputMaybe<Array<Scalars['String']>>;
+};
+
+/** Autogenerated return type of RunnerCreate */
+export type RunnerCreatePayload = {
+  __typename?: 'RunnerCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Runner after mutation. */
+  runner?: Maybe<CiRunner>;
+};
+
 /** Autogenerated input type of RunnerDelete */
 export type RunnerDeleteInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -12554,19 +26834,10 @@ export type RunnerDeletePayload = {
   errors: Array<Scalars['String']>;
 };
 
-/** Values for filtering runners in namespaces. */
-export type RunnerMembershipFilter =
-  /**
-   * Include runners that have either a direct relationship or a relationship with
-   * descendants. These can be project runners or group runners (in the case where
-   * group is queried).
-   */
-  | 'DESCENDANTS'
-  /** Include runners that have a direct relationship. */
-  | 'DIRECT';
-
 export type RunnerPermissions = {
   __typename?: 'RunnerPermissions';
+  /** Indicates the user can perform `assign_runner` on this resource */
+  assignRunner: Scalars['Boolean'];
   /** Indicates the user can perform `delete_runner` on this resource */
   deleteRunner: Scalars['Boolean'];
   /** Indicates the user can perform `read_runner` on this resource */
@@ -12633,6 +26904,8 @@ export type RunnerUpdateInput = {
    * @deprecated This was renamed. Please use `paused`. Deprecated in 14.8.
    */
   active?: InputMaybe<Scalars['Boolean']>;
+  /** Projects associated with the runner. Available only for project runners. */
+  associatedProjects?: InputMaybe<Array<Scalars['ProjectID']>>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Description of the runner. */
@@ -12647,6 +26920,10 @@ export type RunnerUpdateInput = {
   maximumTimeout?: InputMaybe<Scalars['Int']>;
   /** Indicates the runner is not allowed to receive jobs. */
   paused?: InputMaybe<Scalars['Boolean']>;
+  /** Private projects' "compute cost factor" associated with the runner (GitLab.com only). */
+  privateProjectsMinutesCostFactor?: InputMaybe<Scalars['Float']>;
+  /** Public projects' "compute cost factor" associated with the runner (GitLab.com only). */
+  publicProjectsMinutesCostFactor?: InputMaybe<Scalars['Float']>;
   /** Indicates the runner is able to run untagged jobs. */
   runUntagged?: InputMaybe<Scalars['Boolean']>;
   /** Tags associated with the runner. */
@@ -12898,6 +27175,8 @@ export type SavedReply = {
 /** The connection type for SavedReply. */
 export type SavedReplyConnection = {
   __typename?: 'SavedReplyConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
   /** A list of edges. */
   edges?: Maybe<Array<Maybe<SavedReplyEdge>>>;
   /** A list of nodes. */
@@ -12978,9 +27257,436 @@ export type SavedReplyUpdatePayload = {
   savedReply?: Maybe<SavedReply>;
 };
 
+/** Represents the security scan information */
+export type Scan = {
+  __typename?: 'Scan';
+  /** List of errors. */
+  errors: Array<Scalars['String']>;
+  /** Name of the scan. */
+  name: Scalars['String'];
+  /** Indicates the status of the scan. */
+  status: ScanStatus;
+  /** List of warnings. */
+  warnings: Array<Scalars['String']>;
+};
+
+/** The connection type for Scan. */
+export type ScanConnection = {
+  __typename?: 'ScanConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ScanEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Scan>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ScanEdge = {
+  __typename?: 'ScanEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Scan>;
+};
+
+/** Represents the scan execution policy */
+export type ScanExecutionPolicy = OrchestrationPolicy & {
+  __typename?: 'ScanExecutionPolicy';
+  /** Description of the policy. */
+  description: Scalars['String'];
+  /** Indicates whether this policy is enabled. */
+  enabled: Scalars['Boolean'];
+  /** Name of the policy. */
+  name: Scalars['String'];
+  /** Source of the policy. Its fields depend on the source type. */
+  source: SecurityPolicySource;
+  /** Timestamp of when the policy YAML was last updated. */
+  updatedAt: Scalars['Time'];
+  /** YAML definition of the policy. */
+  yaml: Scalars['String'];
+};
+
+/** Autogenerated input type of ScanExecutionPolicyCommit */
+export type ScanExecutionPolicyCommitInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project. */
+  fullPath?: InputMaybe<Scalars['String']>;
+  /** Name of the policy. If the name is null, the `name` field from `policy_yaml` is used. */
+  name: Scalars['String'];
+  /** Changes the operation mode. */
+  operationMode: MutationOperationMode;
+  /** YAML snippet of the policy. */
+  policyYaml: Scalars['String'];
+  /**
+   * Full path of the project. Deprecated in 14.10: Use `fullPath`.
+   * @deprecated Use `fullPath`. Deprecated in 14.10.
+   */
+  projectPath?: InputMaybe<Scalars['ID']>;
+};
+
+/** Autogenerated return type of ScanExecutionPolicyCommit */
+export type ScanExecutionPolicyCommitPayload = {
+  __typename?: 'ScanExecutionPolicyCommitPayload';
+  /** Name of the branch to which the policy changes are committed. */
+  branch?: Maybe<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Validation errors encountered during execution of the mutation. */
+  validationErrors?: Maybe<Array<SecurityPolicyValidationError>>;
+};
+
+/** The connection type for ScanExecutionPolicy. */
+export type ScanExecutionPolicyConnection = {
+  __typename?: 'ScanExecutionPolicyConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ScanExecutionPolicyEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ScanExecutionPolicy>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ScanExecutionPolicyEdge = {
+  __typename?: 'ScanExecutionPolicyEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ScanExecutionPolicy>;
+};
+
+/** Represents the scan result policy */
+export type ScanResultPolicy = OrchestrationPolicy & {
+  __typename?: 'ScanResultPolicy';
+  /** Description of the policy. */
+  description: Scalars['String'];
+  /** Indicates whether this policy is enabled. */
+  enabled: Scalars['Boolean'];
+  /** Approvers of the group type. */
+  groupApprovers?: Maybe<Array<Group>>;
+  /** Name of the policy. */
+  name: Scalars['String'];
+  /** Approvers of the role type. Users belonging to these role(s) alone will be approvers. */
+  roleApprovers?: Maybe<Array<MemberAccessLevelName>>;
+  /** Source of the policy. Its fields depend on the source type. */
+  source: SecurityPolicySource;
+  /** Timestamp of when the policy YAML was last updated. */
+  updatedAt: Scalars['Time'];
+  /** Approvers of the user type. */
+  userApprovers?: Maybe<Array<UserCore>>;
+  /** YAML definition of the policy. */
+  yaml: Scalars['String'];
+};
+
+/** The connection type for ScanResultPolicy. */
+export type ScanResultPolicyConnection = {
+  __typename?: 'ScanResultPolicyConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ScanResultPolicyEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ScanResultPolicy>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ScanResultPolicyEdge = {
+  __typename?: 'ScanResultPolicyEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ScanResultPolicy>;
+};
+
+/** The status of the security scan */
+export type ScanStatus =
+  /** The scan has been created. */
+  | 'CREATED'
+  /** The related CI build failed. */
+  | 'JOB_FAILED'
+  /** Report couldn't be prepared. */
+  | 'PREPARATION_FAILED'
+  /** Preparing the report for the scan. */
+  | 'PREPARING'
+  /** Report for the scan has been removed from the database. */
+  | 'PURGED'
+  /** The report artifact provided by the CI build couldn't be parsed. */
+  | 'REPORT_ERROR'
+  /** The report has been successfully prepared. */
+  | 'SUCCEEDED';
+
+/** Represents a resource scanned by a security scan */
+export type ScannedResource = {
+  __typename?: 'ScannedResource';
+  /** HTTP request method used to access the URL. */
+  requestMethod?: Maybe<Scalars['String']>;
+  /** URL scanned by the scanner. */
+  url?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for ScannedResource. */
+export type ScannedResourceConnection = {
+  __typename?: 'ScannedResourceConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<ScannedResourceEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<ScannedResource>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type ScannedResourceEdge = {
+  __typename?: 'ScannedResourceEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<ScannedResource>;
+};
+
+/** Autogenerated input type of SecurityFindingCreateIssue */
+export type SecurityFindingCreateIssueInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the project to attach the issue to. */
+  project: Scalars['ProjectID'];
+  /** UUID of the security finding to be used to create an issue. */
+  uuid: Scalars['String'];
+};
+
+/** Autogenerated return type of SecurityFindingCreateIssue */
+export type SecurityFindingCreateIssuePayload = {
+  __typename?: 'SecurityFindingCreateIssuePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Issue created after mutation. */
+  issue?: Maybe<Issue>;
+};
+
+/** Autogenerated input type of SecurityFindingCreateMergeRequest */
+export type SecurityFindingCreateMergeRequestInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** UUID of the security finding to be used to create a merge request. */
+  uuid: Scalars['String'];
+};
+
+/** Autogenerated return type of SecurityFindingCreateMergeRequest */
+export type SecurityFindingCreateMergeRequestPayload = {
+  __typename?: 'SecurityFindingCreateMergeRequestPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Merge Request created after mutation. */
+  mergeRequest?: Maybe<MergeRequest>;
+};
+
+/** Autogenerated input type of SecurityFindingDismiss */
+export type SecurityFindingDismissInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Comment why finding should be dismissed. */
+  comment?: InputMaybe<Scalars['String']>;
+  /** Reason why finding should be dismissed. */
+  dismissalReason?: InputMaybe<VulnerabilityDismissalReason>;
+  /** UUID of the finding to be dismissed. */
+  uuid: Scalars['String'];
+};
+
+/** Autogenerated return type of SecurityFindingDismiss */
+export type SecurityFindingDismissPayload = {
+  __typename?: 'SecurityFindingDismissPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Dismissed finding. */
+  securityFinding?: Maybe<PipelineSecurityReportFinding>;
+  /** UUID of dismissed finding. */
+  uuid?: Maybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of SecurityFindingRevertToDetected */
+export type SecurityFindingRevertToDetectedInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** UUID of the finding to be dismissed. */
+  uuid: Scalars['String'];
+};
+
+/** Autogenerated return type of SecurityFindingRevertToDetected */
+export type SecurityFindingRevertToDetectedPayload = {
+  __typename?: 'SecurityFindingRevertToDetectedPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Finding reverted to detected. */
+  securityFinding?: Maybe<PipelineSecurityReportFinding>;
+};
+
+/** Autogenerated input type of SecurityPolicyProjectAssign */
+export type SecurityPolicyProjectAssignInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project or group. */
+  fullPath?: InputMaybe<Scalars['String']>;
+  /**
+   * Full path of the project. Deprecated in 14.10: Use `fullPath`.
+   * @deprecated Use `fullPath`. Deprecated in 14.10.
+   */
+  projectPath?: InputMaybe<Scalars['ID']>;
+  /** ID of the security policy project. */
+  securityPolicyProjectId: Scalars['ProjectID'];
+};
+
+/** Autogenerated return type of SecurityPolicyProjectAssign */
+export type SecurityPolicyProjectAssignPayload = {
+  __typename?: 'SecurityPolicyProjectAssignPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of SecurityPolicyProjectCreate */
+export type SecurityPolicyProjectCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project or group. */
+  fullPath?: InputMaybe<Scalars['String']>;
+  /**
+   * Full path of the project. Deprecated in 14.10: Use `fullPath`.
+   * @deprecated Use `fullPath`. Deprecated in 14.10.
+   */
+  projectPath?: InputMaybe<Scalars['ID']>;
+};
+
+/** Autogenerated return type of SecurityPolicyProjectCreate */
+export type SecurityPolicyProjectCreatePayload = {
+  __typename?: 'SecurityPolicyProjectCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Security Policy Project that was created. */
+  project?: Maybe<Project>;
+};
+
+/** Autogenerated input type of SecurityPolicyProjectUnassign */
+export type SecurityPolicyProjectUnassignInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Full path of the project or group. */
+  fullPath?: InputMaybe<Scalars['String']>;
+  /**
+   * Full path of the project. Deprecated in 14.10: Use `fullPath`.
+   * @deprecated Use `fullPath`. Deprecated in 14.10.
+   */
+  projectPath?: InputMaybe<Scalars['ID']>;
+};
+
+/** Autogenerated return type of SecurityPolicyProjectUnassign */
+export type SecurityPolicyProjectUnassignPayload = {
+  __typename?: 'SecurityPolicyProjectUnassignPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+export type SecurityPolicyRelationType =
+  /** Policies defined for the project/group only. */
+  | 'DIRECT'
+  /** Policies defined for the project/group and ancestor groups. */
+  | 'INHERITED'
+  /** Policies defined for the project/group's ancestor groups only. */
+  | 'INHERITED_ONLY';
+
+/** Represents a policy source. Its fields depend on the source type. */
+export type SecurityPolicySource = GroupSecurityPolicySource | ProjectSecurityPolicySource;
+
+/** Security policy validation error */
+export type SecurityPolicyValidationError = {
+  __typename?: 'SecurityPolicyValidationError';
+  /** Error field. */
+  field: Scalars['String'];
+  /** Error level. */
+  level: Scalars['String'];
+  /** Error message. */
+  message: Scalars['String'];
+  /** Error title. */
+  title?: Maybe<Scalars['String']>;
+};
+
+/** Represents summary of a security report */
+export type SecurityReportSummary = {
+  __typename?: 'SecurityReportSummary';
+  /** Aggregated counts for the `api_fuzzing` scan */
+  apiFuzzing?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `cluster_image_scanning` scan */
+  clusterImageScanning?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `container_scanning` scan */
+  containerScanning?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `coverage_fuzzing` scan */
+  coverageFuzzing?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `dast` scan */
+  dast?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `dependency_scanning` scan */
+  dependencyScanning?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `generic` scan */
+  generic?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `sast` scan */
+  sast?: Maybe<SecurityReportSummarySection>;
+  /** Aggregated counts for the `secret_detection` scan */
+  secretDetection?: Maybe<SecurityReportSummarySection>;
+};
+
+/** Represents a section of a summary of a security report */
+export type SecurityReportSummarySection = {
+  __typename?: 'SecurityReportSummarySection';
+  /** List of the first 20 scanned resources. */
+  scannedResources?: Maybe<ScannedResourceConnection>;
+  /** Total number of scanned resources. */
+  scannedResourcesCount?: Maybe<Scalars['Int']>;
+  /** Path to download all the scanned resources in CSV format. */
+  scannedResourcesCsvPath?: Maybe<Scalars['String']>;
+  /** List of security scans ran for the type. */
+  scans: ScanConnection;
+  /** Total number of vulnerabilities. */
+  vulnerabilitiesCount?: Maybe<Scalars['Int']>;
+};
+
+
+/** Represents a section of a summary of a security report */
+export type SecurityReportSummarySectionScannedResourcesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents a section of a summary of a security report */
+export type SecurityReportSummarySectionScansArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
 export type SecurityReportTypeEnum =
   /** API FUZZING scan report */
   | 'API_FUZZING'
+  /** BREACH AND ATTACK SIMULATION scan report */
+  | 'BREACH_AND_ATTACK_SIMULATION'
   /** CLUSTER IMAGE SCANNING scan report */
   | 'CLUSTER_IMAGE_SCANNING'
   /** CONTAINER SCANNING scan report */
@@ -12997,6 +27703,78 @@ export type SecurityReportTypeEnum =
   | 'SAST_IAC'
   /** SECRET DETECTION scan report */
   | 'SECRET_DETECTION';
+
+/** The type of the security scanner */
+export type SecurityScannerType =
+  /** API Fuzzing scanner */
+  | 'API_FUZZING'
+  /** Breach And Attack Simulation scanner */
+  | 'BREACH_AND_ATTACK_SIMULATION'
+  /** Cluster Image Scanning scanner */
+  | 'CLUSTER_IMAGE_SCANNING'
+  /** Container Scanning scanner */
+  | 'CONTAINER_SCANNING'
+  /** Coverage Fuzzing scanner */
+  | 'COVERAGE_FUZZING'
+  /** DAST scanner */
+  | 'DAST'
+  /** Dependency Scanning scanner */
+  | 'DEPENDENCY_SCANNING'
+  /** SAST scanner */
+  | 'SAST'
+  /** Sast Iac scanner */
+  | 'SAST_IAC'
+  /** Secret Detection scanner */
+  | 'SECRET_DETECTION';
+
+/** Represents a list of security scanners */
+export type SecurityScanners = {
+  __typename?: 'SecurityScanners';
+  /** List of analyzers which are available for the project. */
+  available?: Maybe<Array<SecurityScannerType>>;
+  /** List of analyzers which are enabled for the project. */
+  enabled?: Maybe<Array<SecurityScannerType>>;
+  /** List of analyzers which ran successfully in the latest pipeline. */
+  pipelineRun?: Maybe<Array<SecurityScannerType>>;
+};
+
+/** Autogenerated input type of SecurityTrainingUpdate */
+export type SecurityTrainingUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Sets the training provider as enabled for the project. */
+  isEnabled: Scalars['Boolean'];
+  /** Sets the training provider as primary for the project. */
+  isPrimary?: InputMaybe<Scalars['Boolean']>;
+  /** Full path of the project. */
+  projectPath: Scalars['ID'];
+  /** ID of the provider. */
+  providerId: Scalars['SecurityTrainingProviderID'];
+};
+
+/** Autogenerated return type of SecurityTrainingUpdate */
+export type SecurityTrainingUpdatePayload = {
+  __typename?: 'SecurityTrainingUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Represents the training entity subject to mutation. */
+  training?: Maybe<ProjectSecurityTraining>;
+};
+
+/** Represents a URL related to a security training */
+export type SecurityTrainingUrl = {
+  __typename?: 'SecurityTrainingUrl';
+  /** Name of the vulnerability identifier. */
+  identifier?: Maybe<Scalars['String']>;
+  /** Name of the training provider. */
+  name?: Maybe<Scalars['String']>;
+  /** Status of the request to training provider. */
+  status?: Maybe<TrainingUrlRequestStatus>;
+  /** URL of the link for security training content. */
+  url?: Maybe<Scalars['String']>;
+};
 
 /** A Sentry error */
 export type SentryDetailedError = {
@@ -13249,6 +28027,8 @@ export type ServiceEdge = {
 };
 
 export type ServiceType =
+  /** AppleAppStoreService type */
+  | 'APPLE_APP_STORE_SERVICE'
   /** AsanaService type */
   | 'ASANA_SERVICE'
   /** AssemblaService type */
@@ -13261,6 +28041,8 @@ export type ServiceType =
   | 'BUILDKITE_SERVICE'
   /** CampfireService type */
   | 'CAMPFIRE_SERVICE'
+  /** ClickupService type */
+  | 'CLICKUP_SERVICE'
   /** ConfluenceService type */
   | 'CONFLUENCE_SERVICE'
   /** CustomIssueTrackerService type */
@@ -13277,8 +28059,12 @@ export type ServiceType =
   | 'EWM_SERVICE'
   /** ExternalWikiService type */
   | 'EXTERNAL_WIKI_SERVICE'
-  /** FlowdockService type */
-  | 'FLOWDOCK_SERVICE'
+  /** GithubService type */
+  | 'GITHUB_SERVICE'
+  /** GitlabSlackApplicationService type */
+  | 'GITLAB_SLACK_APPLICATION_SERVICE'
+  /** GooglePlayService type */
+  | 'GOOGLE_PLAY_SERVICE'
   /** HangoutsChatService type */
   | 'HANGOUTS_CHAT_SERVICE'
   /** HarborService type */
@@ -13315,8 +28101,12 @@ export type ServiceType =
   | 'SLACK_SERVICE'
   /** SlackSlashCommandsService type */
   | 'SLACK_SLASH_COMMANDS_SERVICE'
+  /** SquashTmService type */
+  | 'SQUASH_TM_SERVICE'
   /** TeamcityService type */
   | 'TEAMCITY_SERVICE'
+  /** TelegramService type */
+  | 'TELEGRAM_SERVICE'
   /** UnifyCircuitService type */
   | 'UNIFY_CIRCUIT_SERVICE'
   /** WebexTeamsService type */
@@ -13334,9 +28124,11 @@ export type ShaFormat =
   | 'SHORT';
 
 export type SharedRunnersSetting =
+  /** Sharing of runners is disabled and overridable. */
+  | 'DISABLED_AND_OVERRIDABLE'
   /** Sharing of runners is disabled and unoverridable. */
   | 'DISABLED_AND_UNOVERRIDABLE'
-  /** Sharing of runners is disabled with override. */
+  /** Sharing of runners is disabled and overridable. Deprecated in 17.0: This was renamed. */
   | 'DISABLED_WITH_OVERRIDE'
   /** Sharing of runners is enabled. */
   | 'ENABLED';
@@ -13348,11 +28140,13 @@ export type Snippet = NoteableInterface & {
   author?: Maybe<UserCore>;
   /** Snippet blobs. */
   blobs?: Maybe<SnippetBlobConnection>;
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
   /** Timestamp this snippet was created. */
   createdAt: Scalars['Time'];
   /** Description of the snippet. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** All discussions on this noteable. */
   discussions: DiscussionConnection;
@@ -13390,6 +28184,15 @@ export type SnippetBlobsArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   paths?: InputMaybe<Array<Scalars['String']>>;
+};
+
+
+/** Represents a snippet entry */
+export type SnippetCommentersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -13541,6 +28344,51 @@ export type SnippetPermissions = {
   updateSnippet: Scalars['Boolean'];
 };
 
+/** Represents the Geo sync and verification state of a snippet repository */
+export type SnippetRepositoryRegistry = {
+  __typename?: 'SnippetRepositoryRegistry';
+  /** Timestamp when the SnippetRepositoryRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the SnippetRepositoryRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the SnippetRepositoryRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the SnippetRepositoryRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the SnippetRepositoryRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the SnippetRepositoryRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** ID of the Snippet Repository. */
+  snippetRepositoryId: Scalars['ID'];
+  /** Sync state of the SnippetRepositoryRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the SnippetRepositoryRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the SnippetRepositoryRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for SnippetRepositoryRegistry. */
+export type SnippetRepositoryRegistryConnection = {
+  __typename?: 'SnippetRepositoryRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<SnippetRepositoryRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<SnippetRepositoryRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type SnippetRepositoryRegistryEdge = {
+  __typename?: 'SnippetRepositoryRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<SnippetRepositoryRegistry>;
+};
+
 /** Common sort values */
 export type Sort =
   /** Created at ascending order. */
@@ -13560,6 +28408,30 @@ export type Sort =
   /** Updated at descending order. */
   | 'updated_desc';
 
+/** Values for sort direction */
+export type SortDirectionEnum =
+  /** Ascending order. */
+  | 'ASC'
+  /** Descending order. */
+  | 'DESC';
+
+/** SSH signature for a signed commit */
+export type SshSignature = CommitSignature & {
+  __typename?: 'SshSignature';
+  /** SHA of the associated commit. */
+  commitSha?: Maybe<Scalars['String']>;
+  /** SSH key used for the signature. */
+  key?: Maybe<Key>;
+  /** Fingerprint of the key. */
+  keyFingerprintSha256?: Maybe<Scalars['String']>;
+  /** Project of the associated commit. */
+  project?: Maybe<Project>;
+  /** User associated with the key. */
+  user?: Maybe<UserCore>;
+  /** Indicates verification status of the associated key or certificate. */
+  verificationStatus?: Maybe<VerificationStatus>;
+};
+
 export type StatusAction = {
   __typename?: 'StatusAction';
   /** Title for the button, for example: Retry this job. */
@@ -13574,6 +28446,16 @@ export type StatusAction = {
   path?: Maybe<Scalars['String']>;
   /** Title for the action, for example: Retry. */
   title?: Maybe<Scalars['String']>;
+};
+
+export type StatusFilterInput = {
+  /** Status of the work item. */
+  status: RequirementStatusFilter;
+};
+
+export type StatusInput = {
+  /** Status to assign to the work item. */
+  status: TestReportState;
 };
 
 export type Submodule = Entry & {
@@ -13618,16 +28500,66 @@ export type SubmoduleEdge = {
 
 export type Subscription = {
   __typename?: 'Subscription';
+  /**
+   * Triggered when a response from AI integration is received. Introduced in
+   * 15.11: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.11.
+   */
+  aiCompletionResponse?: Maybe<AiResponse>;
   /** Triggered when the assignees of an issuable are updated. */
   issuableAssigneesUpdated?: Maybe<Issuable>;
   /** Triggered when the due date or start date of an issuable is updated. */
   issuableDatesUpdated?: Maybe<Issuable>;
+  /** Triggered when the description of an issuable is updated. */
+  issuableDescriptionUpdated?: Maybe<Issuable>;
+  /** Triggered when the epic of an issuable is updated. */
+  issuableEpicUpdated?: Maybe<Issuable>;
+  /** Triggered when the health status of an issuable is updated. */
+  issuableHealthStatusUpdated?: Maybe<Issuable>;
+  /** Triggered when the iteration of an issuable is updated. */
+  issuableIterationUpdated?: Maybe<Issuable>;
   /** Triggered when the labels of an issuable are updated. */
   issuableLabelsUpdated?: Maybe<Issuable>;
+  /** Triggered when the milestone of an issuable is updated. */
+  issuableMilestoneUpdated?: Maybe<Issuable>;
   /** Triggered when the title of an issuable is updated. */
   issuableTitleUpdated?: Maybe<Issuable>;
+  /** Triggered when the weight of an issuable is updated. */
+  issuableWeightUpdated?: Maybe<Issuable>;
   /** Triggered when the crm contacts of an issuable are updated. */
   issueCrmContactsUpdated?: Maybe<Issuable>;
+  /** Triggered when approval state of a merge request is updated. */
+  mergeRequestApprovalStateUpdated?: Maybe<Issuable>;
+  /** Triggered when the merge status of a merge request is updated. */
+  mergeRequestMergeStatusUpdated?: Maybe<Issuable>;
+  /** Triggered when the reviewers of a merge request are updated. */
+  mergeRequestReviewersUpdated?: Maybe<Issuable>;
+  /**
+   * Triggered when a note is created. Introduced in 15.9: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  workItemNoteCreated?: Maybe<Note>;
+  /**
+   * Triggered when a note is deleted. Introduced in 15.9: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  workItemNoteDeleted?: Maybe<DeletedNote>;
+  /**
+   * Triggered when a note is updated. Introduced in 15.9: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  workItemNoteUpdated?: Maybe<Note>;
+  /** Triggered when a work item is updated. */
+  workItemUpdated?: Maybe<WorkItem>;
+};
+
+
+export type SubscriptionAiCompletionResponseArgs = {
+  resourceId: Scalars['AiModelID'];
+  userId?: InputMaybe<Scalars['UserID']>;
 };
 
 
@@ -13641,7 +28573,32 @@ export type SubscriptionIssuableDatesUpdatedArgs = {
 };
 
 
+export type SubscriptionIssuableDescriptionUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionIssuableEpicUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionIssuableHealthStatusUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionIssuableIterationUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
 export type SubscriptionIssuableLabelsUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionIssuableMilestoneUpdatedArgs = {
   issuableId: Scalars['IssuableID'];
 };
 
@@ -13651,8 +28608,112 @@ export type SubscriptionIssuableTitleUpdatedArgs = {
 };
 
 
+export type SubscriptionIssuableWeightUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
 export type SubscriptionIssueCrmContactsUpdatedArgs = {
   issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionMergeRequestApprovalStateUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionMergeRequestMergeStatusUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionMergeRequestReviewersUpdatedArgs = {
+  issuableId: Scalars['IssuableID'];
+};
+
+
+export type SubscriptionWorkItemNoteCreatedArgs = {
+  noteableId?: InputMaybe<Scalars['NoteableID']>;
+};
+
+
+export type SubscriptionWorkItemNoteDeletedArgs = {
+  noteableId?: InputMaybe<Scalars['NoteableID']>;
+};
+
+
+export type SubscriptionWorkItemNoteUpdatedArgs = {
+  noteableId?: InputMaybe<Scalars['NoteableID']>;
+};
+
+
+export type SubscriptionWorkItemUpdatedArgs = {
+  workItemId: Scalars['WorkItemID'];
+};
+
+/** Represents an entry from the future subscriptions */
+export type SubscriptionFutureEntry = {
+  __typename?: 'SubscriptionFutureEntry';
+  /** Company of the licensee. */
+  company?: Maybe<Scalars['String']>;
+  /** Email of the licensee. */
+  email?: Maybe<Scalars['String']>;
+  /** Date when the license expires. */
+  expiresAt?: Maybe<Scalars['Date']>;
+  /** Name of the licensee. */
+  name?: Maybe<Scalars['String']>;
+  /** Name of the subscription plan. */
+  plan: Scalars['String'];
+  /** Date when the license started. */
+  startsAt?: Maybe<Scalars['Date']>;
+  /** Type of license the subscription will yield. */
+  type: Scalars['String'];
+  /** Number of paid user seats. */
+  usersInLicenseCount?: Maybe<Scalars['Int']>;
+};
+
+/** The connection type for SubscriptionFutureEntry. */
+export type SubscriptionFutureEntryConnection = {
+  __typename?: 'SubscriptionFutureEntryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<SubscriptionFutureEntryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<SubscriptionFutureEntry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type SubscriptionFutureEntryEdge = {
+  __typename?: 'SubscriptionFutureEntryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<SubscriptionFutureEntry>;
+};
+
+/** Represents a Suggested Reviewers result set */
+export type SuggestedReviewersType = {
+  __typename?: 'SuggestedReviewersType';
+  /** List of accepted reviewer usernames. */
+  accepted?: Maybe<Array<Scalars['String']>>;
+  /** Timestamp of when the suggestions were created. */
+  createdAt: Scalars['Time'];
+  /** List of suggested reviewer usernames. */
+  suggested: Array<Scalars['String']>;
+  /** Timestamp of when the suggestions were updated. */
+  updatedAt: Scalars['Time'];
+};
+
+export type SystemNoteMetadata = {
+  __typename?: 'SystemNoteMetadata';
+  /** System note metadata action. */
+  action?: Maybe<Scalars['String']>;
+  /** Version of the changed description. */
+  descriptionVersion?: Maybe<DescriptionVersion>;
+  /** Global ID of the specific system note metadata. */
+  id: Scalars['SystemNoteMetadataID'];
 };
 
 /** Completion status of tasks */
@@ -13775,6 +28836,51 @@ export type TerraformStateVersion = {
   updatedAt: Scalars['Time'];
 };
 
+/** Represents the Geo sync and verification state of a terraform state version */
+export type TerraformStateVersionRegistry = {
+  __typename?: 'TerraformStateVersionRegistry';
+  /** Timestamp when the TerraformStateVersionRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the TerraformStateVersionRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the TerraformStateVersionRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the TerraformStateVersionRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the TerraformStateVersionRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the TerraformStateVersionRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the TerraformStateVersionRegistry */
+  state?: Maybe<RegistryState>;
+  /** ID of the terraform state version. */
+  terraformStateVersionId: Scalars['ID'];
+  /** Timestamp after which the TerraformStateVersionRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the TerraformStateVersionRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for TerraformStateVersionRegistry. */
+export type TerraformStateVersionRegistryConnection = {
+  __typename?: 'TerraformStateVersionRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<TerraformStateVersionRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<TerraformStateVersionRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type TerraformStateVersionRegistryEdge = {
+  __typename?: 'TerraformStateVersionRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<TerraformStateVersionRegistry>;
+};
+
 /** Test case in pipeline test report. */
 export type TestCase = {
   __typename?: 'TestCase';
@@ -13829,6 +28935,48 @@ export type TestCaseStatus =
   | 'skipped'
   /** Test case that has a status of success. */
   | 'success';
+
+/** Represents a requirement test report */
+export type TestReport = {
+  __typename?: 'TestReport';
+  /** Author of the test report. */
+  author?: Maybe<UserCore>;
+  /** Timestamp of when the test report was created. */
+  createdAt: Scalars['Time'];
+  /** ID of the test report. */
+  id: Scalars['ID'];
+  /** State of the test report. */
+  state: TestReportState;
+  /** Indicates whether the test report was generated with references to legacy requirement IIDs. */
+  usesLegacyIid?: Maybe<Scalars['Boolean']>;
+};
+
+/** The connection type for TestReport. */
+export type TestReportConnection = {
+  __typename?: 'TestReportConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<TestReportEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<TestReport>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type TestReportEdge = {
+  __typename?: 'TestReportEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<TestReport>;
+};
+
+/** State of a test report */
+export type TestReportState =
+  /** Failed test report. */
+  | 'FAILED'
+  /** Passed test report. */
+  | 'PASSED';
 
 /** Test report for a pipeline */
 export type TestReportSummary = {
@@ -13944,6 +29092,17 @@ export type TestSuiteSummaryEdge = {
   node?: Maybe<TestSuiteSummary>;
 };
 
+/** Represents the time report stats for timeboxes */
+export type TimeReportStats = {
+  __typename?: 'TimeReportStats';
+  /** Completed issues metrics. */
+  complete?: Maybe<TimeboxMetrics>;
+  /** Incomplete issues metrics. */
+  incomplete?: Maybe<TimeboxMetrics>;
+  /** Total issues metrics. */
+  total?: Maybe<TimeboxMetrics>;
+};
+
 export type TimeTrackingTimelogCategory = {
   __typename?: 'TimeTrackingTimelogCategory';
   /** Whether the category is billable or not. */
@@ -13984,6 +29143,82 @@ export type TimeTrackingTimelogCategoryEdge = {
   node?: Maybe<TimeTrackingTimelogCategory>;
 };
 
+/** Represents measured stats metrics for timeboxes */
+export type TimeboxMetrics = {
+  __typename?: 'TimeboxMetrics';
+  /** Count metric. */
+  count: Scalars['Int'];
+  /** Weight metric. */
+  weight: Scalars['Int'];
+};
+
+/** Represents a historically accurate report about the timebox */
+export type TimeboxReport = {
+  __typename?: 'TimeboxReport';
+  /** Daily scope and completed totals for burnup charts. */
+  burnupTimeSeries?: Maybe<Array<BurnupChartDailyTotals>>;
+  /** If the report cannot be generated, information about why. */
+  error?: Maybe<TimeboxReportError>;
+  /** Represents the time report stats for the timebox. */
+  stats?: Maybe<TimeReportStats>;
+};
+
+/** Explains why we could not generate a timebox report. */
+export type TimeboxReportError = {
+  __typename?: 'TimeboxReportError';
+  /** Machine readable code, categorizing the error. */
+  code?: Maybe<TimeboxReportErrorReason>;
+  /** Human readable message explaining what happened. */
+  message?: Maybe<Scalars['String']>;
+};
+
+/** Category of error. */
+export type TimeboxReportErrorReason =
+  /** Created at ascending order. */
+  | 'CREATED_ASC'
+  /** Created at descending order. */
+  | 'CREATED_DESC'
+  /** Label priority by ascending order. */
+  | 'LABEL_PRIORITY_ASC'
+  /** Label priority by descending order. */
+  | 'LABEL_PRIORITY_DESC'
+  /** Milestone due date by ascending order. */
+  | 'MILESTONE_DUE_ASC'
+  /** Milestone due date by descending order. */
+  | 'MILESTONE_DUE_DESC'
+  /** One or both of start_date and due_date is missing. */
+  | 'MISSING_DATES'
+  /** Priority by ascending order. */
+  | 'PRIORITY_ASC'
+  /** Priority by descending order. */
+  | 'PRIORITY_DESC'
+  /** There are too many events. */
+  | 'TOO_MANY_EVENTS'
+  /** This type does not support timebox reports. */
+  | 'UNSUPPORTED'
+  /** Updated at ascending order. */
+  | 'UPDATED_ASC'
+  /** Updated at descending order. */
+  | 'UPDATED_DESC'
+  /** Created at ascending order. */
+  | 'created_asc'
+  /** Created at descending order. */
+  | 'created_desc'
+  /** Updated at ascending order. */
+  | 'updated_asc'
+  /** Updated at descending order. */
+  | 'updated_desc';
+
+export type TimeboxReportInterface = {
+  /** Historically accurate report about the timebox. */
+  report?: Maybe<TimeboxReport>;
+};
+
+
+export type TimeboxReportInterfaceReportArgs = {
+  fullPath?: InputMaybe<Scalars['String']>;
+};
+
 /** A time-frame defined as a closed inclusive range of two dates */
 export type Timeframe = {
   /** End of the range. */
@@ -14002,6 +29237,8 @@ export type TimelineEventCreateInput = {
   note: Scalars['String'];
   /** Timestamp of when the event occurred. */
   occurredAt: Scalars['Time'];
+  /** Tags for the incident timeline event. */
+  timelineEventTagNames?: InputMaybe<Array<Scalars['String']>>;
 };
 
 /** Autogenerated return type of TimelineEventCreate */
@@ -14053,6 +29290,56 @@ export type TimelineEventPromoteFromNotePayload = {
   timelineEvent?: Maybe<TimelineEventType>;
 };
 
+/** Autogenerated input type of TimelineEventTagCreate */
+export type TimelineEventTagCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Name of the tag. */
+  name: Scalars['String'];
+  /** Project to create the timeline event tag in. */
+  projectPath: Scalars['ID'];
+};
+
+/** Autogenerated return type of TimelineEventTagCreate */
+export type TimelineEventTagCreatePayload = {
+  __typename?: 'TimelineEventTagCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Timeline event tag. */
+  timelineEventTag?: Maybe<TimelineEventTagType>;
+};
+
+/** Describes a tag on an incident management timeline event. */
+export type TimelineEventTagType = {
+  __typename?: 'TimelineEventTagType';
+  /** ID of the timeline event tag. */
+  id: Scalars['IncidentManagementTimelineEventTagID'];
+  /** Name of the timeline event tag. */
+  name: Scalars['String'];
+};
+
+/** The connection type for TimelineEventTagType. */
+export type TimelineEventTagTypeConnection = {
+  __typename?: 'TimelineEventTagTypeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<TimelineEventTagTypeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<TimelineEventTagType>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type TimelineEventTagTypeEdge = {
+  __typename?: 'TimelineEventTagTypeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<TimelineEventTagType>;
+};
+
 /** Describes an incident management timeline event */
 export type TimelineEventType = {
   __typename?: 'TimelineEventType';
@@ -14076,10 +29363,21 @@ export type TimelineEventType = {
   occurredAt: Scalars['Time'];
   /** Note from which the timeline event was created. */
   promotedFromNote?: Maybe<Note>;
+  /** Tags for the incident timeline event. */
+  timelineEventTags?: Maybe<TimelineEventTagTypeConnection>;
   /** Timestamp when the event updated. */
   updatedAt: Scalars['Time'];
   /** User that updated the timeline event. */
   updatedByUser?: Maybe<UserCore>;
+};
+
+
+/** Describes an incident management timeline event */
+export type TimelineEventTypeTimelineEventTagsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 };
 
 /** The connection type for TimelineEventType. */
@@ -14112,6 +29410,8 @@ export type TimelineEventUpdateInput = {
   note?: InputMaybe<Scalars['String']>;
   /** Timestamp when the event occurred. */
   occurredAt?: InputMaybe<Scalars['Time']>;
+  /** Tags for the incident timeline event. */
+  timelineEventTagNames?: InputMaybe<Array<Scalars['String']>>;
 };
 
 /** Autogenerated return type of TimelineEventUpdate */
@@ -14135,6 +29435,8 @@ export type Timelog = {
   mergeRequest?: Maybe<MergeRequest>;
   /** Note where the quick action was executed to add the logged time. */
   note?: Maybe<Note>;
+  /** Target project of the timelog merge request or issue. */
+  project: Project;
   /** Timestamp of when the time tracked was spent at. */
   spentAt?: Maybe<Scalars['Time']>;
   /** Summary of how the time was spent. */
@@ -14150,12 +29452,16 @@ export type Timelog = {
 /** The connection type for Timelog. */
 export type TimelogConnection = {
   __typename?: 'TimelogConnection';
+  /** Total count of collection. */
+  count: Scalars['Int'];
   /** A list of edges. */
   edges?: Maybe<Array<Maybe<TimelogEdge>>>;
   /** A list of nodes. */
   nodes?: Maybe<Array<Maybe<Timelog>>>;
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
+  /** Total time spent in seconds. */
+  totalSpentTime: Scalars['BigInt'];
 };
 
 /** Autogenerated input type of TimelogCreate */
@@ -14165,7 +29471,7 @@ export type TimelogCreateInput = {
   /** Global ID of the issuable (Issue, WorkItem or MergeRequest). */
   issuableId: Scalars['IssuableID'];
   /** When the time was spent. */
-  spentAt: Scalars['Date'];
+  spentAt: Scalars['Time'];
   /** Summary of time spent. */
   summary: Scalars['String'];
   /** Amount of time spent. */
@@ -14217,6 +29523,33 @@ export type TimelogPermissions = {
   adminTimelog: Scalars['Boolean'];
 };
 
+/** Values for sorting timelogs */
+export type TimelogSort =
+  /** Created at ascending order. */
+  | 'CREATED_ASC'
+  /** Created at descending order. */
+  | 'CREATED_DESC'
+  /** Spent at ascending order. */
+  | 'SPENT_AT_ASC'
+  /** Spent at descending order. */
+  | 'SPENT_AT_DESC'
+  /** Time spent ascending order. */
+  | 'TIME_SPENT_ASC'
+  /** Time spent descending order. */
+  | 'TIME_SPENT_DESC'
+  /** Updated at ascending order. */
+  | 'UPDATED_ASC'
+  /** Updated at descending order. */
+  | 'UPDATED_DESC'
+  /** Created at ascending order. */
+  | 'created_asc'
+  /** Created at descending order. */
+  | 'created_desc'
+  /** Updated at ascending order. */
+  | 'updated_asc'
+  /** Updated at descending order. */
+  | 'updated_desc';
+
 /** Representing a to-do entry */
 export type Todo = {
   __typename?: 'Todo';
@@ -14253,8 +29586,10 @@ export type TodoActionEnum =
   | 'build_failed'
   /** User was directly addressed. */
   | 'directly_addressed'
-  /** User added a TODO. */
+  /** User added a to-do item. */
   | 'marked'
+  /** Group or project access requested from the user. */
+  | 'member_access_requested'
   /** User was mentioned. */
   | 'mentioned'
   /** Merge request authored by the user was removed from the merge train. */
@@ -14373,10 +29708,14 @@ export type TodoTargetEnum =
   | 'COMMIT'
   /** Design. */
   | 'DESIGN'
+  /** An Epic. */
+  | 'EPIC'
   /** Issue. */
   | 'ISSUE'
   /** Merge request. */
-  | 'MERGEREQUEST';
+  | 'MERGEREQUEST'
+  /** Work item. */
+  | 'WORKITEM';
 
 export type Todoable = {
   /** URL of this object. */
@@ -14412,7 +29751,7 @@ export type Topic = {
   avatarUrl?: Maybe<Scalars['String']>;
   /** Description of the topic. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** ID of the topic. */
   id: Scalars['ID'];
@@ -14441,6 +29780,17 @@ export type TopicEdge = {
   /** The item at the end of the edge. */
   node?: Maybe<Topic>;
 };
+
+/**
+ * Status of the request to the training provider. The URL of a TrainingUrl is
+ * calculated asynchronously. When PENDING, the URL of the TrainingUrl will be
+ * null. When COMPLETED, the URL of the TrainingUrl will be available.
+ */
+export type TrainingUrlRequestStatus =
+  /** Completed request. */
+  | 'COMPLETED'
+  /** Pending request. */
+  | 'PENDING';
 
 export type Tree = {
   __typename?: 'Tree';
@@ -14545,6 +29895,55 @@ export type TypeEnum =
   /** Snippet related to a specific project. */
   | 'project';
 
+export type UnionedEpicFilterInput = {
+  /** Filters epics that are authored by one of the given users. */
+  authorUsername?: InputMaybe<Array<Scalars['String']>>;
+  /** Filters epics that have at least one of the given labels. */
+  labelName?: InputMaybe<Array<Scalars['String']>>;
+};
+
+export type UnionedIssueFilterInput = {
+  /** Filters issues that are assigned to at least one of the given users. */
+  assigneeUsernames?: InputMaybe<Array<Scalars['String']>>;
+  /** Filters issues that are authored by one of the given users. */
+  authorUsernames?: InputMaybe<Array<Scalars['String']>>;
+  /** Filters issues that have at least one of the given labels. */
+  labelNames?: InputMaybe<Array<Scalars['String']>>;
+};
+
+/** Defines which user roles, users, or groups can unprotect a protected branch. */
+export type UnprotectAccessLevel = {
+  __typename?: 'UnprotectAccessLevel';
+  /** GitLab::Access level. */
+  accessLevel: Scalars['Int'];
+  /** Human readable representation for this access level. */
+  accessLevelDescription: Scalars['String'];
+  /** Group associated with this access level. */
+  group?: Maybe<AccessLevelGroup>;
+  /** User associated with this access level. */
+  user?: Maybe<AccessLevelUser>;
+};
+
+/** The connection type for UnprotectAccessLevel. */
+export type UnprotectAccessLevelConnection = {
+  __typename?: 'UnprotectAccessLevelConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<UnprotectAccessLevelEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<UnprotectAccessLevel>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type UnprotectAccessLevelEdge = {
+  __typename?: 'UnprotectAccessLevelEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<UnprotectAccessLevel>;
+};
+
 /** Autogenerated input type of UpdateAlertStatus */
 export type UpdateAlertStatusInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -14572,8 +29971,33 @@ export type UpdateAlertStatusPayload = {
   todo?: Maybe<Todo>;
 };
 
+/** Autogenerated input type of UpdateBoardEpicUserPreferences */
+export type UpdateBoardEpicUserPreferencesInput = {
+  /** Board global ID. */
+  boardId: Scalars['BoardID'];
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Whether the epic should be collapsed in the board. */
+  collapsed: Scalars['Boolean'];
+  /** ID of an epic to set preferences for. */
+  epicId: Scalars['EpicID'];
+};
+
+/** Autogenerated return type of UpdateBoardEpicUserPreferences */
+export type UpdateBoardEpicUserPreferencesPayload = {
+  __typename?: 'UpdateBoardEpicUserPreferencesPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** User preferences for the epic in the board after mutation. */
+  epicUserPreferences?: Maybe<BoardEpicUserPreferences>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 /** Autogenerated input type of UpdateBoard */
 export type UpdateBoardInput = {
+  /** ID of user to be assigned to the board. */
+  assigneeId?: InputMaybe<Scalars['UserID']>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Whether or not backlog list is hidden. */
@@ -14582,15 +30006,27 @@ export type UpdateBoardInput = {
   hideClosedList?: InputMaybe<Scalars['Boolean']>;
   /** Board global ID. */
   id: Scalars['BoardID'];
+  /** ID of iteration cadence to be assigned to the board. */
+  iterationCadenceId?: InputMaybe<Scalars['IterationsCadenceID']>;
+  /** ID of iteration to be assigned to the board. */
+  iterationId?: InputMaybe<Scalars['IterationID']>;
+  /** IDs of labels to be added to the board. */
+  labelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+  /** Labels of the issue. */
+  labels?: InputMaybe<Array<Scalars['String']>>;
+  /** ID of milestone to be assigned to the board. */
+  milestoneId?: InputMaybe<Scalars['MilestoneID']>;
   /** Board name. */
   name?: InputMaybe<Scalars['String']>;
+  /** Weight value to be assigned to the board. */
+  weight?: InputMaybe<Scalars['Int']>;
 };
 
 /** Autogenerated input type of UpdateBoardList */
 export type UpdateBoardListInput = {
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
-  /** Indicates if the list is collapsed for this user. */
+  /** Indicates if the list is collapsed for the user. */
   collapsed?: InputMaybe<Scalars['Boolean']>;
   /** Global ID of the list. */
   listId: Scalars['ListID'];
@@ -14616,6 +30052,27 @@ export type UpdateBoardPayload = {
   board?: Maybe<Board>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** Autogenerated input type of UpdateComplianceFramework */
+export type UpdateComplianceFrameworkInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the compliance framework to update. */
+  id: Scalars['ComplianceManagementFrameworkID'];
+  /** Parameters to update the compliance framework with. */
+  params: ComplianceFrameworkInput;
+};
+
+/** Autogenerated return type of UpdateComplianceFramework */
+export type UpdateComplianceFrameworkPayload = {
+  __typename?: 'UpdateComplianceFrameworkPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Compliance framework after mutation. */
+  complianceFramework?: Maybe<ComplianceFramework>;
   /** Errors encountered during execution of the mutation. */
   errors: Array<Scalars['String']>;
 };
@@ -14706,6 +30163,80 @@ export type UpdateDiffImagePositionInput = {
   y?: InputMaybe<Scalars['Int']>;
 };
 
+/** Autogenerated input type of UpdateEpicBoardList */
+export type UpdateEpicBoardListInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Indicates if the list is collapsed for the user. */
+  collapsed?: InputMaybe<Scalars['Boolean']>;
+  /** Global ID of the epic list. */
+  listId: Scalars['BoardsEpicListID'];
+  /** Position of list within the board. */
+  position?: InputMaybe<Scalars['Int']>;
+};
+
+/** Autogenerated return type of UpdateEpicBoardList */
+export type UpdateEpicBoardListPayload = {
+  __typename?: 'UpdateEpicBoardListPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Mutated epic list. */
+  list?: Maybe<EpicList>;
+};
+
+/** Autogenerated input type of UpdateEpic */
+export type UpdateEpicInput = {
+  /** IDs of labels to be added to the epic. */
+  addLabelIds?: InputMaybe<Array<Scalars['ID']>>;
+  /** Array of labels to be added to the epic. */
+  addLabels?: InputMaybe<Array<Scalars['String']>>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Color of the epic. Available only when feature flag `epic_color_highlight` is
+   * enabled. This flag is disabled by default, because the feature is experimental
+   * and is subject to change without notice.
+   */
+  color?: InputMaybe<Scalars['Color']>;
+  /** Indicates if the epic is confidential. */
+  confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Description of the epic. */
+  description?: InputMaybe<Scalars['String']>;
+  /** End date of the epic. */
+  dueDateFixed?: InputMaybe<Scalars['String']>;
+  /** Indicates end date should be sourced from due_date_fixed field not the issue milestones. */
+  dueDateIsFixed?: InputMaybe<Scalars['Boolean']>;
+  /** Group the epic to mutate is in. */
+  groupPath: Scalars['ID'];
+  /** IID of the epic to mutate. */
+  iid: Scalars['ID'];
+  /** IDs of labels to be removed from the epic. */
+  removeLabelIds?: InputMaybe<Array<Scalars['ID']>>;
+  /** Array of labels to be removed from the epic. */
+  removeLabels?: InputMaybe<Array<Scalars['String']>>;
+  /** Start date of the epic. */
+  startDateFixed?: InputMaybe<Scalars['String']>;
+  /** Indicates start date should be sourced from start_date_fixed field not the issue milestones. */
+  startDateIsFixed?: InputMaybe<Scalars['Boolean']>;
+  /** State event for the epic. */
+  stateEvent?: InputMaybe<EpicStateEvent>;
+  /** Title of the epic. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of UpdateEpic */
+export type UpdateEpicPayload = {
+  __typename?: 'UpdateEpicPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Epic after mutation. */
+  epic?: Maybe<Epic>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
 /** Autogenerated input type of UpdateImageDiffNote */
 export type UpdateImageDiffNoteInput = {
   /** Content of the note. */
@@ -14741,6 +30272,10 @@ export type UpdateIssueInput = {
   description?: InputMaybe<Scalars['String']>;
   /** Due date of the issue. */
   dueDate?: InputMaybe<Scalars['ISO8601Date']>;
+  /** ID of the parent epic. NULL when removing the association. */
+  epicId?: InputMaybe<Scalars['EpicID']>;
+  /** Desired health status. */
+  healthStatus?: InputMaybe<HealthStatus>;
   /** IID of the issue to mutate. */
   iid: Scalars['String'];
   /** IDs of labels to be set. Replaces existing issue labels. */
@@ -14755,10 +30290,14 @@ export type UpdateIssueInput = {
   removeLabelIds?: InputMaybe<Array<Scalars['ID']>>;
   /** Close or reopen an issue. */
   stateEvent?: InputMaybe<IssueStateEvent>;
+  /** Estimated time to complete the issue, or `0` to remove the current estimate. */
+  timeEstimate?: InputMaybe<Scalars['String']>;
   /** Title of the issue. */
   title?: InputMaybe<Scalars['String']>;
   /** Type of the issue. */
   type?: InputMaybe<IssueType>;
+  /** Weight of the issue. */
+  weight?: InputMaybe<Scalars['Int']>;
 };
 
 /** Autogenerated return type of UpdateIssue */
@@ -14772,6 +30311,35 @@ export type UpdateIssuePayload = {
   issue?: Maybe<Issue>;
 };
 
+/** Autogenerated input type of UpdateIteration */
+export type UpdateIterationInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the iteration. */
+  description?: InputMaybe<Scalars['String']>;
+  /** End date of the iteration. */
+  dueDate?: InputMaybe<Scalars['String']>;
+  /** Group of the iteration. */
+  groupPath: Scalars['ID'];
+  /** Global ID of the iteration. */
+  id: Scalars['ID'];
+  /** Start date of the iteration. */
+  startDate?: InputMaybe<Scalars['String']>;
+  /** Title of the iteration. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of UpdateIteration */
+export type UpdateIterationPayload = {
+  __typename?: 'UpdateIterationPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated iteration. */
+  iteration?: Maybe<Iteration>;
+};
+
 /** Autogenerated input type of UpdateNamespacePackageSettings */
 export type UpdateNamespacePackageSettingsInput = {
   /** A unique identifier for the client performing the mutation. */
@@ -14783,6 +30351,12 @@ export type UpdateNamespacePackageSettingsInput = {
   genericDuplicateExceptionRegex?: InputMaybe<Scalars['UntrustedRegexp']>;
   /** Indicates whether duplicate generic packages are allowed for this namespace. */
   genericDuplicatesAllowed?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates whether Maven package forwarding is locked for all descendent namespaces. */
+  lockMavenPackageRequestsForwarding?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates whether npm package forwarding is locked for all descendent namespaces. */
+  lockNpmPackageRequestsForwarding?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates whether PyPI package forwarding is locked for all descendent namespaces. */
+  lockPypiPackageRequestsForwarding?: InputMaybe<Scalars['Boolean']>;
   /**
    * When maven_duplicates_allowed is false, you can publish duplicate packages
    * with names that match this regex. Otherwise, this setting has no effect.
@@ -14790,8 +30364,14 @@ export type UpdateNamespacePackageSettingsInput = {
   mavenDuplicateExceptionRegex?: InputMaybe<Scalars['UntrustedRegexp']>;
   /** Indicates whether duplicate Maven packages are allowed for this namespace. */
   mavenDuplicatesAllowed?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates whether Maven package forwarding is allowed for this namespace. */
+  mavenPackageRequestsForwarding?: InputMaybe<Scalars['Boolean']>;
   /** Namespace path where the namespace package setting is located. */
   namespacePath: Scalars['ID'];
+  /** Indicates whether npm package forwarding is allowed for this namespace. */
+  npmPackageRequestsForwarding?: InputMaybe<Scalars['Boolean']>;
+  /** Indicates whether PyPI package forwarding is allowed for this namespace. */
+  pypiPackageRequestsForwarding?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Autogenerated return type of UpdateNamespacePackageSettings */
@@ -14853,6 +30433,40 @@ export type UpdatePackagesCleanupPolicyPayload = {
   packagesCleanupPolicy?: Maybe<PackagesCleanupPolicy>;
 };
 
+/** Autogenerated input type of UpdateRequirement */
+export type UpdateRequirementInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the requirement. */
+  description?: InputMaybe<Scalars['String']>;
+  /**
+   * IID of the requirement to update. Deprecated in 15.8: Use work_item_iid instead.
+   * @deprecated Use work_item_iid instead. Deprecated in 15.8.
+   */
+  iid?: InputMaybe<Scalars['String']>;
+  /** Creates a test report for the requirement with the given state. */
+  lastTestReportState?: InputMaybe<TestReportState>;
+  /** Full project path the requirement is associated with. */
+  projectPath: Scalars['ID'];
+  /** State of the requirement. */
+  state?: InputMaybe<RequirementState>;
+  /** Title of the requirement. */
+  title?: InputMaybe<Scalars['String']>;
+  /** IID of the requirement work item to update. */
+  workItemIid?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of UpdateRequirement */
+export type UpdateRequirementPayload = {
+  __typename?: 'UpdateRequirementPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Requirement after mutation. */
+  requirement?: Maybe<Requirement>;
+};
+
 /** Autogenerated input type of UpdateSnippet */
 export type UpdateSnippetInput = {
   /** Actions to perform over the snippet repository and blobs. */
@@ -14905,6 +30519,51 @@ export type UploadDeletePayload = {
   upload?: Maybe<FileUpload>;
 };
 
+/** Represents the Geo replication and verification state of an upload. */
+export type UploadRegistry = {
+  __typename?: 'UploadRegistry';
+  /** Timestamp when the UploadRegistry was created */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** ID of the Upload. */
+  fileId: Scalars['ID'];
+  /** ID of the UploadRegistry */
+  id: Scalars['ID'];
+  /** Error message during sync of the UploadRegistry */
+  lastSyncFailure?: Maybe<Scalars['String']>;
+  /** Timestamp of the most recent successful sync of the UploadRegistry */
+  lastSyncedAt?: Maybe<Scalars['Time']>;
+  /** Timestamp after which the UploadRegistry is resynced */
+  retryAt?: Maybe<Scalars['Time']>;
+  /** Number of consecutive failed sync attempts of the UploadRegistry */
+  retryCount?: Maybe<Scalars['Int']>;
+  /** Sync state of the UploadRegistry */
+  state?: Maybe<RegistryState>;
+  /** Timestamp after which the UploadRegistry is reverified */
+  verificationRetryAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of the most recent successful verification of the UploadRegistry */
+  verifiedAt?: Maybe<Scalars['Time']>;
+};
+
+/** The connection type for UploadRegistry. */
+export type UploadRegistryConnection = {
+  __typename?: 'UploadRegistryConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<UploadRegistryEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<UploadRegistry>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type UploadRegistryEdge = {
+  __typename?: 'UploadRegistryEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<UploadRegistry>;
+};
+
 /** Represents a recorded measurement (object count) for the Admins */
 export type UsageTrendsMeasurement = {
   __typename?: 'UsageTrendsMeasurement';
@@ -14944,15 +30603,25 @@ export type User = {
   authoredMergeRequests?: Maybe<MergeRequestConnection>;
   /** URL of the user's avatar. */
   avatarUrl?: Maybe<Scalars['String']>;
+  /** Bio of the user. */
+  bio?: Maybe<Scalars['String']>;
   /** Indicates if the user is a bot. */
   bot: Scalars['Boolean'];
   /** User callouts that belong to the user. */
   callouts?: Maybe<UserCalloutConnection>;
+  /** User's default commit email. */
+  commitEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the user was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Discord ID of the user. */
+  discord?: Maybe<Scalars['String']>;
   /**
    * User email. Deprecated in 13.7: This was renamed.
    * @deprecated This was renamed. Please use `User.publicEmail`. Deprecated in 13.7.
    */
   email?: Maybe<Scalars['String']>;
+  /** User's email addresses. */
+  emails?: Maybe<EmailConnection>;
   /** Whether Gitpod is enabled at the user level. */
   gitpodEnabled?: Maybe<Scalars['Boolean']>;
   /** Group count for the user. */
@@ -14963,6 +30632,10 @@ export type User = {
   groups?: Maybe<GroupConnection>;
   /** ID of the user. */
   id: Scalars['ID'];
+  /** Job title of the user. */
+  jobTitle?: Maybe<Scalars['String']>;
+  /** LinkedIn profile name of the user. */
+  linkedin?: Maybe<Scalars['String']>;
   /** Location of the user. */
   location?: Maybe<Scalars['String']>;
   /**
@@ -14972,6 +30645,10 @@ export type User = {
   name: Scalars['String'];
   /** Personal namespace of the user. */
   namespace?: Maybe<Namespace>;
+  /** User's custom namespace commit emails. */
+  namespaceCommitEmails?: Maybe<NamespaceCommitEmailConnection>;
+  /** Who the user represents or works for. */
+  organization?: Maybe<Scalars['String']>;
   /** Web path to the Gitpod section within user preferences. */
   preferencesGitpodPath?: Maybe<Scalars['String']>;
   /** Web path to enable Gitpod for the user. */
@@ -14984,6 +30661,8 @@ export type User = {
   reviewRequestedMergeRequests?: Maybe<MergeRequestConnection>;
   /** Saved replies authored by the user. Will not return saved replies if `saved_replies` feature flag is disabled. */
   savedReplies?: Maybe<SavedReplyConnection>;
+  /** Saved reply authored by the user. Will not return saved reply if `saved_replies` feature flag is disabled. */
+  savedReply?: Maybe<SavedReply>;
   /** Snippets authored by the user. */
   snippets?: Maybe<SnippetConnection>;
   /** Projects starred by the user. */
@@ -14996,6 +30675,15 @@ export type User = {
   timelogs?: Maybe<TimelogConnection>;
   /** To-do items of the user. */
   todos?: Maybe<TodoConnection>;
+  /** Twitter username of the user. */
+  twitter?: Maybe<Scalars['String']>;
+  /**
+   * Achievements for the user. Only returns for namespaces where the
+   * `achievements` feature flag is enabled. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  userAchievements?: Maybe<UserAchievementConnection>;
   /** Permissions for the current user on the resource. */
   userPermissions: UserPermissions;
   /** Username of the user. Unique within this instance of GitLab. */
@@ -15004,12 +30692,15 @@ export type User = {
   webPath: Scalars['String'];
   /** Web URL of the user. */
   webUrl: Scalars['String'];
+  /** Workspaces owned by the current user. */
+  workspaces?: Maybe<WorkspaceConnection>;
 };
 
 
 /** Representation of a GitLab user. */
 export type UserAssignedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -15038,6 +30729,7 @@ export type UserAssignedMergeRequestsArgs = {
 /** Representation of a GitLab user. */
 export type UserAuthoredMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -15073,6 +30765,15 @@ export type UserCalloutsArgs = {
 
 
 /** Representation of a GitLab user. */
+export type UserEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Representation of a GitLab user. */
 export type UserGroupMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15093,6 +30794,15 @@ export type UserGroupsArgs = {
 
 
 /** Representation of a GitLab user. */
+export type UserNamespaceCommitEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Representation of a GitLab user. */
 export type UserProjectMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15104,6 +30814,7 @@ export type UserProjectMembershipsArgs = {
 /** Representation of a GitLab user. */
 export type UserReviewRequestedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15139,6 +30850,12 @@ export type UserSavedRepliesArgs = {
 
 
 /** Representation of a GitLab user. */
+export type UserSavedReplyArgs = {
+  id: Scalars['UsersSavedReplyID'];
+};
+
+
+/** Representation of a GitLab user. */
 export type UserSnippetsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15170,6 +30887,7 @@ export type UserTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
@@ -15188,6 +30906,86 @@ export type UserTodosArgs = {
   projectId?: InputMaybe<Array<Scalars['ID']>>;
   state?: InputMaybe<Array<TodoStateEnum>>;
   type?: InputMaybe<Array<TodoTargetEnum>>;
+};
+
+
+/** Representation of a GitLab user. */
+export type UserUserAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Representation of a GitLab user. */
+export type UserWorkspacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['RemoteDevelopmentWorkspaceID']>>;
+  includeActualStates?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
+};
+
+export type UserAchievement = {
+  __typename?: 'UserAchievement';
+  /** Achievement awarded. */
+  achievement: Achievement;
+  /** Awarded by. */
+  awardedByUser: UserCore;
+  /** Timestamp the achievement was created. */
+  createdAt: Scalars['Time'];
+  /** ID of the user achievement. */
+  id: Scalars['AchievementsUserAchievementID'];
+  /** Timestamp the achievement was revoked. */
+  revokedAt?: Maybe<Scalars['Time']>;
+  /** Revoked by. */
+  revokedByUser?: Maybe<UserCore>;
+  /** Timestamp the achievement was last updated. */
+  updatedAt: Scalars['Time'];
+  /** Achievement recipient. */
+  user: UserCore;
+};
+
+/** The connection type for UserAchievement. */
+export type UserAchievementConnection = {
+  __typename?: 'UserAchievementConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<UserAchievementEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<UserAchievement>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type UserAchievementEdge = {
+  __typename?: 'UserAchievementEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<UserAchievement>;
+};
+
+/** Autogenerated input type of UserAchievementsDelete */
+export type UserAchievementsDeleteInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the user achievement being deleted. */
+  userAchievementId: Scalars['AchievementsUserAchievementID'];
+};
+
+/** Autogenerated return type of UserAchievementsDelete */
+export type UserAchievementsDeletePayload = {
+  __typename?: 'UserAchievementsDeletePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Deleted user achievement. */
+  userAchievement?: Maybe<UserAchievement>;
 };
 
 export type UserCallout = {
@@ -15241,10 +31039,10 @@ export type UserCalloutEdge = {
 export type UserCalloutFeatureNameEnum =
   /** Callout feature name for active_user_count_threshold. */
   | 'ACTIVE_USER_COUNT_THRESHOLD'
-  /** Callout feature name for attention_requests_side_nav. */
-  | 'ATTENTION_REQUESTS_SIDE_NAV'
-  /** Callout feature name for attention_requests_top_nav. */
-  | 'ATTENTION_REQUESTS_TOP_NAV'
+  /** Callout feature name for artifacts_management_page_feedback_banner. */
+  | 'ARTIFACTS_MANAGEMENT_PAGE_FEEDBACK_BANNER'
+  /** Callout feature name for branch_rules_info_callout. */
+  | 'BRANCH_RULES_INFO_CALLOUT'
   /** Callout feature name for buy_pipeline_minutes_notification_dot. */
   | 'BUY_PIPELINE_MINUTES_NOTIFICATION_DOT'
   /** Callout feature name for canary_deployment. */
@@ -15255,6 +31053,10 @@ export type UserCalloutFeatureNameEnum =
   | 'CLOUD_LICENSING_SUBSCRIPTION_ACTIVATION_BANNER'
   /** Callout feature name for cluster_security_warning. */
   | 'CLUSTER_SECURITY_WARNING'
+  /** Callout feature name for code_suggestions_third_party_callout. */
+  | 'CODE_SUGGESTIONS_THIRD_PARTY_CALLOUT'
+  /** Callout feature name for create_runner_workflow_banner. */
+  | 'CREATE_RUNNER_WORKFLOW_BANNER'
   /** Callout feature name for eoa_bronze_plan_banner. */
   | 'EOA_BRONZE_PLAN_BANNER'
   /** Callout feature name for feature_flags_new_version. */
@@ -15269,16 +31071,24 @@ export type UserCalloutFeatureNameEnum =
   | 'GKE_CLUSTER_INTEGRATION'
   /** Callout feature name for gold_trial_billings. */
   | 'GOLD_TRIAL_BILLINGS'
+  /** Callout feature name for merge_request_settings_moved_callout. */
+  | 'MERGE_REQUEST_SETTINGS_MOVED_CALLOUT'
   /** Callout feature name for mr_experience_survey. */
   | 'MR_EXPERIENCE_SURVEY'
-  /** Callout feature name for namespace_storage_limit_banner_alert_threshold. */
-  | 'NAMESPACE_STORAGE_LIMIT_BANNER_ALERT_THRESHOLD'
-  /** Callout feature name for namespace_storage_limit_banner_error_threshold. */
-  | 'NAMESPACE_STORAGE_LIMIT_BANNER_ERROR_THRESHOLD'
-  /** Callout feature name for namespace_storage_limit_banner_info_threshold. */
-  | 'NAMESPACE_STORAGE_LIMIT_BANNER_INFO_THRESHOLD'
-  /** Callout feature name for namespace_storage_limit_banner_warning_threshold. */
-  | 'NAMESPACE_STORAGE_LIMIT_BANNER_WARNING_THRESHOLD'
+  /** Callout feature name for namespace_over_storage_users_combined_alert. */
+  | 'NAMESPACE_OVER_STORAGE_USERS_COMBINED_ALERT'
+  /** Callout feature name for namespace_storage_limit_alert_alert_threshold. */
+  | 'NAMESPACE_STORAGE_LIMIT_ALERT_ALERT_THRESHOLD'
+  /** Callout feature name for namespace_storage_limit_alert_error_threshold. */
+  | 'NAMESPACE_STORAGE_LIMIT_ALERT_ERROR_THRESHOLD'
+  /** Callout feature name for namespace_storage_limit_alert_warning_threshold. */
+  | 'NAMESPACE_STORAGE_LIMIT_ALERT_WARNING_THRESHOLD'
+  /** Callout feature name for namespace_storage_pre_enforcement_banner. */
+  | 'NAMESPACE_STORAGE_PRE_ENFORCEMENT_BANNER'
+  /** Callout feature name for new_navigation_callout. */
+  | 'NEW_NAVIGATION_CALLOUT'
+  /** Callout feature name for new_top_level_group_alert. */
+  | 'NEW_TOP_LEVEL_GROUP_ALERT'
   /** Callout feature name for new_user_signups_cap_reached. */
   | 'NEW_USER_SIGNUPS_CAP_REACHED'
   /** Callout feature name for personal_access_token_expiry. */
@@ -15295,6 +31105,12 @@ export type UserCalloutFeatureNameEnum =
   | 'PROFILE_PERSONAL_ACCESS_TOKEN_EXPIRY'
   /** Callout feature name for project_quality_summary_feedback. */
   | 'PROJECT_QUALITY_SUMMARY_FEEDBACK'
+  /** Callout feature name for project_repository_limit_alert_alert_threshold. */
+  | 'PROJECT_REPOSITORY_LIMIT_ALERT_ALERT_THRESHOLD'
+  /** Callout feature name for project_repository_limit_alert_error_threshold. */
+  | 'PROJECT_REPOSITORY_LIMIT_ALERT_ERROR_THRESHOLD'
+  /** Callout feature name for project_repository_limit_alert_warning_threshold. */
+  | 'PROJECT_REPOSITORY_LIMIT_ALERT_WARNING_THRESHOLD'
   /** Callout feature name for registration_enabled_callout. */
   | 'REGISTRATION_ENABLED_CALLOUT'
   /** Callout feature name for security_configuration_devops_alert. */
@@ -15305,14 +31121,6 @@ export type UserCalloutFeatureNameEnum =
   | 'SECURITY_NEWSLETTER_CALLOUT'
   /** Callout feature name for security_training_feature_promotion. */
   | 'SECURITY_TRAINING_FEATURE_PROMOTION'
-  /** Callout feature name for storage_enforcement_banner_first_enforcement_threshold. */
-  | 'STORAGE_ENFORCEMENT_BANNER_FIRST_ENFORCEMENT_THRESHOLD'
-  /** Callout feature name for storage_enforcement_banner_fourth_enforcement_threshold. */
-  | 'STORAGE_ENFORCEMENT_BANNER_FOURTH_ENFORCEMENT_THRESHOLD'
-  /** Callout feature name for storage_enforcement_banner_second_enforcement_threshold. */
-  | 'STORAGE_ENFORCEMENT_BANNER_SECOND_ENFORCEMENT_THRESHOLD'
-  /** Callout feature name for storage_enforcement_banner_third_enforcement_threshold. */
-  | 'STORAGE_ENFORCEMENT_BANNER_THIRD_ENFORCEMENT_THRESHOLD'
   /** Callout feature name for submit_license_usage_data_banner. */
   | 'SUBMIT_LICENSE_USAGE_DATA_BANNER'
   /** Callout feature name for suggest_pipeline. */
@@ -15353,15 +31161,25 @@ export type UserCore = User & {
   authoredMergeRequests?: Maybe<MergeRequestConnection>;
   /** URL of the user's avatar. */
   avatarUrl?: Maybe<Scalars['String']>;
+  /** Bio of the user. */
+  bio?: Maybe<Scalars['String']>;
   /** Indicates if the user is a bot. */
   bot: Scalars['Boolean'];
   /** User callouts that belong to the user. */
   callouts?: Maybe<UserCalloutConnection>;
+  /** User's default commit email. */
+  commitEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the user was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Discord ID of the user. */
+  discord?: Maybe<Scalars['String']>;
   /**
    * User email. Deprecated in 13.7: This was renamed.
    * @deprecated This was renamed. Please use `User.publicEmail`. Deprecated in 13.7.
    */
   email?: Maybe<Scalars['String']>;
+  /** User's email addresses. */
+  emails?: Maybe<EmailConnection>;
   /** Whether Gitpod is enabled at the user level. */
   gitpodEnabled?: Maybe<Scalars['Boolean']>;
   /** Group count for the user. */
@@ -15372,6 +31190,10 @@ export type UserCore = User & {
   groups?: Maybe<GroupConnection>;
   /** ID of the user. */
   id: Scalars['ID'];
+  /** Job title of the user. */
+  jobTitle?: Maybe<Scalars['String']>;
+  /** LinkedIn profile name of the user. */
+  linkedin?: Maybe<Scalars['String']>;
   /** Location of the user. */
   location?: Maybe<Scalars['String']>;
   /**
@@ -15381,6 +31203,10 @@ export type UserCore = User & {
   name: Scalars['String'];
   /** Personal namespace of the user. */
   namespace?: Maybe<Namespace>;
+  /** User's custom namespace commit emails. */
+  namespaceCommitEmails?: Maybe<NamespaceCommitEmailConnection>;
+  /** Who the user represents or works for. */
+  organization?: Maybe<Scalars['String']>;
   /** Web path to the Gitpod section within user preferences. */
   preferencesGitpodPath?: Maybe<Scalars['String']>;
   /** Web path to enable Gitpod for the user. */
@@ -15393,6 +31219,8 @@ export type UserCore = User & {
   reviewRequestedMergeRequests?: Maybe<MergeRequestConnection>;
   /** Saved replies authored by the user. Will not return saved replies if `saved_replies` feature flag is disabled. */
   savedReplies?: Maybe<SavedReplyConnection>;
+  /** Saved reply authored by the user. Will not return saved reply if `saved_replies` feature flag is disabled. */
+  savedReply?: Maybe<SavedReply>;
   /** Snippets authored by the user. */
   snippets?: Maybe<SnippetConnection>;
   /** Projects starred by the user. */
@@ -15405,6 +31233,15 @@ export type UserCore = User & {
   timelogs?: Maybe<TimelogConnection>;
   /** To-do items of the user. */
   todos?: Maybe<TodoConnection>;
+  /** Twitter username of the user. */
+  twitter?: Maybe<Scalars['String']>;
+  /**
+   * Achievements for the user. Only returns for namespaces where the
+   * `achievements` feature flag is enabled. Introduced in 15.10: This feature is
+   * an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  userAchievements?: Maybe<UserAchievementConnection>;
   /** Permissions for the current user on the resource. */
   userPermissions: UserPermissions;
   /** Username of the user. Unique within this instance of GitLab. */
@@ -15413,12 +31250,15 @@ export type UserCore = User & {
   webPath: Scalars['String'];
   /** Web URL of the user. */
   webUrl: Scalars['String'];
+  /** Workspaces owned by the current user. */
+  workspaces?: Maybe<WorkspaceConnection>;
 };
 
 
 /** Core represention of a GitLab user. */
 export type UserCoreAssignedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -15447,6 +31287,7 @@ export type UserCoreAssignedMergeRequestsArgs = {
 /** Core represention of a GitLab user. */
 export type UserCoreAuthoredMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   createdAfter?: InputMaybe<Scalars['Time']>;
@@ -15482,6 +31323,15 @@ export type UserCoreCalloutsArgs = {
 
 
 /** Core represention of a GitLab user. */
+export type UserCoreEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Core represention of a GitLab user. */
 export type UserCoreGroupMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15502,6 +31352,15 @@ export type UserCoreGroupsArgs = {
 
 
 /** Core represention of a GitLab user. */
+export type UserCoreNamespaceCommitEmailsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Core represention of a GitLab user. */
 export type UserCoreProjectMembershipsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15513,6 +31372,7 @@ export type UserCoreProjectMembershipsArgs = {
 /** Core represention of a GitLab user. */
 export type UserCoreReviewRequestedMergeRequestsArgs = {
   after?: InputMaybe<Scalars['String']>;
+  approved?: InputMaybe<Scalars['Boolean']>;
   assigneeUsername?: InputMaybe<Scalars['String']>;
   authorUsername?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15548,6 +31408,12 @@ export type UserCoreSavedRepliesArgs = {
 
 
 /** Core represention of a GitLab user. */
+export type UserCoreSavedReplyArgs = {
+  id: Scalars['UsersSavedReplyID'];
+};
+
+
+/** Core represention of a GitLab user. */
 export type UserCoreSnippetsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
@@ -15579,6 +31445,7 @@ export type UserCoreTimelogsArgs = {
   groupId?: InputMaybe<Scalars['GroupID']>;
   last?: InputMaybe<Scalars['Int']>;
   projectId?: InputMaybe<Scalars['ProjectID']>;
+  sort?: InputMaybe<TimelogSort>;
   startDate?: InputMaybe<Scalars['Time']>;
   startTime?: InputMaybe<Scalars['Time']>;
   username?: InputMaybe<Scalars['String']>;
@@ -15597,6 +31464,27 @@ export type UserCoreTodosArgs = {
   projectId?: InputMaybe<Array<Scalars['ID']>>;
   state?: InputMaybe<Array<TodoStateEnum>>;
   type?: InputMaybe<Array<TodoTargetEnum>>;
+};
+
+
+/** Core represention of a GitLab user. */
+export type UserCoreUserAchievementsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Core represention of a GitLab user. */
+export type UserCoreWorkspacesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  ids?: InputMaybe<Array<Scalars['RemoteDevelopmentWorkspaceID']>>;
+  includeActualStates?: InputMaybe<Array<Scalars['String']>>;
+  last?: InputMaybe<Scalars['Int']>;
+  projectIds?: InputMaybe<Array<Scalars['ProjectID']>>;
 };
 
 /** The connection type for UserCore. */
@@ -15627,6 +31515,8 @@ export type UserCoreEdge = {
  */
 export type UserMergeRequestInteraction = {
   __typename?: 'UserMergeRequestInteraction';
+  /** Approval rules that apply to this user for this merge request. */
+  applicableApprovalRules?: Maybe<Array<ApprovalRule>>;
   /** Whether this user has approved this merge request. */
   approved: Scalars['Boolean'];
   /** Whether this user can merge this merge request. */
@@ -15649,6 +31539,8 @@ export type UserPreferences = {
   __typename?: 'UserPreferences';
   /** Sort order for issue lists. */
   issuesSort?: Maybe<IssueSort>;
+  /** Determines whether the pipeline list shows ID or IID. */
+  visibilityPipelineIdType?: Maybe<VisibilityPipelineIdType>;
 };
 
 /** Autogenerated input type of UserPreferencesUpdate */
@@ -15657,6 +31549,8 @@ export type UserPreferencesUpdateInput = {
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Sort order for issue lists. */
   issuesSort?: InputMaybe<IssueSort>;
+  /** Determines whether the pipeline list shows ID or IID. */
+  visibilityPipelineIdType?: InputMaybe<VisibilityPipelineIdType>;
 };
 
 /** Autogenerated return type of UserPreferencesUpdate */
@@ -15668,6 +31562,27 @@ export type UserPreferencesUpdatePayload = {
   errors: Array<Scalars['String']>;
   /** User preferences after mutation. */
   userPreferences?: Maybe<UserPreferences>;
+};
+
+/** Autogenerated input type of UserSetNamespaceCommitEmail */
+export type UserSetNamespaceCommitEmailInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the email to set. */
+  emailId?: InputMaybe<Scalars['EmailID']>;
+  /** ID of the namespace to set the namespace commit email for. */
+  namespaceId: Scalars['NamespaceID'];
+};
+
+/** Autogenerated return type of UserSetNamespaceCommitEmail */
+export type UserSetNamespaceCommitEmailPayload = {
+  __typename?: 'UserSetNamespaceCommitEmailPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** User namespace commit email after mutation. */
+  namespaceCommitEmail?: Maybe<NamespaceCommitEmail>;
 };
 
 /** Possible states of a user */
@@ -15691,6 +31606,63 @@ export type UserStatus = {
   messageHtml?: Maybe<Scalars['String']>;
 };
 
+export type ValueStreamAnalyticsMetric = {
+  __typename?: 'ValueStreamAnalyticsMetric';
+  /** Identifier for the metric. */
+  identifier: Scalars['String'];
+  /** Optional links for drilling down. */
+  links: Array<ValueStreamMetricLinkType>;
+  /** Title for the metric. */
+  title: Scalars['String'];
+  /** Unit of measurement. */
+  unit?: Maybe<Scalars['String']>;
+  /** Value for the metric. */
+  value?: Maybe<Scalars['Float']>;
+};
+
+export type ValueStreamMetricLinkType = {
+  __typename?: 'ValueStreamMetricLinkType';
+  /** Link to the metric documentation. */
+  docsLink?: Maybe<Scalars['Boolean']>;
+  /** Label for the link. */
+  label: Scalars['String'];
+  /** Name of the link group. */
+  name: Scalars['String'];
+  /** Drill-down URL. */
+  url: Scalars['String'];
+};
+
+export type VerificationStateEnum =
+  /** Verification process is disabled. */
+  | 'DISABLED'
+  /** Verification process finished but failed. */
+  | 'FAILED'
+  /** Verification process has not started. */
+  | 'PENDING'
+  /** Verification process is in progress. */
+  | 'STARTED'
+  /** Verification process finished successfully. */
+  | 'SUCCEEDED';
+
+/** Verification status of a GPG or X.509 signature for a commit. */
+export type VerificationStatus =
+  /** multiple_signatures verification status. */
+  | 'MULTIPLE_SIGNATURES'
+  /** other_user verification status. */
+  | 'OTHER_USER'
+  /** revoked_key verification status. */
+  | 'REVOKED_KEY'
+  /** same_user_different_email verification status. */
+  | 'SAME_USER_DIFFERENT_EMAIL'
+  /** unknown_key verification status. */
+  | 'UNKNOWN_KEY'
+  /** unverified verification status. */
+  | 'UNVERIFIED'
+  /** unverified_key verification status. */
+  | 'UNVERIFIED_KEY'
+  /** verified verification status. */
+  | 'VERIFIED';
+
 export type VisibilityLevelsEnum =
   /** Internal visibility level. */
   | 'internal'
@@ -15698,6 +31670,13 @@ export type VisibilityLevelsEnum =
   | 'private'
   /** Public visibility level. */
   | 'public';
+
+/** Determines whether the pipeline list shows ID or IID */
+export type VisibilityPipelineIdType =
+  /** Display pipeline ID. */
+  | 'ID'
+  /** Display pipeline IID. */
+  | 'IID';
 
 export type VisibilityScopesEnum =
   /** Snippet is visible for any logged in user except external users. */
@@ -15707,13 +31686,1299 @@ export type VisibilityScopesEnum =
   /** Snippet can be accessed without any authentication. */
   | 'public';
 
-export type WorkItem = {
+/** Represents the count of vulnerabilities by severity on a particular day. This data is retained for 365 days */
+export type VulnerabilitiesCountByDay = {
+  __typename?: 'VulnerabilitiesCountByDay';
+  /** Total number of vulnerabilities on a particular day with critical severity */
+  critical: Scalars['Int'];
+  /** Date for the count. */
+  date: Scalars['ISO8601Date'];
+  /** Total number of vulnerabilities on a particular day with high severity */
+  high: Scalars['Int'];
+  /** Total number of vulnerabilities on a particular day with info severity */
+  info: Scalars['Int'];
+  /** Total number of vulnerabilities on a particular day with low severity */
+  low: Scalars['Int'];
+  /** Total number of vulnerabilities on a particular day with medium severity */
+  medium: Scalars['Int'];
+  /** Total number of vulnerabilities on a particular day. */
+  total: Scalars['Int'];
+  /** Total number of vulnerabilities on a particular day with unknown severity */
+  unknown: Scalars['Int'];
+};
+
+/** The connection type for VulnerabilitiesCountByDay. */
+export type VulnerabilitiesCountByDayConnection = {
+  __typename?: 'VulnerabilitiesCountByDayConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<VulnerabilitiesCountByDayEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<VulnerabilitiesCountByDay>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type VulnerabilitiesCountByDayEdge = {
+  __typename?: 'VulnerabilitiesCountByDayEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<VulnerabilitiesCountByDay>;
+};
+
+/** Represents a vulnerability */
+export type Vulnerability = NoteableInterface & {
+  __typename?: 'Vulnerability';
+  /** All commenters on this noteable. */
+  commenters: UserCoreConnection;
+  /** Timestamp of when the vulnerability state was changed to confirmed. */
+  confirmedAt?: Maybe<Scalars['Time']>;
+  /** User that confirmed the vulnerability. */
+  confirmedBy?: Maybe<UserCore>;
+  /** Description of the vulnerability. */
+  description?: Maybe<Scalars['String']>;
+  /** GitLab Flavored Markdown rendering of `description` */
+  descriptionHtml?: Maybe<Scalars['String']>;
+  /** Details of the vulnerability. */
+  details: Array<VulnerabilityDetail>;
+  /** Timestamp of when the vulnerability was first detected. */
+  detectedAt: Scalars['Time'];
+  /** All discussions on this noteable. */
+  discussions: DiscussionConnection;
+  /** Reason for dismissal. Returns `null` if `expose_dismissal_reason`feature flag is disabled. */
+  dismissalReason?: Maybe<VulnerabilityDismissalReason>;
+  /** Timestamp of when the vulnerability state was changed to dismissed. */
+  dismissedAt?: Maybe<Scalars['Time']>;
+  /** User that dismissed the vulnerability. */
+  dismissedBy?: Maybe<UserCore>;
+  /** List of external issue links related to the vulnerability. */
+  externalIssueLinks: VulnerabilityExternalIssueLinkConnection;
+  /** Indicates whether the vulnerability is a false positive. */
+  falsePositive?: Maybe<Scalars['Boolean']>;
+  /** Indicates whether there is a solution available for this vulnerability. */
+  hasSolutions?: Maybe<Scalars['Boolean']>;
+  /** GraphQL ID of the vulnerability. */
+  id: Scalars['ID'];
+  /** Identifiers of the vulnerability. */
+  identifiers: Array<VulnerabilityIdentifier>;
+  /** List of issue links related to the vulnerability. */
+  issueLinks: VulnerabilityIssueLinkConnection;
+  /** List of links associated with the vulnerability. */
+  links: Array<VulnerabilityLink>;
+  /** Location metadata for the vulnerability. Its fields depend on the type of security scan that found the vulnerability. */
+  location?: Maybe<VulnerabilityLocation>;
+  /** Merge request that fixes the vulnerability. */
+  mergeRequest?: Maybe<MergeRequest>;
+  /**
+   * From 16.1 this field always returns null. Deprecated in 16.1: message field has been removed from security reports schema.
+   * @deprecated message field has been removed from security reports schema. Deprecated in 16.1.
+   */
+  message?: Maybe<Scalars['String']>;
+  /** All notes on this noteable. */
+  notes: NoteConnection;
+  /** Primary identifier of the vulnerability. */
+  primaryIdentifier?: Maybe<VulnerabilityIdentifier>;
+  /** Project on which the vulnerability was found. */
+  project?: Maybe<Project>;
+  /**
+   * Type of the security report that found the vulnerability (SAST,
+   * DEPENDENCY_SCANNING, CONTAINER_SCANNING, DAST, SECRET_DETECTION,
+   * COVERAGE_FUZZING, API_FUZZING, CLUSTER_IMAGE_SCANNING, GENERIC). `Scan Type` in the UI.
+   */
+  reportType?: Maybe<VulnerabilityReportType>;
+  /** Timestamp of when the vulnerability state was changed to resolved. */
+  resolvedAt?: Maybe<Scalars['Time']>;
+  /** User that resolved the vulnerability. */
+  resolvedBy?: Maybe<UserCore>;
+  /** Indicates whether the vulnerability is fixed on the default branch or not. */
+  resolvedOnDefaultBranch: Scalars['Boolean'];
+  /** Scanner metadata for the vulnerability. */
+  scanner?: Maybe<VulnerabilityScanner>;
+  /** Severity of the vulnerability (INFO, UNKNOWN, LOW, MEDIUM, HIGH, CRITICAL) */
+  severity?: Maybe<VulnerabilitySeverity>;
+  /** State of the vulnerability (DETECTED, CONFIRMED, RESOLVED, DISMISSED) */
+  state?: Maybe<VulnerabilityState>;
+  /** Comment given for the vulnerability state change. */
+  stateComment?: Maybe<Scalars['String']>;
+  /** List of state transitions related to the vulnerability. */
+  stateTransitions?: Maybe<VulnerabilityStateTransitionTypeConnection>;
+  /** Title of the vulnerability. */
+  title?: Maybe<Scalars['String']>;
+  /** Timestamp of when the vulnerability was last updated. */
+  updatedAt?: Maybe<Scalars['Time']>;
+  /** Number of user notes attached to the vulnerability. */
+  userNotesCount: Scalars['Int'];
+  /** Permissions for the current user on the resource */
+  userPermissions: VulnerabilityPermissions;
+  /** Path to the vulnerability's details page. */
+  vulnerabilityPath?: Maybe<Scalars['String']>;
+  /** URL to the vulnerability's details page. */
+  webUrl?: Maybe<Scalars['String']>;
+};
+
+
+/** Represents a vulnerability */
+export type VulnerabilityCommentersArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents a vulnerability */
+export type VulnerabilityDiscussionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents a vulnerability */
+export type VulnerabilityExternalIssueLinksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents a vulnerability */
+export type VulnerabilityIssueLinksArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  linkType?: InputMaybe<VulnerabilityIssueLinkType>;
+};
+
+
+/** Represents a vulnerability */
+export type VulnerabilityNotesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+/** Represents a vulnerability */
+export type VulnerabilityStateTransitionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** Confidence that a given vulnerability is present in the codebase. */
+export type VulnerabilityConfidence =
+  /** Confirmed confidence */
+  | 'CONFIRMED'
+  /** Experimental confidence */
+  | 'EXPERIMENTAL'
+  /** High confidence */
+  | 'HIGH'
+  /** Ignore confidence */
+  | 'IGNORE'
+  /** Low confidence */
+  | 'LOW'
+  /** Medium confidence */
+  | 'MEDIUM'
+  /** Unknown confidence */
+  | 'UNKNOWN';
+
+/** Autogenerated input type of VulnerabilityConfirm */
+export type VulnerabilityConfirmInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Comment why vulnerability was confirmed (maximum 50,000 characters). */
+  comment?: InputMaybe<Scalars['String']>;
+  /** ID of the vulnerability to be confirmed. */
+  id: Scalars['VulnerabilityID'];
+};
+
+/** Autogenerated return type of VulnerabilityConfirm */
+export type VulnerabilityConfirmPayload = {
+  __typename?: 'VulnerabilityConfirmPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Vulnerability after state change. */
+  vulnerability?: Maybe<Vulnerability>;
+};
+
+/** The connection type for Vulnerability. */
+export type VulnerabilityConnection = {
+  __typename?: 'VulnerabilityConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<VulnerabilityEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Vulnerability>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Represents a container image reported on the related vulnerability */
+export type VulnerabilityContainerImage = {
+  __typename?: 'VulnerabilityContainerImage';
+  /** Name of the container image. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for VulnerabilityContainerImage. */
+export type VulnerabilityContainerImageConnection = {
+  __typename?: 'VulnerabilityContainerImageConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<VulnerabilityContainerImageEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<VulnerabilityContainerImage>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type VulnerabilityContainerImageEdge = {
+  __typename?: 'VulnerabilityContainerImageEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<VulnerabilityContainerImage>;
+};
+
+/** Autogenerated input type of VulnerabilityCreate */
+export type VulnerabilityCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /**
+   * Confidence of the vulnerability (defaults to `unknown`). Deprecated in 15.4:
+   * This field will be removed from the Vulnerability domain model.
+   * @deprecated This field will be removed from the Vulnerability domain model. Deprecated in 15.4.
+   */
+  confidence?: InputMaybe<VulnerabilityConfidence>;
+  /** Timestamp of when the vulnerability state changed to confirmed (defaults to creation time if status is `confirmed`). */
+  confirmedAt?: InputMaybe<Scalars['Time']>;
+  /** Long text section that describes the vulnerability in more detail. */
+  description: Scalars['String'];
+  /** Timestamp of when the vulnerability was first detected (defaults to creation time). */
+  detectedAt?: InputMaybe<Scalars['Time']>;
+  /** Timestamp of when the vulnerability state changed to dismissed (defaults to creation time if status is `dismissed`). */
+  dismissedAt?: InputMaybe<Scalars['Time']>;
+  /** Array of CVE or CWE identifiers for the vulnerability. */
+  identifiers: Array<VulnerabilityIdentifierInput>;
+  /**
+   * Short text section that describes the vulnerability. This may include the
+   * finding's specific information. Deprecated in 16.1: message field has been
+   * removed from security reports schema.
+   * @deprecated message field has been removed from security reports schema. Deprecated in 16.1.
+   */
+  message?: InputMaybe<Scalars['String']>;
+  /** Name of the vulnerability. */
+  name: Scalars['String'];
+  /** ID of the project to attach the vulnerability to. */
+  project: Scalars['ProjectID'];
+  /** Timestamp of when the vulnerability state changed to resolved (defaults to creation time if status is `resolved`). */
+  resolvedAt?: InputMaybe<Scalars['Time']>;
+  /** Information about the scanner used to discover the vulnerability. */
+  scanner: VulnerabilityScannerInput;
+  /** Severity of the vulnerability (defaults to `unknown`). */
+  severity?: InputMaybe<VulnerabilitySeverity>;
+  /** Instructions for how to fix the vulnerability. */
+  solution?: InputMaybe<Scalars['String']>;
+  /** State of the vulnerability (defaults to `detected`). */
+  state?: InputMaybe<VulnerabilityState>;
+};
+
+/** Autogenerated return type of VulnerabilityCreate */
+export type VulnerabilityCreatePayload = {
+  __typename?: 'VulnerabilityCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Vulnerability created. */
+  vulnerability?: Maybe<Vulnerability>;
+};
+
+/** Represents a vulnerability detail field. The fields with data will depend on the vulnerability detail type */
+export type VulnerabilityDetail = VulnerabilityDetailBase | VulnerabilityDetailBoolean | VulnerabilityDetailCode | VulnerabilityDetailCommit | VulnerabilityDetailDiff | VulnerabilityDetailFileLocation | VulnerabilityDetailInt | VulnerabilityDetailList | VulnerabilityDetailMarkdown | VulnerabilityDetailModuleLocation | VulnerabilityDetailNamedList | VulnerabilityDetailTable | VulnerabilityDetailText | VulnerabilityDetailUrl;
+
+/** Represents the vulnerability details base */
+export type VulnerabilityDetailBase = {
+  __typename?: 'VulnerabilityDetailBase';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** Represents the vulnerability details boolean value */
+export type VulnerabilityDetailBoolean = {
+  __typename?: 'VulnerabilityDetailBoolean';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Value of the field. */
+  value: Scalars['Boolean'];
+};
+
+/** Represents the vulnerability details code field */
+export type VulnerabilityDetailCode = {
+  __typename?: 'VulnerabilityDetailCode';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Language of the code. */
+  lang?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Source code. */
+  value: Scalars['String'];
+};
+
+/** Represents the vulnerability details commit field */
+export type VulnerabilityDetailCommit = {
+  __typename?: 'VulnerabilityDetailCommit';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Commit SHA value. */
+  value: Scalars['String'];
+};
+
+/** Represents the vulnerability details diff field */
+export type VulnerabilityDetailDiff = {
+  __typename?: 'VulnerabilityDetailDiff';
+  /** Value of the field after the change. */
+  after: Scalars['String'];
+  /** Value of the field before the change. */
+  before: Scalars['String'];
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** Represents the vulnerability details location within a file in the project */
+export type VulnerabilityDetailFileLocation = {
+  __typename?: 'VulnerabilityDetailFileLocation';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** File name. */
+  fileName: Scalars['String'];
+  /** End line number of the file location. */
+  lineEnd: Scalars['Int'];
+  /** Start line number of the file location. */
+  lineStart: Scalars['Int'];
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** Represents the vulnerability details integer value */
+export type VulnerabilityDetailInt = {
+  __typename?: 'VulnerabilityDetailInt';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Value of the field. */
+  value: Scalars['Int'];
+};
+
+/** Represents the vulnerability details list value */
+export type VulnerabilityDetailList = {
+  __typename?: 'VulnerabilityDetailList';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** List of details. */
+  items: Array<VulnerabilityDetail>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** Represents the vulnerability details Markdown field */
+export type VulnerabilityDetailMarkdown = {
+  __typename?: 'VulnerabilityDetailMarkdown';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Value of the Markdown field. */
+  value: Scalars['String'];
+};
+
+/** Represents the vulnerability details location within a file in the project */
+export type VulnerabilityDetailModuleLocation = {
+  __typename?: 'VulnerabilityDetailModuleLocation';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Module name. */
+  moduleName: Scalars['String'];
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Offset of the module location. */
+  offset: Scalars['Int'];
+};
+
+/** Represents the vulnerability details named list */
+export type VulnerabilityDetailNamedList = {
+  __typename?: 'VulnerabilityDetailNamedList';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /**
+   * Named list of details. Introduced in 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  items: Array<VulnerabilityDetailNamedListItem>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** Represents the vulnerability details named list item */
+export type VulnerabilityDetailNamedListItem = {
+  __typename?: 'VulnerabilityDetailNamedListItem';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /**
+   * Value of the field. Introduced in 16.1: This feature is an Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 16.1.
+   */
+  value: VulnerabilityDetail;
+};
+
+/** Represents an individual row in a table */
+export type VulnerabilityDetailRow = {
+  __typename?: 'VulnerabilityDetailRow';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Value of the field. */
+  row: Array<VulnerabilityDetail>;
+};
+
+/** Represents the vulnerability details table value */
+export type VulnerabilityDetailTable = {
+  __typename?: 'VulnerabilityDetailTable';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Table headers. */
+  headers: Array<VulnerabilityDetail>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Table rows. */
+  rows: Array<VulnerabilityDetailRow>;
+};
+
+/** Represents the vulnerability details text field */
+export type VulnerabilityDetailText = {
+  __typename?: 'VulnerabilityDetailText';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Value of the text field. */
+  value: Scalars['String'];
+};
+
+/** Represents the vulnerability details URL field */
+export type VulnerabilityDetailUrl = {
+  __typename?: 'VulnerabilityDetailUrl';
+  /** Description of the field. */
+  description?: Maybe<Scalars['String']>;
+  /** Name of the field. */
+  fieldName?: Maybe<Scalars['String']>;
+  /** Href of the URL. */
+  href: Scalars['String'];
+  /** Name of the field. */
+  name?: Maybe<Scalars['String']>;
+  /** Text of the URL. */
+  text?: Maybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of VulnerabilityDismiss */
+export type VulnerabilityDismissInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Comment why vulnerability was dismissed (maximum 50,000 characters). */
+  comment?: InputMaybe<Scalars['String']>;
+  /** Reason why vulnerability should be dismissed. */
+  dismissalReason?: InputMaybe<VulnerabilityDismissalReason>;
+  /** ID of the vulnerability to be dismissed. */
+  id: Scalars['VulnerabilityID'];
+};
+
+/** Autogenerated return type of VulnerabilityDismiss */
+export type VulnerabilityDismissPayload = {
+  __typename?: 'VulnerabilityDismissPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Vulnerability after state change. */
+  vulnerability?: Maybe<Vulnerability>;
+};
+
+/** The dismissal reason of the Vulnerability */
+export type VulnerabilityDismissalReason =
+  /** The vulnerability is known, and has not been remediated or mitigated, but is considered to be an acceptable business risk. */
+  | 'ACCEPTABLE_RISK'
+  /**
+   * An error in reporting in which a test result incorrectly indicates the
+   * presence of a vulnerability in a system when the vulnerability is not present.
+   */
+  | 'FALSE_POSITIVE'
+  /**
+   * A management, operational, or technical control (that is, safeguard or
+   * countermeasure) employed by an organization that provides equivalent or
+   * comparable protection for an information system.
+   */
+  | 'MITIGATING_CONTROL'
+  /**
+   * The vulnerability is known, and has not been remediated or mitigated, but is
+   * considered to be in a part of the application that will not be updated.
+   */
+  | 'NOT_APPLICABLE'
+  /** The finding is not a vulnerability because it is part of a test or is test data. */
+  | 'USED_IN_TESTS';
+
+/** An edge in a connection. */
+export type VulnerabilityEdge = {
+  __typename?: 'VulnerabilityEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Vulnerability>;
+};
+
+/** Represents a Vulnerability Evidence */
+export type VulnerabilityEvidence = {
+  __typename?: 'VulnerabilityEvidence';
+  /** HTTP request of the Vulnerability Evidence. */
+  request?: Maybe<VulnerabilityRequest>;
+  /** HTTP response of the Vulnerability Evidence. */
+  response?: Maybe<VulnerabilityResponse>;
+  /** Source of the Vulnerability Evidence. */
+  source?: Maybe<VulnerabilityEvidenceSource>;
+  /** Summary of the Vulnerability Evidence. */
+  summary?: Maybe<Scalars['String']>;
+  /** Supporting messages of the Vulnerability Evidence. */
+  supportingMessages?: Maybe<Array<VulnerabilityEvidenceSupportingMessage>>;
+};
+
+/** Represents a vulnerability evidence */
+export type VulnerabilityEvidenceSource = {
+  __typename?: 'VulnerabilityEvidenceSource';
+  /** ID of the Vulnerability Evidence Source. */
+  identifier: Scalars['String'];
+  /** Name of the Vulnerability Evidence Source. */
+  name: Scalars['String'];
+  /** URL of the Vulnerability Evidence Source. */
+  url?: Maybe<Scalars['String']>;
+};
+
+/** Represents a vulnerability evidence supporting message */
+export type VulnerabilityEvidenceSupportingMessage = {
+  __typename?: 'VulnerabilityEvidenceSupportingMessage';
+  /** Name of the vulnerability supporting message. */
+  name: Scalars['String'];
+  /** HTTP request of the vulnerability evidence supporting message. */
+  request?: Maybe<VulnerabilityRequest>;
+  /** HTTP response of the vulnerability evidence supporting message. */
+  response?: Maybe<VulnerabilityResponse>;
+};
+
+/** Represents an external issue link of a vulnerability */
+export type VulnerabilityExternalIssueLink = {
+  __typename?: 'VulnerabilityExternalIssueLink';
+  /** The external issue attached to the issue link. */
+  externalIssue?: Maybe<ExternalIssue>;
+  /** GraphQL ID of the external issue link. */
+  id: Scalars['VulnerabilitiesExternalIssueLinkID'];
+  /** Type of the external issue link. */
+  linkType: VulnerabilityExternalIssueLinkType;
+};
+
+/** The connection type for VulnerabilityExternalIssueLink. */
+export type VulnerabilityExternalIssueLinkConnection = {
+  __typename?: 'VulnerabilityExternalIssueLinkConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<VulnerabilityExternalIssueLinkEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<VulnerabilityExternalIssueLink>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of VulnerabilityExternalIssueLinkCreate */
+export type VulnerabilityExternalIssueLinkCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** External tracker type of the external issue link. */
+  externalTracker: VulnerabilityExternalIssueLinkExternalTracker;
+  /** ID of the vulnerability. */
+  id: Scalars['VulnerabilityID'];
+  /** Type of the external issue link. */
+  linkType: VulnerabilityExternalIssueLinkType;
+};
+
+/** Autogenerated return type of VulnerabilityExternalIssueLinkCreate */
+export type VulnerabilityExternalIssueLinkCreatePayload = {
+  __typename?: 'VulnerabilityExternalIssueLinkCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created external issue link. */
+  externalIssueLink?: Maybe<VulnerabilityExternalIssueLink>;
+};
+
+/** Autogenerated input type of VulnerabilityExternalIssueLinkDestroy */
+export type VulnerabilityExternalIssueLinkDestroyInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the vulnerability external issue link. */
+  id: Scalars['VulnerabilitiesExternalIssueLinkID'];
+};
+
+/** Autogenerated return type of VulnerabilityExternalIssueLinkDestroy */
+export type VulnerabilityExternalIssueLinkDestroyPayload = {
+  __typename?: 'VulnerabilityExternalIssueLinkDestroyPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+};
+
+/** An edge in a connection. */
+export type VulnerabilityExternalIssueLinkEdge = {
+  __typename?: 'VulnerabilityExternalIssueLinkEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<VulnerabilityExternalIssueLink>;
+};
+
+/** The external tracker of the external issue link related to a vulnerability */
+export type VulnerabilityExternalIssueLinkExternalTracker =
+  /** Jira external tracker */
+  | 'JIRA';
+
+/** The type of the external issue link related to a vulnerability */
+export type VulnerabilityExternalIssueLinkType =
+  /** Created link type. */
+  | 'CREATED';
+
+/** The grade of the vulnerable project */
+export type VulnerabilityGrade =
+  /** A grade */
+  | 'A'
+  /** B grade */
+  | 'B'
+  /** C grade */
+  | 'C'
+  /** D grade */
+  | 'D'
+  /** F grade */
+  | 'F';
+
+/** Represents a vulnerability identifier */
+export type VulnerabilityIdentifier = {
+  __typename?: 'VulnerabilityIdentifier';
+  /** External ID of the vulnerability identifier. */
+  externalId?: Maybe<Scalars['String']>;
+  /** External type of the vulnerability identifier. */
+  externalType?: Maybe<Scalars['String']>;
+  /** Name of the vulnerability identifier. */
+  name?: Maybe<Scalars['String']>;
+  /** URL of the vulnerability identifier. */
+  url?: Maybe<Scalars['String']>;
+};
+
+export type VulnerabilityIdentifierInput = {
+  /** External ID of the vulnerability identifier. */
+  externalId?: InputMaybe<Scalars['String']>;
+  /** External type of the vulnerability identifier. */
+  externalType?: InputMaybe<Scalars['String']>;
+  /** Name of the vulnerability identifier. */
+  name: Scalars['String'];
+  /** URL of the vulnerability identifier. */
+  url: Scalars['String'];
+};
+
+/** Represents an issue link of a vulnerability */
+export type VulnerabilityIssueLink = {
+  __typename?: 'VulnerabilityIssueLink';
+  /** GraphQL ID of the vulnerability. */
+  id: Scalars['ID'];
+  /** Issue attached to issue link. */
+  issue?: Maybe<Issue>;
+  /** Type of the issue link. */
+  linkType: VulnerabilityIssueLinkType;
+};
+
+/** The connection type for VulnerabilityIssueLink. */
+export type VulnerabilityIssueLinkConnection = {
+  __typename?: 'VulnerabilityIssueLinkConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<VulnerabilityIssueLinkEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<VulnerabilityIssueLink>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of VulnerabilityIssueLinkCreate */
+export type VulnerabilityIssueLinkCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the issue to link to. */
+  issueId: Scalars['IssueID'];
+  /** IDs of vulnerabilities to link to the given issue.  Up to 100 can be provided. */
+  vulnerabilityIds: Array<Scalars['VulnerabilityID']>;
+};
+
+/** Autogenerated return type of VulnerabilityIssueLinkCreate */
+export type VulnerabilityIssueLinkCreatePayload = {
+  __typename?: 'VulnerabilityIssueLinkCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created issue links. */
+  issueLinks?: Maybe<Array<VulnerabilityIssueLink>>;
+};
+
+/** An edge in a connection. */
+export type VulnerabilityIssueLinkEdge = {
+  __typename?: 'VulnerabilityIssueLinkEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<VulnerabilityIssueLink>;
+};
+
+/** The type of the issue link related to a vulnerability */
+export type VulnerabilityIssueLinkType =
+  /** Issue is created for the vulnerability */
+  | 'CREATED'
+  /** Has a related issue */
+  | 'RELATED';
+
+/** Represents a link related to a vulnerability */
+export type VulnerabilityLink = {
+  __typename?: 'VulnerabilityLink';
+  /** Name of the link. */
+  name?: Maybe<Scalars['String']>;
+  /** URL of the link. */
+  url: Scalars['String'];
+};
+
+/** Represents a vulnerability location. The fields with data will depend on the vulnerability report type */
+export type VulnerabilityLocation = VulnerabilityLocationClusterImageScanning | VulnerabilityLocationContainerScanning | VulnerabilityLocationCoverageFuzzing | VulnerabilityLocationDast | VulnerabilityLocationDependencyScanning | VulnerabilityLocationGeneric | VulnerabilityLocationSast | VulnerabilityLocationSecretDetection;
+
+/** Represents the location of a vulnerability found by a cluster image scan */
+export type VulnerabilityLocationClusterImageScanning = {
+  __typename?: 'VulnerabilityLocationClusterImageScanning';
+  /** Dependency containing the vulnerability. */
+  dependency?: Maybe<VulnerableDependency>;
+  /** Name of the vulnerable container image. */
+  image?: Maybe<Scalars['String']>;
+  /** Kubernetes resource which uses the vulnerable container image. */
+  kubernetesResource?: Maybe<VulnerableKubernetesResource>;
+  /** Operating system that runs on the vulnerable container image. */
+  operatingSystem?: Maybe<Scalars['String']>;
+};
+
+/** Represents the location of a vulnerability found by a container security scan */
+export type VulnerabilityLocationContainerScanning = {
+  __typename?: 'VulnerabilityLocationContainerScanning';
+  /** Dependency containing the vulnerability. */
+  dependency?: Maybe<VulnerableDependency>;
+  /** Name of the vulnerable container image. */
+  image?: Maybe<Scalars['String']>;
+  /** Operating system that runs on the vulnerable container image. */
+  operatingSystem?: Maybe<Scalars['String']>;
+};
+
+/** Represents the location of a vulnerability found by a Coverage Fuzzing scan */
+export type VulnerabilityLocationCoverageFuzzing = {
+  __typename?: 'VulnerabilityLocationCoverageFuzzing';
+  /** Blob path to the vulnerable file. */
+  blobPath?: Maybe<Scalars['String']>;
+  /** Relative address in memory were the crash occurred. */
+  crashAddress?: Maybe<Scalars['String']>;
+  /** Type of the crash. */
+  crashType?: Maybe<Scalars['String']>;
+  /** Number of the last relevant line in the vulnerable file. */
+  endLine?: Maybe<Scalars['String']>;
+  /** Path to the vulnerable file. */
+  file?: Maybe<Scalars['String']>;
+  /** Stack trace recorded during fuzzing resulting the crash. */
+  stacktraceSnippet?: Maybe<Scalars['String']>;
+  /** Number of the first relevant line in the vulnerable file. */
+  startLine?: Maybe<Scalars['String']>;
+  /** Class containing the vulnerability. */
+  vulnerableClass?: Maybe<Scalars['String']>;
+  /** Method containing the vulnerability. */
+  vulnerableMethod?: Maybe<Scalars['String']>;
+};
+
+/** Represents the location of a vulnerability found by a DAST scan */
+export type VulnerabilityLocationDast = {
+  __typename?: 'VulnerabilityLocationDast';
+  /** Domain name of the vulnerable request. */
+  hostname?: Maybe<Scalars['String']>;
+  /** Query parameter for the URL on which the vulnerability occurred. */
+  param?: Maybe<Scalars['String']>;
+  /** URL path and query string of the vulnerable request. */
+  path?: Maybe<Scalars['String']>;
+  /** HTTP method of the vulnerable request. */
+  requestMethod?: Maybe<Scalars['String']>;
+};
+
+/** Represents the location of a vulnerability found by a dependency security scan */
+export type VulnerabilityLocationDependencyScanning = {
+  __typename?: 'VulnerabilityLocationDependencyScanning';
+  /** Blob path to the vulnerable file. */
+  blobPath?: Maybe<Scalars['String']>;
+  /** Dependency containing the vulnerability. */
+  dependency?: Maybe<VulnerableDependency>;
+  /** Path to the vulnerable file. */
+  file?: Maybe<Scalars['String']>;
+};
+
+/** Represents the location of a vulnerability found by a generic scanner. */
+export type VulnerabilityLocationGeneric = {
+  __typename?: 'VulnerabilityLocationGeneric';
+  /** Free-form description of where the vulnerability is located. */
+  description?: Maybe<Scalars['String']>;
+};
+
+/** Represents the location of a vulnerability found by a SAST scan */
+export type VulnerabilityLocationSast = {
+  __typename?: 'VulnerabilityLocationSast';
+  /** Blob path to the vulnerable file. */
+  blobPath?: Maybe<Scalars['String']>;
+  /** Number of the last relevant line in the vulnerable file. */
+  endLine?: Maybe<Scalars['String']>;
+  /** Path to the vulnerable file. */
+  file?: Maybe<Scalars['String']>;
+  /** Number of the first relevant line in the vulnerable file. */
+  startLine?: Maybe<Scalars['String']>;
+  /** Class containing the vulnerability. */
+  vulnerableClass?: Maybe<Scalars['String']>;
+  /** Method containing the vulnerability. */
+  vulnerableMethod?: Maybe<Scalars['String']>;
+};
+
+/** Represents the location of a vulnerability found by a secret detection scan */
+export type VulnerabilityLocationSecretDetection = {
+  __typename?: 'VulnerabilityLocationSecretDetection';
+  /** Blob path to the vulnerable file. */
+  blobPath?: Maybe<Scalars['String']>;
+  /** Number of the last relevant line in the vulnerable file. */
+  endLine?: Maybe<Scalars['String']>;
+  /** Path to the vulnerable file. */
+  file?: Maybe<Scalars['String']>;
+  /** Number of the first relevant line in the vulnerable file. */
+  startLine?: Maybe<Scalars['String']>;
+  /** Class containing the vulnerability. */
+  vulnerableClass?: Maybe<Scalars['String']>;
+  /** Method containing the vulnerability. */
+  vulnerableMethod?: Maybe<Scalars['String']>;
+};
+
+/** Check permissions for the current user on a vulnerability */
+export type VulnerabilityPermissions = {
+  __typename?: 'VulnerabilityPermissions';
+  /** Indicates the user can perform `admin_vulnerability` on this resource */
+  adminVulnerability: Scalars['Boolean'];
+  /** Indicates the user can perform `admin_vulnerability_external_issue_link` on this resource */
+  adminVulnerabilityExternalIssueLink: Scalars['Boolean'];
+  /** Indicates the user can perform `admin_vulnerability_issue_link` on this resource */
+  adminVulnerabilityIssueLink: Scalars['Boolean'];
+  /** Indicates the user can perform `create_vulnerability_export` on this resource */
+  createVulnerabilityExport: Scalars['Boolean'];
+  /** Indicates the user can perform `create_vulnerability_feedback` on this resource */
+  createVulnerabilityFeedback: Scalars['Boolean'];
+  /** Indicates the user can perform `destroy_vulnerability_feedback` on this resource */
+  destroyVulnerabilityFeedback: Scalars['Boolean'];
+  /** Indicates the user can perform `read_vulnerability` on this resource */
+  readVulnerability: Scalars['Boolean'];
+  /** Indicates the user can perform `read_vulnerability_feedback` on this resource */
+  readVulnerabilityFeedback: Scalars['Boolean'];
+  /** Indicates the user can perform `update_vulnerability_feedback` on this resource */
+  updateVulnerabilityFeedback: Scalars['Boolean'];
+};
+
+/** Represents a vulnerability remediation type. */
+export type VulnerabilityRemediationType = {
+  __typename?: 'VulnerabilityRemediationType';
+  /** Diff of the remediation. */
+  diff?: Maybe<Scalars['String']>;
+  /** Summary of the remediation. */
+  summary?: Maybe<Scalars['String']>;
+};
+
+/** The type of the security scan that found the vulnerability */
+export type VulnerabilityReportType =
+  /** API Fuzzing report */
+  | 'API_FUZZING'
+  /** Cluster Image Scanning report */
+  | 'CLUSTER_IMAGE_SCANNING'
+  /** Container Scanning report */
+  | 'CONTAINER_SCANNING'
+  /** Coverage Fuzzing report */
+  | 'COVERAGE_FUZZING'
+  /** DAST report */
+  | 'DAST'
+  /** Dependency Scanning report */
+  | 'DEPENDENCY_SCANNING'
+  /** Generic report */
+  | 'GENERIC'
+  /** SAST report */
+  | 'SAST'
+  /** Secret Detection report */
+  | 'SECRET_DETECTION';
+
+/** Represents a Vulnerability Request */
+export type VulnerabilityRequest = {
+  __typename?: 'VulnerabilityRequest';
+  /** Body of the Vulnerability Request. */
+  body?: Maybe<Scalars['String']>;
+  /** HTTP headers of the Vulnerability Request. */
+  headers: Array<VulnerabilityRequestResponseHeader>;
+  /** Method of the Vulnerability Request. */
+  method?: Maybe<Scalars['String']>;
+  /** URL of the Vulnerability Request. */
+  url?: Maybe<Scalars['String']>;
+};
+
+/** Represents a Vulnerability Request/Response Header */
+export type VulnerabilityRequestResponseHeader = {
+  __typename?: 'VulnerabilityRequestResponseHeader';
+  /** Name of the Vulnerability Request/Response Header. */
+  name?: Maybe<Scalars['String']>;
+  /** Value of the Vulnerability Request/Response Header. */
+  value?: Maybe<Scalars['String']>;
+};
+
+/** Autogenerated input type of VulnerabilityResolve */
+export type VulnerabilityResolveInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Comment why vulnerability was resolved (maximum 50,000 characters). */
+  comment?: InputMaybe<Scalars['String']>;
+  /** ID of the vulnerability to be resolved. */
+  id: Scalars['VulnerabilityID'];
+};
+
+/** Autogenerated return type of VulnerabilityResolve */
+export type VulnerabilityResolvePayload = {
+  __typename?: 'VulnerabilityResolvePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Vulnerability after state change. */
+  vulnerability?: Maybe<Vulnerability>;
+};
+
+/** Represents a Vulnerability Response */
+export type VulnerabilityResponse = {
+  __typename?: 'VulnerabilityResponse';
+  /** Body of the Vulnerability Response. */
+  body?: Maybe<Scalars['String']>;
+  /** HTTP headers of the Vulnerability Response. */
+  headers: Array<VulnerabilityRequestResponseHeader>;
+  /** Reason Phrase of the Vulnerability Response. */
+  reasonPhrase?: Maybe<Scalars['String']>;
+  /** Status Code of the Vulnerability Response. */
+  statusCode?: Maybe<Scalars['Int']>;
+};
+
+/** Autogenerated input type of VulnerabilityRevertToDetected */
+export type VulnerabilityRevertToDetectedInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Comment why vulnerability was reverted to detected (maximum 50,000 characters). */
+  comment?: InputMaybe<Scalars['String']>;
+  /** ID of the vulnerability to be reverted to detected. */
+  id: Scalars['VulnerabilityID'];
+};
+
+/** Autogenerated return type of VulnerabilityRevertToDetected */
+export type VulnerabilityRevertToDetectedPayload = {
+  __typename?: 'VulnerabilityRevertToDetectedPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Vulnerability after state change. */
+  vulnerability?: Maybe<Vulnerability>;
+};
+
+/** Represents a vulnerability scanner */
+export type VulnerabilityScanner = {
+  __typename?: 'VulnerabilityScanner';
+  /** External ID of the vulnerability scanner. */
+  externalId?: Maybe<Scalars['String']>;
+  /** ID of the scanner. */
+  id?: Maybe<Scalars['ID']>;
+  /** Name of the vulnerability scanner. */
+  name?: Maybe<Scalars['String']>;
+  /** Type of the vulnerability report. */
+  reportType?: Maybe<VulnerabilityReportType>;
+  /** Humanized type of the vulnerability report. */
+  reportTypeHumanized?: Maybe<Scalars['String']>;
+  /** Vendor of the vulnerability scanner. */
+  vendor?: Maybe<Scalars['String']>;
+};
+
+/** The connection type for VulnerabilityScanner. */
+export type VulnerabilityScannerConnection = {
+  __typename?: 'VulnerabilityScannerConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<VulnerabilityScannerEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<VulnerabilityScanner>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type VulnerabilityScannerEdge = {
+  __typename?: 'VulnerabilityScannerEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<VulnerabilityScanner>;
+};
+
+export type VulnerabilityScannerInput = {
+  /** Unique ID that identifies the scanner. */
+  id: Scalars['String'];
+  /** Human readable value that identifies the analyzer, not required to be unique. */
+  name: Scalars['String'];
+  /** Link to more information about the analyzer. */
+  url: Scalars['String'];
+  /** Information about vendor/maintainer of the scanner. */
+  vendor?: InputMaybe<VulnerabilityScannerVendorInput>;
+  /** Version of the scanner. */
+  version: Scalars['String'];
+};
+
+export type VulnerabilityScannerVendorInput = {
+  /** Name of the vendor/maintainer. */
+  name: Scalars['String'];
+};
+
+/** Represents vulnerability counts by severity */
+export type VulnerabilitySeveritiesCount = {
+  __typename?: 'VulnerabilitySeveritiesCount';
+  /** Number of vulnerabilities of CRITICAL severity of the project */
+  critical?: Maybe<Scalars['Int']>;
+  /** Number of vulnerabilities of HIGH severity of the project */
+  high?: Maybe<Scalars['Int']>;
+  /** Number of vulnerabilities of INFO severity of the project */
+  info?: Maybe<Scalars['Int']>;
+  /** Number of vulnerabilities of LOW severity of the project */
+  low?: Maybe<Scalars['Int']>;
+  /** Number of vulnerabilities of MEDIUM severity of the project */
+  medium?: Maybe<Scalars['Int']>;
+  /** Number of vulnerabilities of UNKNOWN severity of the project */
+  unknown?: Maybe<Scalars['Int']>;
+};
+
+/** The severity of the vulnerability */
+export type VulnerabilitySeverity =
+  /** Critical severity */
+  | 'CRITICAL'
+  /** High severity */
+  | 'HIGH'
+  /** Info severity */
+  | 'INFO'
+  /** Low severity */
+  | 'LOW'
+  /** Medium severity */
+  | 'MEDIUM'
+  /** Unknown severity */
+  | 'UNKNOWN';
+
+/** Vulnerability sort values */
+export type VulnerabilitySort =
+  /** Detection timestamp in ascending order. */
+  | 'detected_asc'
+  /** Detection timestamp in descending order. */
+  | 'detected_desc'
+  /** Severity in ascending order. */
+  | 'severity_asc'
+  /** Severity in descending order. */
+  | 'severity_desc';
+
+/** The state of the vulnerability */
+export type VulnerabilityState =
+  /** For details, see [vulnerability status values](https://docs.gitlab.com/ee/user/application_security/vulnerabilities/index.html#vulnerability-status-values). */
+  | 'CONFIRMED'
+  /** For details, see [vulnerability status values](https://docs.gitlab.com/ee/user/application_security/vulnerabilities/index.html#vulnerability-status-values). */
+  | 'DETECTED'
+  /** For details, see [vulnerability status values](https://docs.gitlab.com/ee/user/application_security/vulnerabilities/index.html#vulnerability-status-values). */
+  | 'DISMISSED'
+  /** For details, see [vulnerability status values](https://docs.gitlab.com/ee/user/application_security/vulnerabilities/index.html#vulnerability-status-values). */
+  | 'RESOLVED';
+
+/** Represents a state transition of a vulnerability */
+export type VulnerabilityStateTransitionType = {
+  __typename?: 'VulnerabilityStateTransitionType';
+  /** User who changed the state of the vulnerability. */
+  author?: Maybe<UserCore>;
+  /** Comment for the state change. */
+  comment?: Maybe<Scalars['String']>;
+  /** Time of the state change of the vulnerability. */
+  createdAt: Scalars['Time'];
+  /** Reason for the dismissal. */
+  dismissalReason?: Maybe<VulnerabilityDismissalReason>;
+  /** State of the vulnerability before transition. */
+  fromState: VulnerabilityState;
+  /** State of the vulnerability after transition. */
+  toState: VulnerabilityState;
+};
+
+/** The connection type for VulnerabilityStateTransitionType. */
+export type VulnerabilityStateTransitionTypeConnection = {
+  __typename?: 'VulnerabilityStateTransitionTypeConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<VulnerabilityStateTransitionTypeEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<VulnerabilityStateTransitionType>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** An edge in a connection. */
+export type VulnerabilityStateTransitionTypeEdge = {
+  __typename?: 'VulnerabilityStateTransitionTypeEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<VulnerabilityStateTransitionType>;
+};
+
+/** Represents a vulnerable dependency. Used in vulnerability location data */
+export type VulnerableDependency = {
+  __typename?: 'VulnerableDependency';
+  /** Package associated with the vulnerable dependency. */
+  package?: Maybe<VulnerablePackage>;
+  /** Version of the vulnerable dependency. */
+  version?: Maybe<Scalars['String']>;
+};
+
+/** Represents a vulnerable Kubernetes resource. Used in vulnerability location data */
+export type VulnerableKubernetesResource = {
+  __typename?: 'VulnerableKubernetesResource';
+  /** Kubernetes Agent which performed the scan. */
+  agent?: Maybe<ClusterAgent>;
+  /** ID of the Cluster integration which was used to perform the scan. */
+  clusterId?: Maybe<Scalars['ClustersClusterID']>;
+  /** Name of the container that had its image scanned. */
+  containerName: Scalars['String'];
+  /** Kind of the Kubernetes resource. */
+  kind: Scalars['String'];
+  /** Name of the Kubernetes resource. */
+  name: Scalars['String'];
+  /** Kubernetes namespace which the resource resides in. */
+  namespace: Scalars['String'];
+};
+
+/** Represents a vulnerable package. Used in vulnerability dependency data */
+export type VulnerablePackage = {
+  __typename?: 'VulnerablePackage';
+  /** Name of the vulnerable package. */
+  name?: Maybe<Scalars['String']>;
+};
+
+/** Represents vulnerability letter grades with associated projects */
+export type VulnerableProjectsByGrade = {
+  __typename?: 'VulnerableProjectsByGrade';
+  /** Number of projects within this grade. */
+  count: Scalars['Int'];
+  /** Grade based on the highest severity vulnerability present. */
+  grade: VulnerabilityGrade;
+  /** Projects within this grade. */
+  projects: ProjectConnection;
+};
+
+
+/** Represents vulnerability letter grades with associated projects */
+export type VulnerableProjectsByGradeProjectsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+/** Weight ID wildcard values */
+export type WeightWildcardId =
+  /** Weight is assigned. */
+  | 'ANY'
+  /** No weight is assigned. */
+  | 'NONE';
+
+export type WorkItem = Todoable & {
   __typename?: 'WorkItem';
+  /**
+   * User that created the work item. Introduced in 15.9: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  author?: Maybe<UserCore>;
+  /** Timestamp of when the work item was closed. */
+  closedAt?: Maybe<Scalars['Time']>;
   /** Indicates the work item is confidential. */
   confidential: Scalars['Boolean'];
+  /** User specific email address for the work item. */
+  createNoteEmail?: Maybe<Scalars['String']>;
+  /** Timestamp of when the work item was created. */
+  createdAt: Scalars['Time'];
   /** Description of the work item. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
   /** Global ID of the work item. */
   id: Scalars['WorkItemID'];
@@ -15721,19 +32986,49 @@ export type WorkItem = {
   iid: Scalars['ID'];
   /** Lock version of the work item. Incremented each time the work item is updated. */
   lockVersion: Scalars['Int'];
+  /**
+   * Namespace the work item belongs to. Introduced in 15.10: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.10.
+   */
+  namespace?: Maybe<Namespace>;
+  /**
+   * Project the work item belongs to. Introduced in 15.3: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.3.
+   */
+  project?: Maybe<Project>;
+  /** Internal reference of the work item. Returned in shortened format by default. */
+  reference: Scalars['String'];
   /** State of the work item. */
   state: WorkItemState;
   /** Title of the work item. */
   title: Scalars['String'];
-  /** The GitLab Flavored Markdown rendering of `title` */
+  /** GitLab Flavored Markdown rendering of `title` */
   titleHtml?: Maybe<Scalars['String']>;
+  /** Timestamp of when the work item was last updated. */
+  updatedAt: Scalars['Time'];
   /** Permissions for the current user on the resource */
   userPermissions: WorkItemPermissions;
+  /** URL of this object. */
+  webUrl?: Maybe<Scalars['String']>;
   /** Collection of widgets that belong to the work item. */
   widgets?: Maybe<Array<WorkItemWidget>>;
   /** Type assigned to the work item. */
   workItemType: WorkItemType;
 };
+
+
+export type WorkItemReferenceArgs = {
+  full?: InputMaybe<Scalars['Boolean']>;
+};
+
+/** Values for work item award emoji update enum */
+export type WorkItemAwardEmojiUpdateAction =
+  /** Adds the emoji. */
+  | 'ADD'
+  /** Removes the emoji. */
+  | 'REMOVE';
 
 /** The connection type for WorkItem. */
 export type WorkItemConnection = {
@@ -15744,6 +33039,27 @@ export type WorkItemConnection = {
   nodes?: Maybe<Array<Maybe<WorkItem>>>;
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of WorkItemConvert */
+export type WorkItemConvertInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Global ID of the work item. */
+  id: Scalars['WorkItemID'];
+  /** Global ID of the new work item type. */
+  workItemTypeId: Scalars['WorkItemsTypeID'];
+};
+
+/** Autogenerated return type of WorkItemConvert */
+export type WorkItemConvertPayload = {
+  __typename?: 'WorkItemConvertPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Updated work item. */
+  workItem?: Maybe<WorkItem>;
 };
 
 export type WorkItemConvertTaskInput = {
@@ -15792,8 +33108,18 @@ export type WorkItemCreateInput = {
   description?: InputMaybe<Scalars['String']>;
   /** Input for hierarchy widget. */
   hierarchyWidget?: InputMaybe<WorkItemWidgetHierarchyCreateInput>;
-  /** Full path of the project the work item is associated with. */
-  projectPath: Scalars['ID'];
+  /** Iteration widget of the work item. */
+  iterationWidget?: InputMaybe<WorkItemWidgetIterationInput>;
+  /** Input for milestone widget. */
+  milestoneWidget?: InputMaybe<WorkItemWidgetMilestoneInput>;
+  /** Full path of the namespace(project or group) the work item is created in. */
+  namespacePath?: InputMaybe<Scalars['ID']>;
+  /**
+   * Full path of the project the work item is associated with. Deprecated in
+   * 15.10: Please use namespace_path instead. That will cover for both projects and groups.
+   * @deprecated Please use namespace_path instead. That will cover for both projects and groups. Deprecated in 15.10.
+   */
+  projectPath?: InputMaybe<Scalars['ID']>;
   /** Title of the work item. */
   title: Scalars['String'];
   /** Global ID of a work item type. */
@@ -15871,13 +33197,61 @@ export type WorkItemEdge = {
   node?: Maybe<WorkItem>;
 };
 
+/** Autogenerated input type of WorkItemExport */
+export type WorkItemExportInput = {
+  /**
+   * Filter work items by author username. Introduced in 15.9: This feature is an
+   * Experiment. It can be changed or removed at any time.
+   * @deprecated This feature is an Experiment. It can be changed or removed at any time. Introduced in 15.9.
+   */
+  authorUsername?: InputMaybe<Scalars['String']>;
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** List of IIDs of work items. For example, `["1", "2"]`. */
+  iids?: InputMaybe<Array<Scalars['String']>>;
+  /**
+   * Specify the fields to perform the search in.
+   * Defaults to `[TITLE, DESCRIPTION]`. Requires the `search` argument.'
+   */
+  in?: InputMaybe<Array<IssuableSearchableField>>;
+  /** Full project path. */
+  projectPath: Scalars['ID'];
+  /** Search query for title or description. */
+  search?: InputMaybe<Scalars['String']>;
+  /** List of selected fields to be exported. Omit to export all available fields. */
+  selectedFields?: InputMaybe<Array<AvailableExportFields>>;
+  /** Current state of the work item. */
+  state?: InputMaybe<IssuableState>;
+  /** Filter work items by the given work item types. */
+  types?: InputMaybe<Array<IssueType>>;
+};
+
+/** Autogenerated return type of WorkItemExport */
+export type WorkItemExportPayload = {
+  __typename?: 'WorkItemExportPayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Export request result message. */
+  message?: Maybe<Scalars['String']>;
+};
+
 /** Check permissions for the current user on a work item */
 export type WorkItemPermissions = {
   __typename?: 'WorkItemPermissions';
+  /** Indicates the user can perform `admin_parent_link` on this resource */
+  adminParentLink: Scalars['Boolean'];
+  /** Indicates the user can perform `admin_work_item` on this resource */
+  adminWorkItem: Scalars['Boolean'];
+  /** Indicates the user can perform `create_note` on this resource */
+  createNote: Scalars['Boolean'];
   /** Indicates the user can perform `delete_work_item` on this resource */
   deleteWorkItem: Scalars['Boolean'];
   /** Indicates the user can perform `read_work_item` on this resource */
   readWorkItem: Scalars['Boolean'];
+  /** Indicates the user can perform `set_work_item_metadata` on this resource */
+  setWorkItemMetadata: Scalars['Boolean'];
   /** Indicates the user can perform `update_work_item` on this resource */
   updateWorkItem: Scalars['Boolean'];
 };
@@ -15919,6 +33293,13 @@ export type WorkItemStateEvent =
   /** Reopens the work item. */
   | 'REOPEN';
 
+/** Values for work item to-do update enum */
+export type WorkItemTodoUpdateAction =
+  /** Adds the to-do. */
+  | 'ADD'
+  /** Marks the to-do as done. */
+  | 'MARK_AS_DONE';
+
 export type WorkItemType = {
   __typename?: 'WorkItemType';
   /** Icon name of the work item type. */
@@ -15953,22 +33334,42 @@ export type WorkItemTypeEdge = {
 export type WorkItemUpdateInput = {
   /** Input for assignees widget. */
   assigneesWidget?: InputMaybe<WorkItemWidgetAssigneesInput>;
+  /** Input for award emoji widget. */
+  awardEmojiWidget?: InputMaybe<WorkItemWidgetAwardEmojiUpdateInput>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']>;
   /** Sets the work item confidentiality. */
   confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Input for to-dos widget. */
+  currentUserTodosWidget?: InputMaybe<WorkItemWidgetCurrentUserTodosInput>;
   /** Input for description widget. */
   descriptionWidget?: InputMaybe<WorkItemWidgetDescriptionInput>;
+  /** Input for health status widget. */
+  healthStatusWidget?: InputMaybe<WorkItemWidgetHealthStatusInput>;
   /** Input for hierarchy widget. */
   hierarchyWidget?: InputMaybe<WorkItemWidgetHierarchyUpdateInput>;
   /** Global ID of the work item. */
   id: Scalars['WorkItemID'];
+  /** Input for iteration widget. */
+  iterationWidget?: InputMaybe<WorkItemWidgetIterationInput>;
+  /** Input for labels widget. */
+  labelsWidget?: InputMaybe<WorkItemWidgetLabelsUpdateInput>;
+  /** Input for milestone widget. */
+  milestoneWidget?: InputMaybe<WorkItemWidgetMilestoneInput>;
+  /** Input for notifications widget. */
+  notificationsWidget?: InputMaybe<WorkItemWidgetNotificationsUpdateInput>;
+  /** Input for progress widget. */
+  progressWidget?: InputMaybe<WorkItemWidgetProgressInput>;
   /** Input for start and due date widget. */
   startAndDueDateWidget?: InputMaybe<WorkItemWidgetStartAndDueDateUpdateInput>;
   /** Close or reopen a work item. */
   stateEvent?: InputMaybe<WorkItemStateEvent>;
+  /** Input for status widget. */
+  statusWidget?: InputMaybe<StatusInput>;
   /** Title of the work item. */
   title?: InputMaybe<Scalars['String']>;
+  /** Input for weight widget. */
+  weightWidget?: InputMaybe<WorkItemWidgetWeightInput>;
 };
 
 /** Autogenerated return type of WorkItemUpdate */
@@ -16005,38 +33406,27 @@ export type WorkItemUpdateTaskPayload = {
   workItem?: Maybe<WorkItem>;
 };
 
-/** Autogenerated input type of WorkItemUpdateWidgets */
-export type WorkItemUpdateWidgetsInput = {
-  /** A unique identifier for the client performing the mutation. */
-  clientMutationId?: InputMaybe<Scalars['String']>;
-  /** Input for description widget. */
-  descriptionWidget?: InputMaybe<WorkItemWidgetDescriptionInput>;
-  /** Global ID of the work item. */
-  id: Scalars['WorkItemID'];
-};
-
-/** Autogenerated return type of WorkItemUpdateWidgets */
-export type WorkItemUpdateWidgetsPayload = {
-  __typename?: 'WorkItemUpdateWidgetsPayload';
-  /** A unique identifier for the client performing the mutation. */
-  clientMutationId?: Maybe<Scalars['String']>;
-  /** Errors encountered during execution of the mutation. */
-  errors: Array<Scalars['String']>;
-  /** Updated work item. */
-  workItem?: Maybe<WorkItem>;
-};
-
 export type WorkItemUpdatedTaskInput = {
   /** Input for assignees widget. */
   assigneesWidget?: InputMaybe<WorkItemWidgetAssigneesInput>;
+  /** Input for award emoji widget. */
+  awardEmojiWidget?: InputMaybe<WorkItemWidgetAwardEmojiUpdateInput>;
   /** Sets the work item confidentiality. */
   confidential?: InputMaybe<Scalars['Boolean']>;
+  /** Input for to-dos widget. */
+  currentUserTodosWidget?: InputMaybe<WorkItemWidgetCurrentUserTodosInput>;
   /** Input for description widget. */
   descriptionWidget?: InputMaybe<WorkItemWidgetDescriptionInput>;
   /** Input for hierarchy widget. */
   hierarchyWidget?: InputMaybe<WorkItemWidgetHierarchyUpdateInput>;
   /** Global ID of the work item. */
   id: Scalars['WorkItemID'];
+  /** Input for labels widget. */
+  labelsWidget?: InputMaybe<WorkItemWidgetLabelsUpdateInput>;
+  /** Input for milestone widget. */
+  milestoneWidget?: InputMaybe<WorkItemWidgetMilestoneInput>;
+  /** Input for notifications widget. */
+  notificationsWidget?: InputMaybe<WorkItemWidgetNotificationsUpdateInput>;
   /** Input for start and due date widget. */
   startAndDueDateWidget?: InputMaybe<WorkItemWidgetStartAndDueDateUpdateInput>;
   /** Close or reopen a work item. */
@@ -16077,13 +33467,74 @@ export type WorkItemWidgetAssigneesInput = {
   assigneeIds: Array<Scalars['UserID']>;
 };
 
+/** Represents the award emoji widget */
+export type WorkItemWidgetAwardEmoji = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetAwardEmoji';
+  /** Award emoji on the work item. */
+  awardEmoji?: Maybe<AwardEmojiConnection>;
+  /** Number of downvotes the work item has received. */
+  downvotes: Scalars['Int'];
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+  /** Number of upvotes the work item has received. */
+  upvotes: Scalars['Int'];
+};
+
+
+/** Represents the award emoji widget */
+export type WorkItemWidgetAwardEmojiAwardEmojiArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+export type WorkItemWidgetAwardEmojiUpdateInput = {
+  /** Action for the update. */
+  action: WorkItemAwardEmojiUpdateAction;
+  /** Emoji name. */
+  name: Scalars['String'];
+};
+
+/** Represents a todos widget */
+export type WorkItemWidgetCurrentUserTodos = CurrentUserTodos & WorkItemWidget & {
+  __typename?: 'WorkItemWidgetCurrentUserTodos';
+  /** To-do items for the current user. */
+  currentUserTodos: TodoConnection;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+
+/** Represents a todos widget */
+export type WorkItemWidgetCurrentUserTodosCurrentUserTodosArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  state?: InputMaybe<TodoStateEnum>;
+};
+
+export type WorkItemWidgetCurrentUserTodosInput = {
+  /** Action for the update. */
+  action: WorkItemTodoUpdateAction;
+  /** Global ID of the to-do. If not present, all to-dos of the work item will be updated. */
+  todoId?: InputMaybe<Scalars['TodoID']>;
+};
+
 /** Represents a description widget */
 export type WorkItemWidgetDescription = WorkItemWidget & {
   __typename?: 'WorkItemWidgetDescription';
   /** Description of the work item. */
   description?: Maybe<Scalars['String']>;
-  /** The GitLab Flavored Markdown rendering of `description` */
+  /** GitLab Flavored Markdown rendering of `description` */
   descriptionHtml?: Maybe<Scalars['String']>;
+  /** Whether the description has been edited since the work item was created. */
+  edited: Scalars['Boolean'];
+  /** Timestamp of when the work item's description was last edited. */
+  lastEditedAt?: Maybe<Scalars['Time']>;
+  /** User that made the last edit to the work item's description. */
+  lastEditedBy?: Maybe<UserCore>;
   /** Widget type. */
   type?: Maybe<WorkItemWidgetType>;
 };
@@ -16093,11 +33544,27 @@ export type WorkItemWidgetDescriptionInput = {
   description: Scalars['String'];
 };
 
+/** Represents a health status widget */
+export type WorkItemWidgetHealthStatus = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetHealthStatus';
+  /** Health status of the work item. */
+  healthStatus?: Maybe<HealthStatus>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+export type WorkItemWidgetHealthStatusInput = {
+  /** Health status to be assigned to the work item. */
+  healthStatus?: InputMaybe<HealthStatus>;
+};
+
 /** Represents a hierarchy widget */
 export type WorkItemWidgetHierarchy = WorkItemWidget & {
   __typename?: 'WorkItemWidgetHierarchy';
   /** Child work items. */
   children?: Maybe<WorkItemConnection>;
+  /** Indicates if the work item has children. */
+  hasChildren: Scalars['Boolean'];
   /** Parent work item. */
   parent?: Maybe<WorkItem>;
   /** Widget type. */
@@ -16119,10 +33586,28 @@ export type WorkItemWidgetHierarchyCreateInput = {
 };
 
 export type WorkItemWidgetHierarchyUpdateInput = {
+  /** ID of the work item to be switched with. */
+  adjacentWorkItemId?: InputMaybe<Scalars['WorkItemID']>;
   /** Global IDs of children work items. */
   childrenIds?: InputMaybe<Array<Scalars['WorkItemID']>>;
   /** Global ID of the parent work item. Use `null` to remove the association. */
   parentId?: InputMaybe<Scalars['WorkItemID']>;
+  /** Type of switch. Valid values are `BEFORE` or `AFTER`. */
+  relativePosition?: InputMaybe<RelativePositionType>;
+};
+
+/** Represents an iteration widget */
+export type WorkItemWidgetIteration = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetIteration';
+  /** Iteration of the work item. */
+  iteration?: Maybe<Iteration>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+export type WorkItemWidgetIterationInput = {
+  /** Iteration to assign to the work item. */
+  iterationId?: InputMaybe<Scalars['IterationID']>;
 };
 
 /** Represents the labels widget */
@@ -16145,6 +33630,84 @@ export type WorkItemWidgetLabelsLabelsArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
+export type WorkItemWidgetLabelsUpdateInput = {
+  /** Global IDs of labels to be added to the work item. */
+  addLabelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+  /** Global IDs of labels to be removed from the work item. */
+  removeLabelIds?: InputMaybe<Array<Scalars['LabelID']>>;
+};
+
+/** Represents a milestone widget */
+export type WorkItemWidgetMilestone = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetMilestone';
+  /** Milestone of the work item. */
+  milestone?: Maybe<Milestone>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+export type WorkItemWidgetMilestoneInput = {
+  /** Milestone to assign to the work item. */
+  milestoneId?: InputMaybe<Scalars['MilestoneID']>;
+};
+
+/** Represents a notes widget */
+export type WorkItemWidgetNotes = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetNotes';
+  /** Notes on this work item. */
+  discussions?: Maybe<DiscussionConnection>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+
+/** Represents a notes widget */
+export type WorkItemWidgetNotesDiscussionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  filter?: InputMaybe<NotesFilterType>;
+  first?: InputMaybe<Scalars['Int']>;
+};
+
+/** Represents the notifications widget */
+export type WorkItemWidgetNotifications = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetNotifications';
+  /** Whether the current user is subscribed to notifications on the work item. */
+  subscribed: Scalars['Boolean'];
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+export type WorkItemWidgetNotificationsUpdateInput = {
+  /** Desired state of the subscription. */
+  subscribed: Scalars['Boolean'];
+};
+
+/** Represents a progress widget */
+export type WorkItemWidgetProgress = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetProgress';
+  /** Progress of the work item. */
+  progress?: Maybe<Scalars['Int']>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+export type WorkItemWidgetProgressInput = {
+  /** Progress of the work item. */
+  progress: Scalars['Int'];
+};
+
+/** Represents a legacy requirement widget */
+export type WorkItemWidgetRequirementLegacy = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetRequirementLegacy';
+  /**
+   * Legacy requirement IID associated with the work item. Deprecated in 15.9: Use Work Item IID instead.
+   * @deprecated Use Work Item IID instead. Deprecated in 15.9.
+   */
+  legacyIid?: Maybe<Scalars['Int']>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
 /** Represents a start and due date widget */
 export type WorkItemWidgetStartAndDueDate = WorkItemWidget & {
   __typename?: 'WorkItemWidgetStartAndDueDate';
@@ -16163,18 +33726,286 @@ export type WorkItemWidgetStartAndDueDateUpdateInput = {
   startDate?: InputMaybe<Scalars['Date']>;
 };
 
+/** Represents a status widget */
+export type WorkItemWidgetStatus = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetStatus';
+  /** Status of the work item. */
+  status?: Maybe<Scalars['String']>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+/** Represents a test reports widget */
+export type WorkItemWidgetTestReports = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetTestReports';
+  /** Test reports of the work item. */
+  testReports?: Maybe<TestReportConnection>;
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+};
+
+
+/** Represents a test reports widget */
+export type WorkItemWidgetTestReportsTestReportsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
 /** Type of a work item widget */
 export type WorkItemWidgetType =
   /** Assignees widget. */
   | 'ASSIGNEES'
+  /** Award Emoji widget. */
+  | 'AWARD_EMOJI'
+  /** Current User Todos widget. */
+  | 'CURRENT_USER_TODOS'
   /** Description widget. */
   | 'DESCRIPTION'
+  /** Health Status widget. */
+  | 'HEALTH_STATUS'
   /** Hierarchy widget. */
   | 'HIERARCHY'
+  /** Iteration widget. */
+  | 'ITERATION'
   /** Labels widget. */
   | 'LABELS'
+  /** Milestone widget. */
+  | 'MILESTONE'
+  /** Notes widget. */
+  | 'NOTES'
+  /** Notifications widget. */
+  | 'NOTIFICATIONS'
+  /** Progress widget. */
+  | 'PROGRESS'
+  /** Requirement Legacy widget. */
+  | 'REQUIREMENT_LEGACY'
   /** Start And Due Date widget. */
-  | 'START_AND_DUE_DATE';
+  | 'START_AND_DUE_DATE'
+  /** Status widget. */
+  | 'STATUS'
+  /** Test Reports widget. */
+  | 'TEST_REPORTS'
+  /** Weight widget. */
+  | 'WEIGHT';
+
+/** Represents a weight widget */
+export type WorkItemWidgetWeight = WorkItemWidget & {
+  __typename?: 'WorkItemWidgetWeight';
+  /** Widget type. */
+  type?: Maybe<WorkItemWidgetType>;
+  /** Weight of the work item. */
+  weight?: Maybe<Scalars['Int']>;
+};
+
+export type WorkItemWidgetWeightInput = {
+  /** Weight of the work item. */
+  weight?: InputMaybe<Scalars['Int']>;
+};
+
+/** Represents a remote development workspace */
+export type Workspace = {
+  __typename?: 'Workspace';
+  /** Actual state of the workspace. */
+  actualState: Scalars['String'];
+  /** Kubernetes Agent associated with the workspace. */
+  clusterAgent: ClusterAgent;
+  /** Timestamp of workspace creation. */
+  createdAt: Scalars['Time'];
+  /** ResourceVersion of the Deployment resource for the workspace. */
+  deploymentResourceVersion?: Maybe<Scalars['Int']>;
+  /** Desired state of the workspace. */
+  desiredState: Scalars['String'];
+  /** Timestamp of last update to desired state. */
+  desiredStateUpdatedAt: Scalars['Time'];
+  /** Source YAML of the devfile used to configure the workspace. */
+  devfile: Scalars['String'];
+  /** Project repo git path containing the devfile used to configure the workspace. */
+  devfilePath: Scalars['String'];
+  /** Project repo git ref containing the devfile used to configure the workspace. */
+  devfileRef: Scalars['String'];
+  /** Editor used to configure the workspace. Must match a configured template. */
+  editor: Scalars['String'];
+  /** Global ID of the workspace. */
+  id: Scalars['RemoteDevelopmentWorkspaceID'];
+  /** Maximum hours the workspace can exist before it is automatically terminated. */
+  maxHoursBeforeTermination: Scalars['Int'];
+  /** Name of the workspace in Kubernetes. */
+  name: Scalars['String'];
+  /** Namespace of the workspace in Kubernetes. */
+  namespace: Scalars['String'];
+  /** Processed YAML of the devfile used to configure the workspace. */
+  processedDevfile: Scalars['String'];
+  /** ID of the Project providing the Devfile for the workspace. */
+  projectId: Scalars['ID'];
+  /** Timestamp of last response sent to GA4K for the workspace. */
+  respondedToAgentAt?: Maybe<Scalars['Time']>;
+  /** Timestamp of last update to any mutable workspace property. */
+  updatedAt: Scalars['Time'];
+  /** URL of the workspace. */
+  url: Scalars['String'];
+  /** Owner of the workspace. */
+  user: UserCore;
+};
+
+/** The connection type for Workspace. */
+export type WorkspaceConnection = {
+  __typename?: 'WorkspaceConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<WorkspaceEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<Workspace>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+};
+
+/** Autogenerated input type of WorkspaceCreate */
+export type WorkspaceCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** ID of the cluster agent the created workspace will be associated with. */
+  clusterAgentId: Scalars['ClustersAgentID'];
+  /** Desired state of the created workspace. */
+  desiredState: Scalars['String'];
+  /** Project repo git path containing the devfile used to configure the workspace. */
+  devfilePath: Scalars['String'];
+  /** Project repo git ref containing the devfile used to configure the workspace. */
+  devfileRef: Scalars['String'];
+  /** Editor to inject into the created workspace. Must match a configured template. */
+  editor: Scalars['String'];
+  /** Maximum hours the workspace can exist before it is automatically terminated. */
+  maxHoursBeforeTermination: Scalars['Int'];
+  /** ID of the project that will provide the Devfile for the created workspace. */
+  projectId: Scalars['ProjectID'];
+};
+
+/** Autogenerated return type of WorkspaceCreate */
+export type WorkspaceCreatePayload = {
+  __typename?: 'WorkspaceCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created workspace. */
+  workspace?: Maybe<Workspace>;
+};
+
+/** An edge in a connection. */
+export type WorkspaceEdge = {
+  __typename?: 'WorkspaceEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String'];
+  /** The item at the end of the edge. */
+  node?: Maybe<Workspace>;
+};
+
+/** Autogenerated input type of WorkspaceUpdate */
+export type WorkspaceUpdateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Desired state of the created workspace. */
+  desiredState: Scalars['String'];
+  /** Global ID of the workspace. */
+  id: Scalars['RemoteDevelopmentWorkspaceID'];
+};
+
+/** Autogenerated return type of WorkspaceUpdate */
+export type WorkspaceUpdatePayload = {
+  __typename?: 'WorkspaceUpdatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created workspace. */
+  workspace?: Maybe<Workspace>;
+};
+
+/** Represents an X.509 certificate. */
+export type X509Certificate = {
+  __typename?: 'X509Certificate';
+  /** Indicates if the certificate is good or revoked. */
+  certificateStatus: Scalars['String'];
+  /** Timestamp of when the certificate was saved. */
+  createdAt: Scalars['Time'];
+  /** Email associated with the cerificate. */
+  email: Scalars['String'];
+  /** ID of the certificate. */
+  id: Scalars['ID'];
+  /** Serial number of the certificate. */
+  serialNumber: Scalars['String'];
+  /** Subject of the certificate. */
+  subject: Scalars['String'];
+  /** Subject key identifier of the certificate. */
+  subjectKeyIdentifier: Scalars['String'];
+  /** Timestamp of when the certificate was last updated. */
+  updatedAt: Scalars['Time'];
+  /** Issuer of the certificate. */
+  x509Issuer: X509Issuer;
+};
+
+/** Issuer of an X.509 certificate. */
+export type X509Issuer = {
+  __typename?: 'X509Issuer';
+  /** Timestamp of when the issuer was created. */
+  createdAt?: Maybe<Scalars['Time']>;
+  /** Certificate revokation list of the issuer. */
+  crlUrl?: Maybe<Scalars['String']>;
+  /** ID of the issuer. */
+  id?: Maybe<Scalars['ID']>;
+  /** Subject of the issuer. */
+  subject?: Maybe<Scalars['String']>;
+  /** Subject key identifier of the issuer. */
+  subjectKeyIdentifier?: Maybe<Scalars['String']>;
+  /** Timestamp of when the issuer was last updated. */
+  updatedAt?: Maybe<Scalars['Time']>;
+};
+
+/** X.509 signature for a signed commit */
+export type X509Signature = CommitSignature & {
+  __typename?: 'X509Signature';
+  /** SHA of the associated commit. */
+  commitSha?: Maybe<Scalars['String']>;
+  /** Project of the associated commit. */
+  project?: Maybe<Project>;
+  /** User associated with the key. */
+  user?: Maybe<UserCore>;
+  /** Indicates verification status of the associated key or certificate. */
+  verificationStatus?: Maybe<VerificationStatus>;
+  /** Certificate used for the signature. */
+  x509Certificate?: Maybe<X509Certificate>;
+};
+
+/** Autogenerated input type of iterationCreate */
+export type IterationCreateInput = {
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: InputMaybe<Scalars['String']>;
+  /** Description of the iteration. */
+  description?: InputMaybe<Scalars['String']>;
+  /** End date of the iteration. */
+  dueDate?: InputMaybe<Scalars['String']>;
+  /** Full path of the group with which the resource is associated. */
+  groupPath?: InputMaybe<Scalars['ID']>;
+  /** Global ID of the iteration cadence to be assigned to the new iteration. */
+  iterationsCadenceId?: InputMaybe<Scalars['IterationsCadenceID']>;
+  /** Full path of the project with which the resource is associated. */
+  projectPath?: InputMaybe<Scalars['ID']>;
+  /** Start date of the iteration. */
+  startDate?: InputMaybe<Scalars['String']>;
+  /** Title of the iteration. */
+  title?: InputMaybe<Scalars['String']>;
+};
+
+/** Autogenerated return type of iterationCreate */
+export type IterationCreatePayload = {
+  __typename?: 'iterationCreatePayload';
+  /** A unique identifier for the client performing the mutation. */
+  clientMutationId?: Maybe<Scalars['String']>;
+  /** Errors encountered during execution of the mutation. */
+  errors: Array<Scalars['String']>;
+  /** Created iteration. */
+  iteration?: Maybe<Iteration>;
+};
 
 export type CreateCommitMutationVariables = Exact<{
   fullPath: Scalars['ID'];
