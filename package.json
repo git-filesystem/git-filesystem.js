@@ -13,16 +13,16 @@
     "@swc/helpers": "0.5.1",
     "axios": "^1.0.0",
     "graphql": "^16.6.0",
-    "graphql-request": "^5.0.0",
+    "graphql-request": "^6.1.0",
     "js-base64": "^3.7.2",
     "octokit": "^2.0.5",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^3.0.0",
-    "@graphql-codegen/typescript": "^3.0.0",
-    "@graphql-codegen/typescript-graphql-request": "^4.5.4",
-    "@graphql-codegen/typescript-operations": "^3.0.0",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-graphql-request": "^5.0.0",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
     "@nx/eslint-plugin": "16.8.1",
     "@nx/jest": "16.8.1",
     "@nx/js": "16.8.1",
@@ -50,4 +50,3 @@
     "typescript": "5.2.2"
   }
 }
-
