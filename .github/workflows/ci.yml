@@ -113,9 +113,9 @@ jobs:
           - macos-latest
           - windows-latest
         node:
-          - 14
           - 16
           - 18
+          - 20
 
     name: E2E Test (Node ${{ matrix.node }} on ${{ matrix.os }})
 
