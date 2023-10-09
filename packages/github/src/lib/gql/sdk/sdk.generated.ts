@@ -3767,6 +3767,8 @@ export type CreateLinkedBranchPayload = {
   __typename?: 'CreateLinkedBranchPayload';
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The issue that was linked to. */
+  issue?: Maybe<Issue>;
   /** The new branch issue reference. */
   linkedBranch?: Maybe<LinkedBranch>;
 };
@@ -5300,6 +5302,8 @@ export type DeploymentProtectionRule = {
   __typename?: 'DeploymentProtectionRule';
   /** Identifies the primary key from the database. */
   databaseId?: Maybe<Scalars['Int']['output']>;
+  /** Whether deployments to this environment can be approved by the user who created the deployment. */
+  preventSelfReview?: Maybe<Scalars['Boolean']['output']>;
   /** The teams or users that can review the deployment */
   reviewers: DeploymentReviewerConnection;
   /** The timeout in minutes for this protection rule. */
@@ -5660,6 +5664,8 @@ export type Discussion = Closable & Comment & Deletable & Labelable & Lockable &
   id: Scalars['ID']['output'];
   /** Check if this comment was edited and includes an edit with the creation data */
   includesCreatedEdit: Scalars['Boolean']['output'];
+  /** Only return answered/unanswered discussions */
+  isAnswered?: Maybe<Scalars['Boolean']['output']>;
   /** A list of labels associated with the object. */
   labels?: Maybe<LabelConnection>;
   /** The moment the editor made the last edit */
@@ -21370,6 +21376,7 @@ export type RepositoryDiscussionCategoryArgs = {
 /** A repository contains the content for a project. */
 export type RepositoryDiscussionsArgs = {
   after?: InputMaybe<Scalars['String']['input']>;
+  answered?: InputMaybe<Scalars['Boolean']['input']>;
   before?: InputMaybe<Scalars['String']['input']>;
   categoryId?: InputMaybe<Scalars['ID']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
@@ -22337,24 +22344,21 @@ export type RepositoryRuleType =
   | 'CREATION'
   /** Only allow users with bypass permissions to delete matching refs. */
   | 'DELETION'
-  /** Prevent users with push access from force pushing to branches. */
+  /** Prevent users with push access from force pushing to refs. */
   | 'NON_FAST_FORWARD'
   /** Require all commits be made to a non-target branch and submitted via a pull request before they can be merged. */
   | 'PULL_REQUEST'
-  /**
-   * Choose which environments must be successfully deployed to before branches can
-   * be merged into a branch that matches this rule.
-   */
+  /** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
   | 'REQUIRED_DEPLOYMENTS'
-  /** Prevent merge commits from being pushed to matching branches. */
+  /** Prevent merge commits from being pushed to matching refs. */
   | 'REQUIRED_LINEAR_HISTORY'
-  /** Commits pushed to matching branches must have verified signatures. */
+  /** Commits pushed to matching refs must have verified signatures. */
   | 'REQUIRED_SIGNATURES'
   /**
    * Choose which status checks must pass before branches can be merged into a
    * branch that matches this rule. When enabled, commits must first be pushed to
-   * another branch, then merged or pushed directly to a branch that matches this
-   * rule after status checks have passed.
+   * another branch, then merged or pushed directly to a ref that matches this rule
+   * after status checks have passed.
    */
   | 'REQUIRED_STATUS_CHECKS'
   /** Tag name pattern */
@@ -22791,20 +22795,14 @@ export type RequirableByPullRequestIsRequiredArgs = {
   pullRequestNumber?: InputMaybe<Scalars['Int']['input']>;
 };
 
-/**
- * Choose which environments must be successfully deployed to before branches can
- * be merged into a branch that matches this rule.
- */
+/** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
 export type RequiredDeploymentsParameters = {
   __typename?: 'RequiredDeploymentsParameters';
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments: Array<Scalars['String']['output']>;
 };
 
-/**
- * Choose which environments must be successfully deployed to before branches can
- * be merged into a branch that matches this rule.
- */
+/** Choose which environments must be successfully deployed to before refs can be merged into a branch that matches this rule. */
 export type RequiredDeploymentsParametersInput = {
   /** The environments that must be successfully deployed to before branches can be merged. */
   requiredDeploymentEnvironments: Array<Scalars['String']['input']>;
@@ -22834,7 +22832,7 @@ export type RequiredStatusCheckInput = {
 /**
  * Choose which status checks must pass before branches can be merged into a branch
  * that matches this rule. When enabled, commits must first be pushed to another
- * branch, then merged or pushed directly to a branch that matches this rule after
+ * branch, then merged or pushed directly to a ref that matches this rule after
  * status checks have passed.
  */
 export type RequiredStatusChecksParameters = {
@@ -22852,7 +22850,7 @@ export type RequiredStatusChecksParameters = {
 /**
  * Choose which status checks must pass before branches can be merged into a branch
  * that matches this rule. When enabled, commits must first be pushed to another
- * branch, then merged or pushed directly to a branch that matches this rule after
+ * branch, then merged or pushed directly to a ref that matches this rule after
  * status checks have passed.
  */
 export type RequiredStatusChecksParametersInput = {
@@ -24513,7 +24511,7 @@ export type SponsorsCountryOrRegionCode =
   | 'TN'
   /** Tonga */
   | 'TO'
-  /** Turkey */
+  /** Türkiye */
   | 'TR'
   /** Trinidad and Tobago */
   | 'TT'
@@ -27661,6 +27659,8 @@ export type UpdateEnvironmentInput = {
   clientMutationId?: InputMaybe<Scalars['String']['input']>;
   /** The node ID of the environment. */
   environmentId: Scalars['ID']['input'];
+  /** Whether deployments to this environment can be approved by the user who created the deployment. */
+  preventSelfReview?: InputMaybe<Scalars['Boolean']['input']>;
   /** The ids of users or teams that can approve deployments to this environment */
   reviewers?: InputMaybe<Array<Scalars['ID']['input']>>;
   /** The wait timer in minutes. */
