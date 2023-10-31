@@ -34,7 +34,7 @@
     "@tobysmith568/eslint-config": "^1.0.4",
     "@tobysmith568/prettier-config": "^2.0.0",
     "@types/jest": "29.5.7",
-    "@types/node": "18.17.8",
+    "@types/node": "18.18.7",
     "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.60.1",
     "cspell": "^7.0.0",
