@@ -15,7 +15,7 @@
     "graphql": "^16.6.0",
     "graphql-request": "^6.1.0",
     "js-base64": "^3.7.2",
-    "octokit": "^2.0.5",
+    "octokit": "^3.0.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
