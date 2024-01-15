@@ -14907,6 +14907,7 @@ export type OrganizationRepositoriesArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -15223,8 +15224,13 @@ export type OrganizationInvitation = Node & {
   invitationType: OrganizationInvitationType;
   /** The user who was invited to the organization. */
   invitee?: Maybe<User>;
-  /** The user who created the invitation. */
+  /**
+   * The user who created the invitation.
+   * @deprecated `inviter` will be removed. `inviter` will be replaced by `inviterActor`. Removal on 2024-07-01 UTC.
+   */
   inviter: User;
+  /** The user who created the invitation. */
+  inviterActor?: Maybe<User>;
   /** The organization the invite is for */
   organization: Organization;
   /** The user's pending role in the organization (e.g. member, owner). */
@@ -19619,6 +19625,8 @@ export type Ref = Node & {
   refUpdateRule?: Maybe<RefUpdateRule>;
   /** The repository the ref belongs to. */
   repository: Repository;
+  /** A list of rules from active Repository and Organization rulesets that apply to this ref. */
+  rules?: Maybe<RepositoryRuleConnection>;
   /** The object the ref points to. Returns null when object does not exist. */
   target?: Maybe<GitObject>;
 };
@@ -19641,6 +19649,16 @@ export type RefAssociatedPullRequestsArgs = {
 /** Represents a Git reference. */
 export type RefCompareArgs = {
   headRef: Scalars['String']['input'];
+};
+
+
+/** Represents a Git reference. */
+export type RefRulesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<RepositoryRuleOrder>;
 };
 
 /** The connection type for Ref. */
@@ -21796,6 +21814,7 @@ export type RepositoryForksArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -22623,6 +22642,7 @@ export type RepositoryOwnerRepositoriesArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -22720,6 +22740,23 @@ export type RepositoryRuleInput = {
   /** The type of rule to create. */
   type: RepositoryRuleType;
 };
+
+/** Ordering options for repository rules. */
+export type RepositoryRuleOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order repository rules by. */
+  field: RepositoryRuleOrderField;
+};
+
+/** Properties by which repository rule connections can be ordered. */
+export type RepositoryRuleOrderField =
+  /** Order repository rules by created time */
+  | 'CREATED_AT'
+  /** Order repository rules by type */
+  | 'TYPE'
+  /** Order repository rules by updated time */
+  | 'UPDATED_AT';
 
 /** The rule types supported in rulesets */
 export type RepositoryRuleType =
@@ -27030,6 +27067,7 @@ export type TopicRepositoriesArgs = {
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
   sponsorableOnly?: InputMaybe<Scalars['Boolean']['input']>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -29511,6 +29549,7 @@ export type UserRepositoriesArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 
@@ -29704,6 +29743,7 @@ export type UserWatchingArgs = {
   orderBy?: InputMaybe<RepositoryOrder>;
   ownerAffiliations?: InputMaybe<Array<InputMaybe<RepositoryAffiliation>>>;
   privacy?: InputMaybe<RepositoryPrivacy>;
+  visibility?: InputMaybe<RepositoryVisibility>;
 };
 
 /** The possible durations that a user can be blocked for. */
