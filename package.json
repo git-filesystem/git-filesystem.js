@@ -30,7 +30,7 @@
     "@nx/workspace": "16.8.1",
     "@swc/cli": "0.3.5",
     "@swc/core": "^1.2.173",
-    "@swc/jest": "0.2.31",
+    "@swc/jest": "0.2.32",
     "@tobysmith568/eslint-config": "^1.0.4",
     "@tobysmith568/prettier-config": "^2.0.0",
     "@types/jest": "29.5.11",
