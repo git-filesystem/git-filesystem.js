@@ -6425,6 +6425,8 @@ export type Enterprise = AnnouncementBanner & Node & {
   announcementUserDismissible?: Maybe<Scalars['Boolean']['output']>;
   /** A URL pointing to the enterprise's public avatar. */
   avatarUrl: Scalars['URI']['output'];
+  /** The enterprise's billing email. */
+  billingEmail?: Maybe<Scalars['String']['output']>;
   /** Enterprise billing information visible to enterprise billing managers. */
   billingInfo?: Maybe<EnterpriseBillingInfo>;
   /** Identifies the date and time when the object was created. */
@@ -8181,6 +8183,8 @@ export type FundingPlatform =
   | 'OTECHIE'
   /** Patreon funding platform. */
   | 'PATREON'
+  /** Polar funding platform. */
+  | 'POLAR'
   /** Tidelift funding platform. */
   | 'TIDELIFT';
 
@@ -14575,6 +14579,11 @@ export type Organization = Actor & AnnouncementBanner & MemberStatusable & Node 
    * either curated or that have been selected automatically based on popularity.
    */
   itemShowcase: ProfileItemShowcase;
+  /**
+   * Calculate how much each sponsor has ever paid total to this maintainer via
+   * GitHub Sponsors. Does not include sponsorships paid via Patreon.
+   */
+  lifetimeReceivedSponsorshipValues: SponsorAndLifetimeValueConnection;
   /** The organization's public profile location. */
   location?: Maybe<Scalars['String']['output']>;
   /** The organization's login name. */
@@ -14774,6 +14783,16 @@ export type OrganizationIpAllowListEntriesArgs = {
 /** An account on GitHub, with one or more owners, that has repositories, members and teams. */
 export type OrganizationIsSponsoredByArgs = {
   accountLogin: Scalars['String']['input'];
+};
+
+
+/** An account on GitHub, with one or more owners, that has repositories, members and teams. */
+export type OrganizationLifetimeReceivedSponsorshipValuesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<SponsorAndLifetimeValueOrder>;
 };
 
 
@@ -17695,6 +17714,23 @@ export type ProjectV2WorkflowsOrderField =
   /** The date and time of the workflow update */
   | 'UPDATED_AT';
 
+/** A property that must match */
+export type PropertyTargetDefinition = {
+  __typename?: 'PropertyTargetDefinition';
+  /** The name of the property */
+  name: Scalars['String']['output'];
+  /** The values to match for */
+  propertyValues: Array<Scalars['String']['output']>;
+};
+
+/** A property that must match */
+export type PropertyTargetDefinitionInput = {
+  /** The name of the property */
+  name: Scalars['String']['input'];
+  /** The values to match for */
+  propertyValues: Array<Scalars['String']['input']>;
+};
+
 /** A user's public key. */
 export type PublicKey = Node & {
   __typename?: 'PublicKey';
@@ -17811,7 +17847,10 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   createdAt: Scalars['DateTime']['output'];
   /** Check if this comment was created via an email reply. */
   createdViaEmail: Scalars['Boolean']['output'];
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2024-07-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The number of deletions in this pull request. */
   deletions: Scalars['Int']['output'];
@@ -17819,6 +17858,8 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   editor?: Maybe<Actor>;
   /** Lists the files changed within this pull request. */
   files?: Maybe<PullRequestChangedFileConnection>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** Identifies the head Ref associated with the pull request. */
   headRef?: Maybe<Ref>;
   /** Identifies the name of the head Ref associated with the pull request, even if the ref has been deleted. */
@@ -17839,6 +17880,10 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   isCrossRepository: Scalars['Boolean']['output'];
   /** Identifies if the pull request is a draft. */
   isDraft: Scalars['Boolean']['output'];
+  /** Indicates whether the pull request is in a merge queue */
+  isInMergeQueue: Scalars['Boolean']['output'];
+  /** Indicates whether the pull request's base ref has a merge queue enabled. */
+  isMergeQueueEnabled: Scalars['Boolean']['output'];
   /** Is this pull request read by the viewer */
   isReadByViewer?: Maybe<Scalars['Boolean']['output']>;
   /** A list of labels associated with the object. */
@@ -17855,6 +17900,8 @@ export type PullRequest = Assignable & Closable & Comment & Labelable & Lockable
   maintainerCanModify: Scalars['Boolean']['output'];
   /** The commit that was created when this pull request was merged. */
   mergeCommit?: Maybe<Commit>;
+  /** The merge queue for the pull request's base branch */
+  mergeQueue?: Maybe<MergeQueue>;
   /** The merge queue entry of the pull request in the base branch's merge queue */
   mergeQueueEntry?: Maybe<MergeQueueEntry>;
   /** Detailed information about the current pull request merge state status. */
@@ -18416,10 +18463,15 @@ export type PullRequestReview = Comment & Deletable & Minimizable & Node & React
   createdAt: Scalars['DateTime']['output'];
   /** Check if this comment was created via an email reply. */
   createdViaEmail: Scalars['Boolean']['output'];
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2024-07-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** The Node ID of the PullRequestReview object */
   id: Scalars['ID']['output'];
   /** Check if this comment was edited and includes an edit with the creation data */
@@ -18529,7 +18581,10 @@ export type PullRequestReviewComment = Comment & Deletable & Minimizable & Node 
   createdAt: Scalars['DateTime']['output'];
   /** Check if this comment was created via an email reply. */
   createdViaEmail: Scalars['Boolean']['output'];
-  /** Identifies the primary key from the database. */
+  /**
+   * Identifies the primary key from the database.
+   * @deprecated `databaseId` will be removed because it does not support 64-bit signed integer identifiers. Use `fullDatabaseId` instead. Removal on 2024-07-01 UTC.
+   */
   databaseId?: Maybe<Scalars['Int']['output']>;
   /** The diff hunk to which the comment applies. */
   diffHunk: Scalars['String']['output'];
@@ -18537,6 +18592,8 @@ export type PullRequestReviewComment = Comment & Deletable & Minimizable & Node 
   draftedAt: Scalars['DateTime']['output'];
   /** The actor who edited the comment. */
   editor?: Maybe<Actor>;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** The Node ID of the PullRequestReviewComment object */
   id: Scalars['ID']['output'];
   /** Check if this comment was edited and includes an edit with the creation data */
@@ -21474,6 +21531,8 @@ export type Repository = Node & PackageOwner & ProjectOwner & ProjectV2Recent & 
   hasIssuesEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository has the Projects feature enabled. */
   hasProjectsEnabled: Scalars['Boolean']['output'];
+  /** Indicates if the repository displays a Sponsor button for financial contributions. */
+  hasSponsorshipsEnabled: Scalars['Boolean']['output'];
   /** Whether vulnerability alerts are enabled for the repository. */
   hasVulnerabilityAlertsEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository has wiki feature enabled. */
@@ -22310,6 +22369,8 @@ export type RepositoryInfo = {
   hasIssuesEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository has the Projects feature enabled. */
   hasProjectsEnabled: Scalars['Boolean']['output'];
+  /** Indicates if the repository displays a Sponsor button for financial contributions. */
+  hasSponsorshipsEnabled: Scalars['Boolean']['output'];
   /** Indicates if the repository has wiki feature enabled. */
   hasWikiEnabled: Scalars['Boolean']['output'];
   /** The repository's URL. */
@@ -22675,6 +22736,23 @@ export type RepositoryPrivacy =
   /** Public */
   | 'PUBLIC';
 
+/** Parameters to be used for the repository_property condition */
+export type RepositoryPropertyConditionTarget = {
+  __typename?: 'RepositoryPropertyConditionTarget';
+  /** Array of repository properties that must not match. */
+  exclude: Array<PropertyTargetDefinition>;
+  /** Array of repository properties that must match */
+  include: Array<PropertyTargetDefinition>;
+};
+
+/** Parameters to be used for the repository_property condition */
+export type RepositoryPropertyConditionTargetInput = {
+  /** Array of repository properties that must not match. */
+  exclude: Array<PropertyTargetDefinitionInput>;
+  /** Array of repository properties that must match */
+  include: Array<PropertyTargetDefinitionInput>;
+};
+
 /** A repository rule. */
 export type RepositoryRule = Node & {
   __typename?: 'RepositoryRule';
@@ -22697,6 +22775,8 @@ export type RepositoryRuleConditions = {
   repositoryId?: Maybe<RepositoryIdConditionTarget>;
   /** Configuration for the repository_name condition */
   repositoryName?: Maybe<RepositoryNameConditionTarget>;
+  /** Configuration for the repository_property condition */
+  repositoryProperty?: Maybe<RepositoryPropertyConditionTarget>;
 };
 
 /** Specifies the conditions required for a ruleset to evaluate */
@@ -22707,6 +22787,8 @@ export type RepositoryRuleConditionsInput = {
   repositoryId?: InputMaybe<RepositoryIdConditionTargetInput>;
   /** Configuration for the repository_name condition */
   repositoryName?: InputMaybe<RepositoryNameConditionTargetInput>;
+  /** Configuration for the repository_property condition */
+  repositoryProperty?: InputMaybe<RepositoryPropertyConditionTargetInput>;
 };
 
 /** The connection type for RepositoryRule. */
@@ -24239,6 +24321,61 @@ export type SocialAccountProvider =
 /** Entities that can sponsor others via GitHub Sponsors */
 export type Sponsor = Organization | User;
 
+/**
+ * A GitHub account and the total amount in USD they've paid for sponsorships to a
+ * particular maintainer. Does not include payments made via Patreon.
+ */
+export type SponsorAndLifetimeValue = {
+  __typename?: 'SponsorAndLifetimeValue';
+  /** The amount in cents. */
+  amountInCents: Scalars['Int']['output'];
+  /** The amount in USD, formatted as a string. */
+  formattedAmount: Scalars['String']['output'];
+  /** The sponsor's GitHub account. */
+  sponsor: Sponsorable;
+  /** The maintainer's GitHub account. */
+  sponsorable: Sponsorable;
+};
+
+/** The connection type for SponsorAndLifetimeValue. */
+export type SponsorAndLifetimeValueConnection = {
+  __typename?: 'SponsorAndLifetimeValueConnection';
+  /** A list of edges. */
+  edges?: Maybe<Array<Maybe<SponsorAndLifetimeValueEdge>>>;
+  /** A list of nodes. */
+  nodes?: Maybe<Array<Maybe<SponsorAndLifetimeValue>>>;
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo;
+  /** Identifies the total count of items in the connection. */
+  totalCount: Scalars['Int']['output'];
+};
+
+/** An edge in a connection. */
+export type SponsorAndLifetimeValueEdge = {
+  __typename?: 'SponsorAndLifetimeValueEdge';
+  /** A cursor for use in pagination. */
+  cursor: Scalars['String']['output'];
+  /** The item at the end of the edge. */
+  node?: Maybe<SponsorAndLifetimeValue>;
+};
+
+/** Ordering options for connections to get sponsor entities and associated USD amounts for GitHub Sponsors. */
+export type SponsorAndLifetimeValueOrder = {
+  /** The ordering direction. */
+  direction: OrderDirection;
+  /** The field to order results by. */
+  field: SponsorAndLifetimeValueOrderField;
+};
+
+/** Properties by which sponsor and lifetime value connections can be ordered. */
+export type SponsorAndLifetimeValueOrderField =
+  /** Order results by how much money the sponsor has paid in total. */
+  | 'LIFETIME_VALUE'
+  /** Order results by the sponsor's login (username). */
+  | 'SPONSOR_LOGIN'
+  /** Order results by the sponsor's relevance to the viewer. */
+  | 'SPONSOR_RELEVANCE';
+
 /** The connection type for Sponsor. */
 export type SponsorConnection = {
   __typename?: 'SponsorConnection';
@@ -24286,6 +24423,11 @@ export type Sponsorable = {
   isSponsoredBy: Scalars['Boolean']['output'];
   /** True if the viewer is sponsored by this user/organization. */
   isSponsoringViewer: Scalars['Boolean']['output'];
+  /**
+   * Calculate how much each sponsor has ever paid total to this maintainer via
+   * GitHub Sponsors. Does not include sponsorships paid via Patreon.
+   */
+  lifetimeReceivedSponsorshipValues: SponsorAndLifetimeValueConnection;
   /** The estimated monthly GitHub Sponsors income for this user/organization in cents (USD). */
   monthlyEstimatedSponsorsIncomeInCents: Scalars['Int']['output'];
   /** List of users and organizations this entity is sponsoring. */
@@ -24322,6 +24464,16 @@ export type Sponsorable = {
 /** Entities that can sponsor or be sponsored through GitHub Sponsors. */
 export type SponsorableIsSponsoredByArgs = {
   accountLogin: Scalars['String']['input'];
+};
+
+
+/** Entities that can sponsor or be sponsored through GitHub Sponsors. */
+export type SponsorableLifetimeReceivedSponsorshipValuesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<SponsorAndLifetimeValueOrder>;
 };
 
 
@@ -27560,6 +27712,8 @@ export type UnpinIssuePayload = {
   __typename?: 'UnpinIssuePayload';
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: Maybe<Scalars['String']['output']>;
+  /** The id of the pinned issue that was unpinned */
+  id?: Maybe<Scalars['ID']['output']>;
   /** The issue that was unpinned */
   issue?: Maybe<Issue>;
 };
@@ -28785,6 +28939,8 @@ export type UpdateRepositoryInput = {
   hasIssuesEnabled?: InputMaybe<Scalars['Boolean']['input']>;
   /** Indicates if the repository should have the project boards feature enabled. */
   hasProjectsEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Indicates if the repository displays a Sponsor button for financial contributions. */
+  hasSponsorshipsEnabled?: InputMaybe<Scalars['Boolean']['input']>;
   /** Indicates if the repository should have the wiki feature enabled. */
   hasWikiEnabled?: InputMaybe<Scalars['Boolean']['input']>;
   /** The URL for a web page about this repository. Pass an empty string to erase the existing URL. */
@@ -28969,14 +29125,20 @@ export type UpdateTeamReviewAssignmentInput = {
   algorithm?: InputMaybe<TeamReviewAssignmentAlgorithm>;
   /** A unique identifier for the client performing the mutation. */
   clientMutationId?: InputMaybe<Scalars['String']['input']>;
+  /** Count any members whose review has already been requested against the required number of members assigned to review */
+  countMembersAlreadyRequested?: InputMaybe<Scalars['Boolean']['input']>;
   /** Turn on or off review assignment */
   enabled: Scalars['Boolean']['input'];
   /** An array of team member IDs to exclude */
   excludedTeamMemberIds?: InputMaybe<Array<Scalars['ID']['input']>>;
   /** The Node ID of the team to update review assignments of */
   id: Scalars['ID']['input'];
+  /** Include the members of any child teams when assigning */
+  includeChildTeamMembers?: InputMaybe<Scalars['Boolean']['input']>;
   /** Notify the entire team of the PR if it is delegated */
   notifyTeam?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Remove the team review request when assigning */
+  removeTeamRequest?: InputMaybe<Scalars['Boolean']['input']>;
   /** The number of team members to assign */
   teamMemberCount?: InputMaybe<Scalars['Int']['input']>;
 };
@@ -29162,6 +29324,11 @@ export type User = Actor & Node & PackageOwner & ProfileOwner & ProjectOwner & P
    * either curated or that have been selected automatically based on popularity.
    */
   itemShowcase: ProfileItemShowcase;
+  /**
+   * Calculate how much each sponsor has ever paid total to this maintainer via
+   * GitHub Sponsors. Does not include sponsorships paid via Patreon.
+   */
+  lifetimeReceivedSponsorshipValues: SponsorAndLifetimeValueConnection;
   /** A user-curated list of repositories */
   lists: UserListConnection;
   /** The user's public profile location. */
@@ -29401,6 +29568,16 @@ export type UserIssuesArgs = {
   last?: InputMaybe<Scalars['Int']['input']>;
   orderBy?: InputMaybe<IssueOrder>;
   states?: InputMaybe<Array<IssueState>>;
+};
+
+
+/** A user is an individual's account on GitHub that owns repositories and can make new content. */
+export type UserLifetimeReceivedSponsorshipValuesArgs = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Int']['input']>;
+  last?: InputMaybe<Scalars['Int']['input']>;
+  orderBy?: InputMaybe<SponsorAndLifetimeValueOrder>;
 };
 
 
