@@ -1,6 +1,6 @@
 {
   "name": "@git-filesystem/abstractions",
-  "version": "0.0.0",
+  "version": "*",
   "type": "commonjs",
   "license": "ISC",
   "description": "The abstractions shared by the different git cloud provider implementations in the git-filesystem ecosystem.",
@@ -16,5 +16,8 @@
   },
   "bugs": {
     "url": "https://github.com/git-filesystem/git-filesystem.js/issues"
+  },
+  "dependencies": {
+    "axios": "^1.0.0"
   }
 }
