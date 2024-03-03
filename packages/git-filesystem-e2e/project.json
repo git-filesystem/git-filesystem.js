@@ -5,10 +5,8 @@
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["packages/git-filesystem-e2e/**/*.ts"],
         "maxWarnings": 0
       }
     },
@@ -16,8 +14,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/git-filesystem-e2e"],
       "options": {
-        "jestConfig": "packages/git-filesystem-e2e/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "packages/git-filesystem-e2e/jest.config.ts"
       }
     }
   },

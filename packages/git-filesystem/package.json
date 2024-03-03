@@ -1,6 +1,6 @@
 {
   "name": "git-filesystem",
-  "version": "0.0.0",
+  "version": "*",
   "type": "commonjs",
   "license": "ISC",
   "description": "A shared abstraction for cloud Git providers exposing a file-system-like API. Read & write to GitHub/GitLab/Bitbucket repositories like they're file systems.",
@@ -16,5 +16,11 @@
   },
   "bugs": {
     "url": "https://github.com/git-filesystem/git-filesystem.js/issues"
+  },
+  "dependencies": {
+    "@git-filesystem/abstractions": "*",
+    "@git-filesystem/github": "*",
+    "@git-filesystem/gitlab": "*",
+    "tslib": "^2.3.0"
   }
 }

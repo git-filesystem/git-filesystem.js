@@ -1,6 +1,6 @@
 {
   "name": "@git-filesystem/github",
-  "version": "0.0.0",
+  "version": "*",
   "type": "commonjs",
   "license": "ISC",
   "description": "The GitHub implementation used by the git-filesystem package. Use this to read & write specifically to GitHub repositories only.",
@@ -18,6 +18,10 @@
     "url": "https://github.com/git-filesystem/git-filesystem.js/issues"
   },
   "dependencies": {
-    "graphql": "^16.6.0"
+    "@git-filesystem/abstractions": "*",
+    "octokit": "^3.0.0",
+    "@git-filesystem/utils": "*",
+    "graphql-request": "^6.1.0",
+    "tslib": "^2.3.0"
   }
 }

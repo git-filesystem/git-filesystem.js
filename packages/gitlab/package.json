@@ -1,6 +1,6 @@
 {
   "name": "@git-filesystem/gitlab",
-  "version": "0.0.0",
+  "version": "*",
   "type": "commonjs",
   "license": "ISC",
   "description": "The GitLab implementation used by the git-filesystem package. Use this to read & write specifically to GitLab repositories only.",
@@ -18,6 +18,10 @@
     "url": "https://github.com/git-filesystem/git-filesystem.js/issues"
   },
   "dependencies": {
-    "graphql": "^16.6.0"
+    "axios": "^1.0.0",
+    "graphql-request": "^6.1.0",
+    "@git-filesystem/abstractions": "*",
+    "@git-filesystem/utils": "*",
+    "tslib": "^2.3.0"
   }
 }
