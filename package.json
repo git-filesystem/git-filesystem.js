@@ -30,7 +30,7 @@
     "@nx/workspace": "18.0.6",
     "@swc-node/register": "~1.8.0",
     "@swc/cli": "0.3.10",
-    "@swc/core": "1.3.107",
+    "@swc/core": "1.4.2",
     "@swc/jest": "0.2.36",
     "@tobysmith568/eslint-config": "^1.0.4",
     "@tobysmith568/prettier-config": "^2.0.0",
