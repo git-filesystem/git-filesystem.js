@@ -20,6 +20,7 @@
   "dependencies": {
     "@git-filesystem/abstractions": "*",
     "@git-filesystem/github": "*",
-    "@git-filesystem/gitlab": "*"
+    "@git-filesystem/gitlab": "*",
+    "tslib": "^2.3.0"
   }
 }

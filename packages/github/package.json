@@ -21,6 +21,7 @@
     "@git-filesystem/abstractions": "*",
     "octokit": "^3.0.0",
     "@git-filesystem/utils": "*",
-    "graphql-request": "^6.1.0"
+    "graphql-request": "^6.1.0",
+    "tslib": "^2.3.0"
   }
 }
