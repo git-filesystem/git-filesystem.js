@@ -11,9 +11,7 @@
         "outputPath": "dist/packages/utils",
         "main": "packages/utils/src/index.ts",
         "tsConfig": "packages/utils/tsconfig.lib.json",
-        "assets": ["LICENSE.md", "packages/utils/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "assets": ["LICENSE.md", "packages/utils/*.md"]
       }
     },
     "version": {
@@ -29,10 +27,8 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["packages/utils/**/*.ts"],
         "maxWarnings": 0
       }
     },
@@ -40,8 +36,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/utils"],
       "options": {
-        "jestConfig": "packages/utils/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "packages/utils/jest.config.ts"
       }
     }
   },

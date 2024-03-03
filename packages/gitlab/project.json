@@ -11,9 +11,7 @@
         "outputPath": "dist/packages/gitlab",
         "main": "packages/gitlab/src/index.ts",
         "tsConfig": "packages/gitlab/tsconfig.lib.json",
-        "assets": ["LICENSE.md", "packages/gitlab/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "assets": ["LICENSE.md", "packages/gitlab/*.md"]
       }
     },
     "version": {
@@ -29,10 +27,8 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["packages/gitlab/**/*.ts"],
         "maxWarnings": 0
       }
     },
@@ -40,8 +36,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/gitlab"],
       "options": {
-        "jestConfig": "packages/gitlab/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "packages/gitlab/jest.config.ts"
       }
     },
     "codegen": {

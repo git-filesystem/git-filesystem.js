@@ -11,9 +11,7 @@
         "outputPath": "dist/packages/github",
         "main": "packages/github/src/index.ts",
         "tsConfig": "packages/github/tsconfig.lib.json",
-        "assets": ["LICENSE.md", "packages/github/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "assets": ["LICENSE.md", "packages/github/*.md"]
       }
     },
     "version": {
@@ -29,10 +27,8 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["packages/github/**/*.ts"],
         "maxWarnings": 0
       }
     },
@@ -40,8 +36,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/github"],
       "options": {
-        "jestConfig": "packages/github/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "packages/github/jest.config.ts"
       }
     },
     "codegen": {
