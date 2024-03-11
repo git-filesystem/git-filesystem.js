@@ -4232,6 +4232,12 @@ export type CreateSponsorshipsInput = {
   privacyLevel?: InputMaybe<SponsorshipPrivacy>;
   /** Whether the sponsor should receive email updates from the sponsorables. */
   receiveEmails?: InputMaybe<Scalars['Boolean']['input']>;
+  /**
+   * Whether the sponsorships created should continue each billing cycle for the
+   * sponsor (monthly or annually), versus lasting only a single month. Defaults to
+   * one-time sponsorships.
+   */
+  recurring?: InputMaybe<Scalars['Boolean']['input']>;
   /** The username of the user or organization who is acting as the sponsor, paying for the sponsorships. */
   sponsorLogin: Scalars['String']['input'];
   /** The list of maintainers to sponsor and for how much apiece. */
@@ -8179,8 +8185,6 @@ export type FundingPlatform =
   | 'LIBERAPAY'
   /** Open Collective funding platform. */
   | 'OPEN_COLLECTIVE'
-  /** Otechie funding platform. */
-  | 'OTECHIE'
   /** Patreon funding platform. */
   | 'PATREON'
   /** Polar funding platform. */
@@ -9834,7 +9838,7 @@ export type LinkedBranch = Node & {
   ref?: Maybe<Ref>;
 };
 
-/** The connection type for LinkedBranch. */
+/** A list of branches linked to an issue. */
 export type LinkedBranchConnection = {
   __typename?: 'LinkedBranchConnection';
   /** A list of edges. */
@@ -9942,7 +9946,7 @@ export type MannequinAvatarUrlArgs = {
   size?: InputMaybe<Scalars['Int']['input']>;
 };
 
-/** The connection type for Mannequin. */
+/** A list of mannequins. */
 export type MannequinConnection = {
   __typename?: 'MannequinConnection';
   /** A list of edges. */
@@ -11185,9 +11189,8 @@ export type Mutation = {
   /** Start a new sponsorship of a maintainer in GitHub Sponsors, or reactivate a past sponsorship. */
   createSponsorship?: Maybe<CreateSponsorshipPayload>;
   /**
-   * Make many one-time sponsorships for different sponsorable users or
-   * organizations at once. Can only sponsor those who have a public GitHub
-   * Sponsors profile.
+   * Make many sponsorships for different sponsorable users or organizations at
+   * once. Can only sponsor those who have a public GitHub Sponsors profile.
    */
   createSponsorships?: Maybe<CreateSponsorshipsPayload>;
   /** Creates a new team discussion. */
@@ -15332,7 +15335,7 @@ export type OrganizationInvitationType =
   /** The invitation was to an existing user. */
   | 'USER';
 
-/** The connection type for User. */
+/** A list of users who belong to the organization. */
 export type OrganizationMemberConnection = {
   __typename?: 'OrganizationMemberConnection';
   /** A list of edges. */
@@ -16892,6 +16895,8 @@ export type ProjectV2Item = Node & {
   fieldValueByName?: Maybe<ProjectV2ItemFieldValue>;
   /** The field values that are set on the item. */
   fieldValues: ProjectV2ItemFieldValueConnection;
+  /** Identifies the primary key from the database as a BigInt. */
+  fullDatabaseId?: Maybe<Scalars['BigInt']['output']>;
   /** The Node ID of the ProjectV2Item object */
   id: Scalars['ID']['output'];
   /** Whether the item is archived. */
@@ -21884,6 +21889,7 @@ export type RepositoryEnvironmentsArgs = {
   before?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Int']['input']>;
   last?: InputMaybe<Scalars['Int']['input']>;
+  names?: InputMaybe<Array<Scalars['String']['input']>>;
   orderBy?: InputMaybe<Environments>;
 };
 
@@ -22595,7 +22601,7 @@ export type RepositoryMigration = Migration & Node & {
   warningsCount: Scalars['Int']['output'];
 };
 
-/** The connection type for RepositoryMigration. */
+/** A list of migrations. */
 export type RepositoryMigrationConnection = {
   __typename?: 'RepositoryMigrationConnection';
   /** A list of edges. */
@@ -22916,8 +22922,6 @@ export type RepositoryRuleType =
    * request and required workflow checks to pass before they can be merged.
    */
   | 'REQUIRED_WORKFLOW_STATUS_CHECKS'
-  /** Commits pushed to matching refs must have verified signatures. */
-  | 'RULESET_REQUIRED_SIGNATURES'
   /** Secret scanning */
   | 'SECRET_SCANNING'
   /** Tag */
@@ -24403,7 +24407,7 @@ export type SponsorAndLifetimeValueOrderField =
   /** Order results by the sponsor's relevance to the viewer. */
   | 'SPONSOR_RELEVANCE';
 
-/** The connection type for Sponsor. */
+/** A list of users and organizations sponsoring someone via GitHub Sponsors. */
 export type SponsorConnection = {
   __typename?: 'SponsorConnection';
   /** A list of edges. */
@@ -25517,7 +25521,7 @@ export type Sponsorship = Node & {
   tierSelectedAt?: Maybe<Scalars['DateTime']['output']>;
 };
 
-/** The connection type for Sponsorship. */
+/** A list of sponsorships either from the subject or received by the subject. */
 export type SponsorshipConnection = {
   __typename?: 'SponsorshipConnection';
   /** A list of edges. */
@@ -29978,7 +29982,7 @@ export type UserBlockedEvent = Node & {
   subject?: Maybe<User>;
 };
 
-/** The connection type for User. */
+/** A list of users. */
 export type UserConnection = {
   __typename?: 'UserConnection';
   /** A list of edges. */
