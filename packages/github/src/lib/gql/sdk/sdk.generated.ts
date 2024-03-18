@@ -8169,6 +8169,8 @@ export type FundingLink = {
 
 /** The possible funding platforms for repository funding links. */
 export type FundingPlatform =
+  /** Buy Me a Coffee funding platform. */
+  | 'BUY_ME_A_COFFEE'
   /** Community Bridge funding platform. */
   | 'COMMUNITY_BRIDGE'
   /** Custom funding platform. */
