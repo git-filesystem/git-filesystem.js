@@ -10,7 +10,7 @@
     "e2e": "npx nx run-many --target e2e"
   },
   "dependencies": {
-    "@swc/helpers": "0.5.10",
+    "@swc/helpers": "0.5.11",
     "axios": "^1.0.0",
     "graphql": "^16.6.0",
     "graphql-request": "^6.1.0",
