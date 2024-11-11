@@ -10,7 +10,7 @@
     "e2e": "npx nx run-many --target e2e"
   },
   "dependencies": {
-    "@swc/helpers": "0.5.12",
+    "@swc/helpers": "0.5.15",
     "axios": "^1.0.0",
     "graphql": "^16.6.0",
     "graphql-request": "^6.1.0",
@@ -29,8 +29,8 @@
     "@nx/js": "18.0.6",
     "@nx/workspace": "18.0.6",
     "@swc-node/register": "~1.9.0",
-    "@swc/cli": "0.4.0",
-    "@swc/core": "1.7.12",
+    "@swc/cli": "0.5.0",
+    "@swc/core": "1.9.2",
     "@swc/jest": "0.2.36",
     "@tobysmith568/eslint-config": "^1.0.4",
     "@tobysmith568/prettier-config": "^2.0.0",
