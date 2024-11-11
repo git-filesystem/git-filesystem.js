@@ -31,10 +31,10 @@
     "@swc-node/register": "~1.9.0",
     "@swc/cli": "0.5.0",
     "@swc/core": "1.9.2",
-    "@swc/jest": "0.2.36",
+    "@swc/jest": "0.2.37",
     "@tobysmith568/eslint-config": "^1.0.4",
     "@tobysmith568/prettier-config": "^2.0.0",
-    "@types/jest": "29.5.12",
+    "@types/jest": "29.5.14",
     "@types/node": "^18.16.9",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
@@ -47,7 +47,7 @@
     "jest-environment-node": "^29.4.1",
     "nx": "18.0.6",
     "prettier": "^3.0.0",
-    "ts-jest": "29.2.4",
+    "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
     "typescript": "5.5.4"
   }
