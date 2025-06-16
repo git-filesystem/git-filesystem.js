@@ -34,7 +34,7 @@
     "@swc/jest": "0.2.38",
     "@tobysmith568/eslint-config": "^1.0.4",
     "@tobysmith568/prettier-config": "^2.0.0",
-    "@types/jest": "29.5.14",
+    "@types/jest": "30.0.0",
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
