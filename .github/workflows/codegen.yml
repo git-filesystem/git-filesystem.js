@@ -52,7 +52,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.stage.outcome == 'success'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.PAT }}
           script: |
