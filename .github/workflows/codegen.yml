@@ -15,7 +15,7 @@ jobs:
       branchName: actions/codegen/${{ github.run_id }}-${{ github.run_attempt }}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Setup Git
         run: |
